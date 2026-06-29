@@ -1,0 +1,120 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const articles = [
+  {
+    title: '雞爸爸和鼠姊姊的半小時夏日約會',
+    category: '親子',
+    icon: '🏊',
+    description: '一個夏日午後，一場只玩了半小時卻值得記住的泳池約會。',
+    href: '/articles/swimming-date/'
+  },
+  {
+    title: '壓力正壓垮你的臉：從皮質醇到下垂臉的真相',
+    category: '健康',
+    icon: '🧠',
+    description: '從壓力、HPA 軸到臉部鬆弛，中年爸爸的身體觀察筆記。',
+    href: 'https://vocus.cc/article/6a364776fd89780001b63856'
+  },
+  {
+    title: '味全龍這一冠，屬於用心經營的球團！',
+    category: '棒球',
+    icon: '⚾',
+    description: '從數據、養成到教練團，重新理解上半季冠軍的底層邏輯。',
+    href: 'https://vocus.cc/article/6a366d54fd89780001c03108'
+  }
+];
+---
+
+<BaseLayout>
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Chicken Dad Lab</div>
+          <h1>雞爸爸生活實驗室</h1>
+          <p>用科學理解健康，用陪伴記錄成長。這裡收集親子、健康、健身、棒球、AI 與中年爸爸的生活實驗。</p>
+          <div class="actions">
+            <a class="btn primary" href="#posts">開始閱讀</a>
+            <a class="btn secondary" href="#about">認識雞爸爸</a>
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="emoji">🐔</div>
+          <h2>陪孩子長大，也陪自己變得更好。</h2>
+          <p class="muted">親子陪伴｜健康實驗｜棒球觀察｜AI生活</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="posts" class="white">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="label">Featured Articles</div>
+            <h2>精選文章</h2>
+          </div>
+          <p>第一篇已經放在本站閱讀；另外兩篇先連到 Vocus，之後會陸續搬回本站。</p>
+        </div>
+
+        <div class="posts">
+          {articles.map((article) => (
+            <a class="article-card" href={article.href} target={article.href.startsWith('http') ? '_blank' : '_self'} rel="noopener noreferrer">
+              <div class="cover">{article.icon}</div>
+              <span class="tag">{article.category}</span>
+              <h3>{article.title}</h3>
+              <p class="muted">{article.description}</p>
+              <span class="readmore">{article.href.startsWith('http') ? '於新分頁閱讀 ↗' : '在本站閱讀 →'}</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section id="topics">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="label">Columns</div>
+            <h2>四大專欄</h2>
+          </div>
+        </div>
+
+        <div class="grid-4">
+          <article class="card"><div class="emoji">👨‍👧</div><h3>親子陪伴</h3><p class="muted">鼠姊姊、龍弟弟、兔阿嬤，還有那些日常裡最珍貴的片刻。</p></article>
+          <article class="card"><div class="emoji">💪</div><h3>健康實驗</h3><p class="muted">健身、皮質醇、睡眠、營養與中年爸爸的自我升級。</p></article>
+          <article class="card"><div class="emoji">⚾</div><h3>棒球觀察</h3><p class="muted">味全龍、徐若熙、洋投、數據與球場故事。</p></article>
+          <article class="card"><div class="emoji">🤖</div><h3>AI生活</h3><p class="muted">ChatGPT、Gemini、AI 插畫與工作效率實驗。</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="white">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="label">About</div>
+            <h2>關於雞爸爸</h2>
+          </div>
+          <p>一位中年爸爸，用科學、數據與溫柔，記錄陪伴家人和自我成長的過程。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="label">Contact</div>
+            <h2>聯絡與追蹤</h2>
+          </div>
+          <p>歡迎透過 Vocus、Email 或社群平台找到我。</p>
+        </div>
+        <div class="actions">
+          <a class="btn secondary" href="https://vocus.cc/" target="_blank" rel="noopener noreferrer">Vocus</a>
+          <a class="btn secondary" href="mailto:beckman0470@gmail.com">Email</a>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
