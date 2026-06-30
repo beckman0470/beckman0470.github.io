@@ -1,1 +1,1 @@
-Chicken Dad Lab V9: added vision-care article.
+Chicken Dad Lab V10 brand style based on approved mockup.
