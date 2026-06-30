@@ -1,0 +1,48 @@
+[
+  {
+    "title": "雞爸爸和鼠姊姊的半小時夏日約會",
+    "category": "親子日常",
+    "date": "2026-06-29",
+    "readingTime": "5 分鐘",
+    "url": "/articles/swimming.html",
+    "cover": "/images/swimming.svg",
+    "summary": "一個夏日午後，雞爸爸和鼠姊姊在泳池邊完成一場短短半小時的夏日約會。",
+    "tags": [
+      "親子",
+      "游泳",
+      "陪伴"
+    ],
+    "featured": true
+  },
+  {
+    "title": "壓力正壓垮你的臉：從皮質醇到下垂臉的真相",
+    "category": "健康研究",
+    "date": "2026-06-29",
+    "readingTime": "7 分鐘",
+    "url": "/articles/cortisol.html",
+    "cover": "/images/cortisol.svg",
+    "summary": "皮質醇不是壞人，但長期壓力會讓臉部與身體失去修復節奏。",
+    "tags": [
+      "健康",
+      "皮質醇",
+      "壓力",
+      "HPA軸"
+    ],
+    "featured": true
+  },
+  {
+    "title": "味全龍這一冠，屬於用心經營的球團！",
+    "category": "棒球觀察",
+    "date": "2026-06-29",
+    "readingTime": "6 分鐘",
+    "url": "/articles/dragons-champion.html",
+    "cover": "/images/dragons.svg",
+    "summary": "從情蒐、養成、跑壘到投手整合，重新理解上半季冠軍。",
+    "tags": [
+      "棒球",
+      "味全龍",
+      "CPBL"
+    ],
+    "featured": true
+  }
+]

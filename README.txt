@@ -1,1 +1,1 @@
-Chicken Dad Lab V7 clean rebuild. Upload all files to the root of beckman0470.github.io.
+Chicken Dad Lab V8 content system. Main data file: data/articles.json
