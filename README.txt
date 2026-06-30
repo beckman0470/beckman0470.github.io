@@ -1,1 +1,1 @@
-Chicken Dad Lab V10 brand style based on approved mockup.
+V13.1 Design System：CSS tokens, typography, cards, quote cards, author cards, unified article pages.

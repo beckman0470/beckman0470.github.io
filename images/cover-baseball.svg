@@ -1,8 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="650" viewBox="0 0 1000 650">
-<defs><linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#151515"/><stop offset=".55" stop-color="#802424"/><stop offset="1" stop-color="#D5A24A"/></linearGradient></defs><rect width="1000" height="650" fill="url(#g)"/>
-<circle cx="850" cy="125" r="90" fill="#FFF0BA" opacity=".86"/>
-<text x="74" y="170" font-family="Georgia" font-size="64" font-weight="700" fill="#FFF6E1">WE ARE</text>
-<text x="72" y="260" font-family="Georgia" font-size="90" font-weight="800" fill="#FFF6E1">CHAMPIONS</text>
-<text x="78" y="330" font-family="Arial" font-size="32" fill="#FFD58A">BASEBALL OBSERVATION</text>
-<path d="M70 430 H620" stroke="#FFF6E1" stroke-width="3" opacity=".45"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="650"><rect width="1000" height="650" fill="#802424"/><circle cx="835" cy="135" r="90" fill="#FFF0BA" opacity=".78"/><text x="70" y="145" font-family="Georgia" font-size="62" font-weight="700" fill="#FFFDF8">棒球故事</text><text x="74" y="220" font-family="Arial" font-size="28" fill="#F6D79B">勝負之外的系統與養成</text></svg>

@@ -1,64 +1,72 @@
 [
   {
     "title": "從心疼、戴鏡到「全人調理」：陪孩子對抗先天遠視",
-    "category": "親子日常",
+    "category": "家庭故事",
+    "series": "鼠姊姊成長日記",
     "date": "2026-06-30",
     "readingTime": "7 分鐘",
     "url": "/articles/vision-care.html",
-    "cover": "/images/vision.svg",
+    "cover": "/images/cover-family.svg",
     "summary": "從鬥雞眼、戴眼鏡到每週點眼調理，記錄我們陪孩子面對先天遠視的荒野與希望。",
     "tags": [
+      "鼠姊姊",
       "親子",
       "視力",
-      "遠視",
-      "全人調理"
+      "遠視"
     ],
+    "quote": "孩子的成長不是直線，而是一段需要陪伴的路。",
     "featured": true
   },
   {
     "title": "雞爸爸和鼠姊姊的半小時夏日約會",
-    "category": "親子日常",
+    "category": "家庭故事",
+    "series": "鼠姊姊成長日記",
     "date": "2026-06-29",
     "readingTime": "5 分鐘",
     "url": "/articles/swimming.html",
-    "cover": "/images/swimming.svg",
+    "cover": "/images/cover-family.svg",
     "summary": "一個夏日午後，雞爸爸和鼠姊姊在泳池邊完成一場短短半小時的夏日約會。",
     "tags": [
-      "親子",
+      "鼠姊姊",
       "游泳",
       "陪伴"
     ],
+    "quote": "有時候，半小時就足夠留下很久的回憶。",
     "featured": true
   },
   {
     "title": "壓力正壓垮你的臉：從皮質醇到下垂臉的真相",
-    "category": "健康科學",
+    "category": "健康生活",
+    "series": "雞爸爸札記",
     "date": "2026-06-29",
     "readingTime": "7 分鐘",
     "url": "/articles/cortisol.html",
-    "cover": "/images/cortisol.svg",
+    "cover": "/images/cover-health.svg",
     "summary": "皮質醇不是壞人，但長期壓力會讓臉部與身體失去修復節奏。",
     "tags": [
+      "雞爸爸",
       "健康",
       "皮質醇",
-      "壓力",
-      "HPA軸"
+      "壓力"
     ],
+    "quote": "健康不是追求完美，而是學會理解身體的訊號。",
     "featured": true
   },
   {
     "title": "味全龍這一冠，屬於用心經營的球團！",
-    "category": "棒球觀察",
+    "category": "棒球故事",
+    "series": "雞爸爸札記",
     "date": "2026-06-29",
     "readingTime": "6 分鐘",
     "url": "/articles/dragons-champion.html",
-    "cover": "/images/dragons.svg",
+    "cover": "/images/cover-baseball.svg",
     "summary": "從情蒐、養成、跑壘到投手整合，重新理解上半季冠軍。",
     "tags": [
+      "雞爸爸",
       "棒球",
-      "味全龍",
-      "CPBL"
+      "味全龍"
     ],
+    "quote": "一支球隊的強大，往往藏在看不見的系統裡。",
     "featured": false
   }
 ]
