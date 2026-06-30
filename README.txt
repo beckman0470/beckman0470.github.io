@@ -1,1 +1,1 @@
-Chicken Dad Lab V8 content system. Main data file: data/articles.json
+Chicken Dad Lab V9: added vision-care article.

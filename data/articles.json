@@ -1,5 +1,22 @@
 [
   {
+    "title": "從心疼、戴鏡到「全人調理」：陪孩子對抗先天遠視",
+    "category": "親子日常",
+    "date": "2026-06-30",
+    "readingTime": "7 分鐘",
+    "url": "/articles/vision-care.html",
+    "cover": "/images/vision.svg",
+    "summary": "從鬥雞眼、戴眼鏡到每週點眼調理，記錄我們陪孩子面對先天遠視的荒野與希望。",
+    "tags": [
+      "親子",
+      "視力",
+      "遠視",
+      "全人調理",
+      "孩子"
+    ],
+    "featured": true
+  },
+  {
     "title": "雞爸爸和鼠姊姊的半小時夏日約會",
     "category": "親子日常",
     "date": "2026-06-29",
@@ -43,6 +60,6 @@
       "味全龍",
       "CPBL"
     ],
-    "featured": true
+    "featured": false
   }
 ]

@@ -1,6 +1,6 @@
 
 async function loadArticles() {
-  const res = await fetch('/data/articles.json?v=8');
+  const res = await fetch('/data/articles.json?v=9');
   return await res.json();
 }
 function articleCard(a) {
