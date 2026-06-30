@@ -1,1 +1,1 @@
-Chicken Dad Lab V11 visual identity upgrade.
+Chicken Dad Lab V10 brand style based on approved mockup.
