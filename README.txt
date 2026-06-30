@@ -1,1 +1,1 @@
-上傳所有檔案到 beckman0470.github.io，覆蓋原本 index.html。
+Chicken Dad Lab V7 clean rebuild. Upload all files to the root of beckman0470.github.io.
