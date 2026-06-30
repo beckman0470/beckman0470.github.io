@@ -1,0 +1,47 @@
+[
+  {
+    "name": "雞爸爸",
+    "emoji": "🐔",
+    "title": "雞爸爸札記",
+    "url": "/stories/chicken-dad.html",
+    "cover": "/images/cover-dad.svg",
+    "summary": "閱讀、健身、健康、工作、棒球與 AI。這裡是雞爸爸整理思緒的地方。",
+    "description": "我是一位喜歡閱讀、觀察生活、分享故事的爸爸。文字是整理思緒的方法，分享是整理之後自然發生的事。"
+  },
+  {
+    "name": "鼠姊姊",
+    "emoji": "🐭",
+    "title": "鼠姊姊成長日記",
+    "url": "/stories/mouse-sister.html",
+    "cover": "/images/cover-mouse-sister.svg",
+    "summary": "視力、游泳、畢業與日常陪伴。記錄鼠姊姊一路長大的故事。",
+    "description": "鼠姊姊是家裡第一個孩子，也是許多故事的起點。她的每一次嘗試、害怕、勇敢與成長，都是雞爸爸想好好記下來的生活片段。"
+  },
+  {
+    "name": "龍弟弟",
+    "emoji": "🐲",
+    "title": "龍弟弟成長日記",
+    "url": "/stories/dragon-brother.html",
+    "cover": "/images/cover-dragon-brother.svg",
+    "summary": "好奇、活力與童言童語。這裡會慢慢累積龍弟弟的成長片段。",
+    "description": "龍弟弟充滿好奇與活力，讓家裡多了很多笑聲與混亂。這裡會慢慢收藏他的日常、探索與成長。"
+  },
+  {
+    "name": "鼠媽媽",
+    "emoji": "❤️",
+    "title": "鼠媽媽故事",
+    "url": "/stories/mouse-mom.html",
+    "cover": "/images/cover-mouse-mom.svg",
+    "summary": "家庭裡溫柔而穩定的力量，也是雞爸爸生活故事的重要角色。",
+    "description": "鼠媽媽是家裡溫柔而穩定的力量。許多家庭故事的背後，都有她的照顧、理解與陪伴。"
+  },
+  {
+    "name": "兔阿嬤",
+    "emoji": "🐰",
+    "title": "兔阿嬤的人生智慧",
+    "url": "/stories/rabbit-grandma.html",
+    "cover": "/images/cover-rabbit-grandma.svg",
+    "summary": "生活經驗與家庭智慧，讓日常多了一份傳承的溫度。",
+    "description": "兔阿嬤代表家裡的生活智慧與世代傳承。那些日常裡看似簡單的提醒，往往藏著很深的人生經驗。"
+  }
+]

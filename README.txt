@@ -1,1 +1,1 @@
-V13.1 Design System：CSS tokens, typography, cards, quote cards, author cards, unified article pages.
+V13.2 Character Pages：新增鼠姊姊、龍弟弟、鼠媽媽、兔阿嬤人物故事頁，並更新首頁人物卡連結。
