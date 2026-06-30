@@ -1,5 +1,5 @@
 
-async function loadArticles(){const res=await fetch('/data/articles.json?v=10');return await res.json();}
+async function loadArticles(){const res=await fetch('/data/articles.json?v=11');return await res.json();}
 function card(a){return `<a class="card" href="${a.url}"><div class="cover" style="background-image:url('${a.cover}')"></div><div class="card-body"><span class="chip">${a.category}</span><h3>${a.title}</h3><p class="muted">${a.summary}</p><span class="readmore">${a.readingTime}閱讀</span></div></a>`}
 function list(a){return `<a class="list-card" href="${a.url}"><div class="list-thumb" style="background-image:url('${a.cover}')"></div><div><span class="chip">${a.category}</span><h3>${a.title}</h3><p class="muted">${a.summary}</p><p class="muted">${a.date}｜${a.readingTime}</p><span class="readmore">在本站閱讀 →</span></div></a>`}
 async function renderHome(){const el=document.querySelector('[data-latest]');if(!el)return;const data=await loadArticles();el.innerHTML=data.slice(0,4).map(card).join('');}

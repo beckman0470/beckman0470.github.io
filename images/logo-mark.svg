@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="180" viewBox="0 0 520 180">
+<rect width="520" height="180" fill="none"/>
+<g transform="translate(28,18)" stroke="#263328" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M60 28 C70 0 100 8 100 42 C122 44 136 60 136 84 C136 120 105 138 72 138 C38 138 15 115 15 84 C15 55 35 36 60 28Z" fill="#F7F1E7"/>
+<path d="M92 40 L112 28 L110 53"/>
+<circle cx="76" cy="70" r="4" fill="#263328"/>
+<path d="M24 137 C66 110 105 110 148 137"/>
+<circle cx="180" cy="92" r="18" fill="#F7F1E7"/>
+<path d="M157 145 C174 115 198 115 216 145"/>
+<circle cx="240" cy="92" r="18" fill="#F7F1E7"/>
+<path d="M217 145 C234 115 258 115 276 145"/>
+</g>
+<text x="330" y="64" font-family="Arial, sans-serif" font-size="26" font-weight="900" fill="#263328">CHICKEN DAD</text>
+<text x="330" y="100" font-family="Arial, sans-serif" font-size="26" font-weight="900" fill="#263328">LAB</text>
+<text x="330" y="132" font-family="Arial, sans-serif" font-size="13" fill="#687463">Family × Health × Baseball × AI</text>
+</svg>
