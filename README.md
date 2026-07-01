@@ -1,13 +1,11 @@
-# Chicken Dad Journal v4.2
+# Chicken Dad Journal v4.3
 
-Timeline Explorer.
+Homepage Generator.
 
-## 新增 / 覆蓋
+## 覆蓋
 
 ```text
-timeline.html
-js/timeline-page.js
-engine/timeline.py
-engine/seo.py
-docs/v4.2-timeline-explorer.md
+engine/homepage.py
+engine/engine.py
+docs/v4.3-homepage-generator.md
 ```

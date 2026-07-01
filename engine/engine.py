@@ -1,3 +1,4 @@
+
 import json
 from pathlib import Path
 
@@ -7,6 +8,7 @@ from cms.templates import render_article_page
 from engine.validator import validate_collection
 from engine.related import build_related_map, build_prev_next_map
 from engine.timeline import build_timeline
+from engine.homepage import render_homepage
 from engine.indexer import (
     build_stories_json,
     build_search_index,
@@ -30,40 +32,24 @@ class ContentEngine:
 
     def write_json(self, name, data):
         self.data_dir.mkdir(exist_ok=True)
-        (self.data_dir / name).write_text(
-            json.dumps(data, ensure_ascii=False, indent=2),
-            encoding="utf-8"
-        )
+        (self.data_dir / name).write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
 
     def build_articles(self, stories, related_map, prev_next_map):
         self.articles_dir.mkdir(exist_ok=True)
-
         for story in stories:
             meta = story["meta"]
             slug = meta.get("slug")
             story_id = meta.get("id")
             if not slug:
                 continue
-
-            html = render_article_page(
-                meta,
-                story["html"],
-                related_items=related_map.get(story_id, []),
-                prev_next=prev_next_map.get(story_id, {})
-            )
+            html = render_article_page(meta, story["html"], related_items=related_map.get(story_id, []), prev_next=prev_next_map.get(story_id, {}))
             (self.articles_dir / f"{slug}.html").write_text(html, encoding="utf-8")
 
     def build(self):
         stories = self.load_stories()
         errors, warnings = validate_collection(stories)
-
         if errors:
-            return {
-                "ok": False,
-                "stories": len(stories),
-                "errors": errors,
-                "warnings": warnings
-            }
+            return {"ok": False, "stories": len(stories), "errors": errors, "warnings": warnings}
 
         stories_json = build_stories_json(stories)
         related_json = build_related_map(stories)
@@ -83,6 +69,7 @@ class ContentEngine:
 
         self.build_articles(stories, related_json, prev_next_json)
 
+        (self.root / "index.html").write_text(render_homepage(stories_json), encoding="utf-8")
         (self.root / "sitemap.xml").write_text(build_sitemap(stories_json), encoding="utf-8")
         (self.root / "rss.xml").write_text(build_rss(stories_json), encoding="utf-8")
         (self.root / "robots.txt").write_text(build_robots(), encoding="utf-8")
@@ -93,6 +80,7 @@ class ContentEngine:
             "errors": [],
             "warnings": warnings,
             "generated": [
+                "index.html",
                 "data/stories.json",
                 "data/related.json",
                 "data/navigation.json",
