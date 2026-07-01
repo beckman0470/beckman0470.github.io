@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://beckman0470.github.io/</loc><lastmod>2026-07-01</lastmod><priority>1.0</priority></url>
-<url><loc>https://beckman0470.github.io/index.html</loc><lastmod>2026-07-01</lastmod><priority>1.0</priority></url>
-<url><loc>https://beckman0470.github.io/articles.html</loc><lastmod>2026-07-01</lastmod><priority>0.8</priority></url>
-<url><loc>https://beckman0470.github.io/series.html</loc><lastmod>2026-07-01</lastmod><priority>0.8</priority></url>
-<url><loc>https://beckman0470.github.io/family.html</loc><lastmod>2026-07-01</lastmod><priority>0.8</priority></url>
-<url><loc>https://beckman0470.github.io/about.html</loc><lastmod>2026-07-01</lastmod><priority>0.8</priority></url>
-<url><loc>https://beckman0470.github.io/articles/swimming.html</loc><lastmod>2026-07-01</lastmod><priority>0.8</priority></url>
-<url><loc>https://beckman0470.github.io/articles/vision-care.html</loc><lastmod>2026-07-01</lastmod><priority>0.8</priority></url>
-<url><loc>https://beckman0470.github.io/articles/cortisol.html</loc><lastmod>2026-07-01</lastmod><priority>0.8</priority></url>
-<url><loc>https://beckman0470.github.io/articles/dragons-champion.html</loc><lastmod>2026-07-01</lastmod><priority>0.8</priority></url>
+  <url><loc>https://beckman0470.github.io/</loc><priority>1.0</priority></url>
+  <url><loc>https://beckman0470.github.io/articles/temperature-of-now.html</loc><priority>0.8</priority></url>
+  <url><loc>https://beckman0470.github.io/parenting/</loc><priority>0.7</priority></url>
+  <url><loc>https://beckman0470.github.io/health/</loc><priority>0.7</priority></url>
+  <url><loc>https://beckman0470.github.io/baseball/</loc><priority>0.7</priority></url>
+  <url><loc>https://beckman0470.github.io/ai-lab/</loc><priority>0.7</priority></url>
 </urlset>

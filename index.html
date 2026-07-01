@@ -1,27 +1,114 @@
-<!DOCTYPE html><html lang="zh-Hant"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>雞爸爸生活研究室｜Chicken Dad Journal</title><meta property="og:site_name" content="Chicken Dad Journal">
-<meta property="og:type" content="website">
-<meta property="og:title" content="雞爸爸生活研究室｜Chicken Dad Journal">
-<meta property="og:description" content="幸福來自平凡生活的點滴累積。">
-<meta property="og:image" content="https://beckman0470.github.io/assets/og/og-image.svg">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#263328">
-<link rel="manifest" href="./site.webmanifest"><style>
-:root{--paper:#F8F6F1;--surface:#FFFDF8;--ink:#263328;--muted:#687463;--brown:#A67C52;--sage:#8FAF8B;--blue:#8DBFD8;--dragon:#8FBF72;--lavender:#B7A3C9;--milk:#D8C2A8;--line:#E6DED1;--shadow:0 24px 60px rgba(70,55,35,.12);--radius:30px;--serif:Georgia,"Times New Roman",serif;--sans:-apple-system,BlinkMacSystemFont,"Noto Sans TC","Microsoft JhengHei",Arial,sans-serif}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75}a{text-decoration:none;color:inherit}.container{width:min(1160px,calc(100% - 40px));margin:auto}.muted{color:var(--muted)}.kicker{font-size:13px;font-weight:900;letter-spacing:.16em;text-transform:uppercase;color:var(--brown)}
-.site-header{position:sticky;top:0;z-index:20;background:rgba(255,253,248,.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}.nav{height:82px;display:flex;align-items:center;justify-content:space-between;gap:24px}.logo{display:flex;align-items:center;gap:14px}.logo-mark{width:48px;height:48px;border-radius:50%;background:var(--surface);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;font-size:26px}.logo-text strong{display:block;font-size:21px;font-weight:950;line-height:1.2}.logo-text span{display:block;color:var(--muted);font-size:13px}.nav-links{display:flex;gap:26px;font-weight:850}.nav-links a:hover,.nav-links a.active{color:var(--brown)}
-.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 24px;border-radius:999px;background:var(--ink);color:white;font-weight:950;box-shadow:0 12px 30px rgba(38,51,40,.16)}.btn.secondary{background:var(--surface);color:var(--ink);border:1px solid var(--line);box-shadow:none}.section{padding:76px 0}.section-title{font-size:36px;line-height:1.2;margin:0;font-weight:950;letter-spacing:-.03em}.section-note{margin:0;color:var(--muted)}.section-head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:28px}.chip{display:inline-flex;align-self:flex-start;padding:5px 11px;border-radius:999px;background:#EEE6D9;color:var(--brown);font-size:13px;font-weight:950}.readmore{font-weight:950;color:var(--brown)}
-.site-footer{margin-top:50px;background:#243128;color:#FFFDF8}.footer-grid{display:grid;grid-template-columns:1.4fr .8fr .8fr .8fr;gap:32px;padding:54px 0}.site-footer h3,.site-footer h4{margin-top:0}.site-footer p,.site-footer a{color:rgba(255,253,248,.75)}.footer-bottom{border-top:1px solid rgba(255,255,255,.14);padding:18px 0;color:rgba(255,253,248,.6);font-size:14px}
-@media(max-width:980px){.nav-links{display:none}.footer-grid{grid-template-columns:1fr 1fr}}@media(max-width:620px){.container{width:min(100% - 28px,1160px)}.logo-mark{width:42px;height:42px}.logo-text strong{font-size:18px}.section{padding:52px 0}.section-head{display:block}.footer-grid{grid-template-columns:1fr}}
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>雞爸爸 Chicken Dad｜親子、健康、棒球與 AI 個人品牌網站</title>
+  <meta name="description" content="雞爸爸 Chicken Dad 的個人品牌網站：用故事與數據，記錄親子日常、健康管理、味全龍棒球觀察、AI 實驗與生活寫作。">
+  <link rel="canonical" href="https://beckman0470.github.io/">
+  <meta name="theme-color" content="#65c7bd">
+  <meta property="og:title" content="雞爸爸 Chicken Dad｜把生活的溫度，寫成可以留下來的故事">
+  <meta property="og:description" content="親子 × 健康 × 棒球 × AI：一個中年爸爸的品牌官網與寫作基地。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://beckman0470.github.io/">
+  <meta property="og:image" content="https://beckman0470.github.io/assets/images/og-cover.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script defer src="assets/js/main.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "雞爸爸 Chicken Dad",
+    "alternateName": "Beckman Chen",
+    "url": "https://beckman0470.github.io/",
+    "sameAs": ["https://github.com/beckman0470"],
+    "knowsAbout": ["親子生活", "健康管理", "棒球數據", "AI 工具", "專案管理", "網站設計"]
+  }
+  </script>
+</head>
+<body>
+  <div class="loader" aria-hidden="true"><div><span class="loader-mark">雞</span><p>Chicken Dad</p><small>Loading stories...</small></div></div>
 
-.hero{background:linear-gradient(180deg,#FFFDF8 0%,#F8F6F1 100%);overflow:hidden}.hero-grid{min-height:690px;display:grid;grid-template-columns:.95fr 1.05fr;gap:50px;align-items:center;padding:72px 0}.issue{display:inline-flex;padding:7px 13px;border:1px solid var(--line);border-radius:999px;background:rgba(255,253,248,.82);color:var(--muted);font-size:14px}.hero h1{font-family:var(--serif);font-size:clamp(48px,6vw,86px);line-height:1.06;letter-spacing:-.04em;margin:18px 0}.belief{font-size:25px;font-weight:950;color:var(--brown);margin:0 0 18px}.mission{font-size:21px;max-width:500px;margin:0;color:#344238}.intro-note{margin-top:24px;color:var(--muted);max-width:500px}.hero-art{min-height:530px;border-radius:46px;background:radial-gradient(circle at 78% 15%,#FFF1BA 0 92px,transparent 94px),linear-gradient(135deg,#FFF7EC,#E8C994 55%,#9EBB9A);box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.8);position:relative;overflow:hidden}.hero-art:before{content:"Every family has stories. This is ours.";position:absolute;left:42px;top:42px;font-family:var(--serif);font-size:34px;font-weight:700;color:var(--ink);max-width:420px;line-height:1.25}
-.family-silhouette{position:absolute;left:50%;top:60%;transform:translate(-50%,-50%);width:74%;height:58%}.person{position:absolute;border-radius:999px;box-shadow:0 20px 44px rgba(38,51,40,.16)}.p-dad{left:38%;top:5%;width:110px;height:270px;background:var(--ink)}.p-dad:before,.p-mom:before,.p-dodo:before,.p-dragon:before,.p-ama:before{content:"";position:absolute;border-radius:50%}.p-dad:before{left:17px;top:-70px;width:76px;height:76px;background:var(--ink)}.p-mom{left:58%;top:18%;width:82px;height:210px;background:var(--milk)}.p-mom:before{left:13px;top:-58px;width:56px;height:56px;background:var(--milk)}.p-dodo{left:18%;top:38%;width:66px;height:150px;background:var(--blue)}.p-dodo:before{left:10px;top:-48px;width:46px;height:46px;background:var(--blue)}.p-dragon{left:70%;top:48%;width:58px;height:132px;background:var(--dragon)}.p-dragon:before{left:9px;top:-42px;width:40px;height:40px;background:var(--dragon)}.p-ama{left:82%;top:34%;width:68px;height:168px;background:var(--lavender)}.p-ama:before{left:10px;top:-50px;width:48px;height:48px;background:var(--lavender)}
-.featured{display:grid;grid-template-columns:1.08fr .92fr;gap:28px}.cover-card{min-height:410px;border-radius:var(--radius);background:linear-gradient(135deg,#C7D9D0,#FFF7EC);box-shadow:var(--shadow);border:1px solid var(--line);padding:42px}.cover-card h3{font-family:var(--serif);font-size:58px;line-height:1.08;margin:0}.featured-copy{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:42px;box-shadow:var(--shadow);display:flex;flex-direction:column;justify-content:center}.featured-copy h2{font-size:39px;line-height:1.2;margin:10px 0 14px}.updates{display:grid;gap:14px}.update-card{display:grid;grid-template-columns:88px 1fr auto;gap:20px;align-items:center;padding:18px 20px;background:var(--surface);border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow)}.datebox{font-family:var(--serif);font-size:23px;color:var(--brown);font-weight:700}.card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.story-card,.family-card,.series-card,.research-card{background:var(--surface);border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow);overflow:hidden;transition:.2s ease}.story-cover{height:180px;background:linear-gradient(135deg,#D8C2A8,#FFF7EC)}.story-cover.dodo{background:linear-gradient(135deg,var(--blue),#FFF7EC)}.story-cover.health{background:linear-gradient(135deg,var(--sage),#FFF7EC)}.story-cover.baseball{background:linear-gradient(135deg,#802424,#F0D0A0)}.story-cover.ai{background:linear-gradient(135deg,#263328,#8DBFD8)}.card-body{padding:20px}.card-body h3{font-size:21px;line-height:1.35;margin:8px 0}.research-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.research-card{padding:22px}.family-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}.family-card{text-align:center;padding:24px}.avatar{width:76px;height:76px;margin:0 auto 14px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:38px;border:4px solid rgba(255,255,255,.85)}
-@media(max-width:980px){.hero-grid,.featured{grid-template-columns:1fr}.card-grid,.research-grid{grid-template-columns:1fr 1fr}.family-grid{grid-template-columns:1fr 1fr}}@media(max-width:620px){.hero h1{font-size:46px}.hero-grid{padding:48px 0}.hero-art{min-height:330px}.featured-copy,.cover-card{padding:26px}.card-grid,.research-grid,.family-grid{grid-template-columns:1fr}.update-card{grid-template-columns:1fr}}
-</style></head><body><header class="site-header"><div class="container nav"><a class="logo" href="./index.html"><div class="logo-mark">🐔</div><span class="logo-text"><strong>雞爸爸生活研究室</strong><span>Chicken Dad Journal</span></span></a><nav class="nav-links"><a class="active" href="./index.html">首頁</a><a class="" href="./articles.html">故事</a><a class="" href="./series.html">系列</a><a class="" href="./family.html">我們一家</a><a class="" href="./about.html">關於</a></nav></div></header><main>
-<section class="hero"><div class="container hero-grid"><div><div class="kicker">2026 Summer · v3.0</div><h1>雞爸爸生活研究室</h1><p class="belief">幸福來自平凡生活的點滴累積。</p><p class="mission">分享生活的故事，用科學理解生活，用陪伴記錄成長。</p><p class="intro-note">這裡不是教人如何生活，而是記錄一個家庭，如何在平凡的日子裡，慢慢過成自己喜歡的樣子。</p><div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:30px"><a class="btn" href="./articles.html">開始閱讀故事</a><a class="btn secondary" href="./family.html">認識這個家</a></div></div><div class="hero-art"><div class="family-silhouette"><div class="person p-dad"></div><div class="person p-mom"></div><div class="person p-dodo"></div><div class="person p-dragon"></div><div class="person p-ama"></div></div></div></div></section>
-<section class="section"><div class="container"><div class="section-head"><div><div class="kicker">Cover Story</div><h2 class="section-title">本月故事</h2><p class="section-note">由 stories.json 自動挑選。</p></div></div><div class="featured" id="featured-story"></div></div></section>
-<section class="section"><div class="container"><div class="section-head"><div><div class="kicker">Latest</div><h2 class="section-title">最近發生的故事</h2><p class="section-note">依文章日期自動排序。</p></div></div><div class="updates" id="latest-stories"></div></div></section>
-<section class="section"><div class="container"><div class="section-head"><div><div class="kicker">Research</div><h2 class="section-title">雞爸爸最近在研究</h2><p class="section-note">從每篇 Markdown 的 research 欄位整理。</p></div></div><div class="research-grid" id="research-topics"></div></div></section>
-<section class="section"><div class="container"><div class="section-head"><div><div class="kicker">Stories</div><h2 class="section-title">繼續閱讀</h2><p class="section-note">由 stories.json 自動帶入最新三篇。</p></div><a class="readmore" href="./articles.html">全部故事 →</a></div><div class="card-grid" id="story-cards"></div></div></section>
-<section class="section"><div class="container"><div class="section-head"><div><div class="kicker">Family</div><h2 class="section-title">認識這個家</h2><p class="section-note">這裡記錄的是一個家慢慢長大的樣子。</p></div><a class="readmore" href="./family.html">完整角色頁 →</a></div><div class="family-grid"><a class="family-card" href="./family.html"><div class="avatar" style="background:#A67C52">🐔</div><h3>ChickenDad</h3><p class="muted">雞爸爸</p></a><a class="family-card" href="./family.html"><div class="avatar" style="background:#D8C2A8">🐭</div><h3>RatMom</h3><p class="muted">鼠媽媽</p></a><a class="family-card" href="./family.html"><div class="avatar" style="background:#8DBFD8">🐭</div><h3>DoDo</h3><p class="muted">鼠姊姊</p></a><a class="family-card" href="./family.html"><div class="avatar" style="background:#8FBF72">🐲</div><h3>B.Dragon</h3><p class="muted">龍弟弟</p></a><a class="family-card" href="./family.html"><div class="avatar" style="background:#B7A3C9">🐰</div><h3>RabbitAma</h3><p class="muted">兔阿嬤</p></a></div></div></section>
-</main><footer class="site-footer"><div class="container footer-grid"><div><h3>雞爸爸生活研究室</h3><p>幸福來自平凡生活的點滴累積。</p><p>分享生活的故事，用科學理解生活，用陪伴記錄成長。</p></div><div><h4>閱讀</h4><p><a href="./index.html">首頁</a></p><p><a href="./articles.html">故事</a></p><p><a href="./series.html">系列</a></p></div><div><h4>品牌</h4><p><a href="./family.html">我們一家</a></p><p><a href="./about.html">關於</a></p></div><div><h4>外部</h4><p><a href="https://vocus.cc/salon/jisoopama-baby-cat" target="_blank">Vocus</a></p><p><a href="https://github.com/beckman0470" target="_blank">GitHub</a></p></div></div><div class="container footer-bottom">© 2026 Chicken Dad Journal. Every family has stories. This is ours.</div></footer><script src="./js/homepage.js"></script></body></html>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="回到首頁"><span class="brand-mark">雞</span><span>Chicken Dad</span></a>
+    <button class="nav-toggle" aria-label="開啟選單" aria-expanded="false">☰</button>
+    <nav class="site-nav" aria-label="主選單">
+      <a href="#writing">文章</a><a href="#columns">專欄</a><a href="#skills">能力</a><a href="#timeline">旅程</a><a href="#contact">聯絡</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero section">
+      <div class="hero-orb one"></div><div class="hero-orb two"></div>
+      <div class="hero-copy reveal">
+        <p class="eyebrow">Personal Brand Website · V4.0.2</p>
+        <h1>把生活的溫度，寫成可以留下來的故事。</h1>
+        <p class="lead">我是雞爸爸。分享健康、科技、棒球與親子生活，用數據與故事，打造更好的自己，也留下孩子長大的每一段光。</p>
+        <div class="hero-actions"><a class="button primary" href="#writing">開始閱讀</a><a class="button ghost" href="#columns">瀏覽專欄</a></div>
+        <div class="social-row" aria-label="社群連結"><a href="https://github.com/beckman0470" rel="noopener">GitHub</a><a href="https://vocus.cc/" rel="noopener">Vocus</a><a href="mailto:beckman0470@gmail.com">Email</a></div>
+      </div>
+      <aside class="profile-card reveal" aria-label="雞爸爸品牌摘要">
+        <div class="profile-photo"><span>雞</span></div>
+        <p class="eyebrow">Chicken Dad</p>
+        <h2>親子 × 健康 × 棒球 × AI</h2>
+        <p>中年爸爸的生活實驗室：把日常觀察寫成文章，把工作方法整理成系統，把熱愛變成長期作品。</p>
+        <div class="mini-tags"><span>Vocus Writer</span><span>AI Creator</span><span>PMIS PM</span></div>
+      </aside>
+    </section>
+
+    <section class="stats section compact reveal" aria-label="網站統計">
+      <div><strong data-count="40">0</strong><span>Vocus 文章靈感</span></div>
+      <div><strong data-count="20">0</strong><span>AI / 網站實驗</span></div>
+      <div><strong data-count="15">0</strong><span>系統與專案經驗</span></div>
+      <div><strong data-count="4">0</strong><span>核心內容專欄</span></div>
+    </section>
+
+    <section id="writing" class="section">
+      <div class="section-heading reveal"><p class="eyebrow">Featured Articles</p><h2>首頁精選文章</h2></div>
+      <div class="article-grid">
+        <article class="article-card featured reveal"><span>親子日常</span><h3>當下的溫度，就是幸福的定義</h3><p>龍弟弟點點肚臍、整個貼上來的那一刻，幸福不是大事件，而是一團軟軟暖暖的小身體。</p><a href="articles/temperature-of-now.html">閱讀草稿 →</a></article>
+        <article class="article-card reveal"><span>健康管理</span><h3>皮質醇讓臉變老？</h3><p>從壓力、睡眠到臉部鬆垮，用中年爸爸能理解的方法重新整理身體訊號。</p><a href="health/">進入專欄 →</a></article>
+        <article class="article-card reveal"><span>棒球觀察</span><h3>味全龍五大先發分析</h3><p>從洋投輪值、教練團補強與數據面，理解上半季奇蹟不是偶然。</p><a href="baseball/">進入專欄 →</a></article>
+      </div>
+    </section>
+
+    <section id="columns" class="section soft">
+      <div class="section-heading reveal"><p class="eyebrow">Columns</p><h2>四個主要入口</h2></div>
+      <div class="column-grid">
+        <a class="column-card reveal" href="parenting/"><strong>親子生活</strong><p>鼠姊姊、龍弟弟、鼠媽媽，與雞爸爸家的日常溫度。</p></a>
+        <a class="column-card reveal" href="health/"><strong>健康與健身</strong><p>皮質醇、腰圍、血管、睡眠與中年身體管理。</p></a>
+        <a class="column-card reveal" href="baseball/"><strong>味全龍觀察</strong><p>用故事感與數據，寫給真正關心球隊的人。</p></a>
+        <a class="column-card reveal" href="ai-lab/"><strong>AI 實驗室</strong><p>圖像、網站、寫作與工具流程的實驗紀錄。</p></a>
+      </div>
+    </section>
+
+    <section id="skills" class="section split">
+      <div class="reveal"><p class="eyebrow">Skills</p><h2>把混亂想法整理成作品的能力</h2><p class="section-copy">V4.0.2 開始讓網站更像個人品牌首頁，不只放文章，也呈現你的工作方法與創作能力。</p></div>
+      <div class="skill-list reveal">
+        <div class="skill"><span>專案管理</span><i style="--w:95%"></i><b>95%</b></div>
+        <div class="skill"><span>網站開發</span><i style="--w:90%"></i><b>90%</b></div>
+        <div class="skill"><span>AI 創作</span><i style="--w:85%"></i><b>85%</b></div>
+        <div class="skill"><span>資料分析</span><i style="--w:80%"></i><b>80%</b></div>
+      </div>
+    </section>
+
+    <section id="timeline" class="section soft">
+      <div class="section-heading reveal"><p class="eyebrow">Timeline</p><h2>雞爸爸品牌旅程</h2></div>
+      <ol class="timeline reveal">
+        <li><time>2011</time><strong>人生開始轉向</strong><p>在重要關係裡學會陪伴、承擔與留下紀錄。</p></li>
+        <li><time>PMIS</time><strong>能源署專案管理</strong><p>把需求、流程、資料與系統整合成可執行的平台。</p></li>
+        <li><time>Family</time><strong>雞爸爸誕生</strong><p>用親子日常重新理解幸福、責任與中年生活。</p></li>
+        <li><time>Now</time><strong>Vocus × AI Creator</strong><p>用文章、網站與 AI，把熱愛變成可長期經營的作品。</p></li>
+      </ol>
+    </section>
+  </main>
+
+  <footer id="contact" class="site-footer">
+    <div><strong>Chicken Dad</strong><p>Health · AI · Baseball · Parenting</p></div>
+    <nav><a href="https://vocus.cc/" rel="noopener">Vocus</a><a href="https://github.com/beckman0470" rel="noopener">GitHub</a><a href="mailto:beckman0470@gmail.com">Email</a></nav>
+    <small>Copyright © 2026 雞爸爸 Beckman Chen</small>
+  </footer>
+</body>
+</html>

@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
 Sitemap: https://beckman0470.github.io/sitemap.xml

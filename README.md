@@ -1,42 +1,20 @@
-# Chicken Dad Journal v3.6 Stable Full Release
+# Chicken Dad Website V4.0.2
 
-這是 v3.0～v3.5 的完整穩定整合版。
+GitHub Pages 個人品牌網站版本。
 
-## 主要頁面
+## V4.0.2 更新
 
-- `index.html`：首頁
-- `articles.html`：故事典藏
-- `series.html`：系列入口
-- `search.html`：全站搜尋
-- `tags.html`：標籤索引
-- `subscribe.html`：RSS 訂閱說明
-- `family.html`：認識這個家
-- `about.html`：關於
-- `404.html`：錯誤頁
+- 首頁 Hero 升級為品牌官網風格
+- 新增 Loading Animation
+- 新增 Profile / Social / Mini Tags
+- 新增 Stats Counter 動畫
+- 新增 Featured Articles 區塊
+- 新增 Skills 能力條
+- 新增 Timeline 品牌旅程
+- Footer 升級
+- 補強 SEO：canonical、Open Graph、Twitter Card、JSON-LD、robots.txt、sitemap.xml
+- 保留 V4.0.1 的四大專欄與文章樣板
 
-## CMS
+## 部署方式
 
-- `content/stories/`：Markdown 文章
-- `templates/story-template.md`：文章範本
-- `cms/build.py`：一鍵建置
-- `data/stories.json`：網站讀取資料
-
-## 自動建置
-
-執行：
-
-```bash
-python cms/build.py
-```
-
-會自動產生：
-
-- `data/stories.json`
-- `articles/{slug}.html`
-- `sitemap.xml`
-- `rss.xml`
-- `robots.txt`
-
-## 公開發布
-
-整包解壓縮後，將所有檔案覆蓋到 GitHub Repository 根目錄即可。
+將本資料夾內容放入 `beckman0470.github.io` repository 根目錄，commit 並 push 到 GitHub Pages 使用的分支即可。
