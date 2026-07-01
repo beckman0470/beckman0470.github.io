@@ -1,1 +1,1 @@
-v1.1 Stories Page：只覆蓋 articles.html。
+v1.4 Site Integration：覆蓋 index.html、about.html。整合導覽，新增正式 About 頁。
