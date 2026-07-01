@@ -1,1 +1,1 @@
-v2.4 Stories Page JSON Reader：覆蓋 articles.html，新增 js/stories-page.js。
+v2.5 Series Page JSON Reader：覆蓋 series.html，新增 js/series-page.js。
