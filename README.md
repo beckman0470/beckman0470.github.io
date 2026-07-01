@@ -1,1 +1,1 @@
-v2.2 JSON Pipeline
+v2.3 Homepage JSON Reader：覆蓋 index.html，新增 js/homepage.js。

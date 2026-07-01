@@ -1,0 +1,143 @@
+
+(function(){
+  const fallbackStories = [
+    {
+      id:"vision-care-20260630",
+      title:"從心疼、戴鏡到全人調理：陪孩子對抗先天遠視",
+      slug:"vision-care",
+      date:"2026-06-30",
+      summary:"記錄我們陪孩子面對先天遠視的荒野與希望。",
+      series:"DoDo 成長日記",
+      category:"家庭故事",
+      featured:false,
+      hero:false,
+      tags:["視力","遠視","陪伴"],
+      characters:["ChickenDad","DoDo"],
+      research:["兒童視力","遠視照護","家庭陪伴"],
+      url:"articles/vision-care.html"
+    },
+    {
+      id:"swimming-20260629",
+      title:"雞爸爸和鼠姊姊的半小時夏日約會",
+      slug:"swimming",
+      date:"2026-06-29",
+      summary:"一個夏日午後，雞爸爸和 DoDo 在泳池邊完成一場短短半小時的夏日約會。",
+      series:"DoDo 成長日記",
+      category:"家庭故事",
+      featured:true,
+      hero:true,
+      tags:["游泳","陪伴","成長"],
+      characters:["ChickenDad","DoDo"],
+      research:["親子陪伴","夏日游泳","成長紀錄"],
+      url:"articles/swimming.html"
+    },
+    {
+      id:"cortisol-20260629",
+      title:"壓力正壓垮你的臉：從皮質醇到下垂臉的真相",
+      slug:"cortisol",
+      date:"2026-06-29",
+      summary:"皮質醇不是壞人，但長期壓力會讓身體失去修復節奏。",
+      series:"ChickenDad 札記",
+      category:"健康生活",
+      featured:false,
+      hero:false,
+      tags:["皮質醇","壓力","健康"],
+      characters:["ChickenDad"],
+      research:["皮質醇","壓力管理","臉部老化"],
+      url:"articles/cortisol.html"
+    },
+    {
+      id:"dragons-champion-20260629",
+      title:"味全龍這一冠，屬於用心經營的球團！",
+      slug:"dragons-champion",
+      date:"2026-06-29",
+      summary:"從情蒐、養成、跑壘到投手整合，重新理解上半季冠軍。",
+      series:"棒球觀察",
+      category:"棒球故事",
+      featured:false,
+      hero:false,
+      tags:["味全龍","棒球","養成"],
+      characters:["ChickenDad"],
+      research:["味全龍","棒球數據","球隊養成"],
+      url:"articles/dragons-champion.html"
+    }
+  ];
+
+  function fixUrl(url){
+    if(!url) return "#";
+    if(url.startsWith("./")) return url;
+    if(url.startsWith("/")) return "." + url;
+    return "./" + url;
+  }
+
+  function fmtDate(s){
+    const d = new Date(s + "T00:00:00");
+    if(Number.isNaN(d.getTime())) return s || "";
+    return String(d.getMonth()+1).padStart(2,"0") + "/" + String(d.getDate()).padStart(2,"0");
+  }
+
+  async function loadStories(){
+    try{
+      const res = await fetch("./data/stories.json?v=23", {cache:"no-store"});
+      if(!res.ok) throw new Error("HTTP " + res.status);
+      const data = await res.json();
+      if(!Array.isArray(data) || data.length === 0) throw new Error("empty stories.json");
+      console.log("Homepage loaded stories.json", data.length);
+      return data;
+    }catch(err){
+      console.warn("Using fallback stories", err);
+      return fallbackStories;
+    }
+  }
+
+  function renderFeatured(stories){
+    const el = document.getElementById("featured-story");
+    const story = stories.find(s=>s.hero) || stories.find(s=>s.featured) || stories[0];
+    if(!el || !story) return;
+    el.innerHTML = `<div class="cover-card"><h3>${story.category || "故事"}</h3><p>${story.series || "Chicken Dad Journal"}</p></div>
+      <div class="featured-copy"><span class="chip">${story.series || story.category || "故事"}</span><h2>${story.title}</h2><p class="muted">${story.summary || ""}</p><p class="muted">${story.date || ""}</p><a class="btn" href="${fixUrl(story.url)}">閱讀本月故事</a></div>`;
+    const todayNote = document.getElementById("today-story-note");
+    const todayLink = document.getElementById("today-story-link");
+    if(todayNote) todayNote.textContent = "今日推薦：" + story.title;
+    if(todayLink) todayLink.href = fixUrl(story.url);
+  }
+
+  function renderLatest(stories){
+    const el = document.getElementById("latest-stories");
+    if(!el) return;
+    el.innerHTML = stories.slice(0,3).map(s=>`<a class="update-card" href="${fixUrl(s.url)}"><div class="datebox">${fmtDate(s.date)}</div><div><strong>${s.title}</strong><p class="muted">${s.series || ""}｜${s.category || ""}</p></div><span class="readmore">閱讀 →</span></a>`).join("");
+  }
+
+  function coverClass(s){
+    const cat = (s.category || "") + " " + (s.tags || []).join(" ");
+    if(cat.includes("健康") || cat.includes("皮質醇")) return "health";
+    if(cat.includes("棒球") || cat.includes("味全")) return "baseball";
+    if(cat.includes("AI")) return "ai";
+    if(cat.includes("DoDo") || cat.includes("視力") || cat.includes("游泳")) return "dodo";
+    return "";
+  }
+
+  function renderStoryCards(stories){
+    const el = document.getElementById("story-cards");
+    if(!el) return;
+    el.innerHTML = stories.slice(0,3).map(s=>`<a class="story-card" href="${fixUrl(s.url)}"><div class="story-cover ${coverClass(s)}"></div><div class="card-body"><span class="chip">${s.category || "故事"}</span><h3>${s.title}</h3><p class="muted">${s.summary || ""}</p><span class="readmore">閱讀 →</span></div></a>`).join("");
+  }
+
+  function renderResearch(stories){
+    const el = document.getElementById("research-topics");
+    if(!el) return;
+    const counts = {};
+    stories.forEach(s => (s.research || []).forEach(r => counts[r] = (counts[r] || 0) + 1));
+    let topics = Object.entries(counts).sort((a,b)=>b[1]-a[1]).slice(0,4);
+    if(topics.length === 0) topics = [["親子陪伴",1],["健康生活",1],["味全龍",1],["AI網站",1]];
+    el.innerHTML = topics.map(([name,count])=>`<div class="research-card"><div class="kicker">Research</div><h3>${name}</h3><p class="muted">${count} 篇相關故事</p></div>`).join("");
+  }
+
+  loadStories().then(stories=>{
+    stories.sort((a,b)=>new Date(b.date)-new Date(a.date));
+    renderFeatured(stories);
+    renderLatest(stories);
+    renderStoryCards(stories);
+    renderResearch(stories);
+  });
+})();
