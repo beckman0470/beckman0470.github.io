@@ -1,16 +1,19 @@
-# Chicken Dad Journal v4.6 QA Fix Pack
+# Chicken Dad Journal v5.0 Sprint 1
 
-這是 v4.5 Production 的穩定性修補包。
+Content Studio Core.
 
 ## 覆蓋 / 新增
 
 ```text
-index.html
-engine/homepage.py
-tools/qa_check.py
-docs/v4.6-qa-fix-pack.md
+studio/
+content/drafts/
+content/scheduled/
+content/published/
+content/archived/
+templates/story-template-v5.md
+docs/v5.0-sprint1-content-studio.md
 ```
 
 ## 目的
 
-修正首頁 `#contact` 錨點與提供 Production QA 檢查工具。
+把網站升級成創作者平台，建立文章狀態、Metadata 2.0、內容盤點工具。
