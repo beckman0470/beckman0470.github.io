@@ -1,17 +1,52 @@
-# v1.6 Navigation Cleanup
+# Chicken Dad Journal v2.0 CMS Foundation
 
-## 覆蓋檔案
-- index.html
-- articles.html
-- family.html
-- about.html
+這一版建立 Markdown CMS 的地基，但暫時不改動現有網站頁面。
 
-## 修正內容
-- 全站「系列」連結改成 `series.html`
-- 全站「我們一家」連結改成 `family.html`
-- 首頁「認識這個家」按鈕連到正式 Family 頁
-- 導覽列 active 狀態整理
-- Footer 連結整合
+## 新增內容
 
-## 注意
-`series.html` 已於 v1.5 完成，這版不覆蓋 series.html。
+```text
+config.json
+content/
+  stories/
+    2026-06-29-swimming.md
+    2026-06-30-vision-care.md
+  drafts/
+  assets/
+templates/
+  story-template.md
+docs/
+  story-markdown-spec.md
+cms/
+```
+
+## 下一步：v2.0 Sprint 2
+
+建立本機 build script：
+
+```text
+cms/build.py
+```
+
+功能：
+
+1. 讀取 `content/stories/*.md`
+2. 解析 front matter
+3. 產生 `data/stories.json`
+4. 產生 `articles.html`
+5. 產生單篇文章 HTML
+
+## 現階段使用方式
+
+你之後新增文章時，可以複製：
+
+```text
+templates/story-template.md
+```
+
+到：
+
+```text
+content/stories/YYYY-MM-DD-slug.md
+```
+
+然後修改 front matter 與正文。
