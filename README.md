@@ -1,1 +1,1 @@
-v1.4 Site Integration：覆蓋 index.html、about.html。整合導覽，新增正式 About 頁。
+v1.5 Series Page：新增 series.html。建立系列入口與正在連載/準備中系列。

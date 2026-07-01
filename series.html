@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>系列｜雞爸爸生活研究室</title>
+<meta name="description" content="雞爸爸生活研究室的系列入口，收錄 DoDo 成長日記、B.Dragon 成長日記、健康生活、AI 生活實驗、棒球觀察與閱讀札記。">
+<style>
+:root{--paper:#F8F6F1;--surface:#FFFDF8;--ink:#263328;--muted:#687463;--brown:#A67C52;--sage:#8FAF8B;--blue:#8DBFD8;--dragon:#8FBF72;--lavender:#B7A3C9;--milk:#D8C2A8;--line:#E6DED1;--shadow:0 24px 60px rgba(70,55,35,.12);--radius:30px;--serif:Georgia,"Times New Roman",serif;--sans:-apple-system,BlinkMacSystemFont,"Noto Sans TC","Microsoft JhengHei",Arial,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75}a{text-decoration:none;color:inherit}.container{width:min(1160px,calc(100% - 40px));margin:auto}.muted{color:var(--muted)}.kicker{font-size:13px;font-weight:900;letter-spacing:.16em;text-transform:uppercase;color:var(--brown)}
+.site-header{position:sticky;top:0;z-index:20;background:rgba(255,253,248,.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}.nav{height:82px;display:flex;align-items:center;justify-content:space-between;gap:24px}.logo{display:flex;align-items:center;gap:14px}.logo-mark{width:48px;height:48px;border-radius:50%;background:var(--surface);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;font-size:26px}.logo-text strong{display:block;font-size:21px;font-weight:950;line-height:1.2}.logo-text span{display:block;color:var(--muted);font-size:13px}.nav-links{display:flex;gap:26px;font-weight:850}.nav-links a:hover,.nav-links a.active{color:var(--brown)}
+.page-hero{padding:82px 0 48px;background:linear-gradient(180deg,#FFFDF8 0%,#F8F6F1 100%)}.page-hero h1{font-family:var(--serif);font-size:clamp(52px,7vw,92px);line-height:1.05;letter-spacing:-.04em;margin:18px 0}.lead{font-size:22px;max-width:780px;color:#344238}.hero-note{background:var(--surface);border:1px solid var(--line);border-radius:30px;padding:28px 32px;box-shadow:var(--shadow);margin-top:32px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center}.hero-note strong{font-size:21px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 21px;border-radius:999px;background:var(--ink);color:#fff;font-weight:950}.btn.secondary{background:var(--surface);color:var(--ink);border:1px solid var(--line)}
+.section{padding:64px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:26px}.section-title{font-size:36px;margin:0;font-weight:950;letter-spacing:-.03em}.section-note{margin:0;color:var(--muted)}
+.series-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}.series-card{background:var(--surface);border:1px solid var(--line);border-radius:32px;box-shadow:var(--shadow);overflow:hidden;display:grid;grid-template-columns:180px 1fr;transition:.2s ease}.series-card:hover{transform:translateY(-4px)}.series-art{min-height:260px;display:flex;align-items:center;justify-content:center;font-size:78px;position:relative}.series-art:after{content:"";position:absolute;right:-55px;bottom:-65px;width:170px;height:170px;border-radius:50%;background:#FFF1BA;opacity:.45}.series-body{padding:30px}.series-body h2{font-family:var(--serif);font-size:42px;line-height:1.08;margin:0}.count{font-weight:950;color:var(--brown);margin:8px 0 14px}.tag-row{display:flex;gap:9px;flex-wrap:wrap;margin:16px 0}.tag{display:inline-flex;padding:6px 10px;border-radius:999px;background:#EEE6D9;color:var(--brown);font-size:13px;font-weight:950}.story-list{margin-top:20px;border-top:1px solid var(--line)}.story-item{display:grid;grid-template-columns:72px 1fr auto;gap:14px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line)}.story-item strong{line-height:1.35}.date{font-family:var(--serif);font-size:19px;color:var(--brown);font-weight:700}.readmore{font-weight:950;color:var(--brown)}
+.featured{display:grid;grid-template-columns:.95fr 1.05fr;gap:24px}.feature-card{background:var(--surface);border:1px solid var(--line);border-radius:30px;padding:32px;box-shadow:var(--shadow)}.feature-card h3{font-size:30px;margin:8px 0 10px}.feature-card p{margin-bottom:0}
+.site-footer{margin-top:50px;background:#243128;color:#FFFDF8}.footer-grid{display:grid;grid-template-columns:1.4fr .8fr .8fr .8fr;gap:32px;padding:54px 0}.site-footer h3,.site-footer h4{margin-top:0}.site-footer p,.site-footer a{color:rgba(255,253,248,.75)}.footer-bottom{border-top:1px solid rgba(255,255,255,.14);padding:18px 0;color:rgba(255,253,248,.6);font-size:14px}
+@media(max-width:980px){.nav-links{display:none}.series-grid,.featured{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr 1fr}.series-card{grid-template-columns:1fr}.series-art{min-height:190px}}
+@media(max-width:620px){.container{width:min(100% - 28px,1160px)}.logo-mark{width:42px;height:42px}.logo-text strong{font-size:18px}.page-hero{padding:56px 0 36px}.page-hero h1{font-size:50px}.lead{font-size:18px}.hero-note{grid-template-columns:1fr;padding:24px}.section{padding:46px 0}.section-head{display:block}.series-body,.feature-card{padding:24px}.series-body h2{font-size:35px}.story-item{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="logo" href="./index.html"><div class="logo-mark">🐔</div><span class="logo-text"><strong>雞爸爸生活研究室</strong><span>Chicken Dad Journal</span></span></a>
+    <nav class="nav-links"><a href="./index.html">首頁</a><a href="./articles.html">故事</a><a class="active" href="./series.html">系列</a><a href="./family.html">我們一家</a><a href="./about.html">關於</a></nav>
+  </div>
+</header>
+
+<main>
+<section class="page-hero">
+  <div class="container">
+    <div class="kicker">Series Library</div>
+    <h1>系列入口</h1>
+    <p class="lead">故事不只是單篇文章，也會慢慢長成一個個系列。這裡整理雞爸爸生活研究室正在累積的主題，讓讀者可以一路追下去。</p>
+    <div class="hero-note">
+      <div><strong>不限制主題，但讓故事有地方慢慢累積。</strong><p class="muted">家庭、健康、AI、棒球、閱讀，都是生活的一部分。</p></div>
+      <a class="btn secondary" href="./articles.html">看全部故事</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head"><div><div class="kicker">Growing Series</div><h2 class="section-title">正在連載</h2><p class="section-note">先從目前已經有故事的系列開始。</p></div></div>
+    <div class="series-grid">
+
+      <article class="series-card">
+        <div class="series-art" style="background:linear-gradient(135deg,#8DBFD8,#FFF7EC)">🐭</div>
+        <div class="series-body">
+          <div class="kicker">DoDo</div>
+          <h2>DoDo 成長日記</h2>
+          <div class="count">目前 2 篇故事</div>
+          <p class="muted">視力、游泳、畢業與成長日常。這是一個孩子慢慢長大的紀錄。</p>
+          <div class="tag-row"><span class="tag">視力</span><span class="tag">游泳</span><span class="tag">陪伴</span><span class="tag">成長</span></div>
+          <div class="story-list">
+            <a class="story-item" href="./articles/vision-care.html"><div class="date">06/30</div><strong>從心疼、戴鏡到全人調理：陪孩子對抗先天遠視</strong><span class="readmore">閱讀 →</span></a>
+            <a class="story-item" href="./articles/swimming.html"><div class="date">06/29</div><strong>雞爸爸和鼠姊姊的半小時夏日約會</strong><span class="readmore">閱讀 →</span></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="series-card">
+        <div class="series-art" style="background:linear-gradient(135deg,#A67C52,#FFF7EC)">🐔</div>
+        <div class="series-body">
+          <div class="kicker">ChickenDad</div>
+          <h2>ChickenDad 札記</h2>
+          <div class="count">目前 2 篇故事</div>
+          <p class="muted">把蒐集、驗證、分析後的理解，放進生活，再整理成可以分享的故事。</p>
+          <div class="tag-row"><span class="tag">健康</span><span class="tag">棒球</span><span class="tag">AI</span><span class="tag">閱讀</span></div>
+          <div class="story-list">
+            <a class="story-item" href="./articles/cortisol.html"><div class="date">06/29</div><strong>壓力正壓垮你的臉：從皮質醇到下垂臉的真相</strong><span class="readmore">閱讀 →</span></a>
+            <a class="story-item" href="./articles/dragons-champion.html"><div class="date">06/29</div><strong>味全龍這一冠，屬於用心經營的球團！</strong><span class="readmore">閱讀 →</span></a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head"><div><div class="kicker">Next Series</div><h2 class="section-title">準備中的系列</h2><p class="section-note">這些主題會隨著生活慢慢長出文章。</p></div></div>
+    <div class="series-grid">
+
+      <article class="series-card">
+        <div class="series-art" style="background:linear-gradient(135deg,#8FBF72,#FFF7EC)">🐲</div>
+        <div class="series-body">
+          <div class="kicker">B.Dragon</div>
+          <h2>B.Dragon 成長日記</h2>
+          <div class="count">持續更新中</div>
+          <p class="muted">車車、笑聲、第一次跟陌生人打招呼。世界對他來說，什麼都是新的。</p>
+          <div class="tag-row"><span class="tag">車車</span><span class="tag">愛笑</span><span class="tag">第一次</span></div>
+        </div>
+      </article>
+
+      <article class="series-card">
+        <div class="series-art" style="background:linear-gradient(135deg,#8FAF8B,#FFF7EC)">🌿</div>
+        <div class="series-body">
+          <div class="kicker">Health</div>
+          <h2>健康生活</h2>
+          <div class="count">目前 1 篇故事</div>
+          <p class="muted">身體訊號、壓力、睡眠、運動與照顧自己。健康不是完美，而是有更多時間陪伴家人。</p>
+          <div class="tag-row"><span class="tag">皮質醇</span><span class="tag">睡眠</span><span class="tag">運動</span></div>
+        </div>
+      </article>
+
+      <article class="series-card">
+        <div class="series-art" style="background:linear-gradient(135deg,#263328,#8DBFD8)">🤖</div>
+        <div class="series-body">
+          <div class="kicker">AI</div>
+          <h2>AI 生活實驗</h2>
+          <div class="count">準備中</div>
+          <p class="muted">AI 不是炫技，而是把工具放進生活裡，看看能不能讓寫作、設計與工作變得更有趣。</p>
+          <div class="tag-row"><span class="tag">網站</span><span class="tag">生成圖</span><span class="tag">工具</span></div>
+        </div>
+      </article>
+
+      <article class="series-card">
+        <div class="series-art" style="background:linear-gradient(135deg,#802424,#F0D0A0)">⚾</div>
+        <div class="series-body">
+          <div class="kicker">Baseball</div>
+          <h2>棒球觀察</h2>
+          <div class="count">目前 1 篇故事</div>
+          <p class="muted">勝負之外，還有養成、數據、教練團與球隊經營。棒球也是理解系統的一種方式。</p>
+          <div class="tag-row"><span class="tag">味全龍</span><span class="tag">養成</span><span class="tag">數據</span></div>
+        </div>
+      </article>
+
+      <article class="series-card">
+        <div class="series-art" style="background:linear-gradient(135deg,#B7A3C9,#FFF7EC)">📖</div>
+        <div class="series-body">
+          <div class="kicker">Reading</div>
+          <h2>閱讀札記</h2>
+          <div class="count">準備中</div>
+          <p class="muted">漫畫、武俠、文學與人生思考。閱讀不是知道更多，而是理解更多。</p>
+          <div class="tag-row"><span class="tag">鏢人</span><span class="tag">令狐沖</span><span class="tag">思考</span></div>
+        </div>
+      </article>
+
+      <article class="series-card">
+        <div class="series-art" style="background:linear-gradient(135deg,#D8C2A8,#FFF7EC)">🏡</div>
+        <div class="series-body">
+          <div class="kicker">Life</div>
+          <h2>生活研究室</h2>
+          <div class="count">持續更新中</div>
+          <p class="muted">那些難以分類、卻很值得記錄的日常：家、工作、工具、空間與一點點人生。</p>
+          <div class="tag-row"><span class="tag">生活</span><span class="tag">工作</span><span class="tag">工具</span></div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="featured">
+      <div class="feature-card"><div class="kicker">Product Note</div><h3>下一步：讓系列可以真正被追蹤</h3><p class="muted">目前是靜態系列頁。之後會讓每一個系列都有獨立頁面，並自動收錄相關故事。</p></div>
+      <div class="feature-card"><div class="kicker">Brand Note</div><h3>故事不只是一篇文章，而是一段生活的延續</h3><p class="muted">系列頁的目的，是讓讀者知道每個主題會慢慢長大，而不是讀完就結束。</p></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div><h3>雞爸爸生活研究室</h3><p>幸福來自平凡生活的點滴累積。</p><p>分享生活的故事，用科學理解生活，用陪伴記錄成長。</p></div>
+    <div><h4>閱讀</h4><p><a href="./index.html">首頁</a></p><p><a href="./articles.html">故事</a></p><p><a href="./series.html">系列</a></p></div>
+    <div><h4>品牌</h4><p><a href="./family.html">我們一家</a></p><p><a href="./about.html">關於</a></p></div>
+    <div><h4>外部</h4><p><a href="https://vocus.cc/salon/jisoopama-baby-cat" target="_blank">Vocus</a></p><p><a href="https://github.com/beckman0470" target="_blank">GitHub</a></p></div>
+  </div>
+  <div class="container footer-bottom">© 2026 Chicken Dad Journal. Every family has stories. This is ours.</div>
+</footer>
+</body>
+</html>
