@@ -1,28 +1,19 @@
-# v5.0 Sprint 3｜Publishing Pipeline
+name: Chicken Dad Journal Build
 
-## 新增
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
 
-```text
-studio/publish.py
-studio/release_check.py
-.github/workflows/build.yml
-PUBLISHING.md
-```
-
-## 功能
-
-- Build Pipeline
-- QA Check
-- Git Commit Helper
-- GitHub Actions Build Check
-- Release Check
-
-## 使用
-
-```bash
-python studio/publish.py "Update site"
-```
-
-## 注意
-
-`publish.py` 預設不自動 push，避免誤推。
+jobs:
+  build-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Build site
+        run: python cms/build.py
+      - name: Release check
+        run: python studio/release_check.py

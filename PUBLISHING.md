@@ -1,49 +1,36 @@
-from pathlib import Path
-import subprocess
-import sys
+# Publishing Pipeline
 
-ROOT = Path(__file__).resolve().parents[1]
+## 本機發布流程
 
-def run(cmd):
-    print("$", " ".join(cmd))
-    result = subprocess.run(cmd, cwd=ROOT, text=True, capture_output=True)
-    if result.stdout:
-        print(result.stdout)
-    if result.stderr:
-        print(result.stderr)
-    if result.returncode != 0:
-        raise SystemExit(result.returncode)
+```bash
+python studio/publish.py "Update Chicken Dad Journal"
+```
 
-def build():
-    run([sys.executable, "cms/build.py"])
+預設只會：
 
-def qa():
-    qa_script = ROOT / "tools" / "qa_check.py"
-    if qa_script.exists():
-        run([sys.executable, "tools/qa_check.py"])
-    else:
-        print("QA skipped: tools/qa_check.py not found")
+1. Build
+2. QA
+3. git status
+4. git add
+5. git commit
 
-def git_status():
-    run(["git", "status", "--short"])
+不會自動 push。
 
-def commit(message="Publish Chicken Dad Journal"):
-    run(["git", "add", "."])
-    run(["git", "commit", "-m", message])
+若要推送，請手動：
 
-def push():
-    run(["git", "push"])
+```bash
+git push
+```
 
-def publish(message="Publish Chicken Dad Journal", push_to_remote=False):
-    build()
-    qa()
-    git_status()
-    commit(message)
-    if push_to_remote:
-        push()
+## GitHub Actions
 
-if __name__ == "__main__":
-    msg = "Publish Chicken Dad Journal"
-    if len(sys.argv) > 1:
-        msg = " ".join(sys.argv[1:])
-    publish(msg, push_to_remote=False)
+新增：
+
+```text
+.github/workflows/build.yml
+```
+
+每次 push 到 main 會自動：
+
+- 執行 `python cms/build.py`
+- 執行 `python studio/release_check.py`
