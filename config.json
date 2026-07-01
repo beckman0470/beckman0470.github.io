@@ -7,9 +7,17 @@
     "language": "zh-Hant",
     "author": "ChickenDad"
   },
-  "production": {
-    "version": "4.5",
-    "release": "Production Release",
-    "generated": "2026-07-01"
+  "platform": {
+    "version": "5.0",
+    "release": "Production Platform",
+    "generated": "2026-07-01",
+    "features": [
+      "Content Studio",
+      "AI Editor",
+      "Publishing Pipeline",
+      "Dashboard",
+      "Production Engine",
+      "QA Tools"
+    ]
   }
 }
