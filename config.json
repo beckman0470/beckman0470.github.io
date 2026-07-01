@@ -7,8 +7,9 @@
     "language": "zh-Hant",
     "author": "ChickenDad"
   },
-  "brand": {
-    "promise": "幸福來自平凡生活的點滴累積。",
-    "mission": "分享生活的故事，用科學理解生活，用陪伴記錄成長。"
+  "production": {
+    "version": "4.5",
+    "release": "Production Release",
+    "generated": "2026-07-01"
   }
 }

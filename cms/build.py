@@ -7,10 +7,13 @@ sys.path.insert(0, str(ROOT))
 from engine.engine import ContentEngine
 
 def main():
+    print("Chicken Dad Journal Production Builder v4.5")
+    print("Cleaning / Preparing...")
     engine = ContentEngine(ROOT)
+
+    print("Building content engine...")
     result = engine.build()
 
-    print("Chicken Dad Journal Content Engine v4.1")
     print(f"Stories: {result['stories']}")
 
     if result.get("warnings"):
@@ -27,6 +30,8 @@ def main():
     print("\nGenerated:")
     for item in result["generated"]:
         print(" -", item)
+
+    print("\nDone.")
 
 if __name__ == "__main__":
     main()
