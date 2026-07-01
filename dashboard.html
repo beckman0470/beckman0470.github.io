@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard｜雞爸爸生活研究室</title>
+<meta name="description" content="雞爸爸生活研究室 Content Studio Dashboard。">
+<meta name="theme-color" content="#263328">
+<style>
+:root{--paper:#F8F6F1;--surface:#FFFDF8;--ink:#263328;--muted:#687463;--brown:#A67C52;--line:#E6DED1;--shadow:0 24px 60px rgba(70,55,35,.12);--serif:Georgia,"Times New Roman",serif;--sans:-apple-system,BlinkMacSystemFont,"Noto Sans TC","Microsoft JhengHei",Arial,sans-serif}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75}a{text-decoration:none;color:inherit}.container{width:min(1180px,calc(100% - 40px));margin:auto}.muted{color:var(--muted)}.kicker{font-size:13px;font-weight:900;letter-spacing:.16em;text-transform:uppercase;color:var(--brown)}
+.header{padding:56px 0 30px;background:linear-gradient(180deg,#FFFDF8 0%,#F8F6F1 100%)}h1{font-family:var(--serif);font-size:clamp(48px,7vw,86px);line-height:1.05;letter-spacing:-.04em;margin:14px 0}.lead{font-size:21px;color:#344238;max-width:760px}
+.nav{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.btn{display:inline-flex;padding:11px 18px;border-radius:999px;background:var(--ink);color:white;font-weight:950}.btn.secondary{background:var(--surface);color:var(--ink);border:1px solid var(--line)}
+.section{padding:38px 0}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.card{background:var(--surface);border:1px solid var(--line);border-radius:26px;box-shadow:var(--shadow);padding:24px}.stat{font-family:var(--serif);font-size:50px;line-height:1;color:var(--brown);font-weight:700;margin:8px 0}.card h3{margin:0;font-size:18px}.wide{grid-column:span 2}.full{grid-column:1/-1}.list{display:grid;gap:12px}.item{display:grid;grid-template-columns:120px 1fr auto;gap:16px;align-items:center;border-top:1px solid var(--line);padding:14px 0}.chip{display:inline-flex;padding:5px 10px;border-radius:999px;background:#EEE6D9;color:var(--brown);font-size:13px;font-weight:950}.bar{height:10px;border-radius:999px;background:#EEE6D9;overflow:hidden}.bar span{display:block;height:100%;background:var(--brown);border-radius:999px}.empty{color:var(--muted);padding:12px 0}
+@media(max-width:980px){.grid{grid-template-columns:1fr 1fr}.wide{grid-column:span 2}}@media(max-width:620px){.container{width:min(100% - 28px,1180px)}.grid{grid-template-columns:1fr}.wide{grid-column:span 1}.item{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="header">
+  <div class="container">
+    <div class="kicker">Content Studio</div>
+    <h1>Dashboard</h1>
+    <p class="lead">快速檢查雞爸爸生活研究室的內容狀態、文章數、系列、標籤、品質與發布準備度。</p>
+    <nav class="nav">
+      <a class="btn" href="./index.html">回首頁</a>
+      <a class="btn secondary" href="./articles.html">故事</a>
+      <a class="btn secondary" href="./timeline.html">時間軸</a>
+      <a class="btn secondary" href="./rss.xml">RSS</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="section">
+  <div class="container">
+    <div class="grid" id="stats-grid"></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="grid">
+      <div class="card wide">
+        <div class="kicker">Latest</div>
+        <h2>最近文章</h2>
+        <div class="list" id="latest-list"></div>
+      </div>
+      <div class="card wide">
+        <div class="kicker">Tags</div>
+        <h2>熱門標籤</h2>
+        <div class="list" id="tag-list"></div>
+      </div>
+      <div class="card wide">
+        <div class="kicker">Series</div>
+        <h2>系列分布</h2>
+        <div class="list" id="series-list"></div>
+      </div>
+      <div class="card wide">
+        <div class="kicker">Quality</div>
+        <h2>內容狀態</h2>
+        <div class="list" id="quality-list"></div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<script src="./js/dashboard.js"></script>
+</body>
+</html>
