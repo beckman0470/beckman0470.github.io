@@ -1,31 +1,17 @@
-# Chicken Dad Journal v3.2
+# Chicken Dad Journal v3.3
 
-Full Site Search.
+Tag System.
 
 ## 新增
 
 ```text
-search.html
-js/search-page.js
-docs/v3.2-full-site-search.md
+tags.html
+js/tags-page.js
+docs/v3.3-tag-system.md
 ```
 
-## 功能
-
-- 讀取 `data/stories.json`
-- 搜尋標題
-- 搜尋摘要
-- 搜尋系列
-- 搜尋分類
-- 搜尋 tags
-- 搜尋 characters
-- 搜尋 research
-- JSON 失敗時使用 fallback stories
-
-## 建議手動調整
-
-之後可在主要頁面的導覽列加入：
+建議之後在主導覽加入：
 
 ```html
-<a href="./search.html">搜尋</a>
+<a href="./tags.html">標籤</a>
 ```
