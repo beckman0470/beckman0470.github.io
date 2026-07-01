@@ -1,27 +1,15 @@
-# Chicken Dad Journal v3.4
+# Chicken Dad Journal v3.5
 
-RSS & Sitemap Automation.
+Navigation & Subscription Integration.
 
-## 覆蓋 / 新增
+## 新增
 
 ```text
-cms/build.py
-rss.xml
-docs/v3.4-rss-sitemap.md
+subscribe.html
+tools_update_nav.py
+docs/v3.5-navigation-subscription.md
 ```
 
-## 功能
+## 重點
 
-執行：
-
-```bash
-python cms/build.py
-```
-
-會自動產生：
-
-- `data/stories.json`
-- `articles/{slug}.html`
-- `sitemap.xml`
-- `rss.xml`
-- `robots.txt`
+新增 RSS 訂閱說明頁，並提供導覽整合工具。
