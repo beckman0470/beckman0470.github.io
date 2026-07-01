@@ -1,0 +1,1 @@
+Chicken Dad Journal v15.1 Homepage Foundation. Upload all files to GitHub Pages repo root.

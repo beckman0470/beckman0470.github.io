@@ -1,0 +1,32 @@
+[
+  {
+    "title": "DoDo 成長日記",
+    "count": 2,
+    "color": "#8DBFD8",
+    "summary": "視力、游泳、畢業與成長日常。"
+  },
+  {
+    "title": "B.Dragon 成長日記",
+    "count": 0,
+    "color": "#8FBF72",
+    "summary": "車車、笑聲、第一次探索世界。"
+  },
+  {
+    "title": "ChickenDad 札記",
+    "count": 2,
+    "color": "#A67C52",
+    "summary": "健康、AI、棒球、閱讀與生活整理。"
+  },
+  {
+    "title": "健康生活",
+    "count": 1,
+    "color": "#8FAF8B",
+    "summary": "身體訊號、運動、睡眠與照顧自己。"
+  },
+  {
+    "title": "棒球觀察",
+    "count": 1,
+    "color": "#802424",
+    "summary": "勝負之外的系統、養成與故事。"
+  }
+]
