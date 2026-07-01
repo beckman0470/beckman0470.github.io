@@ -1,50 +1,104 @@
 [
   {
+    "id": "swimming-20260629",
     "title": "雞爸爸和鼠姊姊的半小時夏日約會",
+    "slug": "swimming",
     "date": "2026-06-29",
-    "series": "DoDo 成長日記",
-    "character": "DoDo",
+    "series": "dodo-growth",
+    "seriesTitle": "DoDo 成長日記",
+    "characters": [
+      "ChickenDad",
+      "DoDo"
+    ],
     "category": "家庭故事",
-    "readingTime": "5 分鐘",
+    "tags": [
+      "游泳",
+      "陪伴",
+      "成長",
+      "家庭"
+    ],
+    "readingTime": 5,
     "summary": "一個夏日午後，雞爸爸和 DoDo 在泳池邊完成一場短短半小時的夏日約會。",
-    "url": "/articles/swimming.html",
     "cover": "/images/cover-family.svg",
-    "featured": true
+    "url": "/articles/swimming.html",
+    "featured": true,
+    "hero": true,
+    "quote": "有時候，半小時就足夠留下很久的回憶。"
   },
   {
+    "id": "vision-care-20260630",
     "title": "從心疼、戴鏡到全人調理：陪孩子對抗先天遠視",
+    "slug": "vision-care",
     "date": "2026-06-30",
-    "series": "DoDo 成長日記",
-    "character": "DoDo",
+    "series": "dodo-growth",
+    "seriesTitle": "DoDo 成長日記",
+    "characters": [
+      "ChickenDad",
+      "DoDo"
+    ],
     "category": "家庭故事",
-    "readingTime": "7 分鐘",
+    "tags": [
+      "視力",
+      "遠視",
+      "陪伴",
+      "健康"
+    ],
+    "readingTime": 7,
     "summary": "從鬥雞眼、戴眼鏡到每週點眼調理，記錄我們陪孩子面對先天遠視的荒野與希望。",
-    "url": "/articles/vision-care.html",
     "cover": "/images/cover-dodo.svg",
-    "featured": false
+    "url": "/articles/vision-care.html",
+    "featured": false,
+    "hero": false,
+    "quote": "孩子的成長不是直線，而是一段需要陪伴的路。"
   },
   {
+    "id": "cortisol-20260629",
     "title": "壓力正壓垮你的臉：從皮質醇到下垂臉的真相",
+    "slug": "cortisol",
     "date": "2026-06-29",
-    "series": "ChickenDad 札記",
-    "character": "ChickenDad",
+    "series": "chickendad-notes",
+    "seriesTitle": "ChickenDad 札記",
+    "characters": [
+      "ChickenDad"
+    ],
     "category": "健康生活",
-    "readingTime": "7 分鐘",
+    "tags": [
+      "皮質醇",
+      "健康",
+      "壓力",
+      "臉部老化"
+    ],
+    "readingTime": 7,
     "summary": "皮質醇不是壞人，但長期壓力會讓臉部與身體失去修復節奏。",
-    "url": "/articles/cortisol.html",
     "cover": "/images/cover-health.svg",
-    "featured": false
+    "url": "/articles/cortisol.html",
+    "featured": false,
+    "hero": false,
+    "quote": "健康不是追求完美，而是學會理解身體的訊號。"
   },
   {
+    "id": "dragons-champion-20260629",
     "title": "味全龍這一冠，屬於用心經營的球團！",
+    "slug": "dragons-champion",
     "date": "2026-06-29",
-    "series": "棒球觀察",
-    "character": "ChickenDad",
+    "series": "baseball-notes",
+    "seriesTitle": "棒球觀察",
+    "characters": [
+      "ChickenDad"
+    ],
     "category": "棒球故事",
-    "readingTime": "6 分鐘",
+    "tags": [
+      "味全龍",
+      "棒球",
+      "CPBL",
+      "養成"
+    ],
+    "readingTime": 6,
     "summary": "從情蒐、養成、跑壘到投手整合，重新理解上半季冠軍。",
-    "url": "/articles/dragons-champion.html",
     "cover": "/images/cover-baseball.svg",
-    "featured": false
+    "url": "/articles/dragons-champion.html",
+    "featured": false,
+    "hero": false,
+    "quote": "一支球隊的強大，往往藏在看不見的系統裡。"
   }
 ]

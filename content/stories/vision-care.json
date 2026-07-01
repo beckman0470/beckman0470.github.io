@@ -1,0 +1,26 @@
+{
+  "id": "vision-care-20260630",
+  "title": "從心疼、戴鏡到全人調理：陪孩子對抗先天遠視",
+  "slug": "vision-care",
+  "date": "2026-06-30",
+  "series": "dodo-growth",
+  "seriesTitle": "DoDo 成長日記",
+  "characters": [
+    "ChickenDad",
+    "DoDo"
+  ],
+  "category": "家庭故事",
+  "tags": [
+    "視力",
+    "遠視",
+    "陪伴",
+    "健康"
+  ],
+  "readingTime": 7,
+  "summary": "從鬥雞眼、戴眼鏡到每週點眼調理，記錄我們陪孩子面對先天遠視的荒野與希望。",
+  "cover": "/images/cover-dodo.svg",
+  "url": "/articles/vision-care.html",
+  "featured": false,
+  "hero": false,
+  "quote": "孩子的成長不是直線，而是一段需要陪伴的路。"
+}

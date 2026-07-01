@@ -1,1 +1,1 @@
-Chicken Dad Journal v15.1 Homepage Foundation. Upload all files to GitHub Pages repo root.
+Chicken Dad Journal v15.2 Story Engine. Upload all files to GitHub Pages repository root.

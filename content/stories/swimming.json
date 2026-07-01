@@ -1,0 +1,26 @@
+{
+  "id": "swimming-20260629",
+  "title": "雞爸爸和鼠姊姊的半小時夏日約會",
+  "slug": "swimming",
+  "date": "2026-06-29",
+  "series": "dodo-growth",
+  "seriesTitle": "DoDo 成長日記",
+  "characters": [
+    "ChickenDad",
+    "DoDo"
+  ],
+  "category": "家庭故事",
+  "tags": [
+    "游泳",
+    "陪伴",
+    "成長",
+    "家庭"
+  ],
+  "readingTime": 5,
+  "summary": "一個夏日午後，雞爸爸和 DoDo 在泳池邊完成一場短短半小時的夏日約會。",
+  "cover": "/images/cover-family.svg",
+  "url": "/articles/swimming.html",
+  "featured": true,
+  "hero": true,
+  "quote": "有時候，半小時就足夠留下很久的回憶。"
+}

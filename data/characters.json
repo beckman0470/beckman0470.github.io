@@ -1,42 +1,72 @@
 [
   {
+    "id": "chickendad",
     "name": "ChickenDad",
     "zh": "雞爸爸",
     "emoji": "🐔",
     "url": "/stories/chickendad.html",
     "color": "#A67C52",
-    "summary": "閱讀、驗證、分析，再把有趣的理解落實到生活並分享。"
+    "summary": "閱讀、驗證、分析，再把有趣的理解落實到生活並分享。",
+    "keywords": [
+      "閱讀",
+      "陪伴",
+      "分享"
+    ]
   },
   {
+    "id": "ratmom",
     "name": "RatMom",
     "zh": "鼠媽媽",
     "emoji": "🐭",
     "url": "/stories/ratmom.html",
     "color": "#D8C2A8",
-    "summary": "溫柔、細心、安定，是家裡最穩定的力量。"
+    "summary": "溫柔、細心、安定，是家裡最穩定的力量。",
+    "keywords": [
+      "溫柔",
+      "細心",
+      "安定"
+    ]
   },
   {
+    "id": "dodo",
     "name": "DoDo",
     "zh": "鼠姊姊",
     "emoji": "🐭",
     "url": "/stories/dodo.html",
     "color": "#8DBFD8",
-    "summary": "活潑好動、愛漂亮、愛撒嬌，喜歡公主打扮與唱歌跳舞。"
+    "summary": "活潑好動、愛漂亮、愛撒嬌，喜歡公主打扮與唱歌跳舞。",
+    "keywords": [
+      "活潑好動",
+      "愛漂亮",
+      "愛撒嬌"
+    ]
   },
   {
+    "id": "bdragon",
     "name": "B.Dragon",
     "zh": "龍弟弟",
     "emoji": "🐲",
     "url": "/stories/bdragon.html",
     "color": "#8FBF72",
-    "summary": "愛笑、聰明、聲音宏亮，喜歡車車，也愛跟陌生人打招呼。"
+    "summary": "愛笑、聰明、聲音宏亮，喜歡車車，也愛跟陌生人打招呼。",
+    "keywords": [
+      "愛笑",
+      "聰明",
+      "聲音宏亮"
+    ]
   },
   {
+    "id": "rabbitama",
     "name": "RabbitAma",
     "zh": "兔阿嬤",
     "emoji": "🐰",
     "url": "/stories/rabbitama.html",
     "color": "#B7A3C9",
-    "summary": "溫暖、生活智慧、會照顧人，讓平凡日子更安心。"
+    "summary": "溫暖、生活智慧、會照顧人，讓平凡日子更安心。",
+    "keywords": [
+      "溫暖",
+      "生活智慧",
+      "會照顧人"
+    ]
   }
 ]

@@ -1,1 +1,50 @@
-async function j(p){return (await fetch(p)).json()}function d(s){let x=new Date(s+"T00:00:00");return `${String(x.getMonth()+1).padStart(2,'0')}/${String(x.getDate()).padStart(2,'0')}`}function story(a){return `<a class="story-card" href="${a.url}"><div class="story-cover" style="background-image:url('${a.cover}')"></div><div class="card-body"><span class="chip">${a.category}</span><h3>${a.title}</h3><p class="muted">${a.summary}</p><span class="readmore">閱讀故事 →</span></div></a>`}async function render(){let A=await j('/data/articles.json?v=151'),C=await j('/data/characters.json?v=151'),S=await j('/data/series.json?v=151'),f=A.find(a=>a.featured)||A[0];document.querySelector('[data-featured]').innerHTML=`<div class="featured-cover" style="background-image:url('${f.cover}')"></div><div class="featured-copy"><span class="chip">${f.series}</span><h2>${f.title}</h2><p class="muted">${f.summary}</p><p class="muted">${f.date}｜${f.readingTime}</p><a class="btn" href="${f.url}">閱讀本月故事</a></div>`;document.querySelector('[data-latest]').innerHTML=A.slice(0,3).map(a=>`<a class="update-card" href="${a.url}"><div class="datebox">${d(a.date)}</div><div><strong>${a.title}</strong><p class="muted">${a.series}｜${a.category}</p></div><span class="readmore">閱讀 →</span></a>`).join('');document.querySelector('[data-stories]').innerHTML=A.slice(1,4).map(story).join('');document.querySelector('[data-family]').innerHTML=C.map(c=>`<a class="family-card" href="${c.url}"><div class="avatar" style="background:${c.color}">${c.emoji}</div><h3>${c.name}</h3><p class="muted">${c.zh}</p><p>${c.summary}</p></a>`).join('');document.querySelector('[data-series]').innerHTML=S.map(s=>`<a class="series-card" href="#"><div class="bar" style="background:${s.color}"></div><h3>${s.title}</h3><p class="muted">${s.count} 篇故事</p><p>${s.summary}</p></a>`).join('')}render();
+
+import { storyCard, updateCard } from './story-card.js';
+import { loadStories, loadCharacters, loadSeries, sortByDate, getFeatured } from './story-loader.js';
+
+async function renderHome(){
+  const stories = sortByDate(await loadStories());
+  const characters = await loadCharacters();
+  const series = await loadSeries();
+  const featured = getFeatured(stories);
+
+  const featuredEl = document.querySelector('[data-featured]');
+  if(featuredEl && featured){
+    featuredEl.innerHTML = `<div class="featured-cover" style="background-image:url('${featured.cover}')"></div>
+    <div class="featured-copy">
+      <span class="chip">${featured.seriesTitle}</span>
+      <h2>${featured.title}</h2>
+      <p class="muted">${featured.summary}</p>
+      <p class="muted">${featured.date}｜${featured.readingTime} 分鐘閱讀</p>
+      <a class="btn" href="${featured.url}">閱讀本月故事</a>
+    </div>`;
+  }
+
+  const latestEl = document.querySelector('[data-latest]');
+  if(latestEl) latestEl.innerHTML = stories.slice(0,3).map(updateCard).join('');
+
+  const storiesEl = document.querySelector('[data-stories]');
+  if(storiesEl) storiesEl.innerHTML = stories.filter(s => !s.featured).slice(0,3).map(storyCard).join('');
+
+  const familyEl = document.querySelector('[data-family]');
+  if(familyEl){
+    familyEl.innerHTML = characters.map(c => `<a class="family-card" href="${c.url}">
+      <div class="avatar" style="background:${c.color}">${c.emoji}</div>
+      <h3>${c.name}</h3>
+      <p class="muted">${c.zh}</p>
+      <p>${c.summary}</p>
+    </a>`).join('');
+  }
+
+  const seriesEl = document.querySelector('[data-series]');
+  if(seriesEl){
+    seriesEl.innerHTML = series.map(s => `<a class="series-card" href="#">
+      <div class="bar" style="background:${s.color}"></div>
+      <h3>${s.title}</h3>
+      <p class="muted">${s.count} 篇故事</p>
+      <p>${s.summary}</p>
+    </a>`).join('');
+  }
+}
+
+renderHome();

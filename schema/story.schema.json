@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Chicken Dad Journal Story",
+  "type": "object",
+  "required": [
+    "id",
+    "title",
+    "slug",
+    "date",
+    "series",
+    "seriesTitle",
+    "characters",
+    "category",
+    "tags",
+    "readingTime",
+    "summary",
+    "cover",
+    "url"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "series": {
+      "type": "string"
+    },
+    "seriesTitle": {
+      "type": "string"
+    },
+    "characters": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "category": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "readingTime": {
+      "type": "number"
+    },
+    "summary": {
+      "type": "string"
+    },
+    "cover": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "featured": {
+      "type": "boolean"
+    },
+    "hero": {
+      "type": "boolean"
+    },
+    "quote": {
+      "type": "string"
+    }
+  }
+}
