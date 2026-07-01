@@ -1,1 +1,1 @@
-v1.0.1 Homepage Polish：只覆蓋 index.html。調整文案、認識這個家、今日推薦與手機版細節。
+v1.1 Stories Page：只覆蓋 articles.html。
