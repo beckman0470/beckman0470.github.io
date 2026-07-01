@@ -1,17 +1,27 @@
-# Chicken Dad Journal v3.3
+# Chicken Dad Journal v3.4
 
-Tag System.
+RSS & Sitemap Automation.
 
-## 新增
+## 覆蓋 / 新增
 
 ```text
-tags.html
-js/tags-page.js
-docs/v3.3-tag-system.md
+cms/build.py
+rss.xml
+docs/v3.4-rss-sitemap.md
 ```
 
-建議之後在主導覽加入：
+## 功能
 
-```html
-<a href="./tags.html">標籤</a>
+執行：
+
+```bash
+python cms/build.py
 ```
+
+會自動產生：
+
+- `data/stories.json`
+- `articles/{slug}.html`
+- `sitemap.xml`
+- `rss.xml`
+- `robots.txt`
