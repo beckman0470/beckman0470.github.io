@@ -1,14 +1,25 @@
-v2.0 Sprint 1.1
+# Chicken Dad Journal v2.1 CMS Engine
 
-新增空資料夾保留：
+這版新增 CMS 引擎骨架。
 
-content/
-  drafts/
-  assets/
-    covers/
-    heroes/
-    illustrations/
+## 覆蓋／新增
 
-data/
+```text
+cms/
+  __init__.py
+  build.py
+  generator.py
+  markdown.py
+  schema.py
 
-以上皆加入 .gitkeep，GitHub 與 ZIP 都會保留資料夾結構。
+docs/
+  cms-engine-architecture.md
+```
+
+## 暫時不動網站頁面
+
+此版本只建立 CMS 引擎，不會覆蓋 `index.html`、`articles.html`、`series.html`、`family.html`、`about.html`。
+
+## 下一步
+
+v2.2 會讓 `content/stories/*.md` 開始自動產生故事列表與文章頁。

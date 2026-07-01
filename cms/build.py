@@ -1,11 +1,35 @@
 """
-Chicken Dad Journal CMS Build Script
-v2.0 Sprint 1 placeholder
+Chicken Dad Journal CMS Build
+v2.1
 
-下一個 Sprint 會實作：
-- 讀取 Markdown
-- 解析 YAML front matter
-- 產生 JSON
-- 產生 HTML
+使用方式：
+在專案根目錄執行：
+
+python cms/build.py
+
+輸出：
+- data/stories.json
+- articles/{slug}.html
 """
-print("Chicken Dad CMS foundation ready. Build script will be implemented in Sprint 2.")
+
+from pathlib import Path
+import sys
+
+CURRENT = Path(__file__).resolve()
+PROJECT_ROOT = CURRENT.parents[1]
+
+sys.path.insert(0, str(PROJECT_ROOT))
+
+from cms.generator import build_site
+
+if __name__ == "__main__":
+    result = build_site(PROJECT_ROOT)
+
+    print("Chicken Dad CMS Build Complete")
+    print(f"Stories generated: {result['stories']}")
+
+    if result["errors"]:
+        print("Errors:")
+        for error in result["errors"]:
+            print(" -", error)
+        raise SystemExit(1)
