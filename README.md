@@ -1,1 +1,1 @@
-v2.5 Series Page JSON Reader：覆蓋 series.html，新增 js/series-page.js。
+v2.6 Public Release Kit：新增 404、sitemap、robots、manifest、release checklist。

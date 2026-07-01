@@ -1,0 +1,11 @@
+{
+  "name": "雞爸爸生活研究室",
+  "short_name": "Chicken Dad",
+  "description": "幸福來自平凡生活的點滴累積。",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F8F6F1",
+  "theme_color": "#263328",
+  "lang": "zh-Hant",
+  "icons": []
+}
