@@ -1,1 +1,1 @@
-v2.3 Homepage JSON Reader：覆蓋 index.html，新增 js/homepage.js。
+v2.4 Stories Page JSON Reader：覆蓋 articles.html，新增 js/stories-page.js。
