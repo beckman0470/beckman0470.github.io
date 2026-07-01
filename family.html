@@ -1,134 +1,18 @@
-<!DOCTYPE html>
-<html lang="zh-Hant">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>認識這個家｜雞爸爸生活研究室</title>
-<meta name="description" content="認識 ChickenDad、RatMom、DoDo、B.Dragon 與 RabbitAma。這不是角色介紹，而是一個家慢慢長大的樣子。">
-<style>
+<!DOCTYPE html><html lang="zh-Hant"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>認識這個家｜雞爸爸生活研究室</title><meta property="og:site_name" content="Chicken Dad Journal">
+<meta property="og:type" content="website">
+<meta property="og:title" content="雞爸爸生活研究室｜Chicken Dad Journal">
+<meta property="og:description" content="幸福來自平凡生活的點滴累積。">
+<meta property="og:image" content="https://beckman0470.github.io/assets/og/og-image.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#263328">
+<link rel="manifest" href="./site.webmanifest"><style>
 :root{--paper:#F8F6F1;--surface:#FFFDF8;--ink:#263328;--muted:#687463;--brown:#A67C52;--sage:#8FAF8B;--blue:#8DBFD8;--dragon:#8FBF72;--lavender:#B7A3C9;--milk:#D8C2A8;--line:#E6DED1;--shadow:0 24px 60px rgba(70,55,35,.12);--radius:30px;--serif:Georgia,"Times New Roman",serif;--sans:-apple-system,BlinkMacSystemFont,"Noto Sans TC","Microsoft JhengHei",Arial,sans-serif}
-*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75}a{text-decoration:none;color:inherit}.container{width:min(1160px,calc(100% - 40px));margin:auto}.muted{color:var(--muted)}.kicker{font-size:13px;font-weight:900;letter-spacing:.16em;text-transform:uppercase;color:var(--brown)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75}a{text-decoration:none;color:inherit}.container{width:min(1160px,calc(100% - 40px));margin:auto}.muted{color:var(--muted)}.kicker{font-size:13px;font-weight:900;letter-spacing:.16em;text-transform:uppercase;color:var(--brown)}
 .site-header{position:sticky;top:0;z-index:20;background:rgba(255,253,248,.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}.nav{height:82px;display:flex;align-items:center;justify-content:space-between;gap:24px}.logo{display:flex;align-items:center;gap:14px}.logo-mark{width:48px;height:48px;border-radius:50%;background:var(--surface);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;font-size:26px}.logo-text strong{display:block;font-size:21px;font-weight:950;line-height:1.2}.logo-text span{display:block;color:var(--muted);font-size:13px}.nav-links{display:flex;gap:26px;font-weight:850}.nav-links a:hover,.nav-links a.active{color:var(--brown)}
-.page-hero{padding:82px 0 48px;background:linear-gradient(180deg,#FFFDF8 0%,#F8F6F1 100%)}.page-hero h1{font-family:var(--serif);font-size:clamp(52px,7vw,92px);line-height:1.05;letter-spacing:-.04em;margin:18px 0}.lead{font-size:22px;max-width:760px;color:#344238}.home-quote{background:var(--surface);border:1px solid var(--line);border-radius:30px;padding:30px 34px;box-shadow:var(--shadow);margin-top:34px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center}.home-quote strong{font-size:22px}.section{padding:64px 0}.section-head{margin-bottom:26px}.section-title{font-size:36px;margin:0;font-weight:950;letter-spacing:-.03em}.section-note{margin:0;color:var(--muted)}
-.family-grid{display:grid;gap:26px}.character-card{display:grid;grid-template-columns:260px 1fr;gap:28px;align-items:stretch;background:var(--surface);border:1px solid var(--line);border-radius:32px;box-shadow:var(--shadow);overflow:hidden}.character-art{min-height:280px;display:flex;align-items:center;justify-content:center;font-size:88px;position:relative}.character-art:after{content:"";position:absolute;right:-60px;bottom:-70px;width:180px;height:180px;border-radius:50%;background:#FFF1BA;opacity:.45}.character-body{padding:34px}.character-body h2{font-family:var(--serif);font-size:46px;line-height:1.1;margin:0}.zh{font-size:18px;color:var(--muted);font-weight:850;margin:5px 0 16px}.tag-row{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}.tag{display:inline-flex;padding:6px 11px;border-radius:999px;background:#EEE6D9;color:var(--brown);font-size:13px;font-weight:950}.profile-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:20px}.profile-box{border:1px solid var(--line);border-radius:20px;padding:16px 18px;background:#FFFDF8}.profile-box h4{margin:0 0 6px}.story-links{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 20px;border-radius:999px;background:var(--ink);color:white;font-weight:950}.btn.secondary{background:var(--surface);color:var(--ink);border:1px solid var(--line)}
-.values{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.value-card{background:var(--surface);border:1px solid var(--line);border-radius:26px;box-shadow:var(--shadow);padding:26px}.value-card h3{margin:8px 0 8px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 24px;border-radius:999px;background:var(--ink);color:white;font-weight:950;box-shadow:0 12px 30px rgba(38,51,40,.16)}.btn.secondary{background:var(--surface);color:var(--ink);border:1px solid var(--line);box-shadow:none}.section{padding:76px 0}.section-title{font-size:36px;line-height:1.2;margin:0;font-weight:950;letter-spacing:-.03em}.section-note{margin:0;color:var(--muted)}.section-head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:28px}.chip{display:inline-flex;align-self:flex-start;padding:5px 11px;border-radius:999px;background:#EEE6D9;color:var(--brown);font-size:13px;font-weight:950}.readmore{font-weight:950;color:var(--brown)}
 .site-footer{margin-top:50px;background:#243128;color:#FFFDF8}.footer-grid{display:grid;grid-template-columns:1.4fr .8fr .8fr .8fr;gap:32px;padding:54px 0}.site-footer h3,.site-footer h4{margin-top:0}.site-footer p,.site-footer a{color:rgba(255,253,248,.75)}.footer-bottom{border-top:1px solid rgba(255,255,255,.14);padding:18px 0;color:rgba(255,253,248,.6);font-size:14px}
-@media(max-width:900px){.nav-links{display:none}.character-card{grid-template-columns:1fr}.character-art{min-height:210px}.values,.footer-grid{grid-template-columns:1fr 1fr}.home-quote{grid-template-columns:1fr}}
-@media(max-width:620px){.container{width:min(100% - 28px,1160px)}.logo-mark{width:42px;height:42px}.logo-text strong{font-size:18px}.page-hero{padding:56px 0 36px}.page-hero h1{font-size:50px}.lead{font-size:18px}.section{padding:46px 0}.character-body{padding:26px}.character-body h2{font-size:38px}.profile-grid,.values,.footer-grid{grid-template-columns:1fr}}
-</style>
-</head>
-<body>
-<header class="site-header">
-  <div class="container nav">
-    <a class="logo" href="./index.html"><div class="logo-mark">🐔</div><span class="logo-text"><strong>雞爸爸生活研究室</strong><span>Chicken Dad Journal</span></span></a>
-    <nav class="nav-links"><a href="./index.html">首頁</a><a href="./articles.html">故事</a><a href="./series.html">系列</a><a class="active" href="./family.html">我們一家</a><a href="./about.html">關於</a></nav>
-  </div>
-</header>
+@media(max-width:980px){.nav-links{display:none}.footer-grid{grid-template-columns:1fr 1fr}}@media(max-width:620px){.container{width:min(100% - 28px,1160px)}.logo-mark{width:42px;height:42px}.logo-text strong{font-size:18px}.section{padding:52px 0}.section-head{display:block}.footer-grid{grid-template-columns:1fr}}
 
-<main>
-<section class="page-hero">
-  <div class="container">
-    <div class="kicker">Family Bible</div>
-    <h1>認識這個家</h1>
-    <p class="lead">這不是角色介紹，而是一個家慢慢長大的樣子。ChickenDad、RatMom、DoDo、B.Dragon 和 RabbitAma，一起把平凡日子過成值得珍藏的故事。</p>
-    <div class="home-quote">
-      <div><strong>幸福不是轟轟烈烈，而是一天一天累積。</strong><p class="muted">一次陪伴、一段閱讀、一個發現、一場比賽，都可能成為以後回頭看時，想好好珍藏的故事。</p></div>
-      <a class="btn secondary" href="./index.html">回首頁</a>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="section-head"><div class="kicker">Characters</div><h2 class="section-title">雞爸爸一家</h2><p class="section-note">每個角色都有自己的顏色、關鍵字與故事。</p></div>
-    <div class="family-grid">
-
-      <article class="character-card">
-        <div class="character-art" style="background:linear-gradient(135deg,#A67C52,#FFF7EC)">🐔</div>
-        <div class="character-body">
-          <div class="kicker">ChickenDad</div>
-          <h2>ChickenDad</h2>
-          <div class="zh">雞爸爸｜天蠍座</div>
-          <p>喜歡蒐集、驗證、分析網路相關資料。理解之後，會先落實到生活，再把有趣或有幫助的部分分享給大家。</p>
-          <div class="tag-row"><span class="tag">閱讀</span><span class="tag">陪伴</span><span class="tag">分享</span><span class="tag">驗證</span><span class="tag">分析</span></div>
-          <div class="profile-grid"><div class="profile-box"><h4>外觀設定</h4><p class="muted">黑框眼鏡、一點山羊鬍、薄肌型身材，穿衣顯瘦、脫衣有肉。</p></div><div class="profile-box"><h4>超能力</h4><p class="muted">把複雜的事情整理成大家都看得懂的故事。</p></div></div>
-          <div class="story-links"><a class="btn" href="./articles/cortisol.html">閱讀健康故事</a><a class="btn secondary" href="./articles/dragons-champion.html">閱讀棒球故事</a></div>
-        </div>
-      </article>
-
-      <article class="character-card">
-        <div class="character-art" style="background:linear-gradient(135deg,#D8C2A8,#FFF7EC)">🐭</div>
-        <div class="character-body">
-          <div class="kicker">RatMom</div>
-          <h2>RatMom</h2>
-          <div class="zh">鼠媽媽｜金牛座</div>
-          <p>家裡最穩定的人。不一定話最多，但總是大家最安心的依靠。</p>
-          <div class="tag-row"><span class="tag">溫柔</span><span class="tag">細心</span><span class="tag">安定</span></div>
-          <div class="profile-grid"><div class="profile-box"><h4>外觀設定</h4><p class="muted">耳上短髮，近視不深，可戴可不戴眼鏡，奶茶色系穿搭。</p></div><div class="profile-box"><h4>超能力</h4><p class="muted">讓家變得很安心。</p></div></div>
-        </div>
-      </article>
-
-      <article class="character-card">
-        <div class="character-art" style="background:linear-gradient(135deg,#8DBFD8,#FFF7EC)">🐭</div>
-        <div class="character-body">
-          <div class="kicker">DoDo</div>
-          <h2>DoDo</h2>
-          <div class="zh">鼠姊姊｜天秤座</div>
-          <p>活潑好動、愛漂亮、愛撒嬌。喜歡公主打扮，現在喜歡長髮的小美人魚，也愛唱歌跳舞，有點小聒噪。</p>
-          <div class="tag-row"><span class="tag">活潑好動</span><span class="tag">愛漂亮</span><span class="tag">愛撒嬌</span><span class="tag">唱歌跳舞</span></div>
-          <div class="profile-grid"><div class="profile-box"><h4>外觀設定</h4><p class="muted">黑色直髮、透明框眼鏡固定。泳鏡不是固定配件，只在游泳故事出現。</p></div><div class="profile-box"><h4>超能力</h4><p class="muted">把平凡的一天變得很熱鬧。</p></div></div>
-          <div class="story-links"><a class="btn" href="./articles/swimming.html">半小時夏日約會</a><a class="btn secondary" href="./articles/vision-care.html">視力陪伴故事</a></div>
-        </div>
-      </article>
-
-      <article class="character-card">
-        <div class="character-art" style="background:linear-gradient(135deg,#8FBF72,#FFF7EC)">🐲</div>
-        <div class="character-body">
-          <div class="kicker">B.Dragon</div>
-          <h2>B.Dragon</h2>
-          <div class="zh">龍弟弟｜天蠍座</div>
-          <p>愛笑、聰明、聲音很宏亮。喜歡車車，也愛跟陌生人打招呼，每一天都像新的探險。</p>
-          <div class="tag-row"><span class="tag">愛笑</span><span class="tag">聰明</span><span class="tag">聲音宏亮</span><span class="tag">車車</span></div>
-          <div class="profile-grid"><div class="profile-box"><h4>外觀設定</h4><p class="muted">頭髮少少短短，不是光頭。綠色系穿搭，小男孩感。</p></div><div class="profile-box"><h4>超能力</h4><p class="muted">讓陌生人也忍不住微笑。</p></div></div>
-        </div>
-      </article>
-
-      <article class="character-card">
-        <div class="character-art" style="background:linear-gradient(135deg,#B7A3C9,#FFF7EC)">🐰</div>
-        <div class="character-body">
-          <div class="kicker">RabbitAma</div>
-          <h2>RabbitAma</h2>
-          <div class="zh">兔阿嬤｜雙魚座</div>
-          <p>溫暖、生活智慧、會照顧人。她提醒我們，幸福往往藏在最平凡的日子裡。</p>
-          <div class="tag-row"><span class="tag">溫暖</span><span class="tag">生活智慧</span><span class="tag">會照顧人</span></div>
-          <div class="profile-grid"><div class="profile-box"><h4>外觀設定</h4><p class="muted">咖啡色頭髮，紫色系穿搭，慈祥溫暖。</p></div><div class="profile-box"><h4>超能力</h4><p class="muted">把生活智慧變成日常。</p></div></div>
-        </div>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="section-head"><div class="kicker">Family Values</div><h2 class="section-title">這個家的三件事</h2><p class="section-note">不是完美，而是一起生活、一起學習、一起留下故事。</p></div>
-    <div class="values">
-      <div class="value-card"><div class="kicker">01</div><h3>分享，而不是說教</h3><p class="muted">我們分享自己的故事、觀察與心得，不塑造專家形象，也不強迫別人接受。</p></div>
-      <div class="value-card"><div class="kicker">02</div><h3>生活，比流量更重要</h3><p class="muted">不是為了演算法而寫，而是因為這件事值得記錄。</p></div>
-      <div class="value-card"><div class="kicker">03</div><h3>陪伴，是最長久的價值</h3><p class="muted">無論文章寫的是孩子、家人、健康或棒球，都希望陪伴讀者一段路。</p></div>
-    </div>
-  </div>
-</section>
-</main>
-
-<footer class="site-footer">
-  <div class="container footer-grid">
-    <div><h3>雞爸爸生活研究室</h3><p>幸福來自平凡生活的點滴累積。</p><p>分享生活的故事，用科學理解生活，用陪伴記錄成長。</p></div>
-    <div><h4>閱讀</h4><p><a href="./articles.html">故事</a></p><p><a href="./series.html">系列</a></p><p><a href="./family.html">我們一家</a></p></div>
-    <div><h4>品牌</h4><p><a href="./about.html">關於</a></p><p><a href="#">Brand Book</a></p><p><a href="#">Family Bible</a></p></div>
-    <div><h4>外部</h4><p><a href="https://vocus.cc/salon/jisoopama-baby-cat" target="_blank">Vocus</a></p><p><a href="https://github.com/beckman0470" target="_blank">GitHub</a></p></div>
-  </div>
-  <div class="container footer-bottom">© 2026 Chicken Dad Journal. Every family has stories. This is ours.</div>
-</footer>
-</body>
-</html>
+.page-hero{padding:82px 0 48px;background:linear-gradient(180deg,#FFFDF8 0%,#F8F6F1 100%)}.page-hero h1{font-family:var(--serif);font-size:clamp(52px,7vw,92px);line-height:1.05;letter-spacing:-.04em;margin:18px 0}.lead{font-size:22px;max-width:760px;color:#344238}.family-grid{display:grid;gap:26px}.character-card{display:grid;grid-template-columns:220px 1fr;gap:28px;background:var(--surface);border:1px solid var(--line);border-radius:32px;box-shadow:var(--shadow);overflow:hidden}.character-art{min-height:240px;display:flex;align-items:center;justify-content:center;font-size:84px}.character-body{padding:34px}.character-body h2{font-family:var(--serif);font-size:46px;line-height:1.1;margin:0}.tag{display:inline-flex;padding:6px 11px;border-radius:999px;background:#EEE6D9;color:var(--brown);font-size:13px;font-weight:950;margin:6px 6px 0 0}
+@media(max-width:800px){.character-card{grid-template-columns:1fr}.character-art{min-height:170px}}
+</style></head><body><header class="site-header"><div class="container nav"><a class="logo" href="./index.html"><div class="logo-mark">🐔</div><span class="logo-text"><strong>雞爸爸生活研究室</strong><span>Chicken Dad Journal</span></span></a><nav class="nav-links"><a class="" href="./index.html">首頁</a><a class="" href="./articles.html">故事</a><a class="" href="./series.html">系列</a><a class="active" href="./family.html">我們一家</a><a class="" href="./about.html">關於</a></nav></div></header><main><section class="page-hero"><div class="container"><div class="kicker">Family Bible</div><h1>認識這個家</h1><p class="lead">這不是角色介紹，而是一個家慢慢長大的樣子。ChickenDad、RatMom、DoDo、B.Dragon 和 RabbitAma，一起把平凡日子過成值得珍藏的故事。</p></div></section><section class="section"><div class="container"><div class="family-grid"><article class="character-card"><div class="character-art" style="background:linear-gradient(135deg,#A67C52,#FFF7EC)">🐔</div><div class="character-body"><div class="kicker">ChickenDad</div><h2>ChickenDad</h2><p class="muted">雞爸爸｜天蠍座</p><p>喜歡蒐集、驗證、分析網路相關資料。理解之後落實到生活，再把有趣的部分分享給大家。</p><div><span class=tag>閱讀</span><span class=tag>陪伴</span><span class=tag>分享</span><span class=tag>驗證</span></div></div></article><article class="character-card"><div class="character-art" style="background:linear-gradient(135deg,#D8C2A8,#FFF7EC)">🐭</div><div class="character-body"><div class="kicker">RatMom</div><h2>RatMom</h2><p class="muted">鼠媽媽｜金牛座</p><p>家裡最穩定的人。溫柔、細心、安定，是大家安心的依靠。</p><div><span class=tag>溫柔</span><span class=tag>細心</span><span class=tag>安定</span></div></div></article><article class="character-card"><div class="character-art" style="background:linear-gradient(135deg,#8DBFD8,#FFF7EC)">🐭</div><div class="character-body"><div class="kicker">DoDo</div><h2>DoDo</h2><p class="muted">鼠姊姊｜天秤座</p><p>活潑好動、愛漂亮、愛撒嬌。喜歡公主打扮，也愛唱歌跳舞。</p><div><span class=tag>活潑好動</span><span class=tag>愛漂亮</span><span class=tag>唱歌跳舞</span></div></div></article><article class="character-card"><div class="character-art" style="background:linear-gradient(135deg,#8FBF72,#FFF7EC)">🐲</div><div class="character-body"><div class="kicker">B.Dragon</div><h2>B.Dragon</h2><p class="muted">龍弟弟｜天蠍座</p><p>愛笑、聰明、聲音很宏亮。喜歡車車，也愛跟陌生人打招呼。</p><div><span class=tag>愛笑</span><span class=tag>聰明</span><span class=tag>車車</span></div></div></article><article class="character-card"><div class="character-art" style="background:linear-gradient(135deg,#B7A3C9,#FFF7EC)">🐰</div><div class="character-body"><div class="kicker">RabbitAma</div><h2>RabbitAma</h2><p class="muted">兔阿嬤｜雙魚座</p><p>溫暖、生活智慧、會照顧人。她提醒我們，幸福藏在平凡日子裡。</p><div><span class=tag>溫暖</span><span class=tag>生活智慧</span><span class=tag>照顧人</span></div></div></article></div></div></section></main><footer class="site-footer"><div class="container footer-grid"><div><h3>雞爸爸生活研究室</h3><p>幸福來自平凡生活的點滴累積。</p><p>分享生活的故事，用科學理解生活，用陪伴記錄成長。</p></div><div><h4>閱讀</h4><p><a href="./index.html">首頁</a></p><p><a href="./articles.html">故事</a></p><p><a href="./series.html">系列</a></p></div><div><h4>品牌</h4><p><a href="./family.html">我們一家</a></p><p><a href="./about.html">關於</a></p></div><div><h4>外部</h4><p><a href="https://vocus.cc/salon/jisoopama-baby-cat" target="_blank">Vocus</a></p><p><a href="https://github.com/beckman0470" target="_blank">GitHub</a></p></div></div><div class="container footer-bottom">© 2026 Chicken Dad Journal. Every family has stories. This is ours.</div></footer></body></html>

@@ -1,69 +1,18 @@
-<!DOCTYPE html>
-<html lang="zh-Hant">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>系列｜雞爸爸生活研究室</title>
-<meta name="description" content="雞爸爸生活研究室的系列入口，依 stories.json 自動整理 DoDo 成長日記、健康生活、棒球觀察等系列。">
-<style>
+<!DOCTYPE html><html lang="zh-Hant"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>系列｜雞爸爸生活研究室</title><meta property="og:site_name" content="Chicken Dad Journal">
+<meta property="og:type" content="website">
+<meta property="og:title" content="雞爸爸生活研究室｜Chicken Dad Journal">
+<meta property="og:description" content="幸福來自平凡生活的點滴累積。">
+<meta property="og:image" content="https://beckman0470.github.io/assets/og/og-image.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#263328">
+<link rel="manifest" href="./site.webmanifest"><style>
 :root{--paper:#F8F6F1;--surface:#FFFDF8;--ink:#263328;--muted:#687463;--brown:#A67C52;--sage:#8FAF8B;--blue:#8DBFD8;--dragon:#8FBF72;--lavender:#B7A3C9;--milk:#D8C2A8;--line:#E6DED1;--shadow:0 24px 60px rgba(70,55,35,.12);--radius:30px;--serif:Georgia,"Times New Roman",serif;--sans:-apple-system,BlinkMacSystemFont,"Noto Sans TC","Microsoft JhengHei",Arial,sans-serif}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75}a{text-decoration:none;color:inherit}.container{width:min(1160px,calc(100% - 40px));margin:auto}.muted{color:var(--muted)}.kicker{font-size:13px;font-weight:900;letter-spacing:.16em;text-transform:uppercase;color:var(--brown)}
 .site-header{position:sticky;top:0;z-index:20;background:rgba(255,253,248,.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}.nav{height:82px;display:flex;align-items:center;justify-content:space-between;gap:24px}.logo{display:flex;align-items:center;gap:14px}.logo-mark{width:48px;height:48px;border-radius:50%;background:var(--surface);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;font-size:26px}.logo-text strong{display:block;font-size:21px;font-weight:950;line-height:1.2}.logo-text span{display:block;color:var(--muted);font-size:13px}.nav-links{display:flex;gap:26px;font-weight:850}.nav-links a:hover,.nav-links a.active{color:var(--brown)}
-.page-hero{padding:82px 0 48px;background:linear-gradient(180deg,#FFFDF8 0%,#F8F6F1 100%)}.page-hero h1{font-family:var(--serif);font-size:clamp(52px,7vw,92px);line-height:1.05;letter-spacing:-.04em;margin:18px 0}.lead{font-size:22px;max-width:780px;color:#344238}.hero-note{background:var(--surface);border:1px solid var(--line);border-radius:30px;padding:28px 32px;box-shadow:var(--shadow);margin-top:32px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center}.hero-note strong{font-size:21px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 21px;border-radius:999px;background:var(--ink);color:#fff;font-weight:950}.btn.secondary{background:var(--surface);color:var(--ink);border:1px solid var(--line)}
-.section{padding:64px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:26px}.section-title{font-size:36px;margin:0;font-weight:950;letter-spacing:-.03em}.section-note{margin:0;color:var(--muted)}
-.series-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}.series-card{background:var(--surface);border:1px solid var(--line);border-radius:32px;box-shadow:var(--shadow);overflow:hidden;display:grid;grid-template-columns:180px 1fr;transition:.2s ease}.series-card:hover{transform:translateY(-4px)}.series-art{min-height:260px;display:flex;align-items:center;justify-content:center;font-size:78px;position:relative}.series-art:after{content:"";position:absolute;right:-55px;bottom:-65px;width:170px;height:170px;border-radius:50%;background:#FFF1BA;opacity:.45}.series-body{padding:30px}.series-body h2{font-family:var(--serif);font-size:42px;line-height:1.08;margin:0}.count{font-weight:950;color:var(--brown);margin:8px 0 14px}.tag-row{display:flex;gap:9px;flex-wrap:wrap;margin:16px 0}.tag{display:inline-flex;padding:6px 10px;border-radius:999px;background:#EEE6D9;color:var(--brown);font-size:13px;font-weight:950}.story-list{margin-top:20px;border-top:1px solid var(--line)}.story-item{display:grid;grid-template-columns:72px 1fr auto;gap:14px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line)}.story-item strong{line-height:1.35}.date{font-family:var(--serif);font-size:19px;color:var(--brown);font-weight:700}.readmore{font-weight:950;color:var(--brown)}
-.research-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.research-card{background:var(--surface);border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow);padding:22px}.research-card h3{margin:8px 0}
-.empty{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:28px;color:var(--muted)}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 24px;border-radius:999px;background:var(--ink);color:white;font-weight:950;box-shadow:0 12px 30px rgba(38,51,40,.16)}.btn.secondary{background:var(--surface);color:var(--ink);border:1px solid var(--line);box-shadow:none}.section{padding:76px 0}.section-title{font-size:36px;line-height:1.2;margin:0;font-weight:950;letter-spacing:-.03em}.section-note{margin:0;color:var(--muted)}.section-head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:28px}.chip{display:inline-flex;align-self:flex-start;padding:5px 11px;border-radius:999px;background:#EEE6D9;color:var(--brown);font-size:13px;font-weight:950}.readmore{font-weight:950;color:var(--brown)}
 .site-footer{margin-top:50px;background:#243128;color:#FFFDF8}.footer-grid{display:grid;grid-template-columns:1.4fr .8fr .8fr .8fr;gap:32px;padding:54px 0}.site-footer h3,.site-footer h4{margin-top:0}.site-footer p,.site-footer a{color:rgba(255,253,248,.75)}.footer-bottom{border-top:1px solid rgba(255,255,255,.14);padding:18px 0;color:rgba(255,253,248,.6);font-size:14px}
-@media(max-width:980px){.nav-links{display:none}.series-grid{grid-template-columns:1fr}.footer-grid,.research-grid{grid-template-columns:1fr 1fr}.series-card{grid-template-columns:1fr}.series-art{min-height:190px}}
-@media(max-width:620px){.container{width:min(100% - 28px,1160px)}.logo-mark{width:42px;height:42px}.logo-text strong{font-size:18px}.page-hero{padding:56px 0 36px}.page-hero h1{font-size:50px}.lead{font-size:18px}.hero-note{grid-template-columns:1fr;padding:24px}.section{padding:46px 0}.section-head{display:block}.series-body{padding:24px}.series-body h2{font-size:35px}.story-item{grid-template-columns:1fr}.footer-grid,.research-grid{grid-template-columns:1fr}}
-</style>
-</head>
-<body>
-<header class="site-header">
-  <div class="container nav">
-    <a class="logo" href="./index.html"><div class="logo-mark">🐔</div><span class="logo-text"><strong>雞爸爸生活研究室</strong><span>Chicken Dad Journal</span></span></a>
-    <nav class="nav-links"><a href="./index.html">首頁</a><a href="./articles.html">故事</a><a class="active" href="./series.html">系列</a><a href="./family.html">我們一家</a><a href="./about.html">關於</a></nav>
-  </div>
-</header>
+@media(max-width:980px){.nav-links{display:none}.footer-grid{grid-template-columns:1fr 1fr}}@media(max-width:620px){.container{width:min(100% - 28px,1160px)}.logo-mark{width:42px;height:42px}.logo-text strong{font-size:18px}.section{padding:52px 0}.section-head{display:block}.footer-grid{grid-template-columns:1fr}}
 
-<main>
-<section class="page-hero">
-  <div class="container">
-    <div class="kicker">Series Library</div>
-    <h1>系列入口</h1>
-    <p class="lead">故事不只是單篇文章，也會慢慢長成一個個系列。這裡會依照 stories.json 自動整理正在累積的主題。</p>
-    <div class="hero-note">
-      <div><strong>不限制主題，但讓故事有地方慢慢累積。</strong><p class="muted">新增 Markdown 後，系列會隨資料一起長大。</p></div>
-      <a class="btn secondary" href="./articles.html">看全部故事</a>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="section-head"><div><div class="kicker">Auto Grouped</div><h2 class="section-title">正在累積的系列</h2><p class="section-note" id="series-count">讀取系列中……</p></div></div>
-    <div class="series-grid" id="series-grid"></div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="section-head"><div><div class="kicker">Research Map</div><h2 class="section-title">研究主題地圖</h2><p class="section-note">由每篇文章的 research 欄位自動整理。</p></div></div>
-    <div class="research-grid" id="research-grid"></div>
-  </div>
-</section>
-</main>
-
-<footer class="site-footer">
-  <div class="container footer-grid">
-    <div><h3>雞爸爸生活研究室</h3><p>幸福來自平凡生活的點滴累積。</p><p>分享生活的故事，用科學理解生活，用陪伴記錄成長。</p></div>
-    <div><h4>閱讀</h4><p><a href="./index.html">首頁</a></p><p><a href="./articles.html">故事</a></p><p><a href="./series.html">系列</a></p></div>
-    <div><h4>品牌</h4><p><a href="./family.html">我們一家</a></p><p><a href="./about.html">關於</a></p></div>
-    <div><h4>外部</h4><p><a href="https://vocus.cc/salon/jisoopama-baby-cat" target="_blank">Vocus</a></p><p><a href="https://github.com/beckman0470" target="_blank">GitHub</a></p></div>
-  </div>
-  <div class="container footer-bottom">© 2026 Chicken Dad Journal. Every family has stories. This is ours.</div>
-</footer>
-<script src="./js/series-page.js"></script>
-</body>
-</html>
+.page-hero{padding:82px 0 48px;background:linear-gradient(180deg,#FFFDF8 0%,#F8F6F1 100%)}.page-hero h1{font-family:var(--serif);font-size:clamp(52px,7vw,92px);line-height:1.05;letter-spacing:-.04em;margin:18px 0}.lead{font-size:22px;max-width:780px;color:#344238}.series-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}.series-card{background:var(--surface);border:1px solid var(--line);border-radius:32px;box-shadow:var(--shadow);overflow:hidden;display:grid;grid-template-columns:180px 1fr}.series-art{min-height:260px;display:flex;align-items:center;justify-content:center;font-size:78px}.series-body{padding:30px}.series-body h2{font-family:var(--serif);font-size:42px;line-height:1.08;margin:0}.count{font-weight:950;color:var(--brown);margin:8px 0 14px}.story-list{margin-top:20px;border-top:1px solid var(--line)}.story-item{display:grid;grid-template-columns:72px 1fr auto;gap:14px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line)}.date{font-family:var(--serif);font-size:19px;color:var(--brown);font-weight:700}.research-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.research-card{background:var(--surface);border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow);padding:22px}
+@media(max-width:980px){.series-grid{grid-template-columns:1fr}.series-card{grid-template-columns:1fr}.research-grid{grid-template-columns:1fr 1fr}}@media(max-width:620px){.page-hero h1{font-size:50px}.series-body{padding:24px}.story-item{grid-template-columns:1fr}.research-grid{grid-template-columns:1fr}}
+</style></head><body><header class="site-header"><div class="container nav"><a class="logo" href="./index.html"><div class="logo-mark">🐔</div><span class="logo-text"><strong>雞爸爸生活研究室</strong><span>Chicken Dad Journal</span></span></a><nav class="nav-links"><a class="" href="./index.html">首頁</a><a class="" href="./articles.html">故事</a><a class="active" href="./series.html">系列</a><a class="" href="./family.html">我們一家</a><a class="" href="./about.html">關於</a></nav></div></header><main><section class="page-hero"><div class="container"><div class="kicker">Series Library</div><h1>系列入口</h1><p class="lead">故事不只是單篇文章，也會慢慢長成一個個系列。這裡會依照 stories.json 自動整理正在累積的主題。</p></div></section><section class="section"><div class="container"><div class="section-head"><div><div class="kicker">Auto Grouped</div><h2 class="section-title">正在累積的系列</h2><p class="section-note" id="series-count">讀取系列中……</p></div></div><div class="series-grid" id="series-grid"></div></div></section><section class="section"><div class="container"><div class="section-head"><div><div class="kicker">Research Map</div><h2 class="section-title">研究主題地圖</h2><p class="section-note">由每篇文章的 research 欄位自動整理。</p></div></div><div class="research-grid" id="research-grid"></div></div></section></main><footer class="site-footer"><div class="container footer-grid"><div><h3>雞爸爸生活研究室</h3><p>幸福來自平凡生活的點滴累積。</p><p>分享生活的故事，用科學理解生活，用陪伴記錄成長。</p></div><div><h4>閱讀</h4><p><a href="./index.html">首頁</a></p><p><a href="./articles.html">故事</a></p><p><a href="./series.html">系列</a></p></div><div><h4>品牌</h4><p><a href="./family.html">我們一家</a></p><p><a href="./about.html">關於</a></p></div><div><h4>外部</h4><p><a href="https://vocus.cc/salon/jisoopama-baby-cat" target="_blank">Vocus</a></p><p><a href="https://github.com/beckman0470" target="_blank">GitHub</a></p></div></div><div class="container footer-bottom">© 2026 Chicken Dad Journal. Every family has stories. This is ours.</div></footer><script src="./js/series-page.js"></script></body></html>
