@@ -1,45 +1,19 @@
-# Chicken Dad Journal v5.0 Production Platform
+# Chicken Dad Journal v5.1 Repository Foundation
 
-這是 v5.0 的完整平台版，可直接覆蓋 GitHub Repository 根目錄。
+這是 v5.1 Repository Foundation Pack。
 
-## 主要頁面
+## 新增 / 覆蓋
 
-- `index.html`
-- `articles.html`
-- `series.html`
-- `timeline.html`
-- `search.html`
-- `tags.html`
-- `subscribe.html`
-- `dashboard.html`
-- `family.html`
-- `about.html`
-- `404.html`
-
-## Studio
-
-- `studio/`
-- `content/drafts/`
-- `content/scheduled/`
-- `content/published/`
-- `content/archived/`
-- `templates/story-template-v5.md`
-
-## Build
-
-```bash
-python cms/build.py
+```text
+CHANGELOG.md
+ROADMAP.md
+CONTRIBUTING.md
+LICENSE
+.github/ISSUE_TEMPLATE/
+docs/versioning.md
+docs/repository-health-check.md
 ```
 
-## Publish
+## 目的
 
-```bash
-python studio/publish.py "Update Chicken Dad Journal"
-```
-
-## QA
-
-```bash
-python tools/qa_check.py
-python studio/release_check.py
-```
+把 Chicken Dad Journal 從 ZIP 疊加式專案，整理成可長期維護的正式 Repository。
