@@ -93,3 +93,58 @@ a{text-decoration:none;color:inherit}
 @media(max-width:620px){
  .container{width:min(100% - 28px,1160px)}.logo-mark{width:42px;height:42px}.logo-text strong{font-size:18px}.hero h1{font-size:46px}.belief{font-size:20px}.mission{font-size:18px}.section{padding:52px 0}.section-head{display:block}.featured-copy,.cover-card{padding:26px}.cover-card{min-height:270px}.cover-card h3{font-size:40px}.card-grid,.family-grid,.series-grid,.footer-grid{grid-template-columns:1fr}.update-card{grid-template-columns:1fr}
 }
+
+
+/* v5.4.1 footer sync fix */
+.site-footer {
+  margin-top: 0;
+  background: #243128;
+  color: #FFFDF8;
+  clear: both;
+}
+.site-footer .footer-grid,
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr .8fr .8fr .8fr;
+  gap: 32px;
+  padding: 54px 0;
+  align-items: start;
+}
+.site-footer h3,
+.site-footer h4 {
+  margin: 0 0 12px;
+  color: #FFFDF8;
+}
+.site-footer p {
+  margin: 0 0 8px;
+  color: rgba(255,253,248,.75);
+}
+.site-footer a {
+  color: rgba(255,253,248,.75);
+  text-decoration: none;
+}
+.site-footer a:hover {
+  color: #FFFDF8;
+}
+.footer-brand p {
+  max-width: 420px;
+}
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,.14);
+  padding: 18px 0;
+  color: rgba(255,253,248,.6);
+  font-size: 14px;
+}
+@media (max-width: 980px) {
+  .site-footer .footer-grid,
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 620px) {
+  .site-footer .footer-grid,
+  .footer-grid {
+    grid-template-columns: 1fr;
+    padding: 38px 0;
+  }
+}
