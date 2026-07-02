@@ -33,3 +33,10 @@
 - Added `tools/dependency_check.py`.
 - Added CSS / JS dependency maps.
 - Updated `REFACTOR_TODO.md`.
+
+
+## v5.8 Sprint 1｜Brand Homepage
+
+- Updated homepage brand language.
+- Added `css/brand-homepage.css`.
+- Added homepage `living-notes` identity section.
