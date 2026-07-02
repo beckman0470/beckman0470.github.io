@@ -100,7 +100,7 @@ class ContentEngine:
 
         self.build_articles(stories, related_json, prev_next_json)
 
-        homepage = render_homepage(stories_json)
+        homepage = render_homepage(stories_json, self.root)
         homepage = inject_analytics(homepage, self.measurement_id)
         (self.root / "index.html").write_text(homepage, encoding="utf-8")
 

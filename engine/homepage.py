@@ -119,7 +119,7 @@ def render_series(stories):
         for name, count in top
     ])
 
-def render_homepage(stories):
+def _render_homepage_core(stories):
     stories = sorted(stories, key=lambda s: s.get("date", ""), reverse=True)
     fallback = stories[0] if stories else {}
     hero = pick_first(stories, lambda s: s.get("hero"), fallback)
@@ -193,4 +193,19 @@ def render_homepage(stories):
         research_html=render_research_notes(stories),
         series_html=render_series(stories)
     )
+    return html
+
+
+# v5.7.1 Sprint 2: shared header/footer wrapper
+from pathlib import Path
+try:
+    from engine.components import inject_header_footer
+except Exception:
+    inject_header_footer = None
+
+def render_homepage(stories, root=None):
+    html = _render_homepage_core(stories)
+    if inject_header_footer:
+        project_root = Path(root) if root else Path(__file__).resolve().parents[1]
+        html = inject_header_footer(html, project_root)
     return html

@@ -19,9 +19,9 @@
 - Production Engine
 
 
-## v5.7.1 Sprint 1｜Real Project Refactor
+## v5.7.1 Sprint 2｜Header / Footer Component Sync
 
-- Added `PROJECT_STRUCTURE.md`.
-- Added `REFACTOR_TODO.md`.
-- Switched development process from full repository ZIP replacement to small, verifiable file updates.
-- Defined next refactor priorities: shared Header/Footer, CSS cleanup, JS cleanup, Build pipeline refactor.
+- Added shared `header.html`, `navigation.html`, and refreshed `footer.html` components.
+- Added `engine/components.py`.
+- Wrapped `engine/homepage.py` output with shared header/footer injection.
+- Updated `index.html` to use shared header/footer markup.
