@@ -1,9 +1,12 @@
-# Chicken Dad Journal v5.4 Sprint 2.4
+# Chicken Dad Journal v5.4 QA Hotfix
 
-Reading Production Release.
+Homepage Layout & Loader Fix.
 
-## 覆蓋後執行
+## 新增
 
-```bash
-python tools_reading_production_patch.py
+```text
+assets/css/homepage-hotfix.css
+js/homepage-hotfix.js
+tools_homepage_hotfix_patch.py
+docs/v5.4-qa-hotfix-homepage-layout-loader.md
 ```
