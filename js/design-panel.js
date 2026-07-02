@@ -1,5 +1,6 @@
 (() => {
   const STORAGE_KEY = "chickendad.homepage.design.v1";
+  const IMAGE_KEY = "chickendad.homepage.hero.image.v1";
 
   const DEFAULTS = {
     titleSize: 68,
@@ -33,6 +34,27 @@
     localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
   }
 
+  function loadImage() {
+    return localStorage.getItem(IMAGE_KEY);
+  }
+
+  function saveImage(dataUrl) {
+    localStorage.setItem(IMAGE_KEY, dataUrl);
+  }
+
+  function clearImage() {
+    localStorage.removeItem(IMAGE_KEY);
+  }
+
+  function applyImage() {
+    const img = $(".brand-family-hero img");
+    const stored = loadImage();
+    if (img && stored) {
+      img.src = stored;
+      img.alt = "自訂首頁 Hero 圖片";
+    }
+  }
+
   function applyDesign(data) {
     const title = $(".hero-title-editable");
     const subtitle = $(".hero-subtitle-editable");
@@ -64,10 +86,36 @@
       img.style.objectPosition = `${data.imageX}% ${data.imageY}%`;
       img.style.transform = `scale(${data.imageScale / 100})`;
     }
+
+    applyImage();
   }
 
   function createField(label, inputHtml) {
     return `<div class="design-field"><label>${label}</label>${inputHtml}</div>`;
+  }
+
+  function readFileAsDataUrl(file) {
+    return new Promise((resolve, reject) => {
+      if (!file) return reject(new Error("No file"));
+      if (!/^image\/(png|jpeg|webp|svg\+xml)$/i.test(file.type)) {
+        return reject(new Error("請選擇 JPG、PNG、WebP 或 SVG 圖片。"));
+      }
+      const reader = new FileReader();
+      reader.onload = () => resolve(reader.result);
+      reader.onerror = () => reject(new Error("圖片讀取失敗。"));
+      reader.readAsDataURL(file);
+    });
+  }
+
+  async function handleFile(file, panel) {
+    try {
+      const dataUrl = await readFileAsDataUrl(file);
+      saveImage(dataUrl);
+      applyImage();
+      flash(panel, "圖片已套用。按「下載 index.html」匯出。");
+    } catch (error) {
+      flash(panel, error.message || "圖片上傳失敗。");
+    }
   }
 
   function createPanel() {
@@ -104,7 +152,13 @@
       </section>
 
       <section class="design-panel-section">
-        <h3>圖片</h3>
+        <h3>Hero 圖片</h3>
+        <label class="image-drop-zone" data-drop-zone>
+          <input type="file" accept="image/png,image/jpeg,image/webp,image/svg+xml" data-image-upload>
+          <strong>選擇圖片或拖曳到這裡</strong>
+          JPG / PNG / WebP / SVG
+        </label>
+        <div class="design-mini-note">圖片會直接寫入匯出的 index.html，不需要另外上傳圖片檔。</div>
         ${createField("縮放", '<input data-design="imageScale" type="range" min="80" max="140" step="1">')}
         ${createField("左右", '<input data-design="imageX" type="range" min="0" max="100" step="1">')}
         ${createField("上下", '<input data-design="imageY" type="range" min="0" max="100" step="1">')}
@@ -115,7 +169,8 @@
       <div class="design-panel-actions">
         <button type="button" class="primary" data-action="download">下載 index.html</button>
         <button type="button" data-action="save">暫存</button>
-        <button type="button" data-action="reset">還原</button>
+        <button type="button" data-action="reset-design">還原樣式</button>
+        <button type="button" data-action="reset-image">恢復預設圖</button>
         <button type="button" class="dark" data-action="close">關閉</button>
       </div>
 
@@ -127,6 +182,32 @@
     let data = loadDesign();
     bindInputs(panel, data);
     applyDesign(data);
+
+    const fileInput = panel.querySelector("[data-image-upload]");
+    const dropZone = panel.querySelector("[data-drop-zone]");
+
+    fileInput.addEventListener("change", (event) => {
+      handleFile(event.target.files?.[0], panel);
+      event.target.value = "";
+    });
+
+    ["dragenter", "dragover"].forEach((eventName) => {
+      dropZone.addEventListener(eventName, (event) => {
+        event.preventDefault();
+        dropZone.classList.add("dragging");
+      });
+    });
+
+    ["dragleave", "drop"].forEach((eventName) => {
+      dropZone.addEventListener(eventName, (event) => {
+        event.preventDefault();
+        dropZone.classList.remove("dragging");
+      });
+    });
+
+    dropZone.addEventListener("drop", (event) => {
+      handleFile(event.dataTransfer.files?.[0], panel);
+    });
 
     toggle.addEventListener("click", () => {
       document.body.classList.add("design-panel-open", "design-mode");
@@ -145,12 +226,22 @@
         flash(panel, "已暫存。");
       }
 
-      if (action === "reset") {
+      if (action === "reset-design") {
         localStorage.removeItem(STORAGE_KEY);
         data = { ...DEFAULTS };
         bindInputs(panel, data);
         applyDesign(data);
-        flash(panel, "已還原。");
+        flash(panel, "樣式已還原。");
+      }
+
+      if (action === "reset-image") {
+        clearImage();
+        const img = $(".brand-family-hero img");
+        if (img) {
+          img.src = "./images/hero-family.svg";
+          img.alt = "雞爸爸一家品牌插畫";
+        }
+        flash(panel, "已恢復預設圖。");
       }
 
       if (action === "download") {
@@ -180,10 +271,11 @@
     const box = panel.querySelector(".design-panel-output");
     box.textContent = message;
     box.style.display = "block";
-    setTimeout(() => (box.style.display = "none"), 1600);
+    setTimeout(() => (box.style.display = "none"), 1800);
   }
 
   function cleanForExport() {
+    applyImage();
     const clone = document.documentElement.cloneNode(true);
 
     clone.querySelectorAll(".design-panel, .design-panel-toggle, .editor-toolbar, .editor-hint, .editor-launcher").forEach((node) => node.remove());
@@ -191,9 +283,8 @@
       node.removeAttribute("contenteditable");
       node.removeAttribute("spellcheck");
     });
-
-    clone.querySelectorAll(".hero-title-editable, .hero-subtitle-editable, .brand-family-hero, .brand-family-hero img").forEach((node) => {
-      // Keep inline styles because they are the design output.
+    clone.querySelectorAll("[data-editable]").forEach((node) => {
+      node.removeAttribute("data-editable");
     });
 
     return "<!DOCTYPE html>\n" + clone.outerHTML;
