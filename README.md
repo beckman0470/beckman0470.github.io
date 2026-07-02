@@ -1,13 +1,11 @@
-# Chicken Dad Journal v5.2 Sprint 1
+# Chicken Dad Journal v5.2 Sprint 2
 
-Knowledge Graph.
+Family Knowledge Pages.
 
 ## 新增
 
 ```text
-studio/knowledge_graph.py
-engine/knowledge.py
-knowledge.html
-js/knowledge-graph.js
-docs/v5.2-sprint1-knowledge-graph.md
+studio/family_pages.py
+family/index.html
+docs/v5.2-sprint2-family-knowledge-pages.md
 ```
