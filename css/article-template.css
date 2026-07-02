@@ -1,0 +1,136 @@
+/* v5.8 Sprint 2｜Article Publishing Template */
+
+.article-template {
+  background: #F8F6F1;
+  padding: 54px 0 72px;
+}
+
+.article-container {
+  width: min(760px, calc(100% - 36px));
+  margin: 0 auto;
+}
+
+.article-status {
+  display: inline-flex;
+  margin-bottom: 18px;
+  padding: 7px 13px;
+  border-radius: 999px;
+  background: #EEE6D9;
+  color: #A67C52;
+  font-size: 13px;
+  font-weight: 950;
+}
+
+.article-header {
+  margin-bottom: 34px;
+}
+
+.article-header h1 {
+  font-family: Georgia, "Times New Roman", "Noto Serif TC", serif;
+  font-size: clamp(42px, 7vw, 76px);
+  line-height: 1.06;
+  letter-spacing: -0.045em;
+  margin: 12px 0 18px;
+  color: #263328;
+}
+
+.article-summary {
+  font-size: 22px;
+  line-height: 1.65;
+  color: #344238;
+  margin: 0 0 18px;
+}
+
+.article-meta {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  color: #687463;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.article-meta span {
+  display: inline-flex;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: #FFFDF8;
+  border: 1px solid #E6DED1;
+}
+
+.article-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 34px;
+}
+
+.article-tags span {
+  display: inline-flex;
+  padding: 5px 11px;
+  border-radius: 999px;
+  background: #FFFDF8;
+  border: 1px solid #E6DED1;
+  color: #A67C52;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.article-body {
+  font-size: 20px;
+  line-height: 1.95;
+  color: #263328;
+}
+
+.article-body p {
+  margin: 0 0 1.45em;
+}
+
+.article-body h2 {
+  font-family: Georgia, "Times New Roman", "Noto Serif TC", serif;
+  font-size: 34px;
+  line-height: 1.25;
+  margin: 2.2em 0 .7em;
+}
+
+.article-body blockquote {
+  margin: 2em 0;
+  padding: 1.1em 1.25em;
+  border-left: 6px solid #A67C52;
+  border-radius: 20px;
+  background: #FFFDF8;
+  color: #344238;
+  font-family: Georgia, "Times New Roman", "Noto Serif TC", serif;
+  font-size: 26px;
+  line-height: 1.55;
+  box-shadow: 0 18px 44px rgba(70,55,35,.09);
+}
+
+.article-editor-note {
+  margin-top: 54px;
+  padding: 26px;
+  border-radius: 26px;
+  background: #FFFDF8;
+  border: 1px solid #E6DED1;
+  box-shadow: 0 24px 60px rgba(70,55,35,.12);
+}
+
+.article-editor-note h2 {
+  margin: 0 0 10px;
+  font-size: 24px;
+}
+
+.article-editor-note p {
+  margin: 0;
+  color: #687463;
+}
+
+@media (max-width: 620px) {
+  .article-body {
+    font-size: 18px;
+  }
+
+  .article-summary {
+    font-size: 20px;
+  }
+}
