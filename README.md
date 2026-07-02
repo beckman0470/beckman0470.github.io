@@ -13,3 +13,9 @@ python tools_homepage_footer_sync.py
 
 - Fixed homepage footer to match shared footer component.
 - Added footer sync styles to `css/style.css`.
+
+
+## v5.5 Visual Polish
+
+- Added `css/visual-polish.css`.
+- Improved header, hero, cards, contact, and footer visual details.
