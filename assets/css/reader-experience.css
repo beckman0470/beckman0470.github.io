@@ -1,0 +1,128 @@
+/* Chicken Dad Journal v5.4 Sprint 2.2 Reader Experience */
+
+.reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 0%;
+  z-index: 9999;
+  background: #A67C52;
+  box-shadow: 0 0 18px rgba(166,124,82,.28);
+}
+
+.reader-tools {
+  position: sticky;
+  top: 96px;
+  z-index: 10;
+  width: min(72ch, calc(100% - 40px));
+  margin: 0 auto 28px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.reader-tool-btn {
+  border: 1px solid var(--line, #E6DED1);
+  background: var(--surface, #FFFDF8);
+  color: var(--ink, #263328);
+  border-radius: 999px;
+  padding: 8px 13px;
+  font: inherit;
+  font-size: .92rem;
+  font-weight: 850;
+  cursor: pointer;
+  box-shadow: 0 10px 24px rgba(70,55,35,.08);
+}
+
+.reader-tool-btn:hover {
+  transform: translateY(-1px);
+}
+
+.reader-toc {
+  width: min(72ch, calc(100% - 40px));
+  margin: 0 auto 34px;
+  background: var(--surface, #FFFDF8);
+  border: 1px solid var(--line, #E6DED1);
+  border-radius: 24px;
+  padding: 18px 22px;
+  box-shadow: var(--shadow, 0 24px 60px rgba(70,55,35,.12));
+}
+
+.reader-toc h2 {
+  font-size: 1.15rem;
+  margin: 0 0 10px;
+  font-family: var(--font-sans, sans-serif);
+  letter-spacing: 0;
+}
+
+.reader-toc ol {
+  margin: 0;
+  padding-left: 1.2em;
+}
+
+.reader-toc li {
+  margin: .35em 0;
+}
+
+.reader-toc a {
+  color: var(--brown, #A67C52);
+  text-decoration: none;
+  font-weight: 850;
+}
+
+.back-to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 22px;
+  z-index: 100;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition: .2s ease;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+body.reader-dark {
+  --paper: #1f2822;
+  --surface: #263328;
+  --ink: #FFFDF8;
+  --muted: rgba(255,253,248,.68);
+  --line: rgba(255,253,248,.16);
+  background: var(--paper);
+  color: var(--ink);
+}
+
+body.reader-dark .site-header {
+  background: rgba(38,51,40,.92);
+}
+
+body.reader-dark .article-reading,
+body.reader-dark .article-reading h1,
+body.reader-dark .article-reading h2,
+body.reader-dark .article-reading h3,
+body.reader-dark .article-reading h4 {
+  color: var(--ink);
+}
+
+@media (max-width: 680px) {
+  .reader-tools,
+  .reader-toc {
+    width: min(100% - 28px, 72ch);
+  }
+
+  .reader-tools {
+    position: static;
+    margin-top: 12px;
+  }
+
+  .back-to-top {
+    right: 14px;
+    bottom: 14px;
+  }
+}
