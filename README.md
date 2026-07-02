@@ -25,3 +25,10 @@ python tools_homepage_footer_sync.py
 
 - Removed duplicate download/copy files such as `index (1).html`, `index (3).html`, and `download (*)`.
 - Added `tools/repository_cleanup_check.py`.
+
+
+## v5.7 Production Hardening
+
+- Added canonical, Open Graph, Twitter Card, and JSON-LD metadata across HTML pages.
+- Rebuilt `sitemap.xml`, `robots.txt`, and `404.html`.
+- Added `tools/production_hardening_check.py`.
