@@ -1,0 +1,157 @@
+/* v6.2｜Design Panel */
+
+.design-panel-toggle {
+  position: fixed;
+  right: 18px;
+  bottom: 72px;
+  z-index: 10000;
+  border: 0;
+  border-radius: 999px;
+  padding: 12px 16px;
+  background: #263328;
+  color: #FFFDF8;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 950;
+  cursor: pointer;
+  box-shadow: 0 18px 44px rgba(70,55,35,.22);
+}
+
+.design-panel {
+  position: fixed;
+  right: 18px;
+  top: 96px;
+  z-index: 10001;
+  width: min(360px, calc(100vw - 28px));
+  max-height: calc(100vh - 120px);
+  overflow: auto;
+  display: none;
+  border-radius: 24px;
+  background: #FFFDF8;
+  border: 1px solid #E6DED1;
+  box-shadow: 0 28px 80px rgba(38,51,40,.26);
+}
+
+body.design-panel-open .design-panel {
+  display: block;
+}
+
+body.design-panel-open .design-panel-toggle {
+  display: none;
+}
+
+.design-panel header {
+  position: sticky;
+  top: 0;
+  padding: 18px 18px 14px;
+  background: #FFFDF8;
+  border-bottom: 1px solid #E6DED1;
+  z-index: 1;
+}
+
+.design-panel h2 {
+  margin: 0;
+  font-size: 20px;
+  color: #263328;
+}
+
+.design-panel p {
+  margin: 6px 0 0;
+  color: #687463;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.design-panel-section {
+  padding: 16px 18px;
+  border-bottom: 1px solid #EEE6D9;
+}
+
+.design-panel-section h3 {
+  margin: 0 0 12px;
+  font-size: 15px;
+  color: #A67C52;
+}
+
+.design-field {
+  display: grid;
+  grid-template-columns: 82px 1fr;
+  gap: 10px;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.design-field label {
+  font-size: 13px;
+  font-weight: 900;
+  color: #263328;
+}
+
+.design-field input,
+.design-field select {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.design-field input[type="range"] {
+  accent-color: #A67C52;
+}
+
+.design-field input[type="color"] {
+  height: 34px;
+  padding: 0;
+  border: 1px solid #E6DED1;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.design-panel-actions {
+  padding: 16px 18px 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.design-panel button {
+  border: 0;
+  border-radius: 999px;
+  padding: 9px 13px;
+  background: #EEE6D9;
+  color: #263328;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 950;
+  cursor: pointer;
+}
+
+.design-panel button.primary {
+  background: #A67C52;
+  color: #fff;
+}
+
+.design-panel button.dark {
+  background: #263328;
+  color: #fff;
+}
+
+.design-panel-output {
+  display: none;
+  margin: 0 18px 18px;
+  padding: 12px;
+  border-radius: 16px;
+  background: #F8F6F1;
+  color: #687463;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+body.design-mode .hero-title-editable,
+body.design-mode .hero-subtitle-editable,
+body.design-mode .brand-family-hero {
+  outline: 3px solid rgba(166,124,82,.45);
+  outline-offset: 5px;
+}
+
+.brand-family-hero img {
+  transform-origin: center center;
+}
