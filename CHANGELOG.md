@@ -25,3 +25,11 @@
 - Added `engine/components.py`.
 - Wrapped `engine/homepage.py` output with shared header/footer injection.
 - Updated `index.html` to use shared header/footer markup.
+
+
+## v5.7.1 Sprint 3｜CSS & JS Dependency Cleanup
+
+- Added `docs/dependency-manifest.json`.
+- Added `tools/dependency_check.py`.
+- Added CSS / JS dependency maps.
+- Updated `REFACTOR_TODO.md`.

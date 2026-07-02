@@ -1,0 +1,104 @@
+{
+  "css": {
+    "../assets/css/style.css": [
+      "ai-lab/index.html",
+      "articles/temperature-of-now.html",
+      "baseball/index.html",
+      "health/index.html",
+      "parenting/index.html"
+    ],
+    "../css/visual-polish.css": [
+      "articles/cortisol.html",
+      "articles/dragons-champion.html",
+      "articles/family.html",
+      "articles/swimming.html",
+      "articles/temperature-of-now.html",
+      "articles/vision-care.html",
+      "baseball/index.html",
+      "family/index.html",
+      "health/index.html",
+      "parenting/index.html",
+      "stories/bdragon.html",
+      "stories/chicken-dad.html",
+      "stories/chickendad.html",
+      "stories/dodo.html",
+      "stories/dragon-brother.html",
+      "stories/mouse-mom.html",
+      "stories/mouse-sister.html",
+      "stories/rabbit-grandma.html",
+      "stories/rabbitama.html",
+      "stories/ratmom.html"
+    ],
+    "./css/style.css": [
+      "404.html",
+      "index.html"
+    ],
+    "./css/visual-polish.css": [
+      "404.html",
+      "about.html",
+      "articles.html",
+      "cortisol.html",
+      "dashboard.html",
+      "dragons-champion.html",
+      "family.html",
+      "index.html",
+      "knowledge.html",
+      "search.html",
+      "series.html",
+      "subscribe.html",
+      "tags.html",
+      "timeline.html",
+      "vision-care.html"
+    ],
+    "/css/style.css": [
+      "stories/bdragon.html",
+      "stories/chicken-dad.html",
+      "stories/chickendad.html",
+      "stories/dodo.html",
+      "stories/dragon-brother.html",
+      "stories/mouse-mom.html",
+      "stories/mouse-sister.html",
+      "stories/rabbit-grandma.html",
+      "stories/rabbitama.html",
+      "stories/ratmom.html"
+    ]
+  },
+  "js": {
+    "./js/dashboard.js": [
+      "dashboard.html"
+    ],
+    "./js/homepage.js": [
+      "index.html"
+    ],
+    "./js/knowledge-graph.js": [
+      "knowledge.html"
+    ],
+    "./js/search-page.js": [
+      "search.html"
+    ],
+    "./js/series-page.js": [
+      "series.html"
+    ],
+    "./js/stories-page.js": [
+      "articles.html"
+    ],
+    "./js/tags-page.js": [
+      "tags.html"
+    ],
+    "./js/timeline-page.js": [
+      "timeline.html"
+    ],
+    "/js/main.js": [
+      "stories/chicken-dad.html",
+      "stories/dragon-brother.html",
+      "stories/mouse-mom.html",
+      "stories/mouse-sister.html",
+      "stories/rabbit-grandma.html"
+    ]
+  },
+  "summary": {
+    "htmlFiles": 40,
+    "cssReferences": 5,
+    "jsReferences": 9
+  }
+}
