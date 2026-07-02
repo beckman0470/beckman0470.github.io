@@ -1,0 +1,8 @@
+(function(){
+function ready(fn){if(document.readyState!=="loading")fn();else document.addEventListener("DOMContentLoaded",fn);}
+function articleNode(){return document.querySelector(".article-reading, .article-body");}
+function insertAuthorCard(){const article=articleNode();if(!article||document.querySelector(".story-author-card"))return;const card=document.createElement("aside");card.className="story-author-card";card.innerHTML='<div class="story-author-avatar">🐔</div><div><strong>雞爸爸</strong><p>用故事記錄家庭，用研究理解生活。</p></div>';article.parentNode.insertBefore(card,article);}
+function insertKnowledgeLinks(){const article=articleNode();if(!article||document.querySelector(".story-knowledge-links"))return;const links=document.createElement("nav");links.className="story-knowledge-links";links.innerHTML='<a href="../knowledge.html">知識圖譜</a><a href="../timeline.html">時間軸</a><a href="../family.html">我們一家</a><a href="../articles.html">故事典藏</a>';article.insertAdjacentElement("afterend",links);}
+function insertShareBox(){const article=articleNode();if(!article||document.querySelector(".story-share"))return;const box=document.createElement("section");box.className="story-share";box.innerHTML='<h2>分享這篇故事</h2><div class="story-share-actions"><button data-share-copy>複製連結</button><a class="secondary" href="../articles.html">回故事典藏</a></div>';article.insertAdjacentElement("afterend",box);const btn=box.querySelector("[data-share-copy]");btn.addEventListener("click",async function(){try{await navigator.clipboard.writeText(location.href);btn.textContent="已複製";setTimeout(()=>btn.textContent="複製連結",1400);}catch(e){btn.textContent="請手動複製網址";}});}
+ready(function(){insertAuthorCard();insertKnowledgeLinks();insertShareBox();});
+})();
