@@ -1,0 +1,101 @@
+/* v5.8.4｜Homepage Hero Fix */
+
+.hero h1,
+.mag-hero h1,
+.hero-title,
+.home-hero h1 {
+  font-size: clamp(42px, 5.2vw, 72px) !important;
+  line-height: 1.08 !important;
+  letter-spacing: -0.055em !important;
+  max-width: 620px !important;
+}
+
+.hero p,
+.mag-hero p,
+.hero-subtitle,
+.home-hero p {
+  max-width: 560px !important;
+  font-size: clamp(16px, 1.45vw, 19px) !important;
+  line-height: 1.72 !important;
+}
+
+.hero-art,
+.hero-cover,
+.cover-visual {
+  min-height: 390px !important;
+  border-radius: 34px !important;
+  background:
+    radial-gradient(circle at 78% 18%, #FFF1BA 0 78px, transparent 80px),
+    radial-gradient(circle at 22% 72%, rgba(141,191,216,.72) 0 54px, transparent 56px),
+    radial-gradient(circle at 68% 72%, rgba(143,175,139,.72) 0 50px, transparent 52px),
+    linear-gradient(135deg, #FFF7EC 0%, #EBCF9A 48%, #AFC5A6 100%) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-art::before,
+.hero-cover::before,
+.cover-visual::before {
+  content: "🐔";
+  position: absolute;
+  left: 50%;
+  top: 52%;
+  transform: translate(-50%, -50%);
+  width: 118px;
+  height: 118px;
+  border-radius: 42px 42px 50px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,253,248,.74);
+  border: 1px solid rgba(230,222,209,.9);
+  box-shadow: 0 22px 52px rgba(70,55,35,.16);
+  font-size: 68px;
+}
+
+.hero-art::after,
+.hero-cover::after,
+.cover-visual::after {
+  content: "把值得記住的生活，好好留下來。";
+  position: absolute;
+  left: 34px;
+  bottom: 30px;
+  right: 34px;
+  font-family: Georgia, "Times New Roman", "Noto Serif TC", serif;
+  font-size: clamp(24px, 2.8vw, 38px);
+  line-height: 1.18;
+  font-weight: 800;
+  color: #263328;
+}
+
+.cdj-identity h2 {
+  font-size: clamp(30px, 4vw, 52px) !important;
+}
+
+.cdj-identity p {
+  font-size: 17px !important;
+  line-height: 1.75 !important;
+}
+
+@media (max-width: 760px) {
+  .hero h1,
+  .mag-hero h1,
+  .hero-title,
+  .home-hero h1 {
+    font-size: clamp(36px, 11vw, 52px) !important;
+  }
+
+  .hero-art,
+  .hero-cover,
+  .cover-visual {
+    min-height: 320px !important;
+  }
+
+  .hero-art::before,
+  .hero-cover::before,
+  .cover-visual::before {
+    width: 96px;
+    height: 96px;
+    font-size: 54px;
+  }
+}
