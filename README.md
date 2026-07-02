@@ -1,19 +1,13 @@
-# Chicken Dad Journal v5.1 Repository Foundation
+# Chicken Dad Journal v5.2 Sprint 1
 
-這是 v5.1 Repository Foundation Pack。
+Knowledge Graph.
 
-## 新增 / 覆蓋
+## 新增
 
 ```text
-CHANGELOG.md
-ROADMAP.md
-CONTRIBUTING.md
-LICENSE
-.github/ISSUE_TEMPLATE/
-docs/versioning.md
-docs/repository-health-check.md
+studio/knowledge_graph.py
+engine/knowledge.py
+knowledge.html
+js/knowledge-graph.js
+docs/v5.2-sprint1-knowledge-graph.md
 ```
-
-## 目的
-
-把 Chicken Dad Journal 從 ZIP 疊加式專案，整理成可長期維護的正式 Repository。
