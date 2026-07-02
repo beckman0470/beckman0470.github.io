@@ -7,18 +7,13 @@
   }
 
   function loadState() {
-    try {
-      return JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
-    } catch {
-      return {};
-    }
+    try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}"); }
+    catch { return {}; }
   }
 
   function saveState() {
     const data = {};
-    getEditableNodes().forEach((node) => {
-      data[node.dataset.editable] = node.innerHTML;
-    });
+    getEditableNodes().forEach((node) => data[node.dataset.editable] = node.innerHTML);
     localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
   }
 
@@ -44,16 +39,13 @@
       node.removeAttribute("contenteditable");
       node.removeAttribute("spellcheck");
     });
-    clone.querySelectorAll(".editor-toolbar, .editor-hint").forEach((node) => node.remove());
-    clone.querySelectorAll("script[src='./js/site-editor.js'], script[src=\"./js/site-editor.js\"]").forEach((node) => node.remove());
-    clone.querySelectorAll("link[href='./css/site-editor.css'], link[href=\"./css/site-editor.css\"]").forEach((node) => node.remove());
+    clone.querySelectorAll(".editor-toolbar, .editor-hint, .editor-launcher").forEach((node) => node.remove());
     return "<!DOCTYPE html>\n" + clone.outerHTML;
   }
 
   function downloadIndexHtml() {
     saveState();
-    const html = cleanForExport();
-    const blob = new Blob([html], { type: "text/html;charset=utf-8" });
+    const blob = new Blob([cleanForExport()], { type: "text/html;charset=utf-8" });
     const a = document.createElement("a");
     a.href = URL.createObjectURL(blob);
     a.download = "index.html";
@@ -68,10 +60,18 @@
     location.reload();
   }
 
-  function createToolbar() {
+  function createEditor() {
+    if (!getEditableNodes().length) return;
+
+    const launcher = document.createElement("button");
+    launcher.className = "editor-launcher";
+    launcher.type = "button";
+    launcher.textContent = "編輯首頁";
+    document.body.appendChild(launcher);
+
     const hint = document.createElement("div");
     hint.className = "editor-hint";
-    hint.innerHTML = "可直接點選首頁標題與副標編輯。完成後按「下載 index.html」，再上傳覆蓋 GitHub 的 index.html。";
+    hint.innerHTML = "點選首頁標題與副標即可修改。完成後按「下載 index.html」，再上傳覆蓋 GitHub。";
     document.body.appendChild(hint);
 
     const bar = document.createElement("div");
@@ -80,19 +80,20 @@
       <button type="button" class="primary" data-action="download">下載 index.html</button>
       <button type="button" data-action="save">暫存</button>
       <button type="button" data-action="reset">還原</button>
-      <button type="button" data-action="close">關閉編輯</button>
+      <button type="button" data-action="close">關閉</button>
     `;
     document.body.appendChild(bar);
+
+    launcher.addEventListener("click", () => setEditing(true));
 
     bar.addEventListener("click", (event) => {
       const action = event.target?.dataset?.action;
       if (!action) return;
-
       if (action === "download") downloadIndexHtml();
       if (action === "save") {
         saveState();
         event.target.textContent = "已暫存";
-        setTimeout(() => (event.target.textContent = "暫存"), 1200);
+        setTimeout(() => event.target.textContent = "暫存", 1200);
       }
       if (action === "reset") resetState();
       if (action === "close") setEditing(false);
@@ -100,29 +101,13 @@
 
     getEditableNodes().forEach((node) => {
       node.addEventListener("input", saveState);
-      node.addEventListener("keydown", (event) => {
-        if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === "s") {
-          event.preventDefault();
-          saveState();
-        }
-      });
     });
+
+    if (enabledByUrl) setEditing(true);
   }
 
   document.addEventListener("DOMContentLoaded", () => {
     applyState();
-    createToolbar();
-
-    if (enabledByUrl) {
-      setEditing(true);
-    }
-
-    window.ChickenDadEditor = {
-      open: () => setEditing(true),
-      close: () => setEditing(false),
-      save: saveState,
-      download: downloadIndexHtml,
-      reset: resetState,
-    };
+    createEditor();
   });
 })();

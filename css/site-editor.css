@@ -1,10 +1,28 @@
-/* v6.1｜Simple Text Editor */
+/* v6.1.1｜Simple Text Editor */
 
+.editor-launcher,
 .editor-toolbar {
   position: fixed;
   right: 18px;
-  bottom: 18px;
   z-index: 9999;
+}
+
+.editor-launcher {
+  bottom: 18px;
+  border: 0;
+  border-radius: 999px;
+  padding: 12px 16px;
+  background: #A67C52;
+  color: #fff;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 950;
+  cursor: pointer;
+  box-shadow: 0 18px 44px rgba(70,55,35,.22);
+}
+
+.editor-toolbar {
+  bottom: 18px;
   display: none;
   gap: 8px;
   flex-wrap: wrap;
@@ -16,6 +34,10 @@
 
 body.editor-enabled .editor-toolbar {
   display: flex;
+}
+
+body.editor-enabled .editor-launcher {
+  display: none;
 }
 
 .editor-toolbar button {
