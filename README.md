@@ -19,3 +19,9 @@ python tools_homepage_footer_sync.py
 
 - Added `css/visual-polish.css`.
 - Improved header, hero, cards, contact, and footer visual details.
+
+
+## v5.6 Repository Cleanup
+
+- Removed duplicate download/copy files such as `index (1).html`, `index (3).html`, and `download (*)`.
+- Added `tools/repository_cleanup_check.py`.
