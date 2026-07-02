@@ -1,12 +1,9 @@
-# Chicken Dad Journal v5.4 QA Hotfix
+# Chicken Dad Journal v5.4.1 Sprint 1
 
-Homepage Layout & Loader Fix.
+Homepage Footer Sync.
 
-## 新增
+## 使用
 
-```text
-assets/css/homepage-hotfix.css
-js/homepage-hotfix.js
-tools_homepage_hotfix_patch.py
-docs/v5.4-qa-hotfix-homepage-layout-loader.md
+```bash
+python tools_homepage_footer_sync.py
 ```
