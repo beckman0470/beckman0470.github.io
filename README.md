@@ -1,16 +1,10 @@
-# Chicken Dad Journal v5.3
+# Chicken Dad Journal v5.4 Sprint 1
 
-Image Pipeline.
+Editorial Homepage.
 
-## 新增
+## 覆蓋
 
 ```text
-studio/image_pipeline.py
-studio/og_generator.py
-content/assets/covers/
-content/assets/heroes/
-content/assets/illustrations/
-assets/og/
-assets/thumbs/
-docs/v5.3-image-pipeline.md
+engine/homepage.py
+docs/v5.4-sprint1-editorial-homepage.md
 ```
