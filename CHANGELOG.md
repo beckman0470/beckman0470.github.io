@@ -17,3 +17,11 @@
 - Publishing Pipeline
 - Dashboard
 - Production Engine
+
+
+## v5.7.1 Sprint 1｜Real Project Refactor
+
+- Added `PROJECT_STRUCTURE.md`.
+- Added `REFACTOR_TODO.md`.
+- Switched development process from full repository ZIP replacement to small, verifiable file updates.
+- Defined next refactor priorities: shared Header/Footer, CSS cleanup, JS cleanup, Build pipeline refactor.
