@@ -1,0 +1,257 @@
+/* Chicken Dad Journal v5.4 Sprint 2.1 Typography System */
+
+:root {
+  --reading-width: 72ch;
+  --reading-wide: 960px;
+  --font-serif: Georgia, "Times New Roman", "Noto Serif TC", serif;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  --text-xs: 0.82rem;
+  --text-sm: 0.94rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.28rem;
+  --text-2xl: 1.6rem;
+  --text-3xl: 2.05rem;
+  --text-4xl: 2.75rem;
+  --text-5xl: clamp(3rem, 7vw, 5.8rem);
+
+  --line-body: 1.95;
+  --line-heading: 1.18;
+
+  --paper: #F8F6F1;
+  --surface: #FFFDF8;
+  --ink: #263328;
+  --muted: #687463;
+  --brown: #A67C52;
+  --line: #E6DED1;
+  --shadow: 0 24px 60px rgba(70,55,35,.12);
+}
+
+.article-shell {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+}
+
+.article-reading {
+  width: min(var(--reading-width), calc(100% - 40px));
+  margin: 0 auto;
+  font-size: var(--text-xl);
+  line-height: var(--line-body);
+  letter-spacing: 0.01em;
+}
+
+.article-reading p {
+  margin: 0 0 1.45em;
+}
+
+.article-reading h1,
+.article-reading h2,
+.article-reading h3,
+.article-reading h4 {
+  font-family: var(--font-serif);
+  line-height: var(--line-heading);
+  letter-spacing: -0.035em;
+  color: var(--ink);
+}
+
+.article-reading h1 {
+  font-size: var(--text-5xl);
+  margin: 0 0 0.45em;
+}
+
+.article-reading h2 {
+  font-size: var(--text-3xl);
+  margin: 2.2em 0 0.75em;
+}
+
+.article-reading h3 {
+  font-size: var(--text-2xl);
+  margin: 1.9em 0 0.65em;
+}
+
+.article-reading h4 {
+  font-size: var(--text-xl);
+  margin: 1.6em 0 0.5em;
+}
+
+.article-reading strong {
+  font-weight: 900;
+}
+
+.article-reading a {
+  color: var(--brown);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.article-reading blockquote,
+.pull-quote {
+  margin: 2.2em auto;
+  padding: 1.25em 1.35em;
+  border-left: 6px solid var(--brown);
+  border-radius: 22px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  font-family: var(--font-serif);
+  font-size: var(--text-2xl);
+  line-height: 1.55;
+  color: #344238;
+}
+
+.article-reading blockquote p {
+  margin: 0;
+}
+
+.article-reading ul,
+.article-reading ol {
+  padding-left: 1.4em;
+  margin: 0 0 1.45em;
+}
+
+.article-reading li {
+  margin: 0.25em 0;
+}
+
+.article-reading code {
+  font-family: var(--font-mono);
+  font-size: 0.88em;
+  background: #EEE6D9;
+  border-radius: 0.35em;
+  padding: 0.12em 0.32em;
+}
+
+.article-reading pre {
+  overflow: auto;
+  background: #243128;
+  color: #FFFDF8;
+  padding: 1.15em 1.25em;
+  border-radius: 20px;
+  margin: 1.8em 0;
+  font-size: var(--text-sm);
+  line-height: 1.7;
+}
+
+.article-reading pre code {
+  background: transparent;
+  color: inherit;
+  padding: 0;
+}
+
+.article-reading img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 24px;
+  margin: 2em auto 0.7em;
+  box-shadow: var(--shadow);
+}
+
+.article-reading figure {
+  margin: 2em 0;
+}
+
+.article-reading figcaption,
+.image-caption {
+  font-size: var(--text-sm);
+  color: var(--muted);
+  text-align: center;
+  margin-top: 0.75em;
+}
+
+.article-reading table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.8em 0;
+  font-size: var(--text-base);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.article-reading th,
+.article-reading td {
+  border-bottom: 1px solid var(--line);
+  padding: 0.85em 1em;
+  text-align: left;
+}
+
+.article-reading th {
+  background: #EEE6D9;
+  color: var(--ink);
+  font-weight: 900;
+}
+
+.article-reading tr:last-child td {
+  border-bottom: 0;
+}
+
+.article-meta-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 1.3em 0 2.1em;
+}
+
+.article-meta-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.42em 0.8em;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--muted);
+  font-size: var(--text-sm);
+  font-weight: 800;
+}
+
+.article-lede {
+  font-size: var(--text-2xl);
+  line-height: 1.55;
+  color: #344238;
+  margin: 0 0 1.6em;
+}
+
+.article-wide {
+  width: min(var(--reading-wide), calc(100% - 40px));
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.dropcap:first-letter {
+  float: left;
+  font-family: var(--font-serif);
+  font-size: 4.8em;
+  line-height: 0.85;
+  padding-right: 0.12em;
+  color: var(--brown);
+}
+
+@media (max-width: 680px) {
+  .article-reading {
+    width: min(100% - 28px, var(--reading-width));
+    font-size: var(--text-lg);
+    line-height: 1.88;
+  }
+
+  .article-reading h1 {
+    font-size: clamp(2.6rem, 13vw, 4.2rem);
+  }
+
+  .article-reading h2 {
+    font-size: 1.9rem;
+  }
+
+  .article-reading h3 {
+    font-size: 1.45rem;
+  }
+
+  .article-reading blockquote,
+  .pull-quote {
+    font-size: 1.45rem;
+    padding: 1.05em 1.05em;
+  }
+}

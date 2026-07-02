@@ -1,10 +1,11 @@
-# Chicken Dad Journal v5.4 Sprint 1
+# Chicken Dad Journal v5.4 Sprint 2.1
 
-Editorial Homepage.
+Typography System.
 
-## 覆蓋
+## 新增
 
 ```text
-engine/homepage.py
-docs/v5.4-sprint1-editorial-homepage.md
+assets/css/typography.css
+tools_article_typography_patch.py
+docs/v5.4-sprint2-1-typography-system.md
 ```
