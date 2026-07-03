@@ -1,35 +1,16 @@
-<!DOCTYPE html><html lang="zh-Hant"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>故事｜雞爸爸生活研究室</title><meta name="theme-color" content="#263328">
-<link rel="manifest" href="./site.webmanifest"><style>
-:root{--paper:#F8F6F1;--surface:#FFFDF8;--ink:#263328;--muted:#687463;--brown:#A67C52;--sage:#8FAF8B;--blue:#8DBFD8;--dragon:#8FBF72;--lavender:#B7A3C9;--milk:#D8C2A8;--line:#E6DED1;--shadow:0 24px 60px rgba(70,55,35,.12);--radius:30px;--serif:Georgia,"Times New Roman",serif;--sans:-apple-system,BlinkMacSystemFont,"Noto Sans TC","Microsoft JhengHei",Arial,sans-serif}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75}a{text-decoration:none;color:inherit}.container{width:min(1160px,calc(100% - 40px));margin:auto}.muted{color:var(--muted)}.kicker{font-size:13px;font-weight:900;letter-spacing:.16em;text-transform:uppercase;color:var(--brown)}
-.site-header{position:sticky;top:0;z-index:20;background:rgba(255,253,248,.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}.nav{height:82px;display:flex;align-items:center;justify-content:space-between;gap:24px}.logo{display:flex;align-items:center;gap:14px}.logo-mark{width:48px;height:48px;border-radius:50%;background:var(--surface);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;font-size:26px}.logo-text strong{display:block;font-size:21px;font-weight:950;line-height:1.2}.logo-text span{display:block;color:var(--muted);font-size:13px}.nav-links{display:flex;gap:26px;font-weight:850}.nav-links a:hover,.nav-links a.active{color:var(--brown)}
-.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 24px;border-radius:999px;background:var(--ink);color:white;font-weight:950;box-shadow:0 12px 30px rgba(38,51,40,.16)}.btn.secondary{background:var(--surface);color:var(--ink);border:1px solid var(--line);box-shadow:none}.section{padding:76px 0}.section-title{font-size:36px;line-height:1.2;margin:0;font-weight:950;letter-spacing:-.03em}.section-note{margin:0;color:var(--muted)}.section-head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:28px}.chip{display:inline-flex;align-self:flex-start;padding:5px 11px;border-radius:999px;background:#EEE6D9;color:var(--brown);font-size:13px;font-weight:950}.readmore{font-weight:950;color:var(--brown)}
-.site-footer{margin-top:50px;background:#243128;color:#FFFDF8}.footer-grid{display:grid;grid-template-columns:1.4fr .8fr .8fr .8fr;gap:32px;padding:54px 0}.site-footer h3,.site-footer h4{margin-top:0}.site-footer p,.site-footer a{color:rgba(255,253,248,.75)}.footer-bottom{border-top:1px solid rgba(255,255,255,.14);padding:18px 0;color:rgba(255,253,248,.6);font-size:14px}
-@media(max-width:980px){.nav-links{display:none}.footer-grid{grid-template-columns:1fr 1fr}}@media(max-width:620px){.container{width:min(100% - 28px,1160px)}.logo-mark{width:42px;height:42px}.logo-text strong{font-size:18px}.section{padding:52px 0}.section-head{display:block}.footer-grid{grid-template-columns:1fr}}
-
-.page-hero{padding:82px 0 46px;background:linear-gradient(180deg,#FFFDF8 0%,#F8F6F1 100%)}.page-hero h1{font-family:var(--serif);font-size:clamp(52px,7vw,92px);line-height:1.05;letter-spacing:-.04em;margin:18px 0}.lead{font-size:22px;max-width:740px;color:#344238}.filter-row{display:flex;gap:12px;flex-wrap:wrap;margin:24px 0 0}.filter{padding:9px 15px;border-radius:999px;border:1px solid var(--line);background:var(--surface);font-weight:850;cursor:pointer}.filter.active{background:var(--ink);color:#fff}.search-box{margin-top:22px;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:15px 22px;color:var(--muted);box-shadow:0 12px 36px rgba(70,55,35,.08)}.search-box input{border:0;background:transparent;outline:none;width:100%;font:inherit;color:var(--ink)}
-.featured-story{display:grid;grid-template-columns:1.05fr .95fr;gap:28px}.feature-art{min-height:360px;border-radius:30px;background:linear-gradient(135deg,#C7D9D0,#FFF7EC);box-shadow:var(--shadow);border:1px solid var(--line);padding:40px}.feature-art h2{font-family:var(--serif);font-size:56px;margin:0;line-height:1.08}.feature-copy{background:var(--surface);border:1px solid var(--line);border-radius:30px;padding:38px;box-shadow:var(--shadow)}.feature-copy h2{font-size:36px;line-height:1.25;margin:10px 0 14px}.story-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.story-card{background:var(--surface);border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow);overflow:hidden}.story-cover{height:180px;background:linear-gradient(135deg,#D8C2A8,#FFF7EC)}.story-cover.dodo{background:linear-gradient(135deg,#8DBFD8,#FFF7EC)}.story-cover.health{background:linear-gradient(135deg,#8FAF8B,#FFF7EC)}.story-cover.baseball{background:linear-gradient(135deg,#802424,#F0D0A0)}.story-cover.ai{background:linear-gradient(135deg,#263328,#8DBFD8)}.story-cover.reading{background:linear-gradient(135deg,#B7A3C9,#FFF7EC)}.card-body{padding:20px}.card-body h3{font-size:21px;line-height:1.35;margin:8px 0}.empty{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:28px;color:var(--muted)}
-@media(max-width:980px){.featured-story{grid-template-columns:1fr}.story-grid{grid-template-columns:1fr 1fr}}@media(max-width:620px){.page-hero h1{font-size:50px}.lead{font-size:18px}.story-grid{grid-template-columns:1fr}.feature-copy,.feature-art{padding:26px}}
-</style><link rel="stylesheet" href="./css/visual-polish.css">
-<meta name="description" content="這裡收錄雞爸爸生活研究室的故事。家庭、健康、棒球、AI、閱讀與生活裡的各種發現，都慢慢整理在這裡。">
-<link rel="canonical" href="https://beckman0470.github.io/articles.html">
-<meta property="og:site_name" content="Chicken Dad Journal">
-<meta property="og:type" content="article">
-<meta property="og:title" content="故事｜雞爸爸生活研究室">
-<meta property="og:description" content="這裡收錄雞爸爸生活研究室的故事。家庭、健康、棒球、AI、閱讀與生活裡的各種發現，都慢慢整理在這裡。">
-<meta property="og:url" content="https://beckman0470.github.io/articles.html">
-<meta property="og:image" content="https://beckman0470.github.io/assets/og/og-image.svg">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="故事｜雞爸爸生活研究室">
-<meta name="twitter:description" content="這裡收錄雞爸爸生活研究室的故事。家庭、健康、棒球、AI、閱讀與生活裡的各種發現，都慢慢整理在這裡。">
-<meta name="twitter:image" content="https://beckman0470.github.io/assets/og/og-image.svg">
-<meta name="theme-color" content="#263328">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "故事｜雞爸爸生活研究室", "description": "這裡收錄雞爸爸生活研究室的故事。家庭、健康、棒球、AI、閱讀與生活裡的各種發現，都慢慢整理在這裡。", "url": "https://beckman0470.github.io/articles.html", "isPartOf": {"@type": "WebSite", "name": "雞爸爸生活研究室", "url": "https://beckman0470.github.io/"}}</script>
-<link rel="stylesheet" href="./css/article-template.css">
-<link rel="stylesheet" href="./css/related-stories.css">
-<link rel="stylesheet" href="./css/global-layout-sync.css">
-<link rel="stylesheet" href="./css/v7-0-2-home-hero.css">
-</head><body><header class="site-header">
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>故事｜雞爸爸生活研究室</title>
+  <meta name="description" content="雞爸爸生活研究室的作品典藏。">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/v7-1-brand-homepage.css">
+  <link rel="stylesheet" href="./css/v7-2-story.css">
+</head>
+<body class="story-shell">
+<header class="site-header">
   <div class="container nav">
     <a class="logo" href="./index.html">
       <div class="logo-mark">🐔</div>
@@ -42,34 +23,67 @@
       <a href="./index.html">首頁</a> <a class="active" aria-current="page" href="./articles.html">故事</a> <a href="./series.html">系列</a> <a href="./timeline.html">時間軸</a> <a href="./knowledge.html">知識圖譜</a> <a href="./search.html">搜尋</a> <a href="./tags.html">標籤</a> <a href="./family.html">我們一家</a> <a href="./about.html">關於</a>
     </nav>
   </div>
-</header><main><section class="page-hero"><div class="container"><div class="kicker">Stories Library</div><h1>故事典藏</h1><p class="lead">這裡收錄雞爸爸生活研究室的故事。家庭、健康、棒球、AI、閱讀與生活裡的各種發現，都慢慢整理在這裡。</p><div class="filter-row" id="filters"><button class="filter active" data-category="all">全部</button><button class="filter" data-category="家庭故事">家庭</button><button class="filter" data-category="健康生活">健康</button><button class="filter" data-category="棒球故事">棒球</button><button class="filter" data-category="AI 生活實驗">AI</button><button class="filter" data-category="閱讀札記">閱讀</button></div><div class="search-box"><input id="story-search" type="search" placeholder="搜尋故事、系列、角色或關鍵字"></div></div></section><section class="section"><div class="container"><div class="section-head"><div><div class="kicker">Featured</div><h2 class="section-title">推薦閱讀</h2><p class="section-note">由 stories.json 自動挑選。</p></div></div><div class="featured-story" id="featured-story"></div></div></section><section class="section"><div class="container"><div class="section-head"><div><div class="kicker">All Stories</div><h2 class="section-title">全部故事</h2><p class="section-note" id="story-count">讀取故事中……</p></div></div><div class="story-grid" id="story-grid"></div></div></section></main><footer class="site-footer">
-  <div class="container footer-grid">
-    <div class="footer-brand">
-      <h3>雞爸爸生活研究室</h3>
-      <p>把值得記住的生活，好好留下來。</p>
-      <p>分享生活的故事，用陪伴記錄成長。</p>
+</header>
+
+<main>
+  <section class="story-archive-hero">
+    <div class="container">
+      <div class="kicker">Works</div>
+      <h1>故事</h1>
+      <p>那些平凡的小日子、身體與健康的理解、球場上的故事，還有 AI 共創的實驗，都慢慢收進這裡。</p>
+
+      <div class="story-grid">
+        <a class="collection-card" href="./articles.html#happy-days">
+          <strong>🏡 幸福小日子</strong>
+          <p>家庭、孩子、陪伴與日常。</p>
+        </a>
+        <a class="collection-card" href="./articles.html#life-research">
+          <strong>🔍 生活研究</strong>
+          <p>健身、健康、營養、睡眠與壓力。</p>
+        </a>
+        <a class="collection-card" href="./articles.html#baseball-notes">
+          <strong>⚾ 棒球札記</strong>
+          <p>比賽、球員、數據與人物故事。</p>
+        </a>
+        <a class="collection-card" href="./articles.html#ai-cocreation">
+          <strong>🤖 AI 共創</strong>
+          <p>AI 工具、創作與網站實驗。</p>
+        </a>
+      </div>
     </div>
-    <div>
-      <h4>閱讀</h4>
-      <p><a href="./index.html">首頁</a></p>
-      <p><a href="./articles.html">故事</a></p>
-      <p><a href="./series.html">系列</a></p>
-      <p><a href="./timeline.html">時間軸</a></p>
+  </section>
+
+  <section class="story-section" id="featured">
+    <div class="container">
+      <h2>第一次來，先讀這篇</h2>
+      <div class="work-list">
+        <a class="work-card" href="./stories/belly-to-belly.html">
+          <span class="tag">幸福小日子</span>
+          <h3>肚肚貼肚肚</h3>
+          <p>有些幸福，不需要長篇大論，只要一個孩子軟軟暖暖地貼上來，就夠了。</p>
+          <div class="work-meta">2026 · 約 4 分鐘</div>
+        </a>
+      </div>
     </div>
-    <div>
-      <h4>探索</h4>
-      <p><a href="./knowledge.html">知識圖譜</a></p>
-      <p><a href="./search.html">搜尋</a></p>
-      <p><a href="./tags.html">標籤</a></p>
-      <p><a href="./subscribe.html">訂閱</a></p>
+  </section>
+
+  <section class="story-section" id="happy-days">
+    <div class="container">
+      <h2>🏡 幸福小日子</h2>
+      <div class="work-list">
+        <a class="work-card" href="./stories/belly-to-belly.html">
+          <span class="tag">幸福小日子</span>
+          <h3>肚肚貼肚肚</h3>
+          <p>當下的溫度，就是幸福的定義。</p>
+          <div class="work-meta">2026 · 約 4 分鐘</div>
+        </a>
+      </div>
     </div>
-    <div>
-      <h4>品牌</h4>
-      <p><a href="./family.html">我們一家</a></p>
-      <p><a href="./about.html">關於</a></p>
-      <p><a href="./dashboard.html">Dashboard</a></p>
-      <p><a href="https://vocus.cc/salon/jisoopama-baby-cat" target="_blank" rel="noopener">Vocus</a></p>
-    </div>
-  </div>
-  <div class="container footer-bottom">© 2026 Chicken Dad Journal. Every family has stories. This is ours.</div>
-</footer><script defer src="./js/stories-page.js"></script></body></html>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-bottom">© 2026 Chicken Dad Journal.</div>
+</footer>
+</body>
+</html>
