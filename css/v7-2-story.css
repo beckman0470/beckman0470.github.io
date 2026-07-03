@@ -177,3 +177,44 @@
     font-size: 18px;
   }
 }
+
+
+/* V7.3.1 Stories Engine support */
+.story-status {
+  color: #687463;
+  line-height: 1.8;
+}
+
+.work-card blockquote {
+  margin: 14px 0 0;
+  padding-left: 14px;
+  border-left: 3px solid #D8C9B4;
+  color: #8A7560;
+  line-height: 1.7;
+}
+
+.work-tags,
+.work-people {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.work-tags span,
+.work-people span {
+  display: inline-flex;
+  border-radius: 999px;
+  padding: 5px 9px;
+  background: #F8F6F1;
+  color: #687463;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.collection-card small {
+  display: inline-block;
+  margin-top: 14px;
+  color: #A67C52;
+  font-weight: 900;
+}
