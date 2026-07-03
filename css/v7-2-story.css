@@ -1,185 +1,6 @@
-/* V7.2 Story Archive */
+/* V7.3.1a Mobile Header Fix for Stories Page */
 
-.story-shell {
-  background: #FFFDF8;
-}
-
-.story-archive-hero {
-  padding: 72px 0 42px;
-  background: linear-gradient(180deg, #FFF7EC 0%, #FFFDF8 100%);
-}
-
-.story-archive-hero h1 {
-  margin: 0 0 14px;
-  font-family: var(--serif, Georgia, "Times New Roman", serif);
-  font-size: clamp(44px, 6vw, 84px);
-  line-height: 1.05;
-  letter-spacing: -0.055em;
-  color: #263328;
-}
-
-.story-archive-hero p {
-  max-width: 720px;
-  font-size: 20px;
-  line-height: 1.8;
-  color: #687463;
-}
-
-.story-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 18px;
-  margin: 28px 0 0;
-}
-
-.collection-card,
-.work-card {
-  display: block;
-  border-radius: 28px;
-  background: #FFFDF8;
-  border: 1px solid #E6DED1;
-  box-shadow: 0 18px 48px rgba(70,55,35,.08);
-  padding: 24px;
-  color: #263328;
-  text-decoration: none;
-}
-
-.collection-card strong {
-  display: block;
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.collection-card p,
-.work-card p {
-  margin: 0;
-  color: #687463;
-  line-height: 1.7;
-}
-
-.story-section {
-  padding: 54px 0;
-}
-
-.story-section h2 {
-  margin: 0 0 22px;
-  font-size: clamp(30px, 4vw, 50px);
-  letter-spacing: -0.04em;
-}
-
-.work-list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
-}
-
-.work-card .tag {
-  display: inline-flex;
-  margin-bottom: 14px;
-  padding: 6px 10px;
-  border-radius: 999px;
-  background: #EEE6D9;
-  color: #A67C52;
-  font-size: 13px;
-  font-weight: 900;
-}
-
-.work-card h3 {
-  margin: 0 0 12px;
-  font-size: 26px;
-  letter-spacing: -0.04em;
-}
-
-.work-meta {
-  margin-top: 18px;
-  color: #8A7560;
-  font-size: 14px;
-}
-
-.article-page {
-  background: #FFFDF8;
-}
-
-.article-hero {
-  padding: 72px 0 34px;
-  background: linear-gradient(180deg, #FFF7EC 0%, #FFFDF8 100%);
-}
-
-.article-hero .tag {
-  display: inline-flex;
-  padding: 7px 12px;
-  border-radius: 999px;
-  background: #EEE6D9;
-  color: #A67C52;
-  font-size: 14px;
-  font-weight: 900;
-}
-
-.article-hero h1 {
-  max-width: 900px;
-  margin: 18px 0 16px;
-  font-family: var(--serif, Georgia, "Times New Roman", serif);
-  font-size: clamp(42px, 6vw, 82px);
-  line-height: 1.08;
-  letter-spacing: -0.055em;
-}
-
-.article-hero p {
-  max-width: 760px;
-  color: #687463;
-  font-size: 20px;
-  line-height: 1.8;
-}
-
-.article-body {
-  max-width: 780px;
-  margin: 0 auto;
-  padding: 48px 0 88px;
-  font-size: 20px;
-  line-height: 2;
-  color: #263328;
-}
-
-.article-body p {
-  margin: 0 0 1.6em;
-}
-
-.article-body h2 {
-  margin: 2.2em 0 .8em;
-  font-size: 34px;
-  line-height: 1.25;
-  letter-spacing: -0.04em;
-}
-
-.article-note {
-  margin-top: 48px;
-  padding: 24px;
-  border-radius: 24px;
-  background: #F8F6F1;
-  color: #687463;
-}
-
-@media (max-width: 980px) {
-  .story-grid,
-  .work-list {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (max-width: 620px) {
-  .story-grid,
-  .work-list {
-    grid-template-columns: 1fr;
-  }
-
-  .article-body {
-    width: calc(100% - 36px);
-    font-size: 18px;
-  }
-}
-
-
-/* V7.3.1 Stories Engine support */
+/* Keep the story page styles from V7.2/V7.3 working */
 .story-status {
   color: #687463;
   line-height: 1.8;
@@ -217,4 +38,109 @@
   margin-top: 14px;
   color: #A67C52;
   font-weight: 900;
+}
+
+/* Header stability */
+.site-header .nav-links,
+.site-header .nav-links a {
+  font-size: 16px !important;
+  font-weight: 900 !important;
+  line-height: 1.2 !important;
+}
+
+.site-header .nav-links a {
+  min-height: 44px !important;
+  flex: 0 0 auto !important;
+  white-space: nowrap !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  pointer-events: auto !important;
+}
+
+.site-header .logo-text strong {
+  font-size: 24px !important;
+  line-height: 1.1 !important;
+  white-space: nowrap !important;
+}
+
+.site-header .logo-text span {
+  font-size: 13px !important;
+}
+
+/* Tablet / small desktop: split logo and nav into two lines */
+@media (max-width: 1280px) {
+  .site-header .nav {
+    min-height: auto !important;
+    height: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: center !important;
+    gap: 10px !important;
+    padding-top: 14px !important;
+    padding-bottom: 10px !important;
+    overflow: visible !important;
+  }
+
+  .site-header .logo {
+    flex: 0 0 auto !important;
+  }
+
+  .site-header .nav-links {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 24px !important;
+    flex-wrap: nowrap !important;
+    white-space: nowrap !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    padding: 2px 0 12px !important;
+    scrollbar-width: thin;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .site-header .nav-links a {
+    font-size: 16px !important;
+    min-height: 46px !important;
+    padding: 8px 0 !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .site-header .nav {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    gap: 8px !important;
+  }
+
+  .site-header .logo-mark {
+    width: 48px !important;
+    height: 48px !important;
+    min-width: 48px !important;
+    font-size: 25px !important;
+  }
+
+  .site-header .logo-text strong {
+    font-size: 20px !important;
+  }
+
+  .site-header .logo-text span {
+    font-size: 12px !important;
+  }
+
+  .site-header .nav-links {
+    gap: 22px !important;
+    padding-bottom: 12px !important;
+  }
+
+  .site-header .nav-links a {
+    font-size: 15px !important;
+    min-height: 46px !important;
+    padding: 8px 0 !important;
+  }
 }
