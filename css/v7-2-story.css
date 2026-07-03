@@ -1,9 +1,106 @@
-/* V7.3.1a Mobile Header Fix for Stories Page */
+/* V7.3.1c Story Layout Fix */
 
-/* Keep the story page styles from V7.2/V7.3 working */
+.story-shell {
+  background: #FFFDF8;
+}
+
+.story-archive-hero {
+  padding: 72px 0 42px;
+  background: linear-gradient(180deg, #FFF7EC 0%, #FFFDF8 100%);
+}
+
+.story-archive-hero h1 {
+  margin: 0 0 14px;
+  font-family: var(--serif, Georgia, "Times New Roman", serif);
+  font-size: clamp(44px, 6vw, 84px);
+  line-height: 1.05;
+  letter-spacing: -0.055em;
+  color: #263328;
+}
+
+.story-archive-hero p {
+  max-width: 760px;
+  font-size: 20px;
+  line-height: 1.8;
+  color: #687463;
+}
+
+.story-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin: 32px 0 0;
+}
+
+.collection-card,
+.work-card {
+  display: block;
+  border-radius: 28px;
+  background: #FFFDF8;
+  border: 1px solid #E6DED1;
+  box-shadow: 0 18px 48px rgba(70,55,35,.08);
+  padding: 24px;
+  color: #263328;
+  text-decoration: none;
+}
+
+.collection-card strong {
+  display: block;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.collection-card p,
+.work-card p {
+  margin: 0;
+  color: #687463;
+  line-height: 1.7;
+}
+
+.collection-card small {
+  display: inline-block;
+  margin-top: 14px;
+  color: #A67C52;
+  font-weight: 900;
+}
+
+.story-section {
+  padding: 54px 0 88px;
+}
+
+.story-section h2 {
+  margin: 0 0 22px;
+  font-size: clamp(30px, 4vw, 50px);
+  letter-spacing: -0.04em;
+}
+
 .story-status {
   color: #687463;
   line-height: 1.8;
+}
+
+.work-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.work-card .tag {
+  display: inline-flex;
+  margin-bottom: 14px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: #EEE6D9;
+  color: #A67C52;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.work-card h3 {
+  margin: 0 0 12px;
+  font-size: 26px;
+  line-height: 1.25;
+  letter-spacing: -0.04em;
 }
 
 .work-card blockquote {
@@ -12,6 +109,12 @@
   border-left: 3px solid #D8C9B4;
   color: #8A7560;
   line-height: 1.7;
+}
+
+.work-meta {
+  margin-top: 18px;
+  color: #8A7560;
+  font-size: 14px;
 }
 
 .work-tags,
@@ -33,14 +136,6 @@
   font-weight: 800;
 }
 
-.collection-card small {
-  display: inline-block;
-  margin-top: 14px;
-  color: #A67C52;
-  font-weight: 900;
-}
-
-/* Header stability */
 .site-header .nav-links,
 .site-header .nav-links a {
   font-size: 16px !important;
@@ -55,20 +150,8 @@
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
-  pointer-events: auto !important;
 }
 
-.site-header .logo-text strong {
-  font-size: 24px !important;
-  line-height: 1.1 !important;
-  white-space: nowrap !important;
-}
-
-.site-header .logo-text span {
-  font-size: 13px !important;
-}
-
-/* Tablet / small desktop: split logo and nav into two lines */
 @media (max-width: 1280px) {
   .site-header .nav {
     min-height: auto !important;
@@ -80,11 +163,6 @@
     gap: 10px !important;
     padding-top: 14px !important;
     padding-bottom: 10px !important;
-    overflow: visible !important;
-  }
-
-  .site-header .logo {
-    flex: 0 0 auto !important;
   }
 
   .site-header .nav-links {
@@ -108,9 +186,16 @@
     min-height: 46px !important;
     padding: 8px 0 !important;
   }
+
+  .story-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .work-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
-/* Mobile */
 @media (max-width: 640px) {
   .site-header .nav {
     padding-left: 16px !important;
@@ -142,5 +227,19 @@
     font-size: 15px !important;
     min-height: 46px !important;
     padding: 8px 0 !important;
+  }
+
+  .story-archive-hero {
+    padding: 48px 0 32px;
+  }
+
+  .story-grid,
+  .work-list {
+    grid-template-columns: 1fr;
+  }
+
+  .collection-card,
+  .work-card {
+    padding: 22px;
   }
 }
