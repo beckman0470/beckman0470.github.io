@@ -274,3 +274,19 @@ body.studio-editing .brand-family-hero {
     min-height: 360px;
   }
 }
+/* V7.1 Nav Stability Hotfix */
+.site-header .nav-links,
+.site-header .nav-links a {
+  font-size: 16px !important;
+  font-weight: 900 !important;
+  line-height: 1.2 !important;
+}
+
+.site-header .logo-text strong {
+  font-size: 24px !important;
+  line-height: 1.1 !important;
+}
+
+.site-header .logo-text span {
+  font-size: 13px !important;
+}
