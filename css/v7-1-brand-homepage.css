@@ -1,0 +1,25 @@
+/* V7.1 Brand Homepage */
+
+.home-brand-hero-v71 {
+  width: 100%;
+  background: #FFF7EC;
+  overflow: hidden;
+  border-bottom: 1px solid #E6DED1;
+}
+
+.home-brand-hero-v71 img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.studio-toggle,
+.studio-panel,
+.design-panel-toggle,
+.design-panel,
+.editor-launcher,
+.editor-toolbar,
+.editor-hint {
+  display: none !important;
+}
