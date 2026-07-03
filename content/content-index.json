@@ -1,7 +1,10 @@
 {
-  "version": "7.2.1",
+  "version": "7.2.2",
   "works": [
-    "content/works/temperature-of-now/meta.json"
+    "content/works/temperature-of-now/meta.json",
+    "content/works/girls-let-us-watch-clouds/meta.json",
+    "content/works/half-hour-of-summer/meta.json",
+    "content/works/graduation-day/meta.json"
   ],
   "series": "content/series/index.json",
   "people": "content/people/index.json"
