@@ -1,4 +1,7 @@
-/* V7.1 Brand Homepage */
+/* V7.1.2 Responsive Header
+   Fixes compressed / unclickable header nav on tablet, small desktop and mobile.
+   Replace or upload as: css/v7-1-brand-homepage.css
+*/
 
 .home-brand-hero-v71 {
   width: 100%;
@@ -22,4 +25,204 @@
 .editor-toolbar,
 .editor-hint {
   display: none !important;
+}
+
+/* Header base */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255,253,248,.96);
+  backdrop-filter: blur(16px);
+  border-top: 4px solid #A30F1A;
+  border-bottom: 1px solid #E6DED1;
+}
+
+.site-header .nav {
+  min-height: 88px !important;
+  height: auto !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 28px !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  overflow: visible !important;
+}
+
+.site-header .logo {
+  display: flex !important;
+  align-items: center !important;
+  gap: 14px !important;
+  flex: 0 0 auto !important;
+  min-width: 0 !important;
+  text-decoration: none !important;
+  color: #263328 !important;
+}
+
+.site-header .logo-mark {
+  width: 58px !important;
+  height: 58px !important;
+  min-width: 58px !important;
+  border-radius: 50% !important;
+  border: 2px solid #263328 !important;
+  background: #FFFDF8 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 30px !important;
+  line-height: 1 !important;
+}
+
+.site-header .logo-text strong {
+  display: block !important;
+  font-size: 24px !important;
+  line-height: 1.1 !important;
+  font-weight: 950 !important;
+  letter-spacing: -0.04em !important;
+  white-space: nowrap !important;
+}
+
+.site-header .logo-text span {
+  display: block !important;
+  margin-top: 4px !important;
+  font-size: 13px !important;
+  line-height: 1.2 !important;
+  color: #687463 !important;
+}
+
+.site-header .nav-links {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  gap: clamp(14px, 1.45vw, 24px) !important;
+  flex-wrap: nowrap !important;
+  white-space: nowrap !important;
+  font-size: 16px !important;
+  font-weight: 900 !important;
+  line-height: 1.2 !important;
+  min-width: 0 !important;
+  overflow: visible !important;
+}
+
+.site-header .nav-links a {
+  position: relative !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 44px !important;
+  min-width: max-content !important;
+  color: #263328 !important;
+  text-decoration: none !important;
+  padding: 6px 0 !important;
+  font-size: 16px !important;
+  font-weight: 900 !important;
+  line-height: 1.2 !important;
+  flex: 0 0 auto !important;
+  pointer-events: auto !important;
+}
+
+.site-header .nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  width: 0;
+  height: 3px;
+  border-radius: 999px;
+  background: #A67C52;
+  transition: width .2s ease;
+}
+
+.site-header .nav-links a:hover,
+.site-header .nav-links a.active,
+.site-header .nav-links a[aria-current="page"] {
+  color: #A67C52 !important;
+}
+
+.site-header .nav-links a:hover::after,
+.site-header .nav-links a.active::after,
+.site-header .nav-links a[aria-current="page"]::after {
+  width: 100%;
+}
+
+/* Tablet and narrow desktop: logo row + scrollable nav row */
+@media (max-width: 1280px) {
+  .site-header .nav {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: center !important;
+    gap: 10px !important;
+    padding-top: 14px !important;
+    padding-bottom: 10px !important;
+  }
+
+  .site-header .nav-links {
+    width: 100% !important;
+    max-width: 100% !important;
+    justify-content: flex-start !important;
+    gap: 24px !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    padding: 2px 0 12px !important;
+    scrollbar-width: thin;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .site-header .nav-links::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .site-header .nav-links::-webkit-scrollbar-thumb {
+    background: rgba(166,124,82,.45);
+    border-radius: 999px;
+  }
+
+  .site-header .nav-links a {
+    font-size: 16px !important;
+    min-height: 44px !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .site-header {
+    position: sticky;
+  }
+
+  .site-header .nav {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    gap: 8px !important;
+  }
+
+  .site-header .logo {
+    gap: 10px !important;
+  }
+
+  .site-header .logo-mark {
+    width: 48px !important;
+    height: 48px !important;
+    min-width: 48px !important;
+    font-size: 25px !important;
+  }
+
+  .site-header .logo-text strong {
+    font-size: 20px !important;
+  }
+
+  .site-header .logo-text span {
+    font-size: 12px !important;
+  }
+
+  .site-header .nav-links {
+    gap: 22px !important;
+    padding-bottom: 12px !important;
+  }
+
+  .site-header .nav-links a {
+    font-size: 15px !important;
+    min-height: 46px !important;
+    padding: 8px 0 !important;
+  }
 }
