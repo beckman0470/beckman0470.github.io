@@ -1,0 +1,8 @@
+{
+  "version": "7.2.1",
+  "works": [
+    "content/works/temperature-of-now/meta.json"
+  ],
+  "series": "content/series/index.json",
+  "people": "content/people/index.json"
+}

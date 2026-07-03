@@ -1,0 +1,22 @@
+[
+  {
+    "id": "happiness-drops",
+    "name": "幸福點滴",
+    "description": "那些平凡卻值得停下來看的當下。"
+  },
+  {
+    "id": "life-research",
+    "name": "生活研究",
+    "description": "健身、健康、營養、運動、睡眠與壓力。"
+  },
+  {
+    "id": "baseball-notes",
+    "name": "棒球札記",
+    "description": "比賽、球員、數據與人物故事。"
+  },
+  {
+    "id": "ai-cocreation",
+    "name": "AI 共創",
+    "description": "AI 工具、創作與網站實驗。"
+  }
+]

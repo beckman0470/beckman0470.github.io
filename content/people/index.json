@@ -1,0 +1,32 @@
+[
+  {
+    "id": "chicken-dad",
+    "name": "雞爸爸",
+    "role": "作者"
+  },
+  {
+    "id": "dragon-brother",
+    "name": "龍弟弟",
+    "role": "孩子"
+  },
+  {
+    "id": "mouse-sister",
+    "name": "鼠姊姊",
+    "role": "孩子"
+  },
+  {
+    "id": "mouse-mom",
+    "name": "鼠媽媽",
+    "role": "家人"
+  },
+  {
+    "id": "rabbit-grandma",
+    "name": "兔阿嬤",
+    "role": "家人"
+  },
+  {
+    "id": "tiger-great-grandfather",
+    "name": "虎阿祖",
+    "role": "精神來源"
+  }
+]
