@@ -219,21 +219,89 @@ a {
 }
 
 
-/* Shared Header/Footer Safety: homepage header/footer used across all pages */
+/* Header Layout Hotfix｜match approved homepage header */
 .site-header {
-  overflow-x: clip;
+  overflow-x: clip !important;
 }
-.header-inner {
-  max-width: 1280px;
+
+.site-header .header-inner {
+  width: min(1480px, calc(100% - 48px)) !important;
+  min-height: 92px !important;
+  margin: 0 auto !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 28px !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
 }
-.nav {
-  flex-wrap: wrap;
-  min-width: 0;
+
+.site-header .brand {
+  display: flex !important;
+  align-items: center !important;
+  gap: 14px !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+  flex: 0 0 auto !important;
+  min-width: 0 !important;
 }
-.nav a {
-  white-space: nowrap;
+
+.site-header .brand img {
+  width: 64px !important;
+  height: 64px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
 }
+
+.site-header nav.nav,
+.site-header .nav {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  gap: clamp(16px, 2vw, 34px) !important;
+  width: auto !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  height: auto !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  font-weight: 900 !important;
+}
+
+.site-header nav.nav a,
+.site-header .nav a {
+  display: inline-flex !important;
+  align-items: center !important;
+  width: auto !important;
+  flex: 0 0 auto !important;
+  white-space: nowrap !important;
+  text-decoration: none !important;
+  line-height: 1.4 !important;
+}
+
 body:not(:has(.home)) .footer-cta {
   width: min(1180px, calc(100% - 48px));
   margin: 56px auto 64px;
+}
+
+@media (max-width: 900px) {
+  .site-header .header-inner {
+    min-height: auto !important;
+    padding: 14px 0 !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    flex-wrap: nowrap !important;
+  }
+
+  .site-header nav.nav,
+  .site-header .nav {
+    width: 100% !important;
+    justify-content: flex-start !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    padding-bottom: 4px !important;
+  }
 }
