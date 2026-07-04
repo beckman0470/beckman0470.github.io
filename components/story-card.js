@@ -1,27 +1,22 @@
-// V7.3.1 Story Card Component
+// CDJ-0038 Album Story Card
 
 export function createStoryCard(work) {
-  const article = document.createElement("article");
-  article.className = "work-card";
-  article.dataset.slug = work.slug || "";
-
-  const tags = Array.isArray(work.tags) ? work.tags.slice(0, 3) : [];
-  const people = Array.isArray(work.people) ? work.people.slice(0, 3) : [];
-
-  article.innerHTML = `
-    <div class="tag">${escapeHtml(work.series || work.category || "作品")}</div>
-    <h3>${escapeHtml(work.title || "未命名作品")}</h3>
-    ${work.subtitle ? `<p>${escapeHtml(work.subtitle)}</p>` : ""}
-    ${work.signature ? `<blockquote>${escapeHtml(work.signature)}</blockquote>` : ""}
-    <div class="work-meta">
-      ${formatDate(work.published)}
-      ${work.readingTime ? ` · 約 ${escapeHtml(String(work.readingTime))} 分鐘` : ""}
+  const card = document.createElement("article");
+  card.className = "work-card";
+  card.dataset.slug = work.slug || "";
+  const cover = work.cover || work.hero || "";
+  const date = work.published ? String(work.published).replaceAll("-", ".") : "";
+  card.innerHTML = `
+    <div class="work-cover">
+      ${cover ? `<img src="${escapeHtml(cover)}" alt="${escapeHtml(work.title || "故事封面")}">` : `<span>📷</span>`}
     </div>
-    ${tags.length ? `<div class="work-tags">${tags.map(tag => `<span>${escapeHtml(tag)}</span>`).join("")}</div>` : ""}
-    ${people.length ? `<div class="work-people">${people.map(person => `<span>${escapeHtml(person)}</span>`).join("")}</div>` : ""}
+    <div class="work-content">
+      <h3>${escapeHtml(work.title || "未命名故事")}</h3>
+      ${date ? `<div class="work-date">${escapeHtml(date)}</div>` : ""}
+      ${work.signature ? `<div class="work-signature">${escapeHtml(work.signature)}</div>` : ""}
+    </div>
   `;
-
-  return article;
+  return card;
 }
 
 export function escapeHtml(value) {
@@ -31,9 +26,4 @@ export function escapeHtml(value) {
     .replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&#039;");
-}
-
-function formatDate(dateText) {
-  if (!dateText) return "";
-  return String(dateText).replaceAll("-", ".");
 }
