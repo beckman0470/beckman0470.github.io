@@ -1,265 +1,405 @@
 
 
 
-/* Step 2-2 Redo｜Family Character Book */
-.family-book {
-  background:
-    radial-gradient(circle at 12% 0%, rgba(255, 228, 182, .36), transparent 30rem),
-    radial-gradient(circle at 90% 8%, rgba(183, 163, 201, .16), transparent 30rem),
-    var(--cream, #fff8ec);
-  padding: 46px 0 80px;
+/* Step 2-2 Redo v2｜Character Manual Layout */
+
+/* Header hotfix：避免導覽列在寬螢幕與窄螢幕撐爆、跑版 */
+.site-header {
+  overflow-x: clip;
 }
 
-.family-book-wrap {
-  width: min(1240px, calc(100% - 48px));
+.header-inner {
+  width: min(1320px, calc(100% - 40px));
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  flex-wrap: wrap;
+  padding: 18px 0;
+}
+
+.brand {
+  flex: 0 0 auto;
+  min-width: 260px;
+}
+
+.nav {
+  flex: 1 1 620px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: clamp(14px, 2.2vw, 34px);
+  flex-wrap: wrap;
+  min-width: 0;
+}
+
+.nav a {
+  white-space: nowrap;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+@media (max-width: 900px) {
+  .header-inner {
+    justify-content: center;
+  }
+
+  .brand {
+    min-width: 0;
+  }
+
+  .nav {
+    justify-content: center;
+    flex-basis: 100%;
+  }
+}
+
+.family-manual {
+  background:
+    radial-gradient(circle at 0% 18%, rgba(230, 181, 96, .22), transparent 26rem),
+    radial-gradient(circle at 100% 16%, rgba(185, 155, 189, .18), transparent 28rem),
+    #fff8ec;
+  padding: 38px 0 72px;
+  color: #2d241d;
+}
+
+.family-manual-wrap {
+  width: min(1480px, calc(100% - 44px));
   margin: 0 auto;
 }
 
-.family-book-hero {
+.manual-hero {
   display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(320px, .85fr);
-  gap: clamp(26px, 4vw, 54px);
+  grid-template-columns: minmax(320px, .95fr) minmax(520px, 1.35fr);
+  gap: 28px;
   align-items: center;
-  padding: clamp(34px, 5vw, 64px);
-  border-radius: 34px;
-  background: rgba(255,253,248,.9);
-  border: 1px solid var(--line, rgba(139,92,43,.18));
-  box-shadow: var(--shadow, 0 18px 48px rgba(110,76,40,.11));
-  margin-bottom: 28px;
+  margin-bottom: 24px;
 }
 
-.family-book-kicker {
-  color: var(--wood, #9b5b2a);
-  font-weight: 950;
-  letter-spacing: .16em;
-  text-transform: uppercase;
-  font-size: 13px;
-  margin-bottom: 14px;
+.manual-title {
+  padding: 10px 0 0;
 }
 
-.family-book-hero h1 {
+.manual-title h1 {
+  margin: 0 0 8px;
   font-family: "Noto Serif TC", "Songti TC", serif;
-  font-size: clamp(42px, 6vw, 76px);
-  line-height: 1.08;
-  letter-spacing: .04em;
-  margin: 0 0 20px;
-  color: var(--ink, #2d241d);
+  font-size: clamp(36px, 4.6vw, 64px);
+  letter-spacing: .02em;
+  line-height: 1.1;
 }
 
-.family-book-hero p {
-  max-width: 760px;
-  margin: 0;
+.manual-title h2 {
+  margin: 0 0 18px;
+  font-family: "Noto Serif TC", "Songti TC", serif;
+  font-size: clamp(20px, 2.2vw, 31px);
+  letter-spacing: .08em;
+  line-height: 1.5;
+}
+
+.manual-title p {
+  margin: 0 0 24px;
+  font-size: 17px;
+  line-height: 1.9;
+}
+
+.manual-quote {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 16px;
+  align-items: center;
+  max-width: 390px;
+  color: #4f4034;
+  font-family: "Noto Serif TC", "Songti TC", serif;
   font-size: 20px;
   line-height: 1.9;
-  color: var(--muted, #756657);
 }
 
-.family-book-source {
-  border-radius: 28px;
-  background: #fff3df;
-  border: 1px solid rgba(139,92,43,.14);
-  padding: 24px;
+.manual-quote .mark {
+  font-size: 38px;
+  color: #bd8a49;
 }
 
-.family-book-source h2 {
+.manual-quote small {
+  display: block;
+  margin-top: 8px;
+  font-size: 14px;
+  color: #6e6257;
+}
+
+.manual-family-art {
+  border-radius: 24px;
+  min-height: 355px;
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.76), rgba(255,243,223,.58)),
+    url("./assets/family-step2-2-redo/chickendad.svg") left 12% bottom / 18% auto no-repeat,
+    url("./assets/family-step2-2-redo/dodo.svg") 28% bottom / 18% auto no-repeat,
+    url("./assets/family-step2-2-redo/ratmom.svg") 50% bottom / 18% auto no-repeat,
+    url("./assets/family-step2-2-redo/bdragon.svg") 72% bottom / 18% auto no-repeat,
+    url("./assets/family-step2-2-redo/rabbitama.svg") 92% bottom / 18% auto no-repeat;
+  border: 1px solid rgba(139,92,43,.16);
+  box-shadow: 0 18px 48px rgba(110,76,40,.10);
+}
+
+.manual-section-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin: 0 0 16px;
   font-family: "Noto Serif TC", "Songti TC", serif;
-  margin: 0 0 12px;
-  font-size: 26px;
-  color: var(--ink, #2d241d);
+  font-size: clamp(24px, 3vw, 34px);
+  letter-spacing: .12em;
 }
 
-.family-book-source ul {
+.manual-section-title::before,
+.manual-section-title::after {
+  content: "🍃";
+  font-size: 18px;
+}
+
+.manual-top-cards {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.manual-card {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(139,92,43,.18);
+  background: rgba(255,253,248,.94);
+  box-shadow: 0 12px 32px rgba(110,76,40,.08);
+}
+
+.manual-card-head {
+  min-height: 82px;
+  padding: 12px 14px 10px;
+  display: flex;
+  gap: 9px;
+  align-items: flex-start;
+  background: linear-gradient(180deg, rgba(255,244,226,.95), rgba(255,250,242,.88));
+}
+
+.manual-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  background: #fff8ec;
+  border: 1px solid rgba(139,92,43,.16);
+  font-size: 21px;
+  flex: 0 0 auto;
+}
+
+.manual-card-head strong {
+  display: block;
+  font-family: "Noto Serif TC", "Songti TC", serif;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.manual-card-head span {
+  display: block;
+  font-size: 14px;
+  margin-top: 2px;
+}
+
+.manual-portrait {
+  height: 220px;
+  background: var(--c);
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  padding: 8px 12px 0;
+}
+
+.manual-portrait img {
+  max-width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.manual-mini-info {
+  padding: 16px 16px 18px;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.manual-mini-info b {
+  display: inline-block;
+  min-width: 44px;
+}
+
+.color-dots,
+.icon-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 9px 0 12px;
+}
+
+.color-dots i {
+  width: 25px;
+  height: 25px;
+  border-radius: 999px;
+  display: block;
+  background: var(--dot);
+  border: 1px solid rgba(139,92,43,.13);
+}
+
+.icon-row span {
+  font-size: 26px;
+  line-height: 1;
+}
+
+.profile-grid-v2 {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.profile-card-v2 {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(139,92,43,.18);
+  background: rgba(255,253,248,.94);
+  box-shadow: 0 12px 32px rgba(110,76,40,.08);
+  scroll-margin-top: 120px;
+}
+
+.profile-card-v2 h3 {
+  margin: 0;
+  padding: 12px 16px;
+  font-family: "Noto Serif TC", "Songti TC", serif;
+  font-size: 21px;
+  border-bottom: 1px solid rgba(139,92,43,.14);
+  background: linear-gradient(180deg, rgba(255,244,226,.95), rgba(255,250,242,.88));
+}
+
+.profile-card-body {
+  padding: 16px 18px 18px;
+  font-size: 15px;
+  line-height: 1.72;
+}
+
+.profile-card-body b {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 2px;
+}
+
+.profile-card-body b:first-child {
+  margin-top: 0;
+}
+
+.profile-card-body p {
+  margin: 0;
+}
+
+.profile-card-body ul {
   margin: 0;
   padding-left: 1.2em;
-  color: var(--muted, #756657);
-  line-height: 1.9;
 }
 
-.family-index {
+.manual-bottom {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 18px;
-  margin: 0 0 28px;
+  grid-template-columns: 1.55fr .75fr 1fr;
+  gap: 16px;
 }
 
-.family-index-card {
-  display: block;
-  text-decoration: none;
-  color: var(--ink, #2d241d);
-  border-radius: 26px;
-  background: rgba(255,253,248,.92);
-  border: 1px solid rgba(139,92,43,.16);
-  box-shadow: 0 14px 38px rgba(110,76,40,.09);
+.manual-panel {
+  border-radius: 12px;
+  border: 1px solid rgba(139,92,43,.18);
+  background: rgba(255,253,248,.94);
+  box-shadow: 0 12px 32px rgba(110,76,40,.08);
   overflow: hidden;
-  transition: transform .18s ease, box-shadow .18s ease;
 }
 
-.family-index-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 24px 56px rgba(110,76,40,.14);
+.manual-panel h3 {
+  margin: 0;
+  padding: 14px 18px;
+  font-family: "Noto Serif TC", "Songti TC", serif;
+  font-size: 20px;
+  border-bottom: 1px solid rgba(139,92,43,.14);
+  background: linear-gradient(180deg, rgba(255,244,226,.95), rgba(255,250,242,.88));
 }
 
-.family-index-card img {
-  display: block;
-  width: 100%;
-  aspect-ratio: 4 / 4.7;
-  object-fit: cover;
-  background: #fff3df;
+.manual-panel-body {
+  padding: 16px 18px 18px;
+  line-height: 1.72;
+  font-size: 15px;
 }
 
-.family-index-card div {
-  padding: 16px;
-  text-align: center;
+.rules-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
 }
 
-.family-index-card strong {
+.rules-grid b {
   display: block;
   font-family: "Noto Serif TC", "Songti TC", serif;
-  font-size: 22px;
-  letter-spacing: .05em;
-  margin-bottom: 5px;
-}
-
-.family-index-card span {
-  color: var(--muted, #756657);
-  font-weight: 800;
-}
-
-.character-sheet {
-  scroll-margin-top: 120px;
-  display: grid;
-  grid-template-columns: minmax(260px, .78fr) minmax(0, 1.22fr);
-  gap: clamp(24px, 4vw, 48px);
-  align-items: stretch;
-  padding: clamp(26px, 4vw, 46px);
-  margin: 26px 0;
-  border-radius: 34px;
-  background: rgba(255,253,248,.92);
-  border: 1px solid rgba(139,92,43,.16);
-  box-shadow: var(--shadow, 0 18px 48px rgba(110,76,40,.11));
-}
-
-.character-visual {
-  border-radius: 28px;
-  overflow: hidden;
-  background: #fff3df;
-  min-height: 430px;
-}
-
-.character-visual img {
-  width: 100%;
-  height: 100%;
-  min-height: 430px;
-  object-fit: cover;
-  display: block;
-}
-
-.character-info {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.character-info .en {
-  color: var(--wood, #9b5b2a);
-  font-weight: 950;
-  letter-spacing: .14em;
-  text-transform: uppercase;
+  font-size: 17px;
   margin-bottom: 8px;
 }
 
-.character-info h2 {
-  font-family: "Noto Serif TC", "Songti TC", serif;
-  font-size: clamp(38px, 5vw, 64px);
-  margin: 0 0 14px;
-  color: var(--ink, #2d241d);
-  letter-spacing: .06em;
+.rules-grid ul {
+  margin: 0;
+  padding-left: 1.1em;
 }
 
-.character-role {
-  display: inline-flex;
-  width: fit-content;
-  border-radius: 999px;
-  background: #fff1db;
-  border: 1px solid rgba(139,92,43,.14);
-  padding: 9px 16px;
-  color: var(--wood, #9b5b2a);
-  font-weight: 950;
-  margin-bottom: 18px;
-}
-
-.character-info p {
-  font-size: 18px;
-  line-height: 1.9;
-  color: var(--muted, #756657);
-  margin: 0 0 18px;
-}
-
-.character-facts {
+.universe-item {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
-  margin: 4px 0 18px;
-}
-
-.fact {
-  border-radius: 20px;
-  background: #fff8ec;
-  border: 1px solid rgba(139,92,43,.13);
-  padding: 16px;
-}
-
-.fact b {
-  display: block;
-  color: var(--wood, #9b5b2a);
-  font-size: 14px;
-  letter-spacing: .08em;
-  margin-bottom: 8px;
-}
-
-.fact span {
-  color: var(--ink, #2d241d);
-  line-height: 1.65;
-  font-weight: 800;
-}
-
-.character-tags {
-  display: flex;
-  flex-wrap: wrap;
+  grid-template-columns: 34px 1fr;
   gap: 10px;
+  margin-bottom: 12px;
 }
 
-.character-tags span {
-  border-radius: 999px;
-  padding: 8px 13px;
-  font-weight: 900;
-  color: var(--ink, #2d241d);
-  border: 1px solid rgba(139,92,43,.13);
-  background: #fff1db;
+.brand-colors {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
 }
 
-@media (max-width: 1080px) {
-  .family-book-hero,
-  .character-sheet {
+.brand-colors span {
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  background: var(--bc);
+  display: block;
+}
+
+@media (max-width: 1180px) {
+  .manual-hero,
+  .manual-bottom {
     grid-template-columns: 1fr;
   }
 
-  .family-index {
-    grid-template-columns: repeat(2, 1fr);
+  .manual-top-cards,
+  .profile-grid-v2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .character-visual img,
-  .character-visual {
-    min-height: 360px;
+  .rules-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
-@media (max-width: 620px) {
-  .family-index {
+@media (max-width: 680px) {
+  .manual-top-cards,
+  .profile-grid-v2,
+  .rules-grid {
     grid-template-columns: 1fr;
   }
 
-  .character-facts {
-    grid-template-columns: 1fr;
+  .manual-family-art {
+    min-height: 260px;
   }
 }
