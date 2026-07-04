@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="320" viewBox="0 0 320 320">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#F5ECE3"/><stop offset="100%" stop-color="#FFF8F2"/></linearGradient></defs>
+  <rect width="320" height="320" rx="40" fill="url(#bg)"/>
+  <circle cx="160" cy="140" r="88" fill="#F3D6C7"/>
+  <ellipse cx="160" cy="270" rx="76" ry="54" fill="#D9C6B5"/>
+  <circle cx="107" cy="78" r="18" fill="#E7DAD0" stroke="#6A5D57" stroke-width="4"/>
+  <circle cx="213" cy="78" r="18" fill="#E7DAD0" stroke="#6A5D57" stroke-width="4"/>
+  <path d="M98 108c8-35 34-57 62-57s57 20 67 55c-10-6-21-11-34-14-17 18-43 30-78 34-6-5-11-11-17-18z" fill="#3F3A3A"/>
+  <path d="M114 120c12-16 28-26 46-26 22 0 41 12 53 31v36c0 35-24 58-53 58-30 0-54-23-54-58z" fill="#F7E2D6"/>
+  <ellipse cx="122" cy="153" rx="12" ry="14" fill="#F7E2D6"/>
+  <ellipse cx="198" cy="153" rx="12" ry="14" fill="#F7E2D6"/>
+  <path d="M123 141h28a10 10 0 0 1 10 10v18a10 10 0 0 1-10 10h-28a10 10 0 0 1-10-10v-18a10 10 0 0 1 10-10zm46 0h28a10 10 0 0 1 10 10v18a10 10 0 0 1-10 10h-28a10 10 0 0 1-10-10v-18a10 10 0 0 1 10-10z" fill="none" stroke="#2B2B2B" stroke-width="5"/>
+  <path d="M153 158h14" stroke="#2B2B2B" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="137" cy="158" r="4" fill="#283128"/><circle cx="183" cy="158" r="4" fill="#283128"/>
+  <path d="M136 141c8-5 18-5 26-1" stroke="#6C4C43" stroke-width="4" stroke-linecap="round"/>
+  <path d="M179 140c8-4 18-3 25 2" stroke="#6C4C43" stroke-width="4" stroke-linecap="round"/>
+  <path d="M153 170c2 5 5 9 7 14" stroke="#D0A18A" stroke-width="4" stroke-linecap="round"/>
+  <path d="M145 191c8 7 22 8 31 1" stroke="#B06E64" stroke-width="4" stroke-linecap="round" fill="none"/>
+  <path d="M118 108c10 12 25 18 42 18 28 0 44-16 54-30" stroke="#3F3A3A" stroke-width="9" stroke-linecap="round" fill="none"/>
+</svg>
