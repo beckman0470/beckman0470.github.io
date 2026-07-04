@@ -217,3 +217,23 @@ a {
     grid-template-columns: 1fr;
   }
 }
+
+
+/* Shared Header/Footer Safety: homepage header/footer used across all pages */
+.site-header {
+  overflow-x: clip;
+}
+.header-inner {
+  max-width: 1280px;
+}
+.nav {
+  flex-wrap: wrap;
+  min-width: 0;
+}
+.nav a {
+  white-space: nowrap;
+}
+body:not(:has(.home)) .footer-cta {
+  width: min(1180px, calc(100% - 48px));
+  margin: 56px auto 64px;
+}
