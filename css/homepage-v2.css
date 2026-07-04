@@ -1,0 +1,230 @@
+/* Step 1A｜Homepage
+   Prototype image locked: 2026-07-04
+*/
+
+:root {
+  --cdj-bg: #fff7ea;
+  --cdj-paper: #fffdf8;
+  --cdj-wood: #9b5b2a;
+  --cdj-wood-dark: #6f3f1d;
+  --cdj-ink: #2d241d;
+  --cdj-muted: #756657;
+  --cdj-line: rgba(139, 92, 43, .18);
+  --cdj-shadow: 0 20px 58px rgba(110, 76, 40, .12);
+}
+
+body {
+  background: var(--cdj-bg) !important;
+  color: var(--cdj-ink);
+}
+
+.site-header {
+  background: rgba(255, 247, 234, .96) !important;
+  border-top: 0 !important;
+  border-bottom: 1px solid var(--cdj-line) !important;
+  box-shadow: 0 8px 28px rgba(110, 76, 40, .05) !important;
+}
+
+.site-header .nav,
+.nav {
+  min-height: 88px !important;
+}
+
+.logo-mark {
+  width: 64px !important;
+  height: 64px !important;
+  background: url("../assets/homepage-step1a/logo-chickendad.png") center/cover no-repeat !important;
+  border: 1px solid var(--cdj-line) !important;
+  border-radius: 50% !important;
+  box-shadow: 0 10px 24px rgba(110, 76, 40, .12) !important;
+  font-size: 0 !important;
+}
+
+.logo-text strong {
+  font-family: "Noto Serif TC", "Songti TC", serif !important;
+  font-size: clamp(22px, 1.9vw, 30px) !important;
+  letter-spacing: .03em !important;
+  color: var(--cdj-ink) !important;
+}
+
+.logo-text span {
+  color: var(--cdj-muted) !important;
+  font-size: 14px !important;
+}
+
+.nav-links {
+  gap: clamp(14px, 1.4vw, 24px) !important;
+  font-size: clamp(14px, 1vw, 17px) !important;
+}
+
+.nav-links a {
+  color: var(--cdj-ink) !important;
+}
+
+.nav-links a:hover,
+.nav-links a.active,
+.nav-links a[aria-current="page"] {
+  color: var(--cdj-wood) !important;
+}
+
+.nav-links a::after {
+  background: var(--cdj-wood) !important;
+}
+
+.homepage-step1a {
+  background:
+    radial-gradient(circle at 12% 0%, rgba(255, 226, 177, .35), transparent 26rem),
+    radial-gradient(circle at 90% 10%, rgba(231, 203, 158, .25), transparent 28rem),
+    var(--cdj-bg);
+}
+
+.step1a-hero {
+  width: min(1480px, calc(100% - 40px));
+  margin: 30px auto 28px;
+  position: relative;
+  border-radius: 34px;
+  overflow: hidden;
+  background: var(--cdj-paper);
+  border: 1px solid var(--cdj-line);
+  box-shadow: var(--cdj-shadow);
+}
+
+.step1a-hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.step1a-hero-overlay {
+  position: absolute;
+  left: clamp(28px, 5vw, 72px);
+  top: clamp(32px, 7vw, 92px);
+  max-width: min(430px, 38vw);
+  color: var(--cdj-ink);
+  pointer-events: none;
+}
+
+.step1a-belief {
+  font-family: "Noto Serif TC", "Songti TC", serif;
+  font-size: clamp(26px, 2.6vw, 46px);
+  line-height: 1.45;
+  font-weight: 900;
+  letter-spacing: .06em;
+  margin: 0 0 28px;
+}
+
+.step1a-poem {
+  font-family: "Noto Serif TC", "Songti TC", serif;
+  font-size: clamp(20px, 1.8vw, 32px);
+  line-height: 1.9;
+  letter-spacing: .12em;
+  color: #5b371f;
+  font-style: italic;
+  margin: 0;
+}
+
+.step1a-sections {
+  width: min(1480px, calc(100% - 40px));
+  margin: 0 auto 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.step1a-panel {
+  background: rgba(255,253,248,.82);
+  border: 1px solid var(--cdj-line);
+  border-radius: 28px;
+  box-shadow: var(--cdj-shadow);
+  padding: 26px;
+}
+
+.step1a-panel h2 {
+  font-family: "Noto Serif TC", "Songti TC", serif;
+  font-size: clamp(28px, 2.4vw, 40px);
+  margin: 0 0 18px;
+  letter-spacing: .08em;
+}
+
+.step1a-story-list {
+  display: grid;
+  gap: 14px;
+}
+
+.step1a-story {
+  display: block;
+  padding: 18px 20px;
+  border-radius: 20px;
+  background: var(--cdj-paper);
+  border: 1px solid rgba(139,92,43,.14);
+  text-decoration: none;
+  color: var(--cdj-ink);
+}
+
+.step1a-story strong {
+  display: block;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.step1a-story span {
+  display: block;
+  margin-top: 8px;
+  color: var(--cdj-muted);
+  font-size: 14px;
+}
+
+.step1a-family-note {
+  font-size: 18px;
+  line-height: 1.8;
+  color: var(--cdj-muted);
+  margin: 0 0 20px;
+}
+
+.step1a-link,
+.step1a-footer-cta a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 22px;
+  border-radius: 999px;
+  background: var(--cdj-wood);
+  color: #fff !important;
+  text-decoration: none;
+  font-weight: 900;
+}
+
+.step1a-footer-cta {
+  width: min(1480px, calc(100% - 40px));
+  margin: 0 auto 56px;
+  border-radius: 26px;
+  background: rgba(255,253,248,.86);
+  border: 1px solid var(--cdj-line);
+  box-shadow: var(--cdj-shadow);
+  padding: 24px 28px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 20px;
+  align-items: center;
+}
+
+.step1a-footer-cta strong {
+  font-family: "Noto Serif TC", "Songti TC", serif;
+  font-size: 24px;
+}
+
+@media (max-width: 900px) {
+  .step1a-hero-overlay {
+    position: static;
+    max-width: none;
+    padding: 24px;
+    background: rgba(255,253,248,.86);
+  }
+
+  .step1a-sections,
+  .step1a-footer-cta {
+    grid-template-columns: 1fr;
+  }
+}
