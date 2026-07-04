@@ -3,15 +3,18 @@
 
 import { createStoryCard } from "../components/story-card.js";
 
+const DEFAULT_BASE_PATH = ".";
+
 export async function renderStories(options = {}) {
   const {
     mount = "#stories-grid",
     status = "#stories-status",
-    basePath = "."
+    basePath = DEFAULT_BASE_PATH
   } = options;
 
   const mountEl = document.querySelector(mount);
   const statusEl = document.querySelector(status);
+
   if (!mountEl) return;
 
   setStatus(statusEl, "正在整理故事……");
@@ -44,6 +47,7 @@ export async function renderStories(options = {}) {
 async function loadWorks(basePath) {
   const index = await loadJson(`${basePath}/content/content-index.json`);
   const paths = Array.isArray(index.works) ? index.works : [];
+
   return Promise.all(paths.map(path => loadJson(`${basePath}/${path}`)));
 }
 
