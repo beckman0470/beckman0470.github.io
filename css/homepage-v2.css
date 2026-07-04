@@ -299,3 +299,157 @@ a {
     grid-template-columns: 1fr;
   }
 }
+
+
+/* Step 2-2｜Family Page */
+.family-v2 {
+  background:
+    radial-gradient(circle at 12% 0%, rgba(255, 226, 177, .32), transparent 28rem),
+    radial-gradient(circle at 90% 8%, rgba(232, 207, 164, .22), transparent 30rem),
+    var(--cream, #fff8ec);
+  padding: 42px 0 72px;
+}
+
+.family-v2-wrap {
+  width: min(1280px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.family-v2-hero {
+  border-radius: 32px;
+  background: rgba(255,253,248,.88);
+  border: 1px solid var(--line, rgba(139,92,43,.18));
+  box-shadow: var(--shadow, 0 18px 48px rgba(110,76,40,.11));
+  padding: clamp(32px, 5vw, 64px);
+  margin-bottom: 28px;
+}
+
+.family-v2-kicker {
+  color: var(--wood, #9b5b2a);
+  font-weight: 950;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  font-size: 13px;
+  margin-bottom: 14px;
+}
+
+.family-v2-hero h1 {
+  font-family: "Noto Serif TC", "Songti TC", serif;
+  font-size: clamp(42px, 6vw, 78px);
+  line-height: 1.08;
+  letter-spacing: .04em;
+  margin: 0 0 20px;
+  color: var(--ink, #2d241d);
+}
+
+.family-v2-hero p {
+  max-width: 760px;
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.9;
+  color: var(--muted, #756657);
+}
+
+.family-v2-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  margin-bottom: 34px;
+}
+
+.family-v2-card {
+  display: block;
+  overflow: hidden;
+  border-radius: 26px;
+  background: rgba(255,253,248,.90);
+  border: 1px solid var(--line, rgba(139,92,43,.18));
+  box-shadow: var(--shadow, 0 18px 48px rgba(110,76,40,.11));
+  color: var(--ink, #2d241d);
+  text-decoration: none;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.family-v2-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 26px 64px rgba(110,76,40,.16);
+}
+
+.family-v2-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1.16;
+  object-fit: cover;
+  background: #fff2df;
+}
+
+.family-v2-card-body {
+  padding: 18px 18px 22px;
+  text-align: center;
+}
+
+.family-v2-card h2 {
+  font-family: "Noto Serif TC", "Songti TC", serif;
+  font-size: 26px;
+  margin: 0 0 8px;
+  letter-spacing: .06em;
+}
+
+.family-v2-card p {
+  margin: 0;
+  color: var(--muted, #756657);
+  line-height: 1.65;
+  font-size: 15px;
+}
+
+.family-v2-profile {
+  border-radius: 30px;
+  background: rgba(255,253,248,.86);
+  border: 1px solid var(--line, rgba(139,92,43,.18));
+  box-shadow: var(--shadow, 0 18px 48px rgba(110,76,40,.11));
+  padding: clamp(28px, 4vw, 48px);
+  margin-top: 22px;
+  scroll-margin-top: 120px;
+}
+
+.family-v2-profile h2 {
+  font-family: "Noto Serif TC", "Songti TC", serif;
+  font-size: clamp(32px, 4vw, 52px);
+  margin: 0 0 16px;
+  letter-spacing: .06em;
+}
+
+.family-v2-profile p {
+  margin: 0;
+  font-size: 19px;
+  line-height: 1.9;
+  color: var(--muted, #756657);
+}
+
+.family-v2-tags {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 18px;
+}
+
+.family-v2-tags span {
+  border-radius: 999px;
+  background: #fff1db;
+  border: 1px solid rgba(139,92,43,.14);
+  padding: 8px 13px;
+  color: var(--wood, #9b5b2a);
+  font-size: 14px;
+  font-weight: 900;
+}
+
+@media (max-width: 1100px) {
+  .family-v2-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 620px) {
+  .family-v2-grid {
+    grid-template-columns: 1fr;
+  }
+}
