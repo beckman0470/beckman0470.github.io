@@ -1,0 +1,114 @@
+{
+  "title": "Chicken Dad Universe Character Bible",
+  "version": "V1.0.1",
+  "status": "Approved",
+  "last_updated": "2026-07-04",
+  "source": [
+    "V7 full site: articles/family.html",
+    "V7 full site: data/characters.json",
+    "V7 full site: content/family/*.json",
+    "2026-07-04 Character Bible V1.0.1 correction: RatMom wears glasses"
+  ],
+  "rules": [
+    "Family、About、首頁角色介紹、插圖、VOCUS 圖都必須以本白皮書為唯一人物資料來源。",
+    "不得裁切 Hero 當作 Family 角色圖。",
+    "不得自行新增、改寫人物星座、興趣、個性、外觀或代表設定。",
+    "鼠媽媽必須戴眼鏡，不可寫成不戴眼鏡。"
+  ],
+  "characters": [
+    {
+      "id": "chickendad",
+      "anchor": "dad",
+      "name_en": "ChickenDad",
+      "name_zh": "雞爸爸",
+      "zodiac": "天蠍座",
+      "role": "爸爸／生活研究者／創作者",
+      "keywords": [
+        "閱讀",
+        "陪伴",
+        "分享",
+        "驗證",
+        "分析"
+      ],
+      "summary": "喜歡蒐集、驗證、分析網路相關資料。理解之後，會先落實到生活，再把有趣或有幫助的部分分享給大家。",
+      "appearance": "黑框眼鏡、一點山羊鬍、薄肌型身材，穿衣顯瘦、脫衣有肉。",
+      "superpower": "把複雜的事情整理成大家都看得懂的故事。",
+      "color": "#A67C52",
+      "url": "./stories/chickendad.html"
+    },
+    {
+      "id": "ratmom",
+      "anchor": "mom",
+      "name_en": "RatMom",
+      "name_zh": "鼠媽媽",
+      "zodiac": "金牛座",
+      "role": "媽媽／家庭核心",
+      "keywords": [
+        "溫柔",
+        "細心",
+        "安定"
+      ],
+      "summary": "家裡最穩定的人。不一定話最多，但總是大家最安心的依靠。",
+      "appearance": "耳下短髮，後面不捲，戴眼鏡，奶茶色系穿搭。",
+      "superpower": "讓家變得很安心。",
+      "color": "#D8C2A8",
+      "url": "./stories/mouse-mom.html"
+    },
+    {
+      "id": "dodo",
+      "anchor": "dodo",
+      "name_en": "DoDo",
+      "name_zh": "鼠姊姊",
+      "zodiac": "天秤座",
+      "role": "姐姐／成長中的孩子",
+      "keywords": [
+        "活潑好動",
+        "愛漂亮",
+        "愛撒嬌",
+        "唱歌跳舞"
+      ],
+      "summary": "活潑好動、愛漂亮、愛撒嬌。喜歡公主打扮，現在喜歡長髮的小美人魚，也愛唱歌跳舞，有點小聒噪。",
+      "appearance": "黑色直髮、透明框眼鏡固定。泳鏡不是固定配件，只在游泳故事出現。",
+      "superpower": "把平凡的一天變得很熱鬧。",
+      "color": "#8DBFD8",
+      "url": "./stories/mouse-sister.html"
+    },
+    {
+      "id": "bdragon",
+      "anchor": "dragon",
+      "name_en": "B.Dragon",
+      "name_zh": "龍弟弟",
+      "zodiac": "天蠍座",
+      "role": "弟弟／一歲多的小男孩",
+      "keywords": [
+        "愛笑",
+        "聰明",
+        "聲音宏亮",
+        "車車"
+      ],
+      "summary": "愛笑、聰明、聲音很宏亮。喜歡車車，也愛跟陌生人打招呼，每一天都像新的探險。",
+      "appearance": "頭髮少少短短，不是光頭。綠色系穿搭，小男孩感。",
+      "superpower": "讓陌生人也忍不住微笑。",
+      "color": "#8FBF72",
+      "url": "./stories/dragon-brother.html"
+    },
+    {
+      "id": "rabbitama",
+      "anchor": "grandma",
+      "name_en": "RabbitAma",
+      "name_zh": "兔阿嬤",
+      "zodiac": "雙魚座",
+      "role": "阿嬤／家庭智慧",
+      "keywords": [
+        "溫暖",
+        "生活智慧",
+        "會照顧人"
+      ],
+      "summary": "溫暖、生活智慧、會照顧人。她提醒我們，幸福往往藏在最平凡的日子裡。",
+      "appearance": "不戴眼鏡，大眼睛、明顯雙眼皮，咖啡色頭髮，紫色系穿搭，慈祥溫暖。",
+      "superpower": "把生活智慧變成日常。",
+      "color": "#B7A3C9",
+      "url": "./stories/rabbit-grandma.html"
+    }
+  ]
+}
