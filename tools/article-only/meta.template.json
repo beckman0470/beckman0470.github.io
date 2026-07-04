@@ -1,0 +1,22 @@
+{
+  "id": "CDJ-NEW",
+  "title": "請填入文章標題",
+  "slug": "please-fill-slug",
+  "series": "幸福點滴",
+  "category": "幸福點滴",
+  "source": "Vocus",
+  "status": "published",
+  "published": "2026-07-04",
+  "updated": "2026-07-04",
+  "readingTime": 5,
+  "subtitle": "請填入副標題",
+  "signature": "請填入文章金句",
+  "people": [
+    "雞爸爸"
+  ],
+  "relationship": [],
+  "tags": [
+    "幸福點滴"
+  ],
+  "related": []
+}
