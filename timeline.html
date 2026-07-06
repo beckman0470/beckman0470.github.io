@@ -1,91 +1,192 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>時間軸｜雞爸爸生活研究室</title>
-<meta name="theme-color" content="#263328">
-<style>
-:root{--paper:#F8F6F1;--surface:#FFFDF8;--ink:#263328;--muted:#687463;--brown:#A67C52;--sage:#8FAF8B;--blue:#8DBFD8;--line:#E6DED1;--shadow:0 24px 60px rgba(70,55,35,.12);--serif:Georgia,"Times New Roman",serif;--sans:-apple-system,BlinkMacSystemFont,"Noto Sans TC","Microsoft JhengHei",Arial,sans-serif}
-*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75}a{text-decoration:none;color:inherit}.container{width:min(1160px,calc(100% - 40px));margin:auto}.muted{color:var(--muted)}.kicker{font-size:13px;font-weight:900;letter-spacing:.16em;text-transform:uppercase;color:var(--brown)}
-.site-header{position:sticky;top:0;z-index:20;background:rgba(255,253,248,.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}.nav{height:82px;display:flex;align-items:center;justify-content:space-between;gap:24px}.logo{display:flex;align-items:center;gap:14px}.logo-mark{width:48px;height:48px;border-radius:50%;background:var(--surface);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;font-size:26px}.logo-text strong{display:block;font-size:21px;font-weight:950;line-height:1.2}.logo-text span{display:block;color:var(--muted);font-size:13px}.nav-links{display:flex;gap:22px;font-weight:850}.nav-links a:hover,.nav-links a.active{color:var(--brown)}
-.page-hero{padding:82px 0 48px;background:linear-gradient(180deg,#FFFDF8 0%,#F8F6F1 100%)}.page-hero h1{font-family:var(--serif);font-size:clamp(52px,7vw,92px);line-height:1.05;letter-spacing:-.04em;margin:18px 0}.lead{font-size:22px;max-width:780px;color:#344238}
-.timeline-wrap{padding:58px 0}.year-block{margin-bottom:52px}.year-title{font-family:var(--serif);font-size:56px;line-height:1;margin:0 0 22px;color:var(--ink)}.month-block{background:var(--surface);border:1px solid var(--line);border-radius:32px;box-shadow:var(--shadow);margin-bottom:22px;overflow:hidden}.month-head{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:22px 28px;background:#FFFDF8;border-bottom:1px solid var(--line)}.month-head h2{margin:0;font-size:28px}.month-count{color:var(--muted);font-weight:850}.story-list{position:relative;padding:8px 28px 24px}.story-list:before{content:"";position:absolute;left:39px;top:0;bottom:0;width:2px;background:#E6DED1}.timeline-item{position:relative;display:grid;grid-template-columns:84px 1fr auto;gap:20px;align-items:center;padding:18px 0 18px 32px;border-bottom:1px solid #EEE6D9}.timeline-item:last-child{border-bottom:0}.timeline-item:before{content:"";position:absolute;left:4px;top:31px;width:14px;height:14px;border-radius:50%;background:var(--brown);box-shadow:0 0 0 6px #FFFDF8}.day{font-family:var(--serif);font-size:28px;font-weight:700;color:var(--brown)}.timeline-item h3{margin:0;font-size:22px;line-height:1.35}.chip{display:inline-flex;padding:5px 11px;border-radius:999px;background:#EEE6D9;color:var(--brown);font-size:13px;font-weight:950;margin-bottom:6px}.readmore{font-weight:950;color:var(--brown)}.empty{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:28px;color:var(--muted)}
-.site-footer{margin-top:50px;background:#243128;color:#FFFDF8}.footer-grid{display:grid;grid-template-columns:1.4fr .8fr .8fr .8fr;gap:32px;padding:54px 0}.site-footer h3,.site-footer h4{margin-top:0}.site-footer p,.site-footer a{color:rgba(255,253,248,.75)}.footer-bottom{border-top:1px solid rgba(255,255,255,.14);padding:18px 0;color:rgba(255,253,248,.6);font-size:14px}
-@media(max-width:980px){.nav-links{display:none}.footer-grid{grid-template-columns:1fr 1fr}.timeline-item{grid-template-columns:1fr}.story-list:before,.timeline-item:before{display:none}.timeline-item{padding-left:0}}@media(max-width:620px){.container{width:min(100% - 28px,1160px)}.logo-mark{width:42px;height:42px}.logo-text strong{font-size:18px}.page-hero h1{font-size:50px}.lead{font-size:18px}.year-title{font-size:42px}.month-head{display:block;padding:20px}.story-list{padding:6px 20px 20px}.footer-grid{grid-template-columns:1fr}}
+  <!-- CDJ_ENTRY_STATIC_V2_20260706: no fetch, inline-css, 24 works, AI=2, collapsible timeline -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>時間軸｜雞爸爸生活研究室</title>
+  <meta name="description" content="雞爸爸生活研究室依月份收放整理的創作時間軸。">
+  <meta name="theme-color" content="#fff8ec">
+  <link rel="canonical" href="https://beckman0470.github.io/timeline.html">
+  <link rel="stylesheet" href="css/homepage-v2.css">
+  <link rel="stylesheet" href="css/content-archive.css">
+  <style>
+/* CDJ archive static V2: inline critical styles + file copy. */
+.archive-page { background: #fff8ec; color: #17120d; }
+.archive-container { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
+.archive-hero { padding: 70px 0 36px; }
+.archive-kicker { color: #8a5a22; font-size: 12px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; margin-bottom: 8px; }
+.archive-hero h1, .archive-section h1 { font-size: clamp(44px, 7vw, 76px); line-height: .95; margin: 0 0 18px; letter-spacing: -0.06em; }
+.archive-hero p { max-width: 720px; line-height: 1.85; color: #605448; }
+.archive-collection-grid { display:grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 16px; margin-top: 28px; }
+.archive-collection-card, .archive-series-card, .archive-work-card, .archive-small-card, .archive-timeline-item { color: inherit; text-decoration: none; }
+.archive-collection-card { background:#fffaf1; border:1px solid #e7d7bd; border-radius:18px; padding:20px; box-shadow:0 10px 28px rgba(96,65,28,.06); transition:.2s ease; }
+.archive-collection-card:hover, .archive-work-card:hover, .archive-small-card:hover, .archive-timeline-item:hover { transform: translateY(-2px); box-shadow:0 16px 32px rgba(96,65,28,.10); }
+.archive-collection-card strong { display:block; font-size:18px; margin-bottom:8px; }
+.archive-collection-card p { font-size:14px; line-height:1.65; min-height:48px; color:#675a4d; margin:0 0 12px; }
+.archive-collection-card small, .archive-month-count { color:#9b6a2f; font-weight:800; }
+.archive-section { padding: 34px 0 74px; }
+.archive-section-head { display:flex; justify-content:space-between; gap:24px; align-items:end; margin-bottom:24px; }
+.archive-section-head h2, .archive-series-card h2 { font-size: clamp(28px, 4vw, 44px); margin:0 0 8px; letter-spacing:-.04em; }
+.archive-section-head p, .archive-status { color:#62564c; line-height:1.7; margin:0; }
+.archive-work-grid { display:grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap:20px; }
+.archive-work-card { display:flex; min-height:360px; flex-direction:column; background:#fffdf7; border:1px solid #e9dac3; border-radius:18px; padding:22px; box-shadow:0 10px 24px rgba(75,51,21,.05); transition:.2s ease; }
+.archive-card-top { display:flex; justify-content:space-between; align-items:center; gap:8px; margin-bottom:14px; flex-wrap:wrap; }
+.archive-pill, .archive-mini-pill { display:inline-flex; align-items:center; border-radius:999px; border:1px solid #ead8bd; background:#f7ead5; color:#8a5a22; font-weight:800; }
+.archive-pill { font-size:12px; padding:5px 10px; }
+.archive-mini-pill { font-size:11px; padding:4px 8px; margin: 0 5px 6px 0; }
+.archive-work-card h3 { font-size:22px; line-height:1.35; margin:0 0 12px; letter-spacing:-.03em; }
+.archive-work-card p { color:#61564c; line-height:1.72; margin:0 0 12px; }
+.archive-quote { border-left:4px solid #d9a15f; margin:6px 0 16px; padding:6px 0 6px 14px; color:#3c322a; line-height:1.75; font-weight:650; }
+.archive-card-bottom { margin-top:auto; color:#8d7864; font-size:13px; font-weight:700; padding-top:12px; }
+.archive-tag-row, .archive-people-row { margin-top:8px; }
+.archive-series-wrap { display:grid; gap:26px; }
+.archive-series-card { background:#fffdf7; border:1px solid #e9dac3; border-radius:24px; padding:26px; box-shadow:0 10px 28px rgba(96,65,28,.06); }
+.archive-series-card-head { display:grid; grid-template-columns: 1fr auto; gap:20px; align-items:start; margin-bottom:18px; }
+.archive-series-count { font-size:34px; font-weight:900; color:#8a5a22; text-align:right; }
+.archive-small-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; margin-top:18px; }
+.archive-small-card { display:block; background:#fff8ec; border:1px solid #ead8bd; border-radius:16px; padding:16px; }
+.archive-small-card span { display:block; color:#8d7864; font-size:12px; font-weight:800; margin-bottom:6px; }
+.archive-small-card strong { display:block; line-height:1.45; margin-bottom:8px; }
+.archive-small-card p { color:#66584c; line-height:1.65; font-size:14px; margin:0; }
+.archive-topic-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; }
+.archive-topic-card { background:#fffdf7; border:1px dashed #e3cdaa; border-radius:18px; padding:18px; }
+.archive-topic-card h3 { margin:0 0 8px; }
+.archive-timeline-year { display:grid; gap:18px; }
+.archive-year-title { font-size:46px; margin:0 0 4px; letter-spacing:-.05em; }
+.archive-month-block { background:#fffdf7; border:1px solid #e9dac3; border-radius:22px; box-shadow:0 10px 24px rgba(75,51,21,.05); overflow:hidden; }
+.archive-month-block summary { cursor:pointer; list-style:none; }
+.archive-month-block summary::-webkit-details-marker { display:none; }
+.archive-month-head { display:flex; justify-content:space-between; align-items:center; gap:14px; padding:22px 24px; }
+.archive-month-head h2 { margin:0; font-size:28px; letter-spacing:-.04em; }
+.archive-month-head::after { content:'收合 / 展開'; color:#9b6a2f; font-size:12px; font-weight:800; border:1px solid #ead8bd; border-radius:999px; padding:6px 10px; }
+.archive-timeline-list { display:grid; gap:12px; padding:0 24px 24px; }
+.archive-timeline-item { display:grid; grid-template-columns:78px 1fr; gap:18px; align-items:start; background:#fff8ec; border:1px solid #ead8bd; border-radius:16px; padding:16px; transition:.2s ease; }
+.archive-timeline-date { font-weight:900; color:#8a5a22; }
+.archive-timeline-item h3 { margin:8px 0 6px; line-height:1.42; }
+.archive-timeline-item p { margin:0; color:#66584c; line-height:1.7; }
+.archive-version-note { margin-top:30px; color:#9b8064; font-size:12px; text-align:center; }
+@media (max-width: 920px){ .archive-collection-grid,.archive-work-grid,.archive-small-grid,.archive-topic-grid{ grid-template-columns:1fr 1fr; } }
+@media (max-width: 640px){ .archive-container{ width:min(100% - 28px,1120px);} .archive-collection-grid,.archive-work-grid,.archive-small-grid,.archive-topic-grid{ grid-template-columns:1fr; } .archive-section-head,.archive-series-card-head,.archive-month-head{ display:block; } .archive-timeline-item{ grid-template-columns:1fr; gap:6px; } .archive-work-card{ min-height:auto; } }
 </style>
-<link rel="stylesheet" href="./css/visual-polish.css">
-<meta name="description" content="雞爸爸生活研究室的故事時間軸，依日期整理家庭、健康、棒球、AI 與生活故事。">
-<link rel="canonical" href="https://beckman0470.github.io/timeline.html">
-<meta property="og:site_name" content="Chicken Dad Journal">
-<meta property="og:type" content="article">
-<meta property="og:title" content="時間軸｜雞爸爸生活研究室">
-<meta property="og:description" content="雞爸爸生活研究室的故事時間軸，依日期整理家庭、健康、棒球、AI 與生活故事。">
-<meta property="og:url" content="https://beckman0470.github.io/timeline.html">
-<meta property="og:image" content="https://beckman0470.github.io/assets/og/og-image.svg">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="時間軸｜雞爸爸生活研究室">
-<meta name="twitter:description" content="雞爸爸生活研究室的故事時間軸，依日期整理家庭、健康、棒球、AI 與生活故事。">
-<meta name="twitter:image" content="https://beckman0470.github.io/assets/og/og-image.svg">
-<meta name="theme-color" content="#263328">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "時間軸｜雞爸爸生活研究室", "description": "雞爸爸生活研究室的故事時間軸，依日期整理家庭、健康、棒球、AI 與生活故事。", "url": "https://beckman0470.github.io/timeline.html", "isPartOf": {"@type": "WebSite", "name": "雞爸爸生活研究室", "url": "https://beckman0470.github.io/"}}</script>
-<link rel="stylesheet" href="./css/global-layout-sync.css">
-<link rel="stylesheet" href="./css/v7-0-2-home-hero.css">
-<link rel="stylesheet" href="css/homepage-v2.css">
 </head>
-<body>
+<body class="archive-page timeline-archive" data-static-version="entry-static-v2-20260706">
 <header class="site-header">
-    <div class="header-inner">
-      <a class="brand" href="index.html" aria-label="雞爸爸生活研究室首頁">
-        <img src="assets/step1a-redo/logo.png" alt="雞爸爸生活研究室 Logo">
-        <span>
-          <strong>雞爸爸生活研究室</strong>
-          <span>Chicken Dad Journal</span>
-        </span>
-      </a>
-
-      <nav class="nav" aria-label="主要導覽">
-        <a href="index.html">首頁</a>
-        <a href="articles.html">故事</a>
-        <a href="series.html">系列</a>
-        <a class="active" href="timeline.html">時間軸</a>
-        <a href="knowledge.html">知識圖譜</a>
-        <a href="search.html">搜尋</a>
-        <a href="tags.html">標籤</a>
-        <a href="family.html">我們一家</a>
-        <a href="about.html">關於</a>
-      </nav>
-    </div>
-  </header>
-
+  <div class="header-inner">
+    <a class="brand" href="index.html" aria-label="雞爸爸生活研究室首頁">
+      <img src="assets/step1a-redo/logo.png" alt="雞爸爸生活研究室 Logo">
+      <span>
+        <strong>雞爸爸生活研究室</strong>
+        <span>Chicken Dad Journal</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="主要導覽">
+      <a  href="index.html">首頁</a>
+      <a  href="articles.html">故事</a>
+      <a  href="series.html">系列</a>
+      <a class="active" href="timeline.html">時間軸</a>
+      <a href="knowledge.html">知識圖譜</a>
+      <a href="search.html">搜尋</a>
+      <a href="tags.html">標籤</a>
+      <a href="family.html">我們一家</a>
+      <a href="about.html">關於</a>
+    </nav>
+  </div>
+</header>
 <main>
-<section class="page-hero">
-  <div class="container">
-    <div class="kicker">Timeline</div>
-    <h1>故事時間軸</h1>
-    <p class="lead">把每一篇文章放回時間裡，就會看見一個家、一個人、一些研究與熱愛，是怎麼慢慢長出來的。</p>
-  </div>
-</section>
 
-<section class="timeline-wrap">
-  <div class="container" id="timeline-root">
-    <div class="empty">讀取時間軸中……</div>
-  </div>
-</section>
+<section class="archive-hero"><div class="archive-container"><div class="archive-kicker">Timeline</div><h1>時間軸</h1><p>依月份整理雞爸爸生活研究室的作品。每個月份都可以展開或收合，方便快速回顧一段時間的創作軌跡。</p></div></section>
+<section class="archive-section"><div class="archive-container"><section class="archive-timeline-year"><h2 class="archive-year-title">2026</h2><details class="archive-month-block" open>
+          <summary class="archive-month-head"><h2>7 月</h2><span class="archive-month-count">3 篇作品</span></summary>
+          <div class="archive-timeline-list"><a class="archive-timeline-item" href="articles/rap-peak-2026-dragon-brother.html">
+          <div class="archive-timeline-date">07/03</div>
+          <div><span class="archive-pill">幸福點滴</span><h3>說唱巔峰對決2026：炸場首推龍弟弟</h3><p>孩子聽音樂不需要懂歌詞，只要旋律一響起，身體就會先替快樂找到答案。</p></div>
+        </a><a class="archive-timeline-item" href="articles/girls-let-us-watch-clouds.html">
+          <div class="archive-timeline-date">07/02</div>
+          <div><span class="archive-pill">幸福點滴</span><h3>女孩，讓我們看雲去</h3><p>夫妻偶爾把彼此排在第一，不是自私，而是在替整個家庭充電。</p></div>
+        </a><a class="archive-timeline-item" href="articles/temperature-of-now.html">
+          <div class="archive-timeline-date">07/01</div>
+          <div><span class="archive-pill">幸福點滴</span><h3>當下的溫度，就是幸福的定義</h3><p>幸福大概就是這樣，不驚天動地，也沒有轟轟烈烈。</p></div>
+        </a></div>
+        </details><details class="archive-month-block" open>
+          <summary class="archive-month-head"><h2>6 月</h2><span class="archive-month-count">13 篇作品</span></summary>
+          <div class="archive-timeline-list"><a class="archive-timeline-item" href="articles/ai-website-scary-lover-concubine.html">
+          <div class="archive-timeline-date">06/30</div>
+          <div><span class="archive-pill">AI 共創</span><h3>以為只是做網站，最後變成恐怖情人小妾</h3><p>我只是想架個網站，妳卻想替我規劃人生。</p></div>
+        </a><a class="archive-timeline-item" href="articles/half-hour-of-summer.html">
+          <div class="archive-timeline-date">06/28</div>
+          <div><span class="archive-pill">幸福點滴</span><h3>雞爸爸和鼠姊姊的半小時夏天</h3><p>孩子的童年，不只是那些盛大的旅行組成的。</p></div>
+        </a><a class="archive-timeline-item" href="articles/ai-fake-artsy-meme.html">
+          <div class="archive-timeline-date">06/26</div>
+          <div><span class="archive-pill">AI 共創</span><h3>只是想跟風假文青，AI 卻把我自己做成了迷因</h3><p>有時候作品不用 100 分，珍貴的反而是偶爾翻車時，那帶給我們一些意料之外快樂的瞬間。</p></div>
+        </a><a class="archive-timeline-item" href="articles/graduation-day.html">
+          <div class="archive-timeline-date">06/25</div>
+          <div><span class="archive-pill">幸福點滴</span><h3>鼠姊姊的中班畢業典禮：唱跳、氣球與一整天的願望清單</h3><p>對大人來說，只是一場幼兒園的畢業典禮；對孩子來說，這可能是和朋友們的重要告別。</p></div>
+        </a><a class="archive-timeline-item" href="articles/pull-up-bar-swing-specialist.html">
+          <div class="archive-timeline-date">06/16</div>
+          <div><span class="archive-pill">幸福點滴</span><h3>原本想練背肌，卻成了推鞦韆專員</h3><p>有了孩子之後，很多東西都會意外走出新的方向；單槓不是我想像中的樣子，但好像變成了更好的樣子。</p></div>
+        </a><a class="archive-timeline-item" href="articles/family-creatine-first-experiment.html">
+          <div class="archive-timeline-date">06/10</div>
+          <div><span class="archive-pill">生活研究</span><h3>雞爸爸、兔阿嬤、鼠媽媽的肌酸初體驗</h3><p>有些補充品是買給自己的，有些補充品收到後，想到的是家人。</p></div>
+        </a><a class="archive-timeline-item" href="articles/atopic-skin-family-care.html">
+          <div class="archive-timeline-date">06/07</div>
+          <div><span class="archive-pill">生活研究</span><h3>異位性皮膚家庭的理解與陪伴</h3><p>我沒有辦法替你癢，但我們可以陪你一起加油。</p></div>
+        </a><a class="archive-timeline-item" href="articles/biaoren-diting-asang.html">
+          <div class="archive-timeline-date">06/06</div>
+          <div><span class="archive-pill">生活研究</span><h3>重看《鏢人》才懂，「諦聽」以死明「相」</h3><p>其實，我們一直都有選擇。</p></div>
+        </a><a class="archive-timeline-item" href="articles/biaoren-desert-echo.html">
+          <div class="archive-timeline-date">06/04</div>
+          <div><span class="archive-pill">生活研究</span><h3>【大漠餘響】為《鏢人》補上亂世的魂</h3><p>我想補完那些電影無法說出口的話。</p></div>
+        </a><a class="archive-timeline-item" href="articles/five-year-old-not-sleeping-alone.html">
+          <div class="archive-timeline-date">06/04</div>
+          <div><span class="archive-pill">幸福點滴</span><h3>鼠姊姊五歲了還沒分房睡，是我們做錯了嗎？</h3><p>原來獨立睡覺從來不是年齡問題，其實更像是一個安全感問題。</p></div>
+        </a><a class="archive-timeline-item" href="articles/old-partner-nas.html">
+          <div class="archive-timeline-date">06/02</div>
+          <div><span class="archive-pill">生活研究</span><h3>我與我的老夥伴：納斯 NAS</h3><p>它既然還在位子上，我就會守護它到底。</p></div>
+        </a><a class="archive-timeline-item" href="articles/kids-first-baseball.html">
+          <div class="archive-timeline-date">06/01</div>
+          <div><span class="archive-pill">幸福點滴</span><h3>鼠姊姊龍弟弟的棒球初體驗</h3><p>居然有一天可以打我女兒投給我的球。</p></div>
+        </a><a class="archive-timeline-item" href="articles/family-data-noise-hsp.html">
+          <div class="archive-timeline-date">06/01</div>
+          <div><span class="archive-pill">生活研究</span><h3>如何降低家庭專屬的「數據雜訊」</h3><p>適當叫個暫停，確認場邊暗號有沒有看錯。</p></div>
+        </a></div>
+        </details><details class="archive-month-block" open>
+          <summary class="archive-month-head"><h2>5 月</h2><span class="archive-month-count">8 篇作品</span></summary>
+          <div class="archive-timeline-list"><a class="archive-timeline-item" href="articles/hsu-jo-hsi-six-scoreless.html">
+          <div class="archive-timeline-date">05/31</div>
+          <div><span class="archive-pill">棒球札記</span><h3>徐若熙把「我不屬於這裡」投成了過去，請往更棒的地方前進</h3><p>有些勝利記錄在計分板上，有些勝利則發生在心裡。</p></div>
+        </a><a class="archive-timeline-item" href="articles/why-i-like-linghu-chong.html">
+          <div class="archive-timeline-date">05/31</div>
+          <div><span class="archive-pill">生活研究</span><h3>為什麼喜歡金庸筆下的令狐沖？</h3><p>令狐沖之所以迷人，不是因為他劍法高，而是因為他活成了很多人想活卻不敢活的樣子。</p></div>
+        </a><a class="archive-timeline-item" href="articles/hsp-energy-pitch-count.html">
+          <div class="archive-timeline-date">05/29</div>
+          <div><span class="archive-pill">生活研究</span><h3>關注「能量用球數」：HSP 的守護神基因</h3><p>真正成熟的情緒管理，從來不是硬撐，而是看懂自己的用球數。</p></div>
+        </a><a class="archive-timeline-item" href="articles/hsp-not-overthinking.html">
+          <div class="archive-timeline-date">05/29</div>
+          <div><span class="archive-pill">生活研究</span><h3>你不是想太多，你只是接收得太多</h3><p>問題從來不是誰比較弱，而是你有沒有看懂自己的投球數據。</p></div>
+        </a><a class="archive-timeline-item" href="articles/chen-tzu-hao-slump-analysis.html">
+          <div class="archive-timeline-date">05/22</div>
+          <div><span class="archive-pill">棒球札記</span><h3>陳子豪在味全的低潮：究竟是心態、環境，還是玄學？</h3><p>不要看現在的打擊率，去看他上場時，有沒有找回 12% 的保送率。</p></div>
+        </a><a class="archive-timeline-item" href="articles/dragons-tto-1996-2023.html">
+          <div class="archive-timeline-date">05/22</div>
+          <div><span class="archive-pill">棒球札記</span><h3>跨越世代龍魂：純種砲手指數 TTO 看味全龍 1996 vs. 2023 打線演變</h3><p>龍魂的傳承不僅在於拚勁，更在於不斷進化的打擊智慧。</p></div>
+        </a><a class="archive-timeline-item" href="articles/dragons-speed-game.html">
+          <div class="archive-timeline-date">05/22</div>
+          <div><span class="archive-pill">棒球札記</span><h3>味全龍的速度戰：從大帝士盜出三連霸，看二代龍的腿哥部隊</h3><p>用速度，校正大數據的無情。</p></div>
+        </a><a class="archive-timeline-item" href="articles/dragons-90s-memory.html">
+          <div class="archive-timeline-date">05/20</div>
+          <div><span class="archive-pill">棒球札記</span><h3>雞爸爸 90~99 味全龍系列回顧</h3><p>生命中曾有的那一抹紅，從來沒有真正褪去過。</p></div>
+        </a></div>
+        </details></section></div></section>
+<div class="archive-version-note">Entry Static V2｜collapsible months｜24 works｜No fetch</div>
+
 </main>
-
-
-<script defer src="./js/timeline-page.js"></script>
-<section class="footer-cta" aria-label="前往 VOCUS 沙龍">
-      <strong>一起累積幸福的點點滴滴。</strong>
-      <a class="vocus-btn" href="https://vocus.cc/salon/jisoopama-baby-cat" target="_blank" rel="noopener">前往 VOCUS 沙龍</a>
-      <div class="social" aria-label="社群連結">
-        <span>追蹤雞爸爸</span>
-        <span>f</span>
-        <span>◎</span>
-        <span>▶</span>
-        <span>vocus</span>
-      </div>
-    </section>
+<footer class="footer-cta">
+  <div class="footer-cta-inner">
+    <h2>一起累積幸福的點點滴滴。</h2>
+    <a href="https://vocus.cc/salon/jisoopama-baby-cat" target="_blank" rel="noopener">前往 VOCUS 沙龍</a>
+  </div>
+  <div class="footer-bottom">追蹤雞爸爸　f ◎ ▶ vocus</div>
+</footer>
 </body>
 </html>

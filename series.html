@@ -1,21 +1,76 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
+  <!-- CDJ_ENTRY_STATIC_V2_20260706: no fetch, inline-css, 24 works, AI=2, collapsible timeline -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>系列｜雞爸爸生活研究室</title>
-  <meta name="description" content="雞爸爸生活研究室系列入口，已依作品資料整理主題與最新文章。">
+  <meta name="description" content="雞爸爸生活研究室四大系列與策展主題地圖。">
   <meta name="theme-color" content="#fff8ec">
   <link rel="canonical" href="https://beckman0470.github.io/series.html">
-  <meta property="og:site_name" content="Chicken Dad Journal">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="系列｜雞爸爸生活研究室">
-  <meta property="og:description" content="雞爸爸生活研究室系列入口，已依作品資料整理主題與最新文章。">
-  <meta property="og:image" content="https://beckman0470.github.io/assets/og/og-image.svg">
   <link rel="stylesheet" href="css/homepage-v2.css">
   <link rel="stylesheet" href="css/content-archive.css">
+  <style>
+/* CDJ archive static V2: inline critical styles + file copy. */
+.archive-page { background: #fff8ec; color: #17120d; }
+.archive-container { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
+.archive-hero { padding: 70px 0 36px; }
+.archive-kicker { color: #8a5a22; font-size: 12px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; margin-bottom: 8px; }
+.archive-hero h1, .archive-section h1 { font-size: clamp(44px, 7vw, 76px); line-height: .95; margin: 0 0 18px; letter-spacing: -0.06em; }
+.archive-hero p { max-width: 720px; line-height: 1.85; color: #605448; }
+.archive-collection-grid { display:grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 16px; margin-top: 28px; }
+.archive-collection-card, .archive-series-card, .archive-work-card, .archive-small-card, .archive-timeline-item { color: inherit; text-decoration: none; }
+.archive-collection-card { background:#fffaf1; border:1px solid #e7d7bd; border-radius:18px; padding:20px; box-shadow:0 10px 28px rgba(96,65,28,.06); transition:.2s ease; }
+.archive-collection-card:hover, .archive-work-card:hover, .archive-small-card:hover, .archive-timeline-item:hover { transform: translateY(-2px); box-shadow:0 16px 32px rgba(96,65,28,.10); }
+.archive-collection-card strong { display:block; font-size:18px; margin-bottom:8px; }
+.archive-collection-card p { font-size:14px; line-height:1.65; min-height:48px; color:#675a4d; margin:0 0 12px; }
+.archive-collection-card small, .archive-month-count { color:#9b6a2f; font-weight:800; }
+.archive-section { padding: 34px 0 74px; }
+.archive-section-head { display:flex; justify-content:space-between; gap:24px; align-items:end; margin-bottom:24px; }
+.archive-section-head h2, .archive-series-card h2 { font-size: clamp(28px, 4vw, 44px); margin:0 0 8px; letter-spacing:-.04em; }
+.archive-section-head p, .archive-status { color:#62564c; line-height:1.7; margin:0; }
+.archive-work-grid { display:grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap:20px; }
+.archive-work-card { display:flex; min-height:360px; flex-direction:column; background:#fffdf7; border:1px solid #e9dac3; border-radius:18px; padding:22px; box-shadow:0 10px 24px rgba(75,51,21,.05); transition:.2s ease; }
+.archive-card-top { display:flex; justify-content:space-between; align-items:center; gap:8px; margin-bottom:14px; flex-wrap:wrap; }
+.archive-pill, .archive-mini-pill { display:inline-flex; align-items:center; border-radius:999px; border:1px solid #ead8bd; background:#f7ead5; color:#8a5a22; font-weight:800; }
+.archive-pill { font-size:12px; padding:5px 10px; }
+.archive-mini-pill { font-size:11px; padding:4px 8px; margin: 0 5px 6px 0; }
+.archive-work-card h3 { font-size:22px; line-height:1.35; margin:0 0 12px; letter-spacing:-.03em; }
+.archive-work-card p { color:#61564c; line-height:1.72; margin:0 0 12px; }
+.archive-quote { border-left:4px solid #d9a15f; margin:6px 0 16px; padding:6px 0 6px 14px; color:#3c322a; line-height:1.75; font-weight:650; }
+.archive-card-bottom { margin-top:auto; color:#8d7864; font-size:13px; font-weight:700; padding-top:12px; }
+.archive-tag-row, .archive-people-row { margin-top:8px; }
+.archive-series-wrap { display:grid; gap:26px; }
+.archive-series-card { background:#fffdf7; border:1px solid #e9dac3; border-radius:24px; padding:26px; box-shadow:0 10px 28px rgba(96,65,28,.06); }
+.archive-series-card-head { display:grid; grid-template-columns: 1fr auto; gap:20px; align-items:start; margin-bottom:18px; }
+.archive-series-count { font-size:34px; font-weight:900; color:#8a5a22; text-align:right; }
+.archive-small-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; margin-top:18px; }
+.archive-small-card { display:block; background:#fff8ec; border:1px solid #ead8bd; border-radius:16px; padding:16px; }
+.archive-small-card span { display:block; color:#8d7864; font-size:12px; font-weight:800; margin-bottom:6px; }
+.archive-small-card strong { display:block; line-height:1.45; margin-bottom:8px; }
+.archive-small-card p { color:#66584c; line-height:1.65; font-size:14px; margin:0; }
+.archive-topic-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; }
+.archive-topic-card { background:#fffdf7; border:1px dashed #e3cdaa; border-radius:18px; padding:18px; }
+.archive-topic-card h3 { margin:0 0 8px; }
+.archive-timeline-year { display:grid; gap:18px; }
+.archive-year-title { font-size:46px; margin:0 0 4px; letter-spacing:-.05em; }
+.archive-month-block { background:#fffdf7; border:1px solid #e9dac3; border-radius:22px; box-shadow:0 10px 24px rgba(75,51,21,.05); overflow:hidden; }
+.archive-month-block summary { cursor:pointer; list-style:none; }
+.archive-month-block summary::-webkit-details-marker { display:none; }
+.archive-month-head { display:flex; justify-content:space-between; align-items:center; gap:14px; padding:22px 24px; }
+.archive-month-head h2 { margin:0; font-size:28px; letter-spacing:-.04em; }
+.archive-month-head::after { content:'收合 / 展開'; color:#9b6a2f; font-size:12px; font-weight:800; border:1px solid #ead8bd; border-radius:999px; padding:6px 10px; }
+.archive-timeline-list { display:grid; gap:12px; padding:0 24px 24px; }
+.archive-timeline-item { display:grid; grid-template-columns:78px 1fr; gap:18px; align-items:start; background:#fff8ec; border:1px solid #ead8bd; border-radius:16px; padding:16px; transition:.2s ease; }
+.archive-timeline-date { font-weight:900; color:#8a5a22; }
+.archive-timeline-item h3 { margin:8px 0 6px; line-height:1.42; }
+.archive-timeline-item p { margin:0; color:#66584c; line-height:1.7; }
+.archive-version-note { margin-top:30px; color:#9b8064; font-size:12px; text-align:center; }
+@media (max-width: 920px){ .archive-collection-grid,.archive-work-grid,.archive-small-grid,.archive-topic-grid{ grid-template-columns:1fr 1fr; } }
+@media (max-width: 640px){ .archive-container{ width:min(100% - 28px,1120px);} .archive-collection-grid,.archive-work-grid,.archive-small-grid,.archive-topic-grid{ grid-template-columns:1fr; } .archive-section-head,.archive-series-card-head,.archive-month-head{ display:block; } .archive-timeline-item{ grid-template-columns:1fr; gap:6px; } .archive-work-card{ min-height:auto; } }
+</style>
 </head>
-<body class="archive-page series-archive" data-archive-page="series">
+<body class="archive-page series-archive" data-static-version="entry-static-v2-20260706">
 <header class="site-header">
   <div class="header-inner">
     <a class="brand" href="index.html" aria-label="雞爸爸生活研究室首頁">
@@ -26,7 +81,7 @@
       </span>
     </a>
     <nav class="nav" aria-label="主要導覽">
-      <a href="index.html">首頁</a>
+      <a  href="index.html">首頁</a>
       <a  href="articles.html">故事</a>
       <a class="active" href="series.html">系列</a>
       <a  href="timeline.html">時間軸</a>
@@ -39,152 +94,299 @@
   </div>
 </header>
 <main>
-  <section class="archive-hero"><div class="archive-container"><div class="archive-kicker">Series Library</div><h1>系列入口</h1><p>故事不只是單篇文章，也會慢慢長成一個個系列。這裡依照系列分類、卡片群組與標籤整理成可以慢慢逛的入口。</p></div></section>
-  <section class="archive-section"><div class="archive-container"><div class="archive-section-head"><div><div class="archive-kicker">Auto Grouped</div><h2>正在累積的系列</h2><p class="archive-status" id="series-count">目前 4 個系列，合計 24 篇正式作品。</p></div></div><div class="archive-series-grid" id="series-grid"><article class="archive-series-card">
-        <div class="archive-series-art" style="background:linear-gradient(135deg, #e8cfa4, #fff8ec)">🏡</div>
-        <div class="archive-series-body">
-          <div class="archive-kicker">Series</div>
-          <h3>幸福點滴</h3>
+
+<section class="archive-hero"><div class="archive-container"><div class="archive-kicker">Series</div><h1>系列</h1><p>這一頁把作品依四大系列整理，也補上幾個可以繼續策展的主題地圖。</p><div class="archive-collection-grid"><a class="archive-collection-card" href="#series-happy">
+          <strong>🏡 幸福點滴</strong>
           <p>家庭、孩子、陪伴與日常裡長出的幸福紀錄。</p>
-          <div class="archive-card-top"><span class="archive-pill">8 篇作品</span><span class="archive-mini-pill">親子</span><span class="archive-mini-pill">幸福點滴</span><span class="archive-mini-pill">龍弟弟</span><span class="archive-mini-pill">家庭</span></div>
-          <div class="archive-latest-list"><a class="archive-latest-item" href="articles/rap-peak-2026-dragon-brother.html">
-                <span class="archive-latest-date">07/03</span>
-                <strong>說唱巔峰對決2026：炸場首推龍弟弟</strong>
-                <span class="archive-readmore">閱讀 →</span>
-              </a><a class="archive-latest-item" href="articles/girls-let-us-watch-clouds.html">
-                <span class="archive-latest-date">07/02</span>
-                <strong>女孩，讓我們看雲去</strong>
-                <span class="archive-readmore">閱讀 →</span>
-              </a><a class="archive-latest-item" href="articles/temperature-of-now.html">
-                <span class="archive-latest-date">07/01</span>
-                <strong>當下的溫度，就是幸福的定義</strong>
-                <span class="archive-readmore">閱讀 →</span>
-              </a><a class="archive-latest-item" href="articles/half-hour-of-summer.html">
-                <span class="archive-latest-date">06/28</span>
-                <strong>雞爸爸和鼠姊姊的半小時夏天</strong>
-                <span class="archive-readmore">閱讀 →</span>
-              </a></div>
-          <p style="margin-top:14px"><a class="archive-readmore" href="articles.html?series=幸福點滴#stories-grid">查看這個系列全部作品 →</a></p>
-        </div>
-      </article><article class="archive-series-card">
-        <div class="archive-series-art" style="background:linear-gradient(135deg, #c7d9d0, #fff8ec)">🔍</div>
-        <div class="archive-series-body">
-          <div class="archive-kicker">Series</div>
-          <h3>生活研究</h3>
-          <p>健康、健身、壓力、睡眠與家庭溝通的生活實驗。</p>
-          <div class="archive-card-top"><span class="archive-pill">9 篇作品</span><span class="archive-mini-pill">HSP</span><span class="archive-mini-pill">高敏感</span><span class="archive-mini-pill">鏢人</span><span class="archive-mini-pill">諦聽</span></div>
-          <div class="archive-latest-list"><a class="archive-latest-item" href="articles/family-creatine-first-experiment.html">
-                <span class="archive-latest-date">06/10</span>
-                <strong>雞爸爸、兔阿嬤、鼠媽媽的肌酸初體驗</strong>
-                <span class="archive-readmore">閱讀 →</span>
-              </a><a class="archive-latest-item" href="articles/atopic-skin-family-care.html">
-                <span class="archive-latest-date">06/07</span>
-                <strong>異位性皮膚家庭的理解與陪伴</strong>
-                <span class="archive-readmore">閱讀 →</span>
-              </a><a class="archive-latest-item" href="articles/biaoren-diting-asang.html">
-                <span class="archive-latest-date">06/06</span>
-                <strong>重看《鏢人》才懂，「諦聽」以死明「相」</strong>
-                <span class="archive-readmore">閱讀 →</span>
-              </a><a class="archive-latest-item" href="articles/biaoren-desert-echo.html">
-                <span class="archive-latest-date">06/04</span>
-                <strong>【大漠餘響】為《鏢人》補上亂世的魂</strong>
-                <span class="archive-readmore">閱讀 →</span>
-              </a></div>
-          <p style="margin-top:14px"><a class="archive-readmore" href="articles.html?series=生活研究#stories-grid">查看這個系列全部作品 →</a></p>
-        </div>
-      </article><article class="archive-series-card">
-        <div class="archive-series-art" style="background:linear-gradient(135deg, #d9b6a4, #fff8ec)">⚾</div>
-        <div class="archive-series-body">
-          <div class="archive-kicker">Series</div>
-          <h3>棒球札記</h3>
+          <small>8 篇</small>
+        </a><a class="archive-collection-card" href="#series-life">
+          <strong>🔍 生活研究</strong>
+          <p>健康、健身、壓力、睡眠、家庭溝通與職場維運的生活實驗。</p>
+          <small>9 篇</small>
+        </a><a class="archive-collection-card" href="#series-baseball">
+          <strong>⚾ 棒球札記</strong>
           <p>味全龍、球員、戰術、數據與球迷記憶。</p>
-          <div class="archive-card-top"><span class="archive-pill">5 篇作品</span><span class="archive-mini-pill">味全龍</span><span class="archive-mini-pill">徐若熙</span><span class="archive-mini-pill">TTO</span><span class="archive-mini-pill">大帝士</span></div>
-          <div class="archive-latest-list"><a class="archive-latest-item" href="articles/hsu-jo-hsi-six-scoreless.html">
-                <span class="archive-latest-date">05/31</span>
-                <strong>徐若熙把「我不屬於這裡」投成了過去，請往更棒的地方前進</strong>
-                <span class="archive-readmore">閱讀 →</span>
-              </a><a class="archive-latest-item" href="articles/chen-tzu-hao-slump-analysis.html">
-                <span class="archive-latest-date">05/22</span>
-                <strong>陳子豪在味全的低潮：究竟是心態、環境，還是玄學？</strong>
-                <span class="archive-readmore">閱讀 →</span>
-              </a><a class="archive-latest-item" href="articles/dragons-speed-game.html">
-                <span class="archive-latest-date">05/22</span>
-                <strong>味全龍的速度戰：從大帝士盜出三連霸，看二代龍的腿哥部隊</strong>
-                <span class="archive-readmore">閱讀 →</span>
-              </a><a class="archive-latest-item" href="articles/dragons-tto-1996-2023.html">
-                <span class="archive-latest-date">05/22</span>
-                <strong>跨越世代龍魂：純種砲手指數 TTO 看味全龍 1996 vs. 2023 打線演變</strong>
-                <span class="archive-readmore">閱讀 →</span>
-              </a></div>
-          <p style="margin-top:14px"><a class="archive-readmore" href="articles.html?series=棒球札記#stories-grid">查看這個系列全部作品 →</a></p>
-        </div>
-      </article><article class="archive-series-card">
-        <div class="archive-series-art" style="background:linear-gradient(135deg, #d7c5e9, #fff8ec)">🤖</div>
-        <div class="archive-series-body">
-          <div class="archive-kicker">Series</div>
-          <h3>AI 共創</h3>
+          <small>5 篇</small>
+        </a><a class="archive-collection-card" href="#series-ai">
+          <strong>🤖 AI 共創</strong>
           <p>AI 工具、製圖翻車、網站實驗與共創過程。</p>
-          <div class="archive-card-top"><span class="archive-pill">2 篇作品</span><span class="archive-mini-pill">AI共創</span><span class="archive-mini-pill">ChatGPT</span><span class="archive-mini-pill">AI翻車</span><span class="archive-mini-pill">網站架設</span></div>
-          <div class="archive-latest-list"><a class="archive-latest-item" href="articles/ai-website-scary-lover-concubine.html">
-                <span class="archive-latest-date">06/30</span>
-                <strong>以為只是做網站，最後變成恐怖情人小妾</strong>
-                <span class="archive-readmore">閱讀 →</span>
-              </a><a class="archive-latest-item" href="articles/ai-fake-artsy-meme.html">
-                <span class="archive-latest-date">06/26</span>
-                <strong>只是想跟風假文青，AI 卻把我自己做成了迷因</strong>
-                <span class="archive-readmore">閱讀 →</span>
-              </a></div>
-          <p style="margin-top:14px"><a class="archive-readmore" href="articles.html?series=AI 共創#stories-grid">查看這個系列全部作品 →</a></p>
-        </div>
-      </article></div></div></section>
-  <section class="archive-section archive-section-soft"><div class="archive-container"><div class="archive-section-head"><div><div class="archive-kicker">Curated Map</div><h2>策展主題地圖</h2><p class="archive-status">由每篇作品的卡片群組整理，之後可以再細調成首頁或專題頁入口。</p></div></div><div class="archive-topic-grid" id="research-grid"><article class="archive-topic-card">
-            <div class="archive-kicker">Topic</div>
-            <h3>棒球札記</h3>
-            <p class="archive-status">5 篇相關作品</p>
-            <p><a class="archive-readmore" href="articles/hsu-jo-hsi-six-scoreless.html">最新：徐若熙把「我不屬於這裡」投成了過去，請往更棒的地方前進 →</a></p>
-          </article><article class="archive-topic-card">
-            <div class="archive-kicker">Topic</div>
-            <h3>雞爸爸生活研究</h3>
-            <p class="archive-status">4 篇相關作品</p>
-            <p><a class="archive-readmore" href="articles/old-partner-nas.html">最新：我與我的老夥伴：納斯 NAS →</a></p>
-          </article><article class="archive-topic-card">
-            <div class="archive-kicker">Topic</div>
-            <h3>閱讀與角色分析</h3>
-            <p class="archive-status">3 篇相關作品</p>
-            <p><a class="archive-readmore" href="articles/biaoren-diting-asang.html">最新：重看《鏢人》才懂，「諦聽」以死明「相」 →</a></p>
-          </article><article class="archive-topic-card">
-            <div class="archive-kicker">Topic</div>
-            <h3>AI 共創翻車現場</h3>
-            <p class="archive-status">2 篇相關作品</p>
-            <p><a class="archive-readmore" href="articles/ai-website-scary-lover-concubine.html">最新：以為只是做網站，最後變成恐怖情人小妾 →</a></p>
-          </article><article class="archive-topic-card">
-            <div class="archive-kicker">Topic</div>
-            <h3>健康與身體研究</h3>
-            <p class="archive-status">2 篇相關作品</p>
-            <p><a class="archive-readmore" href="articles/family-creatine-first-experiment.html">最新：雞爸爸、兔阿嬤、鼠媽媽的肌酸初體驗 →</a></p>
-          </article><article class="archive-topic-card">
-            <div class="archive-kicker">Topic</div>
-            <h3>夫妻與家庭日常</h3>
-            <p class="archive-status">2 篇相關作品</p>
-            <p><a class="archive-readmore" href="articles/five-year-old-not-sleeping-alone.html">最新：鼠姊姊五歲了還沒分房睡，是我們做錯了嗎？ →</a></p>
-          </article><article class="archive-topic-card">
-            <div class="archive-kicker">Topic</div>
-            <h3>鼠姊姊成長日記</h3>
-            <p class="archive-status">2 篇相關作品</p>
-            <p><a class="archive-readmore" href="articles/five-year-old-not-sleeping-alone.html">最新：鼠姊姊五歲了還沒分房睡，是我們做錯了嗎？ →</a></p>
-          </article><article class="archive-topic-card">
-            <div class="archive-kicker">Topic</div>
-            <h3>龍弟弟成長日記</h3>
-            <p class="archive-status">1 篇相關作品</p>
-            <p><a class="archive-readmore" href="articles/kids-first-baseball.html">最新：鼠姊姊龍弟弟的棒球初體驗 →</a></p>
-          </article></div></div></section>
+          <small>2 篇</small>
+        </a></div></div></section>
+<section class="archive-section"><div class="archive-container"><div class="archive-series-wrap"><section class="archive-series-card" id="series-happy">
+      <div class="archive-series-card-head">
+        <div><div class="archive-kicker">Series</div><h2>🏡 幸福點滴</h2><p>家庭、孩子、陪伴與日常裡長出的幸福紀錄。</p><div class="archive-tag-row"><span class="archive-mini-pill">#親子</span><span class="archive-mini-pill">#幸福點滴</span><span class="archive-mini-pill">#龍弟弟</span><span class="archive-mini-pill">#家庭</span><span class="archive-mini-pill">#成長</span><span class="archive-mini-pill">#音樂</span><span class="archive-mini-pill">#嘻哈</span><span class="archive-mini-pill">#說唱巔峰對決</span></div></div>
+        <div class="archive-series-count">8<br><small>篇</small></div>
+      </div>
+      <div class="archive-small-grid"><a class="archive-small-card" href="articles/rap-peak-2026-dragon-brother.html">
+      <span>2026.07.03</span>
+      <strong>說唱巔峰對決2026：炸場首推龍弟弟</strong>
+      <p>孩子聽音樂不需要懂歌詞，只要旋律一響起，身體就會先替快樂找到答案。</p>
+    </a><a class="archive-small-card" href="articles/girls-let-us-watch-clouds.html">
+      <span>2026.07.02</span>
+      <strong>女孩，讓我們看雲去</strong>
+      <p>夫妻偶爾把彼此排在第一，不是自私，而是在替整個家庭充電。</p>
+    </a><a class="archive-small-card" href="articles/temperature-of-now.html">
+      <span>2026.07.01</span>
+      <strong>當下的溫度，就是幸福的定義</strong>
+      <p>幸福大概就是這樣，不驚天動地，也沒有轟轟烈烈。</p>
+    </a></div>
+      <div class="archive-work-grid" style="margin-top:18px"><a class="archive-work-card" data-series="幸福點滴" href="articles/rap-peak-2026-dragon-brother.html">
+      <div class="archive-card-top"><span class="archive-pill">幸福點滴</span><span class="archive-mini-pill">約 6 分鐘</span></div>
+      <h3>說唱巔峰對決2026：炸場首推龍弟弟</h3>
+      <p>真正炸場的不在螢幕裡，而是在餐椅上；一歲半的龍弟弟，用點頭、蹲跳和摸下巴，把音樂跳進了生活。</p>
+      <blockquote class="archive-quote">孩子聽音樂不需要懂歌詞，只要旋律一響起，身體就會先替快樂找到答案。</blockquote>
+      <div class="archive-card-bottom">2026.07.03</div>
+      <div class="archive-tag-row"><span class="archive-mini-pill">#親子</span><span class="archive-mini-pill">#音樂</span><span class="archive-mini-pill">#嘻哈</span><span class="archive-mini-pill">#說唱巔峰對決</span></div>
+      <div class="archive-people-row"><span class="archive-mini-pill">雞爸爸</span><span class="archive-mini-pill">龍弟弟</span><span class="archive-mini-pill">兔阿嬤</span><span class="archive-mini-pill">鼠媽媽</span></div>
+    </a><a class="archive-work-card" data-series="幸福點滴" href="articles/girls-let-us-watch-clouds.html">
+      <div class="archive-card-top"><span class="archive-pill">幸福點滴</span><span class="archive-mini-pill">約 6 分鐘</span></div>
+      <h3>女孩，讓我們看雲去</h3>
+      <p>我們不是想旅行，只是需要好好呼吸</p>
+      <blockquote class="archive-quote">夫妻偶爾把彼此排在第一，不是自私，而是在替整個家庭充電。</blockquote>
+      <div class="archive-card-bottom">2026.07.02</div>
+      <div class="archive-tag-row"><span class="archive-mini-pill">#幸福點滴</span><span class="archive-mini-pill">#夫妻</span><span class="archive-mini-pill">#親子</span><span class="archive-mini-pill">#約會</span></div>
+      <div class="archive-people-row"><span class="archive-mini-pill">雞爸爸</span><span class="archive-mini-pill">鼠媽媽</span><span class="archive-mini-pill">鼠姊姊</span><span class="archive-mini-pill">龍弟弟</span></div>
+    </a><a class="archive-work-card" data-series="幸福點滴" href="articles/temperature-of-now.html">
+      <div class="archive-card-top"><span class="archive-pill">幸福點滴</span><span class="archive-mini-pill">約 2 分鐘</span></div>
+      <h3>當下的溫度，就是幸福的定義</h3>
+      <p>終於也有專屬父子倆的默契</p>
+      <blockquote class="archive-quote">幸福大概就是這樣，不驚天動地，也沒有轟轟烈烈。</blockquote>
+      <div class="archive-card-bottom">2026.07.01</div>
+      <div class="archive-tag-row"><span class="archive-mini-pill">#幸福點滴</span><span class="archive-mini-pill">#親子</span><span class="archive-mini-pill">#龍弟弟</span><span class="archive-mini-pill">#爸爸</span></div>
+      <div class="archive-people-row"><span class="archive-mini-pill">雞爸爸</span><span class="archive-mini-pill">龍弟弟</span></div>
+    </a><a class="archive-work-card" data-series="幸福點滴" href="articles/half-hour-of-summer.html">
+      <div class="archive-card-top"><span class="archive-pill">幸福點滴</span><span class="archive-mini-pill">約 4 分鐘</span></div>
+      <h3>雞爸爸和鼠姊姊的半小時夏天</h3>
+      <p>難得晴朗的天氣，有一池正午太陽卻曬不熱的水，配上興奮到忘了買票的雞爸爸，最後卻靠著一家人的協力，成就了一場看似平凡卻珍貴的夏日約會。</p>
+      <blockquote class="archive-quote">孩子的童年，不只是那些盛大的旅行組成的。</blockquote>
+      <div class="archive-card-bottom">2026.06.28</div>
+      <div class="archive-tag-row"><span class="archive-mini-pill">#幸福點滴</span><span class="archive-mini-pill">#親子</span><span class="archive-mini-pill">#游泳</span><span class="archive-mini-pill">#夏天</span></div>
+      <div class="archive-people-row"><span class="archive-mini-pill">雞爸爸</span><span class="archive-mini-pill">鼠姊姊</span><span class="archive-mini-pill">鼠媽媽</span><span class="archive-mini-pill">龍弟弟</span></div>
+    </a><a class="archive-work-card" data-series="幸福點滴" href="articles/graduation-day.html">
+      <div class="archive-card-top"><span class="archive-pill">幸福點滴</span><span class="archive-mini-pill">約 4 分鐘</span></div>
+      <h3>鼠姊姊的中班畢業典禮：唱跳、氣球與一整天的願望清單</h3>
+      <p>最愛唱唱跳跳的鼠姊姊，最近開心地邀請爸爸媽媽到幼稚園參加蘋果班的畢業典禮。</p>
+      <blockquote class="archive-quote">對大人來說，只是一場幼兒園的畢業典禮；對孩子來說，這可能是和朋友們的重要告別。</blockquote>
+      <div class="archive-card-bottom">2026.06.25</div>
+      <div class="archive-tag-row"><span class="archive-mini-pill">#幸福點滴</span><span class="archive-mini-pill">#畢業典禮</span><span class="archive-mini-pill">#幼兒園</span><span class="archive-mini-pill">#成長</span></div>
+      <div class="archive-people-row"><span class="archive-mini-pill">雞爸爸</span><span class="archive-mini-pill">鼠姊姊</span><span class="archive-mini-pill">鼠媽媽</span></div>
+    </a><a class="archive-work-card" data-series="幸福點滴" href="articles/pull-up-bar-swing-specialist.html">
+      <div class="archive-card-top"><span class="archive-pill">幸福點滴</span><span class="archive-mini-pill">約 3 分鐘</span></div>
+      <h3>原本想練背肌，卻成了推鞦韆專員</h3>
+      <p>雞爸爸本來想在家練引體向上，沒想到單槓裝好十分鐘，就被龍弟弟改造成走廊裡的小型遊樂園。</p>
+      <blockquote class="archive-quote">有了孩子之後，很多東西都會意外走出新的方向；單槓不是我想像中的樣子，但好像變成了更好的樣子。</blockquote>
+      <div class="archive-card-bottom">2026.06.16</div>
+      <div class="archive-tag-row"><span class="archive-mini-pill">#親子</span><span class="archive-mini-pill">#龍弟弟</span><span class="archive-mini-pill">#單槓</span><span class="archive-mini-pill">#盪鞦韆</span></div>
+      <div class="archive-people-row"><span class="archive-mini-pill">雞爸爸</span><span class="archive-mini-pill">龍弟弟</span></div>
+    </a><a class="archive-work-card" data-series="幸福點滴" href="articles/five-year-old-not-sleeping-alone.html">
+      <div class="archive-card-top"><span class="archive-pill">幸福點滴</span><span class="archive-mini-pill">約 3 分鐘</span></div>
+      <h3>鼠姊姊五歲了還沒分房睡，是我們做錯了嗎？</h3>
+      <p>五歲了，應該要自己睡了吧？但事情往往不是想得那麼簡單。</p>
+      <blockquote class="archive-quote">原來獨立睡覺從來不是年齡問題，其實更像是一個安全感問題。</blockquote>
+      <div class="archive-card-bottom">2026.06.04</div>
+      <div class="archive-tag-row"><span class="archive-mini-pill">#分房睡</span><span class="archive-mini-pill">#陪睡</span><span class="archive-mini-pill">#安全感</span><span class="archive-mini-pill">#親子</span></div>
+      <div class="archive-people-row"><span class="archive-mini-pill">雞爸爸</span><span class="archive-mini-pill">鼠媽媽</span><span class="archive-mini-pill">鼠姊姊</span><span class="archive-mini-pill">龍弟弟</span></div>
+    </a><a class="archive-work-card" data-series="幸福點滴" href="articles/kids-first-baseball.html">
+      <div class="archive-card-top"><span class="archive-pill">幸福點滴</span><span class="archive-mini-pill">約 2 分鐘</span></div>
+      <h3>鼠姊姊龍弟弟的棒球初體驗</h3>
+      <p>第一次打棒球，究竟表現如何？看龍弟弟出發前有模有樣，鼠姐姐都忍不住拍拍手！</p>
+      <blockquote class="archive-quote">居然有一天可以打我女兒投給我的球。</blockquote>
+      <div class="archive-card-bottom">2026.06.01</div>
+      <div class="archive-tag-row"><span class="archive-mini-pill">#親子</span><span class="archive-mini-pill">#棒球</span><span class="archive-mini-pill">#玩具棒球</span><span class="archive-mini-pill">#大巨蛋</span></div>
+      <div class="archive-people-row"><span class="archive-mini-pill">雞爸爸</span><span class="archive-mini-pill">鼠媽媽</span><span class="archive-mini-pill">鼠姊姊</span><span class="archive-mini-pill">龍弟弟</span></div>
+    </a></div>
+    </section><section class="archive-series-card" id="series-life">
+      <div class="archive-series-card-head">
+        <div><div class="archive-kicker">Series</div><h2>🔍 生活研究</h2><p>健康、健身、壓力、睡眠、家庭溝通與職場維運的生活實驗。</p><div class="archive-tag-row"><span class="archive-mini-pill">#HSP</span><span class="archive-mini-pill">#高敏感</span><span class="archive-mini-pill">#鏢人</span><span class="archive-mini-pill">#諦聽</span><span class="archive-mini-pill">#刀馬</span><span class="archive-mini-pill">#角色分析</span><span class="archive-mini-pill">#武俠</span><span class="archive-mini-pill">#家庭溝通</span></div></div>
+        <div class="archive-series-count">9<br><small>篇</small></div>
+      </div>
+      <div class="archive-small-grid"><a class="archive-small-card" href="articles/family-creatine-first-experiment.html">
+      <span>2026.06.10</span>
+      <strong>雞爸爸、兔阿嬤、鼠媽媽的肌酸初體驗</strong>
+      <p>有些補充品是買給自己的，有些補充品收到後，想到的是家人。</p>
+    </a><a class="archive-small-card" href="articles/atopic-skin-family-care.html">
+      <span>2026.06.07</span>
+      <strong>異位性皮膚家庭的理解與陪伴</strong>
+      <p>我沒有辦法替你癢，但我們可以陪你一起加油。</p>
+    </a><a class="archive-small-card" href="articles/biaoren-diting-asang.html">
+      <span>2026.06.06</span>
+      <strong>重看《鏢人》才懂，「諦聽」以死明「相」</strong>
+      <p>其實，我們一直都有選擇。</p>
+    </a></div>
+      <div class="archive-work-grid" style="margin-top:18px"><a class="archive-work-card" data-series="生活研究" href="articles/family-creatine-first-experiment.html">
+      <div class="archive-card-top"><span class="archive-pill">生活研究</span><span class="archive-mini-pill">約 2 分鐘</span></div>
+      <h3>雞爸爸、兔阿嬤、鼠媽媽的肌酸初體驗</h3>
+      <p>一次健身補給品開箱，變成三個族群的肌酸初體驗。</p>
+      <blockquote class="archive-quote">有些補充品是買給自己的，有些補充品收到後，想到的是家人。</blockquote>
+      <div class="archive-card-bottom">2026.06.10</div>
+      <div class="archive-tag-row"><span class="archive-mini-pill">#肌酸</span><span class="archive-mini-pill">#健身補給</span><span class="archive-mini-pill">#家庭保健</span><span class="archive-mini-pill">#兔阿嬤</span></div>
+      <div class="archive-people-row"><span class="archive-mini-pill">雞爸爸</span><span class="archive-mini-pill">兔阿嬤</span><span class="archive-mini-pill">鼠媽媽</span></div>
+    </a><a class="archive-work-card" data-series="生活研究" href="articles/atopic-skin-family-care.html">
+      <div class="archive-card-top"><span class="archive-pill">生活研究</span><span class="archive-mini-pill">約 4 分鐘</span></div>
+      <h3>異位性皮膚家庭的理解與陪伴</h3>
+      <p>我沒有辦法替你癢，但我們可以陪你一起加油。</p>
+      <blockquote class="archive-quote">我沒有辦法替你癢，但我們可以陪你一起加油。</blockquote>
+      <div class="archive-card-bottom">2026.06.07</div>
+      <div class="archive-tag-row"><span class="archive-mini-pill">#異位性皮膚炎</span><span class="archive-mini-pill">#過敏</span><span class="archive-mini-pill">#親子</span><span class="archive-mini-pill">#陪伴</span></div>
+      <div class="archive-people-row"><span class="archive-mini-pill">雞爸爸</span><span class="archive-mini-pill">鼠媽媽</span><span class="archive-mini-pill">鼠姊姊</span><span class="archive-mini-pill">龍弟弟</span></div>
+    </a><a class="archive-work-card" data-series="生活研究" href="articles/biaoren-diting-asang.html">
+      <div class="archive-card-top"><span class="archive-pill">生活研究</span><span class="archive-mini-pill">約 7 分鐘</span></div>
+      <h3>重看《鏢人》才懂，「諦聽」以死明「相」</h3>
+      <p>《鏢人》最震撼我的一段劇情，是刀馬與諦聽玉門關上的宿命對決。</p>
+      <blockquote class="archive-quote">其實，我們一直都有選擇。</blockquote>
+      <div class="archive-card-bottom">2026.06.06</div>
+      <div class="archive-tag-row"><span class="archive-mini-pill">#鏢人</span><span class="archive-mini-pill">#諦聽</span><span class="archive-mini-pill">#阿相</span><span class="archive-mini-pill">#刀馬</span></div>
+      <div class="archive-people-row"><span class="archive-mini-pill">刀馬</span><span class="archive-mini-pill">諦聽</span><span class="archive-mini-pill">阿相</span><span class="archive-mini-pill">小七</span></div>
+    </a><a class="archive-work-card" data-series="生活研究" href="articles/biaoren-desert-echo.html">
+      <div class="archive-card-top"><span class="archive-pill">生活研究</span><span class="archive-mini-pill">約 4 分鐘</span></div>
+      <h3>【大漠餘響】為《鏢人》補上亂世的魂</h3>
+      <p>從電影預告與原著漫畫開始，補完那些被大螢幕濾掉的亂世之魂。</p>
+      <blockquote class="archive-quote">我想補完那些電影無法說出口的話。</blockquote>
+      <div class="archive-card-bottom">2026.06.04</div>
+      <div class="archive-tag-row"><span class="archive-mini-pill">#鏢人</span><span class="archive-mini-pill">#武俠</span><span class="archive-mini-pill">#漫畫</span><span class="archive-mini-pill">#電影</span></div>
+      <div class="archive-people-row"><span class="archive-mini-pill">雞爸爸</span><span class="archive-mini-pill">鼠姊姊</span><span class="archive-mini-pill">龍弟弟</span><span class="archive-mini-pill">吳京</span></div>
+    </a><a class="archive-work-card" data-series="生活研究" href="articles/old-partner-nas.html">
+      <div class="archive-card-top"><span class="archive-pill">生活研究</span><span class="archive-mini-pill">約 4 分鐘</span></div>
+      <h3>我與我的老夥伴：納斯 NAS</h3>
+      <p>一台 NAS 的職場維運日常，也是一段和老夥伴一起撐過稽核的故事。</p>
+      <blockquote class="archive-quote">它既然還在位子上，我就會守護它到底。</blockquote>
+      <div class="archive-card-bottom">2026.06.02</div>
+      <div class="archive-tag-row"><span class="archive-mini-pill">#NAS</span><span class="archive-mini-pill">#QNAP</span><span class="archive-mini-pill">#資安稽核</span><span class="archive-mini-pill">#ISO27001</span></div>
+      <div class="archive-people-row"><span class="archive-mini-pill">納斯／老納</span><span class="archive-mini-pill">我</span><span class="archive-mini-pill">主管</span><span class="archive-mini-pill">協理</span></div>
+    </a><a class="archive-work-card" data-series="生活研究" href="articles/family-data-noise-hsp.html">
+      <div class="archive-card-top"><span class="archive-pill">生活研究</span><span class="archive-mini-pill">約 5 分鐘</span></div>
+      <h3>如何降低家庭專屬的「數據雜訊」</h3>
+      <p>適當叫個暫停，確認場邊暗號有沒有看錯。</p>
+      <blockquote class="archive-quote">適當叫個暫停，確認場邊暗號有沒有看錯。</blockquote>
+      <div class="archive-card-bottom">2026.06.01</div>
+      <div class="archive-tag-row"><span class="archive-mini-pill">#HSP</span><span class="archive-mini-pill">#高敏感</span><span class="archive-mini-pill">#家庭溝通</span><span class="archive-mini-pill">#數據雜訊</span></div>
+      <div class="archive-people-row"><span class="archive-mini-pill">雞爸爸</span><span class="archive-mini-pill">中醫師</span><span class="archive-mini-pill">艾融博士</span></div>
+    </a><a class="archive-work-card" data-series="生活研究" href="articles/why-i-like-linghu-chong.html">
+      <div class="archive-card-top"><span class="archive-pill">生活研究</span><span class="archive-mini-pill">約 3 分鐘</span></div>
+      <h3>為什麼喜歡金庸筆下的令狐沖？</h3>
+      <p>年輕時羨慕奇遇，中年後才懂那份不被江湖困住的自由。</p>
+      <blockquote class="archive-quote">令狐沖之所以迷人，不是因為他劍法高，而是因為他活成了很多人想活卻不敢活的樣子。</blockquote>
+      <div class="archive-card-bottom">2026.05.31</div>
+      <div class="archive-tag-row"><span class="archive-mini-pill">#金庸</span><span class="archive-mini-pill">#笑傲江湖</span><span class="archive-mini-pill">#令狐沖</span><span class="archive-mini-pill">#武俠</span></div>
+      <div class="archive-people-row"><span class="archive-mini-pill">金庸</span><span class="archive-mini-pill">令狐沖</span><span class="archive-mini-pill">風太師叔</span><span class="archive-mini-pill">東方不敗</span></div>
+    </a><a class="archive-work-card" data-series="生活研究" href="articles/hsp-energy-pitch-count.html">
+      <div class="archive-card-top"><span class="archive-pill">生活研究</span><span class="archive-mini-pill">約 7 分鐘</span></div>
+      <h3>關注「能量用球數」：HSP 的守護神基因</h3>
+      <p>把高敏感族群的大腦想像成 MLB 投手，看懂狀況為何常發生在體力不足時。</p>
+      <blockquote class="archive-quote">真正成熟的情緒管理，從來不是硬撐，而是看懂自己的用球數。</blockquote>
+      <div class="archive-card-bottom">2026.05.29</div>
+      <div class="archive-tag-row"><span class="archive-mini-pill">#HSP</span><span class="archive-mini-pill">#高敏感</span><span class="archive-mini-pill">#能量用球數</span><span class="archive-mini-pill">#情緒管理</span></div>
+      <div class="archive-people-row"><span class="archive-mini-pill">雞爸爸</span><span class="archive-mini-pill">鼠姊姊</span><span class="archive-mini-pill">賈西</span><span class="archive-mini-pill">徐生明</span></div>
+    </a><a class="archive-work-card" data-series="生活研究" href="articles/hsp-not-overthinking.html">
+      <div class="archive-card-top"><span class="archive-pill">生活研究</span><span class="archive-mini-pill">約 6 分鐘</span></div>
+      <h3>你不是想太多，你只是接收得太多</h3>
+      <p>進階數據解析 HSP 人生使用說明書（0）。</p>
+      <blockquote class="archive-quote">問題從來不是誰比較弱，而是你有沒有看懂自己的投球數據。</blockquote>
+      <div class="archive-card-bottom">2026.05.29</div>
+      <div class="archive-tag-row"><span class="archive-mini-pill">#HSP</span><span class="archive-mini-pill">#高敏感</span><span class="archive-mini-pill">#DOES</span><span class="archive-mini-pill">#深度處理</span></div>
+      <div class="archive-people-row"><span class="archive-mini-pill">雞爸爸</span><span class="archive-mini-pill">鼠姊姊</span><span class="archive-mini-pill">鼠媽媽</span><span class="archive-mini-pill">丈母娘</span></div>
+    </a></div>
+    </section><section class="archive-series-card" id="series-baseball">
+      <div class="archive-series-card-head">
+        <div><div class="archive-kicker">Series</div><h2>⚾ 棒球札記</h2><p>味全龍、球員、戰術、數據與球迷記憶。</p><div class="archive-tag-row"><span class="archive-mini-pill">#味全龍</span><span class="archive-mini-pill">#徐若熙</span><span class="archive-mini-pill">#TTO</span><span class="archive-mini-pill">#李凱威</span><span class="archive-mini-pill">#張泰山</span><span class="archive-mini-pill">#坎沙諾</span><span class="archive-mini-pill">#大帝士</span><span class="archive-mini-pill">#三連霸</span></div></div>
+        <div class="archive-series-count">5<br><small>篇</small></div>
+      </div>
+      <div class="archive-small-grid"><a class="archive-small-card" href="articles/hsu-jo-hsi-six-scoreless.html">
+      <span>2026.05.31</span>
+      <strong>徐若熙把「我不屬於這裡」投成了過去，請往更棒的地方前進</strong>
+      <p>有些勝利記錄在計分板上，有些勝利則發生在心裡。</p>
+    </a><a class="archive-small-card" href="articles/chen-tzu-hao-slump-analysis.html">
+      <span>2026.05.22</span>
+      <strong>陳子豪在味全的低潮：究竟是心態、環境，還是玄學？</strong>
+      <p>不要看現在的打擊率，去看他上場時，有沒有找回 12% 的保送率。</p>
+    </a><a class="archive-small-card" href="articles/dragons-tto-1996-2023.html">
+      <span>2026.05.22</span>
+      <strong>跨越世代龍魂：純種砲手指數 TTO 看味全龍 1996 vs. 2023 打線演變</strong>
+      <p>龍魂的傳承不僅在於拚勁，更在於不斷進化的打擊智慧。</p>
+    </a></div>
+      <div class="archive-work-grid" style="margin-top:18px"><a class="archive-work-card" data-series="棒球札記" href="articles/hsu-jo-hsi-six-scoreless.html">
+      <div class="archive-card-top"><span class="archive-pill">棒球札記</span><span class="archive-mini-pill">約 2 分鐘</span></div>
+      <h3>徐若熙把「我不屬於這裡」投成了過去，請往更棒的地方前進</h3>
+      <p>龍之子徐若熙重返一軍，6 局 7K 無失分，用好投走出低潮。</p>
+      <blockquote class="archive-quote">有些勝利記錄在計分板上，有些勝利則發生在心裡。</blockquote>
+      <div class="archive-card-bottom">2026.05.31</div>
+      <div class="archive-tag-row"><span class="archive-mini-pill">#徐若熙</span><span class="archive-mini-pill">#龍之子</span><span class="archive-mini-pill">#軟銀</span><span class="archive-mini-pill">#日職</span></div>
+      <div class="archive-people-row"><span class="archive-mini-pill">徐若熙</span></div>
+    </a><a class="archive-work-card" data-series="棒球札記" href="articles/chen-tzu-hao-slump-analysis.html">
+      <div class="archive-card-top"><span class="archive-pill">棒球札記</span><span class="archive-mini-pill">約 4 分鐘</span></div>
+      <h3>陳子豪在味全的低潮：究竟是心態、環境，還是玄學？</h3>
+      <p>用進階數據拆解高薪 TTO 打者的低潮，從運氣、策略與環境看陳子豪。</p>
+      <blockquote class="archive-quote">不要看現在的打擊率，去看他上場時，有沒有找回 12% 的保送率。</blockquote>
+      <div class="archive-card-bottom">2026.05.22</div>
+      <div class="archive-tag-row"><span class="archive-mini-pill">#味全龍</span><span class="archive-mini-pill">#陳子豪</span><span class="archive-mini-pill">#TTO</span><span class="archive-mini-pill">#BABIP</span></div>
+      <div class="archive-people-row"><span class="archive-mini-pill">陳子豪</span><span class="archive-mini-pill">葉君璋</span><span class="archive-mini-pill">李凱威</span></div>
+    </a><a class="archive-work-card" data-series="棒球札記" href="articles/dragons-tto-1996-2023.html">
+      <div class="archive-card-top"><span class="archive-pill">棒球札記</span><span class="archive-mini-pill">約 6 分鐘</span></div>
+      <h3>跨越世代龍魂：純種砲手指數 TTO 看味全龍 1996 vs. 2023 打線演變</h3>
+      <p>用 TTO 進階數據回看味全龍兩個世代的打線演變。</p>
+      <blockquote class="archive-quote">龍魂的傳承不僅在於拚勁，更在於不斷進化的打擊智慧。</blockquote>
+      <div class="archive-card-bottom">2026.05.22</div>
+      <div class="archive-tag-row"><span class="archive-mini-pill">#味全龍</span><span class="archive-mini-pill">#TTO</span><span class="archive-mini-pill">#Three True Outcomes</span><span class="archive-mini-pill">#吉力吉撈</span></div>
+      <div class="archive-people-row"><span class="archive-mini-pill">張泰山</span><span class="archive-mini-pill">Bill James</span><span class="archive-mini-pill">Christina Kahrl</span><span class="archive-mini-pill">吉力吉撈</span></div>
+    </a><a class="archive-work-card" data-series="棒球札記" href="articles/dragons-speed-game.html">
+      <div class="archive-card-top"><span class="archive-pill">棒球札記</span><span class="archive-mini-pill">約 5 分鐘</span></div>
+      <h3>味全龍的速度戰：從大帝士盜出三連霸，看二代龍的腿哥部隊</h3>
+      <p>從張政禹單獨盜本壘，回看味全龍速度戰如何穿越世代。</p>
+      <blockquote class="archive-quote">用速度，校正大數據的無情。</blockquote>
+      <div class="archive-card-bottom">2026.05.22</div>
+      <div class="archive-tag-row"><span class="archive-mini-pill">#味全龍</span><span class="archive-mini-pill">#速度戰</span><span class="archive-mini-pill">#盜壘</span><span class="archive-mini-pill">#張政禹</span></div>
+      <div class="archive-people-row"><span class="archive-mini-pill">張政禹</span><span class="archive-mini-pill">徐生明</span><span class="archive-mini-pill">大帝士</span><span class="archive-mini-pill">法蘭克</span></div>
+    </a><a class="archive-work-card" data-series="棒球札記" href="articles/dragons-90s-memory.html">
+      <div class="archive-card-top"><span class="archive-pill">棒球札記</span><span class="archive-mini-pill">約 6 分鐘</span></div>
+      <h3>雞爸爸 90~99 味全龍系列回顧</h3>
+      <p>為什麼喜歡棒球？因為味全龍。從一張五顏六色的賽程表開始的龍魂記憶。</p>
+      <blockquote class="archive-quote">生命中曾有的那一抹紅，從來沒有真正褪去過。</blockquote>
+      <div class="archive-card-bottom">2026.05.20</div>
+      <div class="archive-tag-row"><span class="archive-mini-pill">#味全龍</span><span class="archive-mini-pill">#龍魂</span><span class="archive-mini-pill">#黃平洋</span><span class="archive-mini-pill">#坎沙諾</span></div>
+      <div class="archive-people-row"><span class="archive-mini-pill">雞爸爸</span><span class="archive-mini-pill">黃平洋</span><span class="archive-mini-pill">陳義信</span><span class="archive-mini-pill">王漢</span></div>
+    </a></div>
+    </section><section class="archive-series-card" id="series-ai">
+      <div class="archive-series-card-head">
+        <div><div class="archive-kicker">Series</div><h2>🤖 AI 共創</h2><p>AI 工具、製圖翻車、網站實驗與共創過程。</p><div class="archive-tag-row"><span class="archive-mini-pill">#AI共創</span><span class="archive-mini-pill">#ChatGPT</span><span class="archive-mini-pill">#AI翻車</span><span class="archive-mini-pill">#網站架設</span><span class="archive-mini-pill">#品牌設計</span><span class="archive-mini-pill">#GitHub Pages</span><span class="archive-mini-pill">#生成式AI</span><span class="archive-mini-pill">#HTML</span></div></div>
+        <div class="archive-series-count">2<br><small>篇</small></div>
+      </div>
+      <div class="archive-small-grid"><a class="archive-small-card" href="articles/ai-website-scary-lover-concubine.html">
+      <span>2026.06.30</span>
+      <strong>以為只是做網站，最後變成恐怖情人小妾</strong>
+      <p>我只是想架個網站，妳卻想替我規劃人生。</p>
+    </a><a class="archive-small-card" href="articles/ai-fake-artsy-meme.html">
+      <span>2026.06.26</span>
+      <strong>只是想跟風假文青，AI 卻把我自己做成了迷因</strong>
+      <p>有時候作品不用 100 分，珍貴的反而是偶爾翻車時，那帶給我們一些意料之外快樂的瞬間。</p>
+    </a></div>
+      <div class="archive-work-grid" style="margin-top:18px"><a class="archive-work-card" data-series="AI 共創" href="articles/ai-website-scary-lover-concubine.html">
+      <div class="archive-card-top"><span class="archive-pill">AI 共創</span><span class="archive-mini-pill">約 7 分鐘</span></div>
+      <h3>以為只是做網站，最後變成恐怖情人小妾</h3>
+      <p>VOCUS 個人網站原本只是想放文章，最後卻變成 AI 小妾一路想幫雞爸爸規劃品牌人生。</p>
+      <blockquote class="archive-quote">我只是想架個網站，妳卻想替我規劃人生。</blockquote>
+      <div class="archive-card-bottom">2026.06.30</div>
+      <div class="archive-tag-row"><span class="archive-mini-pill">#AI共創</span><span class="archive-mini-pill">#ChatGPT</span><span class="archive-mini-pill">#網站架設</span><span class="archive-mini-pill">#品牌設計</span></div>
+      <div class="archive-people-row"><span class="archive-mini-pill">雞爸爸</span><span class="archive-mini-pill">鼠媽媽</span><span class="archive-mini-pill">ChatGPT／小妾</span></div>
+    </a><a class="archive-work-card" data-series="AI 共創" href="articles/ai-fake-artsy-meme.html">
+      <div class="archive-card-top"><span class="archive-pill">AI 共創</span><span class="archive-mini-pill">約 4 分鐘</span></div>
+      <h3>只是想跟風假文青，AI 卻把我自己做成了迷因</h3>
+      <p>雞爸爸只是想做一張成熟男人風格的 AI 形象照，結果 Gemini 用自己的方式留下了「雞爸」迷因。</p>
+      <blockquote class="archive-quote">有時候作品不用 100 分，珍貴的反而是偶爾翻車時，那帶給我們一些意料之外快樂的瞬間。</blockquote>
+      <div class="archive-card-bottom">2026.06.26</div>
+      <div class="archive-tag-row"><span class="archive-mini-pill">#AI共創</span><span class="archive-mini-pill">#AI製圖</span><span class="archive-mini-pill">#ChatGPT</span><span class="archive-mini-pill">#Gemini</span></div>
+      <div class="archive-people-row"><span class="archive-mini-pill">雞爸爸</span><span class="archive-mini-pill">ChatGPT</span><span class="archive-mini-pill">Gemini</span></div>
+    </a></div>
+    </section></div></div></section>
+<section class="archive-section"><div class="archive-container"><div class="archive-section-head"><div><div class="archive-kicker">Curated Map</div><h2>策展主題地圖</h2><p>這些不是正式分類，而是未來首頁或專題頁可以延伸的卡片群組。</p></div></div><div class="archive-topic-grid"><article class="archive-topic-card"><h3>HSP / 高敏感生活研究</h3><p>3 篇作品</p><a class="archive-mini-pill" href="articles/hsp-not-overthinking.html">你不是想太多，你只是接收得太多</a><a class="archive-mini-pill" href="articles/hsp-energy-pitch-count.html">關注「能量用球數」：HSP 的守護神</a><a class="archive-mini-pill" href="articles/family-data-noise-hsp.html">如何降低家庭專屬的「數據雜訊」</a></article><article class="archive-topic-card"><h3>閱讀與角色分析</h3><p>3 篇作品</p><a class="archive-mini-pill" href="articles/biaoren-desert-echo.html">【大漠餘響】為《鏢人》補上亂世的魂</a><a class="archive-mini-pill" href="articles/biaoren-diting-asang.html">重看《鏢人》才懂，「諦聽」以死明「相</a><a class="archive-mini-pill" href="articles/why-i-like-linghu-chong.html">為什麼喜歡金庸筆下的令狐沖？</a></article><article class="archive-topic-card"><h3>味全龍戰術與記憶</h3><p>4 篇作品</p><a class="archive-mini-pill" href="articles/dragons-90s-memory.html">雞爸爸 90~99 味全龍系列回顧</a><a class="archive-mini-pill" href="articles/dragons-speed-game.html">味全龍的速度戰：從大帝士盜出三連霸，</a><a class="archive-mini-pill" href="articles/dragons-tto-1996-2023.html">跨越世代龍魂：純種砲手指數 TTO </a><a class="archive-mini-pill" href="articles/chen-tzu-hao-slump-analysis.html">陳子豪在味全的低潮：究竟是心態、環境</a></article><article class="archive-topic-card"><h3>鼠姊姊成長日記</h3><p>3 篇作品</p><a class="archive-mini-pill" href="articles/five-year-old-not-sleeping-alone.html">鼠姊姊五歲了還沒分房睡，是我們做錯了</a><a class="archive-mini-pill" href="articles/kids-first-baseball.html">鼠姊姊龍弟弟的棒球初體驗</a><a class="archive-mini-pill" href="articles/graduation-day.html">鼠姊姊的中班畢業典禮：唱跳、氣球與一</a></article><article class="archive-topic-card"><h3>龍弟弟成長日記</h3><p>3 篇作品</p><a class="archive-mini-pill" href="articles/rap-peak-2026-dragon-brother.html">說唱巔峰對決2026：炸場首推龍弟弟</a><a class="archive-mini-pill" href="articles/pull-up-bar-swing-specialist.html">原本想練背肌，卻成了推鞦韆專員</a><a class="archive-mini-pill" href="articles/kids-first-baseball.html">鼠姊姊龍弟弟的棒球初體驗</a></article><article class="archive-topic-card"><h3>AI 共創翻車現場</h3><p>2 篇作品</p><a class="archive-mini-pill" href="articles/ai-website-scary-lover-concubine.html">以為只是做網站，最後變成恐怖情人小妾</a><a class="archive-mini-pill" href="articles/ai-fake-artsy-meme.html">只是想跟風假文青，AI 卻把我自己做</a></article></div></div></section>
+<div class="archive-version-note">Entry Static V2｜series rendered as cards｜No fetch</div>
+
 </main>
-<section class="footer-cta" aria-label="前往 VOCUS 沙龍">
-  <strong>一起累積幸福的點點滴滴。</strong>
-  <a class="vocus-btn" href="https://vocus.cc/salon/jisoopama-baby-cat" target="_blank" rel="noopener">前往 VOCUS 沙龍</a>
-  <div class="social" aria-label="社群連結">
-    <span>追蹤雞爸爸</span><span>f</span><span>◎</span><span>▶</span><span>vocus</span>
+<footer class="footer-cta">
+  <div class="footer-cta-inner">
+    <h2>一起累積幸福的點點滴滴。</h2>
+    <a href="https://vocus.cc/salon/jisoopama-baby-cat" target="_blank" rel="noopener">前往 VOCUS 沙龍</a>
   </div>
-</section>
+  <div class="footer-bottom">追蹤雞爸爸　f ◎ ▶ vocus</div>
+</footer>
 </body>
 </html>

@@ -1,0 +1,58 @@
+
+/* CDJ archive static V2: inline critical styles + file copy. */
+.archive-page { background: #fff8ec; color: #17120d; }
+.archive-container { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
+.archive-hero { padding: 70px 0 36px; }
+.archive-kicker { color: #8a5a22; font-size: 12px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; margin-bottom: 8px; }
+.archive-hero h1, .archive-section h1 { font-size: clamp(44px, 7vw, 76px); line-height: .95; margin: 0 0 18px; letter-spacing: -0.06em; }
+.archive-hero p { max-width: 720px; line-height: 1.85; color: #605448; }
+.archive-collection-grid { display:grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 16px; margin-top: 28px; }
+.archive-collection-card, .archive-series-card, .archive-work-card, .archive-small-card, .archive-timeline-item { color: inherit; text-decoration: none; }
+.archive-collection-card { background:#fffaf1; border:1px solid #e7d7bd; border-radius:18px; padding:20px; box-shadow:0 10px 28px rgba(96,65,28,.06); transition:.2s ease; }
+.archive-collection-card:hover, .archive-work-card:hover, .archive-small-card:hover, .archive-timeline-item:hover { transform: translateY(-2px); box-shadow:0 16px 32px rgba(96,65,28,.10); }
+.archive-collection-card strong { display:block; font-size:18px; margin-bottom:8px; }
+.archive-collection-card p { font-size:14px; line-height:1.65; min-height:48px; color:#675a4d; margin:0 0 12px; }
+.archive-collection-card small, .archive-month-count { color:#9b6a2f; font-weight:800; }
+.archive-section { padding: 34px 0 74px; }
+.archive-section-head { display:flex; justify-content:space-between; gap:24px; align-items:end; margin-bottom:24px; }
+.archive-section-head h2, .archive-series-card h2 { font-size: clamp(28px, 4vw, 44px); margin:0 0 8px; letter-spacing:-.04em; }
+.archive-section-head p, .archive-status { color:#62564c; line-height:1.7; margin:0; }
+.archive-work-grid { display:grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap:20px; }
+.archive-work-card { display:flex; min-height:360px; flex-direction:column; background:#fffdf7; border:1px solid #e9dac3; border-radius:18px; padding:22px; box-shadow:0 10px 24px rgba(75,51,21,.05); transition:.2s ease; }
+.archive-card-top { display:flex; justify-content:space-between; align-items:center; gap:8px; margin-bottom:14px; flex-wrap:wrap; }
+.archive-pill, .archive-mini-pill { display:inline-flex; align-items:center; border-radius:999px; border:1px solid #ead8bd; background:#f7ead5; color:#8a5a22; font-weight:800; }
+.archive-pill { font-size:12px; padding:5px 10px; }
+.archive-mini-pill { font-size:11px; padding:4px 8px; margin: 0 5px 6px 0; }
+.archive-work-card h3 { font-size:22px; line-height:1.35; margin:0 0 12px; letter-spacing:-.03em; }
+.archive-work-card p { color:#61564c; line-height:1.72; margin:0 0 12px; }
+.archive-quote { border-left:4px solid #d9a15f; margin:6px 0 16px; padding:6px 0 6px 14px; color:#3c322a; line-height:1.75; font-weight:650; }
+.archive-card-bottom { margin-top:auto; color:#8d7864; font-size:13px; font-weight:700; padding-top:12px; }
+.archive-tag-row, .archive-people-row { margin-top:8px; }
+.archive-series-wrap { display:grid; gap:26px; }
+.archive-series-card { background:#fffdf7; border:1px solid #e9dac3; border-radius:24px; padding:26px; box-shadow:0 10px 28px rgba(96,65,28,.06); }
+.archive-series-card-head { display:grid; grid-template-columns: 1fr auto; gap:20px; align-items:start; margin-bottom:18px; }
+.archive-series-count { font-size:34px; font-weight:900; color:#8a5a22; text-align:right; }
+.archive-small-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; margin-top:18px; }
+.archive-small-card { display:block; background:#fff8ec; border:1px solid #ead8bd; border-radius:16px; padding:16px; }
+.archive-small-card span { display:block; color:#8d7864; font-size:12px; font-weight:800; margin-bottom:6px; }
+.archive-small-card strong { display:block; line-height:1.45; margin-bottom:8px; }
+.archive-small-card p { color:#66584c; line-height:1.65; font-size:14px; margin:0; }
+.archive-topic-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; }
+.archive-topic-card { background:#fffdf7; border:1px dashed #e3cdaa; border-radius:18px; padding:18px; }
+.archive-topic-card h3 { margin:0 0 8px; }
+.archive-timeline-year { display:grid; gap:18px; }
+.archive-year-title { font-size:46px; margin:0 0 4px; letter-spacing:-.05em; }
+.archive-month-block { background:#fffdf7; border:1px solid #e9dac3; border-radius:22px; box-shadow:0 10px 24px rgba(75,51,21,.05); overflow:hidden; }
+.archive-month-block summary { cursor:pointer; list-style:none; }
+.archive-month-block summary::-webkit-details-marker { display:none; }
+.archive-month-head { display:flex; justify-content:space-between; align-items:center; gap:14px; padding:22px 24px; }
+.archive-month-head h2 { margin:0; font-size:28px; letter-spacing:-.04em; }
+.archive-month-head::after { content:'收合 / 展開'; color:#9b6a2f; font-size:12px; font-weight:800; border:1px solid #ead8bd; border-radius:999px; padding:6px 10px; }
+.archive-timeline-list { display:grid; gap:12px; padding:0 24px 24px; }
+.archive-timeline-item { display:grid; grid-template-columns:78px 1fr; gap:18px; align-items:start; background:#fff8ec; border:1px solid #ead8bd; border-radius:16px; padding:16px; transition:.2s ease; }
+.archive-timeline-date { font-weight:900; color:#8a5a22; }
+.archive-timeline-item h3 { margin:8px 0 6px; line-height:1.42; }
+.archive-timeline-item p { margin:0; color:#66584c; line-height:1.7; }
+.archive-version-note { margin-top:30px; color:#9b8064; font-size:12px; text-align:center; }
+@media (max-width: 920px){ .archive-collection-grid,.archive-work-grid,.archive-small-grid,.archive-topic-grid{ grid-template-columns:1fr 1fr; } }
+@media (max-width: 640px){ .archive-container{ width:min(100% - 28px,1120px);} .archive-collection-grid,.archive-work-grid,.archive-small-grid,.archive-topic-grid{ grid-template-columns:1fr; } .archive-section-head,.archive-series-card-head,.archive-month-head{ display:block; } .archive-timeline-item{ grid-template-columns:1fr; gap:6px; } .archive-work-card{ min-height:auto; } }
