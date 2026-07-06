@@ -177,3 +177,55 @@
     font-size: 18px;
   }
 }
+
+
+/* 2026-07-06 Archive card format hotfix
+   Keep story cards consistent when metadata includes signature, tags, and people. */
+.work-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 330px;
+}
+
+.work-card blockquote {
+  margin: 14px 0 0;
+  padding: 14px 16px;
+  border-left: 4px solid #A67C52;
+  border-radius: 16px;
+  background: #FFF7EC;
+  color: #344238;
+  font-family: var(--serif, Georgia, "Times New Roman", "Noto Serif TC", serif);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.work-card .work-meta {
+  margin-top: auto;
+  padding-top: 18px;
+}
+
+.work-tags,
+.work-people {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.work-tags span,
+.work-people span {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 9px;
+  border-radius: 999px;
+  border: 1px solid #E6DED1;
+  background: #FFFDF8;
+  color: #687463;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.work-people span {
+  background: #F8F6F1;
+}
