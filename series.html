@@ -1,63 +1,190 @@
-<!DOCTYPE html><html lang="zh-Hant"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>系列｜雞爸爸生活研究室</title><meta name="theme-color" content="#263328">
-<link rel="manifest" href="./site.webmanifest"><style>
-:root{--paper:#F8F6F1;--surface:#FFFDF8;--ink:#263328;--muted:#687463;--brown:#A67C52;--sage:#8FAF8B;--blue:#8DBFD8;--dragon:#8FBF72;--lavender:#B7A3C9;--milk:#D8C2A8;--line:#E6DED1;--shadow:0 24px 60px rgba(70,55,35,.12);--radius:30px;--serif:Georgia,"Times New Roman",serif;--sans:-apple-system,BlinkMacSystemFont,"Noto Sans TC","Microsoft JhengHei",Arial,sans-serif}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75}a{text-decoration:none;color:inherit}.container{width:min(1160px,calc(100% - 40px));margin:auto}.muted{color:var(--muted)}.kicker{font-size:13px;font-weight:900;letter-spacing:.16em;text-transform:uppercase;color:var(--brown)}
-.site-header{position:sticky;top:0;z-index:20;background:rgba(255,253,248,.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}.nav{height:82px;display:flex;align-items:center;justify-content:space-between;gap:24px}.logo{display:flex;align-items:center;gap:14px}.logo-mark{width:48px;height:48px;border-radius:50%;background:var(--surface);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;font-size:26px}.logo-text strong{display:block;font-size:21px;font-weight:950;line-height:1.2}.logo-text span{display:block;color:var(--muted);font-size:13px}.nav-links{display:flex;gap:26px;font-weight:850}.nav-links a:hover,.nav-links a.active{color:var(--brown)}
-.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 24px;border-radius:999px;background:var(--ink);color:white;font-weight:950;box-shadow:0 12px 30px rgba(38,51,40,.16)}.btn.secondary{background:var(--surface);color:var(--ink);border:1px solid var(--line);box-shadow:none}.section{padding:76px 0}.section-title{font-size:36px;line-height:1.2;margin:0;font-weight:950;letter-spacing:-.03em}.section-note{margin:0;color:var(--muted)}.section-head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:28px}.chip{display:inline-flex;align-self:flex-start;padding:5px 11px;border-radius:999px;background:#EEE6D9;color:var(--brown);font-size:13px;font-weight:950}.readmore{font-weight:950;color:var(--brown)}
-.site-footer{margin-top:50px;background:#243128;color:#FFFDF8}.footer-grid{display:grid;grid-template-columns:1.4fr .8fr .8fr .8fr;gap:32px;padding:54px 0}.site-footer h3,.site-footer h4{margin-top:0}.site-footer p,.site-footer a{color:rgba(255,253,248,.75)}.footer-bottom{border-top:1px solid rgba(255,255,255,.14);padding:18px 0;color:rgba(255,253,248,.6);font-size:14px}
-@media(max-width:980px){.nav-links{display:none}.footer-grid{grid-template-columns:1fr 1fr}}@media(max-width:620px){.container{width:min(100% - 28px,1160px)}.logo-mark{width:42px;height:42px}.logo-text strong{font-size:18px}.section{padding:52px 0}.section-head{display:block}.footer-grid{grid-template-columns:1fr}}
-
-.page-hero{padding:82px 0 48px;background:linear-gradient(180deg,#FFFDF8 0%,#F8F6F1 100%)}.page-hero h1{font-family:var(--serif);font-size:clamp(52px,7vw,92px);line-height:1.05;letter-spacing:-.04em;margin:18px 0}.lead{font-size:22px;max-width:780px;color:#344238}.series-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}.series-card{background:var(--surface);border:1px solid var(--line);border-radius:32px;box-shadow:var(--shadow);overflow:hidden;display:grid;grid-template-columns:180px 1fr}.series-art{min-height:260px;display:flex;align-items:center;justify-content:center;font-size:78px}.series-body{padding:30px}.series-body h2{font-family:var(--serif);font-size:42px;line-height:1.08;margin:0}.count{font-weight:950;color:var(--brown);margin:8px 0 14px}.story-list{margin-top:20px;border-top:1px solid var(--line)}.story-item{display:grid;grid-template-columns:72px 1fr auto;gap:14px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line)}.date{font-family:var(--serif);font-size:19px;color:var(--brown);font-weight:700}.research-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.research-card{background:var(--surface);border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow);padding:22px}
-@media(max-width:980px){.series-grid{grid-template-columns:1fr}.series-card{grid-template-columns:1fr}.research-grid{grid-template-columns:1fr 1fr}}@media(max-width:620px){.page-hero h1{font-size:50px}.series-body{padding:24px}.story-item{grid-template-columns:1fr}.research-grid{grid-template-columns:1fr}}
-</style><link rel="stylesheet" href="./css/visual-polish.css">
-<meta name="description" content="故事不只是單篇文章，也會慢慢長成一個個系列。這裡會依照 stories.json 自動整理正在累積的主題。">
-<link rel="canonical" href="https://beckman0470.github.io/series.html">
-<meta property="og:site_name" content="Chicken Dad Journal">
-<meta property="og:type" content="article">
-<meta property="og:title" content="系列｜雞爸爸生活研究室">
-<meta property="og:description" content="故事不只是單篇文章，也會慢慢長成一個個系列。這裡會依照 stories.json 自動整理正在累積的主題。">
-<meta property="og:url" content="https://beckman0470.github.io/series.html">
-<meta property="og:image" content="https://beckman0470.github.io/assets/og/og-image.svg">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="系列｜雞爸爸生活研究室">
-<meta name="twitter:description" content="故事不只是單篇文章，也會慢慢長成一個個系列。這裡會依照 stories.json 自動整理正在累積的主題。">
-<meta name="twitter:image" content="https://beckman0470.github.io/assets/og/og-image.svg">
-<meta name="theme-color" content="#263328">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "系列｜雞爸爸生活研究室", "description": "故事不只是單篇文章，也會慢慢長成一個個系列。這裡會依照 stories.json 自動整理正在累積的主題。", "url": "https://beckman0470.github.io/series.html", "isPartOf": {"@type": "WebSite", "name": "雞爸爸生活研究室", "url": "https://beckman0470.github.io/"}}</script>
-<link rel="stylesheet" href="./css/global-layout-sync.css">
-<link rel="stylesheet" href="./css/v7-0-2-home-hero.css">
-<link rel="stylesheet" href="css/homepage-v2.css">
-</head><body><header class="site-header">
-    <div class="header-inner">
-      <a class="brand" href="index.html" aria-label="雞爸爸生活研究室首頁">
-        <img src="assets/step1a-redo/logo.png" alt="雞爸爸生活研究室 Logo">
-        <span>
-          <strong>雞爸爸生活研究室</strong>
-          <span>Chicken Dad Journal</span>
-        </span>
-      </a>
-
-      <nav class="nav" aria-label="主要導覽">
-        <a href="index.html">首頁</a>
-        <a href="articles.html">故事</a>
-        <a class="active" href="series.html">系列</a>
-        <a href="timeline.html">時間軸</a>
-        <a href="knowledge.html">知識圖譜</a>
-        <a href="search.html">搜尋</a>
-        <a href="tags.html">標籤</a>
-        <a href="family.html">我們一家</a>
-        <a href="about.html">關於</a>
-      </nav>
-    </div>
-  </header><main><section class="page-hero"><div class="container"><div class="kicker">Series Library</div><h1>系列入口</h1><p class="lead">故事不只是單篇文章，也會慢慢長成一個個系列。這裡會依照 stories.json 自動整理正在累積的主題。</p></div></section><section class="section"><div class="container"><div class="section-head"><div><div class="kicker">Auto Grouped</div><h2 class="section-title">正在累積的系列</h2><p class="section-note" id="series-count">讀取系列中……</p></div></div><div class="series-grid" id="series-grid"></div></div></section><section class="section"><div class="container"><div class="section-head"><div><div class="kicker">Research Map</div><h2 class="section-title">研究主題地圖</h2><p class="section-note">由每篇文章的 research 欄位自動整理。</p></div></div><div class="research-grid" id="research-grid"></div></div></section></main><script defer src="./js/series-page.js"></script><section class="footer-cta" aria-label="前往 VOCUS 沙龍">
-      <strong>一起累積幸福的點點滴滴。</strong>
-      <a class="vocus-btn" href="https://vocus.cc/salon/jisoopama-baby-cat" target="_blank" rel="noopener">前往 VOCUS 沙龍</a>
-      <div class="social" aria-label="社群連結">
-        <span>追蹤雞爸爸</span>
-        <span>f</span>
-        <span>◎</span>
-        <span>▶</span>
-        <span>vocus</span>
-      </div>
-    </section>
-</body></html>
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>系列｜雞爸爸生活研究室</title>
+  <meta name="description" content="雞爸爸生活研究室系列入口，已依作品資料整理主題與最新文章。">
+  <meta name="theme-color" content="#fff8ec">
+  <link rel="canonical" href="https://beckman0470.github.io/series.html">
+  <meta property="og:site_name" content="Chicken Dad Journal">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="系列｜雞爸爸生活研究室">
+  <meta property="og:description" content="雞爸爸生活研究室系列入口，已依作品資料整理主題與最新文章。">
+  <meta property="og:image" content="https://beckman0470.github.io/assets/og/og-image.svg">
+  <link rel="stylesheet" href="css/homepage-v2.css">
+  <link rel="stylesheet" href="css/content-archive.css">
+</head>
+<body class="archive-page series-archive" data-archive-page="series">
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html" aria-label="雞爸爸生活研究室首頁">
+      <img src="assets/step1a-redo/logo.png" alt="雞爸爸生活研究室 Logo">
+      <span>
+        <strong>雞爸爸生活研究室</strong>
+        <span>Chicken Dad Journal</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="主要導覽">
+      <a href="index.html">首頁</a>
+      <a  href="articles.html">故事</a>
+      <a class="active" href="series.html">系列</a>
+      <a  href="timeline.html">時間軸</a>
+      <a href="knowledge.html">知識圖譜</a>
+      <a href="search.html">搜尋</a>
+      <a href="tags.html">標籤</a>
+      <a href="family.html">我們一家</a>
+      <a href="about.html">關於</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="archive-hero"><div class="archive-container"><div class="archive-kicker">Series Library</div><h1>系列入口</h1><p>故事不只是單篇文章，也會慢慢長成一個個系列。這裡依照系列分類、卡片群組與標籤整理成可以慢慢逛的入口。</p></div></section>
+  <section class="archive-section"><div class="archive-container"><div class="archive-section-head"><div><div class="archive-kicker">Auto Grouped</div><h2>正在累積的系列</h2><p class="archive-status" id="series-count">目前 4 個系列，合計 24 篇正式作品。</p></div></div><div class="archive-series-grid" id="series-grid"><article class="archive-series-card">
+        <div class="archive-series-art" style="background:linear-gradient(135deg, #e8cfa4, #fff8ec)">🏡</div>
+        <div class="archive-series-body">
+          <div class="archive-kicker">Series</div>
+          <h3>幸福點滴</h3>
+          <p>家庭、孩子、陪伴與日常裡長出的幸福紀錄。</p>
+          <div class="archive-card-top"><span class="archive-pill">8 篇作品</span><span class="archive-mini-pill">親子</span><span class="archive-mini-pill">幸福點滴</span><span class="archive-mini-pill">龍弟弟</span><span class="archive-mini-pill">家庭</span></div>
+          <div class="archive-latest-list"><a class="archive-latest-item" href="articles/rap-peak-2026-dragon-brother.html">
+                <span class="archive-latest-date">07/03</span>
+                <strong>說唱巔峰對決2026：炸場首推龍弟弟</strong>
+                <span class="archive-readmore">閱讀 →</span>
+              </a><a class="archive-latest-item" href="articles/girls-let-us-watch-clouds.html">
+                <span class="archive-latest-date">07/02</span>
+                <strong>女孩，讓我們看雲去</strong>
+                <span class="archive-readmore">閱讀 →</span>
+              </a><a class="archive-latest-item" href="articles/temperature-of-now.html">
+                <span class="archive-latest-date">07/01</span>
+                <strong>當下的溫度，就是幸福的定義</strong>
+                <span class="archive-readmore">閱讀 →</span>
+              </a><a class="archive-latest-item" href="articles/half-hour-of-summer.html">
+                <span class="archive-latest-date">06/28</span>
+                <strong>雞爸爸和鼠姊姊的半小時夏天</strong>
+                <span class="archive-readmore">閱讀 →</span>
+              </a></div>
+          <p style="margin-top:14px"><a class="archive-readmore" href="articles.html?series=幸福點滴#stories-grid">查看這個系列全部作品 →</a></p>
+        </div>
+      </article><article class="archive-series-card">
+        <div class="archive-series-art" style="background:linear-gradient(135deg, #c7d9d0, #fff8ec)">🔍</div>
+        <div class="archive-series-body">
+          <div class="archive-kicker">Series</div>
+          <h3>生活研究</h3>
+          <p>健康、健身、壓力、睡眠與家庭溝通的生活實驗。</p>
+          <div class="archive-card-top"><span class="archive-pill">9 篇作品</span><span class="archive-mini-pill">HSP</span><span class="archive-mini-pill">高敏感</span><span class="archive-mini-pill">鏢人</span><span class="archive-mini-pill">諦聽</span></div>
+          <div class="archive-latest-list"><a class="archive-latest-item" href="articles/family-creatine-first-experiment.html">
+                <span class="archive-latest-date">06/10</span>
+                <strong>雞爸爸、兔阿嬤、鼠媽媽的肌酸初體驗</strong>
+                <span class="archive-readmore">閱讀 →</span>
+              </a><a class="archive-latest-item" href="articles/atopic-skin-family-care.html">
+                <span class="archive-latest-date">06/07</span>
+                <strong>異位性皮膚家庭的理解與陪伴</strong>
+                <span class="archive-readmore">閱讀 →</span>
+              </a><a class="archive-latest-item" href="articles/biaoren-diting-asang.html">
+                <span class="archive-latest-date">06/06</span>
+                <strong>重看《鏢人》才懂，「諦聽」以死明「相」</strong>
+                <span class="archive-readmore">閱讀 →</span>
+              </a><a class="archive-latest-item" href="articles/biaoren-desert-echo.html">
+                <span class="archive-latest-date">06/04</span>
+                <strong>【大漠餘響】為《鏢人》補上亂世的魂</strong>
+                <span class="archive-readmore">閱讀 →</span>
+              </a></div>
+          <p style="margin-top:14px"><a class="archive-readmore" href="articles.html?series=生活研究#stories-grid">查看這個系列全部作品 →</a></p>
+        </div>
+      </article><article class="archive-series-card">
+        <div class="archive-series-art" style="background:linear-gradient(135deg, #d9b6a4, #fff8ec)">⚾</div>
+        <div class="archive-series-body">
+          <div class="archive-kicker">Series</div>
+          <h3>棒球札記</h3>
+          <p>味全龍、球員、戰術、數據與球迷記憶。</p>
+          <div class="archive-card-top"><span class="archive-pill">5 篇作品</span><span class="archive-mini-pill">味全龍</span><span class="archive-mini-pill">徐若熙</span><span class="archive-mini-pill">TTO</span><span class="archive-mini-pill">大帝士</span></div>
+          <div class="archive-latest-list"><a class="archive-latest-item" href="articles/hsu-jo-hsi-six-scoreless.html">
+                <span class="archive-latest-date">05/31</span>
+                <strong>徐若熙把「我不屬於這裡」投成了過去，請往更棒的地方前進</strong>
+                <span class="archive-readmore">閱讀 →</span>
+              </a><a class="archive-latest-item" href="articles/chen-tzu-hao-slump-analysis.html">
+                <span class="archive-latest-date">05/22</span>
+                <strong>陳子豪在味全的低潮：究竟是心態、環境，還是玄學？</strong>
+                <span class="archive-readmore">閱讀 →</span>
+              </a><a class="archive-latest-item" href="articles/dragons-speed-game.html">
+                <span class="archive-latest-date">05/22</span>
+                <strong>味全龍的速度戰：從大帝士盜出三連霸，看二代龍的腿哥部隊</strong>
+                <span class="archive-readmore">閱讀 →</span>
+              </a><a class="archive-latest-item" href="articles/dragons-tto-1996-2023.html">
+                <span class="archive-latest-date">05/22</span>
+                <strong>跨越世代龍魂：純種砲手指數 TTO 看味全龍 1996 vs. 2023 打線演變</strong>
+                <span class="archive-readmore">閱讀 →</span>
+              </a></div>
+          <p style="margin-top:14px"><a class="archive-readmore" href="articles.html?series=棒球札記#stories-grid">查看這個系列全部作品 →</a></p>
+        </div>
+      </article><article class="archive-series-card">
+        <div class="archive-series-art" style="background:linear-gradient(135deg, #d7c5e9, #fff8ec)">🤖</div>
+        <div class="archive-series-body">
+          <div class="archive-kicker">Series</div>
+          <h3>AI 共創</h3>
+          <p>AI 工具、製圖翻車、網站實驗與共創過程。</p>
+          <div class="archive-card-top"><span class="archive-pill">2 篇作品</span><span class="archive-mini-pill">AI共創</span><span class="archive-mini-pill">ChatGPT</span><span class="archive-mini-pill">AI翻車</span><span class="archive-mini-pill">網站架設</span></div>
+          <div class="archive-latest-list"><a class="archive-latest-item" href="articles/ai-website-scary-lover-concubine.html">
+                <span class="archive-latest-date">06/30</span>
+                <strong>以為只是做網站，最後變成恐怖情人小妾</strong>
+                <span class="archive-readmore">閱讀 →</span>
+              </a><a class="archive-latest-item" href="articles/ai-fake-artsy-meme.html">
+                <span class="archive-latest-date">06/26</span>
+                <strong>只是想跟風假文青，AI 卻把我自己做成了迷因</strong>
+                <span class="archive-readmore">閱讀 →</span>
+              </a></div>
+          <p style="margin-top:14px"><a class="archive-readmore" href="articles.html?series=AI 共創#stories-grid">查看這個系列全部作品 →</a></p>
+        </div>
+      </article></div></div></section>
+  <section class="archive-section archive-section-soft"><div class="archive-container"><div class="archive-section-head"><div><div class="archive-kicker">Curated Map</div><h2>策展主題地圖</h2><p class="archive-status">由每篇作品的卡片群組整理，之後可以再細調成首頁或專題頁入口。</p></div></div><div class="archive-topic-grid" id="research-grid"><article class="archive-topic-card">
+            <div class="archive-kicker">Topic</div>
+            <h3>棒球札記</h3>
+            <p class="archive-status">5 篇相關作品</p>
+            <p><a class="archive-readmore" href="articles/hsu-jo-hsi-six-scoreless.html">最新：徐若熙把「我不屬於這裡」投成了過去，請往更棒的地方前進 →</a></p>
+          </article><article class="archive-topic-card">
+            <div class="archive-kicker">Topic</div>
+            <h3>雞爸爸生活研究</h3>
+            <p class="archive-status">4 篇相關作品</p>
+            <p><a class="archive-readmore" href="articles/old-partner-nas.html">最新：我與我的老夥伴：納斯 NAS →</a></p>
+          </article><article class="archive-topic-card">
+            <div class="archive-kicker">Topic</div>
+            <h3>閱讀與角色分析</h3>
+            <p class="archive-status">3 篇相關作品</p>
+            <p><a class="archive-readmore" href="articles/biaoren-diting-asang.html">最新：重看《鏢人》才懂，「諦聽」以死明「相」 →</a></p>
+          </article><article class="archive-topic-card">
+            <div class="archive-kicker">Topic</div>
+            <h3>AI 共創翻車現場</h3>
+            <p class="archive-status">2 篇相關作品</p>
+            <p><a class="archive-readmore" href="articles/ai-website-scary-lover-concubine.html">最新：以為只是做網站，最後變成恐怖情人小妾 →</a></p>
+          </article><article class="archive-topic-card">
+            <div class="archive-kicker">Topic</div>
+            <h3>健康與身體研究</h3>
+            <p class="archive-status">2 篇相關作品</p>
+            <p><a class="archive-readmore" href="articles/family-creatine-first-experiment.html">最新：雞爸爸、兔阿嬤、鼠媽媽的肌酸初體驗 →</a></p>
+          </article><article class="archive-topic-card">
+            <div class="archive-kicker">Topic</div>
+            <h3>夫妻與家庭日常</h3>
+            <p class="archive-status">2 篇相關作品</p>
+            <p><a class="archive-readmore" href="articles/five-year-old-not-sleeping-alone.html">最新：鼠姊姊五歲了還沒分房睡，是我們做錯了嗎？ →</a></p>
+          </article><article class="archive-topic-card">
+            <div class="archive-kicker">Topic</div>
+            <h3>鼠姊姊成長日記</h3>
+            <p class="archive-status">2 篇相關作品</p>
+            <p><a class="archive-readmore" href="articles/five-year-old-not-sleeping-alone.html">最新：鼠姊姊五歲了還沒分房睡，是我們做錯了嗎？ →</a></p>
+          </article><article class="archive-topic-card">
+            <div class="archive-kicker">Topic</div>
+            <h3>龍弟弟成長日記</h3>
+            <p class="archive-status">1 篇相關作品</p>
+            <p><a class="archive-readmore" href="articles/kids-first-baseball.html">最新：鼠姊姊龍弟弟的棒球初體驗 →</a></p>
+          </article></div></div></section>
+</main>
+<section class="footer-cta" aria-label="前往 VOCUS 沙龍">
+  <strong>一起累積幸福的點點滴滴。</strong>
+  <a class="vocus-btn" href="https://vocus.cc/salon/jisoopama-baby-cat" target="_blank" rel="noopener">前往 VOCUS 沙龍</a>
+  <div class="social" aria-label="社群連結">
+    <span>追蹤雞爸爸</span><span>f</span><span>◎</span><span>▶</span><span>vocus</span>
+  </div>
+</section>
+</body>
+</html>
