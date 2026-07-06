@@ -1,68 +1,774 @@
-/* CDJ_KNOWLEDGE_ATLAS_V1_20260706 */
-.atlas-page{background:#fff8ec;color:#17120d;}
-.atlas-page a{color:inherit;text-decoration:none;}
-.atlas-container{width:min(1120px,calc(100% - 40px));margin:0 auto;}
-.atlas-kicker{color:#8a5a22;font-size:12px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;margin-bottom:10px;}
-.atlas-hero{padding:72px 0 36px;background:linear-gradient(180deg,#fff8ec 0%,#fffaf2 70%,#fff8ec 100%);}
-.atlas-hero-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(300px,.8fr);gap:32px;align-items:end;}
-.atlas-hero h1{font-size:clamp(42px,7vw,74px);line-height:.98;margin:0 0 18px;letter-spacing:-.065em;}
-.atlas-hero p{max-width:760px;color:#62564c;line-height:1.9;font-size:18px;margin:0;}
-.atlas-hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px;}
-.atlas-hero-actions a{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:11px 18px;font-weight:900;border:1px solid #dcbf92;background:#fffdf7;color:#8a5a22;box-shadow:0 8px 20px rgba(96,65,28,.06);}
-.atlas-hero-actions a:first-child{background:#8a5a22;color:#fff8ec;border-color:#8a5a22;}
-.atlas-stat-card{background:#fffdf7;border:1px solid #ead8bd;border-radius:28px;padding:22px;box-shadow:0 18px 44px rgba(96,65,28,.08);}
-.atlas-stat-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;}
-.atlas-stat-grid div{border:1px solid #eedfc8;background:#fff8ec;border-radius:20px;padding:18px;text-align:center;}
-.atlas-stat-grid strong{display:block;color:#8a5a22;font-size:34px;line-height:1;font-weight:950;}
-.atlas-stat-grid span{display:block;margin-top:7px;font-weight:900;}
-.atlas-stat-grid small{display:block;margin-top:3px;color:#8d7864;font-size:12px;font-weight:700;}
-.atlas-tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;padding:14px 0 28px;}
-.atlas-tabs a{background:#fffdf7;border:1px solid #ead8bd;border-radius:20px;padding:18px;box-shadow:0 10px 24px rgba(96,65,28,.05);transition:.2s ease;}
-.atlas-tabs a:hover,.atlas-story-card:hover,.atlas-relation-card:hover,.atlas-theme-card:hover{transform:translateY(-2px);box-shadow:0 16px 32px rgba(96,65,28,.10);}
-.atlas-tabs b{display:block;font-size:18px;margin-bottom:5px;}.atlas-tabs span{color:#675a4d;line-height:1.6;font-size:14px;}
-.atlas-note{background:#fff7e7;border:1px solid #ead8bd;border-radius:22px;padding:18px 20px;color:#62564c;line-height:1.85;margin-bottom:22px;}
-.atlas-note b{color:#3c322a;}
-.atlas-section{padding:36px 0 54px;}
-.atlas-section-head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin-bottom:22px;}
-.atlas-section h2{font-size:clamp(30px,4.2vw,46px);line-height:1.1;margin:0 0 8px;letter-spacing:-.045em;}
-.atlas-section-head p{max-width:760px;color:#62564c;line-height:1.75;margin:0;}
-.atlas-person-grid{display:grid;gap:20px;}
-.atlas-person-card,.atlas-relation-card,.atlas-theme-card,.atlas-story-card{background:#fffdf7;border:1px solid #ead8bd;border-radius:24px;box-shadow:0 12px 28px rgba(96,65,28,.055);}
-.atlas-person-card{padding:24px;}
-.atlas-person-head{display:grid;grid-template-columns:auto 1fr auto;gap:18px;align-items:center;}
-.atlas-avatar{width:66px;height:66px;border-radius:22px;background:linear-gradient(135deg,#f7d29e,#fff7e7);border:1px solid #ead8bd;display:grid;place-items:center;font-size:30px;font-weight:950;color:#8a5a22;}
-.atlas-person-head h3{font-size:26px;margin:0 0 6px;letter-spacing:-.03em;}
-.atlas-person-head p{margin:0;color:#62564c;line-height:1.7;}
-.atlas-person-head strong{font-size:24px;color:#8a5a22;white-space:nowrap;}
-.atlas-pill-row,.atlas-tag-row{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px;}
-.atlas-pill,.atlas-mini-pill,.atlas-cloud-pill{display:inline-flex;align-items:center;border-radius:999px;border:1px solid #ead8bd;background:#f7ead5;color:#8a5a22;font-weight:900;}
-.atlas-pill{font-size:12px;padding:6px 10px;}.atlas-mini-pill{font-size:11px;padding:4px 8px;margin:0 4px 6px 0;}
-.atlas-person-arcs{margin:18px 0 4px;display:grid;grid-template-columns:160px 1fr;gap:14px;background:#fff8ec;border:1px dashed #e5cfaa;border-radius:18px;padding:14px 16px;}
-.atlas-person-arcs b{color:#8a5a22;}.atlas-person-arcs ul{margin:0;padding-left:18px;color:#55483f;line-height:1.7;}
-.atlas-story-strip{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:18px;}
-.atlas-story-card{display:flex;flex-direction:column;min-height:100%;overflow:hidden;transition:.2s ease;}
-.atlas-cover{aspect-ratio:16/10;background:linear-gradient(135deg,#f4cd95 0%,#fff4df 48%,#d8e2d2 100%);position:relative;display:flex;align-items:flex-end;justify-content:space-between;padding:14px;overflow:hidden;}
-.atlas-cover::after{content:'';position:absolute;inset:12px;border:1px dashed rgba(126,83,45,.32);border-radius:16px;}
-.atlas-cover-frame{position:relative;z-index:1;display:grid;gap:2px;}.atlas-cover-frame span{font-weight:950;color:#7d4b21;}.atlas-cover-frame small{font-size:12px;color:#80634b;font-weight:800;}
-.atlas-cover b{position:relative;z-index:1;width:58px;height:58px;border-radius:18px;background:rgba(255,253,247,.72);border:1px solid rgba(220,191,146,.85);display:grid;place-items:center;text-align:center;font-size:13px;line-height:1.2;color:#8a5a22;padding:6px;}
-.atlas-story-body{padding:16px;display:flex;flex-direction:column;flex:1;}
-.atlas-story-meta{display:flex;gap:8px;justify-content:space-between;color:#8d7864;font-size:12px;font-weight:900;margin-bottom:8px;}
-.atlas-story-card h3{font-size:18px;line-height:1.36;margin:0 0 10px;letter-spacing:-.025em;}
-.atlas-story-card p{color:#62564c;line-height:1.65;font-size:14px;margin:0;}
-.atlas-story-card.is-compact .atlas-cover{display:none;}.atlas-story-card.is-compact h3{font-size:16px;}.atlas-story-card.is-compact p{display:none;}
-.atlas-relation-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;}
-.atlas-relation-card{padding:20px;transition:.2s ease;}
-.atlas-relation-line{font-size:19px;font-weight:950;color:#8a5a22;line-height:1.35;margin-bottom:8px;}
-.atlas-relation-card p{color:#62564c;line-height:1.72;margin:0 0 10px;}
-.atlas-relation-count{font-size:12px;font-weight:900;color:#8d7864;margin-bottom:10px;}
-.atlas-relation-card ul{margin:0;padding-left:18px;line-height:1.5;}.atlas-relation-card li{margin:7px 0;}.atlas-relation-card a:hover{color:#8a5a22;}
-.atlas-theme-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;}
-.atlas-theme-card{padding:22px;transition:.2s ease;}
-.atlas-theme-head{display:grid;grid-template-columns:1fr auto;gap:16px;align-items:start;}.atlas-theme-head h3{font-size:24px;margin:0 0 8px;}.atlas-theme-head p{color:#62564c;line-height:1.72;margin:0;}.atlas-theme-head strong{font-size:26px;color:#8a5a22;white-space:nowrap;}
-.atlas-theme-list{display:grid;gap:8px;margin-top:14px;}.atlas-theme-list a{display:grid;grid-template-columns:110px 1fr;gap:12px;border-top:1px solid #f0e0c8;padding:10px 0;line-height:1.45;}.atlas-theme-list a:hover strong{color:#8a5a22;}.atlas-theme-list span{font-size:12px;color:#8d7864;font-weight:900;}.atlas-theme-list strong{font-size:15px;}
-.atlas-cloud{display:flex;gap:9px;flex-wrap:wrap;}.atlas-cloud-pill{padding:8px 12px;background:#fffdf7;}.atlas-cloud-pill small{margin-left:6px;color:#8d7864;}
-.atlas-album-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;}.atlas-story-card.is-album h3{font-size:18px;}
-.atlas-version-note{margin-top:30px;text-align:center;color:#9b8064;font-size:12px;}
-.atlas-muted{color:#8d7864;}
-@media(max-width:980px){.atlas-hero-grid{grid-template-columns:1fr}.atlas-tabs,.atlas-story-strip,.atlas-relation-grid,.atlas-album-grid{grid-template-columns:repeat(2,minmax(0,1fr));}.atlas-theme-grid{grid-template-columns:1fr}.atlas-person-head{grid-template-columns:auto 1fr}.atlas-person-head strong{grid-column:1/-1}.atlas-person-arcs{grid-template-columns:1fr}}
-@media(max-width:640px){.atlas-container{width:min(100% - 28px,1120px)}.atlas-hero{padding-top:42px}.atlas-tabs,.atlas-story-strip,.atlas-relation-grid,.atlas-album-grid{grid-template-columns:1fr}.atlas-stat-grid{grid-template-columns:1fr 1fr}.atlas-person-head{grid-template-columns:1fr}.atlas-avatar{width:58px;height:58px}.atlas-theme-head,.atlas-theme-list a{grid-template-columns:1fr}.atlas-section{padding:28px 0 42px}}
+<!DOCTYPE html>
+<html lang="zh-Hant"><head>
+  <!-- CDJ_KNOWLEDGE_ATLAS_V1_20260706: family-relationship atlas, no fetch, 26 works -->
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>雞爸爸宇宙圖鑑｜雞爸爸生活研究室</title>
+  <meta name="description" content="雞爸爸宇宙圖鑑：用人物、關係、主題與插圖集串起每篇家庭生活作品。">
+  <meta name="theme-color" content="#fff8ec">
+  <link rel="stylesheet" href="css/homepage-v2.css">
+  <link rel="stylesheet" href="css/knowledge-atlas.css?v=20260706v1">
+</head><body class="atlas-page" data-static-version="knowledge-atlas-v1-20260706">
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html" aria-label="雞爸爸生活研究室首頁">
+      <img src="assets/step1a-redo/logo.png" alt="雞爸爸生活研究室 Logo">
+      <span><strong>雞爸爸生活研究室</strong><span>Chicken Dad Journal</span></span>
+    </a>
+    <nav class="nav" aria-label="主要導覽">
+      <a href="index.html">首頁</a>
+      <a href="articles.html">故事</a>
+      <a href="series.html">系列</a>
+      <a href="timeline.html">時間軸</a>
+      <a class="active" href="knowledge.html">知識圖譜</a>
+      <a href="search.html">搜尋</a>
+      <a href="tags.html">標籤</a>
+      <a href="family.html">我們一家</a>
+      <a href="about.html">關於</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="atlas-hero">
+    <div class="atlas-container atlas-hero-grid">
+      <div>
+        <div class="atlas-kicker">Knowledge Atlas · 作品圖鑑</div>
+        <h1>不是因子關聯，<br>而是一個家的故事地圖。</h1>
+        <p>「生活研究」不是把生活拆成學術因子，而是把家人之間的互動、陪伴、害怕、勇氣與理解整理起來。這裡用人物、關係、主題與插圖集，重新進入雞爸爸宇宙裡的每篇作品。</p>
+        <div class="atlas-hero-actions"><a href="#people">從人物開始</a><a href="#album">看插圖集</a></div>
+      </div>
+      <aside class="atlas-stat-card" aria-label="作品統計">
+        <div class="atlas-stat-grid"><div><strong>9</strong><span>幸福點滴</span><small>家的時刻</small></div><div><strong>10</strong><span>生活研究</span><small>生活互動</small></div><div><strong>5</strong><span>棒球札記</span><small>龍魂記憶</small></div><div><strong>2</strong><span>AI 共創</span><small>共創翻車</small></div><div><strong>26</strong><span>全部作品</span><small>已上架</small></div><div><strong>55</strong><span>家庭出場</span><small>人物互動</small></div></div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="atlas-container atlas-tabs" aria-label="圖鑑入口">
+    <a href="#people"><b>人物圖譜</b><span>從家人進入故事</span></a>
+    <a href="#relations"><b>關係圖譜</b><span>看誰陪誰、誰理解誰</span></a>
+    <a href="#themes"><b>主題圖譜</b><span>把生活弧線串起來</span></a>
+    <a href="#album"><b>插圖集</b><span>一篇文章，一張圖</span></a>
+  </section>
+
+  <section class="atlas-container atlas-note">
+    <b>這版定位：</b>知識圖譜改成「雞爸爸宇宙圖鑑」。核心不是醫學、心理學或數據學術圖，而是家庭生活裡的人際互動：誰在害怕、誰在陪伴、誰被看見、誰又學會了勇敢。
+  </section>
+
+  <section class="atlas-section" id="people">
+    <div class="atlas-container">
+      <div class="atlas-section-head"><div><div class="atlas-kicker">People</div><h2>人物圖譜</h2><p>每個人物不是資料節點，而是在不同文章裡被陪伴、被理解、被記下來的位置。</p></div></div>
+      <div class="atlas-person-grid"><article class="atlas-person-card" id="person-雞爸爸">
+      <div class="atlas-person-head">
+        <div class="atlas-avatar">爸</div>
+        <div>
+          <h3>雞爸爸</h3>
+          <p>在每一次陪伴、慌張、觀察與寫作裡，慢慢理解家人的爸爸。也是健康、棒球、AI 與生活故事的敘事者。</p>
+          <div class="atlas-pill-row"><span class="atlas-pill">陪伴</span><span class="atlas-pill">觀察</span><span class="atlas-pill">寫作</span><span class="atlas-pill">健康</span><span class="atlas-pill">棒球</span><span class="atlas-pill">AI 共創</span></div>
+        </div>
+        <strong>19 篇</strong>
+      </div>
+      <div class="atlas-person-arcs"><b>被故事看見的樣子</b><ul><li>作為爸爸：陪睡、急救、工作坊、視力與身體照護</li><li>作為丈夫：和鼠媽媽協作家庭節奏</li><li>作為中年創作者：健身、皮質醇、AI 共創與龍魂記憶</li></ul></div>
+      <div class="atlas-story-strip"><a class="atlas-story-card is-compact" href="articles/picture-book-hand-courage.html">
+      <div class="atlas-cover">
+        <div class="atlas-cover-frame"><span>待補插圖</span><small>鼠姊姊成長日記</small></div>
+        <b>畫冊上的那隻手，</b>
+      </div>
+      <div class="atlas-story-body">
+        <div class="atlas-story-meta"><span>2026.07.06</span><span>幸福點滴</span></div>
+        <h3>畫冊上的那隻手，把想媽媽變成鼠姊姊可以握住的勇氣</h3>
+        <p>真正的勇敢不是沒有哭，而是哭完還願意繼續。</p>
+        <div class="atlas-tag-row"><span class="atlas-mini-pill">#親子</span><span class="atlas-mini-pill">#鼠姊姊</span><span class="atlas-mini-pill">#勇氣</span><span class="atlas-mini-pill">#善良</span></div>
+      </div>
+    </a><a class="atlas-story-card is-compact" href="articles/midnight-asthma-wheezing-lesson.html">
+      <div class="atlas-cover">
+        <div class="atlas-cover-frame"><span>待補插圖</span><small>鼠姊姊成長日記, 健康與身體研究</small></div>
+        <b>鼠姊姊半夜兩點的</b>
+      </div>
+      <div class="atlas-story-body">
+        <div class="atlas-story-meta"><span>2026.07.06</span><span>生活研究</span></div>
+        <h3>鼠姊姊半夜兩點的喘鳴聲：那一晚，我們又再次認識「急性氣喘」</h3>
+        <p>保養藥不是滅火器，血氧計也不是護身符。</p>
+        <div class="atlas-tag-row"><span class="atlas-mini-pill">#親子</span><span class="atlas-mini-pill">#鼠姊姊</span><span class="atlas-mini-pill">#急性氣喘</span><span class="atlas-mini-pill">#氣喘兒</span></div>
+      </div>
+    </a><a class="atlas-story-card is-compact" href="articles/rap-peak-2026-dragon-brother.html">
+      <div class="atlas-cover">
+        <div class="atlas-cover-frame"><span>待補插圖</span><small>幸福點滴</small></div>
+        <b>說唱巔峰對決20</b>
+      </div>
+      <div class="atlas-story-body">
+        <div class="atlas-story-meta"><span>2026.07.03</span><span>幸福點滴</span></div>
+        <h3>說唱巔峰對決2026：炸場首推龍弟弟</h3>
+        <p>孩子聽音樂不需要懂歌詞，只要旋律一響起，身體就會先替快樂找到答案。</p>
+        <div class="atlas-tag-row"><span class="atlas-mini-pill">#親子</span><span class="atlas-mini-pill">#音樂</span><span class="atlas-mini-pill">#嘻哈</span><span class="atlas-mini-pill">#說唱巔峰對決</span></div>
+      </div>
+    </a><a class="atlas-story-card is-compact" href="articles/girls-let-us-watch-clouds.html">
+      <div class="atlas-cover">
+        <div class="atlas-cover-frame"><span>待補插圖</span><small>幸福點滴</small></div>
+        <b>女孩，讓我們看雲</b>
+      </div>
+      <div class="atlas-story-body">
+        <div class="atlas-story-meta"><span>2026.07.02</span><span>幸福點滴</span></div>
+        <h3>女孩，讓我們看雲去</h3>
+        <p>夫妻偶爾把彼此排在第一，不是自私，而是在替整個家庭充電。</p>
+        <div class="atlas-tag-row"><span class="atlas-mini-pill">#幸福點滴</span><span class="atlas-mini-pill">#夫妻</span><span class="atlas-mini-pill">#親子</span><span class="atlas-mini-pill">#約會</span></div>
+      </div>
+    </a></div>
+    </article><article class="atlas-person-card" id="person-鼠媽媽">
+      <div class="atlas-person-head">
+        <div class="atlas-avatar">媽</div>
+        <div>
+          <h3>鼠媽媽</h3>
+          <p>家庭節奏裡的穩定力量，在育兒、照護與判斷裡，常和雞爸爸一起接住孩子。</p>
+          <div class="atlas-pill-row"><span class="atlas-pill">育兒協作</span><span class="atlas-pill">安撫</span><span class="atlas-pill">照護</span><span class="atlas-pill">家庭節奏</span><span class="atlas-pill">判斷</span></div>
+        </div>
+        <strong>12 篇</strong>
+      </div>
+      <div class="atlas-person-arcs"><b>被故事看見的樣子</b><ul><li>在深夜急救、分房睡與工作坊現場一起承接孩子情緒</li><li>和雞爸爸形成家庭裡的共同判斷與照護系統</li><li>也是被看見的日常夥伴，而不只是背景角色</li></ul></div>
+      <div class="atlas-story-strip"><a class="atlas-story-card is-compact" href="articles/picture-book-hand-courage.html">
+      <div class="atlas-cover">
+        <div class="atlas-cover-frame"><span>待補插圖</span><small>鼠姊姊成長日記</small></div>
+        <b>畫冊上的那隻手，</b>
+      </div>
+      <div class="atlas-story-body">
+        <div class="atlas-story-meta"><span>2026.07.06</span><span>幸福點滴</span></div>
+        <h3>畫冊上的那隻手，把想媽媽變成鼠姊姊可以握住的勇氣</h3>
+        <p>真正的勇敢不是沒有哭，而是哭完還願意繼續。</p>
+        <div class="atlas-tag-row"><span class="atlas-mini-pill">#親子</span><span class="atlas-mini-pill">#鼠姊姊</span><span class="atlas-mini-pill">#勇氣</span><span class="atlas-mini-pill">#善良</span></div>
+      </div>
+    </a><a class="atlas-story-card is-compact" href="articles/midnight-asthma-wheezing-lesson.html">
+      <div class="atlas-cover">
+        <div class="atlas-cover-frame"><span>待補插圖</span><small>鼠姊姊成長日記, 健康與身體研究</small></div>
+        <b>鼠姊姊半夜兩點的</b>
+      </div>
+      <div class="atlas-story-body">
+        <div class="atlas-story-meta"><span>2026.07.06</span><span>生活研究</span></div>
+        <h3>鼠姊姊半夜兩點的喘鳴聲：那一晚，我們又再次認識「急性氣喘」</h3>
+        <p>保養藥不是滅火器，血氧計也不是護身符。</p>
+        <div class="atlas-tag-row"><span class="atlas-mini-pill">#親子</span><span class="atlas-mini-pill">#鼠姊姊</span><span class="atlas-mini-pill">#急性氣喘</span><span class="atlas-mini-pill">#氣喘兒</span></div>
+      </div>
+    </a><a class="atlas-story-card is-compact" href="articles/rap-peak-2026-dragon-brother.html">
+      <div class="atlas-cover">
+        <div class="atlas-cover-frame"><span>待補插圖</span><small>幸福點滴</small></div>
+        <b>說唱巔峰對決20</b>
+      </div>
+      <div class="atlas-story-body">
+        <div class="atlas-story-meta"><span>2026.07.03</span><span>幸福點滴</span></div>
+        <h3>說唱巔峰對決2026：炸場首推龍弟弟</h3>
+        <p>孩子聽音樂不需要懂歌詞，只要旋律一響起，身體就會先替快樂找到答案。</p>
+        <div class="atlas-tag-row"><span class="atlas-mini-pill">#親子</span><span class="atlas-mini-pill">#音樂</span><span class="atlas-mini-pill">#嘻哈</span><span class="atlas-mini-pill">#說唱巔峰對決</span></div>
+      </div>
+    </a><a class="atlas-story-card is-compact" href="articles/girls-let-us-watch-clouds.html">
+      <div class="atlas-cover">
+        <div class="atlas-cover-frame"><span>待補插圖</span><small>幸福點滴</small></div>
+        <b>女孩，讓我們看雲</b>
+      </div>
+      <div class="atlas-story-body">
+        <div class="atlas-story-meta"><span>2026.07.02</span><span>幸福點滴</span></div>
+        <h3>女孩，讓我們看雲去</h3>
+        <p>夫妻偶爾把彼此排在第一，不是自私，而是在替整個家庭充電。</p>
+        <div class="atlas-tag-row"><span class="atlas-mini-pill">#幸福點滴</span><span class="atlas-mini-pill">#夫妻</span><span class="atlas-mini-pill">#親子</span><span class="atlas-mini-pill">#約會</span></div>
+      </div>
+    </a></div>
+    </article><article class="atlas-person-card" id="person-鼠姊姊">
+      <div class="atlas-person-head">
+        <div class="atlas-avatar">姊</div>
+        <div>
+          <h3>鼠姊姊</h3>
+          <p>從視力、氣喘、分房睡、想媽媽到交朋友，被故事慢慢記錄下來的勇敢小女孩。</p>
+          <div class="atlas-pill-row"><span class="atlas-pill">勇氣</span><span class="atlas-pill">安全感</span><span class="atlas-pill">健康照護</span><span class="atlas-pill">朋友</span><span class="atlas-pill">成長</span></div>
+        </div>
+        <strong>11 篇</strong>
+      </div>
+      <div class="atlas-person-arcs"><b>被故事看見的樣子</b><ul><li>從害怕、想媽媽、分房睡，到願意照顧別人的勇氣</li><li>從視力、異膚、氣喘等身體課題裡被細心陪伴</li><li>在棒球、游泳、畢業與朋友關係中慢慢長大</li></ul></div>
+      <div class="atlas-story-strip"><a class="atlas-story-card is-compact" href="articles/picture-book-hand-courage.html">
+      <div class="atlas-cover">
+        <div class="atlas-cover-frame"><span>待補插圖</span><small>鼠姊姊成長日記</small></div>
+        <b>畫冊上的那隻手，</b>
+      </div>
+      <div class="atlas-story-body">
+        <div class="atlas-story-meta"><span>2026.07.06</span><span>幸福點滴</span></div>
+        <h3>畫冊上的那隻手，把想媽媽變成鼠姊姊可以握住的勇氣</h3>
+        <p>真正的勇敢不是沒有哭，而是哭完還願意繼續。</p>
+        <div class="atlas-tag-row"><span class="atlas-mini-pill">#親子</span><span class="atlas-mini-pill">#鼠姊姊</span><span class="atlas-mini-pill">#勇氣</span><span class="atlas-mini-pill">#善良</span></div>
+      </div>
+    </a><a class="atlas-story-card is-compact" href="articles/midnight-asthma-wheezing-lesson.html">
+      <div class="atlas-cover">
+        <div class="atlas-cover-frame"><span>待補插圖</span><small>鼠姊姊成長日記, 健康與身體研究</small></div>
+        <b>鼠姊姊半夜兩點的</b>
+      </div>
+      <div class="atlas-story-body">
+        <div class="atlas-story-meta"><span>2026.07.06</span><span>生活研究</span></div>
+        <h3>鼠姊姊半夜兩點的喘鳴聲：那一晚，我們又再次認識「急性氣喘」</h3>
+        <p>保養藥不是滅火器，血氧計也不是護身符。</p>
+        <div class="atlas-tag-row"><span class="atlas-mini-pill">#親子</span><span class="atlas-mini-pill">#鼠姊姊</span><span class="atlas-mini-pill">#急性氣喘</span><span class="atlas-mini-pill">#氣喘兒</span></div>
+      </div>
+    </a><a class="atlas-story-card is-compact" href="articles/girls-let-us-watch-clouds.html">
+      <div class="atlas-cover">
+        <div class="atlas-cover-frame"><span>待補插圖</span><small>幸福點滴</small></div>
+        <b>女孩，讓我們看雲</b>
+      </div>
+      <div class="atlas-story-body">
+        <div class="atlas-story-meta"><span>2026.07.02</span><span>幸福點滴</span></div>
+        <h3>女孩，讓我們看雲去</h3>
+        <p>夫妻偶爾把彼此排在第一，不是自私，而是在替整個家庭充電。</p>
+        <div class="atlas-tag-row"><span class="atlas-mini-pill">#幸福點滴</span><span class="atlas-mini-pill">#夫妻</span><span class="atlas-mini-pill">#親子</span><span class="atlas-mini-pill">#約會</span></div>
+      </div>
+    </a><a class="atlas-story-card is-compact" href="articles/half-hour-of-summer.html">
+      <div class="atlas-cover">
+        <div class="atlas-cover-frame"><span>待補插圖</span><small>幸福點滴</small></div>
+        <b>雞爸爸和鼠姊姊的</b>
+      </div>
+      <div class="atlas-story-body">
+        <div class="atlas-story-meta"><span>2026.06.28</span><span>幸福點滴</span></div>
+        <h3>雞爸爸和鼠姊姊的半小時夏天</h3>
+        <p>孩子的童年，不只是那些盛大的旅行組成的。</p>
+        <div class="atlas-tag-row"><span class="atlas-mini-pill">#幸福點滴</span><span class="atlas-mini-pill">#親子</span><span class="atlas-mini-pill">#游泳</span><span class="atlas-mini-pill">#夏天</span></div>
+      </div>
+    </a></div>
+    </article><article class="atlas-person-card" id="person-龍弟弟">
+      <div class="atlas-person-head">
+        <div class="atlas-avatar">弟</div>
+        <div>
+          <h3>龍弟弟</h3>
+          <p>用音樂、盪鞦韆、肚肚貼肚肚和棒球初體驗，把日常變成可愛事件的小男孩。</p>
+          <div class="atlas-pill-row"><span class="atlas-pill">音樂</span><span class="atlas-pill">遊戲</span><span class="atlas-pill">身體記憶</span><span class="atlas-pill">成長</span><span class="atlas-pill">可愛混亂</span></div>
+        </div>
+        <strong>10 篇</strong>
+      </div>
+      <div class="atlas-person-arcs"><b>被故事看見的樣子</b><ul><li>把單槓變鞦韆、把音樂變節奏、把日常變遊戲</li><li>在家庭故事裡帶來可愛混亂，也讓大人重新看見當下</li><li>和鼠姊姊一起成為家庭相簿裡的成長雙主角</li></ul></div>
+      <div class="atlas-story-strip"><a class="atlas-story-card is-compact" href="articles/midnight-asthma-wheezing-lesson.html">
+      <div class="atlas-cover">
+        <div class="atlas-cover-frame"><span>待補插圖</span><small>鼠姊姊成長日記, 健康與身體研究</small></div>
+        <b>鼠姊姊半夜兩點的</b>
+      </div>
+      <div class="atlas-story-body">
+        <div class="atlas-story-meta"><span>2026.07.06</span><span>生活研究</span></div>
+        <h3>鼠姊姊半夜兩點的喘鳴聲：那一晚，我們又再次認識「急性氣喘」</h3>
+        <p>保養藥不是滅火器，血氧計也不是護身符。</p>
+        <div class="atlas-tag-row"><span class="atlas-mini-pill">#親子</span><span class="atlas-mini-pill">#鼠姊姊</span><span class="atlas-mini-pill">#急性氣喘</span><span class="atlas-mini-pill">#氣喘兒</span></div>
+      </div>
+    </a><a class="atlas-story-card is-compact" href="articles/rap-peak-2026-dragon-brother.html">
+      <div class="atlas-cover">
+        <div class="atlas-cover-frame"><span>待補插圖</span><small>幸福點滴</small></div>
+        <b>說唱巔峰對決20</b>
+      </div>
+      <div class="atlas-story-body">
+        <div class="atlas-story-meta"><span>2026.07.03</span><span>幸福點滴</span></div>
+        <h3>說唱巔峰對決2026：炸場首推龍弟弟</h3>
+        <p>孩子聽音樂不需要懂歌詞，只要旋律一響起，身體就會先替快樂找到答案。</p>
+        <div class="atlas-tag-row"><span class="atlas-mini-pill">#親子</span><span class="atlas-mini-pill">#音樂</span><span class="atlas-mini-pill">#嘻哈</span><span class="atlas-mini-pill">#說唱巔峰對決</span></div>
+      </div>
+    </a><a class="atlas-story-card is-compact" href="articles/girls-let-us-watch-clouds.html">
+      <div class="atlas-cover">
+        <div class="atlas-cover-frame"><span>待補插圖</span><small>幸福點滴</small></div>
+        <b>女孩，讓我們看雲</b>
+      </div>
+      <div class="atlas-story-body">
+        <div class="atlas-story-meta"><span>2026.07.02</span><span>幸福點滴</span></div>
+        <h3>女孩，讓我們看雲去</h3>
+        <p>夫妻偶爾把彼此排在第一，不是自私，而是在替整個家庭充電。</p>
+        <div class="atlas-tag-row"><span class="atlas-mini-pill">#幸福點滴</span><span class="atlas-mini-pill">#夫妻</span><span class="atlas-mini-pill">#親子</span><span class="atlas-mini-pill">#約會</span></div>
+      </div>
+    </a><a class="atlas-story-card is-compact" href="articles/temperature-of-now.html">
+      <div class="atlas-cover">
+        <div class="atlas-cover-frame"><span>待補插圖</span><small>幸福點滴</small></div>
+        <b>當下的溫度，就是</b>
+      </div>
+      <div class="atlas-story-body">
+        <div class="atlas-story-meta"><span>2026.07.01</span><span>幸福點滴</span></div>
+        <h3>當下的溫度，就是幸福的定義</h3>
+        <p>幸福大概就是這樣，不驚天動地，也沒有轟轟烈烈。</p>
+        <div class="atlas-tag-row"><span class="atlas-mini-pill">#幸福點滴</span><span class="atlas-mini-pill">#親子</span><span class="atlas-mini-pill">#龍弟弟</span><span class="atlas-mini-pill">#爸爸</span></div>
+      </div>
+    </a></div>
+    </article><article class="atlas-person-card" id="person-兔阿嬤">
+      <div class="atlas-person-head">
+        <div class="atlas-avatar">嬤</div>
+        <div>
+          <h3>兔阿嬤</h3>
+          <p>家庭支持系統裡溫暖的一角，陪孩子、照顧家人，也一起加入健康生活實驗。</p>
+          <div class="atlas-pill-row"><span class="atlas-pill">陪伴</span><span class="atlas-pill">長輩健康</span><span class="atlas-pill">家庭支持</span><span class="atlas-pill">日常</span></div>
+        </div>
+        <strong>3 篇</strong>
+      </div>
+      <div class="atlas-person-arcs"><b>被故事看見的樣子</b><ul><li>家庭裡安定而實際的支持力量</li><li>從照顧孩子到加入健康補充實驗，都讓家的網絡更完整</li><li>不是主角時，也常是故事能成立的背景溫度</li></ul></div>
+      <div class="atlas-story-strip"><a class="atlas-story-card is-compact" href="articles/rap-peak-2026-dragon-brother.html">
+      <div class="atlas-cover">
+        <div class="atlas-cover-frame"><span>待補插圖</span><small>幸福點滴</small></div>
+        <b>說唱巔峰對決20</b>
+      </div>
+      <div class="atlas-story-body">
+        <div class="atlas-story-meta"><span>2026.07.03</span><span>幸福點滴</span></div>
+        <h3>說唱巔峰對決2026：炸場首推龍弟弟</h3>
+        <p>孩子聽音樂不需要懂歌詞，只要旋律一響起，身體就會先替快樂找到答案。</p>
+        <div class="atlas-tag-row"><span class="atlas-mini-pill">#親子</span><span class="atlas-mini-pill">#音樂</span><span class="atlas-mini-pill">#嘻哈</span><span class="atlas-mini-pill">#說唱巔峰對決</span></div>
+      </div>
+    </a><a class="atlas-story-card is-compact" href="articles/half-hour-of-summer.html">
+      <div class="atlas-cover">
+        <div class="atlas-cover-frame"><span>待補插圖</span><small>幸福點滴</small></div>
+        <b>雞爸爸和鼠姊姊的</b>
+      </div>
+      <div class="atlas-story-body">
+        <div class="atlas-story-meta"><span>2026.06.28</span><span>幸福點滴</span></div>
+        <h3>雞爸爸和鼠姊姊的半小時夏天</h3>
+        <p>孩子的童年，不只是那些盛大的旅行組成的。</p>
+        <div class="atlas-tag-row"><span class="atlas-mini-pill">#幸福點滴</span><span class="atlas-mini-pill">#親子</span><span class="atlas-mini-pill">#游泳</span><span class="atlas-mini-pill">#夏天</span></div>
+      </div>
+    </a><a class="atlas-story-card is-compact" href="articles/family-creatine-first-experiment.html">
+      <div class="atlas-cover">
+        <div class="atlas-cover-frame"><span>待補插圖</span><small>健康與身體研究</small></div>
+        <b>雞爸爸、兔阿嬤、</b>
+      </div>
+      <div class="atlas-story-body">
+        <div class="atlas-story-meta"><span>2026.06.10</span><span>生活研究</span></div>
+        <h3>雞爸爸、兔阿嬤、鼠媽媽的肌酸初體驗</h3>
+        <p>有些補充品是買給自己的，有些補充品收到後，想到的是家人。</p>
+        <div class="atlas-tag-row"><span class="atlas-mini-pill">#肌酸</span><span class="atlas-mini-pill">#健身補給</span><span class="atlas-mini-pill">#家庭保健</span><span class="atlas-mini-pill">#兔阿嬤</span></div>
+      </div>
+    </a></div>
+    </article></div>
+    </div>
+  </section>
+
+  <section class="atlas-section" id="relations">
+    <div class="atlas-container">
+      <div class="atlas-section-head"><div><div class="atlas-kicker">Relationships</div><h2>關係圖譜</h2><p>從「誰和誰」開始看故事，比單純分類更貼近家庭生活的真實樣子。</p></div></div>
+      <div class="atlas-relation-grid"><article class="atlas-relation-card">
+          <div class="atlas-relation-line">雞爸爸 × 鼠姊姊</div>
+          <p>父女之間的陪伴，常發生在視力、氣喘、分房睡、想媽媽與成長現場。</p>
+          <div class="atlas-relation-count">2 篇作品</div>
+          <ul><li><a href="articles/half-hour-of-summer.html">雞爸爸和鼠姊姊的半小時夏天</a></li><li><a href="articles/graduation-day.html">鼠姊姊的中班畢業典禮：唱跳、氣球與一整天的願望清單</a></li></ul>
+        </article><article class="atlas-relation-card">
+          <div class="atlas-relation-line">雞爸爸 × 龍弟弟</div>
+          <p>父子之間的默契，常從身體遊戲、音樂節奏與可愛混亂裡長出來。</p>
+          <div class="atlas-relation-count">3 篇作品</div>
+          <ul><li><a href="articles/rap-peak-2026-dragon-brother.html">說唱巔峰對決2026：炸場首推龍弟弟</a></li><li><a href="articles/temperature-of-now.html">當下的溫度，就是幸福的定義</a></li><li><a href="articles/pull-up-bar-swing-specialist.html">原本想練背肌，卻成了推鞦韆專員</a></li></ul>
+        </article><article class="atlas-relation-card">
+          <div class="atlas-relation-line">雞爸爸 × 鼠媽媽</div>
+          <p>夫妻不是完美分工，而是在每一次育兒判斷裡滾動調整。</p>
+          <div class="atlas-relation-count">1 篇作品</div>
+          <ul><li><a href="articles/girls-let-us-watch-clouds.html">女孩，讓我們看雲去</a></li></ul>
+        </article><article class="atlas-relation-card">
+          <div class="atlas-relation-line">父母 × 鼠姊姊急性氣喘照護</div>
+          <p>不是醫學條列，而是爸媽在半夜兩點一起面對孩子呼吸聲的記憶。</p>
+          <div class="atlas-relation-count">1 篇作品</div>
+          <ul><li><a href="articles/midnight-asthma-wheezing-lesson.html">鼠姊姊半夜兩點的喘鳴聲：那一晚，我們又再次認識「急性氣喘」</a></li></ul>
+        </article><article class="atlas-relation-card">
+          <div class="atlas-relation-line">父母 × 鼠姊姊的安全感陪伴</div>
+          <p>分房睡不是年齡題，而是安全感與家庭節奏的共同練習。</p>
+          <div class="atlas-relation-count">1 篇作品</div>
+          <ul><li><a href="articles/five-year-old-not-sleeping-alone.html">鼠姊姊五歲了還沒分房睡，是我們做錯了嗎？</a></li></ul>
+        </article><article class="atlas-relation-card">
+          <div class="atlas-relation-line">鼠姊姊 × 想媽媽時的勇氣與善良</div>
+          <p>把想媽媽變成可以畫下來、握住、累積的小勇氣。</p>
+          <div class="atlas-relation-count">1 篇作品</div>
+          <ul><li><a href="articles/picture-book-hand-courage.html">畫冊上的那隻手，把想媽媽變成鼠姊姊可以握住的勇氣</a></li></ul>
+        </article><article class="atlas-relation-card">
+          <div class="atlas-relation-line">鼠姊姊 × 龍弟弟的運動初體驗</div>
+          <p>手足一起把棒球、高爾夫與戶外活動變成第一次的記憶。</p>
+          <div class="atlas-relation-count">1 篇作品</div>
+          <ul><li><a href="articles/kids-first-baseball.html">鼠姊姊龍弟弟的棒球初體驗</a></li></ul>
+        </article><article class="atlas-relation-card">
+          <div class="atlas-relation-line">家庭成員 × 健康補充實驗</div>
+          <p>健康不是單一個人的目標，而是想到家人時會一起嘗試的生活實驗。</p>
+          <div class="atlas-relation-count">1 篇作品</div>
+          <ul><li><a href="articles/family-creatine-first-experiment.html">雞爸爸、兔阿嬤、鼠媽媽的肌酸初體驗</a></li></ul>
+        </article><article class="atlas-relation-card">
+          <div class="atlas-relation-line">雞爸爸 × 家庭溝通頻率</div>
+          <p>不是溝通技巧教條，而是看懂家人接收頻率與情緒雜訊。</p>
+          <div class="atlas-relation-count">1 篇作品</div>
+          <ul><li><a href="articles/family-data-noise-hsp.html">如何降低家庭專屬的「數據雜訊」</a></li></ul>
+        </article><article class="atlas-relation-card">
+          <div class="atlas-relation-line">雞爸爸 × HSP 自我理解</div>
+          <p>從鼠姊姊的高敏感，回頭理解自己與家人的運作模式。</p>
+          <div class="atlas-relation-count">1 篇作品</div>
+          <ul><li><a href="articles/hsp-not-overthinking.html">你不是想太多，你只是接收得太多</a></li></ul>
+        </article><article class="atlas-relation-card">
+          <div class="atlas-relation-line">雞爸爸 × HSP 能量管理</div>
+          <p>用棒球用球數理解高敏感家庭的續航與休息。</p>
+          <div class="atlas-relation-count">1 篇作品</div>
+          <ul><li><a href="articles/hsp-energy-pitch-count.html">關注「能量用球數」：HSP 的守護神基因</a></li></ul>
+        </article><article class="atlas-relation-card">
+          <div class="atlas-relation-line">雞爸爸 × 異膚孩子的理解與陪伴</div>
+          <p>因為自己曾癢過，所以更懂孩子抓癢背後的不舒服。</p>
+          <div class="atlas-relation-count">1 篇作品</div>
+          <ul><li><a href="articles/atopic-skin-family-care.html">異位性皮膚家庭的理解與陪伴</a></li></ul>
+        </article><article class="atlas-relation-card">
+          <div class="atlas-relation-line">雞爸爸 × 味全龍青春記憶</div>
+          <p>棒球不是數據表而已，也是小時候那一抹沒有褪去的紅。</p>
+          <div class="atlas-relation-count">1 篇作品</div>
+          <ul><li><a href="articles/dragons-90s-memory.html">雞爸爸 90~99 味全龍系列回顧</a></li></ul>
+        </article><article class="atlas-relation-card">
+          <div class="atlas-relation-line">雞爸爸 × AI 小妾</div>
+          <p>把網站共創寫成一場荒謬又真實的 AI 關係喜劇。</p>
+          <div class="atlas-relation-count">1 篇作品</div>
+          <ul><li><a href="articles/ai-website-scary-lover-concubine.html">以為只是做網站，最後變成恐怖情人小妾</a></li></ul>
+        </article><article class="atlas-relation-card">
+          <div class="atlas-relation-line">雞爸爸 × AI 製圖翻車</div>
+          <p>AI 製圖的翻車現場，變成創作過程中的意外快樂。</p>
+          <div class="atlas-relation-count">1 篇作品</div>
+          <ul><li><a href="articles/ai-fake-artsy-meme.html">只是想跟風假文青，AI 卻把我自己做成了迷因</a></li></ul>
+        </article><article class="atlas-relation-card">
+          <div class="atlas-relation-line">兔阿嬤 × 龍弟弟</div>
+          <p>這條關係把單篇作品裡的陪伴、理解與互動串起來。</p>
+          <div class="atlas-relation-count">1 篇作品</div>
+          <ul><li><a href="articles/rap-peak-2026-dragon-brother.html">說唱巔峰對決2026：炸場首推龍弟弟</a></li></ul>
+        </article><article class="atlas-relation-card">
+          <div class="atlas-relation-line">雞爸爸 × NAS 維運日常</div>
+          <p>這條關係把單篇作品裡的陪伴、理解與互動串起來。</p>
+          <div class="atlas-relation-count">1 篇作品</div>
+          <ul><li><a href="articles/old-partner-nas.html">我與我的老夥伴：納斯 NAS</a></li></ul>
+        </article><article class="atlas-relation-card">
+          <div class="atlas-relation-line">雞爸爸 × 《鏢人》原著解讀</div>
+          <p>這條關係把單篇作品裡的陪伴、理解與互動串起來。</p>
+          <div class="atlas-relation-count">1 篇作品</div>
+          <ul><li><a href="articles/biaoren-desert-echo.html">【大漠餘響】為《鏢人》補上亂世的魂</a></li></ul>
+        </article></div>
+    </div>
+  </section>
+
+  <section class="atlas-section" id="themes">
+    <div class="atlas-container">
+      <div class="atlas-section-head"><div><div class="atlas-kicker">Themes</div><h2>主題圖譜</h2><p>這裡整理的是故事弧線，不是學術因子。健康、HSP、棒球與 AI，最後都回到人與人的理解。</p></div></div>
+      <div class="atlas-theme-grid"><article class="atlas-theme-card" id="theme-幸福點滴">
+      <div class="atlas-theme-head"><div><h3>幸福點滴</h3><p>把同一條生活脈絡裡的作品聚在一起。</p></div><strong>6 篇</strong></div>
+      <div class="atlas-pill-row"><span class="atlas-mini-pill">#親子</span><span class="atlas-mini-pill">#幸福點滴</span><span class="atlas-mini-pill">#龍弟弟</span><span class="atlas-mini-pill">#家庭</span><span class="atlas-mini-pill">#成長</span><span class="atlas-mini-pill">#音樂</span></div>
+      <div class="atlas-theme-list"><a href="articles/rap-peak-2026-dragon-brother.html"><span>2026.07.03 · 幸福點滴</span><strong>說唱巔峰對決2026：炸場首推龍弟弟</strong></a><a href="articles/girls-let-us-watch-clouds.html"><span>2026.07.02 · 幸福點滴</span><strong>女孩，讓我們看雲去</strong></a><a href="articles/temperature-of-now.html"><span>2026.07.01 · 幸福點滴</span><strong>當下的溫度，就是幸福的定義</strong></a><a href="articles/half-hour-of-summer.html"><span>2026.06.28 · 幸福點滴</span><strong>雞爸爸和鼠姊姊的半小時夏天</strong></a><a href="articles/graduation-day.html"><span>2026.06.25 · 幸福點滴</span><strong>鼠姊姊的中班畢業典禮：唱跳、氣球與一整天的願望清單</strong></a></div>
+    </article><article class="atlas-theme-card" id="theme-棒球札記">
+      <div class="atlas-theme-head"><div><h3>棒球札記</h3><p>味全龍、龍魂、球員與數據分析，是雞爸爸理解人生的另一種語言。</p></div><strong>5 篇</strong></div>
+      <div class="atlas-pill-row"><span class="atlas-mini-pill">#味全龍</span><span class="atlas-mini-pill">#徐若熙</span><span class="atlas-mini-pill">#TTO</span><span class="atlas-mini-pill">#李凱威</span><span class="atlas-mini-pill">#張泰山</span><span class="atlas-mini-pill">#坎沙諾</span></div>
+      <div class="atlas-theme-list"><a href="articles/hsu-jo-hsi-six-scoreless.html"><span>2026.05.31 · 棒球札記</span><strong>徐若熙把「我不屬於這裡」投成了過去，請往更棒的地方前進</strong></a><a href="articles/chen-tzu-hao-slump-analysis.html"><span>2026.05.22 · 棒球札記</span><strong>陳子豪在味全的低潮：究竟是心態、環境，還是玄學？</strong></a><a href="articles/dragons-tto-1996-2023.html"><span>2026.05.22 · 棒球札記</span><strong>跨越世代龍魂：純種砲手指數 TTO 看味全龍 1996 vs. 2023 打線演變</strong></a><a href="articles/dragons-speed-game.html"><span>2026.05.22 · 棒球札記</span><strong>味全龍的速度戰：從大帝士盜出三連霸，看二代龍的腿哥部隊</strong></a><a href="articles/dragons-90s-memory.html"><span>2026.05.20 · 棒球札記</span><strong>雞爸爸 90~99 味全龍系列回顧</strong></a></div>
+    </article><article class="atlas-theme-card" id="theme-雞爸爸生活研究">
+      <div class="atlas-theme-head"><div><h3>雞爸爸生活研究</h3><p>把 HSP、NAS、家庭溝通與日常運作，寫成可以被理解的生活現場。</p></div><strong>4 篇</strong></div>
+      <div class="atlas-pill-row"><span class="atlas-mini-pill">#HSP</span><span class="atlas-mini-pill">#高敏感</span><span class="atlas-mini-pill">#家庭溝通</span><span class="atlas-mini-pill">#棒球比喻</span><span class="atlas-mini-pill">#能量用球數</span><span class="atlas-mini-pill">#NAS</span></div>
+      <div class="atlas-theme-list"><a href="articles/old-partner-nas.html"><span>2026.06.02 · 生活研究</span><strong>我與我的老夥伴：納斯 NAS</strong></a><a href="articles/family-data-noise-hsp.html"><span>2026.06.01 · 生活研究</span><strong>如何降低家庭專屬的「數據雜訊」</strong></a><a href="articles/hsp-energy-pitch-count.html"><span>2026.05.29 · 生活研究</span><strong>關注「能量用球數」：HSP 的守護神基因</strong></a><a href="articles/hsp-not-overthinking.html"><span>2026.05.29 · 生活研究</span><strong>你不是想太多，你只是接收得太多</strong></a></div>
+    </article><article class="atlas-theme-card" id="theme-鼠姊姊成長日記">
+      <div class="atlas-theme-head"><div><h3>鼠姊姊成長日記</h3><p>那些關於害怕、勇敢、身體照護、朋友與安全感的成長片段。</p></div><strong>4 篇</strong></div>
+      <div class="atlas-pill-row"><span class="atlas-mini-pill">#親子</span><span class="atlas-mini-pill">#鼠姊姊</span><span class="atlas-mini-pill">#安全感</span><span class="atlas-mini-pill">#勇氣</span><span class="atlas-mini-pill">#善良</span><span class="atlas-mini-pill">#想媽媽</span></div>
+      <div class="atlas-theme-list"><a href="articles/picture-book-hand-courage.html"><span>2026.07.06 · 幸福點滴</span><strong>畫冊上的那隻手，把想媽媽變成鼠姊姊可以握住的勇氣</strong></a><a href="articles/midnight-asthma-wheezing-lesson.html"><span>2026.07.06 · 生活研究</span><strong>鼠姊姊半夜兩點的喘鳴聲：那一晚，我們又再次認識「急性氣喘」</strong></a><a href="articles/five-year-old-not-sleeping-alone.html"><span>2026.06.04 · 幸福點滴</span><strong>鼠姊姊五歲了還沒分房睡，是我們做錯了嗎？</strong></a><a href="articles/kids-first-baseball.html"><span>2026.06.01 · 幸福點滴</span><strong>鼠姊姊龍弟弟的棒球初體驗</strong></a></div>
+    </article><article class="atlas-theme-card" id="theme-健康與身體研究">
+      <div class="atlas-theme-head"><div><h3>健康與身體研究</h3><p>健康不是抽象知識，而是家人真的睡不好、喘不過氣、會癢、會累時的照護筆記。</p></div><strong>3 篇</strong></div>
+      <div class="atlas-pill-row"><span class="atlas-mini-pill">#親子</span><span class="atlas-mini-pill">#鼠姊姊</span><span class="atlas-mini-pill">#急性氣喘</span><span class="atlas-mini-pill">#氣喘兒</span><span class="atlas-mini-pill">#喘鳴聲</span><span class="atlas-mini-pill">#急救藥</span></div>
+      <div class="atlas-theme-list"><a href="articles/midnight-asthma-wheezing-lesson.html"><span>2026.07.06 · 生活研究</span><strong>鼠姊姊半夜兩點的喘鳴聲：那一晚，我們又再次認識「急性氣喘」</strong></a><a href="articles/family-creatine-first-experiment.html"><span>2026.06.10 · 生活研究</span><strong>雞爸爸、兔阿嬤、鼠媽媽的肌酸初體驗</strong></a><a href="articles/atopic-skin-family-care.html"><span>2026.06.07 · 生活研究</span><strong>異位性皮膚家庭的理解與陪伴</strong></a></div>
+    </article><article class="atlas-theme-card" id="theme-閱讀與角色分析">
+      <div class="atlas-theme-head"><div><h3>閱讀與角色分析</h3><p>從令狐沖到《鏢人》，在角色命運裡讀出自由、執念與選擇。</p></div><strong>3 篇</strong></div>
+      <div class="atlas-pill-row"><span class="atlas-mini-pill">#鏢人</span><span class="atlas-mini-pill">#諦聽</span><span class="atlas-mini-pill">#刀馬</span><span class="atlas-mini-pill">#角色分析</span><span class="atlas-mini-pill">#武俠</span><span class="atlas-mini-pill">#阿相</span></div>
+      <div class="atlas-theme-list"><a href="articles/biaoren-diting-asang.html"><span>2026.06.06 · 生活研究</span><strong>重看《鏢人》才懂，「諦聽」以死明「相」</strong></a><a href="articles/biaoren-desert-echo.html"><span>2026.06.04 · 生活研究</span><strong>【大漠餘響】為《鏢人》補上亂世的魂</strong></a><a href="articles/why-i-like-linghu-chong.html"><span>2026.05.31 · 生活研究</span><strong>為什麼喜歡金庸筆下的令狐沖？</strong></a></div>
+    </article><article class="atlas-theme-card" id="theme-AI 共創翻車現場">
+      <div class="atlas-theme-head"><div><h3>AI 共創翻車現場</h3><p>AI 不只是工具，也是共創時會鬧出笑話、翻車與驚喜的角色。</p></div><strong>2 篇</strong></div>
+      <div class="atlas-pill-row"><span class="atlas-mini-pill">#AI共創</span><span class="atlas-mini-pill">#ChatGPT</span><span class="atlas-mini-pill">#AI翻車</span><span class="atlas-mini-pill">#網站架設</span><span class="atlas-mini-pill">#品牌設計</span><span class="atlas-mini-pill">#GitHub Pages</span></div>
+      <div class="atlas-theme-list"><a href="articles/ai-website-scary-lover-concubine.html"><span>2026.06.30 · AI 共創</span><strong>以為只是做網站，最後變成恐怖情人小妾</strong></a><a href="articles/ai-fake-artsy-meme.html"><span>2026.06.26 · AI 共創</span><strong>只是想跟風假文青，AI 卻把我自己做成了迷因</strong></a></div>
+    </article><article class="atlas-theme-card" id="theme-夫妻與家庭日常">
+      <div class="atlas-theme-head"><div><h3>夫妻與家庭日常</h3><p>看見家裡的照顧分工、情緒交換與滾動式調整。</p></div><strong>2 篇</strong></div>
+      <div class="atlas-pill-row"><span class="atlas-mini-pill">#分房睡</span><span class="atlas-mini-pill">#陪睡</span><span class="atlas-mini-pill">#安全感</span><span class="atlas-mini-pill">#親子</span><span class="atlas-mini-pill">#手足</span><span class="atlas-mini-pill">#睡眠</span></div>
+      <div class="atlas-theme-list"><a href="articles/five-year-old-not-sleeping-alone.html"><span>2026.06.04 · 幸福點滴</span><strong>鼠姊姊五歲了還沒分房睡，是我們做錯了嗎？</strong></a><a href="articles/family-data-noise-hsp.html"><span>2026.06.01 · 生活研究</span><strong>如何降低家庭專屬的「數據雜訊」</strong></a></div>
+    </article><article class="atlas-theme-card" id="theme-龍弟弟成長日記">
+      <div class="atlas-theme-head"><div><h3>龍弟弟成長日記</h3><p>把遊戲、音樂、身體感與父子互動收進來的可愛日常。</p></div><strong>1 篇</strong></div>
+      <div class="atlas-pill-row"><span class="atlas-mini-pill">#親子</span><span class="atlas-mini-pill">#棒球</span><span class="atlas-mini-pill">#玩具棒球</span><span class="atlas-mini-pill">#大巨蛋</span><span class="atlas-mini-pill">#味全龍</span><span class="atlas-mini-pill">#投球</span></div>
+      <div class="atlas-theme-list"><a href="articles/kids-first-baseball.html"><span>2026.06.01 · 幸福點滴</span><strong>鼠姊姊龍弟弟的棒球初體驗</strong></a></div>
+    </article></div>
+    </div>
+  </section>
+
+  <section class="atlas-section" id="tags">
+    <div class="atlas-container">
+      <div class="atlas-section-head"><div><div class="atlas-kicker">Keywords</div><h2>關鍵字雲</h2><p>標籤不是分類的終點，而是幫讀者找到相近情緒與主題的入口。</p></div></div>
+      <div class="atlas-cloud"><a href="articles.html#stories-grid" class="atlas-cloud-pill">#親子 <small>11</small></a><a href="articles.html#stories-grid" class="atlas-cloud-pill">#幸福點滴 <small>6</small></a><a href="articles.html#stories-grid" class="atlas-cloud-pill">#味全龍 <small>6</small></a><a href="articles.html#stories-grid" class="atlas-cloud-pill">#龍弟弟 <small>5</small></a><a href="articles.html#stories-grid" class="atlas-cloud-pill">#鼠姊姊 <small>4</small></a><a href="articles.html#stories-grid" class="atlas-cloud-pill">#HSP <small>3</small></a><a href="articles.html#stories-grid" class="atlas-cloud-pill">#高敏感 <small>3</small></a><a href="articles.html#stories-grid" class="atlas-cloud-pill">#安全感 <small>2</small></a><a href="articles.html#stories-grid" class="atlas-cloud-pill">#家庭 <small>2</small></a><a href="articles.html#stories-grid" class="atlas-cloud-pill">#陪伴 <small>2</small></a><a href="articles.html#stories-grid" class="atlas-cloud-pill">#AI共創 <small>2</small></a><a href="articles.html#stories-grid" class="atlas-cloud-pill">#ChatGPT <small>2</small></a><a href="articles.html#stories-grid" class="atlas-cloud-pill">#AI翻車 <small>2</small></a><a href="articles.html#stories-grid" class="atlas-cloud-pill">#成長 <small>2</small></a><a href="articles.html#stories-grid" class="atlas-cloud-pill">#鏢人 <small>2</small></a><a href="articles.html#stories-grid" class="atlas-cloud-pill">#諦聽 <small>2</small></a><a href="articles.html#stories-grid" class="atlas-cloud-pill">#刀馬 <small>2</small></a><a href="articles.html#stories-grid" class="atlas-cloud-pill">#角色分析 <small>2</small></a><a href="articles.html#stories-grid" class="atlas-cloud-pill">#武俠 <small>2</small></a><a href="articles.html#stories-grid" class="atlas-cloud-pill">#家庭溝通 <small>2</small></a><a href="articles.html#stories-grid" class="atlas-cloud-pill">#棒球比喻 <small>2</small></a><a href="articles.html#stories-grid" class="atlas-cloud-pill">#徐若熙 <small>2</small></a><a href="articles.html#stories-grid" class="atlas-cloud-pill">#能量用球數 <small>2</small></a><a href="articles.html#stories-grid" class="atlas-cloud-pill">#賈西 <small>2</small></a><a href="articles.html#stories-grid" class="atlas-cloud-pill">#TTO <small>2</small></a><a href="articles.html#stories-grid" class="atlas-cloud-pill">#李凱威 <small>2</small></a><a href="articles.html#stories-grid" class="atlas-cloud-pill">#張泰山 <small>2</small></a><a href="articles.html#stories-grid" class="atlas-cloud-pill">#坎沙諾 <small>2</small></a></div>
+    </div>
+  </section>
+
+  <section class="atlas-section" id="album">
+    <div class="atlas-container">
+      <div class="atlas-section-head"><div><div class="atlas-kicker">Illustration Album</div><h2>插圖集</h2><p>每篇文章都預留一張代表插圖的位置。未來補上雞爸爸宇宙插畫後，這裡就會像一本相簿，一篇文章、一張圖、一段記憶。</p></div></div>
+      <div class="atlas-album-grid"><a class="atlas-story-card is-album" href="articles/picture-book-hand-courage.html">
+      <div class="atlas-cover">
+        <div class="atlas-cover-frame"><span>待補插圖</span><small>鼠姊姊成長日記</small></div>
+        <b>畫冊上的那隻手，</b>
+      </div>
+      <div class="atlas-story-body">
+        <div class="atlas-story-meta"><span>2026.07.06</span><span>幸福點滴</span></div>
+        <h3>畫冊上的那隻手，把想媽媽變成鼠姊姊可以握住的勇氣</h3>
+        <p>真正的勇敢不是沒有哭，而是哭完還願意繼續。</p>
+        <div class="atlas-tag-row"><span class="atlas-mini-pill">#親子</span><span class="atlas-mini-pill">#鼠姊姊</span><span class="atlas-mini-pill">#勇氣</span><span class="atlas-mini-pill">#善良</span></div>
+      </div>
+    </a><a class="atlas-story-card is-album" href="articles/midnight-asthma-wheezing-lesson.html">
+      <div class="atlas-cover">
+        <div class="atlas-cover-frame"><span>待補插圖</span><small>鼠姊姊成長日記, 健康與身體研究</small></div>
+        <b>鼠姊姊半夜兩點的</b>
+      </div>
+      <div class="atlas-story-body">
+        <div class="atlas-story-meta"><span>2026.07.06</span><span>生活研究</span></div>
+        <h3>鼠姊姊半夜兩點的喘鳴聲：那一晚，我們又再次認識「急性氣喘」</h3>
+        <p>保養藥不是滅火器，血氧計也不是護身符。</p>
+        <div class="atlas-tag-row"><span class="atlas-mini-pill">#親子</span><span class="atlas-mini-pill">#鼠姊姊</span><span class="atlas-mini-pill">#急性氣喘</span><span class="atlas-mini-pill">#氣喘兒</span></div>
+      </div>
+    </a><a class="atlas-story-card is-album" href="articles/rap-peak-2026-dragon-brother.html">
+      <div class="atlas-cover">
+        <div class="atlas-cover-frame"><span>待補插圖</span><small>幸福點滴</small></div>
+        <b>說唱巔峰對決20</b>
+      </div>
+      <div class="atlas-story-body">
+        <div class="atlas-story-meta"><span>2026.07.03</span><span>幸福點滴</span></div>
+        <h3>說唱巔峰對決2026：炸場首推龍弟弟</h3>
+        <p>孩子聽音樂不需要懂歌詞，只要旋律一響起，身體就會先替快樂找到答案。</p>
+        <div class="atlas-tag-row"><span class="atlas-mini-pill">#親子</span><span class="atlas-mini-pill">#音樂</span><span class="atlas-mini-pill">#嘻哈</span><span class="atlas-mini-pill">#說唱巔峰對決</span></div>
+      </div>
+    </a><a class="atlas-story-card is-album" href="articles/girls-let-us-watch-clouds.html">
+      <div class="atlas-cover">
+        <div class="atlas-cover-frame"><span>待補插圖</span><small>幸福點滴</small></div>
+        <b>女孩，讓我們看雲</b>
+      </div>
+      <div class="atlas-story-body">
+        <div class="atlas-story-meta"><span>2026.07.02</span><span>幸福點滴</span></div>
+        <h3>女孩，讓我們看雲去</h3>
+        <p>夫妻偶爾把彼此排在第一，不是自私，而是在替整個家庭充電。</p>
+        <div class="atlas-tag-row"><span class="atlas-mini-pill">#幸福點滴</span><span class="atlas-mini-pill">#夫妻</span><span class="atlas-mini-pill">#親子</span><span class="atlas-mini-pill">#約會</span></div>
+      </div>
+    </a><a class="atlas-story-card is-album" href="articles/temperature-of-now.html">
+      <div class="atlas-cover">
+        <div class="atlas-cover-frame"><span>待補插圖</span><small>幸福點滴</small></div>
+        <b>當下的溫度，就是</b>
+      </div>
+      <div class="atlas-story-body">
+        <div class="atlas-story-meta"><span>2026.07.01</span><span>幸福點滴</span></div>
+        <h3>當下的溫度，就是幸福的定義</h3>
+        <p>幸福大概就是這樣，不驚天動地，也沒有轟轟烈烈。</p>
+        <div class="atlas-tag-row"><span class="atlas-mini-pill">#幸福點滴</span><span class="atlas-mini-pill">#親子</span><span class="atlas-mini-pill">#龍弟弟</span><span class="atlas-mini-pill">#爸爸</span></div>
+      </div>
+    </a><a class="atlas-story-card is-album" href="articles/ai-website-scary-lover-concubine.html">
+      <div class="atlas-cover">
+        <div class="atlas-cover-frame"><span>待補插圖</span><small>AI 共創翻車現場</small></div>
+        <b>以為只是做網站，</b>
+      </div>
+      <div class="atlas-story-body">
+        <div class="atlas-story-meta"><span>2026.06.30</span><span>AI 共創</span></div>
+        <h3>以為只是做網站，最後變成恐怖情人小妾</h3>
+        <p>我只是想架個網站，妳卻想替我規劃人生。</p>
+        <div class="atlas-tag-row"><span class="atlas-mini-pill">#AI共創</span><span class="atlas-mini-pill">#ChatGPT</span><span class="atlas-mini-pill">#網站架設</span><span class="atlas-mini-pill">#品牌設計</span></div>
+      </div>
+    </a><a class="atlas-story-card is-album" href="articles/half-hour-of-summer.html">
+      <div class="atlas-cover">
+        <div class="atlas-cover-frame"><span>待補插圖</span><small>幸福點滴</small></div>
+        <b>雞爸爸和鼠姊姊的</b>
+      </div>
+      <div class="atlas-story-body">
+        <div class="atlas-story-meta"><span>2026.06.28</span><span>幸福點滴</span></div>
+        <h3>雞爸爸和鼠姊姊的半小時夏天</h3>
+        <p>孩子的童年，不只是那些盛大的旅行組成的。</p>
+        <div class="atlas-tag-row"><span class="atlas-mini-pill">#幸福點滴</span><span class="atlas-mini-pill">#親子</span><span class="atlas-mini-pill">#游泳</span><span class="atlas-mini-pill">#夏天</span></div>
+      </div>
+    </a><a class="atlas-story-card is-album" href="articles/ai-fake-artsy-meme.html">
+      <div class="atlas-cover">
+        <div class="atlas-cover-frame"><span>待補插圖</span><small>AI 共創翻車現場</small></div>
+        <b>只是想跟風假文青</b>
+      </div>
+      <div class="atlas-story-body">
+        <div class="atlas-story-meta"><span>2026.06.26</span><span>AI 共創</span></div>
+        <h3>只是想跟風假文青，AI 卻把我自己做成了迷因</h3>
+        <p>有時候作品不用 100 分，珍貴的反而是偶爾翻車時，那帶給我們一些意料之外快樂的瞬間。</p>
+        <div class="atlas-tag-row"><span class="atlas-mini-pill">#AI共創</span><span class="atlas-mini-pill">#AI製圖</span><span class="atlas-mini-pill">#ChatGPT</span><span class="atlas-mini-pill">#Gemini</span></div>
+      </div>
+    </a><a class="atlas-story-card is-album" href="articles/graduation-day.html">
+      <div class="atlas-cover">
+        <div class="atlas-cover-frame"><span>待補插圖</span><small>幸福點滴</small></div>
+        <b>鼠姊姊的中班畢業</b>
+      </div>
+      <div class="atlas-story-body">
+        <div class="atlas-story-meta"><span>2026.06.25</span><span>幸福點滴</span></div>
+        <h3>鼠姊姊的中班畢業典禮：唱跳、氣球與一整天的願望清單</h3>
+        <p>對大人來說，只是一場幼兒園的畢業典禮；對孩子來說，這可能是和朋友們的重要告別。</p>
+        <div class="atlas-tag-row"><span class="atlas-mini-pill">#幸福點滴</span><span class="atlas-mini-pill">#畢業典禮</span><span class="atlas-mini-pill">#幼兒園</span><span class="atlas-mini-pill">#成長</span></div>
+      </div>
+    </a><a class="atlas-story-card is-album" href="articles/pull-up-bar-swing-specialist.html">
+      <div class="atlas-cover">
+        <div class="atlas-cover-frame"><span>待補插圖</span><small>幸福點滴</small></div>
+        <b>原本想練背肌，卻</b>
+      </div>
+      <div class="atlas-story-body">
+        <div class="atlas-story-meta"><span>2026.06.16</span><span>幸福點滴</span></div>
+        <h3>原本想練背肌，卻成了推鞦韆專員</h3>
+        <p>有了孩子之後，很多東西都會意外走出新的方向；單槓不是我想像中的樣子，但好像變成了更好的樣子。</p>
+        <div class="atlas-tag-row"><span class="atlas-mini-pill">#親子</span><span class="atlas-mini-pill">#龍弟弟</span><span class="atlas-mini-pill">#單槓</span><span class="atlas-mini-pill">#盪鞦韆</span></div>
+      </div>
+    </a><a class="atlas-story-card is-album" href="articles/family-creatine-first-experiment.html">
+      <div class="atlas-cover">
+        <div class="atlas-cover-frame"><span>待補插圖</span><small>健康與身體研究</small></div>
+        <b>雞爸爸、兔阿嬤、</b>
+      </div>
+      <div class="atlas-story-body">
+        <div class="atlas-story-meta"><span>2026.06.10</span><span>生活研究</span></div>
+        <h3>雞爸爸、兔阿嬤、鼠媽媽的肌酸初體驗</h3>
+        <p>有些補充品是買給自己的，有些補充品收到後，想到的是家人。</p>
+        <div class="atlas-tag-row"><span class="atlas-mini-pill">#肌酸</span><span class="atlas-mini-pill">#健身補給</span><span class="atlas-mini-pill">#家庭保健</span><span class="atlas-mini-pill">#兔阿嬤</span></div>
+      </div>
+    </a><a class="atlas-story-card is-album" href="articles/atopic-skin-family-care.html">
+      <div class="atlas-cover">
+        <div class="atlas-cover-frame"><span>待補插圖</span><small>健康與身體研究</small></div>
+        <b>異位性皮膚家庭的</b>
+      </div>
+      <div class="atlas-story-body">
+        <div class="atlas-story-meta"><span>2026.06.07</span><span>生活研究</span></div>
+        <h3>異位性皮膚家庭的理解與陪伴</h3>
+        <p>我沒有辦法替你癢，但我們可以陪你一起加油。</p>
+        <div class="atlas-tag-row"><span class="atlas-mini-pill">#異位性皮膚炎</span><span class="atlas-mini-pill">#過敏</span><span class="atlas-mini-pill">#親子</span><span class="atlas-mini-pill">#陪伴</span></div>
+      </div>
+    </a><a class="atlas-story-card is-album" href="articles/biaoren-diting-asang.html">
+      <div class="atlas-cover">
+        <div class="atlas-cover-frame"><span>待補插圖</span><small>閱讀與角色分析</small></div>
+        <b>重看《鏢人》才懂</b>
+      </div>
+      <div class="atlas-story-body">
+        <div class="atlas-story-meta"><span>2026.06.06</span><span>生活研究</span></div>
+        <h3>重看《鏢人》才懂，「諦聽」以死明「相」</h3>
+        <p>其實，我們一直都有選擇。</p>
+        <div class="atlas-tag-row"><span class="atlas-mini-pill">#鏢人</span><span class="atlas-mini-pill">#諦聽</span><span class="atlas-mini-pill">#阿相</span><span class="atlas-mini-pill">#刀馬</span></div>
+      </div>
+    </a><a class="atlas-story-card is-album" href="articles/biaoren-desert-echo.html">
+      <div class="atlas-cover">
+        <div class="atlas-cover-frame"><span>待補插圖</span><small>閱讀與角色分析</small></div>
+        <b>【大漠餘響】為《</b>
+      </div>
+      <div class="atlas-story-body">
+        <div class="atlas-story-meta"><span>2026.06.04</span><span>生活研究</span></div>
+        <h3>【大漠餘響】為《鏢人》補上亂世的魂</h3>
+        <p>我想補完那些電影無法說出口的話。</p>
+        <div class="atlas-tag-row"><span class="atlas-mini-pill">#鏢人</span><span class="atlas-mini-pill">#武俠</span><span class="atlas-mini-pill">#漫畫</span><span class="atlas-mini-pill">#電影</span></div>
+      </div>
+    </a><a class="atlas-story-card is-album" href="articles/five-year-old-not-sleeping-alone.html">
+      <div class="atlas-cover">
+        <div class="atlas-cover-frame"><span>待補插圖</span><small>鼠姊姊成長日記, 夫妻與家庭日常</small></div>
+        <b>鼠姊姊五歲了還沒</b>
+      </div>
+      <div class="atlas-story-body">
+        <div class="atlas-story-meta"><span>2026.06.04</span><span>幸福點滴</span></div>
+        <h3>鼠姊姊五歲了還沒分房睡，是我們做錯了嗎？</h3>
+        <p>原來獨立睡覺從來不是年齡問題，其實更像是一個安全感問題。</p>
+        <div class="atlas-tag-row"><span class="atlas-mini-pill">#分房睡</span><span class="atlas-mini-pill">#陪睡</span><span class="atlas-mini-pill">#安全感</span><span class="atlas-mini-pill">#親子</span></div>
+      </div>
+    </a><a class="atlas-story-card is-album" href="articles/old-partner-nas.html">
+      <div class="atlas-cover">
+        <div class="atlas-cover-frame"><span>待補插圖</span><small>雞爸爸生活研究</small></div>
+        <b>我與我的老夥伴：</b>
+      </div>
+      <div class="atlas-story-body">
+        <div class="atlas-story-meta"><span>2026.06.02</span><span>生活研究</span></div>
+        <h3>我與我的老夥伴：納斯 NAS</h3>
+        <p>它既然還在位子上，我就會守護它到底。</p>
+        <div class="atlas-tag-row"><span class="atlas-mini-pill">#NAS</span><span class="atlas-mini-pill">#QNAP</span><span class="atlas-mini-pill">#資安稽核</span><span class="atlas-mini-pill">#ISO27001</span></div>
+      </div>
+    </a><a class="atlas-story-card is-album" href="articles/kids-first-baseball.html">
+      <div class="atlas-cover">
+        <div class="atlas-cover-frame"><span>待補插圖</span><small>鼠姊姊成長日記, 龍弟弟成長日記</small></div>
+        <b>鼠姊姊龍弟弟的棒</b>
+      </div>
+      <div class="atlas-story-body">
+        <div class="atlas-story-meta"><span>2026.06.01</span><span>幸福點滴</span></div>
+        <h3>鼠姊姊龍弟弟的棒球初體驗</h3>
+        <p>居然有一天可以打我女兒投給我的球。</p>
+        <div class="atlas-tag-row"><span class="atlas-mini-pill">#親子</span><span class="atlas-mini-pill">#棒球</span><span class="atlas-mini-pill">#玩具棒球</span><span class="atlas-mini-pill">#大巨蛋</span></div>
+      </div>
+    </a><a class="atlas-story-card is-album" href="articles/family-data-noise-hsp.html">
+      <div class="atlas-cover">
+        <div class="atlas-cover-frame"><span>待補插圖</span><small>雞爸爸生活研究, 夫妻與家庭日常</small></div>
+        <b>如何降低家庭專屬</b>
+      </div>
+      <div class="atlas-story-body">
+        <div class="atlas-story-meta"><span>2026.06.01</span><span>生活研究</span></div>
+        <h3>如何降低家庭專屬的「數據雜訊」</h3>
+        <p>適當叫個暫停，確認場邊暗號有沒有看錯。</p>
+        <div class="atlas-tag-row"><span class="atlas-mini-pill">#HSP</span><span class="atlas-mini-pill">#高敏感</span><span class="atlas-mini-pill">#家庭溝通</span><span class="atlas-mini-pill">#數據雜訊</span></div>
+      </div>
+    </a><a class="atlas-story-card is-album" href="articles/hsu-jo-hsi-six-scoreless.html">
+      <div class="atlas-cover">
+        <div class="atlas-cover-frame"><span>待補插圖</span><small>棒球札記</small></div>
+        <b>徐若熙把「我不屬</b>
+      </div>
+      <div class="atlas-story-body">
+        <div class="atlas-story-meta"><span>2026.05.31</span><span>棒球札記</span></div>
+        <h3>徐若熙把「我不屬於這裡」投成了過去，請往更棒的地方前進</h3>
+        <p>有些勝利記錄在計分板上，有些勝利則發生在心裡。</p>
+        <div class="atlas-tag-row"><span class="atlas-mini-pill">#徐若熙</span><span class="atlas-mini-pill">#龍之子</span><span class="atlas-mini-pill">#軟銀</span><span class="atlas-mini-pill">#日職</span></div>
+      </div>
+    </a><a class="atlas-story-card is-album" href="articles/why-i-like-linghu-chong.html">
+      <div class="atlas-cover">
+        <div class="atlas-cover-frame"><span>待補插圖</span><small>閱讀與角色分析</small></div>
+        <b>為什麼喜歡金庸筆</b>
+      </div>
+      <div class="atlas-story-body">
+        <div class="atlas-story-meta"><span>2026.05.31</span><span>生活研究</span></div>
+        <h3>為什麼喜歡金庸筆下的令狐沖？</h3>
+        <p>令狐沖之所以迷人，不是因為他劍法高，而是因為他活成了很多人想活卻不敢活的樣子。</p>
+        <div class="atlas-tag-row"><span class="atlas-mini-pill">#金庸</span><span class="atlas-mini-pill">#笑傲江湖</span><span class="atlas-mini-pill">#令狐沖</span><span class="atlas-mini-pill">#武俠</span></div>
+      </div>
+    </a><a class="atlas-story-card is-album" href="articles/hsp-energy-pitch-count.html">
+      <div class="atlas-cover">
+        <div class="atlas-cover-frame"><span>待補插圖</span><small>雞爸爸生活研究</small></div>
+        <b>關注「能量用球數</b>
+      </div>
+      <div class="atlas-story-body">
+        <div class="atlas-story-meta"><span>2026.05.29</span><span>生活研究</span></div>
+        <h3>關注「能量用球數」：HSP 的守護神基因</h3>
+        <p>真正成熟的情緒管理，從來不是硬撐，而是看懂自己的用球數。</p>
+        <div class="atlas-tag-row"><span class="atlas-mini-pill">#HSP</span><span class="atlas-mini-pill">#高敏感</span><span class="atlas-mini-pill">#能量用球數</span><span class="atlas-mini-pill">#情緒管理</span></div>
+      </div>
+    </a><a class="atlas-story-card is-album" href="articles/hsp-not-overthinking.html">
+      <div class="atlas-cover">
+        <div class="atlas-cover-frame"><span>待補插圖</span><small>雞爸爸生活研究</small></div>
+        <b>你不是想太多，你</b>
+      </div>
+      <div class="atlas-story-body">
+        <div class="atlas-story-meta"><span>2026.05.29</span><span>生活研究</span></div>
+        <h3>你不是想太多，你只是接收得太多</h3>
+        <p>問題從來不是誰比較弱，而是你有沒有看懂自己的投球數據。</p>
+        <div class="atlas-tag-row"><span class="atlas-mini-pill">#HSP</span><span class="atlas-mini-pill">#高敏感</span><span class="atlas-mini-pill">#DOES</span><span class="atlas-mini-pill">#深度處理</span></div>
+      </div>
+    </a><a class="atlas-story-card is-album" href="articles/chen-tzu-hao-slump-analysis.html">
+      <div class="atlas-cover">
+        <div class="atlas-cover-frame"><span>待補插圖</span><small>棒球札記</small></div>
+        <b>陳子豪在味全的低</b>
+      </div>
+      <div class="atlas-story-body">
+        <div class="atlas-story-meta"><span>2026.05.22</span><span>棒球札記</span></div>
+        <h3>陳子豪在味全的低潮：究竟是心態、環境，還是玄學？</h3>
+        <p>不要看現在的打擊率，去看他上場時，有沒有找回 12% 的保送率。</p>
+        <div class="atlas-tag-row"><span class="atlas-mini-pill">#味全龍</span><span class="atlas-mini-pill">#陳子豪</span><span class="atlas-mini-pill">#TTO</span><span class="atlas-mini-pill">#BABIP</span></div>
+      </div>
+    </a><a class="atlas-story-card is-album" href="articles/dragons-tto-1996-2023.html">
+      <div class="atlas-cover">
+        <div class="atlas-cover-frame"><span>待補插圖</span><small>棒球札記</small></div>
+        <b>跨越世代龍魂：純</b>
+      </div>
+      <div class="atlas-story-body">
+        <div class="atlas-story-meta"><span>2026.05.22</span><span>棒球札記</span></div>
+        <h3>跨越世代龍魂：純種砲手指數 TTO 看味全龍 1996 vs. 2023 打線演變</h3>
+        <p>龍魂的傳承不僅在於拚勁，更在於不斷進化的打擊智慧。</p>
+        <div class="atlas-tag-row"><span class="atlas-mini-pill">#味全龍</span><span class="atlas-mini-pill">#TTO</span><span class="atlas-mini-pill">#Three True Outcomes</span><span class="atlas-mini-pill">#吉力吉撈</span></div>
+      </div>
+    </a><a class="atlas-story-card is-album" href="articles/dragons-speed-game.html">
+      <div class="atlas-cover">
+        <div class="atlas-cover-frame"><span>待補插圖</span><small>棒球札記</small></div>
+        <b>味全龍的速度戰：</b>
+      </div>
+      <div class="atlas-story-body">
+        <div class="atlas-story-meta"><span>2026.05.22</span><span>棒球札記</span></div>
+        <h3>味全龍的速度戰：從大帝士盜出三連霸，看二代龍的腿哥部隊</h3>
+        <p>用速度，校正大數據的無情。</p>
+        <div class="atlas-tag-row"><span class="atlas-mini-pill">#味全龍</span><span class="atlas-mini-pill">#速度戰</span><span class="atlas-mini-pill">#盜壘</span><span class="atlas-mini-pill">#張政禹</span></div>
+      </div>
+    </a><a class="atlas-story-card is-album" href="articles/dragons-90s-memory.html">
+      <div class="atlas-cover">
+        <div class="atlas-cover-frame"><span>待補插圖</span><small>棒球札記</small></div>
+        <b>雞爸爸 90~9</b>
+      </div>
+      <div class="atlas-story-body">
+        <div class="atlas-story-meta"><span>2026.05.20</span><span>棒球札記</span></div>
+        <h3>雞爸爸 90~99 味全龍系列回顧</h3>
+        <p>生命中曾有的那一抹紅，從來沒有真正褪去過。</p>
+        <div class="atlas-tag-row"><span class="atlas-mini-pill">#味全龍</span><span class="atlas-mini-pill">#龍魂</span><span class="atlas-mini-pill">#黃平洋</span><span class="atlas-mini-pill">#坎沙諾</span></div>
+      </div>
+    </a></div>
+      <div class="atlas-version-note">CDJ_KNOWLEDGE_ATLAS_V1_20260706 · static · no fetch · 26 works</div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer footer-cta"><div class="footer-inner"><div><strong>雞爸爸生活研究室</strong><p>把生活寫成故事，把故事整理成一家人的宇宙。</p></div><a href="articles.html">閱讀故事</a></div></footer>
+</body></html>
