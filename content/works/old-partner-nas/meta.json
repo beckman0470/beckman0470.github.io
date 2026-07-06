@@ -1,0 +1,40 @@
+{
+  "id": "CDJ-20260602-OLD-PARTNER-NAS",
+  "title": "我與我的老夥伴：納斯 NAS",
+  "slug": "old-partner-nas",
+  "series": "生活研究",
+  "category": "生活研究",
+  "published": "2026-06-02",
+  "updated": "2026-06-02",
+  "readingTime": 4,
+  "subtitle": "一台 NAS 的職場維運日常，也是一段和老夥伴一起撐過稽核的故事。",
+  "signature": "它既然還在位子上，我就會守護它到底。",
+  "people": [
+    "納斯／老納",
+    "我",
+    "主管",
+    "協理",
+    "SGS",
+    "政府機關資安稽核"
+  ],
+  "relationship": [
+    "雞爸爸 × NAS 維運日常"
+  ],
+  "tags": [
+    "NAS",
+    "QNAP",
+    "資安稽核",
+    "ISO27001",
+    "備份",
+    "快照",
+    "QuLog",
+    "HBS3",
+    "Security Counselor",
+    "職場維運"
+  ],
+  "source": "Vocus",
+  "status": "published",
+  "cardGroup": [
+    "雞爸爸生活研究"
+  ]
+}
