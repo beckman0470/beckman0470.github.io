@@ -1,88 +1,68 @@
-<!DOCTYPE html>
-<html lang="zh-Hant">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Knowledge Graph｜雞爸爸生活研究室</title>
-<meta name="theme-color" content="#263328">
-<style>
-:root{--paper:#F8F6F1;--surface:#FFFDF8;--ink:#263328;--muted:#687463;--brown:#A67C52;--line:#E6DED1;--shadow:0 24px 60px rgba(70,55,35,.12);--serif:Georgia,"Times New Roman",serif;--sans:-apple-system,BlinkMacSystemFont,"Noto Sans TC","Microsoft JhengHei",Arial,sans-serif}
-*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75}a{text-decoration:none;color:inherit}.container{width:min(1180px,calc(100% - 40px));margin:auto}.muted{color:var(--muted)}.kicker{font-size:13px;font-weight:900;letter-spacing:.16em;text-transform:uppercase;color:var(--brown)}
-.header{padding:64px 0 34px;background:linear-gradient(180deg,#FFFDF8 0%,#F8F6F1 100%)}h1{font-family:var(--serif);font-size:clamp(48px,7vw,86px);line-height:1.05;letter-spacing:-.04em;margin:14px 0}.lead{font-size:21px;color:#344238;max-width:780px}.nav{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.btn{display:inline-flex;padding:11px 18px;border-radius:999px;background:var(--ink);color:white;font-weight:950}.btn.secondary{background:var(--surface);color:var(--ink);border:1px solid var(--line)}
-.section{padding:38px 0}.grid{display:grid;grid-template-columns:320px 1fr;gap:22px}.panel{background:var(--surface);border:1px solid var(--line);border-radius:26px;box-shadow:var(--shadow);padding:22px}.node-list{display:grid;gap:8px;max-height:680px;overflow:auto}.node-btn{border:1px solid var(--line);background:#FFFDF8;border-radius:16px;padding:10px 12px;text-align:left;cursor:pointer}.node-btn:hover,.node-btn.active{background:#EEE6D9}.chip{display:inline-flex;padding:4px 9px;border-radius:999px;background:#EEE6D9;color:var(--brown);font-size:12px;font-weight:950}.details h2{font-size:34px;margin:6px 0}.related-list{display:grid;gap:12px;margin-top:18px}.related-item{display:grid;grid-template-columns:100px 1fr auto;gap:14px;align-items:center;border-top:1px solid var(--line);padding:14px 0}.empty{color:var(--muted);padding:18px 0}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:18px}.stat{background:#F8F6F1;border:1px solid var(--line);border-radius:18px;padding:14px}.stat strong{display:block;font-family:var(--serif);font-size:32px;color:var(--brown);line-height:1}
-@media(max-width:900px){.grid{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}}@media(max-width:620px){.container{width:min(100% - 28px,1180px)}.related-item{grid-template-columns:1fr}.stats{grid-template-columns:1fr}}
-</style>
-<link rel="stylesheet" href="./css/visual-polish.css">
-<meta name="description" content="雞爸爸生活研究室的知識圖譜，探索文章、人物、標籤、系列與研究主題的關聯。">
-<link rel="canonical" href="https://beckman0470.github.io/knowledge.html">
-<meta property="og:site_name" content="Chicken Dad Journal">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Knowledge Graph｜雞爸爸生活研究室">
-<meta property="og:description" content="雞爸爸生活研究室的知識圖譜，探索文章、人物、標籤、系列與研究主題的關聯。">
-<meta property="og:url" content="https://beckman0470.github.io/knowledge.html">
-<meta property="og:image" content="https://beckman0470.github.io/assets/og/og-image.svg">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Knowledge Graph｜雞爸爸生活研究室">
-<meta name="twitter:description" content="雞爸爸生活研究室的知識圖譜，探索文章、人物、標籤、系列與研究主題的關聯。">
-<meta name="twitter:image" content="https://beckman0470.github.io/assets/og/og-image.svg">
-<meta name="theme-color" content="#263328">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Knowledge Graph｜雞爸爸生活研究室", "description": "雞爸爸生活研究室的知識圖譜，探索文章、人物、標籤、系列與研究主題的關聯。", "url": "https://beckman0470.github.io/knowledge.html", "isPartOf": {"@type": "WebSite", "name": "雞爸爸生活研究室", "url": "https://beckman0470.github.io/"}}</script>
-<link rel="stylesheet" href="./css/global-layout-sync.css">
-<link rel="stylesheet" href="./css/v7-studio.css">
-<link rel="stylesheet" href="./css/v7-0-2-home-hero.css">
-<link rel="stylesheet" href="css/homepage-v2.css">
-</head>
-<body class="knowledge-page">
-<header class="site-header">
-    <div class="header-inner">
-      <a class="brand" href="index.html" aria-label="雞爸爸生活研究室首頁">
-        <img src="assets/step1a-redo/logo.png" alt="雞爸爸生活研究室 Logo">
-        <span>
-          <strong>雞爸爸生活研究室</strong>
-          <span>Chicken Dad Journal</span>
-        </span>
-      </a>
-
-      <nav class="nav" aria-label="主要導覽">
-        <a href="index.html">首頁</a>
-        <a href="articles.html">故事</a>
-        <a href="series.html">系列</a>
-        <a href="timeline.html">時間軸</a>
-        <a class="active" href="knowledge.html">知識圖譜</a>
-        <a href="search.html">搜尋</a>
-        <a href="tags.html">標籤</a>
-        <a href="family.html">我們一家</a>
-        <a href="about.html">關於</a>
-      </nav>
-    </div>
-  </header>
-<main class="section">
-  <div class="container">
-    <div class="stats" id="graph-stats"></div>
-    <div class="grid">
-      <aside class="panel">
-        <div class="kicker">Nodes</div>
-        <h2>節點</h2>
-        <div class="node-list" id="node-list">讀取中……</div>
-      </aside>
-      <section class="panel details" id="node-details">
-        <div class="empty">請選擇一個節點。</div>
-      </section>
-    </div>
-  </div>
-</main>
-<script defer src="./js/knowledge-graph.js"></script>
-
-<section class="footer-cta" aria-label="前往 VOCUS 沙龍">
-      <strong>一起累積幸福的點點滴滴。</strong>
-      <a class="vocus-btn" href="https://vocus.cc/salon/jisoopama-baby-cat" target="_blank" rel="noopener">前往 VOCUS 沙龍</a>
-      <div class="social" aria-label="社群連結">
-        <span>追蹤雞爸爸</span>
-        <span>f</span>
-        <span>◎</span>
-        <span>▶</span>
-        <span>vocus</span>
-      </div>
-    </section>
-</body>
-</html>
+/* CDJ_KNOWLEDGE_ATLAS_V1_20260706 */
+.atlas-page{background:#fff8ec;color:#17120d;}
+.atlas-page a{color:inherit;text-decoration:none;}
+.atlas-container{width:min(1120px,calc(100% - 40px));margin:0 auto;}
+.atlas-kicker{color:#8a5a22;font-size:12px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;margin-bottom:10px;}
+.atlas-hero{padding:72px 0 36px;background:linear-gradient(180deg,#fff8ec 0%,#fffaf2 70%,#fff8ec 100%);}
+.atlas-hero-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(300px,.8fr);gap:32px;align-items:end;}
+.atlas-hero h1{font-size:clamp(42px,7vw,74px);line-height:.98;margin:0 0 18px;letter-spacing:-.065em;}
+.atlas-hero p{max-width:760px;color:#62564c;line-height:1.9;font-size:18px;margin:0;}
+.atlas-hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px;}
+.atlas-hero-actions a{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:11px 18px;font-weight:900;border:1px solid #dcbf92;background:#fffdf7;color:#8a5a22;box-shadow:0 8px 20px rgba(96,65,28,.06);}
+.atlas-hero-actions a:first-child{background:#8a5a22;color:#fff8ec;border-color:#8a5a22;}
+.atlas-stat-card{background:#fffdf7;border:1px solid #ead8bd;border-radius:28px;padding:22px;box-shadow:0 18px 44px rgba(96,65,28,.08);}
+.atlas-stat-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;}
+.atlas-stat-grid div{border:1px solid #eedfc8;background:#fff8ec;border-radius:20px;padding:18px;text-align:center;}
+.atlas-stat-grid strong{display:block;color:#8a5a22;font-size:34px;line-height:1;font-weight:950;}
+.atlas-stat-grid span{display:block;margin-top:7px;font-weight:900;}
+.atlas-stat-grid small{display:block;margin-top:3px;color:#8d7864;font-size:12px;font-weight:700;}
+.atlas-tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;padding:14px 0 28px;}
+.atlas-tabs a{background:#fffdf7;border:1px solid #ead8bd;border-radius:20px;padding:18px;box-shadow:0 10px 24px rgba(96,65,28,.05);transition:.2s ease;}
+.atlas-tabs a:hover,.atlas-story-card:hover,.atlas-relation-card:hover,.atlas-theme-card:hover{transform:translateY(-2px);box-shadow:0 16px 32px rgba(96,65,28,.10);}
+.atlas-tabs b{display:block;font-size:18px;margin-bottom:5px;}.atlas-tabs span{color:#675a4d;line-height:1.6;font-size:14px;}
+.atlas-note{background:#fff7e7;border:1px solid #ead8bd;border-radius:22px;padding:18px 20px;color:#62564c;line-height:1.85;margin-bottom:22px;}
+.atlas-note b{color:#3c322a;}
+.atlas-section{padding:36px 0 54px;}
+.atlas-section-head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin-bottom:22px;}
+.atlas-section h2{font-size:clamp(30px,4.2vw,46px);line-height:1.1;margin:0 0 8px;letter-spacing:-.045em;}
+.atlas-section-head p{max-width:760px;color:#62564c;line-height:1.75;margin:0;}
+.atlas-person-grid{display:grid;gap:20px;}
+.atlas-person-card,.atlas-relation-card,.atlas-theme-card,.atlas-story-card{background:#fffdf7;border:1px solid #ead8bd;border-radius:24px;box-shadow:0 12px 28px rgba(96,65,28,.055);}
+.atlas-person-card{padding:24px;}
+.atlas-person-head{display:grid;grid-template-columns:auto 1fr auto;gap:18px;align-items:center;}
+.atlas-avatar{width:66px;height:66px;border-radius:22px;background:linear-gradient(135deg,#f7d29e,#fff7e7);border:1px solid #ead8bd;display:grid;place-items:center;font-size:30px;font-weight:950;color:#8a5a22;}
+.atlas-person-head h3{font-size:26px;margin:0 0 6px;letter-spacing:-.03em;}
+.atlas-person-head p{margin:0;color:#62564c;line-height:1.7;}
+.atlas-person-head strong{font-size:24px;color:#8a5a22;white-space:nowrap;}
+.atlas-pill-row,.atlas-tag-row{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px;}
+.atlas-pill,.atlas-mini-pill,.atlas-cloud-pill{display:inline-flex;align-items:center;border-radius:999px;border:1px solid #ead8bd;background:#f7ead5;color:#8a5a22;font-weight:900;}
+.atlas-pill{font-size:12px;padding:6px 10px;}.atlas-mini-pill{font-size:11px;padding:4px 8px;margin:0 4px 6px 0;}
+.atlas-person-arcs{margin:18px 0 4px;display:grid;grid-template-columns:160px 1fr;gap:14px;background:#fff8ec;border:1px dashed #e5cfaa;border-radius:18px;padding:14px 16px;}
+.atlas-person-arcs b{color:#8a5a22;}.atlas-person-arcs ul{margin:0;padding-left:18px;color:#55483f;line-height:1.7;}
+.atlas-story-strip{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:18px;}
+.atlas-story-card{display:flex;flex-direction:column;min-height:100%;overflow:hidden;transition:.2s ease;}
+.atlas-cover{aspect-ratio:16/10;background:linear-gradient(135deg,#f4cd95 0%,#fff4df 48%,#d8e2d2 100%);position:relative;display:flex;align-items:flex-end;justify-content:space-between;padding:14px;overflow:hidden;}
+.atlas-cover::after{content:'';position:absolute;inset:12px;border:1px dashed rgba(126,83,45,.32);border-radius:16px;}
+.atlas-cover-frame{position:relative;z-index:1;display:grid;gap:2px;}.atlas-cover-frame span{font-weight:950;color:#7d4b21;}.atlas-cover-frame small{font-size:12px;color:#80634b;font-weight:800;}
+.atlas-cover b{position:relative;z-index:1;width:58px;height:58px;border-radius:18px;background:rgba(255,253,247,.72);border:1px solid rgba(220,191,146,.85);display:grid;place-items:center;text-align:center;font-size:13px;line-height:1.2;color:#8a5a22;padding:6px;}
+.atlas-story-body{padding:16px;display:flex;flex-direction:column;flex:1;}
+.atlas-story-meta{display:flex;gap:8px;justify-content:space-between;color:#8d7864;font-size:12px;font-weight:900;margin-bottom:8px;}
+.atlas-story-card h3{font-size:18px;line-height:1.36;margin:0 0 10px;letter-spacing:-.025em;}
+.atlas-story-card p{color:#62564c;line-height:1.65;font-size:14px;margin:0;}
+.atlas-story-card.is-compact .atlas-cover{display:none;}.atlas-story-card.is-compact h3{font-size:16px;}.atlas-story-card.is-compact p{display:none;}
+.atlas-relation-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;}
+.atlas-relation-card{padding:20px;transition:.2s ease;}
+.atlas-relation-line{font-size:19px;font-weight:950;color:#8a5a22;line-height:1.35;margin-bottom:8px;}
+.atlas-relation-card p{color:#62564c;line-height:1.72;margin:0 0 10px;}
+.atlas-relation-count{font-size:12px;font-weight:900;color:#8d7864;margin-bottom:10px;}
+.atlas-relation-card ul{margin:0;padding-left:18px;line-height:1.5;}.atlas-relation-card li{margin:7px 0;}.atlas-relation-card a:hover{color:#8a5a22;}
+.atlas-theme-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;}
+.atlas-theme-card{padding:22px;transition:.2s ease;}
+.atlas-theme-head{display:grid;grid-template-columns:1fr auto;gap:16px;align-items:start;}.atlas-theme-head h3{font-size:24px;margin:0 0 8px;}.atlas-theme-head p{color:#62564c;line-height:1.72;margin:0;}.atlas-theme-head strong{font-size:26px;color:#8a5a22;white-space:nowrap;}
+.atlas-theme-list{display:grid;gap:8px;margin-top:14px;}.atlas-theme-list a{display:grid;grid-template-columns:110px 1fr;gap:12px;border-top:1px solid #f0e0c8;padding:10px 0;line-height:1.45;}.atlas-theme-list a:hover strong{color:#8a5a22;}.atlas-theme-list span{font-size:12px;color:#8d7864;font-weight:900;}.atlas-theme-list strong{font-size:15px;}
+.atlas-cloud{display:flex;gap:9px;flex-wrap:wrap;}.atlas-cloud-pill{padding:8px 12px;background:#fffdf7;}.atlas-cloud-pill small{margin-left:6px;color:#8d7864;}
+.atlas-album-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;}.atlas-story-card.is-album h3{font-size:18px;}
+.atlas-version-note{margin-top:30px;text-align:center;color:#9b8064;font-size:12px;}
+.atlas-muted{color:#8d7864;}
+@media(max-width:980px){.atlas-hero-grid{grid-template-columns:1fr}.atlas-tabs,.atlas-story-strip,.atlas-relation-grid,.atlas-album-grid{grid-template-columns:repeat(2,minmax(0,1fr));}.atlas-theme-grid{grid-template-columns:1fr}.atlas-person-head{grid-template-columns:auto 1fr}.atlas-person-head strong{grid-column:1/-1}.atlas-person-arcs{grid-template-columns:1fr}}
+@media(max-width:640px){.atlas-container{width:min(100% - 28px,1120px)}.atlas-hero{padding-top:42px}.atlas-tabs,.atlas-story-strip,.atlas-relation-grid,.atlas-album-grid{grid-template-columns:1fr}.atlas-stat-grid{grid-template-columns:1fr 1fr}.atlas-person-head{grid-template-columns:1fr}.atlas-avatar{width:58px;height:58px}.atlas-theme-head,.atlas-theme-list a{grid-template-columns:1fr}.atlas-section{padding:28px 0 42px}}
