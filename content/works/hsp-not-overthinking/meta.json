@@ -36,5 +36,8 @@
   "status": "published",
   "cardGroup": [
     "雞爸爸生活研究"
-  ]
+  ],
+  "cover": "assets/story-covers/default.svg",
+  "coverAlt": "你不是想太多，你只是接收得太多｜雞爸爸生活研究室代表插圖",
+  "coverStatus": "placeholder"
 }

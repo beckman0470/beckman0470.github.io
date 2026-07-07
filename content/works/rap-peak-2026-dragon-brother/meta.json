@@ -31,5 +31,8 @@
     "成長日記",
     "幸福點滴"
   ],
-  "related": []
+  "related": [],
+  "cover": "assets/story-covers/default.svg",
+  "coverAlt": "說唱巔峰對決2026：炸場首推龍弟弟｜雞爸爸生活研究室代表插圖",
+  "coverStatus": "placeholder"
 }

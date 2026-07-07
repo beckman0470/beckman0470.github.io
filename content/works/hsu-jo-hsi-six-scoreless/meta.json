@@ -31,5 +31,8 @@
   "status": "published",
   "cardGroup": [
     "棒球札記"
-  ]
+  ],
+  "cover": "assets/story-covers/default.svg",
+  "coverAlt": "徐若熙把「我不屬於這裡」投成了過去，請往更棒的地方前進｜雞爸爸生活研究室代表插圖",
+  "coverStatus": "placeholder"
 }

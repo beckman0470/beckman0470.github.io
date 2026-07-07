@@ -32,5 +32,8 @@
     "AI 共創翻車現場"
   ],
   "source": "Vocus",
-  "status": "published"
+  "status": "published",
+  "cover": "assets/story-covers/default.svg",
+  "coverAlt": "以為只是做網站，最後變成恐怖情人小妾｜雞爸爸生活研究室代表插圖",
+  "coverStatus": "placeholder"
 }

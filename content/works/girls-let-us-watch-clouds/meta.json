@@ -33,5 +33,8 @@
   "related": [
     "temperature-of-now",
     "half-hour-of-summer"
-  ]
+  ],
+  "cover": "assets/story-covers/default.svg",
+  "coverAlt": "女孩，讓我們看雲去｜雞爸爸生活研究室代表插圖",
+  "coverStatus": "placeholder"
 }

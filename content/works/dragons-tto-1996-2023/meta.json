@@ -45,5 +45,8 @@
   "status": "published",
   "cardGroup": [
     "棒球札記"
-  ]
+  ],
+  "cover": "assets/story-covers/default.svg",
+  "coverAlt": "跨越世代龍魂：純種砲手指數 TTO 看味全龍 1996 vs. 2023 打線演變｜雞爸爸生活研究室代表插圖",
+  "coverStatus": "placeholder"
 }

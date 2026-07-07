@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="雞爸爸生活研究室預設文章封面">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff7e6"/>
+      <stop offset="0.55" stop-color="#f5e4c9"/>
+      <stop offset="1" stop-color="#e9cfa7"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#6d4b24" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1010" cy="120" r="120" fill="#fffdf7" opacity="0.42"/>
+  <circle cx="170" cy="520" r="150" fill="#fffdf7" opacity="0.36"/>
+  <g filter="url(#shadow)">
+    <rect x="120" y="112" width="960" height="406" rx="44" fill="#fffdf7" opacity="0.92"/>
+  </g>
+  <text x="160" y="210" fill="#8a5a22" font-size="28" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Noto Sans TC', sans-serif" font-weight="800" letter-spacing="4">CHICKEN DAD JOURNAL</text>
+  <text x="160" y="300" fill="#263328" font-size="70" font-family="Georgia, 'Noto Serif TC', serif" font-weight="700">雞爸爸生活研究室</text>
+  <text x="160" y="370" fill="#5d6a5f" font-size="34" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Noto Sans TC', sans-serif">用科學理解生活，用陪伴記錄成長</text>
+  <text x="160" y="445" fill="#a67c52" font-size="28" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Noto Sans TC', sans-serif" font-weight="700">文章代表插圖待補</text>
+</svg>

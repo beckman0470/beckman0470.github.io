@@ -37,5 +37,8 @@
   "cardGroup": [
     "鼠姊姊成長日記",
     "健康與身體研究"
-  ]
+  ],
+  "cover": "assets/story-covers/default.svg",
+  "coverAlt": "鼠姊姊半夜兩點的喘鳴聲：那一晚，我們又再次認識「急性氣喘」｜雞爸爸生活研究室代表插圖",
+  "coverStatus": "placeholder"
 }

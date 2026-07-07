@@ -32,5 +32,8 @@
   "status": "published",
   "cardGroup": [
     "健康與身體研究"
-  ]
+  ],
+  "cover": "assets/story-covers/default.svg",
+  "coverAlt": "雞爸爸、兔阿嬤、鼠媽媽的肌酸初體驗｜雞爸爸生活研究室代表插圖",
+  "coverStatus": "placeholder"
 }

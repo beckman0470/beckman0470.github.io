@@ -1,5 +1,5 @@
 {
-  "version": "7.2.2",
+  "version": "7.2.4-seo-cover-architecture",
   "works": [
     "content/works/pull-up-bar-swing-specialist/meta.json",
     "content/works/rap-peak-2026-dragon-brother/meta.json",
@@ -29,5 +29,6 @@
     "content/works/midnight-asthma-wheezing-lesson/meta.json"
   ],
   "series": "content/series/index.json",
-  "people": "content/people/index.json"
+  "people": "content/people/index.json",
+  "coverArchitecture": "assets/story-covers/<slug>.jpg with default.svg fallback"
 }

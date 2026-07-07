@@ -45,5 +45,8 @@
   "status": "published",
   "cardGroup": [
     "閱讀與角色分析"
-  ]
+  ],
+  "cover": "assets/story-covers/default.svg",
+  "coverAlt": "【大漠餘響】為《鏢人》補上亂世的魂｜雞爸爸生活研究室代表插圖",
+  "coverStatus": "placeholder"
 }

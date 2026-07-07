@@ -39,5 +39,8 @@
   "status": "published",
   "cardGroup": [
     "閱讀與角色分析"
-  ]
+  ],
+  "cover": "assets/story-covers/default.svg",
+  "coverAlt": "重看《鏢人》才懂，「諦聽」以死明「相」｜雞爸爸生活研究室代表插圖",
+  "coverStatus": "placeholder"
 }

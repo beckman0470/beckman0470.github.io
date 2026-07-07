@@ -40,5 +40,8 @@
   "status": "published",
   "cardGroup": [
     "鼠姊姊成長日記"
-  ]
+  ],
+  "cover": "assets/story-covers/default.svg",
+  "coverAlt": "畫冊上的那隻手，把想媽媽變成鼠姊姊可以握住的勇氣｜雞爸爸生活研究室代表插圖",
+  "coverStatus": "placeholder"
 }

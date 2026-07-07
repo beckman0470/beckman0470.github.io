@@ -33,5 +33,8 @@
   "cardGroup": [
     "雞爸爸生活研究",
     "夫妻與家庭日常"
-  ]
+  ],
+  "cover": "assets/story-covers/default.svg",
+  "coverAlt": "如何降低家庭專屬的「數據雜訊」｜雞爸爸生活研究室代表插圖",
+  "coverStatus": "placeholder"
 }

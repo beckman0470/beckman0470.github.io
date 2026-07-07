@@ -32,5 +32,8 @@
     "AI 共創翻車現場"
   ],
   "source": "Vocus",
-  "status": "published"
+  "status": "published",
+  "cover": "assets/story-covers/default.svg",
+  "coverAlt": "只是想跟風假文青，AI 卻把我自己做成了迷因｜雞爸爸生活研究室代表插圖",
+  "coverStatus": "placeholder"
 }

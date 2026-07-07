@@ -33,5 +33,8 @@
   "cardGroup": [
     "鼠姊姊成長日記",
     "夫妻與家庭日常"
-  ]
+  ],
+  "cover": "assets/story-covers/default.svg",
+  "coverAlt": "鼠姊姊五歲了還沒分房睡，是我們做錯了嗎？｜雞爸爸生活研究室代表插圖",
+  "coverStatus": "placeholder"
 }
