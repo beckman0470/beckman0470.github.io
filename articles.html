@@ -63,6 +63,8 @@
 .archive-version-note { margin-top:30px; color:#9b8064; font-size:12px; text-align:center; }
 @media (max-width: 920px){ .archive-collection-grid,.archive-work-grid,.archive-small-grid,.archive-topic-grid{ grid-template-columns:1fr 1fr; } }
 @media (max-width: 640px){ .archive-container{ width:min(100% - 28px,1120px);} .archive-collection-grid,.archive-work-grid,.archive-small-grid,.archive-topic-grid{ grid-template-columns:1fr; } .archive-section-head,.archive-series-card-head,.archive-month-head{ display:block; } .archive-timeline-item{ grid-template-columns:1fr; gap:6px; } .archive-work-card{ min-height:auto; } }
+
+.archive-tool-row{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 6px}.archive-tool-link{display:inline-flex;align-items:center;justify-content:center;border:1px solid #ead8bd;background:#fffdf7;color:#8a5a22;text-decoration:none;border-radius:999px;padding:9px 14px;font-weight:900;font-size:13px;box-shadow:0 8px 20px rgba(96,65,28,.05)}.archive-tool-link:hover{transform:translateY(-1px);box-shadow:0 12px 26px rgba(96,65,28,.08)}
 </style>
 </head><body class="archive-page" data-static-version="entry-static-v3-20260706">
 <header class="site-header">
@@ -71,22 +73,17 @@
       <img src="assets/step1a-redo/logo.png" alt="雞爸爸生活研究室 Logo">
       <span><strong>雞爸爸生活研究室</strong><span>Chicken Dad Journal</span></span>
     </a>
-    <nav class="nav" aria-label="主要導覽">
-      <a  href="index.html">首頁</a>
-      <a class="active" href="articles.html">故事</a>
-      <a  href="series.html">系列</a>
-      <a  href="timeline.html">時間軸</a>
-      <a href="knowledge.html">知識圖譜</a>
-      <a href="search.html">搜尋</a>
-      <a href="tags.html">標籤</a>
-      <a href="family.html">我們一家</a>
-      <a href="about.html">關於</a>
-    </nav>
+    <nav class="nav" aria-label="主要導覽" data-nav-version="CDJ_NAV_VERSION_B_20260707">
+        <a href="index.html">首頁</a>
+        <a class="active" href="articles.html">故事</a>
+        <a href="knowledge.html">宇宙圖鑑</a>
+        <a href="about.html">關於</a>
+      </nav>
   </div>
 </header>
 <main>
 
-<section class="archive-hero"><div class="archive-container"><div class="archive-kicker">Works</div><h1>故事</h1><p>這裡收錄 Vocus 已正式發表的作品。網站作為典藏館，忠於原文，也把每篇作品整理成可以慢慢閱讀的入口。</p><div class="archive-collection-grid" aria-label="作品分類"><a class="archive-collection-card" href="#series-happy">
+<section class="archive-hero"><div class="archive-container"><div class="archive-kicker">Works</div><h1>故事</h1><p>這裡收錄 Vocus 已正式發表的作品。網站作為典藏館，忠於原文，也把每篇作品整理成可以慢慢閱讀的入口。</p><div class="archive-tool-row" aria-label="故事延伸入口" data-version="CDJ_STORY_SECONDARY_NAV_V1_20260707"><a class="archive-tool-link" href="series.html">系列</a><a class="archive-tool-link" href="timeline.html">時間軸</a><a class="archive-tool-link" href="search.html">搜尋</a><a class="archive-tool-link" href="tags.html">標籤</a></div><div class="archive-collection-grid" aria-label="作品分類"><a class="archive-collection-card" href="#series-happy">
           <strong>🏡 幸福點滴</strong><p>家庭、孩子、陪伴與日常裡長出的幸福紀錄。</p><small>9 篇</small></a><a class="archive-collection-card" href="#series-life">
           <strong>🔍 生活研究</strong><p>健康、健身、壓力、睡眠、家庭溝通與職場維運的生活實驗。</p><small>10 篇</small></a><a class="archive-collection-card" href="#series-baseball">
           <strong>⚾ 棒球札記</strong><p>味全龍、球員、戰術、數據與球迷記憶。</p><small>5 篇</small></a><a class="archive-collection-card" href="#series-ai">
