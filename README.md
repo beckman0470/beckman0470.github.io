@@ -1,38 +1,51 @@
-# 雞爸爸生活研究室｜首頁角色圖置換包 v3.2
+# 首頁角色圖強制刷新置換包 v3.3
 
-本包只置換首頁「我們這一家」區塊中的兩張角色圖片：
+你線上看到的龍弟弟仍是舊圖，代表目前網站沒有吃到最新的 `portrait-dragon.png`。
+這通常是「路徑沒有覆蓋到」或「快取還在」造成。
 
-- `assets/img/portrait-dodo.png`
-- `assets/img/portrait-dragon.png`
+這包用新檔名解決快取問題。
 
-## 置換內容
+## 請新增這兩張圖到 repo
 
-### 鼠姊姊
-- 檔案：`assets/img/portrait-dodo.png`
-- 尺寸：1086 × 1448 px
-- 方向：五歲中班比例、長直髮、透明框眼鏡、日系漫畫人物風格。
+把以下檔案放到網站的圖片資料夾：
 
-### 龍弟弟
-- 檔案：`assets/img/portrait-dragon.png`
-- 尺寸：1086 × 1448 px
-- 方向：一歲半比例、正常小朋友大眼睛、日系漫畫人物風格、藍黃條紋上衣、粉色點點圍兜、黃色褲子、抱恐龍玩偶。
+```text
+assets/img/portrait-dodo-v32.png
+assets/img/portrait-dragon-v32.png
+```
 
-## 使用方式
+## 請修改 index.html
 
-把本包內的 `assets/img/portrait-dodo.png` 與 `assets/img/portrait-dragon.png`
-覆蓋到網站目前同名位置即可。
+把鼠姊姊圖片路徑改成：
 
-不需要修改：
-- `index.html`
-- CSS
-- Hero
-- 五大入口
-- 其他四位角色圖片
+```html
+<img src="assets/img/portrait-dodo-v32.png?v=20260708-32" alt="鼠姊姊角色插圖">
+```
 
-## 備註
+把龍弟弟圖片路徑改成：
 
-本包另外附上 WebP 版本：
-- `portrait-dodo.webp`
-- `portrait-dragon.webp`
+```html
+<img src="assets/img/portrait-dragon-v32.png?v=20260708-32" alt="龍弟弟角色插圖">
+```
 
-如果未來要做圖片最佳化，可以再改 HTML 使用 WebP；目前正式置換只需要 PNG。
+如果你的 HTML 裡是：
+
+```html
+<img src="assets/img/portrait-dodo.png" ...>
+<img src="assets/img/portrait-dragon.png" ...>
+```
+
+就直接替換成上面的新版路徑。
+
+## 上線後檢查
+
+1. 打開 GitHub Pages Actions，確認 deploy 成功。
+2. 用無痕視窗開首頁。
+3. 或在網址後加：
+   `?v=20260708-32`
+4. 手機也要重新整理，不要只回到舊分頁。
+
+## 注意
+
+這包只處理鼠姊姊與龍弟弟兩張角色圖。
+不改 Hero、不改五大入口、不改其他四位角色。
