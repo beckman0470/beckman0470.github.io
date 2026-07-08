@@ -1,51 +1,53 @@
-# 首頁角色圖強制刷新置換包 v3.3
+# 雞爸爸生活研究室｜只置換鼠姊姊與龍弟弟角色圖
 
-你線上看到的龍弟弟仍是舊圖，代表目前網站沒有吃到最新的 `portrait-dragon.png`。
-這通常是「路徑沒有覆蓋到」或「快取還在」造成。
+這包只包含圖片，不包含整頁首頁、不包含 CSS、不包含 Hero、不包含五大入口。
 
-這包用新檔名解決快取問題。
+## 必換檔案
 
-## 請新增這兩張圖到 repo
+請把這兩個檔案放到 GitHub repo 的這個位置：
 
-把以下檔案放到網站的圖片資料夾：
+```text
+assets/img/portrait-dodo.png
+assets/img/portrait-dragon.png
+```
+
+尺寸：
+- portrait-dodo.png：1086 × 1448 px
+- portrait-dragon.png：1086 × 1448 px
+
+## 你線上剛剛沒變的原因
+
+你目前看到的線上頁面仍是「手持小噴瓶」那張，代表線上 `index.html` 仍在讀舊圖，或 `assets/img/portrait-dragon.png` 尚未被新圖覆蓋。
+
+## 最穩定做法
+
+### 做法 A：覆蓋同名圖片
+把本包的：
+
+```text
+assets/img/portrait-dodo.png
+assets/img/portrait-dragon.png
+```
+
+直接覆蓋 GitHub repo 中同路徑的檔案。
+
+### 做法 B：避免快取，改用新版檔名
+如果覆蓋後還不變，請改 `index.html`：
+
+```html
+<img src="assets/img/portrait-dodo-v32.png?v=20260708-32" alt="鼠姊姊角色插圖">
+<img src="assets/img/portrait-dragon-v32.png?v=20260708-32" alt="龍弟弟角色插圖">
+```
+
+同時把本包的：
 
 ```text
 assets/img/portrait-dodo-v32.png
 assets/img/portrait-dragon-v32.png
 ```
 
-## 請修改 index.html
+一起上傳到 repo。
 
-把鼠姊姊圖片路徑改成：
+## 請不要整包覆蓋首頁
 
-```html
-<img src="assets/img/portrait-dodo-v32.png?v=20260708-32" alt="鼠姊姊角色插圖">
-```
-
-把龍弟弟圖片路徑改成：
-
-```html
-<img src="assets/img/portrait-dragon-v32.png?v=20260708-32" alt="龍弟弟角色插圖">
-```
-
-如果你的 HTML 裡是：
-
-```html
-<img src="assets/img/portrait-dodo.png" ...>
-<img src="assets/img/portrait-dragon.png" ...>
-```
-
-就直接替換成上面的新版路徑。
-
-## 上線後檢查
-
-1. 打開 GitHub Pages Actions，確認 deploy 成功。
-2. 用無痕視窗開首頁。
-3. 或在網址後加：
-   `?v=20260708-32`
-4. 手機也要重新整理，不要只回到舊分頁。
-
-## 注意
-
-這包只處理鼠姊姊與龍弟弟兩張角色圖。
-不改 Hero、不改五大入口、不改其他四位角色。
+這包只做角色圖置換。
