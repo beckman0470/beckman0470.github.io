@@ -1,63 +1,38 @@
-# 雞爸爸生活研究室｜高清正式上線包 v3：龍弟弟置換版
+# 雞爸爸生活研究室｜首頁角色圖置換包 v3.2
 
-這份 v3 版本以高清正式上線包 v2 為基礎，重新置換龍弟弟角色圖，改用更接近日系漫畫人物風格、並符合照片服裝特徵的高清素材。
+本包只置換首頁「我們這一家」區塊中的兩張角色圖片：
 
-## 這版改進重點
-1. **不再用整張 Prototype 截圖切小圖**
-2. **Hero、五大入口、五位角色、CTA 全部改用獨立高清素材**
-3. **手機與高解析螢幕顯示更清楚**
-4. **保留 Prototype 的日系溫暖風格與角色設定方向**
-5. **五大入口與角色卡都保有可點擊連結**
+- `assets/img/portrait-dodo.png`
+- `assets/img/portrait-dragon.png`
 
-## 檔案內容
+## 置換內容
+
+### 鼠姊姊
+- 檔案：`assets/img/portrait-dodo.png`
+- 尺寸：1086 × 1448 px
+- 方向：五歲中班比例、長直髮、透明框眼鏡、日系漫畫人物風格。
+
+### 龍弟弟
+- 檔案：`assets/img/portrait-dragon.png`
+- 尺寸：1086 × 1448 px
+- 方向：一歲半比例、正常小朋友大眼睛、日系漫畫人物風格、藍黃條紋上衣、粉色點點圍兜、黃色褲子、抱恐龍玩偶。
+
+## 使用方式
+
+把本包內的 `assets/img/portrait-dodo.png` 與 `assets/img/portrait-dragon.png`
+覆蓋到網站目前同名位置即可。
+
+不需要修改：
 - `index.html`
-- `css/homepage-hd-v2.css`
-- `assets/img/`
-  - `hero-family.png`
-  - `category-memory.png`
-  - `category-health.png`
-  - `category-library.png`
-  - `category-style.png`
-  - `category-light.png`
-  - `portrait-dad.png`
-  - `portrait-mom.png`
-  - `portrait-dodo.png`
-  - `portrait-dragon.png`
-  - `portrait-ama.png`
-  - `cta-study.png`
-  - `prototype-reference.png`
+- CSS
+- Hero
+- 五大入口
+- 其他四位角色圖片
 
-## 導覽連結
-- 首頁：`index.html`
-- 文章列表：`articles.html`
-- 知識圖譜：`knowledge.html`
-- 我們一家：`family.html`
-- 關於我們：`about.html`
-- 工作室：`dashboard.html`
-- 搜尋：`search.html`
+## 備註
 
-## 區塊連結
-### 五大入口
-- 獨家記憶：`articles.html#memory`
-- 保健室：`articles.html#health`
-- 圖書室：`articles.html#library`
-- 風格誌：`articles.html#style`
-- 光影誌：`articles.html#light`
+本包另外附上 WebP 版本：
+- `portrait-dodo.webp`
+- `portrait-dragon.webp`
 
-### 我們這一家
-- 雞爸爸：`family.html#dad`
-- 鼠媽媽：`family.html#mom`
-- 鼠姊姊：`family.html#dodo`
-- 龍弟弟：`family.html#dragon`
-- 兔阿嬤：`family.html#ama`
-
-## 注意
-這版是 **高清正式上線包 v3：龍弟弟置換版**，比前一版更適合正式網站使用。
-如果你要最終完全對接你目前 GitHub repo 的資料夾結構，下一步可以再做一版「依 repo 實際結構覆蓋的上線包」。
-
-
-## v3 本次更新
-- 重新置換 `assets/img/portrait-dragon.png`
-- 龍弟弟改為日系漫畫人物風格
-- 服裝參考照片：黃黑條紋上衣、粉色點點圍兜、黃色圖案褲、手持小噴瓶
-- 保留原本首頁版型、五大入口、其他高清素材與所有連結設定
+如果未來要做圖片最佳化，可以再改 HTML 使用 WebP；目前正式置換只需要 PNG。
