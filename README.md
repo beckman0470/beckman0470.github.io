@@ -1,53 +1,61 @@
-# 雞爸爸生活研究室｜只置換鼠姊姊與龍弟弟角色圖
+# 雞爸爸生活研究室｜首頁精準修復包 v3.4
 
-這包只包含圖片，不包含整頁首頁、不包含 CSS、不包含 Hero、不包含五大入口。
+本包只修兩件事：
 
-## 必換檔案
+1. 還原首頁左上角 LOGO，不再使用文字「雞」作為品牌標記。
+2. 恢復鼠姊姊在首頁角色卡中的視覺大小，避免看起來太小。
 
-請把這兩個檔案放到 GitHub repo 的這個位置：
-
-```text
-assets/img/portrait-dodo.png
-assets/img/portrait-dragon.png
-```
-
-尺寸：
-- portrait-dodo.png：1086 × 1448 px
-- portrait-dragon.png：1086 × 1448 px
-
-## 你線上剛剛沒變的原因
-
-你目前看到的線上頁面仍是「手持小噴瓶」那張，代表線上 `index.html` 仍在讀舊圖，或 `assets/img/portrait-dragon.png` 尚未被新圖覆蓋。
-
-## 最穩定做法
-
-### 做法 A：覆蓋同名圖片
-把本包的：
+## 需要上傳／覆蓋的檔案
 
 ```text
+index.html
+css/homepage-hd-v2.css
+assets/img/logo-avatar.png
 assets/img/portrait-dodo.png
-assets/img/portrait-dragon.png
 ```
 
-直接覆蓋 GitHub repo 中同路徑的檔案。
+## 沒有修改的東西
 
-### 做法 B：避免快取，改用新版檔名
-如果覆蓋後還不變，請改 `index.html`：
+- 不動 Hero
+- 不動五大入口
+- 不動龍弟弟
+- 不動雞爸爸、鼠媽媽、兔阿嬤
+- 不重做首頁
+
+## 修改說明
+
+### LOGO
+`index.html` 中已把：
 
 ```html
-<img src="assets/img/portrait-dodo-v32.png?v=20260708-32" alt="鼠姊姊角色插圖">
-<img src="assets/img/portrait-dragon-v32.png?v=20260708-32" alt="龍弟弟角色插圖">
+<div class="brand-mark">雞</div>
 ```
 
-同時把本包的：
+改回：
+
+```html
+<img src="assets/img/logo-avatar.png?v=20260708-logo-restore" alt="雞爸爸生活研究室 LOGO" class="brand-avatar">
+```
+
+### 鼠姊姊
+`portrait-dodo.png` 已換成放大後的版本，保留五歲中班比例與日系漫畫人物風格，但在首頁角色卡裡會比上一版更接近其他角色的視覺大小。
+
+CSS 也加了只針對第三張角色卡的安全修正：
+
+```css
+.family-grid .family-card:nth-child(3) .family-image-link img {
+  object-fit: contain;
+  object-position: center center;
+  padding: 0;
+}
+```
+
+## 上線後檢查
+
+上傳後請開：
 
 ```text
-assets/img/portrait-dodo-v32.png
-assets/img/portrait-dragon-v32.png
+https://beckman0470.github.io/index.html?v=20260708-logo-dodo-fix
 ```
 
-一起上傳到 repo。
-
-## 請不要整包覆蓋首頁
-
-這包只做角色圖置換。
+如果手機仍顯示舊圖，請用無痕視窗或清除瀏覽器快取。

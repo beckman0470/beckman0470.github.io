@@ -42,16 +42,12 @@ img { display: block; max-width: 100%; height: auto; }
   align-items: center;
   gap: 14px;
 }
-.brand-mark {
+.brand-avatar {
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  background: linear-gradient(180deg, #f3e3c8, #ead2aa);
-  display: grid;
-  place-items: center;
-  font-size: 30px;
-  font-weight: 800;
-  color: #5b3b22;
+  object-fit: cover;
+  background: #f3e3c8;
   box-shadow: 0 4px 10px rgba(83, 52, 22, 0.08);
 }
 .brand-text strong {
@@ -325,4 +321,15 @@ img { display: block; max-width: 100%; height: auto; }
     justify-content: center;
     padding: 16px 0;
   }
+}
+
+
+/* v3.4 精準修復：首頁 LOGO 還原與鼠姊姊顯示比例修正 */
+.brand-avatar {
+  flex: 0 0 56px;
+}
+.family-grid .family-card:nth-child(3) .family-image-link img {
+  object-fit: contain;
+  object-position: center center;
+  padding: 0;
 }
