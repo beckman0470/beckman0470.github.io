@@ -1,21 +1,33 @@
-# 雞爸爸生活研究室｜首頁正式上線包
+# 雞爸爸生活研究室｜高清正式上線包 v3：龍弟弟置換版
 
-這份上線包以 **最新確認的 Prototype** 為唯一視覺基準，目標是做到：
+這份 v3 版本以高清正式上線包 v2 為基礎，重新置換龍弟弟角色圖，改用更接近日系漫畫人物風格、並符合照片服裝特徵的高清素材。
 
-> Prototype 看到什麼，網站就是什麼。
+## 這版改進重點
+1. **不再用整張 Prototype 截圖切小圖**
+2. **Hero、五大入口、五位角色、CTA 全部改用獨立高清素材**
+3. **手機與高解析螢幕顯示更清楚**
+4. **保留 Prototype 的日系溫暖風格與角色設定方向**
+5. **五大入口與角色卡都保有可點擊連結**
 
-## 內容
-- `index.html`：首頁主檔
-- `css/homepage-official.css`：首頁樣式
-- `assets/img/`：已切好的首頁視覺資產
-  - `hero-full.png`：Hero 完整主視覺（滿版不動）
-  - `category-*.png`：五大入口卡
-  - `family-*.png`：五位角色卡
-  - `cta-full.png`：底部 CTA 區塊
-  - `prototype-reference.png`：核准 Prototype 參考圖
+## 檔案內容
+- `index.html`
+- `css/homepage-hd-v2.css`
+- `assets/img/`
+  - `hero-family.png`
+  - `category-memory.png`
+  - `category-health.png`
+  - `category-library.png`
+  - `category-style.png`
+  - `category-light.png`
+  - `portrait-dad.png`
+  - `portrait-mom.png`
+  - `portrait-dodo.png`
+  - `portrait-dragon.png`
+  - `portrait-ama.png`
+  - `cta-study.png`
+  - `prototype-reference.png`
 
-## 連結設定
-### 導覽列
+## 導覽連結
 - 首頁：`index.html`
 - 文章列表：`articles.html`
 - 知識圖譜：`knowledge.html`
@@ -24,6 +36,7 @@
 - 工作室：`dashboard.html`
 - 搜尋：`search.html`
 
+## 區塊連結
 ### 五大入口
 - 獨家記憶：`articles.html#memory`
 - 保健室：`articles.html#health`
@@ -31,22 +44,20 @@
 - 風格誌：`articles.html#style`
 - 光影誌：`articles.html#light`
 
-### 角色介紹
+### 我們這一家
 - 雞爸爸：`family.html#dad`
 - 鼠媽媽：`family.html#mom`
 - 鼠姊姊：`family.html#dodo`
 - 龍弟弟：`family.html#dragon`
 - 兔阿嬤：`family.html#ama`
 
-## 設計原則落地
-1. **Hero 滿版圖片不動**：使用 `hero-full.png`，保留 Prototype 的完整主視覺。
-2. **五大入口全部可點擊**：整張卡片都是連結。
-3. **角色卡全部可點擊**：整張卡片都連到 `family.html` 的角色錨點。
-4. **Prototype = 上線版**：本包素材全部取自核准的 Prototype 畫面，避免實作時跑版。
+## 注意
+這版是 **高清正式上線包 v3：龍弟弟置換版**，比前一版更適合正式網站使用。
+如果你要最終完全對接你目前 GitHub repo 的資料夾結構，下一步可以再做一版「依 repo 實際結構覆蓋的上線包」。
 
-## 建議上線方式
-1. 在測試分支先替換首頁檔案
-2. 將 `index.html` 放到網站根目錄
-3. 將 `css/homepage-official.css` 放入 `css/`
-4. 將 `assets/img/` 內圖檔放入網站對應素材資料夾
-5. 上線前再用 Prototype 與實際頁面逐項比對
+
+## v3 本次更新
+- 重新置換 `assets/img/portrait-dragon.png`
+- 龍弟弟改為日系漫畫人物風格
+- 服裝參考照片：黃黑條紋上衣、粉色點點圍兜、黃色圖案褲、手持小噴瓶
+- 保留原本首頁版型、五大入口、其他高清素材與所有連結設定
