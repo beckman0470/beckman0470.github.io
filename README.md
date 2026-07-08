@@ -1,13 +1,16 @@
-# 雞爸爸生活研究室｜Hero 家庭合照更新包 v3.6
+# 雞爸爸生活研究室｜首頁「生活誌」入口修正包 v3.7
 
-這包只處理首頁 Hero / 家庭合照圖片，讓合照裡的龍弟弟以目前角色介紹卡的龍弟弟為準。
+這包只做兩件事：
 
-## 本包只新增／置換圖片
+1. 把首頁中的「獨家記憶」統一改成「生活誌」
+2. 把原本「大家一起看相片」那張入口圖，換成新的手帳／生活記錄圖片
 
-主要檔案：
+## 新圖片
+
+主要置換檔案：
 
 ```text
-assets/img/hero-family.png
+assets/img/category-memory.png
 ```
 
 尺寸：
@@ -16,46 +19,126 @@ assets/img/hero-family.png
 1448 × 1086 px
 ```
 
-## 如果首頁目前讀的是 `assets/img/hero-family.png`
+圖片內容：溫暖午後的生活手帳、照片、眼鏡、恐龍小物與日常記錄氛圍。  
+這張會和 Hero 家庭合照區隔開來，手機版看起來不會那麼像首頁 Hero。
 
-直接把本包的：
+---
 
-```text
-assets/img/hero-family.png
-```
+## 最小上線方式 A：只覆蓋圖片 + 改文字
 
-覆蓋到 GitHub repo 同一路徑即可。
+### 1. 覆蓋圖片
 
-## 如果上傳後仍看到舊圖，請使用強制刷新檔名
-
-本包另附：
+把本包的：
 
 ```text
-assets/img/hero-family-v36.png
+assets/img/category-memory.png
 ```
 
-然後把 `index.html` 裡 Hero 圖片路徑改成：
+覆蓋到 GitHub repo 的同一路徑。
+
+### 2. 修改首頁文字
+
+在 `index.html` 裡，把首頁出現的：
+
+```text
+獨家記憶
+```
+
+全部改成：
+
+```text
+生活誌
+```
+
+目前先不改連結錨點，避免內頁分類路徑斷掉。
+
+---
+
+## 強制刷新方式 B：如果圖片有快取
+
+本包也附：
+
+```text
+assets/img/category-life-journal-v37.png
+```
+
+你可以把 `index.html` 裡該入口圖片路徑改成：
 
 ```html
-<img src="assets/img/hero-family-v36.png?v=20260708-36" alt="雞爸爸、鼠媽媽、鼠姊姊、龍弟弟、兔阿嬤的家庭合照插圖" class="hero-art" width="1448" height="1086">
+<img src="assets/img/category-life-journal-v37.png?v=20260708-37" alt="生活誌插圖">
 ```
 
-## 不要動的東西
+然後把入口文字改成：
 
-這包不改：
+```text
+生活誌
+```
+
+---
+
+## 建議同步修正的文字
+
+如果首頁有這段：
+
+```html
+<a href="articles.html#memory">獨家記憶</a>
+```
+
+建議先改成：
+
+```html
+<a href="articles.html#memory">生活誌</a>
+```
+
+如果入口卡片內有：
+
+```html
+<h3>獨家記憶</h3>
+```
+
+改成：
+
+```html
+<h3>生活誌</h3>
+```
+
+如果 alt 文字有：
+
+```html
+alt="獨家記憶插圖"
+```
+
+改成：
+
+```html
+alt="生活誌插圖"
+```
+
+---
+
+## 本包不修改
+
+- Hero
 - LOGO
-- 五大入口
-- 鼠姊姊角色卡
-- 龍弟弟角色卡
-- 其他角色卡
-- CSS 版型
+- 保健室
+- 圖書室
+- 風格誌
+- 光影誌
+- 我們這一家角色卡
+- 其他頁面
+
+---
 
 ## 上線後檢查
 
 請開：
 
 ```text
-https://beckman0470.github.io/index.html?v=20260708-36
+https://beckman0470.github.io/index.html?v=20260708-37
 ```
 
-確認 Hero 家庭合照裡的龍弟弟，已經是穿藍黃條紋衣、粉色點點圍兜、抱恐龍玩偶的版本。
+確認：
+
+- 首頁入口名稱變成「生活誌」
+- 原本「大家一起看相片」的圖片已改成手帳生活記錄圖
+- 其他四個入口沒有改變
