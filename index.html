@@ -3,44 +3,197 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>雞爸爸生活研究室｜首頁修改包</title>
-  <link rel="stylesheet" href="css/homepage-v8.css" />
+  <title>雞爸爸生活研究室｜Chicken Dad Journal</title>
+  <meta name="description" content="用科學理解生活，用陪伴記錄成長。這裡收著雞爸爸一家人的日常，也收著健康、閱讀、風格與光影裡那些值得慢慢整理的片刻。" />
+  <link rel="stylesheet" href="css/homepage-launch.css" />
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <div class="brand">
-        <img src="assets/img/source-homepage-reference.png" alt="Brand reference" class="brand-ref" />
-        <div>
-          <h1>雞爸爸生活研究室</h1>
-          <p>Chicken Dad Journal</p>
+      <a class="brand" href="index.html" aria-label="回到首頁">
+        <img src="assets/img/logo-avatar.png" alt="雞爸爸品牌頭像" class="brand-avatar" />
+        <div class="brand-text">
+          <strong>雞爸爸生活研究室</strong>
+          <span>Chicken Dad Journal</span>
         </div>
-      </div>
-      <nav>
-        <a class="active" href="#">首頁</a>
-        <a href="#memory">獨家記憶</a>
-        <a href="#health">保健室</a>
-        <a href="#library">圖書室</a>
-        <a href="#style">風格誌</a>
-        <a href="#light">光影誌</a>
+      </a>
+
+      <nav class="main-nav" aria-label="主要導覽">
+        <a class="active" href="index.html">首頁</a>
+        <a href="articles.html">文章列表</a>
+        <a href="knowledge.html">知識圖譜</a>
+        <a href="family.html">我們一家</a>
+        <a href="about.html">關於我們</a>
+        <a href="dashboard.html">工作室</a>
       </nav>
+
+      <a class="search-link" href="search.html" aria-label="搜尋">⌕</a>
     </div>
   </header>
 
   <main>
-    <section class="prototype-block container">
-      <img src="assets/img/homepage-prototype-v8.png" alt="Approved homepage prototype" />
+    <section class="hero">
+      <div class="container hero-shell">
+        <div class="hero-copy">
+          <p class="hero-kicker">用科學理解生活，用陪伴記錄成長</p>
+          <h1>用科學理解生活，<br>用陪伴記錄成長</h1>
+          <p class="hero-sub">學問求知識，研究生智慧，覺悟得玄機，了解道真理。</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="articles.html">開始閱讀</a>
+          </div>
+        </div>
+        <div class="hero-art">
+          <img src="assets/img/hero-family-art.png" alt="雞爸爸、鼠媽媽、鼠姊姊、龍弟弟、兔阿嬤的家庭合照插圖" />
+        </div>
+      </div>
+      <div class="hero-dots" aria-hidden="true">
+        <span class="dot active"></span><span class="dot"></span><span class="dot"></span>
+      </div>
     </section>
 
-    <section class="notes container">
-      <h2>首頁修改包說明</h2>
-      <ul>
-        <li>以核准的 Prototype 為首頁視覺基準。</li>
-        <li>僅處理首頁，不整包覆蓋整個 Repository。</li>
-        <li>保留角色介紹區塊，並恢復「了解更多」導向 family.html 的需求。</li>
-        <li>後續可再把 Prototype 圖片拆成正式 hero、分類卡、角色頭像等獨立素材。</li>
-      </ul>
+    <section class="section section-categories">
+      <div class="container">
+        <div class="section-heading centered">
+          <span class="flourish">❦</span>
+          <h2>探索雞爸爸一家的生活研究</h2>
+          <span class="flourish">❦</span>
+        </div>
+
+        <div class="category-grid">
+          <article class="category-card">
+            <img src="assets/img/category-memory.png" alt="獨家記憶插圖" class="card-cover" />
+            <div class="card-body">
+              <div class="card-icon icon-memory">⌂</div>
+              <h3>獨家記憶</h3>
+              <p>記錄一家人的生活片刻，珍藏那些平凡卻珍貴的幸福時光。</p>
+              <a href="articles.html" class="card-link memory">8 篇文章</a>
+            </div>
+          </article>
+
+          <article class="category-card">
+            <img src="assets/img/category-health.png" alt="保健室插圖" class="card-cover" />
+            <div class="card-body">
+              <div class="card-icon icon-health">❃</div>
+              <h3>保健室</h3>
+              <p>研究健康與身心平衡，守護家人的生活品質與幸福能量。</p>
+              <a href="articles.html" class="card-link health">6 篇文章</a>
+            </div>
+          </article>
+
+          <article class="category-card">
+            <img src="assets/img/category-library.png" alt="圖書室插圖" class="card-cover" />
+            <div class="card-body">
+              <div class="card-icon icon-library">✦</div>
+              <h3>圖書室</h3>
+              <p>與 AI 共讀，沉澱思緒，探索知識與智慧的無限可能。</p>
+              <a href="articles.html" class="card-link library">5 篇文章</a>
+            </div>
+          </article>
+
+          <article class="category-card">
+            <img src="assets/img/category-style.png" alt="風格誌插圖" class="card-cover" />
+            <div class="card-body">
+              <div class="card-icon icon-style">⚾</div>
+              <h3>風格誌</h3>
+              <p>棒球、電影、音樂與生活風格，熱愛的事物讓日子更有滋味。</p>
+              <a href="articles.html" class="card-link style">4 篇文章</a>
+            </div>
+          </article>
+
+          <article class="category-card">
+            <img src="assets/img/category-light.png" alt="光影誌插圖" class="card-cover" />
+            <div class="card-body">
+              <div class="card-icon icon-light">◔</div>
+              <h3>光影誌</h3>
+              <p>用照片與文字，收藏光影中的感動瞬間與故事溫度。</p>
+              <a href="articles.html" class="card-link light">3 篇文章</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-family">
+      <div class="container">
+        <div class="section-heading stack">
+          <div class="title-row">
+            <span class="flourish">❦</span>
+            <h2>我們這一家</h2>
+            <span class="flourish">❦</span>
+          </div>
+          <p>因為愛，我們成為彼此的日常</p>
+        </div>
+
+        <div class="family-grid">
+          <article class="family-card">
+            <img src="assets/img/portrait-dad.png" alt="雞爸爸角色插圖" class="family-avatar" />
+            <div class="family-content">
+              <h3>雞爸爸</h3>
+              <p>努力成為更穩定、更溫柔、更有力量的爸爸，陪伴家人一起成長。</p>
+              <a href="family.html" class="btn btn-small">了解更多</a>
+            </div>
+          </article>
+
+          <article class="family-card">
+            <img src="assets/img/portrait-mom.png" alt="鼠媽媽角色插圖" class="family-avatar" />
+            <div class="family-content">
+              <h3>鼠媽媽</h3>
+              <p>家中的溫柔支柱，用愛與耐心守護著家人的每一天。</p>
+              <a href="family.html" class="btn btn-small">了解更多</a>
+            </div>
+          </article>
+
+          <article class="family-card">
+            <img src="assets/img/portrait-dodo.png" alt="鼠姊姊角色插圖" class="family-avatar" />
+            <div class="family-content">
+              <h3>鼠姊姊</h3>
+              <p>活潑可愛的小姊姊，充滿好奇心與創造力，是家裡的開心果。</p>
+              <a href="family.html" class="btn btn-small">了解更多</a>
+            </div>
+          </article>
+
+          <article class="family-card">
+            <img src="assets/img/portrait-dragon.png" alt="龍弟弟角色插圖" class="family-avatar" />
+            <div class="family-content">
+              <h3>龍弟弟</h3>
+              <p>天真活潑的小男孩，總是帶給家人歡笑與驚喜。</p>
+              <a href="family.html" class="btn btn-small">了解更多</a>
+            </div>
+          </article>
+
+          <article class="family-card">
+            <img src="assets/img/portrait-ama.png" alt="兔阿嬤角色插圖" class="family-avatar" />
+            <div class="family-content">
+              <h3>兔阿嬤</h3>
+              <p>默默支持著這個家，用關愛與智慧守護每一個家人。</p>
+              <a href="family.html" class="btn btn-small">了解更多</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-cta">
+      <div class="container cta-box">
+        <img src="assets/img/cta-image.png" alt="桌上的書本、杯子與生活研究室氛圍插圖" class="cta-image" />
+        <div class="cta-content">
+          <p>這裡，生活的記憶、健康的智慧、閱讀的深度、風格的趣味、光影的溫度，交織成雞爸爸的日常誌。</p>
+          <a class="btn btn-primary" href="articles.html">開始探索雞爸爸的生活研究</a>
+        </div>
+      </div>
     </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2025 雞爸爸生活研究室 Chicken Dad Journal. All rights reserved.</p>
+      <div class="social-links" aria-label="社群連結">
+        <a href="#" aria-label="Facebook">f</a>
+        <a href="#" aria-label="Instagram">◎</a>
+        <a href="#" aria-label="YouTube">▶</a>
+        <a href="#" aria-label="Email">✉</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
