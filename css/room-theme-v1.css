@@ -76,3 +76,86 @@
   .room-hero-statement-inner{width:calc(100% - 32px);}
   .room-hero-statement p{font-size:17px;line-height:1.8;}
 }
+
+
+/* CDJ_HERO_STATEMENT_HOTFIX_20260708
+   移除首頁標語區「開始閱讀」按鈕，讓標語獨立呈現；桌機版避免斷成兩行。 */
+.room-hero-statement{
+  padding:18px 0 20px;
+  background:linear-gradient(180deg,#fffaf3 0%,#fff7e8 100%);
+}
+.room-hero-statement-inner{
+  width:min(1480px,calc(100% - 64px));
+  display:block;
+  text-align:center;
+}
+.room-hero-statement p{
+  max-width:none;
+  margin:0 auto;
+  font-family:"Noto Serif TC","Noto Sans TC","PingFang TC","Microsoft JhengHei",serif;
+  font-size:clamp(18px,1.32vw,23px);
+  line-height:1.55;
+  letter-spacing:.025em;
+  font-weight:800;
+  color:#6f4a2b;
+  text-wrap:balance;
+}
+.room-hero-statement .room-actions{display:none;}
+@media (min-width:1180px){
+  .room-hero-statement p{white-space:nowrap;}
+}
+@media (max-width:680px){
+  .room-hero-statement{
+    padding:14px 0 16px;
+  }
+  .room-hero-statement-inner{width:calc(100% - 32px);}
+  .room-hero-statement p{
+    white-space:normal;
+    font-size:16px;
+    line-height:1.75;
+    letter-spacing:.02em;
+  }
+}
+
+/* CDJ_HERO_FINAL_CTA_FIX_20260708
+   修正：hero 圖片內建的「開始閱讀」已由新版 hero.png 移除；功能 CTA 放到圖片下方，標語桌機維持單行。 */
+.room-hero-statement{
+  padding:16px 0 18px;
+  background:linear-gradient(180deg,#fffaf3 0%,#fff7ea 100%);
+}
+.room-hero-statement-inner{
+  width:min(1600px,calc(100% - 56px));
+  margin:0 auto;
+  text-align:center;
+}
+.room-hero-statement p{
+  max-width:none;
+  margin:0 auto;
+  font-family:"Noto Serif TC","Noto Sans TC","PingFang TC","Microsoft JhengHei",serif;
+  font-size:clamp(15px,1.02vw,19px);
+  line-height:1.5;
+  letter-spacing:.01em;
+  font-weight:700;
+  color:#7a5739;
+  white-space:nowrap;
+  text-wrap:normal;
+}
+.room-hero-statement .room-statement-actions{
+  display:flex !important;
+  justify-content:center;
+  align-items:center;
+  margin-top:12px;
+  gap:12px;
+}
+.room-hero-statement .room-statement-actions .room-btn{
+  padding:11px 22px;
+  font-size:16px;
+  box-shadow:0 10px 22px rgba(93,56,20,.13);
+}
+@media (max-width:900px){
+  .room-hero-statement p{
+    white-space:normal;
+    font-size:16px;
+    line-height:1.75;
+  }
+}
