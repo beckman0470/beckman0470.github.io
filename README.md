@@ -1,13 +1,21 @@
-# 雞爸爸生活研究室首頁正式上線版實作包
+# 雞爸爸生活研究室｜首頁正式上線包
 
-這份實作包以 **已確認的首頁 Prototype** 為基準，內容聚焦在首頁正式上線所需的主要檔案。
+這份上線包以 **最新確認的 Prototype** 為唯一視覺基準，目標是做到：
+
+> Prototype 看到什麼，網站就是什麼。
 
 ## 內容
 - `index.html`：首頁主檔
-- `css/homepage-launch.css`：首頁樣式檔
-- `assets/img/`：本次首頁用到的視覺素材（Hero、五大入口、五位角色、底部 CTA 等）
+- `css/homepage-official.css`：首頁樣式
+- `assets/img/`：已切好的首頁視覺資產
+  - `hero-full.png`：Hero 完整主視覺（滿版不動）
+  - `category-*.png`：五大入口卡
+  - `family-*.png`：五位角色卡
+  - `cta-full.png`：底部 CTA 區塊
+  - `prototype-reference.png`：核准 Prototype 參考圖
 
-## 導覽連結設定
+## 連結設定
+### 導覽列
 - 首頁：`index.html`
 - 文章列表：`articles.html`
 - 知識圖譜：`knowledge.html`
@@ -16,16 +24,29 @@
 - 工作室：`dashboard.html`
 - 搜尋：`search.html`
 
-## 本次首頁重點
-1. 依照核准 Prototype 的版型進行實作
-2. 保留日系溫暖插畫風格
-3. 五大入口改成插圖卡片
-4. 角色介紹區塊保留五位角色
-5. 「了解更多」按鈕恢復連到 `family.html`
-6. 僅提供首頁實作包，不覆蓋整個 Repository
+### 五大入口
+- 獨家記憶：`articles.html#memory`
+- 保健室：`articles.html#health`
+- 圖書室：`articles.html#library`
+- 風格誌：`articles.html#style`
+- 光影誌：`articles.html#light`
+
+### 角色介紹
+- 雞爸爸：`family.html#dad`
+- 鼠媽媽：`family.html#mom`
+- 鼠姊姊：`family.html#dodo`
+- 龍弟弟：`family.html#dragon`
+- 兔阿嬤：`family.html#ama`
+
+## 設計原則落地
+1. **Hero 滿版圖片不動**：使用 `hero-full.png`，保留 Prototype 的完整主視覺。
+2. **五大入口全部可點擊**：整張卡片都是連結。
+3. **角色卡全部可點擊**：整張卡片都連到 `family.html` 的角色錨點。
+4. **Prototype = 上線版**：本包素材全部取自核准的 Prototype 畫面，避免實作時跑版。
 
 ## 建議上線方式
-1. 先在本機或測試分支比對現有 `index.html`
-2. 複製本包中的 `index.html` 與 `css/homepage-launch.css`
-3. 將 `assets/img/` 內資產放入網站對應素材資料夾
-4. 調整既有 header / footer 共用元件時，再逐步整合成網站正式元件
+1. 在測試分支先替換首頁檔案
+2. 將 `index.html` 放到網站根目錄
+3. 將 `css/homepage-official.css` 放入 `css/`
+4. 將 `assets/img/` 內圖檔放入網站對應素材資料夾
+5. 上線前再用 Prototype 與實際頁面逐項比對
