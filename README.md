@@ -1,36 +1,61 @@
-# 鼠姊姊版型大小修正包 v3.5
+# 雞爸爸生活研究室｜Hero 家庭合照更新包 v3.6
 
-這包只處理鼠姊姊角色圖，目的是讓首頁「我們這一家」區塊中的鼠姊姊，
-回到和其他家人更一致的構圖比例與視覺大小。
+這包只處理首頁 Hero / 家庭合照圖片，讓合照裡的龍弟弟以目前角色介紹卡的龍弟弟為準。
 
-## 這次修正
-- 原本鼠姊姊為全身構圖，放到首頁卡片中會顯得偏小、版型不一致。
-- 本版改為較接近其他家人的半身／中近景構圖。
-- 不需要改 Hero、不需要改五大入口、不需要改龍弟弟。
+## 本包只新增／置換圖片
 
-## 直接覆蓋
-請把以下檔案覆蓋到 GitHub repo：
+主要檔案：
 
 ```text
-assets/img/portrait-dodo.png
+assets/img/hero-family.png
 ```
 
-## 如果還是快取
-你也可以改用新版檔名：
+尺寸：
 
 ```text
-assets/img/portrait-dodo-v35.png
+1448 × 1086 px
 ```
 
-並把 `index.html` 裡鼠姊姊圖片路徑改成：
+## 如果首頁目前讀的是 `assets/img/hero-family.png`
+
+直接把本包的：
+
+```text
+assets/img/hero-family.png
+```
+
+覆蓋到 GitHub repo 同一路徑即可。
+
+## 如果上傳後仍看到舊圖，請使用強制刷新檔名
+
+本包另附：
+
+```text
+assets/img/hero-family-v36.png
+```
+
+然後把 `index.html` 裡 Hero 圖片路徑改成：
 
 ```html
-<img src="assets/img/portrait-dodo-v35.png?v=20260708-35" alt="鼠姊姊角色插圖">
+<img src="assets/img/hero-family-v36.png?v=20260708-36" alt="雞爸爸、鼠媽媽、鼠姊姊、龍弟弟、兔阿嬤的家庭合照插圖" class="hero-art" width="1448" height="1086">
 ```
 
-## 本包不修改
+## 不要動的東西
+
+這包不改：
 - LOGO
-- Hero
 - 五大入口
-- 龍弟弟
-- 其他角色
+- 鼠姊姊角色卡
+- 龍弟弟角色卡
+- 其他角色卡
+- CSS 版型
+
+## 上線後檢查
+
+請開：
+
+```text
+https://beckman0470.github.io/index.html?v=20260708-36
+```
+
+確認 Hero 家庭合照裡的龍弟弟，已經是穿藍黃條紋衣、粉色點點圍兜、抱恐龍玩偶的版本。
