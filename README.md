@@ -1,61 +1,36 @@
-# 雞爸爸生活研究室｜首頁精準修復包 v3.4
+# 鼠姊姊版型大小修正包 v3.5
 
-本包只修兩件事：
+這包只處理鼠姊姊角色圖，目的是讓首頁「我們這一家」區塊中的鼠姊姊，
+回到和其他家人更一致的構圖比例與視覺大小。
 
-1. 還原首頁左上角 LOGO，不再使用文字「雞」作為品牌標記。
-2. 恢復鼠姊姊在首頁角色卡中的視覺大小，避免看起來太小。
+## 這次修正
+- 原本鼠姊姊為全身構圖，放到首頁卡片中會顯得偏小、版型不一致。
+- 本版改為較接近其他家人的半身／中近景構圖。
+- 不需要改 Hero、不需要改五大入口、不需要改龍弟弟。
 
-## 需要上傳／覆蓋的檔案
+## 直接覆蓋
+請把以下檔案覆蓋到 GitHub repo：
 
 ```text
-index.html
-css/homepage-hd-v2.css
-assets/img/logo-avatar.png
 assets/img/portrait-dodo.png
 ```
 
-## 沒有修改的東西
-
-- 不動 Hero
-- 不動五大入口
-- 不動龍弟弟
-- 不動雞爸爸、鼠媽媽、兔阿嬤
-- 不重做首頁
-
-## 修改說明
-
-### LOGO
-`index.html` 中已把：
-
-```html
-<div class="brand-mark">雞</div>
-```
-
-改回：
-
-```html
-<img src="assets/img/logo-avatar.png?v=20260708-logo-restore" alt="雞爸爸生活研究室 LOGO" class="brand-avatar">
-```
-
-### 鼠姊姊
-`portrait-dodo.png` 已換成放大後的版本，保留五歲中班比例與日系漫畫人物風格，但在首頁角色卡裡會比上一版更接近其他角色的視覺大小。
-
-CSS 也加了只針對第三張角色卡的安全修正：
-
-```css
-.family-grid .family-card:nth-child(3) .family-image-link img {
-  object-fit: contain;
-  object-position: center center;
-  padding: 0;
-}
-```
-
-## 上線後檢查
-
-上傳後請開：
+## 如果還是快取
+你也可以改用新版檔名：
 
 ```text
-https://beckman0470.github.io/index.html?v=20260708-logo-dodo-fix
+assets/img/portrait-dodo-v35.png
 ```
 
-如果手機仍顯示舊圖，請用無痕視窗或清除瀏覽器快取。
+並把 `index.html` 裡鼠姊姊圖片路徑改成：
+
+```html
+<img src="assets/img/portrait-dodo-v35.png?v=20260708-35" alt="鼠姊姊角色插圖">
+```
+
+## 本包不修改
+- LOGO
+- Hero
+- 五大入口
+- 龍弟弟
+- 其他角色
