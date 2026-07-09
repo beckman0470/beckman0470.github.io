@@ -1,76 +1,55 @@
-# 雞爸爸生活研究室｜直接修復包 v4.8：首頁＋文章列表
+# 雞爸爸生活研究室｜文章內頁整理包 v4.9
 
-這次是直接替換檔，不是 JS 補丁，不需要 Python。
+這次直接修 `articles.html`，不是補丁、不用 Python、不用另外加 JS/CSS。
 
 ## 請直接覆蓋
 
 ```text
-index.html
 articles.html
 ```
 
-## 這版完成的事
+## 修正內容
 
-### 1. 首頁上方列
-只保留：
+### 1. 內容頁上方列位置修正
+把文章列表頁 header 的容器加寬，避免 LOGO 與導覽列整組偏右。
 
-```text
-首頁 / 家庭誌 / 保健室 / 圖書室 / 風格誌 / 光影誌
-```
-
-移除：
+### 2. 移除內頁重複區塊
+刪除每個分流頁下方重複的這段：
 
 ```text
-文章列表 / 知識圖譜 / 我們一家 / 關於 / 工作室
+全部文章 / 家庭誌 / 保健室 / 圖書室 / 風格誌 / 光影誌
+典藏作品｜家庭誌
+家庭誌目前顯示 7 篇作品。每張卡片都可點進完整原文。
 ```
 
-### 2. 文章列表上方列
-只保留：
+現在進入 `articles.html?journal=family` 後，會保留上方 Hero：
 
 ```text
-首頁 / 家庭誌 / 保健室 / 圖書室 / 風格誌 / 光影誌
+家庭誌
+家庭、孩子、陪伴與日常裡長出的幸福紀錄。
 ```
 
-不再出現知識圖譜、我們一家、關於。
+底下直接顯示文章卡片。
 
-### 3. 首頁五大入口標題
-改成：
+### 3. 分流仍保留
+這些網址仍可使用：
 
 ```text
-❦ 生活研究室 ❦
-行勝於言 厚德載物
+articles.html?journal=family
+articles.html?journal=health
+articles.html?journal=library
+articles.html?journal=style
+articles.html?journal=light
 ```
 
-### 4. Hero 方案 B
-確認直接寫入：
+### 4. 上方列 active 狀態
+目前所在入口會在上方列顯示 active 狀態。
 
-```text
-用科學理解生活
-用陪伴記錄成長
+## 這包不動
 
-學問求知識，研究生智慧；
-覺悟得玄機，了解道真理。
-```
-
-### 5. 舊字串
-`獨家記憶` 已改為 `家庭誌`。
-
-### 6. 文章列表
-使用既有 v4.2 直接分流版，不再靠瀏覽器補丁。
-
-## 這包不含 knowledge.html / family.html / about.html
-
-我現在不能安全直接替換這三頁，因為需要以你目前 GitHub 版本的完整檔案為基準處理；若用舊檔硬蓋，可能會覆蓋掉你已經調整過的內容。
-
-下一步建議：請把目前 GitHub 的 `knowledge.html`、`family.html`、`about.html` 下載後丟給我，或直接貼檔案，我會做 v4.9 直接替換版，移除它們上方列中的知識圖譜／我們一家／關於，並把輔助連結放到底部。
-
-## 檢查網址
-
-```text
-https://beckman0470.github.io/index.html?v=v48
-https://beckman0470.github.io/articles.html?journal=family&v=v48
-https://beckman0470.github.io/articles.html?journal=health&v=v48
-https://beckman0470.github.io/articles.html?journal=library&v=v48
-https://beckman0470.github.io/articles.html?journal=style&v=v48
-https://beckman0470.github.io/articles.html?journal=light&v=v48
-```
+- index.html
+- Hero 圖
+- LOGO 圖
+- 五大入口圖片
+- 角色圖
+- 文章內容
