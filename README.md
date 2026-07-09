@@ -1,91 +1,76 @@
-# 雞爸爸生活研究室｜導覽列直接靜態修正包 v4.6
+# 雞爸爸生活研究室｜直接修復包 v4.8：首頁＋文章列表
 
-你說得對，v4.4 沒有真正處理到。  
-原因是 v4.4 只是提供 CSS 與替換片段，如果沒有每一頁都確實引用或替換，頁面就不會變。
+這次是直接替換檔，不是 JS 補丁，不需要 Python。
 
-這次 v4.6 是「靜態 JS/CSS 直接修正包」，不用 Python。  
-每頁只要加兩行，瀏覽器載入後會直接把上方列重組成正確版本。
+## 請直接覆蓋
 
----
+```text
+index.html
+articles.html
+```
 
-## 修正目標
+## 這版完成的事
 
-上方列統一只保留：
+### 1. 首頁上方列
+只保留：
 
 ```text
 首頁 / 家庭誌 / 保健室 / 圖書室 / 風格誌 / 光影誌
 ```
 
-移到底部：
+移除：
 
 ```text
-知識圖譜 / 我們一家 / 關於 / 搜尋 / VOCUS
+文章列表 / 知識圖譜 / 我們一家 / 關於 / 工作室
 ```
 
-同時會把頁面上殘留的：
+### 2. 文章列表上方列
+只保留：
 
 ```text
-獨家記憶
+首頁 / 家庭誌 / 保健室 / 圖書室 / 風格誌 / 光影誌
 ```
 
-顯示成：
+不再出現知識圖譜、我們一家、關於。
+
+### 3. 首頁五大入口標題
+改成：
 
 ```text
-家庭誌
+❦ 生活研究室 ❦
+行勝於言 厚德載物
 ```
 
----
-
-## 上傳檔案
-
-請把這兩個檔案上傳到 repo：
+### 4. Hero 方案 B
+確認直接寫入：
 
 ```text
-css/nav-direct-fix-v4-6.css
-js/nav-direct-fix-v4-6.js
+用科學理解生活
+用陪伴記錄成長
+
+學問求知識，研究生智慧；
+覺悟得玄機，了解道真理。
 ```
 
----
+### 5. 舊字串
+`獨家記憶` 已改為 `家庭誌`。
 
-## 每個頁面都加兩行
+### 6. 文章列表
+使用既有 v4.2 直接分流版，不再靠瀏覽器補丁。
 
-請至少在這些頁面加：
+## 這包不含 knowledge.html / family.html / about.html
+
+我現在不能安全直接替換這三頁，因為需要以你目前 GitHub 版本的完整檔案為基準處理；若用舊檔硬蓋，可能會覆蓋掉你已經調整過的內容。
+
+下一步建議：請把目前 GitHub 的 `knowledge.html`、`family.html`、`about.html` 下載後丟給我，或直接貼檔案，我會做 v4.9 直接替換版，移除它們上方列中的知識圖譜／我們一家／關於，並把輔助連結放到底部。
+
+## 檢查網址
 
 ```text
-index.html
-articles.html
-knowledge.html
-family.html
-about.html
+https://beckman0470.github.io/index.html?v=v48
+https://beckman0470.github.io/articles.html?journal=family&v=v48
+https://beckman0470.github.io/articles.html?journal=health&v=v48
+https://beckman0470.github.io/articles.html?journal=library&v=v48
+https://beckman0470.github.io/articles.html?journal=style&v=v48
+https://beckman0470.github.io/articles.html?journal=light&v=v48
 ```
-
-### 在 `</head>` 前加：
-
-```html
-<link rel="stylesheet" href="css/nav-direct-fix-v4-6.css">
-```
-
-### 在 `</body>` 前加：
-
-```html
-<script src="js/nav-direct-fix-v4-6.js" defer></script>
-```
-
----
-
-## 上線後檢查
-
-```text
-https://beckman0470.github.io/index.html?v=nav46
-https://beckman0470.github.io/articles.html?journal=family&v=nav46
-https://beckman0470.github.io/knowledge.html?v=nav46
-https://beckman0470.github.io/family.html?v=nav46
-https://beckman0470.github.io/about.html?v=nav46
-```
-
----
-
-## 注意
-
-這包不改圖片、不改 Hero、不改文章內容。  
-它只處理導覽列、底部輔助連結，以及「獨家記憶」顯示文字。
