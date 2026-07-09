@@ -1,60 +1,37 @@
-# 雞爸爸生活研究室｜各入口內容頁底圖修正包 v5.3
+# 雞爸爸生活研究室｜五個內容頁更新包 v5.6
 
-這次修正你說的重點：  
-不是文章卡片裡面的底圖，而是「各入口連結進去後的內容頁背景」。
+這版依照最新確認內容更新五個入口內容頁背景圖：
 
-## 直接覆蓋
+## 五個內容頁對應
+- 家庭誌：新版《溫馨家庭生活誌首頁》
+- 保健室：新版《保健室_溫馨健康生活研究》
+- 圖書室：沿用《雞爸爸的溫馨圖書室》
+- 風格誌：改用《光影中的溫馨日常》  ← 依照需求與光影誌對調
+- 光影誌：改用《風格誌_家與生活的記錄》 ← 依照需求與風格誌對調
 
+## 請上傳／覆蓋
 ```text
 articles.html
+assets/img/journal-room-family.png
+assets/img/journal-room-health.png
+assets/img/journal-room-library.png
+assets/img/journal-room-style.png
+assets/img/journal-room-light.png
 ```
 
-## 本版完成
-
-### 1. 各入口內容頁有不同的淡背景
-
-依網址自動套用：
-
+包內同時附上 webp 備用檔：
 ```text
-articles.html?journal=family   → 家庭誌：溫暖家居／手帳感
-articles.html?journal=health   → 保健室：柔和綠色療癒感
-articles.html?journal=library  → 圖書室：淡淡書架感
-articles.html?journal=style    → 風格誌：工作桌／光影感
-articles.html?journal=light    → 光影誌：微亮攝影感
+assets/img/journal-room-family.webp
+assets/img/journal-room-health.webp
+assets/img/journal-room-library.webp
+assets/img/journal-room-style.webp
+assets/img/journal-room-light.webp
 ```
 
-### 2. 背景放在整個內容頁
-
-不是放在每張文章卡片裡。  
-文章卡片改回乾淨半透明白底，讓頁面有房間氛圍，但文字仍清楚。
-
-### 3. 延續 v5.2
-
-保留：
-
-- 刪除 `WORKS`
-- 文章卡片文字收斂
-- 標題最多 2 行
-- 摘要最多 3 行
-- 引言最多 2 行
-- 隱藏 #標籤列
-- Header 仍比照首頁
-
-## 不動內容
-
-- 不動首頁
-- 不動 LOGO 圖
-- 不動文章資料
-- 不動文章分類
-- 不動五大入口圖片
-- 不動角色圖
-
-## 上線後檢查
-
-```text
-https://beckman0470.github.io/articles.html?journal=family&v=v53
-https://beckman0470.github.io/articles.html?journal=health&v=v53
-https://beckman0470.github.io/articles.html?journal=library&v=v53
-https://beckman0470.github.io/articles.html?journal=style&v=v53
-https://beckman0470.github.io/articles.html?journal=light&v=v53
-```
+## 驗證網址
+請上線後用下列網址檢查（避免快取）：
+- https://beckman0470.github.io/articles.html?journal=family&v=v56
+- https://beckman0470.github.io/articles.html?journal=health&v=v56
+- https://beckman0470.github.io/articles.html?journal=library&v=v56
+- https://beckman0470.github.io/articles.html?journal=style&v=v56
+- https://beckman0470.github.io/articles.html?journal=light&v=v56
