@@ -1,67 +1,84 @@
-# 雞爸爸生活研究室｜文章列表直接替換版 v4.2
+# 雞爸爸生活研究室｜首頁＋文章列表直接修復包 v4.3
 
-這包解決目前三個問題：
+這包是針對你目前指出的三個問題做的「直接替換版」：
 
-1. 五大入口連到文章列表後看到的文章都一樣。
-2. 文章列表中間舊卡片還在。
-3. 「獨家記憶」沒有全部改成「家庭誌」。
+1. 首頁 Hero 沒套用方案 B
+2. LOGO 跑掉
+3. 上方列「文章列表」造成雙底線，而且文章列表不需要出現在主導覽
 
-## 使用方式
+## 直接覆蓋檔案
 
-把本包裡的：
+請把本包三個檔案覆蓋到 GitHub repo 對應位置：
 
 ```text
+index.html
 articles.html
+assets/img/logo-avatar.png
 ```
 
-直接覆蓋 GitHub repo 根目錄的 `articles.html`。
+## 這版已直接寫進 HTML，不再靠 JS 補丁
 
-不用執行 Python。
-不用再另外新增 JS。
-不用再另外新增 CSS。
+### 首頁 Hero 方案 B
+已改成：
 
-## 分流網址
+```text
+用科學理解生活 用陪伴記錄成長
 
-- 全部文章：`articles.html`
-- 家庭誌：`articles.html?journal=family`
-- 保健室：`articles.html?journal=health`
-- 圖書室：`articles.html?journal=library`
-- 風格誌：`articles.html?journal=style`
-- 光影誌：`articles.html?journal=light`
+學問求知識，研究生智慧；
+覺悟得玄機，了解道真理。
+```
 
-## 本版分類數
+並且：
+- 拿掉上方重複的小標
+- 拿掉「科學理解生活」後面的逗號
+- 詩句改為兩行
 
-- 家庭誌：7 篇
-- 保健室：7 篇
-- 圖書室：3 篇
-- 風格誌：7 篇
-- 光影誌：2 篇
+### LOGO
+左上角恢復使用：
 
-合計：26 篇
+```text
+assets/img/logo-avatar.png
+```
 
-## 這版已移除
+不再使用空白圓形或文字「雞」。
 
-- 系列
-- 時間軸
-- 搜尋
-- 標籤
-- 幸福點滴
-- 生活研究
-- 棒球札記
-- AI 共創
+### 主導覽
+已移除「文章列表」。
+
+主導覽改成：
+
+```text
+首頁 / 家庭誌 / 保健室 / 圖書室 / 風格誌 / 光影誌 / 知識圖譜 / 我們一家 / 關於
+```
+
+### 五大入口
+首頁五大入口已改成：
+
+```text
+家庭誌：articles.html?journal=family
+保健室：articles.html?journal=health
+圖書室：articles.html?journal=library
+風格誌：articles.html?journal=style
+光影誌：articles.html?journal=light
+```
+
+### 文字
+首頁與文章列表中的「獨家記憶」已改成「家庭誌」。
+
+## 這包不動
+
+- Hero 圖片
+- 五大入口圖片
+- 角色圖片
+- 文章內容分類資料
 
 ## 上線後檢查
 
 ```text
-https://beckman0470.github.io/articles.html?v=v42
-https://beckman0470.github.io/articles.html?journal=family&v=v42
-https://beckman0470.github.io/articles.html?journal=health&v=v42
-https://beckman0470.github.io/articles.html?journal=library&v=v42
-https://beckman0470.github.io/articles.html?journal=style&v=v42
-https://beckman0470.github.io/articles.html?journal=light&v=v42
+https://beckman0470.github.io/index.html?v=v43
+https://beckman0470.github.io/articles.html?journal=family&v=v43
+https://beckman0470.github.io/articles.html?journal=health&v=v43
+https://beckman0470.github.io/articles.html?journal=library&v=v43
+https://beckman0470.github.io/articles.html?journal=style&v=v43
+https://beckman0470.github.io/articles.html?journal=light&v=v43
 ```
-
-## 注意
-
-這包只覆蓋文章列表頁，不動首頁 Hero、不動 LOGO、不動圖片。
-首頁五大入口如果還沒有連到 `articles.html?journal=...`，仍需另外改首頁連結。
