@@ -1,74 +1,67 @@
-# 雞爸爸生活研究室｜首頁 Hero 方案 B 文字排版修正包 v4.1
+# 雞爸爸生活研究室｜文章列表直接替換版 v4.2
 
-這包對應你確認的「方案 B」。
+這包解決目前三個問題：
 
-## 修正內容
+1. 五大入口連到文章列表後看到的文章都一樣。
+2. 文章列表中間舊卡片還在。
+3. 「獨家記憶」沒有全部改成「家庭誌」。
 
-1. 「用科學理解生活 用陪伴記錄成長」只保留一次。
-2. 拿掉「科學理解生活」後面的逗號。
-3. 詩句改成兩行：
+## 使用方式
 
-```text
-學問求知識，研究生智慧；
-覺悟得玄機，了解道真理。
-```
-
-4. 重新調整 Hero 文字排版。
-5. 不動 Hero 圖、不動 LOGO、不動五大入口、不動角色卡。
-
----
-
-## 上傳檔案
-
-請把本包中的兩個檔案上傳到 GitHub repo：
+把本包裡的：
 
 ```text
-css/homepage-hero-scheme-b.css
-js/homepage-hero-scheme-b.js
+articles.html
 ```
 
----
+直接覆蓋 GitHub repo 根目錄的 `articles.html`。
 
-## 修改 index.html
+不用執行 Python。
+不用再另外新增 JS。
+不用再另外新增 CSS。
 
-在 `</head>` 前加入：
+## 分流網址
 
-```html
-<link rel="stylesheet" href="css/homepage-hero-scheme-b.css">
-```
+- 全部文章：`articles.html`
+- 家庭誌：`articles.html?journal=family`
+- 保健室：`articles.html?journal=health`
+- 圖書室：`articles.html?journal=library`
+- 風格誌：`articles.html?journal=style`
+- 光影誌：`articles.html?journal=light`
 
-在 `</body>` 前加入：
+## 本版分類數
 
-```html
-<script src="js/homepage-hero-scheme-b.js" defer></script>
-```
+- 家庭誌：7 篇
+- 保健室：7 篇
+- 圖書室：3 篇
+- 風格誌：7 篇
+- 光影誌：2 篇
 
----
+合計：26 篇
+
+## 這版已移除
+
+- 系列
+- 時間軸
+- 搜尋
+- 標籤
+- 幸福點滴
+- 生活研究
+- 棒球札記
+- AI 共創
 
 ## 上線後檢查
 
-請開：
-
 ```text
-https://beckman0470.github.io/index.html?v=hero-scheme-b-v41
+https://beckman0470.github.io/articles.html?v=v42
+https://beckman0470.github.io/articles.html?journal=family&v=v42
+https://beckman0470.github.io/articles.html?journal=health&v=v42
+https://beckman0470.github.io/articles.html?journal=library&v=v42
+https://beckman0470.github.io/articles.html?journal=style&v=v42
+https://beckman0470.github.io/articles.html?journal=light&v=v42
 ```
 
-確認 Hero 文字變成：
+## 注意
 
-```text
-用科學理解生活 用陪伴記錄成長
-
-學問求知識，研究生智慧；
-覺悟得玄機，了解道真理。
-```
-
----
-
-## 本包不修改
-
-- Hero 圖
-- LOGO
-- 五大入口圖片
-- 五大入口連結
-- 我們這一家角色圖
-- 文章列表
+這包只覆蓋文章列表頁，不動首頁 Hero、不動 LOGO、不動圖片。
+首頁五大入口如果還沒有連到 `articles.html?journal=...`，仍需另外改首頁連結。
