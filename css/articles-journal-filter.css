@@ -1,13 +1,18 @@
-/* v3.9 articles journal filter patch */
-.cdj-hidden-legacy-series {
+/* ChickenDad Journal articles page static patch v4.0 */
+/* Hide old middle filter/category section */
+.cdj-hide-old-series,
+.archive-tabs,
+.filter-tabs,
+.series-tabs {
   display: none !important;
 }
 
+/* Journal tabs injected/used on articles page */
 .cdj-journal-tabs {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin: 14px 0 26px;
+  margin: 16px 0 28px;
 }
 
 .cdj-journal-tabs a {
@@ -33,12 +38,4 @@
 
 .cdj-filtered-out {
   display: none !important;
-}
-
-.cdj-empty-state {
-  padding: 18px 20px;
-  border: 1px solid #eadbc8;
-  border-radius: 16px;
-  background: #fffaf4;
-  color: #6f5a46;
 }

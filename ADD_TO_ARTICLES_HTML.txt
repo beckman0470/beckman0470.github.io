@@ -1,0 +1,18 @@
+請手動修改 articles.html：
+
+1. 在 </head> 前加入這行：
+
+<link rel="stylesheet" href="css/articles-journal-filter.css">
+
+2. 在 </body> 前加入這行：
+
+<script src="js/articles-journal-filter.js" defer></script>
+
+3. 把 articles.html 裡所有「獨家記憶」改成「家庭誌」。
+
+4. 如果首頁 index.html 的五大入口還是舊連結，請把連結改成：
+家庭誌：articles.html?journal=family
+保健室：articles.html?journal=health
+圖書室：articles.html?journal=library
+風格誌：articles.html?journal=style
+光影誌：articles.html?journal=light
