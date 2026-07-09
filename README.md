@@ -1,6 +1,6 @@
-# 雞爸爸生活研究室｜文章頁 Header 完全比照首頁修正包 v5.1
+# 雞爸爸生活研究室｜內容頁卡片精簡與房間感底圖修正包 v5.2
 
-這次是直接替換 `articles.html`，不是補丁，不需要 Python，也不需要另外新增 CSS/JS。
+這包只需直接覆蓋 `articles.html`。
 
 ## 直接覆蓋
 
@@ -8,69 +8,40 @@
 articles.html
 ```
 
-## 修正內容
+## 這版完成
 
-### 1. Header 改成首頁同一套結構
-
-文章頁上方列已改用首頁相同的 HTML 結構：
-
-```text
-<header class="site-header">
-  <div class="wrap header-inner">
-    brand / main-nav / search-link
-  </div>
-</header>
-```
-
-### 2. Header 位置比照首頁
-
-已直接在 `articles.html` 內寫入首頁同規格 CSS：
+### 1. 刪除各內容頁上方多餘的 `WORKS`
+已移除 Hero 上方英文小字：
 
 ```text
-.wrap = min(1440px, 100vw - 48px)
-.header-inner = grid-template-columns: auto 1fr auto
-brand 在左
-主導覽置中
-搜尋在右
+WORKS
 ```
 
-### 3. 移除文章頁內重複分類列
+### 2. 文章卡片文字精簡
+透過版面設計減少閱讀壓力：
 
-已刪除文章頁 Hero 底下那排：
+- 標題最多顯示 2 行
+- 摘要最多顯示 3 行
+- 引言最多顯示 2 行
+- 隱藏 `#標籤列`
+- 保留人物列，但高度收斂
 
-```text
-全部文章 / 家庭誌 / 保健室 / 圖書室 / 風格誌 / 光影誌
-```
+### 3. 加入淡淡的「不同房間感」底圖
+依五大入口加入很淡的內頁卡片背景感：
 
-因為上方列已經有五大入口。
+- 家庭誌：溫暖手帳／家居感
+- 保健室：柔和綠色療癒感
+- 圖書室：淡淡書架感
+- 風格誌：光影與工作桌感
+- 光影誌：微亮日光與攝影感
 
-### 4. 移除重複標題與說明
-
-已刪除：
-
-```text
-典藏作品｜家庭誌
-家庭誌目前顯示 7 篇作品。每張卡片都可點進完整原文。
-```
-
-保留上方 Hero 的分類標題與描述，下面直接接文章卡片。
+這些都是非常淡的 CSS 背景，不會搶文字。
 
 ## 不動內容
 
 - 不動首頁
-- 不動文章卡內容
-- 不動文章分類
-- 不動 LOGO 圖片
-- 不動五大入口圖片
+- 不動 Header 結構
+- 不動文章資料
+- 不動 LOGO
+- 不動五大入口圖
 - 不動角色圖
-
-## 上線後檢查
-
-```text
-https://beckman0470.github.io/articles.html?v=v51
-https://beckman0470.github.io/articles.html?journal=family&v=v51
-https://beckman0470.github.io/articles.html?journal=health&v=v51
-https://beckman0470.github.io/articles.html?journal=library&v=v51
-https://beckman0470.github.io/articles.html?journal=style&v=v51
-https://beckman0470.github.io/articles.html?journal=light&v=v51
-```

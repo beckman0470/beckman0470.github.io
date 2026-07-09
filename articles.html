@@ -34,9 +34,8 @@
     .nav-links { display:flex; gap:22px; flex-wrap:wrap; align-items:center; }
     .nav-links a { font-weight:800; padding:8px 0; border-bottom:3px solid transparent; }
     .nav-links a.active { color:var(--cdj-accent); border-bottom-color:var(--cdj-accent); }
-    .archive-hero { padding:72px 0 34px; }
-    .archive-kicker { color:#8a5a22; font-size:12px; font-weight:800; letter-spacing:.14em; text-transform:uppercase; margin-bottom:8px; }
-    .archive-hero h1 { font-size:clamp(44px, 7vw, 76px); line-height:.95; margin:0 0 18px; letter-spacing:-0.06em; }
+    .archive-hero { padding:64px 0 28px; }
+    .archive-hero h1 { font-size:clamp(44px, 7vw, 76px); line-height:.95; margin:0 0 14px; letter-spacing:-0.06em; }
     .archive-hero p { max-width:780px; color:var(--cdj-muted); font-size:18px; line-height:1.9; }
     .journal-tabs { display:flex; flex-wrap:wrap; gap:10px; margin:26px 0 0; }
     .journal-tabs a { border:1px solid var(--cdj-line); border-radius:999px; padding:10px 18px; background:#fffdf8; color:#7b4f24; font-weight:900; box-shadow:0 4px 14px rgba(83,52,22,.06); }
@@ -155,6 +154,110 @@
       .main-nav { gap:14px; font-size:14px; }
     }
 
+  
+    /* v5.2: cleaner archive cards + subtle room backgrounds */
+    .archive-grid { align-items:stretch; }
+    .archive-work-card {
+      position:relative;
+      overflow:hidden;
+      isolation:isolate;
+      gap:10px;
+      min-height:420px;
+      background:
+        linear-gradient(180deg, rgba(255,253,248,.98), rgba(255,251,244,.95));
+    }
+    .archive-work-card > * { position:relative; z-index:1; }
+    .archive-work-card::before {
+      content:"";
+      position:absolute;
+      inset:0;
+      z-index:0;
+      opacity:.2;
+      pointer-events:none;
+      background-repeat:no-repeat;
+      background-size:cover;
+      background-position:center;
+    }
+    .archive-work-card h3 {
+      margin:2px 0;
+      font-size:20px;
+      line-height:1.45;
+      display:-webkit-box;
+      -webkit-line-clamp:2;
+      -webkit-box-orient:vertical;
+      overflow:hidden;
+      min-height:2.9em;
+    }
+    .archive-work-card p {
+      margin:0;
+      color:#6f5844;
+      line-height:1.72;
+      display:-webkit-box;
+      -webkit-line-clamp:3;
+      -webkit-box-orient:vertical;
+      overflow:hidden;
+      min-height:5.2em;
+    }
+    .archive-quote {
+      margin:0;
+      padding-left:12px;
+      border-left:3px solid #ddb276;
+      color:#735338;
+      line-height:1.72;
+      display:-webkit-box;
+      -webkit-line-clamp:2;
+      -webkit-box-orient:vertical;
+      overflow:hidden;
+      min-height:3.3em;
+    }
+    .archive-tag-row {
+      display:none;
+    }
+    .archive-people-row {
+      margin-top:2px;
+      max-height:52px;
+      overflow:hidden;
+    }
+
+    .archive-work-card[data-journal="family"]::before {
+      background-image:
+        radial-gradient(circle at 18% 18%, rgba(231,187,120,.38), transparent 23%),
+        linear-gradient(180deg, transparent 0 68%, rgba(214,176,128,.22) 68% 69%, transparent 69%),
+        linear-gradient(90deg, transparent 0 78%, rgba(214,176,128,.12) 78% 79%, transparent 79%);
+    }
+    .archive-work-card[data-journal="health"]::before {
+      background-image:
+        radial-gradient(circle at 82% 18%, rgba(156,198,168,.38), transparent 22%),
+        radial-gradient(circle at 72% 78%, rgba(194,223,202,.30), transparent 18%),
+        linear-gradient(180deg, transparent 0 74%, rgba(175,208,182,.16) 74% 75%, transparent 75%);
+    }
+    .archive-work-card[data-journal="library"]::before {
+      background-image:
+        linear-gradient(90deg, rgba(188,160,120,.12) 0 10%, transparent 10% 13%, rgba(193,171,136,.10) 13% 25%, transparent 25% 28%, rgba(178,149,111,.09) 28% 35%, transparent 35% 100%),
+        linear-gradient(180deg, transparent 0 77%, rgba(170,140,99,.18) 77% 78%, transparent 78%);
+      background-size:120px 100%, 100% 100%;
+      background-position:right center, center center;
+    }
+    .archive-work-card[data-journal="style"]::before {
+      background-image:
+        radial-gradient(circle at 84% 24%, rgba(197,144,73,.30), transparent 20%),
+        linear-gradient(135deg, transparent 0 68%, rgba(154,114,60,.12) 68% 71%, transparent 71%),
+        linear-gradient(0deg, transparent 0 72%, rgba(145,101,54,.12) 72% 73%, transparent 73%);
+    }
+    .archive-work-card[data-journal="light"]::before {
+      background-image:
+        radial-gradient(circle at 80% 20%, rgba(249,215,134,.42), transparent 18%),
+        radial-gradient(circle at 84% 22%, rgba(253,239,191,.50), transparent 10%),
+        linear-gradient(135deg, transparent 0 54%, rgba(220,190,140,.12) 54% 56%, transparent 56%),
+        linear-gradient(180deg, transparent 0 76%, rgba(174,138,96,.12) 76% 77%, transparent 77%);
+    }
+
+    @media (max-width:900px){
+      .archive-work-card { min-height:auto; }
+      .archive-work-card p { min-height:auto; }
+      .archive-quote { min-height:auto; }
+    }
+
   </style>
 </head>
 <body class="archive-page">
@@ -182,7 +285,6 @@
 <main>
   <section class="archive-hero">
     <div class="archive-container">
-      <div class="archive-kicker">Works</div>
       <h1 id="archive-title">故事</h1>
       <p id="archive-desc">這裡收錄 Vocus 已正式發表的作品，依家庭誌、保健室、圖書室、風格誌與光影誌分流整理。</p>
 </div>
