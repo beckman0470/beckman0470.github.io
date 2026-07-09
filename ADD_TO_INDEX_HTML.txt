@@ -1,0 +1,9 @@
+請在 index.html 加入以下兩行：
+
+1. 在 </head> 前：
+
+<link rel="stylesheet" href="css/homepage-hero-scheme-b.css">
+
+2. 在 </body> 前：
+
+<script src="js/homepage-hero-scheme-b.js" defer></script>

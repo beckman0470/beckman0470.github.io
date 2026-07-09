@@ -1,92 +1,74 @@
-# 雞爸爸生活研究室｜文章列表分流靜態修正包 v4.0
+# 雞爸爸生活研究室｜首頁 Hero 方案 B 文字排版修正包 v4.1
 
-你說得對：GitHub Pages 不會執行 `.py`，所以上一包上傳後不會有效果。
+這包對應你確認的「方案 B」。
 
-這一包不需要 Python。  
-你只要上傳兩個靜態檔案，並在 `articles.html` 加兩行引用即可。
+## 修正內容
+
+1. 「用科學理解生活 用陪伴記錄成長」只保留一次。
+2. 拿掉「科學理解生活」後面的逗號。
+3. 詩句改成兩行：
+
+```text
+學問求知識，研究生智慧；
+覺悟得玄機，了解道真理。
+```
+
+4. 重新調整 Hero 文字排版。
+5. 不動 Hero 圖、不動 LOGO、不動五大入口、不動角色卡。
+
+---
 
 ## 上傳檔案
 
-把本包裡這兩個檔案放到 repo：
+請把本包中的兩個檔案上傳到 GitHub repo：
 
 ```text
-css/articles-journal-filter.css
-js/articles-journal-filter.js
+css/homepage-hero-scheme-b.css
+js/homepage-hero-scheme-b.js
 ```
 
-## 修改 articles.html
+---
 
-在 `</head>` 前加：
+## 修改 index.html
+
+在 `</head>` 前加入：
 
 ```html
-<link rel="stylesheet" href="css/articles-journal-filter.css">
+<link rel="stylesheet" href="css/homepage-hero-scheme-b.css">
 ```
 
-在 `</body>` 前加：
+在 `</body>` 前加入：
 
 ```html
-<script src="js/articles-journal-filter.js" defer></script>
+<script src="js/homepage-hero-scheme-b.js" defer></script>
 ```
 
-同時把 articles.html 裡所有：
+---
+
+## 上線後檢查
+
+請開：
 
 ```text
-獨家記憶
+https://beckman0470.github.io/index.html?v=hero-scheme-b-v41
 ```
 
-改成：
+確認 Hero 文字變成：
 
 ```text
-家庭誌
+用科學理解生活 用陪伴記錄成長
+
+學問求知識，研究生智慧；
+覺悟得玄機，了解道真理。
 ```
 
-## 修改 index.html 首頁入口連結
+---
 
-請把首頁五大入口改成：
+## 本包不修改
 
-```text
-家庭誌：articles.html?journal=family
-保健室：articles.html?journal=health
-圖書室：articles.html?journal=library
-風格誌：articles.html?journal=style
-光影誌：articles.html?journal=light
-```
-
-## 效果
-
-這兩個靜態檔會在瀏覽器端做這些事：
-
-1. 把頁面上殘留的「獨家記憶」顯示成「家庭誌」
-2. 隱藏文章列表中間那排舊分類：
-   - 系列
-   - 時間軸
-   - 搜尋
-   - 標籤
-   - 幸福點滴
-   - 生活研究
-   - 棒球札記
-   - AI 共創
-3. 依 `?journal=` 參數分流文章：
-   - `articles.html?journal=family`
-   - `articles.html?journal=health`
-   - `articles.html?journal=library`
-   - `articles.html?journal=style`
-   - `articles.html?journal=light`
-
-## 上線後測試
-
-```text
-https://beckman0470.github.io/articles.html?journal=family
-https://beckman0470.github.io/articles.html?journal=health
-https://beckman0470.github.io/articles.html?journal=library
-https://beckman0470.github.io/articles.html?journal=style
-https://beckman0470.github.io/articles.html?journal=light
-```
-
-## 這包不動
-
-- Hero
+- Hero 圖
 - LOGO
-- 角色圖
-- 首頁圖片
-- 文章內容檔案
+- 五大入口圖片
+- 五大入口連結
+- 我們這一家角色圖
+- 文章列表
