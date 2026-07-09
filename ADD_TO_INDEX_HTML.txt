@@ -2,8 +2,8 @@
 
 1. 在 </head> 前：
 
-<link rel="stylesheet" href="css/homepage-hero-scheme-b.css">
+<link rel="stylesheet" href="css/homepage-section-title-v4-5.css">
 
 2. 在 </body> 前：
 
-<script src="js/homepage-hero-scheme-b.js" defer></script>
+<script src="js/homepage-section-title-v4-5.js" defer></script>
