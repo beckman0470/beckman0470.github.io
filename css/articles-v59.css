@@ -103,22 +103,6 @@ img { max-width: 100%; display: block; }
   position: relative;
   overflow: hidden;
 }
-.journal-page::before {
-  content: "";
-  position: fixed;
-  inset: 92px 0 0 0;
-  background-image: var(--page-bg);
-  background-size: cover;
-  background-position: center top;
-  opacity: 0.08;
-  filter: blur(8px);
-  pointer-events: none;
-}
-body[data-journal="family"] .journal-page { --page-bg: url('../assets/img/room-family-v59.png?v=59'); }
-body[data-journal="health"] .journal-page { --page-bg: url('../assets/img/room-health-v59.png?v=59'); }
-body[data-journal="library"] .journal-page { --page-bg: url('../assets/img/room-library-v59.png?v=59'); }
-body[data-journal="style"] .journal-page { --page-bg: url('../assets/img/room-style-v59.png?v=59'); }
-body[data-journal="light"] .journal-page { --page-bg: url('../assets/img/room-light-v59.png?v=59'); }
 
 .journal-hero {
   position: relative;
@@ -129,14 +113,14 @@ body[data-journal="light"] .journal-page { --page-bg: url('../assets/img/room-li
   inset: 0;
   background-size: cover;
   background-position: center top;
-  filter: saturate(0.95);
+  filter: saturate(1.03) contrast(1.01);
 }
 .room-fade {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(to bottom, rgba(246,240,230,0.08), rgba(246,240,230,0.22) 18%, rgba(246,240,230,0.48) 38%, rgba(246,240,230,0.76) 62%, rgba(246,240,230,0.95) 100%),
-    radial-gradient(circle at center, rgba(255,250,243,0.55), rgba(255,250,243,0.05) 50%, rgba(255,250,243,0.0) 70%);
+    linear-gradient(to bottom, rgba(246,240,230,0.05), rgba(246,240,230,0.12) 22%, rgba(246,240,230,0.44) 58%, rgba(246,240,230,0.86) 100%),
+    radial-gradient(circle at center, rgba(255,250,243,0.32), rgba(255,250,243,0.03) 58%, rgba(255,250,243,0.0) 74%);
 }
 .hero-inner {
   position: relative;
@@ -192,7 +176,7 @@ body[data-journal="light"] .journal-page { --page-bg: url('../assets/img/room-li
 
 .cards-panel,
 .about-panel {
-  background: rgba(250, 246, 239, 0.50);
+  background: rgba(250, 246, 239, 0.62);
   border: 1px solid rgba(231, 216, 198, 0.65);
   border-radius: 28px;
   box-shadow: var(--shadow);
@@ -372,7 +356,6 @@ body[data-journal="light"] .journal-page { --page-bg: url('../assets/img/room-li
   }
   .brand, .main-nav, .search-link { justify-self: center; }
   .main-nav { justify-content: center; gap: 18px; }
-  .journal-page::before { inset: 132px 0 0 0; }
   .journal-hero { padding-top: 18px; }
   .hero-heading { padding-top: 30px; }
   .cards-panel { padding: 20px 16px 20px; }

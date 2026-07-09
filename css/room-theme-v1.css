@@ -159,3 +159,73 @@
     line-height:1.75;
   }
 }
+
+
+/* CDJ_CONTENT_ROOM_BG_V61_20260709
+   Standalone content pages only: memory / clinic / library / style / photo.
+   Homepage is not targeted here. Backgrounds are clean room illustrations, not UI screenshots. */
+body.room-page.room-memory { --cdj-room-bg: url('../assets/img/room-family-clean-v61.png?v=61'); }
+body.room-page.room-clinic { --cdj-room-bg: url('../assets/img/room-health-clean-v61.png?v=61'); }
+body.room-page.room-library { --cdj-room-bg: url('../assets/img/room-library-clean-v61.png?v=61'); }
+body.room-page.room-style { --cdj-room-bg: url('../assets/img/room-style-clean-v61.png?v=61'); }
+body.room-page.room-photo { --cdj-room-bg: url('../assets/img/room-light-clean-v61.png?v=61'); }
+body.room-page.room-memory,
+body.room-page.room-clinic,
+body.room-page.room-library,
+body.room-page.room-style,
+body.room-page.room-photo {
+  position: relative;
+  min-height: 100vh;
+  background: #f4eee4;
+}
+body.room-page.room-memory::before,
+body.room-page.room-clinic::before,
+body.room-page.room-library::before,
+body.room-page.room-style::before,
+body.room-page.room-photo::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background-image: var(--cdj-room-bg);
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  opacity: .78;
+}
+body.room-page.room-memory::after,
+body.room-page.room-clinic::after,
+body.room-page.room-library::after,
+body.room-page.room-style::after,
+body.room-page.room-photo::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(255,248,235,.18) 0%, rgba(255,248,235,.42) 52%, rgba(255,248,235,.86) 100%),
+    radial-gradient(circle at center, rgba(255,250,243,.28), rgba(255,250,243,.04) 60%, rgba(255,250,243,0) 78%);
+}
+body.room-page .room-page-hero,
+body.room-page .room-story-grid,
+body.room-page .future-shelf,
+body.room-page .room-simple-footer {
+  position: relative;
+  z-index: 1;
+}
+body.room-page .room-page-hero {
+  padding-top: 92px;
+  padding-bottom: 38px;
+}
+body.room-page .room-page-hero .eyebrow,
+body.room-page .room-story-card,
+body.room-page .future-shelf {
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+}
+body.room-page .room-page-hero h1,
+body.room-page .room-page-hero p {
+  text-shadow: 0 2px 0 rgba(255,255,255,.72);
+}
