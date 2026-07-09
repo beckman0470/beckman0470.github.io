@@ -1,84 +1,124 @@
-# 雞爸爸生活研究室｜首頁＋文章列表直接修復包 v4.3
+# 雞爸爸生活研究室｜導覽列與底部連結統一包 v4.4
 
-這包是針對你目前指出的三個問題做的「直接替換版」：
+你說得對，現在知識圖譜頁面沒有跟其他頁面一致，而且之前的原則是：
 
-1. 首頁 Hero 沒套用方案 B
-2. LOGO 跑掉
-3. 上方列「文章列表」造成雙底線，而且文章列表不需要出現在主導覽
+> 上方列只放主要五大入口；知識圖譜、我們一家、關於放到底部輔助連結。
 
-## 直接覆蓋檔案
+這包就是把規則收斂成固定版本。
 
-請把本包三個檔案覆蓋到 GitHub repo 對應位置：
+---
+
+## 一、上方列統一成這 6 個
+
+```text
+首頁 / 家庭誌 / 保健室 / 圖書室 / 風格誌 / 光影誌
+```
+
+上方列不再放：
+
+```text
+文章列表 / 知識圖譜 / 我們一家 / 關於 / 工作室
+```
+
+文章列表仍然存在，但它是五大入口背後的分流頁，不需要放在主導覽。
+
+---
+
+## 二、底部輔助連結統一放這些
+
+```text
+知識圖譜 / 我們一家 / 關於 / 搜尋 / VOCUS
+```
+
+---
+
+## 三、要上傳的檔案
+
+請上傳：
+
+```text
+css/nav-footer-unify-v4-4.css
+```
+
+---
+
+## 四、每個頁面都要加 CSS
+
+在以下頁面的 `</head>` 前加入：
+
+```html
+<link rel="stylesheet" href="css/nav-footer-unify-v4-4.css">
+```
+
+建議至少改這些頁：
 
 ```text
 index.html
 articles.html
-assets/img/logo-avatar.png
+knowledge.html
+family.html
+about.html
 ```
 
-## 這版已直接寫進 HTML，不再靠 JS 補丁
+---
 
-### 首頁 Hero 方案 B
-已改成：
+## 五、建議直接替換上方列 HTML
 
-```text
-用科學理解生活 用陪伴記錄成長
+把每頁 `<nav class="main-nav" ...>...</nav>` 改成：
 
-學問求知識，研究生智慧；
-覺悟得玄機，了解道真理。
+```html
+<nav class="main-nav" aria-label="主要導覽">
+  <a href="index.html">首頁</a>
+  <a href="articles.html?journal=family">家庭誌</a>
+  <a href="articles.html?journal=health">保健室</a>
+  <a href="articles.html?journal=library">圖書室</a>
+  <a href="articles.html?journal=style">風格誌</a>
+  <a href="articles.html?journal=light">光影誌</a>
+</nav>
 ```
 
-並且：
-- 拿掉上方重複的小標
-- 拿掉「科學理解生活」後面的逗號
-- 詩句改為兩行
+---
 
-### LOGO
-左上角恢復使用：
+## 六、每頁 Footer 加這段
 
-```text
-assets/img/logo-avatar.png
+放在 footer 裡，或放在版權文字上方：
+
+```html
+<nav class="footer-links" aria-label="輔助導覽">
+  <a href="knowledge.html">知識圖譜</a>
+  <a href="family.html">我們一家</a>
+  <a href="about.html">關於</a>
+  <a href="search.html">搜尋</a>
+  <a href="https://vocus.cc" target="_blank" rel="noopener">VOCUS</a>
+</nav>
 ```
 
-不再使用空白圓形或文字「雞」。
+---
 
-### 主導覽
-已移除「文章列表」。
+## 七、知識圖譜頁面文案也要順手修掉舊分類
 
-主導覽改成：
+你現在知識圖譜頁面右側統計還是：
 
 ```text
-首頁 / 家庭誌 / 保健室 / 圖書室 / 風格誌 / 光影誌 / 知識圖譜 / 我們一家 / 關於
+幸福點滴 / 生活研究 / 棒球札記 / AI 共創
 ```
 
-### 五大入口
-首頁五大入口已改成：
+建議下一步統一改成五大入口：
 
 ```text
-家庭誌：articles.html?journal=family
-保健室：articles.html?journal=health
-圖書室：articles.html?journal=library
-風格誌：articles.html?journal=style
-光影誌：articles.html?journal=light
+家庭誌 / 保健室 / 圖書室 / 風格誌 / 光影誌
 ```
 
-### 文字
-首頁與文章列表中的「獨家記憶」已改成「家庭誌」。
+這一包先處理導覽規則，避免再讓頁面入口混亂。
 
-## 這包不動
+---
 
-- Hero 圖片
-- 五大入口圖片
-- 角色圖片
-- 文章內容分類資料
-
-## 上線後檢查
+## 八、上線後檢查
 
 ```text
-https://beckman0470.github.io/index.html?v=v43
-https://beckman0470.github.io/articles.html?journal=family&v=v43
-https://beckman0470.github.io/articles.html?journal=health&v=v43
-https://beckman0470.github.io/articles.html?journal=library&v=v43
-https://beckman0470.github.io/articles.html?journal=style&v=v43
-https://beckman0470.github.io/articles.html?journal=light&v=v43
+https://beckman0470.github.io/index.html?v=nav44
+https://beckman0470.github.io/articles.html?journal=family&v=nav44
+https://beckman0470.github.io/knowledge.html?v=nav44
+https://beckman0470.github.io/family.html?v=nav44
+https://beckman0470.github.io/about.html?v=nav44
 ```

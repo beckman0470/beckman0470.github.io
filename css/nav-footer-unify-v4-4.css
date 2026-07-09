@@ -1,0 +1,49 @@
+/* ChickenDad Journal nav/footer unification v4.4 */
+/* Top nav: main five entrances only. Utility pages move to footer. */
+
+.main-nav a[href*="knowledge.html"],
+.main-nav a[href*="family.html"],
+.main-nav a[href*="about.html"],
+.main-nav a[href*="articles.html"]:not([href*="journal="]) {
+  display: none !important;
+}
+
+.main-nav a[href*="articles.html?journal=family"]::after,
+.main-nav a[href*="articles.html?journal=health"]::after,
+.main-nav a[href*="articles.html?journal=library"]::after,
+.main-nav a[href*="articles.html?journal=style"]::after,
+.main-nav a[href*="articles.html?journal=light"]::after {
+  display: none !important;
+}
+
+.site-footer .footer-links,
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 18px;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.site-footer .footer-links a,
+.footer-links a {
+  color: #7e654e;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.site-footer .footer-links a:hover,
+.footer-links a:hover {
+  color: #b26f2b;
+  text-decoration: underline;
+}
+
+@media (max-width: 760px) {
+  .main-nav {
+    gap: 14px !important;
+  }
+  .main-nav a {
+    font-size: 14px;
+  }
+}
