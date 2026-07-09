@@ -1,49 +1,74 @@
-# 雞爸爸生活研究室｜首頁五大入口標題修正包 v4.5
+# 雞爸爸生活研究室｜導覽列直接靜態修正包 v4.6
 
-這包只修改首頁五大入口上方標題，不動 Hero、不動圖片、不動角色、不動五大入口連結。
+你說得對，v4.4 沒有真正處理到。  
+原因是 v4.4 只是提供 CSS 與替換片段，如果沒有每一頁都確實引用或替換，頁面就不會變。
 
-## 修改結果
+這次 v4.6 是「靜態 JS/CSS 直接修正包」，不用 Python。  
+每頁只要加兩行，瀏覽器載入後會直接把上方列重組成正確版本。
 
-原本：
+---
+
+## 修正目標
+
+上方列統一只保留：
 
 ```text
-❦ 探索雞爸爸一家的生活研究 ❦
+首頁 / 家庭誌 / 保健室 / 圖書室 / 風格誌 / 光影誌
 ```
 
-改成：
+移到底部：
 
 ```text
-❦ 生活研究室 ❦
-行勝於言 厚德載物
+知識圖譜 / 我們一家 / 關於 / 搜尋 / VOCUS
 ```
 
-格式比照「我們這一家」區塊：主標置中、左右裝飾符號、底下小標置中。
+同時會把頁面上殘留的：
+
+```text
+獨家記憶
+```
+
+顯示成：
+
+```text
+家庭誌
+```
 
 ---
 
 ## 上傳檔案
 
-請把這兩個檔案上傳到 GitHub repo：
+請把這兩個檔案上傳到 repo：
 
 ```text
-css/homepage-section-title-v4-5.css
-js/homepage-section-title-v4-5.js
+css/nav-direct-fix-v4-6.css
+js/nav-direct-fix-v4-6.js
 ```
 
 ---
 
-## 修改 index.html
+## 每個頁面都加兩行
 
-在 `</head>` 前加入：
+請至少在這些頁面加：
 
-```html
-<link rel="stylesheet" href="css/homepage-section-title-v4-5.css">
+```text
+index.html
+articles.html
+knowledge.html
+family.html
+about.html
 ```
 
-在 `</body>` 前加入：
+### 在 `</head>` 前加：
 
 ```html
-<script src="js/homepage-section-title-v4-5.js" defer></script>
+<link rel="stylesheet" href="css/nav-direct-fix-v4-6.css">
+```
+
+### 在 `</body>` 前加：
+
+```html
+<script src="js/nav-direct-fix-v4-6.js" defer></script>
 ```
 
 ---
@@ -51,17 +76,16 @@ js/homepage-section-title-v4-5.js
 ## 上線後檢查
 
 ```text
-https://beckman0470.github.io/index.html?v=section-title-v45
+https://beckman0470.github.io/index.html?v=nav46
+https://beckman0470.github.io/articles.html?journal=family&v=nav46
+https://beckman0470.github.io/knowledge.html?v=nav46
+https://beckman0470.github.io/family.html?v=nav46
+https://beckman0470.github.io/about.html?v=nav46
 ```
 
 ---
 
-## 這包不修改
+## 注意
 
-- Hero 圖
-- Hero 文案
-- LOGO
-- 五大入口圖片
-- 五大入口連結
-- 我們這一家
-- 文章列表
+這包不改圖片、不改 Hero、不改文章內容。  
+它只處理導覽列、底部輔助連結，以及「獨家記憶」顯示文字。

@@ -1,0 +1,58 @@
+/* ChickenDad Journal nav direct static fix v4.6 */
+/* Top nav: homepage + five entrances only. Utility links are footer-only. */
+
+.main-nav a[data-cdj-remove],
+.main-nav a.cdj-remove-from-topnav,
+nav a.cdj-remove-from-topnav {
+  display: none !important;
+}
+
+.main-nav a {
+  white-space: nowrap;
+}
+
+/* Prevent duplicate / double underline caused by active styles from old article-list link */
+.main-nav a[href*="articles.html"]:not([href*="journal="]) {
+  display: none !important;
+}
+
+.main-nav a[href*="knowledge.html"],
+.main-nav a[href*="family.html"],
+.main-nav a[href*="about.html"],
+.main-nav a[href*="dashboard.html"],
+.main-nav a[href*="search.html"] {
+  display: none !important;
+}
+
+/* Footer utility links */
+.footer-links,
+.cdj-footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 18px;
+  align-items: center;
+  justify-content: center;
+  margin: 14px 0;
+}
+
+.footer-links a,
+.cdj-footer-links a {
+  color: #7e654e;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.footer-links a:hover,
+.cdj-footer-links a:hover {
+  color: #b26f2b;
+  text-decoration: underline;
+}
+
+@media (max-width: 760px) {
+  .main-nav {
+    gap: 14px !important;
+  }
+  .main-nav a {
+    font-size: 14px !important;
+  }
+}

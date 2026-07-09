@@ -1,0 +1,9 @@
+請在 index.html / articles.html / knowledge.html / family.html / about.html 都加入：
+
+1. 在 </head> 前：
+
+<link rel="stylesheet" href="css/nav-direct-fix-v4-6.css">
+
+2. 在 </body> 前：
+
+<script src="js/nav-direct-fix-v4-6.js" defer></script>
