@@ -258,6 +258,92 @@
       .archive-quote { min-height:auto; }
     }
 
+  
+    /* v5.3: journal-specific content page background, not card background */
+    body.archive-page {
+      position: relative;
+      overflow-x: hidden;
+      background-color: var(--cdj-bg);
+    }
+    body.archive-page::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      opacity: .58;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center top;
+    }
+    body.archive-page main,
+    body.archive-page footer {
+      position: relative;
+      z-index: 1;
+    }
+    body.archive-page .site-header {
+      z-index: 40;
+    }
+
+    /* Keep cards readable; background mood belongs to the page, not inside cards */
+    .archive-work-card {
+      background: rgba(255, 253, 248, .88) !important;
+      backdrop-filter: blur(2px);
+    }
+    .archive-work-card::before {
+      display: none !important;
+    }
+
+    body.archive-page[data-journal="family"]::before {
+      background-image:
+        radial-gradient(circle at 18% 14%, rgba(230, 180, 108, .22), transparent 22%),
+        radial-gradient(circle at 86% 78%, rgba(221, 178, 118, .18), transparent 25%),
+        linear-gradient(115deg, transparent 0 58%, rgba(194, 145, 88, .08) 58% 60%, transparent 60%),
+        linear-gradient(180deg, rgba(255,248,236,.94), rgba(255,244,226,.86));
+    }
+
+    body.archive-page[data-journal="health"]::before {
+      background-image:
+        radial-gradient(circle at 16% 20%, rgba(144, 190, 151, .24), transparent 25%),
+        radial-gradient(circle at 82% 72%, rgba(173, 215, 183, .20), transparent 28%),
+        linear-gradient(135deg, transparent 0 62%, rgba(126, 176, 139, .08) 62% 64%, transparent 64%),
+        linear-gradient(180deg, rgba(250,248,235,.94), rgba(238,247,232,.88));
+    }
+
+    body.archive-page[data-journal="library"]::before {
+      background-image:
+        linear-gradient(90deg, rgba(162,126,82,.08) 0 8%, transparent 8% 11%, rgba(166,132,91,.07) 11% 20%, transparent 20% 23%, rgba(120,91,61,.06) 23% 28%, transparent 28% 100%),
+        linear-gradient(180deg, transparent 0 72%, rgba(155,119,78,.10) 72% 73%, transparent 73%),
+        radial-gradient(circle at 78% 16%, rgba(225,196,145,.22), transparent 22%),
+        linear-gradient(180deg, rgba(255,248,236,.95), rgba(250,241,224,.88));
+      background-size: 190px 100%, 100% 100%, cover, cover;
+      background-position: right top, center top, center top, center top;
+    }
+
+    body.archive-page[data-journal="style"]::before {
+      background-image:
+        radial-gradient(circle at 82% 18%, rgba(202, 135, 63, .24), transparent 22%),
+        radial-gradient(circle at 18% 80%, rgba(143, 96, 54, .14), transparent 28%),
+        linear-gradient(135deg, transparent 0 55%, rgba(124,83,48,.10) 55% 57%, transparent 57%),
+        linear-gradient(180deg, rgba(255,248,236,.95), rgba(247,232,211,.88));
+    }
+
+    body.archive-page[data-journal="light"]::before {
+      background-image:
+        radial-gradient(circle at 78% 16%, rgba(255, 220, 135, .30), transparent 20%),
+        radial-gradient(circle at 82% 18%, rgba(255, 241, 181, .25), transparent 11%),
+        linear-gradient(135deg, transparent 0 50%, rgba(183,142,90,.10) 50% 52%, transparent 52%),
+        linear-gradient(180deg, rgba(255,249,236,.94), rgba(239,238,224,.86));
+    }
+
+    body.archive-page[data-journal="all"]::before,
+    body.archive-page:not([data-journal])::before {
+      background-image:
+        radial-gradient(circle at 16% 18%, rgba(226,179,108,.18), transparent 20%),
+        radial-gradient(circle at 88% 78%, rgba(205,167,116,.14), transparent 24%),
+        linear-gradient(180deg, rgba(255,248,236,.96), rgba(255,244,230,.88));
+    }
+
   </style>
 </head>
 <body class="archive-page">
@@ -582,6 +668,7 @@
   const journal = params.get('journal');
   const cards = Array.from(document.querySelectorAll('.archive-work-card'));
   const valid = Object.prototype.hasOwnProperty.call(labels, journal);
+  document.body.dataset.journal = valid ? journal : 'all';
   let visible = 0;
   cards.forEach(card => {
     const show = !valid || card.dataset.journal === journal;
