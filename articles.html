@@ -1,762 +1,258 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>故事｜雞爸爸生活研究室</title>
-  <link rel="canonical" href="https://beckman0470.github.io/articles.html">
-  <meta name="description" content="雞爸爸生活研究室作品典藏，依家庭誌、保健室、圖書室、風格誌、光影誌分流整理。">
-  <meta property="og:site_name" content="雞爸爸生活研究室">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="故事｜雞爸爸生活研究室">
-  <meta property="og:description" content="雞爸爸生活研究室作品典藏，依五大入口分流整理。">
-  <meta property="og:url" content="https://beckman0470.github.io/articles.html">
-  <meta property="og:image" content="https://beckman0470.github.io/assets/story-covers/default.svg">
-  <meta name="theme-color" content="#fff8ec">
-  <link rel="stylesheet" href="css/homepage-v2.css">
-  <link rel="stylesheet" href="css/content-archive.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>雞爸爸生活研究室｜內容頁 Prototype 精準版 v5.7</title>
   <style>
     :root {
-      --cdj-bg:#fff8ec; --cdj-ink:#4d3625; --cdj-muted:#7b624b; --cdj-line:#eadbc8; --cdj-accent:#b26f2b; --cdj-card:#fffdf8;
+      --bg:#f6f0e6;
+      --card:#fffaf3;
+      --line:#eadbc8;
+      --text:#5b3d27;
+      --muted:#7a6857;
+      --accent:#c68433;
     }
-    body.archive-page { margin:0; background:var(--cdj-bg); color:var(--cdj-ink); font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif; }
+    * { box-sizing:border-box; }
+    body {
+      margin:0;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Microsoft JhengHei",sans-serif;
+      background:var(--bg);
+      color:var(--text);
+    }
     a { color:inherit; text-decoration:none; }
-    .archive-container { width:min(1120px, calc(100% - 40px)); margin:0 auto; }
-    .site-header .archive-container { width:min(1680px, calc(100% - 80px)); }
-    .site-header .nav { justify-content:flex-start; }
-    .site-header .nav-links { margin-left:auto; }
-    .site-header { position:sticky; top:0; z-index:20; background:rgba(255,248,236,.96); border-bottom:1px solid var(--cdj-line); backdrop-filter:blur(8px); }
-    .nav { min-height:74px; display:flex; align-items:center; justify-content:space-between; gap:24px; }
-    .logo { display:flex; align-items:center; gap:12px; }
-    .logo-avatar { width:46px; height:46px; border-radius:50%; object-fit:cover; box-shadow:0 3px 10px rgba(83,52,22,.08); }
-    .logo-text strong { display:block; font-size:18px; }
-    .logo-text span { display:block; color:var(--cdj-muted); font-size:13px; }
-    .nav-links { display:flex; gap:22px; flex-wrap:wrap; align-items:center; }
-    .nav-links a { font-weight:800; padding:8px 0; border-bottom:3px solid transparent; }
-    .nav-links a.active { color:var(--cdj-accent); border-bottom-color:var(--cdj-accent); }
-    .archive-hero { padding:64px 0 28px; }
-    .archive-hero h1 { font-size:clamp(44px, 7vw, 76px); line-height:.95; margin:0 0 14px; letter-spacing:-0.06em; }
-    .archive-hero p { max-width:780px; color:var(--cdj-muted); font-size:18px; line-height:1.9; }
-    .journal-tabs { display:flex; flex-wrap:wrap; gap:10px; margin:26px 0 0; }
-    .journal-tabs a { border:1px solid var(--cdj-line); border-radius:999px; padding:10px 18px; background:#fffdf8; color:#7b4f24; font-weight:900; box-shadow:0 4px 14px rgba(83,52,22,.06); }
-    .journal-tabs a.active { background:var(--cdj-accent); border-color:var(--cdj-accent); color:white; }
-    .archive-section { padding:0 0 60px; }
-    .archive-section h2 { font-size:clamp(32px,4vw,52px); margin:0 0 8px; }
-    .story-status { color:var(--cdj-muted); margin:0 0 24px; line-height:1.8; }
-    .archive-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; }
-    .archive-work-card { display:flex; flex-direction:column; gap:12px; padding:16px; background:var(--cdj-card); border:1px solid var(--cdj-line); border-radius:22px; box-shadow:0 10px 24px rgba(67,46,27,.06); min-height:100%; }
-    .archive-cover { display:none; }
-    .archive-card-top,.archive-tag-row,.archive-people-row { display:flex; flex-wrap:wrap; gap:8px; }
-    .archive-pill { display:inline-flex; padding:5px 10px; border-radius:999px; background:#f4e5cf; color:#8a5a22; font-weight:900; font-size:13px; }
-    .archive-mini-pill { display:inline-flex; padding:4px 8px; border-radius:999px; background:#fff6e9; border:1px solid #eadbc8; color:#7c624c; font-size:12px; font-weight:700; }
-    .archive-work-card h3 { margin:2px 0; font-size:21px; line-height:1.45; }
-    .archive-work-card p { margin:0; color:#6f5844; line-height:1.75; }
-    .archive-quote { margin:0; padding-left:12px; border-left:3px solid #ddb276; color:#735338; line-height:1.75; }
-    .archive-card-bottom { color:#a06a29; font-weight:900; margin-top:auto; }
-    .archive-version-note { color:#92775d; font-size:12px; margin-top:24px; }
-    .footer-cta { border-top:1px solid var(--cdj-line); padding:28px 0; }
-    .footer-inner { width:min(1120px, calc(100% - 40px)); margin:0 auto; display:flex; justify-content:space-between; gap:20px; align-items:center; }
-    .footer-inner p { margin:6px 0 0; color:var(--cdj-muted); }
-    .footer-inner a { background:var(--cdj-accent); color:#fff; padding:10px 18px; border-radius:999px; font-weight:900; }
-    @media (max-width:900px) {
-      .nav { align-items:flex-start; flex-direction:column; padding:14px 0; }
-      .archive-grid { grid-template-columns:1fr; }
-      .archive-hero { padding-top:44px; }
-      .footer-inner { flex-direction:column; align-items:flex-start; }
-    }
-  
-    .footer-links { display:flex; flex-wrap:wrap; justify-content:center; gap:14px 18px; margin:10px 0 12px; }
-    .footer-links a { color:#7e654e; font-weight:800; text-decoration:none; }
-    .footer-links a:hover { color:#b26f2b; text-decoration:underline; }
-
-  
-    /* v5.1: header locked to homepage position */
-    .wrap { width:min(1440px, calc(100vw - 48px)); margin:0 auto; }
     .site-header {
+      background:rgba(255,250,243,.92);
+      border-bottom:1px solid var(--line);
       position:sticky;
       top:0;
-      z-index:40;
-      background:rgba(251,247,240,.96);
-      backdrop-filter:blur(8px);
-      border-bottom:1px solid var(--cdj-line);
+      z-index:50;
+      backdrop-filter: blur(8px);
+    }
+    .wrap {
+      width:min(1280px, calc(100% - 48px));
+      margin:0 auto;
     }
     .header-inner {
-      min-height:88px;
+      min-height:86px;
       display:grid;
       grid-template-columns:auto 1fr auto;
-      gap:24px;
       align-items:center;
+      gap:24px;
     }
     .brand {
-      display:inline-flex;
+      display:flex;
       align-items:center;
       gap:14px;
-      text-decoration:none;
     }
     .brand-avatar {
-      width:56px;
-      height:56px;
-      border-radius:50%;
+      width:54px;
+      height:54px;
+      border-radius:999px;
       object-fit:cover;
-      box-shadow:0 4px 10px rgba(83,52,22,.08);
+      box-shadow:0 6px 16px rgba(73,48,24,.12);
     }
     .brand-text strong {
       display:block;
-      font-size:20px;
-      line-height:1.15;
+      font-size:18px;
+      font-weight:900;
       letter-spacing:.02em;
     }
     .brand-text span {
       display:block;
       margin-top:4px;
+      color:var(--muted);
       font-size:14px;
-      color:var(--cdj-muted);
+      font-weight:700;
     }
     .main-nav {
+      justify-self:center;
       display:flex;
-      justify-content:center;
-      flex-wrap:wrap;
+      align-items:center;
       gap:28px;
-      margin:0;
+      flex-wrap:wrap;
     }
     .main-nav a {
+      font-weight:900;
       padding:8px 0;
-      font-weight:800;
       border-bottom:3px solid transparent;
-      text-decoration:none;
-      white-space:nowrap;
     }
-    .main-nav a.active,
-    .main-nav a[aria-current="page"] {
-      color:var(--cdj-accent);
-      border-bottom-color:var(--cdj-accent);
+    .main-nav a.active {
+      color:var(--accent);
+      border-bottom-color:var(--accent);
     }
     .search-link {
+      justify-self:end;
       font-size:28px;
+      color:#704d2e;
       line-height:1;
-      color:var(--cdj-ink);
-      text-decoration:none;
+      padding:6px 10px;
     }
-    @media (max-width:980px) {
-      .wrap { width:min(100vw - 32px, 1440px); }
-      .header-inner {
-        grid-template-columns:1fr;
-        justify-items:start;
-        padding:16px 0;
-      }
-      .main-nav { justify-content:flex-start; gap:18px; }
-      .search-link { display:none; }
+    main {
+      padding:22px 0 42px;
     }
-    @media (max-width:640px) {
-      .wrap { width:min(100vw - 20px, 1440px); }
-      .brand-text strong { font-size:18px; }
-      .brand-text span { font-size:13px; }
-      .main-nav { gap:14px; font-size:14px; }
+    .scene-wrap {
+      width:min(1480px, calc(100% - 48px));
+      margin:0 auto;
     }
-
-  
-    /* v5.2: cleaner archive cards + subtle room backgrounds */
-    .archive-grid { align-items:stretch; }
-    .archive-work-card {
+    .prototype-scene {
       position:relative;
+      width:100%;
+      border-radius:26px;
       overflow:hidden;
-      isolation:isolate;
-      gap:10px;
-      min-height:420px;
-      background:
-        linear-gradient(180deg, rgba(255,253,248,.98), rgba(255,251,244,.95));
+      box-shadow:0 16px 42px rgba(86,60,32,.12);
+      background:#efe4d1;
     }
-    .archive-work-card > * { position:relative; z-index:1; }
-    .archive-work-card::before {
-      content:"";
+    .prototype-scene img {
+      width:100%;
+      display:block;
+      height:auto;
+    }
+    .hotspot {
       position:absolute;
-      inset:0;
-      z-index:0;
-      opacity:.2;
-      pointer-events:none;
-      background-repeat:no-repeat;
-      background-size:cover;
-      background-position:center;
+      display:block;
+      border-radius:22px;
+      outline:0;
+      transition: box-shadow .18s ease, background .18s ease;
     }
-    .archive-work-card h3 {
-      margin:2px 0;
-      font-size:20px;
-      line-height:1.45;
-      display:-webkit-box;
-      -webkit-line-clamp:2;
-      -webkit-box-orient:vertical;
-      overflow:hidden;
-      min-height:2.9em;
+    .hotspot:hover, .hotspot:focus-visible {
+      box-shadow:0 0 0 3px rgba(198,132,51,.62) inset, 0 0 0 4px rgba(255,255,255,.66);
+      background:rgba(255,255,255,.08);
     }
-    .archive-work-card p {
-      margin:0;
+    .scene-summary {
+      margin:18px auto 0;
+      max-width:1200px;
+    }
+    details.fallback {
+      background:rgba(255,251,245,.9);
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:14px 18px;
+      box-shadow:0 8px 24px rgba(86,60,32,.05);
+    }
+    details.fallback summary {
+      cursor:pointer;
+      font-weight:900;
+      color:var(--text);
+    }
+    .fallback-links {
+      margin-top:10px;
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0,1fr));
+      gap:10px 18px;
+    }
+    .fallback-links a {
+      padding:10px 12px;
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:12px;
       color:#6f5844;
-      line-height:1.72;
-      display:-webkit-box;
-      -webkit-line-clamp:3;
-      -webkit-box-orient:vertical;
-      overflow:hidden;
-      min-height:5.2em;
+      font-weight:700;
     }
-    .archive-quote {
-      margin:0;
-      padding-left:12px;
-      border-left:3px solid #ddb276;
-      color:#735338;
-      line-height:1.72;
-      display:-webkit-box;
-      -webkit-line-clamp:2;
-      -webkit-box-orient:vertical;
-      overflow:hidden;
-      min-height:3.3em;
+    @media (max-width: 960px) {
+      .wrap, .scene-wrap { width:min(100% - 24px, 1280px); }
+      .header-inner { grid-template-columns:1fr; gap:10px; padding:14px 0; }
+      .brand, .main-nav, .search-link { justify-self:center; }
+      .main-nav { gap:18px; justify-content:center; }
+      .fallback-links { grid-template-columns:1fr; }
     }
-    .archive-tag-row {
-      display:none;
-    }
-    .archive-people-row {
-      margin-top:2px;
-      max-height:52px;
-      overflow:hidden;
-    }
-
-    .archive-work-card[data-journal="family"]::before {
-      background-image:
-        radial-gradient(circle at 18% 18%, rgba(231,187,120,.38), transparent 23%),
-        linear-gradient(180deg, transparent 0 68%, rgba(214,176,128,.22) 68% 69%, transparent 69%),
-        linear-gradient(90deg, transparent 0 78%, rgba(214,176,128,.12) 78% 79%, transparent 79%);
-    }
-    .archive-work-card[data-journal="health"]::before {
-      background-image:
-        radial-gradient(circle at 82% 18%, rgba(156,198,168,.38), transparent 22%),
-        radial-gradient(circle at 72% 78%, rgba(194,223,202,.30), transparent 18%),
-        linear-gradient(180deg, transparent 0 74%, rgba(175,208,182,.16) 74% 75%, transparent 75%);
-    }
-    .archive-work-card[data-journal="library"]::before {
-      background-image:
-        linear-gradient(90deg, rgba(188,160,120,.12) 0 10%, transparent 10% 13%, rgba(193,171,136,.10) 13% 25%, transparent 25% 28%, rgba(178,149,111,.09) 28% 35%, transparent 35% 100%),
-        linear-gradient(180deg, transparent 0 77%, rgba(170,140,99,.18) 77% 78%, transparent 78%);
-      background-size:120px 100%, 100% 100%;
-      background-position:right center, center center;
-    }
-    .archive-work-card[data-journal="style"]::before {
-      background-image:
-        radial-gradient(circle at 84% 24%, rgba(197,144,73,.30), transparent 20%),
-        linear-gradient(135deg, transparent 0 68%, rgba(154,114,60,.12) 68% 71%, transparent 71%),
-        linear-gradient(0deg, transparent 0 72%, rgba(145,101,54,.12) 72% 73%, transparent 73%);
-    }
-    .archive-work-card[data-journal="light"]::before {
-      background-image:
-        radial-gradient(circle at 80% 20%, rgba(249,215,134,.42), transparent 18%),
-        radial-gradient(circle at 84% 22%, rgba(253,239,191,.50), transparent 10%),
-        linear-gradient(135deg, transparent 0 54%, rgba(220,190,140,.12) 54% 56%, transparent 56%),
-        linear-gradient(180deg, transparent 0 76%, rgba(174,138,96,.12) 76% 77%, transparent 77%);
-    }
-
-    @media (max-width:900px){
-      .archive-work-card { min-height:auto; }
-      .archive-work-card p { min-height:auto; }
-      .archive-quote { min-height:auto; }
-    }
-
-  
-    /* v5.4: five journal room backgrounds, matching homepage entrance-card illustration style */
-    body.archive-page {
-      position: relative;
-      overflow-x: hidden;
-      background-color: #fff8ec;
-      background-image:
-        linear-gradient(180deg, rgba(255,248,236,.82), rgba(255,248,236,.72)),
-        var(--journal-room-bg);
-      background-size: cover;
-      background-position: center top;
-      background-attachment: fixed;
-    }
-
-    body.archive-page::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      z-index: 0;
-      pointer-events: none;
-      background:
-        radial-gradient(circle at 50% 18%, rgba(255,248,236,.86) 0, rgba(255,248,236,.64) 30%, rgba(255,248,236,.28) 56%, rgba(255,248,236,.12) 100%),
-        linear-gradient(90deg, rgba(255,248,236,.24), rgba(255,248,236,.54) 34%, rgba(255,248,236,.46) 66%, rgba(255,248,236,.18));
-    }
-
-    body.archive-page main,
-    body.archive-page footer {
-      position: relative;
-      z-index: 1;
-    }
-
-    body.archive-page[data-journal="family"] {
-      --journal-room-bg: url("assets/img/journal-room-family.png");
-    }
-    body.archive-page[data-journal="health"] {
-      --journal-room-bg: url("assets/img/journal-room-health.png");
-    }
-    body.archive-page[data-journal="library"] {
-      --journal-room-bg: url("assets/img/journal-room-library.png");
-    }
-    body.archive-page[data-journal="style"] {
-      --journal-room-bg: url("assets/img/journal-room-style.png");
-    }
-    body.archive-page[data-journal="light"] {
-      --journal-room-bg: url("assets/img/journal-room-light.png");
-    }
-    body.archive-page[data-journal="all"],
-    body.archive-page:not([data-journal]) {
-      --journal-room-bg: url("assets/img/journal-room-family.png");
-    }
-
-    .archive-hero {
-      position: relative;
-      text-align: center;
-      padding: 64px 0 34px !important;
-    }
-
-    .archive-hero::before {
-      content: "";
-      position: absolute;
-      inset: 16px max(16px, calc((100vw - 920px) / 2)) 0;
-      z-index: -1;
-      border-radius: 40px;
-      background: rgba(255, 248, 236, .45);
-      backdrop-filter: blur(1.5px);
-    }
-
-    .archive-hero h1 {
-      letter-spacing: .04em !important;
-      line-height: 1.15 !important;
-    }
-
-    .archive-hero h1::before,
-    .archive-hero h1::after {
-      content: "❦";
-      color: #d4a25c;
-      font-size: .48em;
-      margin: 0 .28em;
-      vertical-align: .14em;
-    }
-
-    .archive-hero p {
-      margin-left: auto;
-      margin-right: auto;
-      max-width: 760px !important;
-      color: #5f4a39 !important;
-      font-weight: 500;
-    }
-
-    .archive-grid {
-      position: relative;
-      z-index: 1;
-      gap: 22px !important;
-    }
-
-    .archive-work-card {
-      background: rgba(255, 253, 248, .88) !important;
-      border: 1px solid rgba(234, 219, 200, .72) !important;
-      box-shadow: 0 16px 36px rgba(67,46,27,.10) !important;
-      backdrop-filter: blur(6px);
-    }
-
-    .archive-work-card::before {
-      display: none !important;
-    }
-
-    .archive-work-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 20px 44px rgba(67,46,27,.14) !important;
-    }
-
-    @media (max-width: 900px) {
-      body.archive-page {
-        background-attachment: scroll;
-        background-position: center top;
-      }
-
-      .archive-hero::before {
-        inset: 8px 12px 0;
-        border-radius: 28px;
-      }
-    }
-
-  
-    /* v5.5 correction: using exact five prototype visuals as page backgrounds */
-    body.archive-page::before {
-      background:
-        radial-gradient(circle at 50% 22%, rgba(255,248,236,.74) 0, rgba(255,248,236,.58) 34%, rgba(255,248,236,.36) 64%, rgba(255,248,236,.22) 100%),
-        linear-gradient(90deg, rgba(255,248,236,.42), rgba(255,248,236,.58) 34%, rgba(255,248,236,.52) 66%, rgba(255,248,236,.34)) !important;
-    }
-    body.archive-page {
-      background-position: center top !important;
-    }
-
   </style>
 </head>
-<body class="archive-page">
-<header class="site-header">
-  <div class="wrap header-inner">
-    <a class="brand" href="index.html" aria-label="回到首頁">
-      <img src="assets/img/logo-avatar.png?v=20260709-43" alt="雞爸爸生活研究室 LOGO" class="brand-avatar">
-      <div class="brand-text">
-        <strong>雞爸爸生活研究室</strong>
-        <span>Chicken Dad Journal</span>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="回到首頁">
+        <img src="assets/img/logo-avatar.png?v=57" alt="雞爸爸生活研究室 LOGO" class="brand-avatar">
+        <div class="brand-text">
+          <strong>雞爸爸生活研究室</strong>
+          <span>Chicken Dad Journal</span>
+        </div>
+      </a>
+      <nav class="main-nav" aria-label="主要導覽">
+        <a href="index.html" data-nav="home">首頁</a>
+        <a href="articles.html?journal=family" data-nav="family">家庭誌</a>
+        <a href="articles.html?journal=health" data-nav="health">保健室</a>
+        <a href="articles.html?journal=library" data-nav="library">圖書室</a>
+        <a href="articles.html?journal=style" data-nav="style">風格誌</a>
+        <a href="articles.html?journal=light" data-nav="light">光影誌</a>
+      </nav>
+      <a class="search-link" href="search.html" aria-label="搜尋">⌕</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="scene-wrap">
+      <div class="prototype-scene" id="scene">
+        <img id="scene-image" src="" alt="">
+        <div id="scene-hotspots"></div>
       </div>
-    </a>
-    <nav class="main-nav" aria-label="主要導覽">
-      <a href="index.html">首頁</a>
-      <a href="articles.html?journal=family">家庭誌</a>
-      <a href="articles.html?journal=health">保健室</a>
-      <a href="articles.html?journal=library">圖書室</a>
-      <a href="articles.html?journal=style">風格誌</a>
-      <a href="articles.html?journal=light">光影誌</a>
-    </nav>
-    <a class="search-link" href="search.html" aria-label="搜尋">⌕</a>
-  </div>
-</header>
 
-<main>
-  <section class="archive-hero">
-    <div class="archive-container">
-      <h1 id="archive-title">故事</h1>
-      <p id="archive-desc">這裡收錄 Vocus 已正式發表的作品，依家庭誌、保健室、圖書室、風格誌與光影誌分流整理。</p>
-</div>
-  </section>
-
-  <section class="archive-section">
-    <div class="archive-container">
-<div id="stories-grid" class="archive-grid">
-        <a class="archive-work-card" data-journal="health" href="articles/midnight-asthma-wheezing-lesson.html">
-      <div class="archive-cover"><img src="assets/story-covers/default.svg" alt="鼠姊姊半夜兩點的喘鳴聲：那一晚，我們又再次認識「急性氣喘」 文章封面預留圖"></div>
-      <div class="archive-card-top"><span class="archive-pill">保健室</span><span class="archive-mini-pill">約 9 分鐘</span></div>
-      <h3>鼠姊姊半夜兩點的喘鳴聲：那一晚，我們又再次認識「急性氣喘」</h3>
-      <p>星期六凌晨兩點多，鼠姊姊的喘鳴聲讓雞爸爸和鼠媽媽重新認識急性氣喘、急救藥與觀察警訊。</p>
-      <blockquote class="archive-quote">保養藥不是滅火器，血氧計也不是護身符。</blockquote>
-      <div class="archive-card-bottom">2026.07.06</div>
-      <div class="archive-tag-row"><span class="archive-mini-pill">#親子</span><span class="archive-mini-pill">#鼠姊姊</span><span class="archive-mini-pill">#急性氣喘</span><span class="archive-mini-pill">#氣喘兒</span></div>
-      <div class="archive-people-row"><span class="archive-mini-pill">雞爸爸</span><span class="archive-mini-pill">鼠媽媽</span><span class="archive-mini-pill">鼠姊姊</span><span class="archive-mini-pill">龍弟弟</span></div>
-    </a>
-<a class="archive-work-card" data-journal="family" href="articles/picture-book-hand-courage.html">
-      <div class="archive-cover"><img src="assets/story-covers/default.svg" alt="畫冊上的那隻手，把想媽媽變成鼠姊姊可以握住的勇氣 文章封面預留圖"></div>
-      <div class="archive-card-top"><span class="archive-pill">家庭誌</span><span class="archive-mini-pill">約 5 分鐘</span></div>
-      <h3>畫冊上的那隻手，把想媽媽變成鼠姊姊可以握住的勇氣</h3>
-      <p>鼠姊姊在工作坊裡，學會把想媽媽的心情變成可以累積的勇氣，也把善良分享給身邊的人。</p>
-      <blockquote class="archive-quote">真正的勇敢不是沒有哭，而是哭完還願意繼續。</blockquote>
-      <div class="archive-card-bottom">2026.07.06</div>
-      <div class="archive-tag-row"><span class="archive-mini-pill">#親子</span><span class="archive-mini-pill">#鼠姊姊</span><span class="archive-mini-pill">#勇氣</span><span class="archive-mini-pill">#善良</span></div>
-      <div class="archive-people-row"><span class="archive-mini-pill">雞爸爸</span><span class="archive-mini-pill">鼠媽媽</span><span class="archive-mini-pill">鼠姊姊</span><span class="archive-mini-pill">整復師叔叔阿姨</span></div>
-    </a>
-<a class="archive-work-card" data-journal="style" href="articles/rap-peak-2026-dragon-brother.html">
-      <div class="archive-cover"><img src="assets/story-covers/default.svg" alt="說唱巔峰對決2026：炸場首推龍弟弟 文章封面預留圖"></div>
-      <div class="archive-card-top"><span class="archive-pill">風格誌</span><span class="archive-mini-pill">約 6 分鐘</span></div>
-      <h3>說唱巔峰對決2026：炸場首推龍弟弟</h3>
-      <p>真正炸場的不在螢幕裡，而是在餐椅上；一歲半的龍弟弟，用點頭、蹲跳和摸下巴，把音樂跳進了生活。</p>
-      <blockquote class="archive-quote">孩子聽音樂不需要懂歌詞，只要旋律一響起，身體就會先替快樂找到答案。</blockquote>
-      <div class="archive-card-bottom">2026.07.03</div>
-      <div class="archive-tag-row"><span class="archive-mini-pill">#親子</span><span class="archive-mini-pill">#音樂</span><span class="archive-mini-pill">#嘻哈</span><span class="archive-mini-pill">#說唱巔峰對決</span></div>
-      <div class="archive-people-row"><span class="archive-mini-pill">雞爸爸</span><span class="archive-mini-pill">龍弟弟</span><span class="archive-mini-pill">兔阿嬤</span><span class="archive-mini-pill">鼠媽媽</span></div>
-    </a>
-<a class="archive-work-card" data-journal="family" href="articles/girls-let-us-watch-clouds.html">
-      <div class="archive-cover"><img src="assets/story-covers/default.svg" alt="女孩，讓我們看雲去 文章封面預留圖"></div>
-      <div class="archive-card-top"><span class="archive-pill">家庭誌</span><span class="archive-mini-pill">約 6 分鐘</span></div>
-      <h3>女孩，讓我們看雲去</h3>
-      <p>我們不是想旅行，只是需要好好呼吸</p>
-      <blockquote class="archive-quote">夫妻偶爾把彼此排在第一，不是自私，而是在替整個家庭充電。</blockquote>
-      <div class="archive-card-bottom">2026.07.02</div>
-      <div class="archive-tag-row"><span class="archive-mini-pill">#夫妻</span><span class="archive-mini-pill">#親子</span><span class="archive-mini-pill">#約會</span></div>
-      <div class="archive-people-row"><span class="archive-mini-pill">雞爸爸</span><span class="archive-mini-pill">鼠媽媽</span><span class="archive-mini-pill">鼠姊姊</span><span class="archive-mini-pill">龍弟弟</span></div>
-    </a>
-<a class="archive-work-card" data-journal="family" href="articles/temperature-of-now.html">
-      <div class="archive-cover"><img src="assets/story-covers/default.svg" alt="當下的溫度，就是幸福的定義 文章封面預留圖"></div>
-      <div class="archive-card-top"><span class="archive-pill">家庭誌</span><span class="archive-mini-pill">約 2 分鐘</span></div>
-      <h3>當下的溫度，就是幸福的定義</h3>
-      <p>終於也有專屬父子倆的默契</p>
-      <blockquote class="archive-quote">幸福大概就是這樣，不驚天動地，也沒有轟轟烈烈。</blockquote>
-      <div class="archive-card-bottom">2026.07.01</div>
-      <div class="archive-tag-row"><span class="archive-mini-pill">#親子</span><span class="archive-mini-pill">#龍弟弟</span><span class="archive-mini-pill">#爸爸</span></div>
-      <div class="archive-people-row"><span class="archive-mini-pill">雞爸爸</span><span class="archive-mini-pill">龍弟弟</span></div>
-    </a>
-<a class="archive-work-card" data-journal="light" href="articles/ai-website-scary-lover-concubine.html">
-      <div class="archive-cover"><img src="assets/story-covers/default.svg" alt="以為只是做網站，最後變成恐怖情人小妾 文章封面預留圖"></div>
-      <div class="archive-card-top"><span class="archive-pill">光影誌</span><span class="archive-mini-pill">約 7 分鐘</span></div>
-      <h3>以為只是做網站，最後變成恐怖情人小妾</h3>
-      <p>VOCUS 個人網站原本只是想放文章，最後卻變成 AI 小妾一路想幫雞爸爸規劃品牌人生。</p>
-      <blockquote class="archive-quote">我只是想架個網站，妳卻想替我規劃人生。</blockquote>
-      <div class="archive-card-bottom">2026.06.30</div>
-      <div class="archive-tag-row"><span class="archive-mini-pill">#AI共創</span><span class="archive-mini-pill">#ChatGPT</span><span class="archive-mini-pill">#網站架設</span><span class="archive-mini-pill">#品牌設計</span></div>
-      <div class="archive-people-row"><span class="archive-mini-pill">雞爸爸</span><span class="archive-mini-pill">鼠媽媽</span><span class="archive-mini-pill">ChatGPT／小妾</span></div>
-    </a>
-<a class="archive-work-card" data-journal="family" href="articles/half-hour-of-summer.html">
-      <div class="archive-cover"><img src="assets/story-covers/default.svg" alt="雞爸爸和鼠姊姊的半小時夏天 文章封面預留圖"></div>
-      <div class="archive-card-top"><span class="archive-pill">家庭誌</span><span class="archive-mini-pill">約 4 分鐘</span></div>
-      <h3>雞爸爸和鼠姊姊的半小時夏天</h3>
-      <p>難得晴朗的天氣，有一池正午太陽卻曬不熱的水，配上興奮到忘了買票的雞爸爸，最後靠一家人的協力，成就了一場平凡卻珍貴的夏日約會。</p>
-      <blockquote class="archive-quote">孩子的童年，不只是那些盛大的旅行組成的。</blockquote>
-      <div class="archive-card-bottom">2026.06.28</div>
-      <div class="archive-tag-row"><span class="archive-mini-pill">#親子</span><span class="archive-mini-pill">#游泳</span><span class="archive-mini-pill">#夏天</span></div>
-      <div class="archive-people-row"><span class="archive-mini-pill">雞爸爸</span><span class="archive-mini-pill">鼠姊姊</span><span class="archive-mini-pill">鼠媽媽</span><span class="archive-mini-pill">龍弟弟</span></div>
-    </a>
-<a class="archive-work-card" data-journal="light" href="articles/ai-fake-artsy-meme.html">
-      <div class="archive-cover"><img src="assets/story-covers/default.svg" alt="只是想跟風假文青，AI 卻把我自己做成了迷因 文章封面預留圖"></div>
-      <div class="archive-card-top"><span class="archive-pill">光影誌</span><span class="archive-mini-pill">約 4 分鐘</span></div>
-      <h3>只是想跟風假文青，AI 卻把我自己做成了迷因</h3>
-      <p>雞爸爸只是想做一張成熟男人風格的 AI 形象照，結果 Gemini 用自己的方式留下了「雞爸」迷因。</p>
-      <blockquote class="archive-quote">有時候作品不用 100 分，珍貴的反而是偶爾翻車時，那帶給我們一些意料之外快樂的瞬間。</blockquote>
-      <div class="archive-card-bottom">2026.06.26</div>
-      <div class="archive-tag-row"><span class="archive-mini-pill">#AI共創</span><span class="archive-mini-pill">#AI製圖</span><span class="archive-mini-pill">#ChatGPT</span><span class="archive-mini-pill">#Gemini</span></div>
-      <div class="archive-people-row"><span class="archive-mini-pill">雞爸爸</span><span class="archive-mini-pill">ChatGPT</span><span class="archive-mini-pill">Gemini</span></div>
-    </a>
-<a class="archive-work-card" data-journal="family" href="articles/graduation-day.html">
-      <div class="archive-cover"><img src="assets/story-covers/default.svg" alt="鼠姊姊的中班畢業典禮：唱跳、氣球與一整天的願望清單 文章封面預留圖"></div>
-      <div class="archive-card-top"><span class="archive-pill">家庭誌</span><span class="archive-mini-pill">約 4 分鐘</span></div>
-      <h3>鼠姊姊的中班畢業典禮：唱跳、氣球與一整天的願望清單</h3>
-      <p>最愛唱唱跳跳的鼠姊姊，最近開心地邀請爸爸媽媽到幼稚園參加蘋果班的畢業典禮。</p>
-      <blockquote class="archive-quote">對大人來說，只是一場幼兒園的畢業典禮；對孩子來說，這可能是和朋友們的重要告別。</blockquote>
-      <div class="archive-card-bottom">2026.06.25</div>
-      <div class="archive-tag-row"><span class="archive-mini-pill">#畢業典禮</span><span class="archive-mini-pill">#幼兒園</span><span class="archive-mini-pill">#成長</span></div>
-      <div class="archive-people-row"><span class="archive-mini-pill">雞爸爸</span><span class="archive-mini-pill">鼠姊姊</span><span class="archive-mini-pill">鼠媽媽</span></div>
-    </a>
-<a class="archive-work-card" data-journal="family" href="articles/pull-up-bar-swing-specialist.html">
-      <div class="archive-cover"><img src="assets/story-covers/default.svg" alt="原本想練背肌，卻成了推鞦韆專員 文章封面預留圖"></div>
-      <div class="archive-card-top"><span class="archive-pill">家庭誌</span><span class="archive-mini-pill">約 3 分鐘</span></div>
-      <h3>原本想練背肌，卻成了推鞦韆專員</h3>
-      <p>雞爸爸本來想在家練引體向上，沒想到單槓裝好十分鐘，就被龍弟弟改造成走廊裡的小型遊樂園。</p>
-      <blockquote class="archive-quote">有了孩子之後，很多東西都會意外走出新的方向。</blockquote>
-      <div class="archive-card-bottom">2026.06.16</div>
-      <div class="archive-tag-row"><span class="archive-mini-pill">#親子</span><span class="archive-mini-pill">#龍弟弟</span><span class="archive-mini-pill">#單槓</span><span class="archive-mini-pill">#盪鞦韆</span></div>
-      <div class="archive-people-row"><span class="archive-mini-pill">雞爸爸</span><span class="archive-mini-pill">龍弟弟</span></div>
-    </a>
-<a class="archive-work-card" data-journal="health" href="articles/family-creatine-first-experiment.html">
-      <div class="archive-cover"><img src="assets/story-covers/default.svg" alt="雞爸爸、兔阿嬤、鼠媽媽的肌酸初體驗 文章封面預留圖"></div>
-      <div class="archive-card-top"><span class="archive-pill">保健室</span><span class="archive-mini-pill">約 2 分鐘</span></div>
-      <h3>雞爸爸、兔阿嬤、鼠媽媽的肌酸初體驗</h3>
-      <p>一次健身補給品開箱，變成三個族群的肌酸初體驗。</p>
-      <blockquote class="archive-quote">有些補充品是買給自己的，有些補充品收到後，想到的是家人。</blockquote>
-      <div class="archive-card-bottom">2026.06.10</div>
-      <div class="archive-tag-row"><span class="archive-mini-pill">#肌酸</span><span class="archive-mini-pill">#健身補給</span><span class="archive-mini-pill">#家庭保健</span><span class="archive-mini-pill">#兔阿嬤</span></div>
-      <div class="archive-people-row"><span class="archive-mini-pill">雞爸爸</span><span class="archive-mini-pill">兔阿嬤</span><span class="archive-mini-pill">鼠媽媽</span></div>
-    </a>
-<a class="archive-work-card" data-journal="health" href="articles/atopic-skin-family-care.html">
-      <div class="archive-cover"><img src="assets/story-covers/default.svg" alt="異位性皮膚家庭的理解與陪伴 文章封面預留圖"></div>
-      <div class="archive-card-top"><span class="archive-pill">保健室</span><span class="archive-mini-pill">約 4 分鐘</span></div>
-      <h3>異位性皮膚家庭的理解與陪伴</h3>
-      <p>我沒有辦法替你癢，但我們可以陪你一起加油。</p>
-      <blockquote class="archive-quote">我沒有辦法替你癢，但我們可以陪你一起加油。</blockquote>
-      <div class="archive-card-bottom">2026.06.07</div>
-      <div class="archive-tag-row"><span class="archive-mini-pill">#異位性皮膚炎</span><span class="archive-mini-pill">#過敏</span><span class="archive-mini-pill">#親子</span><span class="archive-mini-pill">#陪伴</span></div>
-      <div class="archive-people-row"><span class="archive-mini-pill">雞爸爸</span><span class="archive-mini-pill">鼠媽媽</span><span class="archive-mini-pill">鼠姊姊</span><span class="archive-mini-pill">龍弟弟</span></div>
-    </a>
-<a class="archive-work-card" data-journal="library" href="articles/biaoren-diting-asang.html">
-      <div class="archive-cover"><img src="assets/story-covers/default.svg" alt="重看《鏢人》才懂，「諦聽」以死明「相」 文章封面預留圖"></div>
-      <div class="archive-card-top"><span class="archive-pill">圖書室</span><span class="archive-mini-pill">約 7 分鐘</span></div>
-      <h3>重看《鏢人》才懂，「諦聽」以死明「相」</h3>
-      <p>《鏢人》最震撼我的一段劇情，是刀馬與諦聽玉門關上的宿命對決。</p>
-      <blockquote class="archive-quote">其實，我們一直都有選擇。</blockquote>
-      <div class="archive-card-bottom">2026.06.06</div>
-      <div class="archive-tag-row"><span class="archive-mini-pill">#鏢人</span><span class="archive-mini-pill">#諦聽</span><span class="archive-mini-pill">#阿相</span><span class="archive-mini-pill">#刀馬</span></div>
-      <div class="archive-people-row"><span class="archive-mini-pill">刀馬</span><span class="archive-mini-pill">諦聽</span><span class="archive-mini-pill">阿相</span><span class="archive-mini-pill">小七</span></div>
-    </a>
-<a class="archive-work-card" data-journal="family" href="articles/five-year-old-not-sleeping-alone.html">
-      <div class="archive-cover"><img src="assets/story-covers/default.svg" alt="鼠姊姊五歲了還沒分房睡，是我們做錯了嗎？ 文章封面預留圖"></div>
-      <div class="archive-card-top"><span class="archive-pill">家庭誌</span><span class="archive-mini-pill">約 3 分鐘</span></div>
-      <h3>鼠姊姊五歲了還沒分房睡，是我們做錯了嗎？</h3>
-      <p>五歲了，應該要自己睡了吧？但事情往往不是想得那麼簡單。</p>
-      <blockquote class="archive-quote">原來獨立睡覺從來不是年齡問題，其實更像是一個安全感問題。</blockquote>
-      <div class="archive-card-bottom">2026.06.04</div>
-      <div class="archive-tag-row"><span class="archive-mini-pill">#分房睡</span><span class="archive-mini-pill">#陪睡</span><span class="archive-mini-pill">#安全感</span><span class="archive-mini-pill">#親子</span></div>
-      <div class="archive-people-row"><span class="archive-mini-pill">雞爸爸</span><span class="archive-mini-pill">鼠媽媽</span><span class="archive-mini-pill">鼠姊姊</span><span class="archive-mini-pill">龍弟弟</span></div>
-    </a>
-<a class="archive-work-card" data-journal="library" href="articles/biaoren-desert-echo.html">
-      <div class="archive-cover"><img src="assets/story-covers/default.svg" alt="〖大漠餘響〗為《鏢人》補上亂世的魂 文章封面預留圖"></div>
-      <div class="archive-card-top"><span class="archive-pill">圖書室</span><span class="archive-mini-pill">約 4 分鐘</span></div>
-      <h3>〖大漠餘響〗為《鏢人》補上亂世的魂</h3>
-      <p>從電影預告與原著漫畫開始，補完那些被大螢幕濾掉的亂世之魂。</p>
-      <blockquote class="archive-quote">我想補完那些電影無法說出口的話。</blockquote>
-      <div class="archive-card-bottom">2026.06.04</div>
-      <div class="archive-tag-row"><span class="archive-mini-pill">#鏢人</span><span class="archive-mini-pill">#武俠</span><span class="archive-mini-pill">#漫畫</span><span class="archive-mini-pill">#電影</span></div>
-      <div class="archive-people-row"><span class="archive-mini-pill">雞爸爸</span><span class="archive-mini-pill">鼠姊姊</span><span class="archive-mini-pill">龍弟弟</span><span class="archive-mini-pill">吳京</span></div>
-    </a>
-<a class="archive-work-card" data-journal="health" href="articles/old-partner-nas.html">
-      <div class="archive-cover"><img src="assets/story-covers/default.svg" alt="我與我的老夥伴：納斯 NAS 文章封面預留圖"></div>
-      <div class="archive-card-top"><span class="archive-pill">保健室</span><span class="archive-mini-pill">約 4 分鐘</span></div>
-      <h3>我與我的老夥伴：納斯 NAS</h3>
-      <p>一台 NAS 的職場維運日常，也是一段和老夥伴一起撐過稽核的故事。</p>
-      <blockquote class="archive-quote">它既然還在位子上，我就會守護它到底。</blockquote>
-      <div class="archive-card-bottom">2026.06.02</div>
-      <div class="archive-tag-row"><span class="archive-mini-pill">#NAS</span><span class="archive-mini-pill">#QNAP</span><span class="archive-mini-pill">#資安稽核</span><span class="archive-mini-pill">#ISO27001</span></div>
-      <div class="archive-people-row"><span class="archive-mini-pill">納斯／老納</span><span class="archive-mini-pill">我</span><span class="archive-mini-pill">主管</span><span class="archive-mini-pill">協理</span></div>
-    </a>
-<a class="archive-work-card" data-journal="style" href="articles/kids-first-baseball.html">
-      <div class="archive-cover"><img src="assets/story-covers/default.svg" alt="鼠姊姊龍弟弟的棒球初體驗 文章封面預留圖"></div>
-      <div class="archive-card-top"><span class="archive-pill">風格誌</span><span class="archive-mini-pill">約 2 分鐘</span></div>
-      <h3>鼠姊姊龍弟弟的棒球初體驗</h3>
-      <p>第一次打棒球，究竟表現如何？看龍弟弟出發前有模有樣，鼠姐姐都忍不住拍拍手！</p>
-      <blockquote class="archive-quote">居然有一天可以打我女兒投給我的球。</blockquote>
-      <div class="archive-card-bottom">2026.06.01</div>
-      <div class="archive-tag-row"><span class="archive-mini-pill">#親子</span><span class="archive-mini-pill">#棒球</span><span class="archive-mini-pill">#玩具棒球</span><span class="archive-mini-pill">#大巨蛋</span></div>
-      <div class="archive-people-row"><span class="archive-mini-pill">雞爸爸</span><span class="archive-mini-pill">鼠媽媽</span><span class="archive-mini-pill">鼠姊姊</span><span class="archive-mini-pill">龍弟弟</span></div>
-    </a>
-<a class="archive-work-card" data-journal="health" href="articles/family-data-noise-hsp.html">
-      <div class="archive-cover"><img src="assets/story-covers/default.svg" alt="如何降低家庭專屬的「數據雜訊」 文章封面預留圖"></div>
-      <div class="archive-card-top"><span class="archive-pill">保健室</span><span class="archive-mini-pill">約 5 分鐘</span></div>
-      <h3>如何降低家庭專屬的「數據雜訊」</h3>
-      <p>適當叫個暫停，確認場邊暗號有沒有看錯。</p>
-      <blockquote class="archive-quote">適當叫個暫停，確認場邊暗號有沒有看錯。</blockquote>
-      <div class="archive-card-bottom">2026.06.01</div>
-      <div class="archive-tag-row"><span class="archive-mini-pill">#HSP</span><span class="archive-mini-pill">#高敏感</span><span class="archive-mini-pill">#家庭溝通</span><span class="archive-mini-pill">#數據雜訊</span></div>
-      <div class="archive-people-row"><span class="archive-mini-pill">雞爸爸</span><span class="archive-mini-pill">中醫師</span><span class="archive-mini-pill">艾融博士</span></div>
-    </a>
-<a class="archive-work-card" data-journal="library" href="articles/why-i-like-linghu-chong.html">
-      <div class="archive-cover"><img src="assets/story-covers/default.svg" alt="為什麼喜歡金庸筆下的令狐沖？ 文章封面預留圖"></div>
-      <div class="archive-card-top"><span class="archive-pill">圖書室</span><span class="archive-mini-pill">約 3 分鐘</span></div>
-      <h3>為什麼喜歡金庸筆下的令狐沖？</h3>
-      <p>年輕時羨慕奇遇，中年後才懂那份不被江湖困住的自由。</p>
-      <blockquote class="archive-quote">令狐沖之所以迷人，不是因為他劍法高，而是因為他活成了很多人想活卻不敢活的樣子。</blockquote>
-      <div class="archive-card-bottom">2026.05.31</div>
-      <div class="archive-tag-row"><span class="archive-mini-pill">#金庸</span><span class="archive-mini-pill">#笑傲江湖</span><span class="archive-mini-pill">#令狐沖</span><span class="archive-mini-pill">#武俠</span></div>
-      <div class="archive-people-row"><span class="archive-mini-pill">金庸</span><span class="archive-mini-pill">令狐沖</span><span class="archive-mini-pill">風太師叔</span><span class="archive-mini-pill">東方不敗</span></div>
-    </a>
-<a class="archive-work-card" data-journal="style" href="articles/hsu-jo-hsi-six-scoreless.html">
-      <div class="archive-cover"><img src="assets/story-covers/default.svg" alt="徐若熙把「我不屬於這裡」投成了過去，請往更棒的地方前進 文章封面預留圖"></div>
-      <div class="archive-card-top"><span class="archive-pill">風格誌</span><span class="archive-mini-pill">約 2 分鐘</span></div>
-      <h3>徐若熙把「我不屬於這裡」投成了過去，請往更棒的地方前進</h3>
-      <p>龍之子徐若熙重返一軍，6 局 7K 無失分，用好投走出低潮。</p>
-      <blockquote class="archive-quote">有些勝利記錄在計分板上，有些勝利則發生在心裡。</blockquote>
-      <div class="archive-card-bottom">2026.05.31</div>
-      <div class="archive-tag-row"><span class="archive-mini-pill">#徐若熙</span><span class="archive-mini-pill">#龍之子</span><span class="archive-mini-pill">#軟銀</span><span class="archive-mini-pill">#日職</span></div>
-      <div class="archive-people-row"><span class="archive-mini-pill">徐若熙</span></div>
-    </a>
-<a class="archive-work-card" data-journal="health" href="articles/hsp-energy-pitch-count.html">
-      <div class="archive-cover"><img src="assets/story-covers/default.svg" alt="關注「能量用球數」：HSP 的守護神基因 文章封面預留圖"></div>
-      <div class="archive-card-top"><span class="archive-pill">保健室</span><span class="archive-mini-pill">約 7 分鐘</span></div>
-      <h3>關注「能量用球數」：HSP 的守護神基因</h3>
-      <p>把高敏感族群的大腦想像成 MLB 投手，看懂狀況為何常發生在體力不足時。</p>
-      <blockquote class="archive-quote">真正成熟的情緒管理，從來不是硬撐，而是看懂自己的用球數。</blockquote>
-      <div class="archive-card-bottom">2026.05.29</div>
-      <div class="archive-tag-row"><span class="archive-mini-pill">#HSP</span><span class="archive-mini-pill">#高敏感</span><span class="archive-mini-pill">#能量用球數</span><span class="archive-mini-pill">#情緒管理</span></div>
-      <div class="archive-people-row"><span class="archive-mini-pill">雞爸爸</span><span class="archive-mini-pill">鼠姊姊</span><span class="archive-mini-pill">賈西</span><span class="archive-mini-pill">徐生明</span></div>
-    </a>
-<a class="archive-work-card" data-journal="health" href="articles/hsp-not-overthinking.html">
-      <div class="archive-cover"><img src="assets/story-covers/default.svg" alt="你不是想太多，你只是接收得太多 文章封面預留圖"></div>
-      <div class="archive-card-top"><span class="archive-pill">保健室</span><span class="archive-mini-pill">約 6 分鐘</span></div>
-      <h3>你不是想太多，你只是接收得太多</h3>
-      <p>進階數據解析 HSP 人生使用說明書（0）。</p>
-      <blockquote class="archive-quote">問題從來不是誰比較弱，而是你有沒有看懂自己的投球數據。</blockquote>
-      <div class="archive-card-bottom">2026.05.29</div>
-      <div class="archive-tag-row"><span class="archive-mini-pill">#HSP</span><span class="archive-mini-pill">#高敏感</span><span class="archive-mini-pill">#DOES</span><span class="archive-mini-pill">#深度處理</span></div>
-      <div class="archive-people-row"><span class="archive-mini-pill">雞爸爸</span><span class="archive-mini-pill">鼠姊姊</span><span class="archive-mini-pill">鼠媽媽</span><span class="archive-mini-pill">丈母娘</span></div>
-    </a>
-<a class="archive-work-card" data-journal="style" href="articles/chen-tzu-hao-slump-analysis.html">
-      <div class="archive-cover"><img src="assets/story-covers/default.svg" alt="陳子豪在味全的低潮：究竟是心態、環境，還是玄學？ 文章封面預留圖"></div>
-      <div class="archive-card-top"><span class="archive-pill">風格誌</span><span class="archive-mini-pill">約 4 分鐘</span></div>
-      <h3>陳子豪在味全的低潮：究竟是心態、環境，還是玄學？</h3>
-      <p>用進階數據拆解高薪 TTO 打者的低潮，從運氣、策略與環境看陳子豪。</p>
-      <blockquote class="archive-quote">不要看現在的打擊率，去看他上場時，有沒有找回 12% 的保送率。</blockquote>
-      <div class="archive-card-bottom">2026.05.22</div>
-      <div class="archive-tag-row"><span class="archive-mini-pill">#味全龍</span><span class="archive-mini-pill">#陳子豪</span><span class="archive-mini-pill">#TTO</span><span class="archive-mini-pill">#BABIP</span></div>
-      <div class="archive-people-row"><span class="archive-mini-pill">陳子豪</span><span class="archive-mini-pill">葉君璋</span><span class="archive-mini-pill">李凱威</span></div>
-    </a>
-<a class="archive-work-card" data-journal="style" href="articles/dragons-tto-1996-2023.html">
-      <div class="archive-cover"><img src="assets/story-covers/default.svg" alt="跨越世代龍魂：純種砲手指數 TTO 看味全龍 1996 vs. 2023 打線演變 文章封面預留圖"></div>
-      <div class="archive-card-top"><span class="archive-pill">風格誌</span><span class="archive-mini-pill">約 6 分鐘</span></div>
-      <h3>跨越世代龍魂：純種砲手指數 TTO 看味全龍 1996 vs. 2023 打線演變</h3>
-      <p>用 TTO 進階數據回看味全龍兩個世代的打線演變。</p>
-      <blockquote class="archive-quote">龍魂的傳承不僅在於拚勁，更在於不斷進化的打擊智慧。</blockquote>
-      <div class="archive-card-bottom">2026.05.22</div>
-      <div class="archive-tag-row"><span class="archive-mini-pill">#味全龍</span><span class="archive-mini-pill">#TTO</span><span class="archive-mini-pill">#Three True Outcomes</span><span class="archive-mini-pill">#吉力吉撈</span></div>
-      <div class="archive-people-row"><span class="archive-mini-pill">張泰山</span><span class="archive-mini-pill">Bill James</span><span class="archive-mini-pill">Christina Kahrl</span><span class="archive-mini-pill">吉力吉撈</span></div>
-    </a>
-<a class="archive-work-card" data-journal="style" href="articles/dragons-speed-game.html">
-      <div class="archive-cover"><img src="assets/story-covers/default.svg" alt="味全龍的速度戰：從大帝士盜出三連霸，看二代龍的腿哥部隊 文章封面預留圖"></div>
-      <div class="archive-card-top"><span class="archive-pill">風格誌</span><span class="archive-mini-pill">約 5 分鐘</span></div>
-      <h3>味全龍的速度戰：從大帝士盜出三連霸，看二代龍的腿哥部隊</h3>
-      <p>從張政禹單獨盜本壘，回看味全龍速度戰如何穿越世代。</p>
-      <blockquote class="archive-quote">用速度，校正大數據的無情。</blockquote>
-      <div class="archive-card-bottom">2026.05.22</div>
-      <div class="archive-tag-row"><span class="archive-mini-pill">#味全龍</span><span class="archive-mini-pill">#速度戰</span><span class="archive-mini-pill">#盜壘</span><span class="archive-mini-pill">#張政禹</span></div>
-      <div class="archive-people-row"><span class="archive-mini-pill">張政禹</span><span class="archive-mini-pill">徐生明</span><span class="archive-mini-pill">大帝士</span><span class="archive-mini-pill">法蘭克</span></div>
-    </a>
-<a class="archive-work-card" data-journal="style" href="articles/dragons-90s-memory.html">
-      <div class="archive-cover"><img src="assets/story-covers/default.svg" alt="雞爸爸 90~99 味全龍系列回顧 文章封面預留圖"></div>
-      <div class="archive-card-top"><span class="archive-pill">風格誌</span><span class="archive-mini-pill">約 6 分鐘</span></div>
-      <h3>雞爸爸 90~99 味全龍系列回顧</h3>
-      <p>為什麼喜歡棒球？因為味全龍。從一張五顏六色的賽程表開始的龍魂記憶。</p>
-      <blockquote class="archive-quote">生命中曾有的那一抹紅，從來沒有真正褪去過。</blockquote>
-      <div class="archive-card-bottom">2026.05.20</div>
-      <div class="archive-tag-row"><span class="archive-mini-pill">#味全龍</span><span class="archive-mini-pill">#龍魂</span><span class="archive-mini-pill">#黃平洋</span><span class="archive-mini-pill">#坎沙諾</span></div>
-      <div class="archive-people-row"><span class="archive-mini-pill">雞爸爸</span><span class="archive-mini-pill">黃平洋</span><span class="archive-mini-pill">陳義信</span><span class="archive-mini-pill">王漢</span></div>
-    </a>
+      <div class="scene-summary">
+        <details class="fallback">
+          <summary>展開文字版文章連結</summary>
+          <div class="fallback-links" id="fallback-links"></div>
+        </details>
       </div>
-</div>
-  </section>
-</main>
+    </div>
+  </main>
 
-<footer class="site-footer footer-cta">
-  <div class="footer-inner"><div><strong>雞爸爸生活研究室</strong><p>把生活寫成故事，把故事整理成一家人的宇宙。</p></div><a href="articles.html">閱讀故事</a></div>
-</footer>
+  <script id="story-data" type="application/json">[{"journal": "health", "href": "articles/midnight-asthma-wheezing-lesson.html", "title": "鼠姊姊半夜兩點的喘鳴聲：那一晚，我們又再次認識「急性氣喘」", "excerpt": "星期六凌晨兩點多，鼠姊姊的喘鳴聲讓雞爸爸和鼠媽媽重新認識急性氣喘、急救藥與觀察警訊。", "date": "2026.07.06"}, {"journal": "family", "href": "articles/picture-book-hand-courage.html", "title": "畫冊上的那隻手，把想媽媽變成鼠姊姊可以握住的勇氣", "excerpt": "鼠姊姊在工作坊裡，學會把想媽媽的心情變成可以累積的勇氣，也把善良分享給身邊的人。", "date": "2026.07.06"}, {"journal": "style", "href": "articles/rap-peak-2026-dragon-brother.html", "title": "說唱巔峰對決2026：炸場首推龍弟弟", "excerpt": "真正炸場的不在螢幕裡，而是在餐椅上；一歲半的龍弟弟，用點頭、蹲跳和摸下巴，把音樂跳進了生活。", "date": "2026.07.03"}, {"journal": "family", "href": "articles/girls-let-us-watch-clouds.html", "title": "女孩，讓我們看雲去", "excerpt": "我們不是想旅行，只是需要好好呼吸", "date": "2026.07.02"}, {"journal": "family", "href": "articles/temperature-of-now.html", "title": "當下的溫度，就是幸福的定義", "excerpt": "終於也有專屬父子倆的默契", "date": "2026.07.01"}, {"journal": "light", "href": "articles/ai-website-scary-lover-concubine.html", "title": "以為只是做網站，最後變成恐怖情人小妾", "excerpt": "VOCUS 個人網站原本只是想放文章，最後卻變成 AI 小妾一路想幫雞爸爸規劃品牌人生。", "date": "2026.06.30"}, {"journal": "family", "href": "articles/half-hour-of-summer.html", "title": "雞爸爸和鼠姊姊的半小時夏天", "excerpt": "難得晴朗的天氣，有一池正午太陽卻曬不熱的水，配上興奮到忘了買票的雞爸爸，最後靠一家人的協力，成就了一場平凡卻珍貴的夏日約會。", "date": "2026.06.28"}, {"journal": "light", "href": "articles/ai-fake-artsy-meme.html", "title": "只是想跟風假文青，AI 卻把我自己做成了迷因", "excerpt": "雞爸爸只是想做一張成熟男人風格的 AI 形象照，結果 Gemini 用自己的方式留下了「雞爸」迷因。", "date": "2026.06.26"}, {"journal": "family", "href": "articles/graduation-day.html", "title": "鼠姊姊的中班畢業典禮：唱跳、氣球與一整天的願望清單", "excerpt": "最愛唱唱跳跳的鼠姊姊，最近開心地邀請爸爸媽媽到幼稚園參加蘋果班的畢業典禮。", "date": "2026.06.25"}, {"journal": "family", "href": "articles/pull-up-bar-swing-specialist.html", "title": "原本想練背肌，卻成了推鞦韆專員", "excerpt": "雞爸爸本來想在家練引體向上，沒想到單槓裝好十分鐘，就被龍弟弟改造成走廊裡的小型遊樂園。", "date": "2026.06.16"}, {"journal": "health", "href": "articles/family-creatine-first-experiment.html", "title": "雞爸爸、兔阿嬤、鼠媽媽的肌酸初體驗", "excerpt": "一次健身補給品開箱，變成三個族群的肌酸初體驗。", "date": "2026.06.10"}, {"journal": "health", "href": "articles/atopic-skin-family-care.html", "title": "異位性皮膚家庭的理解與陪伴", "excerpt": "我沒有辦法替你癢，但我們可以陪你一起加油。", "date": "2026.06.07"}, {"journal": "library", "href": "articles/biaoren-diting-asang.html", "title": "重看《鏢人》才懂，「諦聽」以死明「相」", "excerpt": "《鏢人》最震撼我的一段劇情，是刀馬與諦聽玉門關上的宿命對決。", "date": "2026.06.06"}, {"journal": "family", "href": "articles/five-year-old-not-sleeping-alone.html", "title": "鼠姊姊五歲了還沒分房睡，是我們做錯了嗎？", "excerpt": "五歲了，應該要自己睡了吧？但事情往往不是想得那麼簡單。", "date": "2026.06.04"}, {"journal": "library", "href": "articles/biaoren-desert-echo.html", "title": "〖大漠餘響〗為《鏢人》補上亂世的魂", "excerpt": "從電影預告與原著漫畫開始，補完那些被大螢幕濾掉的亂世之魂。", "date": "2026.06.04"}, {"journal": "health", "href": "articles/old-partner-nas.html", "title": "我與我的老夥伴：納斯 NAS", "excerpt": "一台 NAS 的職場維運日常，也是一段和老夥伴一起撐過稽核的故事。", "date": "2026.06.02"}, {"journal": "style", "href": "articles/kids-first-baseball.html", "title": "鼠姊姊龍弟弟的棒球初體驗", "excerpt": "第一次打棒球，究竟表現如何？看龍弟弟出發前有模有樣，鼠姐姐都忍不住拍拍手！", "date": "2026.06.01"}, {"journal": "health", "href": "articles/family-data-noise-hsp.html", "title": "如何降低家庭專屬的「數據雜訊」", "excerpt": "適當叫個暫停，確認場邊暗號有沒有看錯。", "date": "2026.06.01"}, {"journal": "library", "href": "articles/why-i-like-linghu-chong.html", "title": "為什麼喜歡金庸筆下的令狐沖？", "excerpt": "年輕時羨慕奇遇，中年後才懂那份不被江湖困住的自由。", "date": "2026.05.31"}, {"journal": "style", "href": "articles/hsu-jo-hsi-six-scoreless.html", "title": "徐若熙把「我不屬於這裡」投成了過去，請往更棒的地方前進", "excerpt": "龍之子徐若熙重返一軍，6 局 7K 無失分，用好投走出低潮。", "date": "2026.05.31"}, {"journal": "health", "href": "articles/hsp-energy-pitch-count.html", "title": "關注「能量用球數」：HSP 的守護神基因", "excerpt": "把高敏感族群的大腦想像成 MLB 投手，看懂狀況為何常發生在體力不足時。", "date": "2026.05.29"}, {"journal": "health", "href": "articles/hsp-not-overthinking.html", "title": "你不是想太多，你只是接收得太多", "excerpt": "進階數據解析 HSP 人生使用說明書（0）。", "date": "2026.05.29"}, {"journal": "style", "href": "articles/chen-tzu-hao-slump-analysis.html", "title": "陳子豪在味全的低潮：究竟是心態、環境，還是玄學？", "excerpt": "用進階數據拆解高薪 TTO 打者的低潮，從運氣、策略與環境看陳子豪。", "date": "2026.05.22"}, {"journal": "style", "href": "articles/dragons-tto-1996-2023.html", "title": "跨越世代龍魂：純種砲手指數 TTO 看味全龍 1996 vs. 2023 打線演變", "excerpt": "用 TTO 進階數據回看味全龍兩個世代的打線演變。", "date": "2026.05.22"}, {"journal": "style", "href": "articles/dragons-speed-game.html", "title": "味全龍的速度戰：從大帝士盜出三連霸，看二代龍的腿哥部隊", "excerpt": "從張政禹單獨盜本壘，回看味全龍速度戰如何穿越世代。", "date": "2026.05.22"}, {"journal": "style", "href": "articles/dragons-90s-memory.html", "title": "雞爸爸 90~99 味全龍系列回顧", "excerpt": "為什麼喜歡棒球？因為味全龍。從一張五顏六色的賽程表開始的龍魂記憶。", "date": "2026.05.20"}]</script>
+  <script id="scene-data" type="application/json">{"family": {"label": "家庭誌", "desc": "家庭、孩子、陪伴與日常裡長出的幸福紀錄。", "image": "assets/img/proto-family.png", "hotspots": [{"left": 9.8, "top": 54.0, "width": 19.2, "height": 28.2}, {"left": 30.3, "top": 54.0, "width": 19.3, "height": 28.2}, {"left": 50.5, "top": 54.0, "width": 19.3, "height": 28.2}, {"left": 70.8, "top": 54.0, "width": 19.3, "height": 28.2}], "cta": {"left": 42.2, "top": 86.2, "width": 15.5, "height": 4.9}}, "health": {"label": "保健室", "desc": "健康、睡眠、情緒與一家人的日常照護。", "image": "assets/img/proto-health.png", "hotspots": [{"left": 18.1, "top": 26.0, "width": 19.8, "height": 44.3}, {"left": 38.9, "top": 26.0, "width": 20.6, "height": 44.3}, {"left": 60.4, "top": 26.0, "width": 19.7, "height": 44.3}], "cta": {"left": 41.1, "top": 72.4, "width": 18.3, "height": 4.9}}, "library": {"label": "圖書室", "desc": "與 AI 共讀、沉澱思緒，探索知識與智慧的無限可能。", "image": "assets/img/proto-library.png", "hotspots": [{"left": 18.0, "top": 26.0, "width": 19.8, "height": 44.3}, {"left": 38.8, "top": 26.0, "width": 20.5, "height": 44.3}, {"left": 60.4, "top": 26.0, "width": 19.7, "height": 44.3}], "cta": {"left": 41.0, "top": 72.4, "width": 18.3, "height": 4.9}}, "style": {"label": "風格誌", "desc": "棒球、嘻哈、電影與熱愛事物留下的風格紀錄。", "image": "assets/img/proto-style.png", "hotspots": [{"left": 19.0, "top": 26.0, "width": 18.9, "height": 44.0}, {"left": 39.0, "top": 26.0, "width": 20.3, "height": 44.0}, {"left": 60.3, "top": 26.0, "width": 19.8, "height": 44.0}], "cta": {"left": 44.0, "top": 72.4, "width": 14.5, "height": 4.9}}, "light": {"label": "光影誌", "desc": "照片、插畫、短影音與影像創作留下的溫度。", "image": "assets/img/proto-light.png", "hotspots": [{"left": 18.8, "top": 27.0, "width": 18.8, "height": 43.2}, {"left": 38.7, "top": 27.0, "width": 20.4, "height": 43.2}, {"left": 60.3, "top": 27.0, "width": 19.8, "height": 43.2}], "cta": {"left": 43.8, "top": 72.4, "width": 14.6, "height": 4.9}}}</script>
+  <script>
+    (function() {
+      const stories = JSON.parse(document.getElementById('story-data').textContent);
+      const scenes = JSON.parse(document.getElementById('scene-data').textContent);
+      const params = new URLSearchParams(location.search);
+      const journal = params.get('journal') || 'family';
+      const key = scenes[journal] ? journal : 'family';
+      const scene = scenes[key];
+      document.querySelectorAll('.main-nav a').forEach(a => {
+        a.classList.toggle('active', a.dataset.nav === key);
+        if (a.dataset.nav === key) a.setAttribute('aria-current', 'page');
+      });
+      const img = document.getElementById('scene-image');
+      img.src = scene.image + '?v=57';
+      img.alt = scene.label + ' Prototype 內容頁';
+      const hotspotBox = document.getElementById('scene-hotspots');
+      const fallback = document.getElementById('fallback-links');
+      const pool = stories.filter(s => s.journal === key);
+      const cards = pool.slice(0, scene.hotspots.length);
 
-<script>
-(function() {
-  const labels = {
-    family: '家庭誌',
-    health: '保健室',
-    library: '圖書室',
-    style: '風格誌',
-    light: '光影誌'
-  };
-  const desc = {
-    family: '家庭、孩子、陪伴與日常裡長出的幸福紀錄。',
-    health: '健康、健身、壓力、睡眠、家庭照顧與生活維運。',
-    library: '閱讀、漫畫、武俠、哲學與思考筆記。',
-    style: '棒球、音樂、電影、數據與生活風格。',
-    light: 'AI 共創、製圖、網站與影像創作過程。'
-  };
-  const params = new URLSearchParams(location.search);
-  const journal = params.get('journal');
-  const cards = Array.from(document.querySelectorAll('.archive-work-card'));
-  const valid = Object.prototype.hasOwnProperty.call(labels, journal);
-  document.body.dataset.journal = valid ? journal : 'all';
-  let visible = 0;
-  cards.forEach(card => {
-    const show = !valid || card.dataset.journal === journal;
-    card.style.display = show ? '' : 'none';
-    if (show) visible++;
-  });
-  document.querySelectorAll('[data-journal-link]').forEach(a => {
-    const key = a.dataset.journalLink;
-    if ((!valid && key === 'all') || (valid && key === journal)) a.classList.add('active');
-  });
+      scene.hotspots.forEach((box, idx) => {
+        const item = cards[idx];
+        if (!item) return;
+        const a = document.createElement('a');
+        a.className = 'hotspot';
+        a.href = item.href;
+        a.setAttribute('aria-label', item.title);
+        a.title = item.title;
+        a.style.left = box.left + '%';
+        a.style.top = box.top + '%';
+        a.style.width = box.width + '%';
+        a.style.height = box.height + '%';
+        hotspotBox.appendChild(a);
+      });
 
-  document.querySelectorAll('.nav-links a').forEach(a => {
-    a.classList.remove('active');
-    a.removeAttribute('aria-current');
-    if (valid && a.getAttribute('href') && a.getAttribute('href').includes('journal=' + journal)) {
-      a.classList.add('active');
-      a.setAttribute('aria-current', 'page');
-    }
-  });
+      if (scene.cta) {
+        const more = document.createElement('a');
+        more.className = 'hotspot';
+        more.href = '#fallback-links';
+        more.setAttribute('aria-label', '查看更多 ' + scene.label + ' 文章');
+        more.style.left = scene.cta.left + '%';
+        more.style.top = scene.cta.top + '%';
+        more.style.width = scene.cta.width + '%';
+        more.style.height = scene.cta.height + '%';
+        hotspotBox.appendChild(more);
+      }
 
-  document.querySelectorAll('.main-nav a').forEach(a => {
-    a.classList.remove('active');
-    a.removeAttribute('aria-current');
-    if (valid && a.getAttribute('href') && a.getAttribute('href').includes('journal=' + journal)) {
-      a.classList.add('active');
-      a.setAttribute('aria-current', 'page');
-    }
-  });
-
-  if (valid) {
-    const archiveTitle = document.getElementById('archive-title');
-    const archiveDesc = document.getElementById('archive-desc');
-    const listTitle = document.getElementById('list-title');
-    const storiesStatus = document.getElementById('stories-status');
-    if (archiveTitle) archiveTitle.textContent = labels[journal];
-    if (archiveDesc) archiveDesc.textContent = desc[journal];
-    if (listTitle) listTitle.textContent = '典藏作品｜' + labels[journal];
-    if (storiesStatus) storiesStatus.textContent = labels[journal] + '目前顯示 ' + visible + ' 篇作品。每張卡片都可點進完整原文。';
-  }
-})();
-</script>
+      pool.forEach(item => {
+        const a = document.createElement('a');
+        a.href = item.href;
+        a.textContent = item.title;
+        a.title = item.date ? (item.date + '｜' + item.title) : item.title;
+        fallback.appendChild(a);
+      });
+    })();
+  </script>
 </body>
 </html>

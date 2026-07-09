@@ -1,37 +1,35 @@
-# 雞爸爸生活研究室｜五個內容頁更新包 v5.6
+# 雞爸爸生活研究室｜內容頁 Prototype 精準落地包 v5.7
 
-這版依照最新確認內容更新五個入口內容頁背景圖：
+這版是依照最新需求，直接把五個內容頁改成「與 Prototype 一致的內容主視覺版型」：
+
+- 不再只是淡底圖 + 通用文章卡
+- 改為使用五張已確認的 Prototype 主視覺
+- 實際頁面保留網站正式版 header（LOGO / 上方列）
+- Prototype 內頁主視覺區以下方內容呈現
+- 文章卡區以透明熱區方式對應可點擊文章
+- 頁面下方另附「展開文字版文章連結」作為備援
 
 ## 五個內容頁對應
-- 家庭誌：新版《溫馨家庭生活誌首頁》
-- 保健室：新版《保健室_溫馨健康生活研究》
-- 圖書室：沿用《雞爸爸的溫馨圖書室》
-- 風格誌：改用《光影中的溫馨日常》  ← 依照需求與光影誌對調
-- 光影誌：改用《風格誌_家與生活的記錄》 ← 依照需求與風格誌對調
+- 家庭誌 → `assets/img/proto-family.png`
+- 保健室 → `assets/img/proto-health.png`
+- 圖書室 → `assets/img/proto-library.png`
+- 風格誌 → `assets/img/proto-style.png`
+- 光影誌 → `assets/img/proto-light.png`
 
-## 請上傳／覆蓋
+## 請覆蓋
 ```text
 articles.html
-assets/img/journal-room-family.png
-assets/img/journal-room-health.png
-assets/img/journal-room-library.png
-assets/img/journal-room-style.png
-assets/img/journal-room-light.png
-```
-
-包內同時附上 webp 備用檔：
-```text
-assets/img/journal-room-family.webp
-assets/img/journal-room-health.webp
-assets/img/journal-room-library.webp
-assets/img/journal-room-style.webp
-assets/img/journal-room-light.webp
+assets/img/logo-avatar.png
+assets/img/proto-family.png
+assets/img/proto-health.png
+assets/img/proto-library.png
+assets/img/proto-style.png
+assets/img/proto-light.png
 ```
 
 ## 驗證網址
-請上線後用下列網址檢查（避免快取）：
-- https://beckman0470.github.io/articles.html?journal=family&v=v56
-- https://beckman0470.github.io/articles.html?journal=health&v=v56
-- https://beckman0470.github.io/articles.html?journal=library&v=v56
-- https://beckman0470.github.io/articles.html?journal=style&v=v56
-- https://beckman0470.github.io/articles.html?journal=light&v=v56
+- https://beckman0470.github.io/articles.html?journal=family&v=57
+- https://beckman0470.github.io/articles.html?journal=health&v=57
+- https://beckman0470.github.io/articles.html?journal=library&v=57
+- https://beckman0470.github.io/articles.html?journal=style&v=57
+- https://beckman0470.github.io/articles.html?journal=light&v=57
