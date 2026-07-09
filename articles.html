@@ -1,168 +1,17 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>雞爸爸生活研究室｜內容頁 Prototype 精準版 v5.7</title>
-  <style>
-    :root {
-      --bg:#f6f0e6;
-      --card:#fffaf3;
-      --line:#eadbc8;
-      --text:#5b3d27;
-      --muted:#7a6857;
-      --accent:#c68433;
-    }
-    * { box-sizing:border-box; }
-    body {
-      margin:0;
-      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Microsoft JhengHei",sans-serif;
-      background:var(--bg);
-      color:var(--text);
-    }
-    a { color:inherit; text-decoration:none; }
-    .site-header {
-      background:rgba(255,250,243,.92);
-      border-bottom:1px solid var(--line);
-      position:sticky;
-      top:0;
-      z-index:50;
-      backdrop-filter: blur(8px);
-    }
-    .wrap {
-      width:min(1280px, calc(100% - 48px));
-      margin:0 auto;
-    }
-    .header-inner {
-      min-height:86px;
-      display:grid;
-      grid-template-columns:auto 1fr auto;
-      align-items:center;
-      gap:24px;
-    }
-    .brand {
-      display:flex;
-      align-items:center;
-      gap:14px;
-    }
-    .brand-avatar {
-      width:54px;
-      height:54px;
-      border-radius:999px;
-      object-fit:cover;
-      box-shadow:0 6px 16px rgba(73,48,24,.12);
-    }
-    .brand-text strong {
-      display:block;
-      font-size:18px;
-      font-weight:900;
-      letter-spacing:.02em;
-    }
-    .brand-text span {
-      display:block;
-      margin-top:4px;
-      color:var(--muted);
-      font-size:14px;
-      font-weight:700;
-    }
-    .main-nav {
-      justify-self:center;
-      display:flex;
-      align-items:center;
-      gap:28px;
-      flex-wrap:wrap;
-    }
-    .main-nav a {
-      font-weight:900;
-      padding:8px 0;
-      border-bottom:3px solid transparent;
-    }
-    .main-nav a.active {
-      color:var(--accent);
-      border-bottom-color:var(--accent);
-    }
-    .search-link {
-      justify-self:end;
-      font-size:28px;
-      color:#704d2e;
-      line-height:1;
-      padding:6px 10px;
-    }
-    main {
-      padding:22px 0 42px;
-    }
-    .scene-wrap {
-      width:min(1480px, calc(100% - 48px));
-      margin:0 auto;
-    }
-    .prototype-scene {
-      position:relative;
-      width:100%;
-      border-radius:26px;
-      overflow:hidden;
-      box-shadow:0 16px 42px rgba(86,60,32,.12);
-      background:#efe4d1;
-    }
-    .prototype-scene img {
-      width:100%;
-      display:block;
-      height:auto;
-    }
-    .hotspot {
-      position:absolute;
-      display:block;
-      border-radius:22px;
-      outline:0;
-      transition: box-shadow .18s ease, background .18s ease;
-    }
-    .hotspot:hover, .hotspot:focus-visible {
-      box-shadow:0 0 0 3px rgba(198,132,51,.62) inset, 0 0 0 4px rgba(255,255,255,.66);
-      background:rgba(255,255,255,.08);
-    }
-    .scene-summary {
-      margin:18px auto 0;
-      max-width:1200px;
-    }
-    details.fallback {
-      background:rgba(255,251,245,.9);
-      border:1px solid var(--line);
-      border-radius:18px;
-      padding:14px 18px;
-      box-shadow:0 8px 24px rgba(86,60,32,.05);
-    }
-    details.fallback summary {
-      cursor:pointer;
-      font-weight:900;
-      color:var(--text);
-    }
-    .fallback-links {
-      margin-top:10px;
-      display:grid;
-      grid-template-columns:repeat(2, minmax(0,1fr));
-      gap:10px 18px;
-    }
-    .fallback-links a {
-      padding:10px 12px;
-      background:#fff;
-      border:1px solid var(--line);
-      border-radius:12px;
-      color:#6f5844;
-      font-weight:700;
-    }
-    @media (max-width: 960px) {
-      .wrap, .scene-wrap { width:min(100% - 24px, 1280px); }
-      .header-inner { grid-template-columns:1fr; gap:10px; padding:14px 0; }
-      .brand, .main-nav, .search-link { justify-self:center; }
-      .main-nav { gap:18px; justify-content:center; }
-      .fallback-links { grid-template-columns:1fr; }
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>雞爸爸生活研究室｜內容頁 v5.9</title>
+  <meta name="description" content="雞爸爸生活研究室五大內容頁一致版：家庭誌、保健室、圖書室、風格誌、光影誌。">
+  <link rel="stylesheet" href="css/articles-v59.css">
 </head>
 <body>
   <header class="site-header">
     <div class="wrap header-inner">
       <a class="brand" href="index.html" aria-label="回到首頁">
-        <img src="assets/img/logo-avatar.png?v=57" alt="雞爸爸生活研究室 LOGO" class="brand-avatar">
+        <img src="assets/img/logo-avatar.png?v=59" alt="雞爸爸生活研究室 LOGO" class="brand-avatar">
         <div class="brand-text">
           <strong>雞爸爸生活研究室</strong>
           <span>Chicken Dad Journal</span>
@@ -180,79 +29,174 @@
     </div>
   </header>
 
-  <main>
-    <div class="scene-wrap">
-      <div class="prototype-scene" id="scene">
-        <img id="scene-image" src="" alt="">
-        <div id="scene-hotspots"></div>
-      </div>
+  <main class="journal-page" id="journal-page">
+    <section class="journal-hero">
+      <div class="room-bg" id="room-bg" aria-hidden="true"></div>
+      <div class="room-fade" aria-hidden="true"></div>
+      <div class="wrap hero-inner">
+        <div class="hero-heading">
+          <div class="section-title-row">
+            <span class="ornament">❦</span>
+            <h1 id="journal-title">家庭誌</h1>
+            <span class="ornament">❦</span>
+          </div>
+          <p id="journal-subtitle" class="journal-subtitle"></p>
+          <div id="journal-pills" class="journal-pills"></div>
+        </div>
 
-      <div class="scene-summary">
-        <details class="fallback">
-          <summary>展開文字版文章連結</summary>
-          <div class="fallback-links" id="fallback-links"></div>
-        </details>
+        <section class="cards-panel" aria-labelledby="cards-heading">
+          <h2 id="cards-heading" class="sr-only">文章列表</h2>
+          <div id="cards-grid" class="cards-grid"></div>
+          <div class="cards-actions">
+            <a id="journal-more" class="btn btn-primary" href="#cards-grid">瀏覽更多文章</a>
+          </div>
+        </section>
+
+        <section class="about-panel" aria-labelledby="about-title">
+          <div class="about-copy">
+            <h2 id="about-title">關於家庭誌</h2>
+            <p id="about-text"></p>
+          </div>
+          <div class="about-thumb-wrap">
+            <img id="about-thumb" src="" alt="" class="about-thumb">
+          </div>
+        </section>
       </div>
-    </div>
+    </section>
   </main>
 
-  <script id="story-data" type="application/json">[{"journal": "health", "href": "articles/midnight-asthma-wheezing-lesson.html", "title": "鼠姊姊半夜兩點的喘鳴聲：那一晚，我們又再次認識「急性氣喘」", "excerpt": "星期六凌晨兩點多，鼠姊姊的喘鳴聲讓雞爸爸和鼠媽媽重新認識急性氣喘、急救藥與觀察警訊。", "date": "2026.07.06"}, {"journal": "family", "href": "articles/picture-book-hand-courage.html", "title": "畫冊上的那隻手，把想媽媽變成鼠姊姊可以握住的勇氣", "excerpt": "鼠姊姊在工作坊裡，學會把想媽媽的心情變成可以累積的勇氣，也把善良分享給身邊的人。", "date": "2026.07.06"}, {"journal": "style", "href": "articles/rap-peak-2026-dragon-brother.html", "title": "說唱巔峰對決2026：炸場首推龍弟弟", "excerpt": "真正炸場的不在螢幕裡，而是在餐椅上；一歲半的龍弟弟，用點頭、蹲跳和摸下巴，把音樂跳進了生活。", "date": "2026.07.03"}, {"journal": "family", "href": "articles/girls-let-us-watch-clouds.html", "title": "女孩，讓我們看雲去", "excerpt": "我們不是想旅行，只是需要好好呼吸", "date": "2026.07.02"}, {"journal": "family", "href": "articles/temperature-of-now.html", "title": "當下的溫度，就是幸福的定義", "excerpt": "終於也有專屬父子倆的默契", "date": "2026.07.01"}, {"journal": "light", "href": "articles/ai-website-scary-lover-concubine.html", "title": "以為只是做網站，最後變成恐怖情人小妾", "excerpt": "VOCUS 個人網站原本只是想放文章，最後卻變成 AI 小妾一路想幫雞爸爸規劃品牌人生。", "date": "2026.06.30"}, {"journal": "family", "href": "articles/half-hour-of-summer.html", "title": "雞爸爸和鼠姊姊的半小時夏天", "excerpt": "難得晴朗的天氣，有一池正午太陽卻曬不熱的水，配上興奮到忘了買票的雞爸爸，最後靠一家人的協力，成就了一場平凡卻珍貴的夏日約會。", "date": "2026.06.28"}, {"journal": "light", "href": "articles/ai-fake-artsy-meme.html", "title": "只是想跟風假文青，AI 卻把我自己做成了迷因", "excerpt": "雞爸爸只是想做一張成熟男人風格的 AI 形象照，結果 Gemini 用自己的方式留下了「雞爸」迷因。", "date": "2026.06.26"}, {"journal": "family", "href": "articles/graduation-day.html", "title": "鼠姊姊的中班畢業典禮：唱跳、氣球與一整天的願望清單", "excerpt": "最愛唱唱跳跳的鼠姊姊，最近開心地邀請爸爸媽媽到幼稚園參加蘋果班的畢業典禮。", "date": "2026.06.25"}, {"journal": "family", "href": "articles/pull-up-bar-swing-specialist.html", "title": "原本想練背肌，卻成了推鞦韆專員", "excerpt": "雞爸爸本來想在家練引體向上，沒想到單槓裝好十分鐘，就被龍弟弟改造成走廊裡的小型遊樂園。", "date": "2026.06.16"}, {"journal": "health", "href": "articles/family-creatine-first-experiment.html", "title": "雞爸爸、兔阿嬤、鼠媽媽的肌酸初體驗", "excerpt": "一次健身補給品開箱，變成三個族群的肌酸初體驗。", "date": "2026.06.10"}, {"journal": "health", "href": "articles/atopic-skin-family-care.html", "title": "異位性皮膚家庭的理解與陪伴", "excerpt": "我沒有辦法替你癢，但我們可以陪你一起加油。", "date": "2026.06.07"}, {"journal": "library", "href": "articles/biaoren-diting-asang.html", "title": "重看《鏢人》才懂，「諦聽」以死明「相」", "excerpt": "《鏢人》最震撼我的一段劇情，是刀馬與諦聽玉門關上的宿命對決。", "date": "2026.06.06"}, {"journal": "family", "href": "articles/five-year-old-not-sleeping-alone.html", "title": "鼠姊姊五歲了還沒分房睡，是我們做錯了嗎？", "excerpt": "五歲了，應該要自己睡了吧？但事情往往不是想得那麼簡單。", "date": "2026.06.04"}, {"journal": "library", "href": "articles/biaoren-desert-echo.html", "title": "〖大漠餘響〗為《鏢人》補上亂世的魂", "excerpt": "從電影預告與原著漫畫開始，補完那些被大螢幕濾掉的亂世之魂。", "date": "2026.06.04"}, {"journal": "health", "href": "articles/old-partner-nas.html", "title": "我與我的老夥伴：納斯 NAS", "excerpt": "一台 NAS 的職場維運日常，也是一段和老夥伴一起撐過稽核的故事。", "date": "2026.06.02"}, {"journal": "style", "href": "articles/kids-first-baseball.html", "title": "鼠姊姊龍弟弟的棒球初體驗", "excerpt": "第一次打棒球，究竟表現如何？看龍弟弟出發前有模有樣，鼠姐姐都忍不住拍拍手！", "date": "2026.06.01"}, {"journal": "health", "href": "articles/family-data-noise-hsp.html", "title": "如何降低家庭專屬的「數據雜訊」", "excerpt": "適當叫個暫停，確認場邊暗號有沒有看錯。", "date": "2026.06.01"}, {"journal": "library", "href": "articles/why-i-like-linghu-chong.html", "title": "為什麼喜歡金庸筆下的令狐沖？", "excerpt": "年輕時羨慕奇遇，中年後才懂那份不被江湖困住的自由。", "date": "2026.05.31"}, {"journal": "style", "href": "articles/hsu-jo-hsi-six-scoreless.html", "title": "徐若熙把「我不屬於這裡」投成了過去，請往更棒的地方前進", "excerpt": "龍之子徐若熙重返一軍，6 局 7K 無失分，用好投走出低潮。", "date": "2026.05.31"}, {"journal": "health", "href": "articles/hsp-energy-pitch-count.html", "title": "關注「能量用球數」：HSP 的守護神基因", "excerpt": "把高敏感族群的大腦想像成 MLB 投手，看懂狀況為何常發生在體力不足時。", "date": "2026.05.29"}, {"journal": "health", "href": "articles/hsp-not-overthinking.html", "title": "你不是想太多，你只是接收得太多", "excerpt": "進階數據解析 HSP 人生使用說明書（0）。", "date": "2026.05.29"}, {"journal": "style", "href": "articles/chen-tzu-hao-slump-analysis.html", "title": "陳子豪在味全的低潮：究竟是心態、環境，還是玄學？", "excerpt": "用進階數據拆解高薪 TTO 打者的低潮，從運氣、策略與環境看陳子豪。", "date": "2026.05.22"}, {"journal": "style", "href": "articles/dragons-tto-1996-2023.html", "title": "跨越世代龍魂：純種砲手指數 TTO 看味全龍 1996 vs. 2023 打線演變", "excerpt": "用 TTO 進階數據回看味全龍兩個世代的打線演變。", "date": "2026.05.22"}, {"journal": "style", "href": "articles/dragons-speed-game.html", "title": "味全龍的速度戰：從大帝士盜出三連霸，看二代龍的腿哥部隊", "excerpt": "從張政禹單獨盜本壘，回看味全龍速度戰如何穿越世代。", "date": "2026.05.22"}, {"journal": "style", "href": "articles/dragons-90s-memory.html", "title": "雞爸爸 90~99 味全龍系列回顧", "excerpt": "為什麼喜歡棒球？因為味全龍。從一張五顏六色的賽程表開始的龍魂記憶。", "date": "2026.05.20"}]</script>
-  <script id="scene-data" type="application/json">{"family": {"label": "家庭誌", "desc": "家庭、孩子、陪伴與日常裡長出的幸福紀錄。", "image": "assets/img/proto-family.png", "hotspots": [{"left": 9.8, "top": 54.0, "width": 19.2, "height": 28.2}, {"left": 30.3, "top": 54.0, "width": 19.3, "height": 28.2}, {"left": 50.5, "top": 54.0, "width": 19.3, "height": 28.2}, {"left": 70.8, "top": 54.0, "width": 19.3, "height": 28.2}], "cta": {"left": 42.2, "top": 86.2, "width": 15.5, "height": 4.9}}, "health": {"label": "保健室", "desc": "健康、睡眠、情緒與一家人的日常照護。", "image": "assets/img/proto-health.png", "hotspots": [{"left": 18.1, "top": 26.0, "width": 19.8, "height": 44.3}, {"left": 38.9, "top": 26.0, "width": 20.6, "height": 44.3}, {"left": 60.4, "top": 26.0, "width": 19.7, "height": 44.3}], "cta": {"left": 41.1, "top": 72.4, "width": 18.3, "height": 4.9}}, "library": {"label": "圖書室", "desc": "與 AI 共讀、沉澱思緒，探索知識與智慧的無限可能。", "image": "assets/img/proto-library.png", "hotspots": [{"left": 18.0, "top": 26.0, "width": 19.8, "height": 44.3}, {"left": 38.8, "top": 26.0, "width": 20.5, "height": 44.3}, {"left": 60.4, "top": 26.0, "width": 19.7, "height": 44.3}], "cta": {"left": 41.0, "top": 72.4, "width": 18.3, "height": 4.9}}, "style": {"label": "風格誌", "desc": "棒球、嘻哈、電影與熱愛事物留下的風格紀錄。", "image": "assets/img/proto-style.png", "hotspots": [{"left": 19.0, "top": 26.0, "width": 18.9, "height": 44.0}, {"left": 39.0, "top": 26.0, "width": 20.3, "height": 44.0}, {"left": 60.3, "top": 26.0, "width": 19.8, "height": 44.0}], "cta": {"left": 44.0, "top": 72.4, "width": 14.5, "height": 4.9}}, "light": {"label": "光影誌", "desc": "照片、插畫、短影音與影像創作留下的溫度。", "image": "assets/img/proto-light.png", "hotspots": [{"left": 18.8, "top": 27.0, "width": 18.8, "height": 43.2}, {"left": 38.7, "top": 27.0, "width": 20.4, "height": 43.2}, {"left": 60.3, "top": 27.0, "width": 19.8, "height": 43.2}], "cta": {"left": 43.8, "top": 72.4, "width": 14.6, "height": 4.9}}}</script>
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>© 2026 雞爸爸生活研究室 Chicken Dad Journal</p>
+      <div class="footer-links">
+        <a href="knowledge.html">知識圖譜</a>
+        <a href="family.html">我們一家</a>
+        <a href="about.html">關於</a>
+      </div>
+    </div>
+  </footer>
+
   <script>
-    (function() {
-      const stories = JSON.parse(document.getElementById('story-data').textContent);
-      const scenes = JSON.parse(document.getElementById('scene-data').textContent);
-      const params = new URLSearchParams(location.search);
-      const journal = params.get('journal') || 'family';
-      const key = scenes[journal] ? journal : 'family';
-      const scene = scenes[key];
-      document.querySelectorAll('.main-nav a').forEach(a => {
-        a.classList.toggle('active', a.dataset.nav === key);
-        if (a.dataset.nav === key) a.setAttribute('aria-current', 'page');
-      });
-      const img = document.getElementById('scene-image');
-      img.src = scene.image + '?v=57';
-      img.alt = scene.label + ' Prototype 內容頁';
-      const hotspotBox = document.getElementById('scene-hotspots');
-      const fallback = document.getElementById('fallback-links');
-      const pool = stories.filter(s => s.journal === key);
-      const cards = pool.slice(0, scene.hotspots.length);
-
-      scene.hotspots.forEach((box, idx) => {
-        const item = cards[idx];
-        if (!item) return;
-        const a = document.createElement('a');
-        a.className = 'hotspot';
-        a.href = item.href;
-        a.setAttribute('aria-label', item.title);
-        a.title = item.title;
-        a.style.left = box.left + '%';
-        a.style.top = box.top + '%';
-        a.style.width = box.width + '%';
-        a.style.height = box.height + '%';
-        hotspotBox.appendChild(a);
-      });
-
-      if (scene.cta) {
-        const more = document.createElement('a');
-        more.className = 'hotspot';
-        more.href = '#fallback-links';
-        more.setAttribute('aria-label', '查看更多 ' + scene.label + ' 文章');
-        more.style.left = scene.cta.left + '%';
-        more.style.top = scene.cta.top + '%';
-        more.style.width = scene.cta.width + '%';
-        more.style.height = scene.cta.height + '%';
-        hotspotBox.appendChild(more);
+    const journals = {
+      family: {
+        label: '家庭誌',
+        subtitle: '家庭、孩子、陪伴與日常裡長出的幸福紀錄。',
+        room: 'assets/img/room-family-v59.png?v=59',
+        pills: ['親子教養', '家庭生活', '成長紀錄', '夫妻關係', '節日與儀式', '手作與遊戲'],
+        aboutTitle: '關於家庭誌',
+        aboutText: '家庭誌記錄一家人在陪伴裡長出的日常，從孩子的成長片刻、夫妻之間的理解，到那些有圓桌、貓咪、茶香與相簿陪伴的生活場景。這裡不是宏大的敘事，而是把最平凡卻最珍貴的家，慢慢寫成可以回頭閱讀的溫度。'
+      },
+      health: {
+        label: '保健室',
+        subtitle: '照顧身體，也照顧情緒，在日常裡研究一家人的健康智慧。',
+        room: 'assets/img/room-health-v59.png?v=59',
+        pills: ['營養飲食', '運動伸展', '睡眠作息', '情緒照護', '自然療癒', '家庭健康'],
+        aboutTitle: '關於保健室',
+        aboutText: '保健室收納雞爸爸一家關於健康生活的研究：營養保健食品、健身小道具、醫學雜誌、睡眠與恢復、壓力與照護。這裡不是冰冷的保健知識庫，而是把真正陪伴一家人變健康的日常方法，整理成溫暖可用的生活筆記。'
+      },
+      library: {
+        label: '圖書室',
+        subtitle: '與 AI 共讀，沉澱思緒，探索知識與智慧。',
+        room: 'assets/img/room-library-v59.png?v=59',
+        pills: ['經典導讀', 'AI 共讀筆記', '慢讀練習', '思想札記'],
+        aboutTitle: '關於圖書室',
+        aboutText: '圖書室是一個讓閱讀、思考與 AI 對話慢慢發酵的空間。從金庸、鏢人到生活裡的修行與觀照，雞爸爸把閱讀後留下的觸動、提問與筆記整理下來，讓知識不只是資訊，而能成為陪伴日常的智慧。'
+      },
+      style: {
+        label: '風格誌',
+        subtitle: '棒球、嘻哈、電影與熱愛事物留下的風格紀錄。',
+        room: 'assets/img/room-style-v59.png?v=59',
+        pills: ['嘻哈音樂', '職棒觀察', '音樂文化', '生活品味'],
+        aboutTitle: '關於風格誌',
+        aboutText: '風格誌記錄雞爸爸喜歡的一切：棒球場上的熱血、節奏裡的態度、銀幕中的感動，還有那些讓生活更有味道的選擇。它不是單純的興趣分類，而是把熱愛、品味與觀察，整理成屬於雞爸爸宇宙的生活風格。'
+      },
+      light: {
+        label: '光影誌',
+        subtitle: '照片、插畫、短影音與影像創作留下的溫度。',
+        room: 'assets/img/room-light-v59.png?v=59',
+        pills: ['攝影日常', '影像創作', '影像故事', '插畫紀錄'],
+        aboutTitle: '關於光影誌',
+        aboutText: '光影誌收藏雞爸爸用影像記錄生活的方式：從照片到插畫、從創作過程到家庭記憶。每一張畫面都是一個情感的載體，記錄孩子、記錄陪伴，也記錄那些稍縱即逝卻值得珍藏的光。'
       }
+    };
 
-      pool.forEach(item => {
-        const a = document.createElement('a');
-        a.href = item.href;
-        a.textContent = item.title;
-        a.title = item.date ? (item.date + '｜' + item.title) : item.title;
-        fallback.appendChild(a);
-      });
-    })();
+    const stories = [
+      {journal:'family', title:'畫冊上的那隻手，把想媽媽變成鼠姊姊可以握住的勇氣', excerpt:'鼠姊姊在工作坊裡，學會把想媽媽的心情變成可以累積的勇氣，也把善良分享給身邊的人。', date:'2026.07.06', href:'articles/picture-book-hand-courage.html', tags:['親子','鼠姊姊','成長']},
+      {journal:'family', title:'女孩，讓我們看雲去', excerpt:'不是遠行，而是把緊繃的心輕輕放下，重新找回一家人呼吸的節奏。', date:'2026.07.02', href:'articles/girls-let-us-watch-clouds.html', tags:['家庭','夫妻','療癒']},
+      {journal:'family', title:'當下的溫度，就是幸福的定義', excerpt:'父子之間那些貼近肚肚、摸摸肚臍的默契，原來就是最暖的幸福。', date:'2026.07.01', href:'articles/temperature-of-now.html', tags:['龍弟弟','父子','日常']},
+      {journal:'family', title:'雞爸爸和鼠姊姊的半小時夏天', excerpt:'短短半小時的泳池約會，卻足夠成為一家人最珍貴的夏日時光。', date:'2026.06.28', href:'articles/half-hour-of-summer.html', tags:['夏天','鼠姊姊','約會']},
+      {journal:'family', title:'鼠姊姊的中班畢業典禮：唱跳、氣球與一整天的願望清單', excerpt:'最愛唱唱跳跳的鼠姊姊，把一場畢業典禮活成一整天的成長紀念。', date:'2026.06.25', href:'articles/graduation-day.html', tags:['畢業','幼兒園','成長']},
+      {journal:'family', title:'原本想練背肌，卻成了推鞦韆專員', excerpt:'單槓裝好後，最先被滿足的不是背肌，而是龍弟弟的遊樂園願望。', date:'2026.06.16', href:'articles/pull-up-bar-swing-specialist.html', tags:['龍弟弟','居家','陪伴']},
+      {journal:'family', title:'鼠姊姊五歲了還沒分房睡，是我們做錯了嗎？', excerpt:'每個家庭都有自己的節奏，獨立不是催促，而是在安全感裡慢慢發生。', date:'2026.06.04', href:'articles/five-year-old-not-sleeping-alone.html', tags:['睡眠','親職','安全感']},
+      {journal:'health', title:'鼠姊姊半夜兩點的喘鳴聲：那一晚，我們又再次認識「急性氣喘」', excerpt:'午夜的喘鳴、急救藥與觀察警訊，讓一家人重新認識什麼叫照護與應變。', date:'2026.07.06', href:'articles/midnight-asthma-wheezing-lesson.html', tags:['氣喘','急救','鼠姊姊']},
+      {journal:'health', title:'雞爸爸、兔阿嬤、鼠媽媽的肌酸初體驗', excerpt:'一次健身補給品開箱，變成三個不同世代共同參與的保健初體驗。', date:'2026.06.10', href:'articles/family-creatine-first-experiment.html', tags:['肌酸','營養','家人']},
+      {journal:'health', title:'異位性皮膚家庭的理解與陪伴', excerpt:'沒辦法替你癢，但可以陪你找到日常照顧與情緒安定的方法。', date:'2026.06.07', href:'articles/atopic-skin-family-care.html', tags:['皮膚','陪伴','照護']},
+      {journal:'health', title:'我與我的老夥伴：納斯 NAS', excerpt:'看似設備維運的故事，其實也是工作壓力、責任與健康節奏的真實縮影。', date:'2026.06.02', href:'articles/old-partner-nas.html', tags:['工作','壓力','日常']},
+      {journal:'health', title:'如何降低家庭專屬的「數據雜訊」', excerpt:'當情緒與疲勞讓判讀失真，適時暫停，是照顧家庭健康的重要能力。', date:'2026.06.01', href:'articles/family-data-noise-hsp.html', tags:['高敏感','家庭','壓力']},
+      {journal:'health', title:'關注「能量用球數」：HSP 的守護神基因', excerpt:'把高敏感的日常理解成投手調度，找到適合自己的恢復節奏。', date:'2026.05.29', href:'articles/hsp-energy-pitch-count.html', tags:['HSP','能量','身心']},
+      {journal:'health', title:'你不是想太多，你只是接收得太多', excerpt:'當你總覺得自己過度反應，也許只是你的神經系統比別人更努力工作。', date:'2026.05.29', href:'articles/hsp-not-overthinking.html', tags:['HSP','情緒','理解']},
+      {journal:'library', title:'重看《鏢人》才懂，「諦聽」以死明「相」', excerpt:'當劇情翻回玉門關，才看懂那份用生命照亮真相的重量。', date:'2026.06.06', href:'articles/biaoren-diting-asang.html', tags:['鏢人','漫畫','閱讀']},
+      {journal:'library', title:'〖大漠餘響〗為《鏢人》補上亂世的魂', excerpt:'從電影預告與原著漫畫出發，補完那些被影像略過的亂世回聲。', date:'2026.06.04', href:'articles/biaoren-desert-echo.html', tags:['鏢人','電影','筆記']},
+      {journal:'library', title:'為什麼喜歡金庸筆下的令狐沖？', excerpt:'年輕時羨慕奇遇，中年後才懂那份不被江湖困住的自由。', date:'2026.05.31', href:'articles/why-i-like-linghu-chong.html', tags:['金庸','小說','思考']},
+      {journal:'style', title:'說唱巔峰對決2026：炸場首推龍弟弟', excerpt:'真正炸場的不在螢幕裡，而是在餐椅上；一歲半的龍弟弟把音樂跳進了生活。', date:'2026.07.03', href:'articles/rap-peak-2026-dragon-brother.html', tags:['嘻哈','龍弟弟','音樂']},
+      {journal:'style', title:'鼠姊姊龍弟弟的棒球初體驗', excerpt:'第一次打棒球，有揮棒也有歡呼，原來運動的啟蒙可以這麼可愛。', date:'2026.06.01', href:'articles/kids-first-baseball.html', tags:['棒球','親子','體驗']},
+      {journal:'style', title:'徐若熙把「我不屬於這裡」投成了過去，請往更棒的地方前進', excerpt:'從低潮到無失分，這不只是一場好投，也是一次重新站穩的宣告。', date:'2026.05.31', href:'articles/hsu-jo-hsi-six-scoreless.html', tags:['味全龍','徐若熙','棒球']},
+      {journal:'style', title:'陳子豪在味全的低潮：究竟是心態、環境，還是玄學？', excerpt:'用進階數據拆解狀態波動，把看球的直覺變成更清楚的觀察。', date:'2026.05.22', href:'articles/chen-tzu-hao-slump-analysis.html', tags:['味全龍','數據','分析']},
+      {journal:'style', title:'跨越世代龍魂：純種砲手指數 TTO 看味全龍 1996 vs. 2023 打線演變', excerpt:'把兩個世代放在同一條時間軸上，重新看懂味全龍打線的風格變化。', date:'2026.05.22', href:'articles/dragons-tto-1996-2023.html', tags:['味全龍','TTO','歷史']},
+      {journal:'style', title:'味全龍的速度戰：從大帝士盜出三連霸，看二代龍的腿哥部隊', excerpt:'當速度成為一種戰術傳承，龍魂也以另一種形式繼續奔跑。', date:'2026.05.22', href:'articles/dragons-speed-game.html', tags:['味全龍','盜壘','戰術']},
+      {journal:'light', title:'以為只是做網站，最後變成恐怖情人小妾', excerpt:'從網站規劃到 AI 共創，一場原本單純的製作，意外長成一段戲劇感十足的合作故事。', date:'2026.06.30', href:'articles/ai-website-scary-lover-concubine.html', tags:['網站','AI','共創']},
+      {journal:'light', title:'只是想跟風假文青，AI 卻把我自己做成了迷因', excerpt:'當 AI 製圖和熟男形象撞在一起，產生的不是帥照，而是一張難忘的迷因。', date:'2026.06.26', href:'articles/ai-fake-artsy-meme.html', tags:['AI製圖','迷因','創作']},
+      {journal:'light', title:'AI 讓我一秒變「雞爸」？ChatGPT 與 Gemini 的熟男改造翻車現場', excerpt:'同樣想做形象改造，不同模型卻走出完全不同的戲路。', date:'2026.06.26', href:'articles/ai-makeover-rollover.html', tags:['AI製圖','比較','翻車']}
+    ];
+
+    const params = new URLSearchParams(location.search);
+    const key = journals[params.get('journal')] ? params.get('journal') : 'family';
+    const journal = journals[key];
+
+    document.body.dataset.journal = key;
+    document.title = `雞爸爸生活研究室｜${journal.label}`;
+    document.getElementById('journal-title').textContent = journal.label;
+    document.getElementById('journal-subtitle').textContent = journal.subtitle;
+    document.getElementById('about-title').textContent = journal.aboutTitle;
+    document.getElementById('about-text').textContent = journal.aboutText;
+    const thumb = document.getElementById('about-thumb');
+    thumb.src = journal.room;
+    thumb.alt = `${journal.label} 房間場景插畫`;
+    document.getElementById('journal-more').textContent = `瀏覽更多${journal.label}文章 →`;
+    document.getElementById('room-bg').style.backgroundImage = `url('${journal.room}')`;
+
+    document.querySelectorAll('.main-nav a').forEach(link => {
+      const active = link.dataset.nav === key;
+      link.classList.toggle('active', active);
+      if (active) link.setAttribute('aria-current', 'page');
+      else link.removeAttribute('aria-current');
+    });
+
+    const pills = document.getElementById('journal-pills');
+    journal.pills.forEach(p => {
+      const span = document.createElement('span');
+      span.className = 'pill';
+      span.textContent = p;
+      pills.appendChild(span);
+    });
+
+    const grid = document.getElementById('cards-grid');
+    const filtered = stories.filter(item => item.journal === key);
+    filtered.forEach(item => {
+      const a = document.createElement('a');
+      a.className = 'story-card';
+      a.href = item.href || '#';
+      a.innerHTML = `
+        <div class="card-head">
+          <span class="card-journal">${journal.label}</span>
+          <span class="card-date">${item.date}</span>
+        </div>
+        <h3>${item.title}</h3>
+        <p class="card-excerpt">${item.excerpt}</p>
+        <div class="card-tags">${(item.tags || []).map(tag => `<span>${tag}</span>`).join('')}</div>
+      `;
+      grid.appendChild(a);
+    });
   </script>
 </body>
 </html>
