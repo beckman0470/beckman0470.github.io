@@ -1,24 +1,42 @@
-雞爸爸生活研究室｜內容頁一致版 v5.9
+# 雞爸爸生活研究室｜內容頁底圖移除 hotfix
 
-這份套件為五大內容頁的真正一致版，重點如下：
-1. 上方 LOGO 與導覽列位置比照首頁。
-2. 只保留首頁同樣的六個上方導覽項目：首頁／家庭誌／保健室／圖書室／風格誌／光影誌。
-3. 五個內容頁全部共用同一套 HTML + CSS 模板。
-4. 五個內容頁各自有不同房間感背景插畫：家庭誌／保健室／圖書室／風格誌／光影誌。
-5. 每個內容頁都有：標題、副標、分類標籤、文章卡片區、按鈕、關於區塊。
-6. 全站純靜態，不需要 Python，可直接上傳到 GitHub Pages 使用。
+這包只做一件事：移除內容頁背景底圖污染。
 
-使用方式
-- 將本資料夾內容覆蓋到網站專案根目錄對應位置。
-- 重點檔案：articles.html、css/articles-v59.css、assets/img/*
-- 頁面連結：
-  - 家庭誌：articles.html?journal=family
-  - 保健室：articles.html?journal=health
-  - 圖書室：articles.html?journal=library
-  - 風格誌：articles.html?journal=style
-  - 光影誌：articles.html?journal=light
+## 不動的地方
 
-設計原則對應
-- Prototype 先行、實作需與 Prototype 一致：本版採「同一套模板 + 五個不同房間背景」方式，避免上一版只換底圖而沒有整體版型一致。
-- GitHub / GitHub Pages 可直接使用：不依賴任何後端或 Python。
-- LOGO / Header / Nav 一致：內容頁導覽與首頁對齊。
+- 不改 `index.html`
+- 不改首頁 HERO
+- 不改首頁入口卡
+- 不改首頁人物區
+- 不改 LOGO / Header / Footer
+
+## 套用方式 A：最小改法，推薦
+
+把 `css/cdj-remove-content-bg.css` 放進網站的 `css/` 目錄。
+
+然後在以下五個內容頁的 `</head>` 前面加入這行，放在原本 CSS 後面：
+
+```html
+<link rel="stylesheet" href="css/cdj-remove-content-bg.css?v=20260709-bg-off">
+```
+
+需要加入的頁面：
+
+- `memory.html`
+- `clinic.html`
+- `library.html`
+- `style.html`
+- `photo.html`
+
+不要加到 `index.html`。
+
+## 套用方式 B：更小檔案數
+
+也可以直接把 `css/cdj-remove-content-bg.css` 的內容整段貼到 `css/room-theme-v1.css` 最後面。
+
+## 檢查重點
+
+- 內容頁背景不再出現 Prototype 底圖、房間圖、污染截圖。
+- 頁面只剩米白／暖色漸層底。
+- 文章卡片圖片仍保留。
+- 首頁完全不受影響。
