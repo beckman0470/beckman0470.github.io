@@ -81,7 +81,7 @@
       family: {
         label: '家庭誌',
         subtitle: '家庭、孩子、陪伴與日常裡長出的幸福紀錄。',
-        room: 'assets/img/room-family-v59.png?v=59',
+        room: 'assets/img/room-family-clean-v61.png?v=61',
         pills: ['親子教養', '家庭生活', '成長紀錄', '夫妻關係', '節日與儀式', '手作與遊戲'],
         aboutTitle: '關於家庭誌',
         aboutText: '家庭誌記錄一家人在陪伴裡長出的日常，從孩子的成長片刻、夫妻之間的理解，到那些有圓桌、貓咪、茶香與相簿陪伴的生活場景。這裡不是宏大的敘事，而是把最平凡卻最珍貴的家，慢慢寫成可以回頭閱讀的溫度。'
@@ -89,34 +89,34 @@
       health: {
         label: '保健室',
         subtitle: '照顧身體，也照顧情緒，在日常裡研究一家人的健康智慧。',
-        room: 'assets/img/room-health-v59.png?v=59',
-        pills: ['營養飲食', '運動伸展', '睡眠作息', '情緒照護', '自然療癒', '家庭健康'],
+        room: 'assets/img/room-health-clean-v61.png?v=61',
+        pills: ['家庭照護', '醫學筆記', '中西醫觀察', '營養保健', '睡眠恢復', '身心安定'],
         aboutTitle: '關於保健室',
-        aboutText: '保健室收納雞爸爸一家關於健康生活的研究：營養保健食品、健身小道具、醫學雜誌、睡眠與恢復、壓力與照護。這裡不是冰冷的保健知識庫，而是把真正陪伴一家人變健康的日常方法，整理成溫暖可用的生活筆記。'
+        aboutText: '保健室收納雞爸爸一家關於健康生活的研究：醫學雜誌、白袍與聽診器象徵的西醫照護，也有草本、經絡與中醫觀察帶來的日常調理。這裡不是冰冷的保健知識庫，而是把真正陪伴一家人變健康的生活方法，整理成溫暖可用的家庭照護筆記。'
       },
       library: {
         label: '圖書室',
         subtitle: '與 AI 共讀，沉澱思緒，探索知識與智慧。',
-        room: 'assets/img/room-library-v59.png?v=59',
+        room: 'assets/img/room-library-clean-v61.png?v=61',
         pills: ['經典導讀', 'AI 共讀筆記', '慢讀練習', '思想札記'],
         aboutTitle: '關於圖書室',
         aboutText: '圖書室是一個讓閱讀、思考與 AI 對話慢慢發酵的空間。從金庸、鏢人到生活裡的修行與觀照，雞爸爸把閱讀後留下的觸動、提問與筆記整理下來，讓知識不只是資訊，而能成為陪伴日常的智慧。'
       },
       style: {
         label: '風格誌',
-        subtitle: '棒球、嘻哈、電影與熱愛事物留下的風格紀錄。',
-        room: 'assets/img/room-style-v59.png?v=59',
-        pills: ['嘻哈音樂', '職棒觀察', '音樂文化', '生活品味'],
+        subtitle: '圍棋、運動、資訊、嘻哈、音樂與穿搭，留下生活品味的風格紀錄。',
+        room: 'assets/img/room-style-clean-v61.png?v=61',
+        pills: ['圍棋思考', '運動觀察', '資訊生活', '嘻哈音樂', '穿搭品味', '生活風格'],
         aboutTitle: '關於風格誌',
-        aboutText: '風格誌記錄雞爸爸喜歡的一切：棒球場上的熱血、節奏裡的態度、銀幕中的感動，還有那些讓生活更有味道的選擇。它不是單純的興趣分類，而是把熱愛、品味與觀察，整理成屬於雞爸爸宇宙的生活風格。'
+        aboutText: '風格誌記錄雞爸爸喜歡的一切：圍棋裡的沉著、運動場上的熱血、資訊工具帶來的效率、嘻哈音樂裡的節奏態度，還有穿搭與生活品味的選擇。它不是單純的興趣分類，而是把熱愛、品味與觀察，整理成屬於雞爸爸宇宙的生活風格。'
       },
       light: {
         label: '光影誌',
         subtitle: '照片、插畫、短影音與影像創作留下的溫度。',
-        room: 'assets/img/room-light-v59.png?v=59',
+        room: 'assets/img/room-light-clean-v61.png?v=61',
         pills: ['攝影日常', '影像創作', '影像故事', '插畫紀錄'],
         aboutTitle: '關於光影誌',
-        aboutText: '光影誌收藏雞爸爸用影像記錄生活的方式：從照片到插畫、從創作過程到家庭記憶。每一張畫面都是一個情感的載體，記錄孩子、記錄陪伴，也記錄那些稍縱即逝卻值得珍藏的光。'
+        aboutText: '光影誌收藏雞爸爸用影像記錄生活的方式：照相機、相片、相簿、畫冊、畫筆與畫架，都是把日常轉成記憶的工具。每一張畫面都是一個情感的載體，記錄孩子、記錄陪伴，也記錄那些稍縱即逝卻值得珍藏的光。'
       }
     };
 
@@ -150,7 +150,10 @@
     ];
 
     const params = new URLSearchParams(location.search);
-    const key = journals[params.get('journal')] ? params.get('journal') : 'family';
+    const aliases = { memory: 'family', clinic: 'health', photo: 'light' };
+    const rawJournal = params.get('journal');
+    const normalizedJournal = aliases[rawJournal] || rawJournal;
+    const key = journals[normalizedJournal] ? normalizedJournal : 'family';
     const journal = journals[key];
 
     document.body.dataset.journal = key;
