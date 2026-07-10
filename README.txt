@@ -1,8 +1,10 @@
-PATCH 內容：
-1. articles/cortisol-sagging-face-truth.html
-2. assets/story-covers/cortisol-sagging-face-truth.webp
-3. clinic.html（保健室列表新增文章卡）
-4. articles.html（保健室總覽新增文章）
-5. css/articles-v59.css（沿用現行內容頁樣式）
+雞爸爸生活研究室 PATCH：雞爸爸的精實薄肌策略
 
-建議覆蓋到網站專案根目錄後部署。
+包含：
+- articles/lean-muscle-happiness-strength.html
+- assets/story-covers/lean-muscle-happiness-strength.webp
+- clinic.html（保健室新增文章卡）
+- articles.html（全部作品新增文章）
+- 近期保健室專屬封面圖（避免覆蓋後縮圖退回預設圖）
+
+使用方式：解壓縮後，將所有檔案與資料夾上傳到 GitHub 專案根目錄，覆蓋同名檔案並 Commit。
