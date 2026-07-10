@@ -1,10 +1,13 @@
-雞爸爸生活研究室｜文章列表插圖修正 PATCH
+PATCH：說唱巔峰對決2026：炸場首推龍弟弟
 
-本 PATCH 已包含：
-1. 畫冊上的那隻手：文章內頁與列表縮圖
-2. 半夜兩點的喘鳴聲：文章內頁與列表縮圖
-3. articles.html：為兩篇文章加入 cover 欄位，並在五大分類文章卡顯示圖片
-4. css/articles-v59.css：加入 16:9 列表縮圖樣式
+請將本壓縮檔解壓後，將 articles、assets、css 資料夾與 articles.html 上傳至 GitHub 專案根目錄，覆蓋同名檔案。
 
-使用方式：
-將本壓縮檔解壓縮後，把全部檔案與資料夾上傳至 GitHub 專案根目錄，覆蓋同名檔案，再 Commit changes。
+已更新：
+- 文章內頁主圖
+- 風格誌分類列表縮圖
+- og:image
+- twitter:image
+- JSON-LD image
+- 移除 placeholder 標記與說明
+
+本 PATCH 的 articles.html 與 CSS 已包含前面已處理文章的列表插圖支援。
