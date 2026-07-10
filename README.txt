@@ -1,15 +1,18 @@
-Chicken Dad Journal Homepage Modification Package
+PATCH：畫冊上的那隻手文章插圖
 
-This package is based on the approved prototype and intended to update the homepage only.
-Files included:
-- index.html (homepage prototype implementation)
-- css/homepage-v8.css (homepage-specific styles)
-- assets/img/homepage-prototype-v8.png (approved prototype image for reference)
-- assets/img/homepage-family-hero.png (hero image extracted from prototype for implementation placeholder)
-- assets/img/homepage-categories-and-family.png (reference image showing category row + family cards)
+使用方式：
+1. 解壓縮本檔。
+2. 將 articles 與 assets 兩個資料夾拖到 GitHub 專案根目錄。
+3. 選擇覆蓋同名檔案。
+4. Commit changes。
 
-Notes:
-1. This is a homepage modification package only.
-2. It is designed to align with the approved prototype structure.
-3. The live repo should update only the modified files, in line with project rules.
-4. Replace placeholder exported assets later with sliced final production assets if desired.
+本 PATCH 修改：
+- articles/picture-book-hand-courage.html
+- assets/story-covers/picture-book-hand-courage.webp
+
+已同步更新：
+- 文章內頁封面
+- Open Graph 分享圖片
+- Twitter/X 分享圖片
+- JSON-LD 結構化資料圖片
+- 移除 placeholder 標記與說明文字
