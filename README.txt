@@ -1,12 +1,8 @@
-PATCH：鼠姊姊半夜兩點的喘鳴聲（新版封面）
+PATCH 內容：
+1. articles/cortisol-sagging-face-truth.html
+2. assets/story-covers/cortisol-sagging-face-truth.webp
+3. clinic.html（保健室列表新增文章卡）
+4. articles.html（保健室總覽新增文章）
+5. css/articles-v59.css（沿用現行內容頁樣式）
 
-使用方式：
-1. 解壓縮本檔案。
-2. 將 articles、assets、css 資料夾與 articles.html 上傳到 GitHub 專案根目錄。
-3. 覆蓋同名檔案並 Commit。
-
-本 PATCH 更新：
-- 文章內頁主圖
-- 保健室文章列表縮圖
-- og:image / twitter:image / JSON-LD 圖片
-- 文章修改日期 2026-07-10
+建議覆蓋到網站專案根目錄後部署。
