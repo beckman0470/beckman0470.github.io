@@ -8,7 +8,7 @@
 
 <script src="js/articles-journal-filter.js" defer></script>
 
-3. 把 articles.html 裡所有「獨家記憶」改成「家庭誌」。
+3. 把 articles.html 裡所有「家庭誌」改成「家庭誌」。
 
 4. 如果首頁 index.html 的五大入口還是舊連結，請把連結改成：
 家庭誌：articles.html?journal=family

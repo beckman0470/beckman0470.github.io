@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 ChickenDad Journal rename patch:
-Replace all visible/source text occurrences of 「獨家記憶」 with 「家庭誌」.
+Replace all visible/source text occurrences of 「家庭誌」 with 「家庭誌」.
 
 Usage:
   1. Put this script in the root of beckman0470.github.io repo.
@@ -17,7 +17,7 @@ This script intentionally avoids binary files and common dependency/build folder
 
 from pathlib import Path
 
-OLD = "獨家記憶"
+OLD = "家庭誌"
 NEW = "家庭誌"
 
 ROOT = Path(__file__).resolve().parents[1]

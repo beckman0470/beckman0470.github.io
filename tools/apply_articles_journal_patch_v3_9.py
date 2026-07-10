@@ -7,7 +7,7 @@ What it does:
 1. Copy css/articles-journal-filter.css into repo.
 2. Copy js/articles-journal-filter.js into repo.
 3. Inject CSS/JS into articles.html.
-4. Replace all 「獨家記憶」 with 「家庭誌」 in common text files.
+4. Replace all 「家庭誌」 with 「家庭誌」 in common text files.
 5. Update homepage entrance links from hash anchors to articles.html?journal=...
 6. Remove/avoid the old middle category cards by runtime hiding.
 """
@@ -58,7 +58,7 @@ articles = ROOT / "articles.html"
 if articles.exists():
     html = articles.read_text(encoding="utf-8")
     old = html
-    html = html.replace("獨家記憶", "家庭誌")
+    html = html.replace("家庭誌", "家庭誌")
     html = ensure_in_head(html, '<link rel="stylesheet" href="css/articles-journal-filter.css">')
     html = ensure_before_body(html, '<script src="js/articles-journal-filter.js" defer></script>')
     # Make top/nav links explicit if they appear in simple hrefs
@@ -81,7 +81,7 @@ index = ROOT / "index.html"
 if index.exists():
     html = index.read_text(encoding="utf-8")
     old = html
-    html = html.replace("獨家記憶", "家庭誌")
+    html = html.replace("家庭誌", "家庭誌")
     replacements = {
         'articles.html#memory': 'articles.html?journal=family',
         'articles.html#health': 'articles.html?journal=health',
@@ -109,7 +109,7 @@ for path in ROOT.rglob("*"):
         text = path.read_text(encoding="utf-8")
     except UnicodeDecodeError:
         continue
-    new_text = text.replace("獨家記憶", "家庭誌")
+    new_text = text.replace("家庭誌", "家庭誌")
     if new_text != text:
         path.write_text(new_text, encoding="utf-8")
         rel = str(path.relative_to(ROOT))
