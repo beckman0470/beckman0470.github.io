@@ -1,16 +1,10 @@
-雞爸爸生活研究室｜文章插圖 PATCH
+雞爸爸生活研究室｜文章列表插圖修正 PATCH
 
-對應文章：
-https://beckman0470.github.io/articles/midnight-asthma-wheezing-lesson.html
+本 PATCH 已包含：
+1. 畫冊上的那隻手：文章內頁與列表縮圖
+2. 半夜兩點的喘鳴聲：文章內頁與列表縮圖
+3. articles.html：為兩篇文章加入 cover 欄位，並在五大分類文章卡顯示圖片
+4. css/articles-v59.css：加入 16:9 列表縮圖樣式
 
 使用方式：
-1. 解壓縮此 ZIP。
-2. 將 articles 與 assets 兩個資料夾上傳至 GitHub 專案根目錄。
-3. 覆蓋同名檔案後 Commit changes。
-
-本 PATCH 已更新：
-- 文章內頁主圖
-- Open Graph 分享圖片（Facebook、LINE 等）
-- Twitter／X 分享圖片
-- JSON-LD 結構化資料圖片
-- 移除 placeholder 標記與預留說明
+將本壓縮檔解壓縮後，把全部檔案與資料夾上傳至 GitHub 專案根目錄，覆蓋同名檔案，再 Commit changes。
