@@ -30,13 +30,13 @@
   function updateAllTextLabels() {
     document.querySelectorAll('*').forEach((el) => {
       if (el.childNodes.length === 1 && el.childNodes[0].nodeType === Node.TEXT_NODE) {
-        if (el.textContent.includes('獨家記憶')) {
-          el.textContent = el.textContent.replaceAll('獨家記憶', '家庭誌');
+        if (el.textContent.includes('家庭誌')) {
+          el.textContent = el.textContent.replaceAll('家庭誌', '家庭誌');
         }
       }
       ['aria-label', 'alt', 'title'].forEach((attr) => {
         if (el.hasAttribute && el.hasAttribute(attr)) {
-          el.setAttribute(attr, el.getAttribute(attr).replaceAll('獨家記憶', '家庭誌'));
+          el.setAttribute(attr, el.getAttribute(attr).replaceAll('家庭誌', '家庭誌'));
         }
       });
     });
@@ -56,7 +56,7 @@
 
   function updateNavLinks() {
     const map = [
-      ['獨家記憶', 'family'],
+      ['家庭誌', 'family'],
       ['家庭誌', 'family'],
       ['保健室', 'health'],
       ['圖書室', 'library'],
