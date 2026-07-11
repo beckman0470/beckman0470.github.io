@@ -1,18 +1,15 @@
-# 家庭誌封面修復＋NAS 分類調整 PATCH
+# 光影誌貓咪文章復原 PATCH
 
-本 PATCH 以目前線上 `articles.html` 的近期累積版本為基礎，僅做下列調整：
+本 PATCH 會復原兩篇光影誌文章：
 
-1. 補上〈雞爸爸和鼠姊姊的半小時夏天〉列表封面。
-2. 補上〈鼠姊姊的中班畢業典禮：唱跳、氣球與一整天的願望清單〉列表封面。
-3. 將〈我與我的老夥伴：納斯 NAS〉由「保健室」移至「風格誌」。
-4. 所有尚未設定專屬 `cover` 的文章卡，改用 `assets/story-covers/default.svg` 作為保底圖片，避免再出現整塊空白。
+- 調皮的雅虎弟弟
+- 胖嘟嘟的右右姊姊
 
-## 上傳方式
+同時更新：
 
-解壓縮後，將以下內容上傳至 GitHub 專案根目錄並覆蓋同名檔案：
+- `articles.html`：兩篇加入 `light`（光影誌）分類並顯示封面。
+- `photo.html`：光影誌作品牆新增兩篇文章卡。
+- 兩篇文章內頁與全部照片、封面資源。
+- 保留前一版已完成的家庭誌封面修復，以及 NAS 移至風格誌設定。
 
-- `articles.html`
-- `assets/story-covers/half-hour-of-summer.webp`
-- `assets/story-covers/graduation-day.webp`
-
-Commit 後等待 GitHub Pages 更新；若瀏覽器仍顯示舊版，可使用 Ctrl+F5 強制重新整理。
+解壓縮後，將全部檔案與資料夾上傳到 GitHub 專案根目錄並覆蓋同名檔案。
