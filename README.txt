@@ -1,17 +1,17 @@
-雞爸爸生活研究室｜五大誌舊版入口統一修復 PATCH
+我與我的老夥伴：納斯 NAS｜封面更新 PATCH
 
-修正範圍
-- memory.html  → articles.html?journal=family
-- clinic.html  → articles.html?journal=health
-- library.html → articles.html?journal=library
-- style.html   → articles.html?journal=style
-- photo.html   → articles.html?journal=light
+包含：
+- articles/old-partner-nas.html
+- assets/story-covers/old-partner-nas.webp
+- articles.html
 
-修正目的
-1. 舊文章頁或舊導覽若仍連到五個獨立頁面，會立即轉到目前統一的新版文章列表。
-2. 避免光影誌、家庭誌、保健室、圖書室、風格誌在新舊兩套版型之間切換。
-3. 不覆蓋 articles.html、index.html、文章資料與封面，降低舊 PATCH 回退內容的風險。
-4. 舊網址仍可繼續使用，外部連結不會失效。
+調整：
+- 文章內頁改用專屬插圖
+- Facebook／LINE og:image 與 Twitter 分享圖改用專屬插圖
+- JSON-LD image 改用專屬插圖
+- 文章列表新增專屬縮圖
+- 文章分類統一為風格誌
+- 返回按鈕改為回到風格誌
 
-上傳方式
-將 ZIP 解壓縮後，把五個 HTML 檔上傳到 GitHub 專案根目錄，覆蓋同名檔案並 Commit。
+使用方式：
+把 ZIP 解壓縮後，將全部檔案與資料夾上傳到 GitHub 專案根目錄，覆蓋同名檔案並 Commit。
