@@ -1,0 +1,12 @@
+*** 請在 articles.html 的 const stories = [ 下方，第一筆 journal:'light' 之前插入以下一行：
+
+      {journal:'light', title:'龍弟弟點一下爸爸的肚肚', excerpt:'走近、點一下，再退後兩步微笑。短短五秒，是父子之間熟悉又溫暖的默契。', date:'2026.07.14', href:'articles/belly-tap-smile-video.html', cover:'assets/video-posters/belly-tap-smile.jpg', tags:['短影音','龍弟弟','父子日常']},
+
+建議插入位置：
+在這一行之前：
+      {journal:'light', title:'調皮的雅虎弟弟', ...
+
+完成後網址：
+https://beckman0470.github.io/articles/belly-tap-smile-video.html
+光影誌：
+https://beckman0470.github.io/articles.html?journal=light
