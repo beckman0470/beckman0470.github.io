@@ -103,6 +103,22 @@ img { max-width: 100%; display: block; }
   position: relative;
   overflow: hidden;
 }
+.journal-page::before {
+  content: "";
+  position: fixed;
+  inset: 92px 0 0 0;
+  background-image: var(--page-bg);
+  background-size: cover;
+  background-position: center top;
+  opacity: 0.08;
+  filter: blur(8px);
+  pointer-events: none;
+}
+body[data-journal="family"] .journal-page { --page-bg: url('../assets/img/room-family-clean-v61.png?v=61'); }
+body[data-journal="health"] .journal-page { --page-bg: url('../assets/img/room-health-clean-v61.png?v=61'); }
+body[data-journal="library"] .journal-page { --page-bg: url('../assets/img/room-library-clean-v61.png?v=61'); }
+body[data-journal="style"] .journal-page { --page-bg: url('../assets/img/room-style-clean-v61.png?v=61'); }
+body[data-journal="light"] .journal-page { --page-bg: url('../assets/img/room-light-clean-v61.png?v=61'); }
 
 .journal-hero {
   position: relative;
@@ -113,14 +129,14 @@ img { max-width: 100%; display: block; }
   inset: 0;
   background-size: cover;
   background-position: center top;
-  filter: saturate(1.03) contrast(1.01);
+  filter: saturate(0.95);
 }
 .room-fade {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(to bottom, rgba(246,240,230,0.05), rgba(246,240,230,0.12) 22%, rgba(246,240,230,0.44) 58%, rgba(246,240,230,0.86) 100%),
-    radial-gradient(circle at center, rgba(255,250,243,0.32), rgba(255,250,243,0.03) 58%, rgba(255,250,243,0.0) 74%);
+    linear-gradient(to bottom, rgba(246,240,230,0.08), rgba(246,240,230,0.22) 18%, rgba(246,240,230,0.48) 38%, rgba(246,240,230,0.76) 62%, rgba(246,240,230,0.95) 100%),
+    radial-gradient(circle at center, rgba(255,250,243,0.55), rgba(255,250,243,0.05) 50%, rgba(255,250,243,0.0) 70%);
 }
 .hero-inner {
   position: relative;
@@ -176,7 +192,7 @@ img { max-width: 100%; display: block; }
 
 .cards-panel,
 .about-panel {
-  background: rgba(250, 246, 239, 0.62);
+  background: rgba(250, 246, 239, 0.50);
   border: 1px solid rgba(231, 216, 198, 0.65);
   border-radius: 28px;
   box-shadow: var(--shadow);
@@ -202,32 +218,30 @@ img { max-width: 100%; display: block; }
   box-shadow: 0 12px 24px rgba(88, 60, 34, 0.06);
   transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
 }
-.card-cover {
-  margin: -22px -20px 2px;
-  aspect-ratio: 16 / 9;
-  overflow: hidden;
-  border-radius: 21px 21px 0 0;
-  background: #eee4d8;
-}
-.card-cover img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-}
-.story-card:hover .card-cover img,
-.story-card:focus-visible .card-cover img {
-  transform: scale(1.025);
-}
-.card-cover img {
-  transition: transform .25s ease;
-}
 .story-card:hover,
 .story-card:focus-visible {
   transform: translateY(-4px);
   box-shadow: 0 18px 32px rgba(88, 60, 34, 0.12);
   border-color: rgba(198, 132, 51, 0.55);
 }
+
+.card-media {
+  width: 100%;
+  height: 158px;
+  margin: -6px 0 2px;
+  border-radius: 18px;
+  overflow: hidden;
+  background: rgba(255, 249, 241, 0.95);
+  border: 1px solid rgba(234, 219, 200, 0.85);
+  box-shadow: 0 8px 18px rgba(88, 60, 34, 0.06);
+}
+.card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 .card-head {
   display: flex;
   align-items: center;
@@ -376,11 +390,13 @@ img { max-width: 100%; display: block; }
   }
   .brand, .main-nav, .search-link { justify-self: center; }
   .main-nav { justify-content: center; gap: 18px; }
+  .journal-page::before { inset: 132px 0 0 0; }
   .journal-hero { padding-top: 18px; }
   .hero-heading { padding-top: 30px; }
   .cards-panel { padding: 20px 16px 20px; }
   .cards-grid { grid-template-columns: 1fr; gap: 16px; }
   .story-card { min-height: auto; }
+  .card-media { height: 180px; }
   .story-card h3 { font-size: 22px; }
   .card-excerpt { font-size: 16px; }
   .footer-inner {

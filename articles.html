@@ -144,7 +144,7 @@
       {journal:'style', title:'陳子豪在味全的低潮：究竟是心態、環境，還是玄學？', excerpt:'用進階數據拆解狀態波動，把看球的直覺變成更清楚的觀察。', date:'2026.05.22', href:'articles/chen-tzu-hao-slump-analysis.html', tags:['味全龍','數據','分析']},
       {journal:'style', title:'跨越世代龍魂：純種砲手指數 TTO 看味全龍 1996 vs. 2023 打線演變', excerpt:'把兩個世代放在同一條時間軸上，重新看懂味全龍打線的風格變化。', date:'2026.05.22', href:'articles/dragons-tto-1996-2023.html', tags:['味全龍','TTO','歷史']},
       {journal:'style', title:'味全龍的速度戰：從大帝士盜出三連霸，看二代龍的腿哥部隊', excerpt:'當速度成為一種戰術傳承，龍魂也以另一種形式繼續奔跑。', date:'2026.05.22', href:'articles/dragons-speed-game.html', tags:['味全龍','盜壘','戰術']},
-      {journal:'light', title:'兔阿嬤與龍弟弟的優格時光：讓阿格阿格動起來', excerpt:'把兔阿嬤拿出優格、龍弟弟開心喊著阿格阿格的分鏡，做成一段溫暖可愛的短影音。', date:'2026.07.15', href:'articles/rabbit-ama-yogurt-youtube.html', tags:['YouTube','短影音','兔阿嬤','龍弟弟']},
+      {journal:'light', title:'兔阿嬤與龍弟弟的優格時光：讓阿格阿格動起來', excerpt:'把兔阿嬤拿出優格、龍弟弟開心喊著阿格阿格的分鏡，做成一段溫暖可愛的短影音。', date:'2026.07.15', href:'articles/rabbit-ama-yogurt-youtube.html', tags:['YouTube','短影音','兔阿嬤','龍弟弟'], cover:'https://img.youtube.com/vi/Rfg6SpruQKo/hqdefault.jpg'},
       {journal:'light', title:'以為只是做網站，最後變成恐怖情人小妾', excerpt:'從網站規劃到 AI 共創，一場原本單純的製作，意外長成一段戲劇感十足的合作故事。', date:'2026.06.30', href:'articles/ai-website-scary-lover-concubine.html', tags:['網站','AI','共創']},
       {journal:'light', title:'只是想跟風假文青，AI 卻把我自己做成了迷因', excerpt:'當 AI 製圖和熟男形象撞在一起，產生的不是帥照，而是一張難忘的迷因。', date:'2026.06.26', href:'articles/ai-fake-artsy-meme.html', tags:['AI製圖','迷因','創作']},
       {journal:'light', title:'AI 讓我一秒變「雞爸」？ChatGPT 與 Gemini 的熟男改造翻車現場', excerpt:'同樣想做形象改造，不同模型卻走出完全不同的戲路。', date:'2026.06.26', href:'articles/ai-makeover-rollover.html', tags:['AI製圖','比較','翻車']}
@@ -190,7 +190,12 @@
       const a = document.createElement('a');
       a.className = 'story-card';
       a.href = item.href || '#';
+      const cardImage = item.cover || journal.room;
+      const cardAlt = (item.coverAlt || `${item.title} 封面`).replace(/"/g, '&quot;');
       a.innerHTML = `
+        <div class="card-media">
+          <img src="${cardImage}" alt="${cardAlt}" loading="lazy">
+        </div>
         <div class="card-head">
           <span class="card-journal">${journal.label}</span>
           <span class="card-date">${item.date}</span>
