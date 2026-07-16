@@ -409,23 +409,15 @@ body[data-journal="light"] .journal-page { --page-bg: url('../assets/img/room-li
 }
 
 
-/* CDJ_CARD_COVER_RESTORE_V68_20260716
-   文章卡片封面復原：遵守「一篇文章、一張代表插圖」。
-   只作用於內容頁文章卡片，不改首頁、不改 HERO、不改內容頁房間底圖。
+/* CDJ_ARTICLE_LIST_LATEST_V69_20260716
+   卡片封面安全規則：只修內容頁文章卡片，不動首頁與五大內容頁底圖。
 */
-.story-card {
-  overflow: hidden;
-}
 .card-media {
   width: 100%;
   height: auto;
   aspect-ratio: 16 / 9;
-  margin: -6px 0 4px;
   border-radius: 18px;
   overflow: hidden;
-  background: rgba(255, 249, 241, 0.95);
-  border: 1px solid rgba(234, 219, 200, 0.85);
-  box-shadow: 0 8px 18px rgba(88, 60, 34, 0.06);
 }
 .card-media img {
   width: 100%;
