@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
+<!-- CDJ_ARTICLE_LIST_FIX_V70_20260716 -->
 <!-- CDJ_ARTICLE_LIST_LATEST_V69_20260716 -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -193,20 +194,14 @@
 
 
     function autoCover(item) {
-      const text = `${item.title} ${(item.tags || []).join(' ')} ${item.excerpt || ''}`;
-      if (/YouTube|短影音|影片|動畫/.test(text)) return 'https://img.youtube.com/vi/Rfg6SpruQKo/hqdefault.jpg';
-      if (/AI|製圖|網站|迷因|共創|Gemini|ChatGPT/.test(text)) return 'images/cover-ai.svg';
-      if (/味全龍|棒球|徐若熙|陳子豪|TTO|盜壘|龍魂/.test(text)) return 'images/cover-baseball.svg';
-      if (/龍弟弟|父子|阿格|肚肚/.test(text)) return 'images/cover-dragon-brother.svg';
-      if (/鼠姊姊|女孩|畢業|游泳|夏天|工作坊|勇氣/.test(text)) return 'images/cover-dodo.svg';
-      if (/氣喘|肌酸|皮膚|HSP|能量|健康|壓力|照護|保健|睡眠|數據雜訊/.test(text)) return 'images/cover-health.svg';
-      if (/鏢人|金庸|令狐沖|閱讀|小說|漫畫|筆記|大漠|諦聽/.test(text)) return 'images/hero-journal.svg';
-      if (item.journal === 'family') return 'images/cover-family.svg';
-      if (item.journal === 'health') return 'images/cover-health.svg';
-      if (item.journal === 'library') return 'images/hero-journal.svg';
-      if (item.journal === 'style') return 'images/cover-baseball.svg';
-      if (item.journal === 'light') return 'images/cover-ai.svg';
+      // CDJ_ARTICLE_LIST_FIX_V70_20260716
+      // 優先採用每篇文章在 stories 陣列指定的正式封面，符合「一篇文章、一張代表插圖」原則。
+      if (item.cover) return item.cover;
       return 'assets/story-covers/default.svg';
+    }
+
+    function autoCoverPosition(item) {
+      return item.coverPosition || 'center center';
     }
 
     const grid = document.getElementById('cards-grid');
