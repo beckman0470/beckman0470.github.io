@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
+<!-- CDJ_CARD_COVER_RESTORE_V68_20260716 -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>雞爸爸生活研究室｜內容頁 v5.9</title>
@@ -183,23 +184,70 @@
       span.textContent = p;
       pills.appendChild(span);
     });
+    const coverBySlug = {
+      "picture-book-hand-courage": "assets/story-covers/picture-book-hand-courage.webp",
+      "girls-let-us-watch-clouds": "assets/story-covers/girls-let-us-watch-clouds.webp",
+      "temperature-of-now": "assets/story-covers/temperature-of-now.webp",
+      "half-hour-of-summer": "assets/story-covers/half-hour-of-summer.webp",
+      "graduation-day": "assets/story-covers/graduation-day.webp",
+      "pull-up-bar-swing-specialist": "assets/story-covers/pull-up-bar-swing-specialist.webp",
+      "five-year-old-not-sleeping-alone": "assets/story-covers/five-year-old-not-sleeping-alone.webp",
+      "midnight-asthma-wheezing-lesson": "assets/story-covers/midnight-asthma-wheezing-lesson.webp",
+      "family-creatine-first-experiment": "assets/story-covers/family-creatine-first-experiment.webp",
+      "atopic-skin-family-care": "assets/story-covers/atopic-skin-family-care.webp",
+      "old-partner-nas": "assets/story-covers/old-partner-nas.webp",
+      "family-data-noise-hsp": "assets/story-covers/family-data-noise-hsp.webp",
+      "hsp-energy-pitch-count": "assets/story-covers/hsp-energy-pitch-count.webp",
+      "hsp-not-overthinking": "assets/story-covers/hsp-not-overthinking.webp",
+      "biaoren-diting-asang": "assets/story-covers/biaoren-diting-asang.webp",
+      "biaoren-desert-echo": "assets/story-covers/biaoren-desert-echo.jpg",
+      "why-i-like-linghu-chong": "assets/story-covers/why-i-like-linghu-chong.webp",
+      "rap-peak-2026-dragon-brother": "assets/story-covers/rap-peak-2026-dragon-brother.webp",
+      "kids-first-baseball": "assets/story-covers/kids-first-baseball.webp",
+      "hsu-jo-hsi-six-scoreless": "assets/story-covers/hsu-jo-hsi-six-scoreless.webp",
+      "chen-tzu-hao-slump-analysis": "assets/story-covers/chen-tzu-hao-slump-analysis.webp",
+      "dragons-tto-1996-2023": "assets/story-covers/dragons-tto-2023-player.webp",
+      "dragons-speed-game": "assets/story-covers/dragons-speed-game.webp",
+      "rabbit-ama-yogurt-youtube": "https://img.youtube.com/vi/Rfg6SpruQKo/hqdefault.jpg",
+      "ai-website-scary-lover-concubine": "assets/story-covers/ai-website-scary-lover-concubine.webp",
+      "ai-fake-artsy-meme": "assets/story-covers/ai-fake-artsy-meme.webp",
+      "ai-makeover-rollover": "assets/story-covers/default.svg"
+};
 
+    const coverPositionBySlug = {
+      "pull-up-bar-swing-specialist": "center 36%",
+      "temperature-of-now": "center 42%",
+      "why-i-like-linghu-chong": "center 34%",
+      "ai-fake-artsy-meme": "center 30%",
+      "rap-peak-2026-dragon-brother": "center 38%",
+      "chen-tzu-hao-slump-analysis": "center center",
+      "dragons-tto-1996-2023": "center 44%"
+};
+
+    const journalFallbackCover = {
+      family: 'assets/story-covers/default.svg',
+      health: 'assets/story-covers/default.svg',
+      library: 'assets/story-covers/default.svg',
+      style: 'assets/story-covers/default.svg',
+      light: 'assets/story-covers/default.svg'
+    };
+
+    function getStorySlug(item) {
+      const href = item.href || '';
+      const file = href.split('/').pop() || '';
+      return file.replace(/\.html(?:[?#].*)?$/, '');
+    }
 
     function autoCover(item) {
-      const text = `${item.title} ${(item.tags || []).join(' ')} ${item.excerpt || ''}`;
-      if (/YouTube|短影音|影片|動畫/.test(text)) return 'https://img.youtube.com/vi/Rfg6SpruQKo/hqdefault.jpg';
-      if (/AI|製圖|網站|迷因|共創|Gemini|ChatGPT/.test(text)) return 'images/cover-ai.svg';
-      if (/味全龍|棒球|徐若熙|陳子豪|TTO|盜壘|龍魂/.test(text)) return 'images/cover-baseball.svg';
-      if (/龍弟弟|父子|阿格|肚肚/.test(text)) return 'images/cover-dragon-brother.svg';
-      if (/鼠姊姊|女孩|畢業|游泳|夏天|工作坊|勇氣/.test(text)) return 'images/cover-dodo.svg';
-      if (/氣喘|肌酸|皮膚|HSP|能量|健康|壓力|照護|保健|睡眠|數據雜訊/.test(text)) return 'images/cover-health.svg';
-      if (/鏢人|金庸|令狐沖|閱讀|小說|漫畫|筆記|大漠|諦聽/.test(text)) return 'images/hero-journal.svg';
-      if (item.journal === 'family') return 'images/cover-family.svg';
-      if (item.journal === 'health') return 'images/cover-health.svg';
-      if (item.journal === 'library') return 'images/hero-journal.svg';
-      if (item.journal === 'style') return 'images/cover-baseball.svg';
-      if (item.journal === 'light') return 'images/cover-ai.svg';
-      return 'assets/story-covers/default.svg';
+      const slug = getStorySlug(item);
+      if (item.cover) return item.cover;
+      if (coverBySlug[slug]) return coverBySlug[slug];
+      return journalFallbackCover[item.journal] || 'assets/story-covers/default.svg';
+    }
+
+    function autoCoverPosition(item) {
+      const slug = getStorySlug(item);
+      return item.coverPosition || coverPositionBySlug[slug] || 'center center';
     }
 
     const grid = document.getElementById('cards-grid');
@@ -208,11 +256,12 @@
       const a = document.createElement('a');
       a.className = 'story-card';
       a.href = item.href || '#';
-      const cardImage = item.cover || autoCover(item);
-      const cardAlt = (item.coverAlt || `${item.title} 封面`).replace(/"/g, '&quot;');
+      const cardImage = autoCover(item);
+      const cardPosition = autoCoverPosition(item).replace(/"/g, '&quot;');
+      const cardAlt = (item.coverAlt || `${item.title} 文章封面`).replace(/"/g, '&quot;');
       a.innerHTML = `
         <div class="card-media">
-          <img src="${cardImage}" alt="${cardAlt}" loading="lazy" onerror="this.onerror=null;this.src='assets/story-covers/default.svg';">
+          <img src="${cardImage}" alt="${cardAlt}" loading="lazy" style="object-position:${cardPosition};" onerror="this.onerror=null;this.src='assets/story-covers/default.svg';this.style.objectPosition='center center';">
         </div>
         <div class="card-head">
           <span class="card-journal">${journal.label}</span>
