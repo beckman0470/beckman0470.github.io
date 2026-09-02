@@ -60,7 +60,7 @@
             <span class="feature-icon icon-memory">⌂</span>
             <h3>家庭誌</h3>
             <p>記錄一家人的生活片刻，珍藏那些平凡卻珍貴的家庭日常。</p>
-            <a class="feature-link memory" href="articles.html?journal=family">71 篇文章</a>
+            <a class="feature-link memory" href="articles.html?journal=family" data-journal-count="家庭誌">71 篇文章</a>
           </div>
         </article>
         <article class="feature-card">
@@ -71,7 +71,7 @@
             <span class="feature-icon icon-health">❃</span>
             <h3>保健室</h3>
             <p>研究健康與身心平衡，守護家人的生活品質與幸福能量。</p>
-            <a class="feature-link health" href="articles.html?journal=health">19 篇文章</a>
+            <a class="feature-link health" href="articles.html?journal=health" data-journal-count="保健室">19 篇文章</a>
           </div>
         </article>
         <article class="feature-card">
@@ -82,7 +82,7 @@
             <span class="feature-icon icon-library">✦</span>
             <h3>圖書室</h3>
             <p>與 AI 共讀，沉澱思緒，探索知識與智慧的無限可能。</p>
-            <a class="feature-link library" href="articles.html?journal=library">7 篇文章</a>
+            <a class="feature-link library" href="articles.html?journal=library" data-journal-count="圖書室">7 篇文章</a>
           </div>
         </article>
         <article class="feature-card">
@@ -93,7 +93,7 @@
             <span class="feature-icon icon-style">⚾</span>
             <h3>風格誌</h3>
             <p>棒球、電影、音樂與生活風格，熱愛的事物讓日子更有滋味。</p>
-            <a class="feature-link style" href="articles.html?journal=style">17 篇文章</a>
+            <a class="feature-link style" href="articles.html?journal=style" data-journal-count="風格誌">17 篇文章</a>
           </div>
         </article>
         <article class="feature-card">
@@ -104,7 +104,7 @@
             <span class="feature-icon icon-light">◔</span>
             <h3>光影誌</h3>
             <p>用照片與文字，收藏光影中的感動瞬間與故事溫度。</p>
-            <a class="feature-link light" href="articles.html?journal=light">5 篇文章</a>
+            <a class="feature-link light" href="articles.html?journal=light" data-journal-count="光影誌">5 篇文章</a>
           </div>
         </article>
       </div>
@@ -201,5 +201,5 @@
       </div>
     </div>
   </footer>
-</body>
+<script>(async function syncJournalCounts() {  try {    const response = await fetch('data/articles.json', { cache: 'no-store' });    if (!response.ok) return;    const articles = await response.json();    document.querySelectorAll('[data-journal-count]').forEach((element) => {      const category = element.dataset.journalCount;      const count = articles.filter((article) => article.category === category).length;      element.textContent = count + ' 篇文章';    });  } catch (_) {}})();</script></body>
 </html>
