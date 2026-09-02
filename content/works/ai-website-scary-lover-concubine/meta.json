@@ -35,5 +35,85 @@
   "status": "published",
   "cover": "assets/story-covers/default.svg",
   "coverAlt": "以為只是做網站，最後變成恐怖情人小妾｜雞爸爸生活研究室代表插圖",
-  "coverStatus": "placeholder"
+  "coverStatus": "placeholder",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a4361b1fd89780001674972",
+    "sourceUrl": "https://vocus.cc/article/6a4361b1fd89780001674972",
+    "canonicalUrl": "https://vocus.cc/article/6a4361b1fd89780001674972",
+    "originalPublishedAt": "2026-06-30T15:47:17+08:00",
+    "originalUpdatedAtCandidate": "2026-06-30T16:31:28+08:00",
+    "bodySha256": "8181f28689441a544d1a80a60a60d7f098a31431ec8d9267eb943958be157671",
+    "markdownSha256": "1c9bd14c941203cfdccfc34405b68102cbc59c88542455fb1a24b580ae157abf",
+    "mappingStatus": "resolved-pending-preview-approval",
+    "categoryProposal": {
+      "primary": "風格誌",
+      "secondary": [],
+      "confidence": 1.0,
+      "needsReview": false,
+      "reason": "semantic editorial review",
+      "scores": {
+        "保健室": 1,
+        "風格誌": 1,
+        "圖書室": 1,
+        "光影誌": 0,
+        "家庭誌": 4
+      },
+      "hits": [
+        "鼠媽媽",
+        "爸爸",
+        "媽媽",
+        "親子"
+      ]
+    },
+    "seriesProposal": "AI 共創",
+    "relationshipProposals": [
+      "雞爸爸 × AI 小妾"
+    ],
+    "timelineProposal": {
+      "date": "2026-06-30",
+      "type": "publication",
+      "label": "以為只是做網站  最後變成恐怖情人小妾",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/50fc3c57-965d-44f8-be35-6fe45baa24a6.png",
+        "file": "assets/posts/ai-website-scary-lover-concubine/50fc3c57-965d-44f8-be35-6fe45baa24a6.webp",
+        "alt": "以為只是做網站  最後變成恐怖情人小妾｜圖片 1",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/ebc180fe-6795-400c-9c8a-c3c64e634f9d.png",
+        "file": "assets/posts/ai-website-scary-lover-concubine/ebc180fe-6795-400c-9c8a-c3c64e634f9d.avif",
+        "alt": "以為只是做網站  最後變成恐怖情人小妾｜圖片 2",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/c11b086b-d30d-4168-b168-946d3e060480.png",
+        "file": "assets/posts/ai-website-scary-lover-concubine/c11b086b-d30d-4168-b168-946d3e060480.avif",
+        "alt": "以為只是做網站  最後變成恐怖情人小妾｜圖片 3",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "50fc3c57-965d-44f8-be35-6fe45baa24a6.webp",
+      "c11b086b-d30d-4168-b168-946d3e060480.avif",
+      "ebc180fe-6795-400c-9c8a-c3c64e634f9d.avif"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true,
+    "contentTemplate": "article",
+    "fallbackPolicy": {
+      "iframe": "safe-external-link",
+      "video": "safe-external-link",
+      "poll": "static-question-options-with-vocus-link"
+    },
+    "editorialReviewNotes": [
+      "依正文核心主題完成語意校正"
+    ],
+    "previewApprovalStatus": "pending"
+  }
 }

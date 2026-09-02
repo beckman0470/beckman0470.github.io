@@ -1,0 +1,115 @@
+{
+  "id": "CDJ-20260722-018E56CF",
+  "title": "兩張雙人床  兩隻神奇寶貝的對戰舞台",
+  "slug": "vocus-20260722-018e56cf",
+  "series": "幸福點滴",
+  "category": "幸福點滴",
+  "published": "2026-07-22",
+  "updated": "2026-07-22",
+  "readingTime": 5,
+  "subtitle": "早睡計畫總是趕不上變化 21點上床變成上床玩耍",
+  "signature": "",
+  "people": [
+    "雞爸爸",
+    "鼠媽媽",
+    "鼠姊姊",
+    "龍弟弟"
+  ],
+  "relationship": [
+    "鼠媽媽的家庭成長故事"
+  ],
+  "tags": [
+    "雞爸爸生活研究室",
+    "雞爸爸",
+    "鼠姊姊",
+    "龍弟弟",
+    "鼠媽媽",
+    "姊姊",
+    "弟弟",
+    "爸爸",
+    "媽媽",
+    "孩子"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "鼠媽媽的家庭成長故事"
+  ],
+  "cover": "assets/posts/vocus-20260722-018e56cf/875f5bb5-0d7c-46d4-a1e8-1cae7de34f26.avif",
+  "coverAlt": "兩張雙人床  兩隻神奇寶貝的對戰舞台｜圖片 1",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a602e6bfd897800018e56cf",
+    "sourceUrl": "https://vocus.cc/article/6a602e6bfd897800018e56cf",
+    "canonicalUrl": "https://vocus.cc/article/6a602e6bfd897800018e56cf",
+    "originalPublishedAt": "2026-07-22T12:55:50+08:00",
+    "originalUpdatedAtCandidate": "2026-07-22T14:39:23+08:00",
+    "bodySha256": "c99fb9bd5b5b28a5d2c454fafbd3ddc9c9251d9b4df8688ce7dff191ac6daa71",
+    "markdownSha256": "81d0301e4b2f7226acc10f1f62625a75541c9eb9aac65ccf7dc72eb9d5a010c6",
+    "mappingStatus": "proposed-high-confidence",
+    "categoryProposal": {
+      "primary": "家庭誌",
+      "secondary": [],
+      "confidence": 0.98,
+      "needsReview": false,
+      "reason": "關鍵詞：鼠姊姊、龍弟弟、鼠媽媽、姊姊、弟弟、爸爸",
+      "scores": {
+        "保健室": 0,
+        "風格誌": 0,
+        "圖書室": 1,
+        "光影誌": 0,
+        "家庭誌": 14
+      },
+      "hits": [
+        "鼠姊姊",
+        "龍弟弟",
+        "鼠媽媽",
+        "姊姊",
+        "弟弟",
+        "爸爸",
+        "媽媽",
+        "孩子"
+      ]
+    },
+    "seriesProposal": "幸福點滴",
+    "relationshipProposals": [
+      "鼠媽媽的家庭成長故事"
+    ],
+    "timelineProposal": {
+      "date": "2026-07-22",
+      "type": "publication",
+      "label": "兩張雙人床  兩隻神奇寶貝的對戰舞台",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/875f5bb5-0d7c-46d4-a1e8-1cae7de34f26.png",
+        "file": "assets/posts/vocus-20260722-018e56cf/875f5bb5-0d7c-46d4-a1e8-1cae7de34f26.avif",
+        "alt": "兩張雙人床  兩隻神奇寶貝的對戰舞台｜圖片 1",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/44adad71-586d-45c8-889d-81b50a8b924a.png",
+        "file": "assets/posts/vocus-20260722-018e56cf/44adad71-586d-45c8-889d-81b50a8b924a.avif",
+        "alt": "兩張雙人床  兩隻神奇寶貝的對戰舞台｜圖片 2",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/f19390a2-6e47-435f-8d56-eda697c3ae77.png",
+        "file": "assets/posts/vocus-20260722-018e56cf/f19390a2-6e47-435f-8d56-eda697c3ae77.webp",
+        "alt": "兩張雙人床  兩隻神奇寶貝的對戰舞台｜圖片 3",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "44adad71-586d-45c8-889d-81b50a8b924a.avif",
+      "875f5bb5-0d7c-46d4-a1e8-1cae7de34f26.avif",
+      "f19390a2-6e47-435f-8d56-eda697c3ae77.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true
+  }
+}

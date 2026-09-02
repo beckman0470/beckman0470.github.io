@@ -1,0 +1,124 @@
+{
+  "id": "CDJ-20260608-01C0B739",
+  "title": "該當追夢人還是藤原拓海呢？",
+  "slug": "vocus-20260608-01c0b739",
+  "series": "幸福點滴",
+  "category": "幸福點滴",
+  "published": "2026-06-08",
+  "updated": "2026-06-08",
+  "readingTime": 1,
+  "subtitle": "喜歡車車的龍弟弟，",
+  "signature": "",
+  "people": [
+    "龍弟弟"
+  ],
+  "relationship": [
+    "龍弟弟的家庭成長故事"
+  ],
+  "tags": [
+    "龍弟弟",
+    "藤原拓海",
+    "追夢人",
+    "弟弟"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "龍弟弟的家庭成長故事"
+  ],
+  "cover": "assets/posts/vocus-20260608-01c0b739/58158438-a8d9-46c2-9060-60d50c69ed61.webp",
+  "coverAlt": "src",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "post",
+    "sourceId": "6a26db4ffd89780001c0b739",
+    "sourceUrl": "https://vocus.cc/post/6a26db4ffd89780001c0b739",
+    "canonicalUrl": "https://vocus.cc/post/6a26db4ffd89780001c0b739",
+    "originalPublishedAt": "2026-06-08T23:10:07+08:00",
+    "originalUpdatedAtCandidate": "2026-06-08T23:10:07+08:00",
+    "bodySha256": "83176c363581b7c5fb0c3736de76585a65f90ddbc574706fc51131aec9050dc1",
+    "markdownSha256": "04aad35cf8d2b2324344df1a407297eabf16642fd2ebe99419668c186ae5fce1",
+    "mappingStatus": "resolved-pending-preview-approval",
+    "categoryProposal": {
+      "primary": "家庭誌",
+      "secondary": [],
+      "confidence": 1.0,
+      "needsReview": false,
+      "reason": "semantic editorial review",
+      "scores": {
+        "保健室": 0,
+        "風格誌": 0,
+        "圖書室": 0,
+        "光影誌": 0,
+        "家庭誌": 6
+      },
+      "hits": [
+        "龍弟弟",
+        "弟弟"
+      ]
+    },
+    "seriesProposal": "幸福點滴",
+    "relationshipProposals": [
+      "龍弟弟的家庭成長故事"
+    ],
+    "timelineProposal": {
+      "date": "2026-06-08",
+      "type": "publication",
+      "label": "該當追夢人還是藤原拓海呢？",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/58158438-a8d9-46c2-9060-60d50c69ed61.jpg",
+        "file": "assets/posts/vocus-20260608-01c0b739/58158438-a8d9-46c2-9060-60d50c69ed61.webp",
+        "alt": "src",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/12dcd0e0-7a9a-4548-9bd3-535f65a8fc8b.jpg",
+        "file": "assets/posts/vocus-20260608-01c0b739/12dcd0e0-7a9a-4548-9bd3-535f65a8fc8b.webp",
+        "alt": "src",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/2e36438f-9300-4598-8e2f-dace7462a992.jpg",
+        "file": "assets/posts/vocus-20260608-01c0b739/2e36438f-9300-4598-8e2f-dace7462a992.webp",
+        "alt": "src",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/913d0272-7963-48e3-b79f-abc7ce3379f9.jpg",
+        "file": "assets/posts/vocus-20260608-01c0b739/913d0272-7963-48e3-b79f-abc7ce3379f9.webp",
+        "alt": "src",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/1b1880d1-18c8-48c8-94d8-97909bcae33c.jpg",
+        "file": "assets/posts/vocus-20260608-01c0b739/1b1880d1-18c8-48c8-94d8-97909bcae33c.webp",
+        "alt": "src",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "12dcd0e0-7a9a-4548-9bd3-535f65a8fc8b.webp",
+      "1b1880d1-18c8-48c8-94d8-97909bcae33c.webp",
+      "2e36438f-9300-4598-8e2f-dace7462a992.webp",
+      "58158438-a8d9-46c2-9060-60d50c69ed61.webp",
+      "913d0272-7963-48e3-b79f-abc7ce3379f9.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true,
+    "contentTemplate": "compact",
+    "fallbackPolicy": {
+      "iframe": "safe-external-link",
+      "video": "safe-external-link",
+      "poll": "static-question-options-with-vocus-link"
+    },
+    "editorialReviewNotes": [
+      "採 compact template；仍納入時間軸、人物與標籤"
+    ],
+    "previewApprovalStatus": "pending"
+  }
+}

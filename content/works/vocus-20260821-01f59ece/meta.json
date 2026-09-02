@@ -1,0 +1,95 @@
+{
+  "id": "CDJ-20260821-01F59ECE",
+  "title": "見鬼啦！1勝5敗還能晉級？以前瓊斯盃被笑「自爽盃」，今年直接開金手指...",
+  "slug": "vocus-20260821-01f59ece",
+  "series": "生活研究",
+  "category": "生活研究",
+  "published": "2026-08-21",
+  "updated": "2026-08-21",
+  "readingTime": 9,
+  "subtitle": "從鄭志龍、東方介德、羅興樑，到林志傑與戴維斯，從小陪雞爸爸長大的瓊斯盃怎麼了：這盃賽到底為了什麼而存在？",
+  "signature": "",
+  "people": [
+    "雞爸爸"
+  ],
+  "relationship": [
+    "雞爸爸的棒球觀察"
+  ],
+  "tags": [
+    "雞爸爸生活研究室",
+    "雞爸爸",
+    "中華隊",
+    "瓊斯盃"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "雞爸爸的棒球觀察"
+  ],
+  "cover": "assets/posts/vocus-20260821-01f59ece/3ccf47c1-5e16-45d9-962c-62e17c0630c1.webp",
+  "coverAlt": "見鬼啦！1勝5敗還能晉級？以前瓊斯盃被笑「自爽盃」，今年直接開金手指...｜圖片 1",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a87f556fd89780001f59ece",
+    "sourceUrl": "https://vocus.cc/article/6a87f556fd89780001f59ece",
+    "canonicalUrl": "https://vocus.cc/article/6a87f556fd89780001f59ece",
+    "originalPublishedAt": "2026-08-21T16:27:05+08:00",
+    "originalUpdatedAtCandidate": "2026-08-21T16:38:31+08:00",
+    "bodySha256": "cd76dbcf752d83e97d15e3e508716dfd6991126dc5e43fdb8b100ea6c63bd6dd",
+    "markdownSha256": "3126b09107cbf89e3fd8db3fc5c2ecdbd16ea9a216cd06c8e46cf921c2b99b79",
+    "mappingStatus": "resolved-pending-preview-approval",
+    "categoryProposal": {
+      "primary": "風格誌",
+      "secondary": [],
+      "confidence": 1.0,
+      "needsReview": false,
+      "reason": "semantic editorial review",
+      "scores": {
+        "保健室": 0,
+        "風格誌": 4,
+        "圖書室": 0,
+        "光影誌": 1,
+        "家庭誌": 4
+      },
+      "hits": [
+        "瓊斯盃"
+      ]
+    },
+    "seriesProposal": "生活研究",
+    "relationshipProposals": [
+      "雞爸爸的棒球觀察"
+    ],
+    "timelineProposal": {
+      "date": "2026-08-21",
+      "type": "publication",
+      "label": "見鬼啦！1勝5敗還能晉級？以前瓊斯盃被笑「自爽盃」，今年直接開金手指...",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/3ccf47c1-5e16-45d9-962c-62e17c0630c1.png",
+        "file": "assets/posts/vocus-20260821-01f59ece/3ccf47c1-5e16-45d9-962c-62e17c0630c1.webp",
+        "alt": "見鬼啦！1勝5敗還能晉級？以前瓊斯盃被笑「自爽盃」，今年直接開金手指...｜圖片 1",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "3ccf47c1-5e16-45d9-962c-62e17c0630c1.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true,
+    "contentTemplate": "article",
+    "fallbackPolicy": {
+      "iframe": "safe-external-link",
+      "video": "safe-external-link",
+      "poll": "static-question-options-with-vocus-link"
+    },
+    "editorialReviewNotes": [
+      "依正文核心主題完成語意校正"
+    ],
+    "previewApprovalStatus": "pending"
+  }
+}

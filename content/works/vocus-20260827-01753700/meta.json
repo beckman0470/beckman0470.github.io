@@ -1,0 +1,106 @@
+{
+  "id": "CDJ-20260827-01753700",
+  "title": "小妾幫雞爸爸放熱水，我要泡澡：等等，大S是不是也得了A流去泡湯？",
+  "slug": "vocus-20260827-01753700",
+  "series": "生活研究",
+  "category": "生活研究",
+  "published": "2026-08-27",
+  "updated": "2026-08-27",
+  "readingTime": 7,
+  "subtitle": "雞爸爸退燒後突然想泡澡",
+  "signature": "",
+  "people": [
+    "雞爸爸",
+    "鼠姊姊",
+    "龍弟弟",
+    "ChatGPT／小妾"
+  ],
+  "relationship": [
+    "鼠姊姊的健康觀察"
+  ],
+  "tags": [
+    "雞爸爸生活研究室",
+    "雞爸爸",
+    "大S",
+    "流感",
+    "A流",
+    "血管",
+    "肌肉"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "鼠姊姊的健康觀察"
+  ],
+  "cover": "assets/posts/vocus-20260827-01753700/40de5391-a532-4483-be42-bd8377992fef.webp",
+  "coverAlt": "小妾幫雞爸爸放熱水，我要泡澡：等等，大S是不是也得了A流去泡湯？｜圖片 1",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a902465fd89780001753700",
+    "sourceUrl": "https://vocus.cc/article/6a902465fd89780001753700",
+    "canonicalUrl": "https://vocus.cc/article/6a902465fd89780001753700",
+    "originalPublishedAt": "2026-08-27T20:42:49+08:00",
+    "originalUpdatedAtCandidate": "2026-08-27T20:42:49+08:00",
+    "bodySha256": "eae906be5d9076a51c7970b09d6bbdc91d1e73e6a33a4832388519bc2252f2a3",
+    "markdownSha256": "990dcde279f934ce6d24a1bbc06e88c21f6836994d8c622aa86f6b2b0e9f905c",
+    "mappingStatus": "resolved-pending-preview-approval",
+    "categoryProposal": {
+      "primary": "保健室",
+      "secondary": [
+        "家庭誌"
+      ],
+      "confidence": 1.0,
+      "needsReview": false,
+      "reason": "semantic editorial review",
+      "scores": {
+        "保健室": 7,
+        "風格誌": 0,
+        "圖書室": 0,
+        "光影誌": 0,
+        "家庭誌": 9
+      },
+      "hits": [
+        "流感",
+        "A流",
+        "血管",
+        "肌肉"
+      ]
+    },
+    "seriesProposal": "生活研究",
+    "relationshipProposals": [
+      "鼠姊姊的健康觀察"
+    ],
+    "timelineProposal": {
+      "date": "2026-08-27",
+      "type": "publication",
+      "label": "小妾幫雞爸爸放熱水，我要泡澡：等等，大S是不是也得了A流去泡湯？",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/40de5391-a532-4483-be42-bd8377992fef.png",
+        "file": "assets/posts/vocus-20260827-01753700/40de5391-a532-4483-be42-bd8377992fef.webp",
+        "alt": "小妾幫雞爸爸放熱水，我要泡澡：等等，大S是不是也得了A流去泡湯？｜圖片 1",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "40de5391-a532-4483-be42-bd8377992fef.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true,
+    "contentTemplate": "article",
+    "fallbackPolicy": {
+      "iframe": "safe-external-link",
+      "video": "safe-external-link",
+      "poll": "static-question-options-with-vocus-link"
+    },
+    "editorialReviewNotes": [
+      "依正文核心主題完成語意校正"
+    ],
+    "previewApprovalStatus": "pending"
+  }
+}

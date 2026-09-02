@@ -1,0 +1,118 @@
+{
+  "id": "CDJ-20260829-01E7D771",
+  "title": "《陽光女子合唱團》：父母以為給的是愛，孩子收到的卻可能是另一種東西",
+  "slug": "vocus-20260829-01e7d771",
+  "series": "幸福點滴",
+  "category": "幸福點滴",
+  "published": "2026-08-29",
+  "updated": "2026-08-29",
+  "readingTime": 11,
+  "subtitle": "電影裡的小女孩和鼠姊姊一樣有弱視，鼠媽媽從頭哭到尾。看到最後才發現，真正讓人難過的不是離別，而是有些親子之間的遺憾，等到彼此終於看懂的時候，早已無力回天。",
+  "signature": "",
+  "people": [
+    "雞爸爸",
+    "鼠媽媽",
+    "鼠姊姊"
+  ],
+  "relationship": [
+    "鼠媽媽的家庭成長故事"
+  ],
+  "tags": [
+    "雞爸爸生活研究室",
+    "雞爸爸",
+    "鼠媽媽",
+    "鼠姊姊",
+    "姊姊",
+    "弟弟",
+    "爸媽",
+    "父母",
+    "爸爸",
+    "媽媽"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "鼠媽媽的家庭成長故事"
+  ],
+  "cover": "assets/posts/vocus-20260829-01e7d771/b01ca1e4-a6f2-432e-99e7-fd04194c38a0.webp",
+  "coverAlt": "《陽光女子合唱團》：父母以為給的是愛，孩子收到的卻可能是另一種東西｜圖片 1",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a926dd5fd89780001e7d771",
+    "sourceUrl": "https://vocus.cc/article/6a926dd5fd89780001e7d771",
+    "canonicalUrl": "https://vocus.cc/article/6a926dd5fd89780001e7d771",
+    "originalPublishedAt": "2026-08-29T14:02:56+08:00",
+    "originalUpdatedAtCandidate": "2026-08-29T14:02:57+08:00",
+    "bodySha256": "c74a2ca87207395bca80b0ca425cd85017aeefaec8cc6d3c6b9ff2c12e4ea9a8",
+    "markdownSha256": "69d35d9d0c90d27bf0018216a2ebf00a69aa7cdf58e48e80f5283015f6d8563a",
+    "mappingStatus": "resolved-pending-preview-approval",
+    "categoryProposal": {
+      "primary": "家庭誌",
+      "secondary": [],
+      "confidence": 1.0,
+      "needsReview": false,
+      "reason": "semantic editorial review",
+      "scores": {
+        "保健室": 1,
+        "風格誌": 0,
+        "圖書室": 1,
+        "光影誌": 1,
+        "家庭誌": 23
+      },
+      "hits": [
+        "鼠姊姊",
+        "鼠媽媽",
+        "姊姊",
+        "弟弟",
+        "爸媽",
+        "父母",
+        "爸爸",
+        "媽媽",
+        "孩子",
+        "家庭",
+        "親子"
+      ]
+    },
+    "seriesProposal": "幸福點滴",
+    "relationshipProposals": [
+      "鼠媽媽的家庭成長故事"
+    ],
+    "timelineProposal": {
+      "date": "2026-08-29",
+      "type": "publication",
+      "label": "《陽光女子合唱團》：父母以為給的是愛，孩子收到的卻可能是另一種東西",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/b01ca1e4-a6f2-432e-99e7-fd04194c38a0.png",
+        "file": "assets/posts/vocus-20260829-01e7d771/b01ca1e4-a6f2-432e-99e7-fd04194c38a0.webp",
+        "alt": "《陽光女子合唱團》：父母以為給的是愛，孩子收到的卻可能是另一種東西｜圖片 1",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "b01ca1e4-a6f2-432e-99e7-fd04194c38a0.webp"
+    ],
+    "interactiveKinds": [
+      "iframe"
+    ],
+    "embedUrls": [
+      "https://www.youtube-nocookie.com/embed/WkWkGrcyCzw",
+      "https://www.youtube-nocookie.com/embed/jeRu6h4XbUU"
+    ],
+    "doNotPublishUntilApproved": true,
+    "contentTemplate": "article",
+    "fallbackPolicy": {
+      "iframe": "safe-external-link",
+      "video": "safe-external-link",
+      "poll": "static-question-options-with-vocus-link"
+    },
+    "editorialReviewNotes": [
+      "影音改為安全外連；投票保留問題與選項並連回 Vocus"
+    ],
+    "previewApprovalStatus": "pending"
+  }
+}

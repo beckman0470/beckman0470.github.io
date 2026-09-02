@@ -1,0 +1,116 @@
+{
+  "id": "CDJ-20260715-01396ED9",
+  "title": "骨頭也需要一點空間：雞爸爸第一次被「整」",
+  "slug": "vocus-20260715-01396ed9",
+  "series": "幸福點滴",
+  "category": "幸福點滴",
+  "published": "2026-07-15",
+  "updated": "2026-07-15",
+  "readingTime": 7,
+  "subtitle": "從腳掌一路整到頭部，原來筋骨要鬆開，脊椎才有重新調整的空間",
+  "signature": "",
+  "people": [
+    "雞爸爸",
+    "鼠媽媽",
+    "鼠姊姊",
+    "龍弟弟"
+  ],
+  "relationship": [
+    "鼠媽媽的家庭成長故事"
+  ],
+  "tags": [
+    "雞爸爸",
+    "整脊",
+    "整脊推拿",
+    "鼠姊姊",
+    "龍弟弟",
+    "鼠媽媽",
+    "姊姊",
+    "弟弟",
+    "爸爸",
+    "媽媽",
+    "家庭"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "鼠媽媽的家庭成長故事"
+  ],
+  "cover": "assets/posts/vocus-20260715-01396ed9/a2d1ada8-5700-43df-a038-57f8931b75c4.webp",
+  "coverAlt": "骨頭也需要一點空間：雞爸爸第一次被「整」｜圖片 1",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a56ee89fd89780001396ed9",
+    "sourceUrl": "https://vocus.cc/article/6a56ee89fd89780001396ed9",
+    "canonicalUrl": "https://vocus.cc/article/6a56ee89fd89780001396ed9",
+    "originalPublishedAt": "2026-07-15T10:59:38+08:00",
+    "originalUpdatedAtCandidate": "2026-07-15T10:59:39+08:00",
+    "bodySha256": "60ca8660485afd526f8558f46a93a82216a9a2b107944f3563e90ffbc782ed8b",
+    "markdownSha256": "ba847c251f76a5ff916d29bd07c719ca5a9a8b472494bbdf32276d2c30634dfb",
+    "mappingStatus": "proposed-high-confidence",
+    "categoryProposal": {
+      "primary": "家庭誌",
+      "secondary": [],
+      "confidence": 0.98,
+      "needsReview": false,
+      "reason": "關鍵詞：鼠姊姊、龍弟弟、鼠媽媽、姊姊、弟弟、爸爸",
+      "scores": {
+        "保健室": 6,
+        "風格誌": 0,
+        "圖書室": 1,
+        "光影誌": 0,
+        "家庭誌": 11
+      },
+      "hits": [
+        "鼠姊姊",
+        "龍弟弟",
+        "鼠媽媽",
+        "姊姊",
+        "弟弟",
+        "爸爸",
+        "媽媽",
+        "家庭"
+      ]
+    },
+    "seriesProposal": "幸福點滴",
+    "relationshipProposals": [
+      "鼠媽媽的家庭成長故事"
+    ],
+    "timelineProposal": {
+      "date": "2026-07-15",
+      "type": "publication",
+      "label": "骨頭也需要一點空間：雞爸爸第一次被「整」",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/a2d1ada8-5700-43df-a038-57f8931b75c4.png",
+        "file": "assets/posts/vocus-20260715-01396ed9/a2d1ada8-5700-43df-a038-57f8931b75c4.webp",
+        "alt": "骨頭也需要一點空間：雞爸爸第一次被「整」｜圖片 1",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/c72ce950-122a-420c-bb1e-3728a601679f.png",
+        "file": "assets/posts/vocus-20260715-01396ed9/c72ce950-122a-420c-bb1e-3728a601679f.avif",
+        "alt": "雞爸爸被整的小筆記",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/d412144d-1b4b-45c9-99ac-35684cb0db5a.png",
+        "file": "assets/posts/vocus-20260715-01396ed9/d412144d-1b4b-45c9-99ac-35684cb0db5a.avif",
+        "alt": "骨頭也需要一點空間：雞爸爸第一次被「整」｜圖片 3",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "a2d1ada8-5700-43df-a038-57f8931b75c4.webp",
+      "c72ce950-122a-420c-bb1e-3728a601679f.avif",
+      "d412144d-1b4b-45c9-99ac-35684cb0db5a.avif"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true
+  }
+}

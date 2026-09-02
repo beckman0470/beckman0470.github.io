@@ -43,5 +43,66 @@
   ],
   "cover": "assets/story-covers/default.svg",
   "coverAlt": "畫冊上的那隻手，把想媽媽變成鼠姊姊可以握住的勇氣｜雞爸爸生活研究室代表插圖",
-  "coverStatus": "placeholder"
+  "coverStatus": "placeholder",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a4b4f01fd89780001f9bc90",
+    "sourceUrl": "https://vocus.cc/article/6a4b4f01fd89780001f9bc90",
+    "canonicalUrl": "https://vocus.cc/article/6a4b4f01fd89780001f9bc90",
+    "originalPublishedAt": "2026-07-06T15:54:03+08:00",
+    "originalUpdatedAtCandidate": "2026-07-06T17:58:24+08:00",
+    "bodySha256": "e7ac7a0caf88184d554c6473da2aa3a05c2ea2e88cd62748b34c01ae7c3fffa2",
+    "markdownSha256": "036b5ff2ade4498786391ac79064ec1eb2b900f9c9c169ec4981eb177c028fea",
+    "mappingStatus": "proposed-high-confidence",
+    "categoryProposal": {
+      "primary": "家庭誌",
+      "secondary": [],
+      "confidence": 0.98,
+      "needsReview": false,
+      "reason": "關鍵詞：鼠姊姊、鼠媽媽、姊姊、父母、爸爸、媽媽",
+      "scores": {
+        "保健室": 3,
+        "風格誌": 0,
+        "圖書室": 0,
+        "光影誌": 0,
+        "家庭誌": 18
+      },
+      "hits": [
+        "鼠姊姊",
+        "鼠媽媽",
+        "姊姊",
+        "父母",
+        "爸爸",
+        "媽媽",
+        "孩子",
+        "親子",
+        "幼兒園"
+      ]
+    },
+    "seriesProposal": "幸福點滴",
+    "relationshipProposals": [
+      "鼠姊姊 × 想媽媽時的勇氣與善良"
+    ],
+    "timelineProposal": {
+      "date": "2026-07-06",
+      "type": "publication",
+      "label": "畫冊上的那隻手，把想媽媽變成鼠姊姊可以握住的勇氣",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/723cbec0-1459-4bc2-9eb3-365b1314dfff.png",
+        "file": "assets/posts/picture-book-hand-courage/723cbec0-1459-4bc2-9eb3-365b1314dfff.avif",
+        "alt": "畫冊上的那隻手，把想媽媽變成鼠姊姊可以握住的勇氣｜圖片 1",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "723cbec0-1459-4bc2-9eb3-365b1314dfff.avif"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true
+  }
 }

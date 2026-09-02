@@ -1,0 +1,106 @@
+{
+  "id": "CDJ-20260825-011D3DD7",
+  "title": "感謝四篇方格精選：原來雞爸爸的生活點滴，滴雞精還是有被看見...",
+  "slug": "vocus-20260825-011d3dd7",
+  "series": "幸福點滴",
+  "category": "幸福點滴",
+  "published": "2026-08-25",
+  "updated": "2026-08-25",
+  "readingTime": 7,
+  "subtitle": "從七夕寫給鼠媽媽的情書、寫作三個月的自我介紹，到44歲開始重新讀懂自己的血管。雞爸爸原本只是把生活記下來，沒想到這個月，有四段生活點滴被方格子看見...",
+  "signature": "",
+  "people": [
+    "雞爸爸",
+    "鼠媽媽",
+    "鼠姊姊",
+    "龍弟弟",
+    "兔阿嬤"
+  ],
+  "relationship": [
+    "鼠媽媽的家庭成長故事"
+  ],
+  "tags": [
+    "雞爸爸生活研究室",
+    "方格子",
+    "方格精選",
+    "鼠姊姊",
+    "龍弟弟",
+    "鼠媽媽",
+    "兔阿嬤",
+    "姊姊",
+    "弟弟",
+    "爸爸",
+    "媽媽"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "鼠媽媽的家庭成長故事"
+  ],
+  "cover": "assets/posts/vocus-20260825-011d3dd7/90d1affe-fc52-49b9-8598-f71f354b6190.webp",
+  "coverAlt": "感謝四篇方格精選：原來雞爸爸的生活點滴，滴雞精還是有被看見...｜圖片 1",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a8d6165fd897800011d3dd7",
+    "sourceUrl": "https://vocus.cc/article/6a8d6165fd897800011d3dd7",
+    "canonicalUrl": "https://vocus.cc/article/6a8d6165fd897800011d3dd7",
+    "originalPublishedAt": "2026-08-25T18:06:42+08:00",
+    "originalUpdatedAtCandidate": "2026-08-25T18:06:45+08:00",
+    "bodySha256": "7cc4eb5115f333918b5d409230579ef936147f7c3eacf9746187bb4b006d2bc6",
+    "markdownSha256": "c38a102aa25a66050c35282ba703eaf51156a40bbe1eb2bbab27cbd5ce4bd616",
+    "mappingStatus": "proposed-high-confidence",
+    "categoryProposal": {
+      "primary": "家庭誌",
+      "secondary": [],
+      "confidence": 0.98,
+      "needsReview": false,
+      "reason": "關鍵詞：鼠姊姊、龍弟弟、鼠媽媽、兔阿嬤、姊姊、弟弟",
+      "scores": {
+        "保健室": 5,
+        "風格誌": 1,
+        "圖書室": 1,
+        "光影誌": 0,
+        "家庭誌": 14
+      },
+      "hits": [
+        "鼠姊姊",
+        "龍弟弟",
+        "鼠媽媽",
+        "兔阿嬤",
+        "姊姊",
+        "弟弟",
+        "爸爸",
+        "媽媽",
+        "孩子",
+        "家庭",
+        "親子"
+      ]
+    },
+    "seriesProposal": "幸福點滴",
+    "relationshipProposals": [
+      "鼠媽媽的家庭成長故事"
+    ],
+    "timelineProposal": {
+      "date": "2026-08-25",
+      "type": "publication",
+      "label": "感謝四篇方格精選：原來雞爸爸的生活點滴，滴雞精還是有被看見...",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/90d1affe-fc52-49b9-8598-f71f354b6190.png",
+        "file": "assets/posts/vocus-20260825-011d3dd7/90d1affe-fc52-49b9-8598-f71f354b6190.webp",
+        "alt": "感謝四篇方格精選：原來雞爸爸的生活點滴，滴雞精還是有被看見...｜圖片 1",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "90d1affe-fc52-49b9-8598-f71f354b6190.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true
+  }
+}

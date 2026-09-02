@@ -1,0 +1,104 @@
+{
+  "id": "CDJ-20260825-01170BCC",
+  "title": "第一次逛台隆手創館：明明是鼠媽媽的低成本快樂，最後卻買成了養生館？",
+  "slug": "vocus-20260825-01170bcc",
+  "series": "幸福點滴",
+  "category": "幸福點滴",
+  "published": "2026-08-25",
+  "updated": "2026-08-25",
+  "readingTime": 7,
+  "subtitle": "鼠媽媽想買個眼罩，順便看看金針按摩梳，結果第一次進台隆手創館的雞爸爸，從頭買到腳。回家後兔阿嬤還認證：「不錯用！」雞爸爸想了很久，這低成本...只能用CP值來看...",
+  "signature": "",
+  "people": [
+    "雞爸爸",
+    "鼠媽媽",
+    "鼠姊姊",
+    "龍弟弟",
+    "兔阿嬤"
+  ],
+  "relationship": [
+    "鼠媽媽的家庭成長故事"
+  ],
+  "tags": [
+    "雞爸爸生活研究室",
+    "雞爸爸",
+    "鼠媽媽",
+    "鼠姊姊",
+    "龍弟弟",
+    "兔阿嬤",
+    "姊姊",
+    "弟弟",
+    "爸爸",
+    "媽媽"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "鼠媽媽的家庭成長故事"
+  ],
+  "cover": "assets/posts/vocus-20260825-01170bcc/aa15c80e-9951-4ffa-99e0-c8012a2a77f3.webp",
+  "coverAlt": "第一次逛台隆手創館：明明是鼠媽媽的低成本快樂，最後卻買成了養生館？｜圖片 1",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a8d4b6efd89780001170bcc",
+    "sourceUrl": "https://vocus.cc/article/6a8d4b6efd89780001170bcc",
+    "canonicalUrl": "https://vocus.cc/article/6a8d4b6efd89780001170bcc",
+    "originalPublishedAt": "2026-08-25T17:15:03+08:00",
+    "originalUpdatedAtCandidate": "2026-08-25T17:15:32+08:00",
+    "bodySha256": "6698ca6f5f8efc7d2ea2d9686c22b68fb51073387cfc72d27a1f012a3e11675a",
+    "markdownSha256": "85db121d34ccc4771865e7bfd124b812c4ca067a00d727be800408b272b0cd16",
+    "mappingStatus": "proposed-high-confidence",
+    "categoryProposal": {
+      "primary": "家庭誌",
+      "secondary": [],
+      "confidence": 0.98,
+      "needsReview": false,
+      "reason": "關鍵詞：鼠姊姊、龍弟弟、鼠媽媽、兔阿嬤、姊姊、弟弟",
+      "scores": {
+        "保健室": 1,
+        "風格誌": 0,
+        "圖書室": 1,
+        "光影誌": 0,
+        "家庭誌": 18
+      },
+      "hits": [
+        "鼠姊姊",
+        "龍弟弟",
+        "鼠媽媽",
+        "兔阿嬤",
+        "姊姊",
+        "弟弟",
+        "爸爸",
+        "媽媽",
+        "孩子",
+        "家庭"
+      ]
+    },
+    "seriesProposal": "幸福點滴",
+    "relationshipProposals": [
+      "鼠媽媽的家庭成長故事"
+    ],
+    "timelineProposal": {
+      "date": "2026-08-25",
+      "type": "publication",
+      "label": "第一次逛台隆手創館：明明是鼠媽媽的低成本快樂，最後卻買成了養生館？",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/aa15c80e-9951-4ffa-99e0-c8012a2a77f3.png",
+        "file": "assets/posts/vocus-20260825-01170bcc/aa15c80e-9951-4ffa-99e0-c8012a2a77f3.webp",
+        "alt": "第一次逛台隆手創館：明明是鼠媽媽的低成本快樂，最後卻買成了養生館？｜圖片 1",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "aa15c80e-9951-4ffa-99e0-c8012a2a77f3.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true
+  }
+}

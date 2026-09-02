@@ -1,0 +1,91 @@
+{
+  "id": "CDJ-20260530-01EF727B",
+  "title": "大谷翔平真二刀流的MVP賽季，正朝著15勝15轟前進",
+  "slug": "vocus-20260530-01ef727b",
+  "series": "棒球札記",
+  "category": "棒球札記",
+  "published": "2026-05-30",
+  "updated": "2026-06-01",
+  "readingTime": 5,
+  "subtitle": "這賽季正在告訴全世界 又低估大谷了",
+  "signature": "",
+  "people": [],
+  "relationship": [
+    "雞爸爸的棒球觀察"
+  ],
+  "tags": [
+    "大谷",
+    "翔平",
+    "賽揚獎",
+    "棒球",
+    "投手",
+    "打線",
+    "MVP",
+    "大谷翔平"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "雞爸爸的棒球觀察"
+  ],
+  "cover": "assets/posts/vocus-20260530-01ef727b/d5bb2622-e226-4882-bb05-6d8de27f52be.webp",
+  "coverAlt": "大谷翔平真二刀流的MVP賽季，正朝著15勝15轟前進｜圖片 1",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a1a58e8fd89780001ef727b",
+    "sourceUrl": "https://vocus.cc/article/6a1a58e8fd89780001ef727b",
+    "canonicalUrl": "https://vocus.cc/article/6a1a58e8fd89780001ef727b",
+    "originalPublishedAt": "2026-05-30T12:01:20+08:00",
+    "originalUpdatedAtCandidate": "2026-06-01T15:50:38+08:00",
+    "bodySha256": "1e5e4fe47097d3a5ab71437bf7d100da3e9548cc852ebeb163faf41a396a6b1b",
+    "markdownSha256": "8cf0555a0007fd7ec0e78d8f0af71825d60f3569f575bd505b22860e50023683",
+    "mappingStatus": "proposed-high-confidence",
+    "categoryProposal": {
+      "primary": "風格誌",
+      "secondary": [],
+      "confidence": 0.98,
+      "needsReview": false,
+      "reason": "關鍵詞：棒球、投手、打線、MVP、大谷翔平",
+      "scores": {
+        "保健室": 0,
+        "風格誌": 11,
+        "圖書室": 0,
+        "光影誌": 0,
+        "家庭誌": 0
+      },
+      "hits": [
+        "棒球",
+        "投手",
+        "打線",
+        "MVP",
+        "大谷翔平"
+      ]
+    },
+    "seriesProposal": "棒球札記",
+    "relationshipProposals": [
+      "雞爸爸的棒球觀察"
+    ],
+    "timelineProposal": {
+      "date": "2026-05-30",
+      "type": "publication",
+      "label": "大谷翔平真二刀流的MVP賽季，正朝著15勝15轟前進",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/d5bb2622-e226-4882-bb05-6d8de27f52be.jpg",
+        "file": "assets/posts/vocus-20260530-01ef727b/d5bb2622-e226-4882-bb05-6d8de27f52be.webp",
+        "alt": "大谷翔平真二刀流的MVP賽季，正朝著15勝15轟前進｜圖片 1",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "d5bb2622-e226-4882-bb05-6d8de27f52be.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true
+  }
+}

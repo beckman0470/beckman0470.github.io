@@ -1,0 +1,125 @@
+{
+  "id": "CDJ-20260720-019B648A",
+  "title": "被卡通烏雲追著跑 淡江大橋奇遇記",
+  "slug": "vocus-20260720-019b648a",
+  "series": "幸福點滴",
+  "category": "幸福點滴",
+  "published": "2026-07-20",
+  "updated": "2026-07-30",
+  "readingTime": 6,
+  "subtitle": "泳池旁接到兔姑姑手機：「難得今天天氣這麼好，你們先吃午餐，等等再回覆我們。」",
+  "signature": "",
+  "people": [
+    "雞爸爸",
+    "鼠媽媽",
+    "鼠姊姊",
+    "龍弟弟",
+    "兔阿嬤"
+  ],
+  "relationship": [
+    "鼠媽媽的家庭成長故事"
+  ],
+  "tags": [
+    "雞爸爸生活研究室",
+    "雞爸爸",
+    "兔阿嬤",
+    "鼠姊姊",
+    "龍弟弟",
+    "鼠媽媽",
+    "姊姊",
+    "弟弟",
+    "爸爸",
+    "媽媽"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "鼠媽媽的家庭成長故事"
+  ],
+  "cover": "assets/posts/vocus-20260720-019b648a/54ce8a74-f5f1-4ec8-938a-7a8230af3348.webp",
+  "coverAlt": "被卡通烏雲追著跑 淡江大橋奇遇記｜圖片 1",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a5dbf78fd897800019b648a",
+    "sourceUrl": "https://vocus.cc/article/6a5dbf78fd897800019b648a",
+    "canonicalUrl": "https://vocus.cc/article/6a5dbf78fd897800019b648a",
+    "originalPublishedAt": "2026-07-20T16:41:55+08:00",
+    "originalUpdatedAtCandidate": "2026-07-30T16:49:16+08:00",
+    "bodySha256": "1fd5b8e260917800595925c87b2a40c022aa3f2ca411693a6c5bf9678e681577",
+    "markdownSha256": "d731f6c99e33a2a9ebff8445ceedb1dd3260dbbea8bdc9e76ded62cdb6f03e60",
+    "mappingStatus": "proposed-high-confidence",
+    "categoryProposal": {
+      "primary": "家庭誌",
+      "secondary": [],
+      "confidence": 0.98,
+      "needsReview": false,
+      "reason": "關鍵詞：鼠姊姊、龍弟弟、鼠媽媽、兔阿嬤、姊姊、弟弟",
+      "scores": {
+        "保健室": 0,
+        "風格誌": 0,
+        "圖書室": 0,
+        "光影誌": 1,
+        "家庭誌": 14
+      },
+      "hits": [
+        "鼠姊姊",
+        "龍弟弟",
+        "鼠媽媽",
+        "兔阿嬤",
+        "姊姊",
+        "弟弟",
+        "爸爸",
+        "媽媽",
+        "孩子",
+        "親子"
+      ]
+    },
+    "seriesProposal": "幸福點滴",
+    "relationshipProposals": [
+      "鼠媽媽的家庭成長故事"
+    ],
+    "timelineProposal": {
+      "date": "2026-07-20",
+      "type": "publication",
+      "label": "被卡通烏雲追著跑 淡江大橋奇遇記",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/54ce8a74-f5f1-4ec8-938a-7a8230af3348.png",
+        "file": "assets/posts/vocus-20260720-019b648a/54ce8a74-f5f1-4ec8-938a-7a8230af3348.webp",
+        "alt": "被卡通烏雲追著跑 淡江大橋奇遇記｜圖片 1",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/c5e0cc30-0f84-4551-af3f-82bd0ede7db4.jpg",
+        "file": "assets/posts/vocus-20260720-019b648a/c5e0cc30-0f84-4551-af3f-82bd0ede7db4.webp",
+        "alt": "看到整個淡江大橋的地面全都是乾的，雞爸爸才相信兔姑姑真的沒有騙我",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/7ca5b80a-fa5d-42bb-99ed-478589751ab2.jpg",
+        "file": "assets/posts/vocus-20260720-019b648a/7ca5b80a-fa5d-42bb-99ed-478589751ab2.webp",
+        "alt": "左側的彩虹，手機拍不出來現場眼睛的感受",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/c2266427-4143-49c6-8e97-7ac8dc4c176a.jpg",
+        "file": "assets/posts/vocus-20260720-019b648a/c2266427-4143-49c6-8e97-7ac8dc4c176a.webp",
+        "alt": "親子餐廳的夜色，眺望著淡江大橋，雞爸爸一家也收穫滿滿的回憶",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "54ce8a74-f5f1-4ec8-938a-7a8230af3348.webp",
+      "7ca5b80a-fa5d-42bb-99ed-478589751ab2.webp",
+      "c2266427-4143-49c6-8e97-7ac8dc4c176a.webp",
+      "c5e0cc30-0f84-4551-af3f-82bd0ede7db4.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true
+  }
+}

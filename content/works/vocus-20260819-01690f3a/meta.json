@@ -1,0 +1,113 @@
+{
+  "id": "CDJ-20260819-01690F3A",
+  "title": "今年七夕不寫卡片了：Lucy，妳在哪裡？請收這篇情書",
+  "slug": "vocus-20260819-01690f3a",
+  "series": "幸福點滴",
+  "category": "幸福點滴",
+  "published": "2026-08-19",
+  "updated": "2026-08-19",
+  "readingTime": 10,
+  "subtitle": "鼠媽媽一直很喜歡收到雞爸爸寫的卡片。明明是金牛座，好像應該喜歡更實際的東西。",
+  "signature": "",
+  "people": [
+    "雞爸爸",
+    "鼠媽媽",
+    "鼠姊姊",
+    "龍弟弟"
+  ],
+  "relationship": [
+    "鼠媽媽的家庭成長故事"
+  ],
+  "tags": [
+    "雞爸爸生活研究室",
+    "雞爸爸",
+    "鼠媽媽",
+    "鼠姊姊",
+    "龍弟弟",
+    "右右",
+    "姊姊",
+    "弟弟",
+    "爸媽",
+    "父母"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "鼠媽媽的家庭成長故事"
+  ],
+  "cover": "assets/posts/vocus-20260819-01690f3a/8caabc57-3e16-48a8-986b-f49429b093bf.webp",
+  "coverAlt": "今年七夕不寫卡片了：Lucy，妳在哪裡？請收這篇情書｜圖片 1",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a857b00fd89780001690f3a",
+    "sourceUrl": "https://vocus.cc/article/6a857b00fd89780001690f3a",
+    "canonicalUrl": "https://vocus.cc/article/6a857b00fd89780001690f3a",
+    "originalPublishedAt": "2026-08-19T22:34:29+08:00",
+    "originalUpdatedAtCandidate": "2026-08-19T23:00:45+08:00",
+    "bodySha256": "93c046e04341fce4079a87b670f7b682b008a1bd6b64e9f6842537ad2084c3ec",
+    "markdownSha256": "b2b017123540d819fd730797cbcadabdd0ba39f870a0f717fea78529c5b99980",
+    "mappingStatus": "proposed-high-confidence",
+    "categoryProposal": {
+      "primary": "家庭誌",
+      "secondary": [],
+      "confidence": 0.98,
+      "needsReview": false,
+      "reason": "關鍵詞：鼠姊姊、龍弟弟、鼠媽媽、右右、姊姊、弟弟",
+      "scores": {
+        "保健室": 0,
+        "風格誌": 0,
+        "圖書室": 4,
+        "光影誌": 0,
+        "家庭誌": 19
+      },
+      "hits": [
+        "鼠姊姊",
+        "龍弟弟",
+        "鼠媽媽",
+        "右右",
+        "姊姊",
+        "弟弟",
+        "爸媽",
+        "父母",
+        "爸爸",
+        "媽媽",
+        "孩子",
+        "家庭",
+        "幼兒園"
+      ]
+    },
+    "seriesProposal": "幸福點滴",
+    "relationshipProposals": [
+      "鼠媽媽的家庭成長故事"
+    ],
+    "timelineProposal": {
+      "date": "2026-08-19",
+      "type": "publication",
+      "label": "今年七夕不寫卡片了：Lucy，妳在哪裡？請收這篇情書",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/8caabc57-3e16-48a8-986b-f49429b093bf.png",
+        "file": "assets/posts/vocus-20260819-01690f3a/8caabc57-3e16-48a8-986b-f49429b093bf.webp",
+        "alt": "今年七夕不寫卡片了：Lucy，妳在哪裡？請收這篇情書｜圖片 1",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/88739cdf-1bcb-45f9-b5ca-be677b7e3ed6.png",
+        "file": "assets/posts/vocus-20260819-01690f3a/88739cdf-1bcb-45f9-b5ca-be677b7e3ed6.avif",
+        "alt": "今年沒有卡片，懷舊一下",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "88739cdf-1bcb-45f9-b5ca-be677b7e3ed6.avif",
+      "8caabc57-3e16-48a8-986b-f49429b093bf.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true
+  }
+}

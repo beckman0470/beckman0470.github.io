@@ -1,0 +1,137 @@
+{
+  "id": "CDJ-20260802-017AB88C",
+  "title": "一場龍象大戰、一場青春演唱會，還有掉在地上的一隻小兔兔",
+  "slug": "vocus-20260802-017ab88c",
+  "series": "幸福點滴",
+  "category": "幸福點滴",
+  "published": "2026-08-02",
+  "updated": "2026-08-03",
+  "readingTime": 5,
+  "subtitle": "2025年是鼠姊姊大巨蛋初體驗 2026年換龍弟弟初體驗",
+  "signature": "",
+  "people": [
+    "雞爸爸",
+    "鼠媽媽",
+    "鼠姊姊",
+    "龍弟弟"
+  ],
+  "relationship": [
+    "鼠媽媽的家庭成長故事"
+  ],
+  "tags": [
+    "雞爸爸生活研究室",
+    "龍弟弟",
+    "鼠姊姊",
+    "鼠姐姐",
+    "鼠媽媽",
+    "姊姊",
+    "弟弟",
+    "爸爸",
+    "媽媽"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "鼠媽媽的家庭成長故事"
+  ],
+  "cover": "assets/posts/vocus-20260802-017ab88c/e8353f02-62ce-4ba3-b89e-720798f0eeec.webp",
+  "coverAlt": "一場龍象大戰、一場青春演唱會，還有掉在地上的一隻小兔兔｜圖片 1",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a6ea249fd897800017ab88c",
+    "sourceUrl": "https://vocus.cc/article/6a6ea249fd897800017ab88c",
+    "canonicalUrl": "https://vocus.cc/article/6a6ea249fd897800017ab88c",
+    "originalPublishedAt": "2026-08-02T10:49:37+08:00",
+    "originalUpdatedAtCandidate": "2026-08-03T09:23:52+08:00",
+    "bodySha256": "db03a23cb0139638b491e4f29208e56b5fc8cdc6226eba47105dcfaa8625cb10",
+    "markdownSha256": "122c32a676745bfa002e91e28aafd842bf54985036bb02584bc8b178722d0c3c",
+    "mappingStatus": "resolved-pending-preview-approval",
+    "categoryProposal": {
+      "primary": "家庭誌",
+      "secondary": [],
+      "confidence": 1.0,
+      "needsReview": false,
+      "reason": "semantic editorial review",
+      "scores": {
+        "保健室": 0,
+        "風格誌": 4,
+        "圖書室": 0,
+        "光影誌": 4,
+        "家庭誌": 20
+      },
+      "hits": [
+        "鼠姊姊",
+        "鼠姐姐",
+        "龍弟弟",
+        "鼠媽媽",
+        "姊姊",
+        "弟弟",
+        "爸爸",
+        "媽媽",
+        "孩子",
+        "親子"
+      ]
+    },
+    "seriesProposal": "幸福點滴",
+    "relationshipProposals": [
+      "鼠媽媽的家庭成長故事"
+    ],
+    "timelineProposal": {
+      "date": "2026-08-02",
+      "type": "publication",
+      "label": "一場龍象大戰、一場青春演唱會，還有掉在地上的一隻小兔兔",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/e8353f02-62ce-4ba3-b89e-720798f0eeec.png",
+        "file": "assets/posts/vocus-20260802-017ab88c/e8353f02-62ce-4ba3-b89e-720798f0eeec.webp",
+        "alt": "一場龍象大戰、一場青春演唱會，還有掉在地上的一隻小兔兔｜圖片 1",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/ba49343a-d4c9-4800-b99e-389f89ec1390.jpg",
+        "file": "assets/posts/vocus-20260802-017ab88c/ba49343a-d4c9-4800-b99e-389f89ec1390.webp",
+        "alt": "一場龍象大戰、一場青春演唱會，還有掉在地上的一隻小兔兔｜圖片 2",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/6853b75b-7401-4bf6-b7fd-38b9bc85b005.jpg",
+        "file": "assets/posts/vocus-20260802-017ab88c/6853b75b-7401-4bf6-b7fd-38b9bc85b005.webp",
+        "alt": "一場龍象大戰、一場青春演唱會，還有掉在地上的一隻小兔兔｜圖片 3",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/92326de1-c40c-4d59-ace5-b63b0987d442.jpg",
+        "file": "assets/posts/vocus-20260802-017ab88c/92326de1-c40c-4d59-ace5-b63b0987d442.webp",
+        "alt": "一場龍象大戰、一場青春演唱會，還有掉在地上的一隻小兔兔｜圖片 4",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "6853b75b-7401-4bf6-b7fd-38b9bc85b005.webp",
+      "92326de1-c40c-4d59-ace5-b63b0987d442.webp",
+      "ba49343a-d4c9-4800-b99e-389f89ec1390.webp",
+      "e8353f02-62ce-4ba3-b89e-720798f0eeec.webp"
+    ],
+    "interactiveKinds": [
+      "iframe"
+    ],
+    "embedUrls": [
+      "https://www.youtube-nocookie.com/embed/Uu7GTKKUC1E"
+    ],
+    "doNotPublishUntilApproved": true,
+    "contentTemplate": "article",
+    "fallbackPolicy": {
+      "iframe": "safe-external-link",
+      "video": "safe-external-link",
+      "poll": "static-question-options-with-vocus-link"
+    },
+    "editorialReviewNotes": [
+      "影音改為安全外連；投票保留問題與選項並連回 Vocus"
+    ],
+    "previewApprovalStatus": "pending"
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "id": "CDJ-20260814-01C6611B",
+  "title": "心結怎麼鬆開，孟子早就知道：從鼠姊姊吃飯，看懂《換個爸媽過幾天》的易子而教",
+  "slug": "vocus-20260814-01c6611b",
+  "series": "幸福點滴",
+  "category": "幸福點滴",
+  "published": "2026-08-14",
+  "updated": "2026-08-14",
+  "readingTime": 10,
+  "subtitle": "關於鼠姊姊的不愛吃飯，已經不是用挑食來形容，吃飯根本就是一場漫長的拉鋸戰。「這個肉太硬，我不要吃。」「那個菜有薑的味道，我不喜歡。」有的時候光是用看的，食物甚至沒有被放進嘴巴的機會，她就已經先決定自己不吃了。雞爸爸和鼠媽媽當然也試過換很多…",
+  "signature": "",
+  "people": [
+    "雞爸爸",
+    "鼠媽媽",
+    "鼠姊姊",
+    "兔阿嬤"
+  ],
+  "relationship": [
+    "鼠媽媽的家庭成長故事"
+  ],
+  "tags": [
+    "雞爸爸生活研究室",
+    "雞爸爸",
+    "換個爸媽過幾天",
+    "鼠姊姊",
+    "鼠媽媽",
+    "兔阿嬤",
+    "姊姊",
+    "爸媽",
+    "父母",
+    "爸爸",
+    "媽媽"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "鼠媽媽的家庭成長故事"
+  ],
+  "cover": "assets/posts/vocus-20260814-01c6611b/e11292a8-fec7-4393-9629-f8c77e1a65d6.webp",
+  "coverAlt": "心結怎麼鬆開，孟子早就知道：從鼠姊姊吃飯，看懂《換個爸媽過幾天》的易子而教｜圖片 1",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a7e72dffd89780001c6611b",
+    "sourceUrl": "https://vocus.cc/article/6a7e72dffd89780001c6611b",
+    "canonicalUrl": "https://vocus.cc/article/6a7e72dffd89780001c6611b",
+    "originalPublishedAt": "2026-08-14T12:09:16+08:00",
+    "originalUpdatedAtCandidate": "2026-08-14T12:09:17+08:00",
+    "bodySha256": "53c4238587d1e51fd5a1f2fbf8f8e68bc161612ee70cc20a3b54af261ecd6af3",
+    "markdownSha256": "a496cee942c1466958bb16d2db6b26e9819e00324933cd04bf41e4ea755a3c21",
+    "mappingStatus": "proposed-high-confidence",
+    "categoryProposal": {
+      "primary": "家庭誌",
+      "secondary": [],
+      "confidence": 0.98,
+      "needsReview": false,
+      "reason": "關鍵詞：鼠姊姊、鼠媽媽、兔阿嬤、姊姊、爸媽、父母",
+      "scores": {
+        "保健室": 1,
+        "風格誌": 0,
+        "圖書室": 4,
+        "光影誌": 2,
+        "家庭誌": 22
+      },
+      "hits": [
+        "鼠姊姊",
+        "鼠媽媽",
+        "兔阿嬤",
+        "姊姊",
+        "爸媽",
+        "父母",
+        "爸爸",
+        "媽媽",
+        "孩子",
+        "家庭",
+        "親子"
+      ]
+    },
+    "seriesProposal": "幸福點滴",
+    "relationshipProposals": [
+      "鼠媽媽的家庭成長故事"
+    ],
+    "timelineProposal": {
+      "date": "2026-08-14",
+      "type": "publication",
+      "label": "心結怎麼鬆開，孟子早就知道：從鼠姊姊吃飯，看懂《換個爸媽過幾天》的易子而教",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/e11292a8-fec7-4393-9629-f8c77e1a65d6.png",
+        "file": "assets/posts/vocus-20260814-01c6611b/e11292a8-fec7-4393-9629-f8c77e1a65d6.webp",
+        "alt": "心結怎麼鬆開，孟子早就知道：從鼠姊姊吃飯，看懂《換個爸媽過幾天》的易子而教｜圖片 1",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "e11292a8-fec7-4393-9629-f8c77e1a65d6.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true
+  }
+}

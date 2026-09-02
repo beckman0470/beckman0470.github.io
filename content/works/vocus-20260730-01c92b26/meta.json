@@ -1,0 +1,104 @@
+{
+  "id": "CDJ-20260730-01C92B26",
+  "title": "葉總又養出一位很會配球的捕手？從富邦數據看林辰勳的成長",
+  "slug": "vocus-20260730-01c92b26",
+  "series": "棒球札記",
+  "category": "棒球札記",
+  "published": "2026-07-30",
+  "updated": "2026-07-30",
+  "readingTime": 3,
+  "subtitle": "很多龍迷對於葉君璋花了好幾年培養捕手林辰勳，不是很理解。畢竟蔣少宏的長打能力和阻殺率，一直和林辰勳有著顯著差距。但這週對富邦悍將，相信有味全龍迷開始看到另一位會配球、能閱讀比賽的捕手誕生。一直以來，雞爸爸都相信葉君璋培養捕手的能力。葉總從…",
+  "signature": "",
+  "people": [
+    "雞爸爸"
+  ],
+  "relationship": [
+    "雞爸爸的棒球觀察"
+  ],
+  "tags": [
+    "雞爸爸生活研究室",
+    "味全龍",
+    "葉君璋",
+    "投手",
+    "捕手",
+    "打線"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "雞爸爸的棒球觀察"
+  ],
+  "cover": "assets/posts/vocus-20260730-01c92b26/5ba92ed5-b16b-4948-b90f-48d8a512c82f.webp",
+  "coverAlt": "葉總又養出一位很會配球的捕手？從富邦數據看林辰勳的成長｜圖片 1",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a6af817fd89780001c92b26",
+    "sourceUrl": "https://vocus.cc/article/6a6af817fd89780001c92b26",
+    "canonicalUrl": "https://vocus.cc/article/6a6af817fd89780001c92b26",
+    "originalPublishedAt": "2026-07-30T15:58:53+08:00",
+    "originalUpdatedAtCandidate": "2026-07-30T15:58:53+08:00",
+    "bodySha256": "912f185e66db513a67a682680605b2aefbfe6bf202443bb82a7bff84bfeb38b6",
+    "markdownSha256": "c98e9c54b372b798b3df681df16885c411fbdcf0e2437490dc441b293beb71bd",
+    "mappingStatus": "proposed-high-confidence",
+    "categoryProposal": {
+      "primary": "風格誌",
+      "secondary": [],
+      "confidence": 0.98,
+      "needsReview": false,
+      "reason": "關鍵詞：味全龍、投手、捕手、打線",
+      "scores": {
+        "保健室": 0,
+        "風格誌": 9,
+        "圖書室": 1,
+        "光影誌": 0,
+        "家庭誌": 3
+      },
+      "hits": [
+        "味全龍",
+        "投手",
+        "捕手",
+        "打線"
+      ]
+    },
+    "seriesProposal": "棒球札記",
+    "relationshipProposals": [
+      "雞爸爸的棒球觀察"
+    ],
+    "timelineProposal": {
+      "date": "2026-07-30",
+      "type": "publication",
+      "label": "葉總又養出一位很會配球的捕手？從富邦數據看林辰勳的成長",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/5ba92ed5-b16b-4948-b90f-48d8a512c82f.png",
+        "file": "assets/posts/vocus-20260730-01c92b26/5ba92ed5-b16b-4948-b90f-48d8a512c82f.webp",
+        "alt": "葉總又養出一位很會配球的捕手？從富邦數據看林辰勳的成長｜圖片 1",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/3f67f6f3-8d83-4553-a4d1-816bb289ae06.png",
+        "file": "assets/posts/vocus-20260730-01c92b26/3f67f6f3-8d83-4553-a4d1-816bb289ae06.avif",
+        "alt": "葉總又養出一位很會配球的捕手？從富邦數據看林辰勳的成長｜圖片 2",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/1683fadd-361f-4e8a-9fc2-30fd989b87f1.png",
+        "file": "assets/posts/vocus-20260730-01c92b26/1683fadd-361f-4e8a-9fc2-30fd989b87f1.avif",
+        "alt": "葉總又養出一位很會配球的捕手？從富邦數據看林辰勳的成長｜圖片 3",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "1683fadd-361f-4e8a-9fc2-30fd989b87f1.avif",
+      "3f67f6f3-8d83-4553-a4d1-816bb289ae06.avif",
+      "5ba92ed5-b16b-4948-b90f-48d8a512c82f.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true
+  }
+}

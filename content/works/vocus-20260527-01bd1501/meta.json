@@ -1,0 +1,91 @@
+{
+  "id": "CDJ-20260527-01BD1501",
+  "title": "夏天的冰淇淋",
+  "slug": "vocus-20260527-01bd1501",
+  "series": "幸福點滴",
+  "category": "幸福點滴",
+  "published": "2026-05-27",
+  "updated": "2026-05-27",
+  "readingTime": 1,
+  "subtitle": "平凡的盛夏，",
+  "signature": "",
+  "people": [],
+  "relationship": [
+    "雞爸爸的生活研究"
+  ],
+  "tags": [
+    "夏日",
+    "冰淇淋",
+    "天氣熱"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "雞爸爸的生活研究"
+  ],
+  "cover": "assets/posts/vocus-20260527-01bd1501/e96ba90a-14fd-4fc9-88f6-1ccfe390b451.webp",
+  "coverAlt": "src",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "post",
+    "sourceId": "6a16ba98fd89780001bd1501",
+    "sourceUrl": "https://vocus.cc/post/6a16ba98fd89780001bd1501",
+    "canonicalUrl": "https://vocus.cc/post/6a16ba98fd89780001bd1501",
+    "originalPublishedAt": "2026-05-27T17:34:16+08:00",
+    "originalUpdatedAtCandidate": "2026-05-27T17:34:16+08:00",
+    "bodySha256": "ff1e77b2c686e8ab8436f27f39807f7139b7c65f1b30e89337dcda76fadcf32a",
+    "markdownSha256": "d448621ed6aeaa2b96093735fd979f515ff238b64cd3ec0fcc849f4d8d2a26a3",
+    "mappingStatus": "resolved-pending-preview-approval",
+    "categoryProposal": {
+      "primary": "家庭誌",
+      "secondary": [],
+      "confidence": 1.0,
+      "needsReview": false,
+      "reason": "semantic editorial review",
+      "scores": {
+        "保健室": 0,
+        "風格誌": 0,
+        "圖書室": 0,
+        "光影誌": 0,
+        "家庭誌": 0
+      },
+      "hits": []
+    },
+    "seriesProposal": "幸福點滴",
+    "relationshipProposals": [
+      "雞爸爸的生活研究"
+    ],
+    "timelineProposal": {
+      "date": "2026-05-27",
+      "type": "publication",
+      "label": "夏天的冰淇淋",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/e96ba90a-14fd-4fc9-88f6-1ccfe390b451.png",
+        "file": "assets/posts/vocus-20260527-01bd1501/e96ba90a-14fd-4fc9-88f6-1ccfe390b451.webp",
+        "alt": "src",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "e96ba90a-14fd-4fc9-88f6-1ccfe390b451.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true,
+    "contentTemplate": "compact",
+    "fallbackPolicy": {
+      "iframe": "safe-external-link",
+      "video": "safe-external-link",
+      "poll": "static-question-options-with-vocus-link"
+    },
+    "editorialReviewNotes": [
+      "依正文核心主題完成語意校正",
+      "採 compact template；仍納入時間軸、人物與標籤"
+    ],
+    "previewApprovalStatus": "pending"
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "id": "CDJ-20260806-0199EC35",
+  "title": "平台不同的觀看情境：雞爸爸也想找到一種讓人停下來看的魔力",
+  "slug": "vocus-20260806-0199ec35",
+  "series": "生活研究",
+  "category": "生活研究",
+  "published": "2026-08-06",
+  "updated": "2026-08-06",
+  "readingTime": 6,
+  "subtitle": "雞爸爸喜歡聽交響樂，因為小時候，家裡的餐廳擺著台很大的白馬牌音響。兔阿嬤說那是有一次我們家三姊弟一起得麻疹的時候買的，在一個音響還很像一件大型家具的年代，兩個大箱子站在餐廳旁邊，音樂一放下去，全家的空間好像都瀰漫著交響樂團的古典氣息。",
+  "signature": "",
+  "people": [
+    "雞爸爸",
+    "兔阿嬤"
+  ],
+  "relationship": [
+    "雞爸爸的光影與創作記錄"
+  ],
+  "tags": [
+    "雞爸爸生活研究室",
+    "雞爸爸",
+    "Vocus",
+    "電影",
+    "影片",
+    "YouTube",
+    "鏡頭"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "雞爸爸的光影與創作記錄"
+  ],
+  "cover": "assets/posts/vocus-20260806-0199ec35/1e3abb16-4d17-4633-8882-39568e8e4a27.webp",
+  "coverAlt": "平台不同的觀看情境：雞爸爸也想找到一種讓人停下來看的魔力｜圖片 1",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a73f574fd8978000199ec35",
+    "sourceUrl": "https://vocus.cc/article/6a73f574fd8978000199ec35",
+    "canonicalUrl": "https://vocus.cc/article/6a73f574fd8978000199ec35",
+    "originalPublishedAt": "2026-08-06T12:13:52+08:00",
+    "originalUpdatedAtCandidate": "2026-08-06T12:13:53+08:00",
+    "bodySha256": "fe522706f607aaecd3c8362fab578792f81de0f409fe393cadd6c51fdef63a70",
+    "markdownSha256": "532149033b2b5515e216ab9154938b9264a73f7bfe0c5c4060400c97c925abef",
+    "mappingStatus": "resolved-pending-preview-approval",
+    "categoryProposal": {
+      "primary": "光影誌",
+      "secondary": [],
+      "confidence": 1.0,
+      "needsReview": false,
+      "reason": "semantic editorial review",
+      "scores": {
+        "保健室": 2,
+        "風格誌": 1,
+        "圖書室": 1,
+        "光影誌": 4,
+        "家庭誌": 7
+      },
+      "hits": [
+        "電影",
+        "影片",
+        "YouTube",
+        "鏡頭"
+      ]
+    },
+    "seriesProposal": "生活研究",
+    "relationshipProposals": [
+      "雞爸爸的光影與創作記錄"
+    ],
+    "timelineProposal": {
+      "date": "2026-08-06",
+      "type": "publication",
+      "label": "平台不同的觀看情境：雞爸爸也想找到一種讓人停下來看的魔力",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/1e3abb16-4d17-4633-8882-39568e8e4a27.png",
+        "file": "assets/posts/vocus-20260806-0199ec35/1e3abb16-4d17-4633-8882-39568e8e4a27.webp",
+        "alt": "平台不同的觀看情境：雞爸爸也想找到一種讓人停下來看的魔力｜圖片 1",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "1e3abb16-4d17-4633-8882-39568e8e4a27.webp"
+    ],
+    "interactiveKinds": [
+      "iframe"
+    ],
+    "embedUrls": [
+      "https://www.youtube-nocookie.com/embed/Orzo38LamfQ"
+    ],
+    "doNotPublishUntilApproved": true,
+    "contentTemplate": "article",
+    "fallbackPolicy": {
+      "iframe": "safe-external-link",
+      "video": "safe-external-link",
+      "poll": "static-question-options-with-vocus-link"
+    },
+    "editorialReviewNotes": [
+      "依正文核心主題完成語意校正",
+      "影音改為安全外連；投票保留問題與選項並連回 Vocus"
+    ],
+    "previewApprovalStatus": "pending"
+  }
+}

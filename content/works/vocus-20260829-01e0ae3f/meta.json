@@ -1,0 +1,105 @@
+{
+  "id": "CDJ-20260829-01E0AE3F",
+  "title": "雞爸爸的身體被A流綁架，靈魂卻偷偷去旅行了",
+  "slug": "vocus-20260829-01e0ae3f",
+  "series": "生活研究",
+  "category": "生活研究",
+  "published": "2026-08-29",
+  "updated": "2026-08-29",
+  "readingTime": 8,
+  "subtitle": "沒有機票、沒有行李，也沒有任何行程。被迫隔離在房間的幾天，雞爸爸卻跟著麋先生〈去飛翔〉，走了一趟很遠的地方。",
+  "signature": "",
+  "people": [
+    "雞爸爸",
+    "鼠姊姊"
+  ],
+  "relationship": [
+    "鼠姊姊的健康觀察"
+  ],
+  "tags": [
+    "雞爸爸生活研究室",
+    "雞爸爸",
+    "A型流感",
+    "流感",
+    "A流",
+    "肌肉"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "鼠姊姊的健康觀察"
+  ],
+  "cover": "assets/posts/vocus-20260829-01e0ae3f/5d80ffdd-181b-4c03-9e57-23d7bf8d32a0.webp",
+  "coverAlt": "雞爸爸的身體被A流綁架，靈魂卻偷偷去旅行了｜圖片 1",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a9250d1fd89780001e0ae3f",
+    "sourceUrl": "https://vocus.cc/article/6a9250d1fd89780001e0ae3f",
+    "canonicalUrl": "https://vocus.cc/article/6a9250d1fd89780001e0ae3f",
+    "originalPublishedAt": "2026-08-29T12:35:41+08:00",
+    "originalUpdatedAtCandidate": "2026-08-29T12:37:16+08:00",
+    "bodySha256": "f0928dd3eaa27026f9f6b65eead22a4c9719f180651245f929f32e78d6ac74ae",
+    "markdownSha256": "b8ba6d60c7e8c5591dc7ebab92674c024b6bef4ef9638b1616f24c557d7dc749",
+    "mappingStatus": "resolved-pending-preview-approval",
+    "categoryProposal": {
+      "primary": "保健室",
+      "secondary": [],
+      "confidence": 1.0,
+      "needsReview": false,
+      "reason": "semantic editorial review",
+      "scores": {
+        "保健室": 8,
+        "風格誌": 0,
+        "圖書室": 0,
+        "光影誌": 1,
+        "家庭誌": 7
+      },
+      "hits": [
+        "流感",
+        "A流",
+        "肌肉"
+      ]
+    },
+    "seriesProposal": "生活研究",
+    "relationshipProposals": [
+      "鼠姊姊的健康觀察"
+    ],
+    "timelineProposal": {
+      "date": "2026-08-29",
+      "type": "publication",
+      "label": "雞爸爸的身體被A流綁架，靈魂卻偷偷去旅行了",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/5d80ffdd-181b-4c03-9e57-23d7bf8d32a0.png",
+        "file": "assets/posts/vocus-20260829-01e0ae3f/5d80ffdd-181b-4c03-9e57-23d7bf8d32a0.webp",
+        "alt": "雞爸爸的身體被A流綁架，靈魂卻偷偷去旅行了｜圖片 1",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "5d80ffdd-181b-4c03-9e57-23d7bf8d32a0.webp"
+    ],
+    "interactiveKinds": [
+      "iframe"
+    ],
+    "embedUrls": [
+      "https://www.youtube-nocookie.com/embed/vmR2lHMlu-w"
+    ],
+    "doNotPublishUntilApproved": true,
+    "contentTemplate": "article",
+    "fallbackPolicy": {
+      "iframe": "safe-external-link",
+      "video": "safe-external-link",
+      "poll": "static-question-options-with-vocus-link"
+    },
+    "editorialReviewNotes": [
+      "依正文核心主題完成語意校正",
+      "影音改為安全外連；投票保留問題與選項並連回 Vocus"
+    ],
+    "previewApprovalStatus": "pending"
+  }
+}

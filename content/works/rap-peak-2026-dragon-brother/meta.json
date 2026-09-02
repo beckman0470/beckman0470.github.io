@@ -34,5 +34,72 @@
   "related": [],
   "cover": "assets/story-covers/default.svg",
   "coverAlt": "說唱巔峰對決2026：炸場首推龍弟弟｜雞爸爸生活研究室代表插圖",
-  "coverStatus": "placeholder"
+  "coverStatus": "placeholder",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a473bb9fd897800013d6ae6",
+    "sourceUrl": "https://vocus.cc/article/6a473bb9fd897800013d6ae6",
+    "canonicalUrl": "https://vocus.cc/article/6a473bb9fd897800013d6ae6",
+    "originalPublishedAt": "2026-07-03T14:51:05+08:00",
+    "originalUpdatedAtCandidate": "2026-07-03T15:58:19+08:00",
+    "bodySha256": "1100d8b0ef0fa952adeb02c703b6640558073c65972fd734ac74a3899fbea116",
+    "markdownSha256": "13b095dab785b93b7d72f05dc12d3793006cf2366e40cd83193e8d412fdde13c",
+    "mappingStatus": "proposed-high-confidence",
+    "categoryProposal": {
+      "primary": "家庭誌",
+      "secondary": [],
+      "confidence": 0.98,
+      "needsReview": false,
+      "reason": "關鍵詞：龍弟弟、兔阿嬤、弟弟、爸爸、媽媽、孩子",
+      "scores": {
+        "保健室": 0,
+        "風格誌": 0,
+        "圖書室": 1,
+        "光影誌": 1,
+        "家庭誌": 16
+      },
+      "hits": [
+        "龍弟弟",
+        "兔阿嬤",
+        "弟弟",
+        "爸爸",
+        "媽媽",
+        "孩子"
+      ]
+    },
+    "seriesProposal": "幸福點滴",
+    "relationshipProposals": [
+      "雞爸爸 × 龍弟弟",
+      "兔阿嬤 × 龍弟弟",
+      "龍弟弟 × 鼠媽媽"
+    ],
+    "timelineProposal": {
+      "date": "2026-07-03",
+      "type": "publication",
+      "label": "說唱巔峰對決2026  炸場首推龍弟弟",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/e6a81db5-2b9b-47fd-a0eb-24b18e63f1f4.png",
+        "file": "assets/posts/rap-peak-2026-dragon-brother/e6a81db5-2b9b-47fd-a0eb-24b18e63f1f4.webp",
+        "alt": "說唱巔峰對決2026  炸場首推龍弟弟｜圖片 1",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/9ad0d897-cfb6-43d7-a8d1-9388ae092500.png",
+        "file": "assets/posts/rap-peak-2026-dragon-brother/9ad0d897-cfb6-43d7-a8d1-9388ae092500.avif",
+        "alt": "說唱巔峰對決2026  炸場首推龍弟弟｜圖片 2",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "9ad0d897-cfb6-43d7-a8d1-9388ae092500.avif",
+      "e6a81db5-2b9b-47fd-a0eb-24b18e63f1f4.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true
+  }
 }

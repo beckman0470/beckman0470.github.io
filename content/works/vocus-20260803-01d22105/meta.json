@@ -1,0 +1,105 @@
+{
+  "id": "CDJ-20260803-01D22105",
+  "title": "追完《鐵拳教育》，雞爸爸擔心的不是成績，而是孩子每天走進怎樣的校園",
+  "slug": "vocus-20260803-01d22105",
+  "series": "幸福點滴",
+  "category": "幸福點滴",
+  "published": "2026-08-03",
+  "updated": "2026-08-03",
+  "readingTime": 9,
+  "subtitle": "當霸凌、社群、賭博與毒品走進校園，父母真正要守住的，是孩子願意回家說話的那扇門",
+  "signature": "",
+  "people": [
+    "雞爸爸",
+    "鼠媽媽",
+    "鼠姊姊",
+    "龍弟弟"
+  ],
+  "relationship": [
+    "鼠媽媽的家庭成長故事"
+  ],
+  "tags": [
+    "雞爸爸生活研究室",
+    "鐵拳教育",
+    "校園",
+    "鼠姊姊",
+    "龍弟弟",
+    "鼠媽媽",
+    "姊姊",
+    "弟弟",
+    "爸媽",
+    "父母",
+    "爸爸"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "鼠媽媽的家庭成長故事"
+  ],
+  "cover": "assets/posts/vocus-20260803-01d22105/208407f0-8366-4cbd-914e-627dc50d79ca.webp",
+  "coverAlt": "「教權局既不是站在老師那邊，也不是站在學生那邊，而是站在受害者那一邊。」",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a6ff548fd89780001d22105",
+    "sourceUrl": "https://vocus.cc/article/6a6ff548fd89780001d22105",
+    "canonicalUrl": "https://vocus.cc/article/6a6ff548fd89780001d22105",
+    "originalPublishedAt": "2026-08-03T11:50:34+08:00",
+    "originalUpdatedAtCandidate": "2026-08-03T11:50:35+08:00",
+    "bodySha256": "8829a00af60d6c68a277f6c95a0d4854ed309768395435c52145e0790f1d0080",
+    "markdownSha256": "468c78356b6e36195fd16dab46ef1af27a2257e4a9782e2bcbede3bd715b73b4",
+    "mappingStatus": "proposed-high-confidence",
+    "categoryProposal": {
+      "primary": "家庭誌",
+      "secondary": [],
+      "confidence": 0.98,
+      "needsReview": false,
+      "reason": "關鍵詞：鼠姊姊、龍弟弟、鼠媽媽、姊姊、弟弟、爸媽",
+      "scores": {
+        "保健室": 0,
+        "風格誌": 0,
+        "圖書室": 2,
+        "光影誌": 3,
+        "家庭誌": 17
+      },
+      "hits": [
+        "鼠姊姊",
+        "龍弟弟",
+        "鼠媽媽",
+        "姊姊",
+        "弟弟",
+        "爸媽",
+        "父母",
+        "爸爸",
+        "媽媽",
+        "孩子",
+        "家庭"
+      ]
+    },
+    "seriesProposal": "幸福點滴",
+    "relationshipProposals": [
+      "鼠媽媽的家庭成長故事"
+    ],
+    "timelineProposal": {
+      "date": "2026-08-03",
+      "type": "publication",
+      "label": "追完《鐵拳教育》，雞爸爸擔心的不是成績，而是孩子每天走進怎樣的校園",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/208407f0-8366-4cbd-914e-627dc50d79ca.jpg",
+        "file": "assets/posts/vocus-20260803-01d22105/208407f0-8366-4cbd-914e-627dc50d79ca.webp",
+        "alt": "「教權局既不是站在老師那邊，也不是站在學生那邊，而是站在受害者那一邊。」",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "208407f0-8366-4cbd-914e-627dc50d79ca.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true
+  }
+}

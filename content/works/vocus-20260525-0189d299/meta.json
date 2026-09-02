@@ -1,0 +1,104 @@
+{
+  "id": "CDJ-20260525-0189D299",
+  "title": "喜歡美食咖啡的鼠媽媽",
+  "slug": "vocus-20260525-0189d299",
+  "series": "幸福點滴",
+  "category": "幸福點滴",
+  "published": "2026-05-25",
+  "updated": "2026-05-25",
+  "readingTime": 1,
+  "subtitle": "鼠媽媽喜歡手沖咖啡、美食、愛旅遊，喜歡假日悠閒的下午茶時光。但日漸忙碌的工作，加上兩個寶貝加兩隻貓咪，究竟何時才能回到不用加班的美好時光...",
+  "signature": "",
+  "people": [
+    "鼠媽媽"
+  ],
+  "relationship": [
+    "鼠媽媽的家庭成長故事"
+  ],
+  "tags": [
+    "手沖咖啡",
+    "磨豆機",
+    "咖啡豆",
+    "鼠媽媽",
+    "媽媽"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "鼠媽媽的家庭成長故事"
+  ],
+  "cover": "assets/posts/vocus-20260525-0189d299/99be4244-9fc4-4254-8e7a-e4f51763bf85.webp",
+  "coverAlt": "src",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "post",
+    "sourceId": "6a14163dfd8978000189d299",
+    "sourceUrl": "https://vocus.cc/post/6a14163dfd8978000189d299",
+    "canonicalUrl": "https://vocus.cc/post/6a14163dfd8978000189d299",
+    "originalPublishedAt": "2026-05-25T17:28:29+08:00",
+    "originalUpdatedAtCandidate": "2026-05-25T17:40:04+08:00",
+    "bodySha256": "b578d04a143f622e7974e74f375d76c60966f0614baf33d976bd617d507bdecd",
+    "markdownSha256": "93453434cb57f82eb2f0bd97c40be34d39ac00502c17f2db9d52040b41aeef9f",
+    "mappingStatus": "resolved-pending-preview-approval",
+    "categoryProposal": {
+      "primary": "家庭誌",
+      "secondary": [],
+      "confidence": 1.0,
+      "needsReview": false,
+      "reason": "semantic editorial review",
+      "scores": {
+        "保健室": 0,
+        "風格誌": 0,
+        "圖書室": 0,
+        "光影誌": 0,
+        "家庭誌": 8
+      },
+      "hits": [
+        "鼠媽媽",
+        "媽媽"
+      ]
+    },
+    "seriesProposal": "幸福點滴",
+    "relationshipProposals": [
+      "鼠媽媽的家庭成長故事"
+    ],
+    "timelineProposal": {
+      "date": "2026-05-25",
+      "type": "publication",
+      "label": "喜歡美食咖啡的鼠媽媽",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/99be4244-9fc4-4254-8e7a-e4f51763bf85.jpg",
+        "file": "assets/posts/vocus-20260525-0189d299/99be4244-9fc4-4254-8e7a-e4f51763bf85.webp",
+        "alt": "src",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/ede9e4d5-1476-4adb-aff5-073ec7d145b1.jpg",
+        "file": "assets/posts/vocus-20260525-0189d299/ede9e4d5-1476-4adb-aff5-073ec7d145b1.webp",
+        "alt": "src",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "99be4244-9fc4-4254-8e7a-e4f51763bf85.webp",
+      "ede9e4d5-1476-4adb-aff5-073ec7d145b1.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true,
+    "contentTemplate": "compact",
+    "fallbackPolicy": {
+      "iframe": "safe-external-link",
+      "video": "safe-external-link",
+      "poll": "static-question-options-with-vocus-link"
+    },
+    "editorialReviewNotes": [
+      "採 compact template；仍納入時間軸、人物與標籤"
+    ],
+    "previewApprovalStatus": "pending"
+  }
+}

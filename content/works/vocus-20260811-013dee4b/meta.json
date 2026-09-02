@@ -1,0 +1,121 @@
+{
+  "id": "CDJ-20260811-013DEE4B",
+  "title": "人生最後的溫柔：只要還在，就很好...",
+  "slug": "vocus-20260811-013dee4b",
+  "series": "生活研究",
+  "category": "生活研究",
+  "published": "2026-08-11",
+  "updated": "2026-08-11",
+  "readingTime": 9,
+  "subtitle": "我們總以為還有很多以後，而陪伴最珍貴的，只要那個人還在身邊",
+  "signature": "",
+  "people": [
+    "雞爸爸",
+    "鼠媽媽",
+    "鼠姊姊",
+    "龍弟弟",
+    "兔阿嬤",
+    "ChatGPT／小妾"
+  ],
+  "relationship": [
+    "鼠媽媽的健康觀察"
+  ],
+  "tags": [
+    "雞爸爸生活研究室",
+    "雞爸爸",
+    "更年期",
+    "健康",
+    "血管",
+    "脂肪",
+    "肌肉",
+    "體重",
+    "保健",
+    "肌酸"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "鼠媽媽的健康觀察"
+  ],
+  "cover": "assets/posts/vocus-20260811-013dee4b/4a019daa-62db-4032-8ba8-7ab6228a09b4.webp",
+  "coverAlt": "人生最後的溫柔：只要還在，就很好...｜圖片 1",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a7ab92afd897800013dee4b",
+    "sourceUrl": "https://vocus.cc/article/6a7ab92afd897800013dee4b",
+    "canonicalUrl": "https://vocus.cc/article/6a7ab92afd897800013dee4b",
+    "originalPublishedAt": "2026-08-11T15:31:03+08:00",
+    "originalUpdatedAtCandidate": "2026-08-11T15:31:33+08:00",
+    "bodySha256": "b4c0a2bf72afe6b771ffa154d7a0b1fad018a580c6e52850c6cdf766e661e7fd",
+    "markdownSha256": "71b89c5db9ab85b7b3a73c6e9c4c1a1f226147aaa794147f7776392634f79dab",
+    "mappingStatus": "resolved-pending-preview-approval",
+    "categoryProposal": {
+      "primary": "家庭誌",
+      "secondary": [
+        "保健室"
+      ],
+      "confidence": 1.0,
+      "needsReview": false,
+      "reason": "semantic editorial review",
+      "scores": {
+        "保健室": 7,
+        "風格誌": 0,
+        "圖書室": 0,
+        "光影誌": 0,
+        "家庭誌": 11
+      },
+      "hits": [
+        "健康",
+        "血管",
+        "脂肪",
+        "肌肉",
+        "體重",
+        "保健",
+        "肌酸"
+      ]
+    },
+    "seriesProposal": "生活研究",
+    "relationshipProposals": [
+      "鼠媽媽的健康觀察"
+    ],
+    "timelineProposal": {
+      "date": "2026-08-11",
+      "type": "publication",
+      "label": "人生最後的溫柔：只要還在，就很好...",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/4a019daa-62db-4032-8ba8-7ab6228a09b4.png",
+        "file": "assets/posts/vocus-20260811-013dee4b/4a019daa-62db-4032-8ba8-7ab6228a09b4.webp",
+        "alt": "人生最後的溫柔：只要還在，就很好...｜圖片 1",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/0e27a220-eb31-45f6-9068-700fd08abd46.png",
+        "file": "assets/posts/vocus-20260811-013dee4b/0e27a220-eb31-45f6-9068-700fd08abd46.avif",
+        "alt": "人生最後的溫柔：只要還在，就很好...｜圖片 2",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "0e27a220-eb31-45f6-9068-700fd08abd46.avif",
+      "4a019daa-62db-4032-8ba8-7ab6228a09b4.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true,
+    "contentTemplate": "article",
+    "fallbackPolicy": {
+      "iframe": "safe-external-link",
+      "video": "safe-external-link",
+      "poll": "static-question-options-with-vocus-link"
+    },
+    "editorialReviewNotes": [
+      "依正文核心主題完成語意校正"
+    ],
+    "previewApprovalStatus": "pending"
+  }
+}

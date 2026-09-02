@@ -34,5 +34,67 @@
   ],
   "cover": "assets/story-covers/default.svg",
   "coverAlt": "徐若熙把「我不屬於這裡」投成了過去，請往更棒的地方前進｜雞爸爸生活研究室代表插圖",
-  "coverStatus": "placeholder"
+  "coverStatus": "placeholder",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a155c05fd89780001f1f3ff",
+    "sourceUrl": "https://vocus.cc/article/6a155c05fd89780001f1f3ff",
+    "canonicalUrl": "https://vocus.cc/article/6a155c05fd89780001f1f3ff",
+    "originalPublishedAt": "2026-05-31T14:27:32+08:00",
+    "originalUpdatedAtCandidate": "2026-06-01T15:37:41+08:00",
+    "bodySha256": "74bfb78a2664aa1050366eefea6510fb5a8c6e99c96baf639a29d24274d7c12e",
+    "markdownSha256": "20fca60fc2af3c404695d6c389118de32daf8304649a5f3c6e2ee279aee88ef0",
+    "mappingStatus": "proposed-high-confidence",
+    "categoryProposal": {
+      "primary": "風格誌",
+      "secondary": [],
+      "confidence": 0.93,
+      "needsReview": false,
+      "reason": "關鍵詞：棒球、投手、徐若熙",
+      "scores": {
+        "保健室": 0,
+        "風格誌": 6,
+        "圖書室": 0,
+        "光影誌": 0,
+        "家庭誌": 0
+      },
+      "hits": [
+        "棒球",
+        "投手",
+        "徐若熙"
+      ]
+    },
+    "seriesProposal": "棒球札記",
+    "relationshipProposals": [
+      "雞爸爸 × 徐若熙旅日觀察"
+    ],
+    "timelineProposal": {
+      "date": "2026-05-31",
+      "type": "publication",
+      "label": "徐若熙把「我不屬於這裡」投成了過去，請往更棒的地方前進",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/922aa407-fc88-456f-b780-e8da849338a9.png",
+        "file": "assets/posts/hsu-jo-hsi-six-scoreless/922aa407-fc88-456f-b780-e8da849338a9.webp",
+        "alt": "龍之子徐若熙重返一軍奪勝",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/b6fded57-5b81-416d-b53e-f612c350b59c.jpg",
+        "file": "assets/posts/hsu-jo-hsi-six-scoreless/b6fded57-5b81-416d-b53e-f612c350b59c.webp",
+        "alt": "徐若熙把「我不屬於這裡」投成了過去，請往更棒的地方前進｜圖片 2",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "922aa407-fc88-456f-b780-e8da849338a9.webp",
+      "b6fded57-5b81-416d-b53e-f612c350b59c.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true
+  }
 }

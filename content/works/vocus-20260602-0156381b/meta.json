@@ -1,0 +1,102 @@
+{
+  "id": "CDJ-20260602-0156381B",
+  "title": "味全龍正用速度挑戰台灣投捕的細膩度",
+  "slug": "vocus-20260602-0156381b",
+  "series": "棒球札記",
+  "category": "棒球札記",
+  "published": "2026-06-02",
+  "updated": "2026-06-02",
+  "readingTime": 4,
+  "subtitle": "壘包間的紅色狂龍再現",
+  "signature": "",
+  "people": [],
+  "relationship": [
+    "雞爸爸的棒球觀察"
+  ],
+  "tags": [
+    "盜壘",
+    "味全龍",
+    "CPBL",
+    "棒球",
+    "投手",
+    "捕手",
+    "徐若熙",
+    "投捕",
+    "李凱威"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "雞爸爸的棒球觀察"
+  ],
+  "cover": "assets/posts/vocus-20260602-0156381b/b35d1b94-83df-4624-a692-445f5dc9a467.webp",
+  "coverAlt": "盜壘成功的數據說明了味全龍第一名的原因",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a1e4798fd8978000156381b",
+    "sourceUrl": "https://vocus.cc/article/6a1e4798fd8978000156381b",
+    "canonicalUrl": "https://vocus.cc/article/6a1e4798fd8978000156381b",
+    "originalPublishedAt": "2026-06-02T12:08:11+08:00",
+    "originalUpdatedAtCandidate": "2026-06-02T14:10:36+08:00",
+    "bodySha256": "38afc5dc14b078421af1f3f278fc9770c08d42cba55e0deed222234c322bee43",
+    "markdownSha256": "52be2cb8e094a543f0b65045911dcdae896bdfa936ca87579048253c638dfeb1",
+    "mappingStatus": "proposed-high-confidence",
+    "categoryProposal": {
+      "primary": "風格誌",
+      "secondary": [],
+      "confidence": 0.98,
+      "needsReview": false,
+      "reason": "關鍵詞：味全龍、棒球、投手、捕手、徐若熙、盜壘",
+      "scores": {
+        "保健室": 0,
+        "風格誌": 16,
+        "圖書室": 0,
+        "光影誌": 0,
+        "家庭誌": 0
+      },
+      "hits": [
+        "味全龍",
+        "棒球",
+        "投手",
+        "捕手",
+        "徐若熙",
+        "盜壘",
+        "投捕",
+        "李凱威"
+      ]
+    },
+    "seriesProposal": "棒球札記",
+    "relationshipProposals": [
+      "雞爸爸的棒球觀察"
+    ],
+    "timelineProposal": {
+      "date": "2026-06-02",
+      "type": "publication",
+      "label": "味全龍正用速度挑戰台灣投捕的細膩度",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/b35d1b94-83df-4624-a692-445f5dc9a467.jpg",
+        "file": "assets/posts/vocus-20260602-0156381b/b35d1b94-83df-4624-a692-445f5dc9a467.webp",
+        "alt": "盜壘成功的數據說明了味全龍第一名的原因",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/d371b49c-f346-465b-b8a1-497db6d66919.jpg",
+        "file": "assets/posts/vocus-20260602-0156381b/d371b49c-f346-465b-b8a1-497db6d66919.webp",
+        "alt": "量化盜壘成功所增加的得分期望值  【 資料來源：野球革命】",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "b35d1b94-83df-4624-a692-445f5dc9a467.webp",
+      "d371b49c-f346-465b-b8a1-497db6d66919.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true
+  }
+}

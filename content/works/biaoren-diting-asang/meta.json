@@ -42,5 +42,179 @@
   ],
   "cover": "assets/story-covers/default.svg",
   "coverAlt": "重看《鏢人》才懂，「諦聽」以死明「相」｜雞爸爸生活研究室代表插圖",
-  "coverStatus": "placeholder"
+  "coverStatus": "placeholder",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a22d0d4fd89780001a4e90e",
+    "sourceUrl": "https://vocus.cc/article/6a22d0d4fd89780001a4e90e",
+    "canonicalUrl": "https://vocus.cc/article/6a22d0d4fd89780001a4e90e",
+    "originalPublishedAt": "2026-06-06T15:15:01+08:00",
+    "originalUpdatedAtCandidate": "2026-06-15T15:54:54+08:00",
+    "bodySha256": "c3b68182af9350ff61774215a68eb748b4ad655169c83595fdb2e800038b43ff",
+    "markdownSha256": "34be45e93487bcc3287111d932f6c2e16ac9f525e59d4c7cdba84a34c0971488",
+    "mappingStatus": "proposed-high-confidence",
+    "categoryProposal": {
+      "primary": "圖書室",
+      "secondary": [],
+      "confidence": 0.98,
+      "needsReview": false,
+      "reason": "關鍵詞：鏢人、漫畫、諦聽",
+      "scores": {
+        "保健室": 0,
+        "風格誌": 0,
+        "圖書室": 9,
+        "光影誌": 1,
+        "家庭誌": 1
+      },
+      "hits": [
+        "鏢人",
+        "漫畫",
+        "諦聽"
+      ]
+    },
+    "seriesProposal": "生活研究",
+    "relationshipProposals": [
+      "雞爸爸 × 角色命運解讀"
+    ],
+    "timelineProposal": {
+      "date": "2026-06-06",
+      "type": "publication",
+      "label": "重看《鏢人》才懂，「諦聽」以死明「相」",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/2b6ee3a4-5b9c-442f-b109-f72803c50d72.jpg",
+        "file": "assets/posts/biaoren-diting-asang/2b6ee3a4-5b9c-442f-b109-f72803c50d72.webp",
+        "alt": "重看《鏢人》才懂，「諦聽」以死明「相」｜圖片 1",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/744cc7a0-2ede-4a50-8519-1f8e3deffd3e.jpg",
+        "file": "assets/posts/biaoren-diting-asang/744cc7a0-2ede-4a50-8519-1f8e3deffd3e.webp",
+        "alt": "重看《鏢人》才懂，「諦聽」以死明「相」｜圖片 2",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/6ab45ec1-4b83-4050-99fc-eae6dc948138.jpg",
+        "file": "assets/posts/biaoren-diting-asang/6ab45ec1-4b83-4050-99fc-eae6dc948138.webp",
+        "alt": "放下銅筋鐵骨的阿相，背影與當初的信行疊合",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/cad3bf44-5cdd-4550-80ca-021ae1231fef.jpg",
+        "file": "assets/posts/biaoren-diting-asang/cad3bf44-5cdd-4550-80ca-021ae1231fef.webp",
+        "alt": "因為真佛不在泥像之中，而是在眾生之中。",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/3cfcf6e0-cd49-423d-8d4b-2598c4996da7.jpg",
+        "file": "assets/posts/biaoren-diting-asang/3cfcf6e0-cd49-423d-8d4b-2598c4996da7.webp",
+        "alt": "重看《鏢人》才懂，「諦聽」以死明「相」｜圖片 5",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/94475db8-52fc-46dc-b140-5dfa610c90ea.jpg",
+        "file": "assets/posts/biaoren-diting-asang/94475db8-52fc-46dc-b140-5dfa610c90ea.webp",
+        "alt": "阿相不信佛，卻讓師父活成了他心目中的泥像",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/935c60ac-1e91-42ad-b6e3-0afaa38315d4.jpg",
+        "file": "assets/posts/biaoren-diting-asang/935c60ac-1e91-42ad-b6e3-0afaa38315d4.webp",
+        "alt": "入京後師父每日背負著阿相的殺業，想回家卻不可得",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/51e49602-d5cd-48b1-86fd-49a01628222a.jpg",
+        "file": "assets/posts/biaoren-diting-asang/51e49602-d5cd-48b1-86fd-49a01628222a.webp",
+        "alt": "諦聽是辨別真偽的神獸，卻不懂師父弘揚佛法的本意",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/4059337d-c40a-4e94-a4f3-3bdf50ec8412.jpg",
+        "file": "assets/posts/biaoren-diting-asang/4059337d-c40a-4e94-a4f3-3bdf50ec8412.webp",
+        "alt": "諦聽為三階教唯一敬拜之地藏王菩薩的座騎",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/8efffcc3-cfd6-4f5b-8a1b-9497690dd440.jpg",
+        "file": "assets/posts/biaoren-diting-asang/8efffcc3-cfd6-4f5b-8a1b-9497690dd440.webp",
+        "alt": "重看《鏢人》才懂，「諦聽」以死明「相」｜圖片 10",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/d2054a0d-b07b-4f64-acac-6d7ac8937911.jpg",
+        "file": "assets/posts/biaoren-diting-asang/d2054a0d-b07b-4f64-acac-6d7ac8937911.webp",
+        "alt": "重看《鏢人》才懂，「諦聽」以死明「相」｜圖片 11",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/98fed2a3-8a92-4784-8c1f-9c9d05b016a1.jpg",
+        "file": "assets/posts/biaoren-diting-asang/98fed2a3-8a92-4784-8c1f-9c9d05b016a1.webp",
+        "alt": "重看《鏢人》才懂，「諦聽」以死明「相」｜圖片 12",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/492c8175-d946-432a-bc92-b63884ce88a6.jpg",
+        "file": "assets/posts/biaoren-diting-asang/492c8175-d946-432a-bc92-b63884ce88a6.webp",
+        "alt": "如夢幻泡影 如露亦如電 應作如是觀",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/d276a317-8b89-4e5c-9395-4899e5aa5c28.jpg",
+        "file": "assets/posts/biaoren-diting-asang/d276a317-8b89-4e5c-9395-4899e5aa5c28.webp",
+        "alt": "重看《鏢人》才懂，「諦聽」以死明「相」｜圖片 14",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/f3288cc0-cd0a-489d-b40a-d26b412ca138.jpg",
+        "file": "assets/posts/biaoren-diting-asang/f3288cc0-cd0a-489d-b40a-d26b412ca138.webp",
+        "alt": "重看《鏢人》才懂，「諦聽」以死明「相」｜圖片 15",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/1c52ab03-d7ef-4a23-97e7-1e9201cf9f64.jpg",
+        "file": "assets/posts/biaoren-diting-asang/1c52ab03-d7ef-4a23-97e7-1e9201cf9f64.webp",
+        "alt": "重看《鏢人》才懂，「諦聽」以死明「相」｜圖片 16",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/cae2e33e-ea25-4c0e-b2ee-6cd7d54e45d0.jpg",
+        "file": "assets/posts/biaoren-diting-asang/cae2e33e-ea25-4c0e-b2ee-6cd7d54e45d0.webp",
+        "alt": "重看《鏢人》才懂，「諦聽」以死明「相」｜圖片 17",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/6ab96a16-80a7-4ed9-8f6d-56ca84daa8c0.jpg",
+        "file": "assets/posts/biaoren-diting-asang/6ab96a16-80a7-4ed9-8f6d-56ca84daa8c0.webp",
+        "alt": "放下銅鞭 跪地成佛—「三階之相」",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "1c52ab03-d7ef-4a23-97e7-1e9201cf9f64.webp",
+      "2b6ee3a4-5b9c-442f-b109-f72803c50d72.webp",
+      "3cfcf6e0-cd49-423d-8d4b-2598c4996da7.webp",
+      "4059337d-c40a-4e94-a4f3-3bdf50ec8412.webp",
+      "492c8175-d946-432a-bc92-b63884ce88a6.webp",
+      "51e49602-d5cd-48b1-86fd-49a01628222a.webp",
+      "6ab45ec1-4b83-4050-99fc-eae6dc948138.webp",
+      "6ab96a16-80a7-4ed9-8f6d-56ca84daa8c0.webp",
+      "744cc7a0-2ede-4a50-8519-1f8e3deffd3e.webp",
+      "8efffcc3-cfd6-4f5b-8a1b-9497690dd440.webp",
+      "935c60ac-1e91-42ad-b6e3-0afaa38315d4.webp",
+      "94475db8-52fc-46dc-b140-5dfa610c90ea.webp",
+      "98fed2a3-8a92-4784-8c1f-9c9d05b016a1.webp",
+      "cad3bf44-5cdd-4550-80ca-021ae1231fef.webp",
+      "cae2e33e-ea25-4c0e-b2ee-6cd7d54e45d0.webp",
+      "d2054a0d-b07b-4f64-acac-6d7ac8937911.webp",
+      "d276a317-8b89-4e5c-9395-4899e5aa5c28.webp",
+      "f3288cc0-cd0a-489d-b40a-d26b412ca138.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true
+  }
 }

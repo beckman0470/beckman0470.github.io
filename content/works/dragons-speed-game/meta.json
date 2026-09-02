@@ -46,5 +46,70 @@
   ],
   "cover": "assets/story-covers/default.svg",
   "coverAlt": "味全龍的速度戰：從大帝士盜出三連霸，看二代龍的腿哥部隊｜雞爸爸生活研究室代表插圖",
-  "coverStatus": "placeholder"
+  "coverStatus": "placeholder",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a1022dbfd897800017def05",
+    "sourceUrl": "https://vocus.cc/article/6a1022dbfd897800017def05",
+    "canonicalUrl": "https://vocus.cc/article/6a1022dbfd897800017def05",
+    "originalPublishedAt": "2026-05-22T17:52:19+08:00",
+    "originalUpdatedAtCandidate": "2026-05-25T10:37:50+08:00",
+    "bodySha256": "e2f4d9ca1455cf928c2f90532b836f78e3402ec637a486ac18671f865e1cf218",
+    "markdownSha256": "b4dc8654591dcee50191fda5d324041e90979dab78a83d89258a449460e771b2",
+    "mappingStatus": "proposed-high-confidence",
+    "categoryProposal": {
+      "primary": "風格誌",
+      "secondary": [],
+      "confidence": 0.98,
+      "needsReview": false,
+      "reason": "關鍵詞：味全龍、棒球、投手、盜壘、投捕、李凱威",
+      "scores": {
+        "保健室": 0,
+        "風格誌": 9,
+        "圖書室": 0,
+        "光影誌": 0,
+        "家庭誌": 0
+      },
+      "hits": [
+        "味全龍",
+        "棒球",
+        "投手",
+        "盜壘",
+        "投捕",
+        "李凱威"
+      ]
+    },
+    "seriesProposal": "棒球札記",
+    "relationshipProposals": [
+      "雞爸爸 × 味全龍速度戰觀察"
+    ],
+    "timelineProposal": {
+      "date": "2026-05-22",
+      "type": "publication",
+      "label": "味全龍的速度戰：從大帝士盜出三連霸，看二代龍的腿哥部隊",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/548b0264-2505-47ff-817a-845ef59f899a.jpg",
+        "file": "assets/posts/dragons-speed-game/548b0264-2505-47ff-817a-845ef59f899a.webp",
+        "alt": "張政禹的驚天一盜，讓龍迷回想起壘包間的紅色閃電",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/f20100ad-60eb-4ee3-9619-e0a15ee5d9d4.jpg",
+        "file": "assets/posts/dragons-speed-game/f20100ad-60eb-4ee3-9619-e0a15ee5d9d4.webp",
+        "alt": "快如閃電的味全龍盜帝─大帝士",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "548b0264-2505-47ff-817a-845ef59f899a.webp",
+      "f20100ad-60eb-4ee3-9619-e0a15ee5d9d4.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true
+  }
 }

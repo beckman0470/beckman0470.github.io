@@ -1,0 +1,91 @@
+{
+  "id": "CDJ-20260528-014BAC7A",
+  "title": "接受自己的不足 才是修行的開始",
+  "slug": "vocus-20260528-014bac7a",
+  "series": "生活研究",
+  "category": "生活研究",
+  "published": "2026-05-28",
+  "updated": "2026-05-29",
+  "readingTime": 1,
+  "subtitle": "最近常發現自己修為真的不夠，還是得好好修啊！常常因為人家的一些話，或是一些事情，就讓我耿耿於懷，自我精神內耗。這不就是我執？就放下它啊？",
+  "signature": "",
+  "people": [],
+  "relationship": [
+    "雞爸爸的生活研究"
+  ],
+  "tags": [
+    "修行",
+    "應無所住",
+    "而生其心"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "雞爸爸的生活研究"
+  ],
+  "cover": "assets/posts/vocus-20260528-014bac7a/2c6b5a0a-435c-4dd8-bf26-694d40dedd2f.webp",
+  "coverAlt": "src",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "post",
+    "sourceId": "6a186257fd897800014bac7a",
+    "sourceUrl": "https://vocus.cc/post/6a186257fd897800014bac7a",
+    "canonicalUrl": "https://vocus.cc/post/6a186257fd897800014bac7a",
+    "originalPublishedAt": "2026-05-28T23:42:15+08:00",
+    "originalUpdatedAtCandidate": "2026-05-29T00:04:39+08:00",
+    "bodySha256": "d968b9b33581a40d7fae209c0963feba91f46b462ce0dfd1b6c373b1f4303815",
+    "markdownSha256": "3f448431f6742932dabb8edac75c406fc9d960753c87d84d4c8f683d97b720e6",
+    "mappingStatus": "resolved-pending-preview-approval",
+    "categoryProposal": {
+      "primary": "圖書室",
+      "secondary": [],
+      "confidence": 1.0,
+      "needsReview": false,
+      "reason": "semantic editorial review",
+      "scores": {
+        "保健室": 0,
+        "風格誌": 0,
+        "圖書室": 0,
+        "光影誌": 0,
+        "家庭誌": 0
+      },
+      "hits": []
+    },
+    "seriesProposal": "生活研究",
+    "relationshipProposals": [
+      "雞爸爸的生活研究"
+    ],
+    "timelineProposal": {
+      "date": "2026-05-28",
+      "type": "publication",
+      "label": "接受自己的不足 才是修行的開始",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/2c6b5a0a-435c-4dd8-bf26-694d40dedd2f.png",
+        "file": "assets/posts/vocus-20260528-014bac7a/2c6b5a0a-435c-4dd8-bf26-694d40dedd2f.webp",
+        "alt": "src",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "2c6b5a0a-435c-4dd8-bf26-694d40dedd2f.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true,
+    "contentTemplate": "compact",
+    "fallbackPolicy": {
+      "iframe": "safe-external-link",
+      "video": "safe-external-link",
+      "poll": "static-question-options-with-vocus-link"
+    },
+    "editorialReviewNotes": [
+      "依正文核心主題完成語意校正",
+      "採 compact template；仍納入時間軸、人物與標籤"
+    ],
+    "previewApprovalStatus": "pending"
+  }
+}

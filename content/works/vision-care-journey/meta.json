@@ -1,0 +1,104 @@
+{
+  "id": "CDJ-20260626-018FD0A2",
+  "title": "從心疼、戴鏡到重新學會陪伴：陪鼠姊姊走過先天遠視與斜視的護眼之路",
+  "slug": "vision-care-journey",
+  "series": "幸福點滴",
+  "category": "幸福點滴",
+  "published": "2026-06-26",
+  "updated": "2026-07-10",
+  "readingTime": 6,
+  "subtitle": "孩子的成長，不一定都是一路平順。有些挑戰來得早，甚至早到她還不會開口表達。我們能做的，是幫她找資源，讓她自己選擇想走的路，再牽著她一起走。",
+  "signature": "",
+  "people": [
+    "雞爸爸",
+    "鼠媽媽",
+    "鼠姊姊"
+  ],
+  "relationship": [
+    "鼠媽媽的家庭成長故事"
+  ],
+  "tags": [
+    "雞爸爸",
+    "鼠姊姊",
+    "鼠媽媽",
+    "姊姊",
+    "爸媽",
+    "父母",
+    "爸爸",
+    "媽媽",
+    "孩子"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "鼠媽媽的家庭成長故事"
+  ],
+  "cover": "assets/posts/vision-care-journey/195e05dd-e60e-4e7d-b758-22116e68c756.webp",
+  "coverAlt": "從心疼、戴鏡到重新學會陪伴：陪鼠姊姊走過先天遠視與斜視的護眼之路｜圖片 1",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a3dd1f5fd897800018fd0a2",
+    "sourceUrl": "https://vocus.cc/article/6a3dd1f5fd897800018fd0a2",
+    "canonicalUrl": "https://vocus.cc/article/6a3dd1f5fd897800018fd0a2",
+    "originalPublishedAt": "2026-06-26T10:40:12+08:00",
+    "originalUpdatedAtCandidate": "2026-07-10T23:24:31+08:00",
+    "bodySha256": "8ff4e5b2fc13386a29b7965b320c75bba6ea6c6239d4233750d5ba852efc06d9",
+    "markdownSha256": "5200b103a3157288314c18e0e8e868ec0e199c9fe1f368db7370be95627463e1",
+    "mappingStatus": "proposed-high-confidence",
+    "categoryProposal": {
+      "primary": "家庭誌",
+      "secondary": [
+        "保健室"
+      ],
+      "confidence": 0.98,
+      "needsReview": false,
+      "reason": "關鍵詞：鼠姊姊、鼠媽媽、姊姊、爸媽、父母、爸爸",
+      "scores": {
+        "保健室": 14,
+        "風格誌": 0,
+        "圖書室": 0,
+        "光影誌": 0,
+        "家庭誌": 23
+      },
+      "hits": [
+        "鼠姊姊",
+        "鼠媽媽",
+        "姊姊",
+        "爸媽",
+        "父母",
+        "爸爸",
+        "媽媽",
+        "孩子",
+        "家庭",
+        "親子",
+        "幼兒園"
+      ]
+    },
+    "seriesProposal": "幸福點滴",
+    "relationshipProposals": [
+      "鼠媽媽的家庭成長故事"
+    ],
+    "timelineProposal": {
+      "date": "2026-06-26",
+      "type": "publication",
+      "label": "從心疼、戴鏡到重新學會陪伴：陪鼠姊姊走過先天遠視與斜視的護眼之路",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/195e05dd-e60e-4e7d-b758-22116e68c756.png",
+        "file": "assets/posts/vision-care-journey/195e05dd-e60e-4e7d-b758-22116e68c756.webp",
+        "alt": "從心疼、戴鏡到重新學會陪伴：陪鼠姊姊走過先天遠視與斜視的護眼之路｜圖片 1",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "195e05dd-e60e-4e7d-b758-22116e68c756.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "id": "CDJ-20260723-0102189E",
+  "title": "原本只想買個點心，卻在1985窯烤披薩裡飛馳人生",
+  "slug": "vocus-20260723-0102189e",
+  "series": "幸福點滴",
+  "category": "幸福點滴",
+  "published": "2026-07-23",
+  "updated": "2026-07-23",
+  "readingTime": 5,
+  "subtitle": "轉角遇到的 不只有小點心",
+  "signature": "",
+  "people": [
+    "雞爸爸",
+    "鼠媽媽",
+    "鼠姊姊",
+    "龍弟弟"
+  ],
+  "relationship": [
+    "鼠媽媽的家庭成長故事"
+  ],
+  "tags": [
+    "雞爸爸生活研究室",
+    "雞爸爸",
+    "鼠姊姊",
+    "龍弟弟",
+    "鼠媽媽",
+    "姊姊",
+    "弟弟",
+    "爸爸",
+    "媽媽",
+    "孩子"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "鼠媽媽的家庭成長故事"
+  ],
+  "cover": "assets/posts/vocus-20260723-0102189e/37aa4d24-320a-4bfc-b490-b6e741bbd74a.webp",
+  "coverAlt": "原本只想買個點心，卻在1985窯烤披薩裡飛馳人生｜圖片 1",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a61c08cfd8978000102189e",
+    "sourceUrl": "https://vocus.cc/article/6a61c08cfd8978000102189e",
+    "canonicalUrl": "https://vocus.cc/article/6a61c08cfd8978000102189e",
+    "originalPublishedAt": "2026-07-23T16:24:17+08:00",
+    "originalUpdatedAtCandidate": "2026-07-23T17:26:25+08:00",
+    "bodySha256": "61a2bc66dae2f6fa1714de2b2645e21232da3848eff18fa0f27538ae837211cd",
+    "markdownSha256": "fa3b32c33cb88addb72577635b9c8eeeb66fd63fc490ce3c90d9583488bf76d9",
+    "mappingStatus": "proposed-high-confidence",
+    "categoryProposal": {
+      "primary": "家庭誌",
+      "secondary": [],
+      "confidence": 0.98,
+      "needsReview": false,
+      "reason": "關鍵詞：鼠姊姊、龍弟弟、鼠媽媽、姊姊、弟弟、爸爸",
+      "scores": {
+        "保健室": 0,
+        "風格誌": 0,
+        "圖書室": 0,
+        "光影誌": 0,
+        "家庭誌": 16
+      },
+      "hits": [
+        "鼠姊姊",
+        "龍弟弟",
+        "鼠媽媽",
+        "姊姊",
+        "弟弟",
+        "爸爸",
+        "媽媽",
+        "孩子",
+        "親子",
+        "畢業典禮"
+      ]
+    },
+    "seriesProposal": "幸福點滴",
+    "relationshipProposals": [
+      "鼠媽媽的家庭成長故事"
+    ],
+    "timelineProposal": {
+      "date": "2026-07-23",
+      "type": "publication",
+      "label": "原本只想買個點心，卻在1985窯烤披薩裡飛馳人生",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/37aa4d24-320a-4bfc-b490-b6e741bbd74a.png",
+        "file": "assets/posts/vocus-20260723-0102189e/37aa4d24-320a-4bfc-b490-b6e741bbd74a.webp",
+        "alt": "原本只想買個點心，卻在1985窯烤披薩裡飛馳人生｜圖片 1",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "37aa4d24-320a-4bfc-b490-b6e741bbd74a.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true
+  }
+}

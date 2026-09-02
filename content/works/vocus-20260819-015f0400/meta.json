@@ -1,0 +1,113 @@
+{
+  "id": "CDJ-20260819-015F0400",
+  "title": "無論有沒有馬凡氏症，血管還是得顧：雞爸爸花83元，在公司樓下找到自己的 MY WAY",
+  "slug": "vocus-20260819-015f0400",
+  "series": "生活研究",
+  "category": "生活研究",
+  "published": "2026-08-19",
+  "updated": "2026-08-19",
+  "readingTime": 9,
+  "subtitle": "前幾天，雞爸爸還在研究馬凡氏症。",
+  "signature": "",
+  "people": [
+    "雞爸爸",
+    "鼠姊姊",
+    "ChatGPT／小妾"
+  ],
+  "relationship": [
+    "鼠姊姊的健康觀察"
+  ],
+  "tags": [
+    "雞爸爸生活研究室",
+    "雞爸爸",
+    "低成本快樂",
+    "健康",
+    "血管",
+    "馬凡",
+    "脂肪",
+    "體重",
+    "健檢"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "鼠姊姊的健康觀察"
+  ],
+  "cover": "assets/posts/vocus-20260819-015f0400/47b8ea5e-3f82-404e-b4fc-3d028a8cf945.webp",
+  "coverAlt": "無論有沒有馬凡氏症，血管還是得顧：雞爸爸花83元，在公司樓下找到自己的 MY WAY｜圖片 1",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a855a09fd897800015f0400",
+    "sourceUrl": "https://vocus.cc/article/6a855a09fd897800015f0400",
+    "canonicalUrl": "https://vocus.cc/article/6a855a09fd897800015f0400",
+    "originalPublishedAt": "2026-08-19T16:41:26+08:00",
+    "originalUpdatedAtCandidate": "2026-08-19T16:58:17+08:00",
+    "bodySha256": "42f41790666e620d69ca18f6e1a54f7f6911e48ba102f1fd96e3ac0ff60c196a",
+    "markdownSha256": "4fd71e754544468617fb0305eda291b9944bd39042fe5ae82f7c7a1d3a1cee6d",
+    "mappingStatus": "proposed-high-confidence",
+    "categoryProposal": {
+      "primary": "保健室",
+      "secondary": [
+        "家庭誌"
+      ],
+      "confidence": 0.98,
+      "needsReview": false,
+      "reason": "關鍵詞：健康、血管、馬凡、脂肪、體重、健檢",
+      "scores": {
+        "保健室": 12,
+        "風格誌": 0,
+        "圖書室": 0,
+        "光影誌": 0,
+        "家庭誌": 6
+      },
+      "hits": [
+        "健康",
+        "血管",
+        "馬凡",
+        "脂肪",
+        "體重",
+        "健檢"
+      ]
+    },
+    "seriesProposal": "生活研究",
+    "relationshipProposals": [
+      "鼠姊姊的健康觀察"
+    ],
+    "timelineProposal": {
+      "date": "2026-08-19",
+      "type": "publication",
+      "label": "無論有沒有馬凡氏症，血管還是得顧：雞爸爸花83元，在公司樓下找到自己的 MY WAY",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/47b8ea5e-3f82-404e-b4fc-3d028a8cf945.png",
+        "file": "assets/posts/vocus-20260819-015f0400/47b8ea5e-3f82-404e-b4fc-3d028a8cf945.webp",
+        "alt": "無論有沒有馬凡氏症，血管還是得顧：雞爸爸花83元，在公司樓下找到自己的 MY WAY｜圖片 1",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/30c1f2bb-c19e-4b3a-b69d-dd823d1ad009.jpg",
+        "file": "assets/posts/vocus-20260819-015f0400/30c1f2bb-c19e-4b3a-b69d-dd823d1ad009.webp",
+        "alt": "無論有沒有馬凡氏症，血管還是得顧：雞爸爸花83元，在公司樓下找到自己的 MY WAY｜圖片 2",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/5fa6849d-f0ae-4510-9a09-8cf4722c011d.png",
+        "file": "assets/posts/vocus-20260819-015f0400/5fa6849d-f0ae-4510-9a09-8cf4722c011d.avif",
+        "alt": "無論有沒有馬凡氏症，血管還是得顧：雞爸爸花83元，在公司樓下找到自己的 MY WAY｜圖片 3",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "30c1f2bb-c19e-4b3a-b69d-dd823d1ad009.webp",
+      "47b8ea5e-3f82-404e-b4fc-3d028a8cf945.webp",
+      "5fa6849d-f0ae-4510-9a09-8cf4722c011d.avif"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true
+  }
+}

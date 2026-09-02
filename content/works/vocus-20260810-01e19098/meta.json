@@ -1,0 +1,110 @@
+{
+  "id": "CDJ-20260810-01E19098",
+  "title": "13姨一句話，打碎了雞爸爸的破關幻想",
+  "slug": "vocus-20260810-01e19098",
+  "series": "幸福點滴",
+  "category": "幸福點滴",
+  "published": "2026-08-10",
+  "updated": "2026-08-10",
+  "readingTime": 7,
+  "subtitle": "雞爸爸才開心跟鼠媽媽說 我們快出新手村了",
+  "signature": "",
+  "people": [
+    "雞爸爸",
+    "鼠媽媽",
+    "鼠姊姊",
+    "龍弟弟"
+  ],
+  "relationship": [
+    "鼠媽媽的家庭成長故事"
+  ],
+  "tags": [
+    "雞爸爸生活研究室",
+    "雞爸爸",
+    "龍弟弟",
+    "鼠姊姊",
+    "鼠媽媽",
+    "姊姊",
+    "弟弟",
+    "爸媽",
+    "爸爸",
+    "媽媽"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "鼠媽媽的家庭成長故事"
+  ],
+  "cover": "assets/posts/vocus-20260810-01e19098/642f3119-9396-4212-8837-9748719200fc.webp",
+  "coverAlt": "13姨一句話，打碎了雞爸爸的破關幻想｜圖片 1",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a794bc4fd89780001e19098",
+    "sourceUrl": "https://vocus.cc/article/6a794bc4fd89780001e19098",
+    "canonicalUrl": "https://vocus.cc/article/6a794bc4fd89780001e19098",
+    "originalPublishedAt": "2026-08-10T15:31:22+08:00",
+    "originalUpdatedAtCandidate": "2026-08-10T15:31:23+08:00",
+    "bodySha256": "42379b9a8842f6c7236891acdbe05baf2bf11387657bb050e6220e5ddac379f7",
+    "markdownSha256": "cb3c74a5deb6b136b56c2892cd3ffa7336fe716a37eec5b0c4609d125d7c7ddd",
+    "mappingStatus": "proposed-high-confidence",
+    "categoryProposal": {
+      "primary": "家庭誌",
+      "secondary": [],
+      "confidence": 0.98,
+      "needsReview": false,
+      "reason": "關鍵詞：鼠姊姊、龍弟弟、鼠媽媽、姊姊、弟弟、爸媽",
+      "scores": {
+        "保健室": 0,
+        "風格誌": 0,
+        "圖書室": 0,
+        "光影誌": 0,
+        "家庭誌": 17
+      },
+      "hits": [
+        "鼠姊姊",
+        "龍弟弟",
+        "鼠媽媽",
+        "姊姊",
+        "弟弟",
+        "爸媽",
+        "爸爸",
+        "媽媽",
+        "孩子",
+        "家庭"
+      ]
+    },
+    "seriesProposal": "幸福點滴",
+    "relationshipProposals": [
+      "鼠媽媽的家庭成長故事"
+    ],
+    "timelineProposal": {
+      "date": "2026-08-10",
+      "type": "publication",
+      "label": "13姨一句話，打碎了雞爸爸的破關幻想",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/642f3119-9396-4212-8837-9748719200fc.png",
+        "file": "assets/posts/vocus-20260810-01e19098/642f3119-9396-4212-8837-9748719200fc.webp",
+        "alt": "13姨一句話，打碎了雞爸爸的破關幻想｜圖片 1",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/da54d63f-198b-4c45-a504-1c0077b681f3.png",
+        "file": "assets/posts/vocus-20260810-01e19098/da54d63f-198b-4c45-a504-1c0077b681f3.avif",
+        "alt": "13姨一句話，打碎了雞爸爸的破關幻想｜圖片 2",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "642f3119-9396-4212-8837-9748719200fc.webp",
+      "da54d63f-198b-4c45-a504-1c0077b681f3.avif"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true
+  }
+}

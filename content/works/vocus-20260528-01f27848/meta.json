@@ -1,0 +1,95 @@
+{
+  "id": "CDJ-20260528-01F27848",
+  "title": "原來寫作是一場重啟感官的修行",
+  "slug": "vocus-20260528-01f27848",
+  "series": "生活研究",
+  "category": "生活研究",
+  "published": "2026-05-28",
+  "updated": "2026-05-28",
+  "readingTime": 3,
+  "subtitle": "為賦新辭強說愁 不就是一種「刻意練習」?",
+  "signature": "",
+  "people": [],
+  "relationship": [
+    "雞爸爸的健康觀察"
+  ],
+  "tags": [
+    "寫作",
+    "禪修",
+    "金剛經",
+    "健康",
+    "皮質醇"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "雞爸爸的健康觀察"
+  ],
+  "cover": "assets/posts/vocus-20260528-01f27848/211f1bfa-7e23-4730-a85c-8d78b0a64d48.webp",
+  "coverAlt": "原來寫作是一場重啟感官的修行｜圖片 1",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a155d86fd89780001f27848",
+    "sourceUrl": "https://vocus.cc/article/6a155d86fd89780001f27848",
+    "canonicalUrl": "https://vocus.cc/article/6a155d86fd89780001f27848",
+    "originalPublishedAt": "2026-05-28T10:18:21+08:00",
+    "originalUpdatedAtCandidate": "2026-05-28T10:19:19+08:00",
+    "bodySha256": "0019ecddd7597bbc6e5f5a968545141c529b282be688e8abb458e51af26be87f",
+    "markdownSha256": "d7a86fed2a803b9502468fe976c5d17b129b06a1ade3805f98b9a690f0c8a881",
+    "mappingStatus": "resolved-pending-preview-approval",
+    "categoryProposal": {
+      "primary": "圖書室",
+      "secondary": [],
+      "confidence": 1.0,
+      "needsReview": false,
+      "reason": "semantic editorial review",
+      "scores": {
+        "保健室": 2,
+        "風格誌": 0,
+        "圖書室": 0,
+        "光影誌": 0,
+        "家庭誌": 1
+      },
+      "hits": [
+        "健康",
+        "皮質醇"
+      ]
+    },
+    "seriesProposal": "生活研究",
+    "relationshipProposals": [
+      "雞爸爸的健康觀察"
+    ],
+    "timelineProposal": {
+      "date": "2026-05-28",
+      "type": "publication",
+      "label": "原來寫作是一場重啟感官的修行",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/211f1bfa-7e23-4730-a85c-8d78b0a64d48.png",
+        "file": "assets/posts/vocus-20260528-01f27848/211f1bfa-7e23-4730-a85c-8d78b0a64d48.webp",
+        "alt": "原來寫作是一場重啟感官的修行｜圖片 1",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "211f1bfa-7e23-4730-a85c-8d78b0a64d48.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true,
+    "contentTemplate": "article",
+    "fallbackPolicy": {
+      "iframe": "safe-external-link",
+      "video": "safe-external-link",
+      "poll": "static-question-options-with-vocus-link"
+    },
+    "editorialReviewNotes": [
+      "依正文核心主題完成語意校正"
+    ],
+    "previewApprovalStatus": "pending"
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "id": "CDJ-20260530-01ED957D",
+  "title": "為什麼減肥總是復胖？",
+  "slug": "vocus-20260530-01ed957d",
+  "series": "生活研究",
+  "category": "生活研究",
+  "published": "2026-05-30",
+  "updated": "2026-05-30",
+  "readingTime": 3,
+  "subtitle": "「問題可能不在意志力，而是大腦還沒接受你變瘦」",
+  "signature": "",
+  "people": [],
+  "relationship": [
+    "雞爸爸的健康觀察"
+  ],
+  "tags": [
+    "體重",
+    "身體",
+    "大腦",
+    "健康",
+    "減肥",
+    "復胖",
+    "脂肪",
+    "肌肉"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "雞爸爸的健康觀察"
+  ],
+  "cover": "assets/posts/vocus-20260530-01ed957d/9572360c-8789-48e0-b591-fcbbfc8b40da.webp",
+  "coverAlt": "「問題可能不在意志力，而是大腦還沒接受你變瘦」",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a1a53fffd89780001ed957d",
+    "sourceUrl": "https://vocus.cc/article/6a1a53fffd89780001ed957d",
+    "canonicalUrl": "https://vocus.cc/article/6a1a53fffd89780001ed957d",
+    "originalPublishedAt": "2026-05-30T11:24:17+08:00",
+    "originalUpdatedAtCandidate": "2026-05-30T11:24:17+08:00",
+    "bodySha256": "73d886d46f55ba8e8f89c45eca198f500419f9d5dffe5e45fcdbac4c17c5935c",
+    "markdownSha256": "5ca8de09e4874a52f31ac11db4449e7b20f1f16cbceb43362ddf52b402db1da4",
+    "mappingStatus": "proposed-high-confidence",
+    "categoryProposal": {
+      "primary": "保健室",
+      "secondary": [],
+      "confidence": 0.98,
+      "needsReview": false,
+      "reason": "關鍵詞：健康、減肥、復胖、脂肪、肌肉、體重",
+      "scores": {
+        "保健室": 14,
+        "風格誌": 0,
+        "圖書室": 0,
+        "光影誌": 0,
+        "家庭誌": 0
+      },
+      "hits": [
+        "健康",
+        "減肥",
+        "復胖",
+        "脂肪",
+        "肌肉",
+        "體重"
+      ]
+    },
+    "seriesProposal": "生活研究",
+    "relationshipProposals": [
+      "雞爸爸的健康觀察"
+    ],
+    "timelineProposal": {
+      "date": "2026-05-30",
+      "type": "publication",
+      "label": "為什麼減肥總是復胖？",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/9572360c-8789-48e0-b591-fcbbfc8b40da.png",
+        "file": "assets/posts/vocus-20260530-01ed957d/9572360c-8789-48e0-b591-fcbbfc8b40da.webp",
+        "alt": "「問題可能不在意志力，而是大腦還沒接受你變瘦」",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "9572360c-8789-48e0-b591-fcbbfc8b40da.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true
+  }
+}

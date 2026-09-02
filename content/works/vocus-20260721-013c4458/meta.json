@@ -1,0 +1,102 @@
+{
+  "id": "CDJ-20260721-013C4458",
+  "title": "姊姊的永遠比較香：鼠姊姊與龍弟弟的手足愛恨日常",
+  "slug": "vocus-20260721-013c4458",
+  "series": "幸福點滴",
+  "category": "幸福點滴",
+  "published": "2026-07-21",
+  "updated": "2026-07-21",
+  "readingTime": 6,
+  "subtitle": "其實從側面看兩姊弟小打小鬧，希望你們也覺得有個手足在身邊，真好",
+  "signature": "",
+  "people": [
+    "雞爸爸",
+    "鼠媽媽",
+    "鼠姊姊",
+    "龍弟弟"
+  ],
+  "relationship": [
+    "鼠媽媽的家庭成長故事"
+  ],
+  "tags": [
+    "雞爸爸生活研究室",
+    "鼠姊姊",
+    "龍弟弟",
+    "鼠媽媽",
+    "姊姊",
+    "弟弟",
+    "爸媽",
+    "爸爸",
+    "媽媽"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "鼠媽媽的家庭成長故事"
+  ],
+  "cover": "assets/posts/vocus-20260721-013c4458/a8ab4c16-0215-47d6-89aa-2b01d86584f2.webp",
+  "coverAlt": "其實從側面看兩姊弟小打小鬧，希望你們也覺得有個手足在身邊，真好",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a5ee35efd897800013c4458",
+    "sourceUrl": "https://vocus.cc/article/6a5ee35efd897800013c4458",
+    "canonicalUrl": "https://vocus.cc/article/6a5ee35efd897800013c4458",
+    "originalPublishedAt": "2026-07-21T15:27:06+08:00",
+    "originalUpdatedAtCandidate": "2026-07-21T15:29:43+08:00",
+    "bodySha256": "b1c95ddc0995ca1684542d8dd7127d0f789e9d912b8b97d8daea99929f479dc6",
+    "markdownSha256": "f63beb9e32e64875ddfdee126658ecc41070238b8f3a6cde75964b4045dc3717",
+    "mappingStatus": "proposed-high-confidence",
+    "categoryProposal": {
+      "primary": "家庭誌",
+      "secondary": [],
+      "confidence": 0.98,
+      "needsReview": false,
+      "reason": "關鍵詞：鼠姊姊、龍弟弟、鼠媽媽、姊姊、弟弟、爸媽",
+      "scores": {
+        "保健室": 1,
+        "風格誌": 0,
+        "圖書室": 0,
+        "光影誌": 0,
+        "家庭誌": 27
+      },
+      "hits": [
+        "鼠姊姊",
+        "龍弟弟",
+        "鼠媽媽",
+        "姊姊",
+        "弟弟",
+        "爸媽",
+        "爸爸",
+        "媽媽",
+        "孩子",
+        "手足"
+      ]
+    },
+    "seriesProposal": "幸福點滴",
+    "relationshipProposals": [
+      "鼠媽媽的家庭成長故事"
+    ],
+    "timelineProposal": {
+      "date": "2026-07-21",
+      "type": "publication",
+      "label": "姊姊的永遠比較香：鼠姊姊與龍弟弟的手足愛恨日常",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/a8ab4c16-0215-47d6-89aa-2b01d86584f2.png",
+        "file": "assets/posts/vocus-20260721-013c4458/a8ab4c16-0215-47d6-89aa-2b01d86584f2.webp",
+        "alt": "其實從側面看兩姊弟小打小鬧，希望你們也覺得有個手足在身邊，真好",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "a8ab4c16-0215-47d6-89aa-2b01d86584f2.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true
+  }
+}

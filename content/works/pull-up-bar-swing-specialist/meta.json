@@ -32,5 +32,62 @@
   ],
   "cover": "assets/story-covers/default.svg",
   "coverAlt": "原本想練背肌，卻成了推鞦韆專員｜雞爸爸生活研究室代表插圖",
-  "coverStatus": "placeholder"
+  "coverStatus": "placeholder",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a30a9d9fd897800010926d2",
+    "sourceUrl": "https://vocus.cc/article/6a30a9d9fd897800010926d2",
+    "canonicalUrl": "https://vocus.cc/article/6a30a9d9fd897800010926d2",
+    "originalPublishedAt": "2026-06-16T10:38:05+08:00",
+    "originalUpdatedAtCandidate": "2026-06-21T07:53:38+08:00",
+    "bodySha256": "874bcef4e96cb7e120cf9397b1a9b7baef1200a9696eed8295b80818d2ab8baf",
+    "markdownSha256": "664158632854919a070bba27cd96393d8703bcf05ffdc57c560556dc04334a1b",
+    "mappingStatus": "proposed-high-confidence",
+    "categoryProposal": {
+      "primary": "家庭誌",
+      "secondary": [],
+      "confidence": 0.86,
+      "needsReview": false,
+      "reason": "關鍵詞：龍弟弟、弟弟、爸爸、孩子、親子",
+      "scores": {
+        "保健室": 0,
+        "風格誌": 0,
+        "圖書室": 1,
+        "光影誌": 0,
+        "家庭誌": 5
+      },
+      "hits": [
+        "龍弟弟",
+        "弟弟",
+        "爸爸",
+        "孩子",
+        "親子"
+      ]
+    },
+    "seriesProposal": "幸福點滴",
+    "relationshipProposals": [
+      "雞爸爸 × 龍弟弟"
+    ],
+    "timelineProposal": {
+      "date": "2026-06-16",
+      "type": "publication",
+      "label": "原本想練背肌，卻成了推鞦韆專員",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/170ad52a-3f7c-4fa8-b1bb-1b5e6510f5bf.png",
+        "file": "assets/posts/pull-up-bar-swing-specialist/170ad52a-3f7c-4fa8-b1bb-1b5e6510f5bf.webp",
+        "alt": "原本想練背肌，卻成了推鞦韆專員｜圖片 1",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "170ad52a-3f7c-4fa8-b1bb-1b5e6510f5bf.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true
+  }
 }

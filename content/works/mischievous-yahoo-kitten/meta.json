@@ -1,0 +1,118 @@
+{
+  "id": "CDJ-20260523-01D55ADD",
+  "title": "調皮的雅虎弟弟",
+  "slug": "mischievous-yahoo-kitten",
+  "series": "幸福點滴",
+  "category": "幸福點滴",
+  "published": "2026-05-23",
+  "updated": "2026-05-25",
+  "readingTime": 1,
+  "subtitle": "雅虎是一個愛跑酷的小貓，因為朋友的店貓生了一窩小貓，在還沒有斷奶的時候就來我們家報到，鼠姐姐很喜歡跟他玩，但實在是太活潑了，常常玩到太瘋…",
+  "signature": "",
+  "people": [
+    "鼠姊姊"
+  ],
+  "relationship": [
+    "鼠姊姊的家庭成長故事"
+  ],
+  "tags": [
+    "貓咪",
+    "奶牛貓",
+    "賓士貓",
+    "鼠姐姐",
+    "弟弟"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "鼠姊姊的家庭成長故事"
+  ],
+  "cover": "assets/posts/mischievous-yahoo-kitten/dc6d0cde-61f3-4a2f-a397-2e6ce71287db.webp",
+  "coverAlt": "src",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "post",
+    "sourceId": "6a1186affd89780001d55add",
+    "sourceUrl": "https://vocus.cc/post/6a1186affd89780001d55add",
+    "canonicalUrl": "https://vocus.cc/post/6a1186affd89780001d55add",
+    "originalPublishedAt": "2026-05-23T18:51:27+08:00",
+    "originalUpdatedAtCandidate": "2026-05-25T17:56:21+08:00",
+    "bodySha256": "8c31bbd8a30025b4d9b6d2395c14a30307bdcdba6247db16117a42362601bfeb",
+    "markdownSha256": "a7c83827feb31faea3e4691350d70dcdd4987968d48aaea0e3dbaf03c9cfecdb",
+    "mappingStatus": "resolved-pending-preview-approval",
+    "categoryProposal": {
+      "primary": "家庭誌",
+      "secondary": [],
+      "confidence": 1.0,
+      "needsReview": false,
+      "reason": "semantic editorial review",
+      "scores": {
+        "保健室": 0,
+        "風格誌": 0,
+        "圖書室": 0,
+        "光影誌": 0,
+        "家庭誌": 5
+      },
+      "hits": [
+        "鼠姐姐",
+        "弟弟"
+      ]
+    },
+    "seriesProposal": "幸福點滴",
+    "relationshipProposals": [
+      "鼠姊姊的家庭成長故事"
+    ],
+    "timelineProposal": {
+      "date": "2026-05-23",
+      "type": "publication",
+      "label": "調皮的雅虎弟弟",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/dc6d0cde-61f3-4a2f-a397-2e6ce71287db.jpg",
+        "file": "assets/posts/mischievous-yahoo-kitten/dc6d0cde-61f3-4a2f-a397-2e6ce71287db.webp",
+        "alt": "src",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/ac23513a-bd04-4a29-8b1f-23a36c02d4b8.jpg",
+        "file": "assets/posts/mischievous-yahoo-kitten/ac23513a-bd04-4a29-8b1f-23a36c02d4b8.webp",
+        "alt": "src",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/25a21245-787c-4186-8771-a59625a786d0.jpg",
+        "file": "assets/posts/mischievous-yahoo-kitten/25a21245-787c-4186-8771-a59625a786d0.webp",
+        "alt": "src",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/2eb2d8d5-9d70-4634-b65c-2e669b97c0c3.jpg",
+        "file": "assets/posts/mischievous-yahoo-kitten/2eb2d8d5-9d70-4634-b65c-2e669b97c0c3.webp",
+        "alt": "src",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "25a21245-787c-4186-8771-a59625a786d0.webp",
+      "2eb2d8d5-9d70-4634-b65c-2e669b97c0c3.webp",
+      "ac23513a-bd04-4a29-8b1f-23a36c02d4b8.webp",
+      "dc6d0cde-61f3-4a2f-a397-2e6ce71287db.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true,
+    "contentTemplate": "compact",
+    "fallbackPolicy": {
+      "iframe": "safe-external-link",
+      "video": "safe-external-link",
+      "poll": "static-question-options-with-vocus-link"
+    },
+    "editorialReviewNotes": [
+      "採 compact template；仍納入時間軸、人物與標籤"
+    ],
+    "previewApprovalStatus": "pending"
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "id": "CDJ-20260527-01DBEAC4",
+  "title": "別只看精品店的櫥窗  意外小品更令人深刻",
+  "slug": "vocus-20260527-01dbeac4",
+  "series": "生活研究",
+  "category": "生活研究",
+  "published": "2026-05-27",
+  "updated": "2026-05-27",
+  "readingTime": 1,
+  "subtitle": "最近看到蔡康永曾經在訪談裡說到，其實他推薦的書單中，有一半以上的書根本不值得推薦，但他並不會因此感到抱歉，因為很多時候，他就是因為看了一本不怎樣的書，腦海中卻冒出很棒的想法。",
+  "signature": "",
+  "people": [],
+  "relationship": [
+    "雞爸爸的閱讀與角色觀察"
+  ],
+  "tags": [
+    "書"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "雞爸爸的閱讀與角色觀察"
+  ],
+  "cover": "assets/posts/vocus-20260527-01dbeac4/fa48aebe-168f-4d96-abbe-86fc5103e9cc.webp",
+  "coverAlt": "src",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "post",
+    "sourceId": "6a170c00fd89780001dbeac4",
+    "sourceUrl": "https://vocus.cc/post/6a170c00fd89780001dbeac4",
+    "canonicalUrl": "https://vocus.cc/post/6a170c00fd89780001dbeac4",
+    "originalPublishedAt": "2026-05-27T23:21:36+08:00",
+    "originalUpdatedAtCandidate": "2026-05-27T23:50:40+08:00",
+    "bodySha256": "88c6ec230921fcc28c879a3ba8a7dcd5ff84e86e4b11cfd5f64a9924d6d9a8f2",
+    "markdownSha256": "431edf23e45bcd14cb5705bb7dce99511e00dd54ba41ddabed41e4a2f419d156",
+    "mappingStatus": "resolved-pending-preview-approval",
+    "categoryProposal": {
+      "primary": "圖書室",
+      "secondary": [],
+      "confidence": 1.0,
+      "needsReview": false,
+      "reason": "semantic editorial review",
+      "scores": {
+        "保健室": 0,
+        "風格誌": 0,
+        "圖書室": 1,
+        "光影誌": 0,
+        "家庭誌": 0
+      },
+      "hits": [
+        "書"
+      ]
+    },
+    "seriesProposal": "生活研究",
+    "relationshipProposals": [
+      "雞爸爸的閱讀與角色觀察"
+    ],
+    "timelineProposal": {
+      "date": "2026-05-27",
+      "type": "publication",
+      "label": "別只看精品店的櫥窗  意外小品更令人深刻",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/fa48aebe-168f-4d96-abbe-86fc5103e9cc.png",
+        "file": "assets/posts/vocus-20260527-01dbeac4/fa48aebe-168f-4d96-abbe-86fc5103e9cc.webp",
+        "alt": "src",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/f9aec014-3d3c-46bb-ae71-10b579343f35.jpg",
+        "file": "assets/posts/vocus-20260527-01dbeac4/f9aec014-3d3c-46bb-ae71-10b579343f35.webp",
+        "alt": "src",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "f9aec014-3d3c-46bb-ae71-10b579343f35.webp",
+      "fa48aebe-168f-4d96-abbe-86fc5103e9cc.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true,
+    "contentTemplate": "compact",
+    "fallbackPolicy": {
+      "iframe": "safe-external-link",
+      "video": "safe-external-link",
+      "poll": "static-question-options-with-vocus-link"
+    },
+    "editorialReviewNotes": [
+      "依正文核心主題完成語意校正",
+      "採 compact template；仍納入時間軸、人物與標籤"
+    ],
+    "previewApprovalStatus": "pending"
+  }
+}

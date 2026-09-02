@@ -1,0 +1,99 @@
+{
+  "id": "CDJ-20260815-0119A0BB",
+  "title": "指定要看「垃圾車」其實是龍弟弟借給雞爸爸一雙兩歲的眼睛來看世界",
+  "slug": "vocus-20260815-0119a0bb",
+  "series": "幸福點滴",
+  "category": "幸福點滴",
+  "published": "2026-08-15",
+  "updated": "2026-08-15",
+  "readingTime": 10,
+  "subtitle": "快兩歲的龍弟弟越來越會說話，最近還解鎖新技能：遙控爸爸轉電視。之前是咕咕雞、BangBangBang，現在會指著螢幕的「Bebefinn」還隨著電視喊bebe，他喊Finn！",
+  "signature": "",
+  "people": [
+    "雞爸爸",
+    "鼠媽媽",
+    "龍弟弟",
+    "兔阿嬤"
+  ],
+  "relationship": [
+    "鼠媽媽的家庭成長故事"
+  ],
+  "tags": [
+    "雞爸爸生活研究室",
+    "雞爸爸",
+    "龍弟弟",
+    "鼠媽媽",
+    "兔阿嬤",
+    "弟弟",
+    "爸爸",
+    "媽媽",
+    "孩子"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "鼠媽媽的家庭成長故事"
+  ],
+  "cover": "assets/posts/vocus-20260815-0119a0bb/8ffe76e5-de4b-49af-ba96-52537899a1c4.webp",
+  "coverAlt": "指定要看「垃圾車」其實是龍弟弟借給雞爸爸一雙兩歲的眼睛來看世界｜圖片 1",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a7fdd03fd8978000119a0bb",
+    "sourceUrl": "https://vocus.cc/article/6a7fdd03fd8978000119a0bb",
+    "canonicalUrl": "https://vocus.cc/article/6a7fdd03fd8978000119a0bb",
+    "originalPublishedAt": "2026-08-15T12:47:29+08:00",
+    "originalUpdatedAtCandidate": "2026-08-15T12:47:30+08:00",
+    "bodySha256": "a04b728570bb1859bfdd8c9e51f2ab2ff3427cfc05cd0e48b5cb1bde8b984d43",
+    "markdownSha256": "19ac6f86c360e8f041eac75703b05df1f3168a73cfdfa1a69fd367d39656e7f1",
+    "mappingStatus": "proposed-high-confidence",
+    "categoryProposal": {
+      "primary": "家庭誌",
+      "secondary": [],
+      "confidence": 0.98,
+      "needsReview": false,
+      "reason": "關鍵詞：龍弟弟、鼠媽媽、兔阿嬤、弟弟、爸爸、媽媽",
+      "scores": {
+        "保健室": 0,
+        "風格誌": 0,
+        "圖書室": 0,
+        "光影誌": 3,
+        "家庭誌": 16
+      },
+      "hits": [
+        "龍弟弟",
+        "鼠媽媽",
+        "兔阿嬤",
+        "弟弟",
+        "爸爸",
+        "媽媽",
+        "孩子"
+      ]
+    },
+    "seriesProposal": "幸福點滴",
+    "relationshipProposals": [
+      "鼠媽媽的家庭成長故事"
+    ],
+    "timelineProposal": {
+      "date": "2026-08-15",
+      "type": "publication",
+      "label": "指定要看「垃圾車」其實是龍弟弟借給雞爸爸一雙兩歲的眼睛來看世界",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/8ffe76e5-de4b-49af-ba96-52537899a1c4.png",
+        "file": "assets/posts/vocus-20260815-0119a0bb/8ffe76e5-de4b-49af-ba96-52537899a1c4.webp",
+        "alt": "指定要看「垃圾車」其實是龍弟弟借給雞爸爸一雙兩歲的眼睛來看世界｜圖片 1",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "8ffe76e5-de4b-49af-ba96-52537899a1c4.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true
+  }
+}

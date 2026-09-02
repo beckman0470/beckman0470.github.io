@@ -1,0 +1,128 @@
+{
+  "id": "CDJ-20260819-014B709B",
+  "title": "見鬼了！從公司健檢查到馬凡氏症，我竟在《死亡筆記本》裡看見自己",
+  "slug": "vocus-20260819-014b709b",
+  "series": "生活研究",
+  "category": "生活研究",
+  "published": "2026-08-19",
+  "updated": "2026-08-19",
+  "readingTime": 16,
+  "subtitle": "從公司健檢、漏斗胸、脊椎側彎，到L的長手指還有路克的胸廓...陪了雞爸爸四十幾年的身體特徵，某一天竟然突然全部串在一起",
+  "signature": "",
+  "people": [
+    "雞爸爸",
+    "鼠姊姊",
+    "兔阿嬤",
+    "ChatGPT／小妾"
+  ],
+  "relationship": [
+    "鼠姊姊的健康觀察"
+  ],
+  "tags": [
+    "雞爸爸生活研究室",
+    "雞爸爸",
+    "中元節",
+    "健康",
+    "血管",
+    "馬凡",
+    "肌肉",
+    "整復",
+    "健檢"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "鼠姊姊的健康觀察"
+  ],
+  "cover": "assets/posts/vocus-20260819-014b709b/dd81d231-d152-4006-9ab8-24dbf3ed186c.webp",
+  "coverAlt": "見鬼了！從公司健檢查到馬凡氏症，我竟在《死亡筆記本》裡看見自己｜圖片 1",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a851804fd897800014b709b",
+    "sourceUrl": "https://vocus.cc/article/6a851804fd897800014b709b",
+    "canonicalUrl": "https://vocus.cc/article/6a851804fd897800014b709b",
+    "originalPublishedAt": "2026-08-19T12:05:34+08:00",
+    "originalUpdatedAtCandidate": "2026-08-19T12:05:35+08:00",
+    "bodySha256": "bcc8e9f350e2ed5c0d04271a381baeb67632d0ee67c578d009ed239082e219b0",
+    "markdownSha256": "c96bcf2f68c10a7c7ccc21fc4808debacbaf390c895caf6f61393a77aa320204",
+    "mappingStatus": "proposed-high-confidence",
+    "categoryProposal": {
+      "primary": "保健室",
+      "secondary": [
+        "家庭誌"
+      ],
+      "confidence": 0.98,
+      "needsReview": false,
+      "reason": "關鍵詞：健康、血管、馬凡、肌肉、整復、健檢",
+      "scores": {
+        "保健室": 12,
+        "風格誌": 0,
+        "圖書室": 2,
+        "光影誌": 1,
+        "家庭誌": 6
+      },
+      "hits": [
+        "健康",
+        "血管",
+        "馬凡",
+        "肌肉",
+        "整復",
+        "健檢"
+      ]
+    },
+    "seriesProposal": "生活研究",
+    "relationshipProposals": [
+      "鼠姊姊的健康觀察"
+    ],
+    "timelineProposal": {
+      "date": "2026-08-19",
+      "type": "publication",
+      "label": "見鬼了！從公司健檢查到馬凡氏症，我竟在《死亡筆記本》裡看見自己",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/dd81d231-d152-4006-9ab8-24dbf3ed186c.png",
+        "file": "assets/posts/vocus-20260819-014b709b/dd81d231-d152-4006-9ab8-24dbf3ed186c.webp",
+        "alt": "見鬼了！從公司健檢查到馬凡氏症，我竟在《死亡筆記本》裡看見自己｜圖片 1",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/54e3c8e4-4374-45e0-bde1-d09766e7732d.png",
+        "file": "assets/posts/vocus-20260819-014b709b/54e3c8e4-4374-45e0-bde1-d09766e7732d.avif",
+        "alt": "見鬼了！從公司健檢查到馬凡氏症，我竟在《死亡筆記本》裡看見自己｜圖片 2",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/dd5dfd4a-2086-41ba-8e24-5344bf4ec85e.png",
+        "file": "assets/posts/vocus-20260819-014b709b/dd5dfd4a-2086-41ba-8e24-5344bf4ec85e.avif",
+        "alt": "見鬼了！從公司健檢查到馬凡氏症，我竟在《死亡筆記本》裡看見自己｜圖片 3",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/118ea481-3724-47ff-acab-5f3318406b63.jpg",
+        "file": "assets/posts/vocus-20260819-014b709b/118ea481-3724-47ff-acab-5f3318406b63.webp",
+        "alt": "見鬼了！從公司健檢查到馬凡氏症，我竟在《死亡筆記本》裡看見自己｜圖片 4",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/123e9c58-a0b8-4c6e-8dcd-1ca310e71aa2.png",
+        "file": "assets/posts/vocus-20260819-014b709b/123e9c58-a0b8-4c6e-8dcd-1ca310e71aa2.webp",
+        "alt": "見鬼了！從公司健檢查到馬凡氏症，我竟在《死亡筆記本》裡看見自己｜圖片 5",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "118ea481-3724-47ff-acab-5f3318406b63.webp",
+      "123e9c58-a0b8-4c6e-8dcd-1ca310e71aa2.webp",
+      "54e3c8e4-4374-45e0-bde1-d09766e7732d.avif",
+      "dd5dfd4a-2086-41ba-8e24-5344bf4ec85e.avif",
+      "dd81d231-d152-4006-9ab8-24dbf3ed186c.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true
+  }
+}

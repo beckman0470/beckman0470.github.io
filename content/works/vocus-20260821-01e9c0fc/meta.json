@@ -1,0 +1,105 @@
+{
+  "id": "CDJ-20260821-01E9C0FC",
+  "title": "龍弟弟一個頭槌，鼠姊姊流了七八張衛生紙：鼻過敏藥真的會讓孩子更容易流鼻血嗎？",
+  "slug": "vocus-20260821-01e9c0fc",
+  "series": "幸福點滴",
+  "category": "幸福點滴",
+  "published": "2026-08-21",
+  "updated": "2026-08-21",
+  "readingTime": 8,
+  "subtitle": "昨天晚上睡覺前，鼠姊姊和龍弟弟又在床上玩起了「親親抱抱」。",
+  "signature": "",
+  "people": [
+    "雞爸爸",
+    "鼠媽媽",
+    "鼠姊姊",
+    "龍弟弟",
+    "ChatGPT／小妾"
+  ],
+  "relationship": [
+    "鼠媽媽的家庭成長故事"
+  ],
+  "tags": [
+    "雞爸爸生活研究室",
+    "鼠姊姊",
+    "鼠媽媽",
+    "龍弟弟",
+    "姊姊",
+    "弟弟",
+    "爸媽",
+    "父母",
+    "爸爸"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "鼠媽媽的家庭成長故事"
+  ],
+  "cover": "assets/posts/vocus-20260821-01e9c0fc/de2abc85-31d3-44cd-9d80-3285873704ea.webp",
+  "coverAlt": "龍弟弟一個頭槌，鼠姊姊流了七八張衛生紙：鼻過敏藥真的會讓孩子更容易流鼻血嗎？｜圖片 1",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a87be12fd89780001e9c0fc",
+    "sourceUrl": "https://vocus.cc/article/6a87be12fd89780001e9c0fc",
+    "canonicalUrl": "https://vocus.cc/article/6a87be12fd89780001e9c0fc",
+    "originalPublishedAt": "2026-08-21T11:14:33+08:00",
+    "originalUpdatedAtCandidate": "2026-08-21T11:14:34+08:00",
+    "bodySha256": "e6eb2c90d7ea9530731739529967304bb167f34316b72fd547161d8fe0c88e56",
+    "markdownSha256": "7aa9ac6af84954720e74d5fd05f12507c4101f647b5b0eb66d40d172f8ddad5b",
+    "mappingStatus": "proposed-high-confidence",
+    "categoryProposal": {
+      "primary": "家庭誌",
+      "secondary": [],
+      "confidence": 0.98,
+      "needsReview": false,
+      "reason": "關鍵詞：鼠姊姊、龍弟弟、鼠媽媽、姊姊、弟弟、爸媽",
+      "scores": {
+        "保健室": 10,
+        "風格誌": 0,
+        "圖書室": 1,
+        "光影誌": 0,
+        "家庭誌": 33
+      },
+      "hits": [
+        "鼠姊姊",
+        "龍弟弟",
+        "鼠媽媽",
+        "姊姊",
+        "弟弟",
+        "爸媽",
+        "父母",
+        "爸爸",
+        "媽媽",
+        "孩子",
+        "家庭",
+        "幼兒園"
+      ]
+    },
+    "seriesProposal": "幸福點滴",
+    "relationshipProposals": [
+      "鼠媽媽的家庭成長故事"
+    ],
+    "timelineProposal": {
+      "date": "2026-08-21",
+      "type": "publication",
+      "label": "龍弟弟一個頭槌，鼠姊姊流了七八張衛生紙：鼻過敏藥真的會讓孩子更容易流鼻血嗎？",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/de2abc85-31d3-44cd-9d80-3285873704ea.png",
+        "file": "assets/posts/vocus-20260821-01e9c0fc/de2abc85-31d3-44cd-9d80-3285873704ea.webp",
+        "alt": "龍弟弟一個頭槌，鼠姊姊流了七八張衛生紙：鼻過敏藥真的會讓孩子更容易流鼻血嗎？｜圖片 1",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "de2abc85-31d3-44cd-9d80-3285873704ea.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "id": "CDJ-20260526-01DD88F5",
+  "title": "龍弟弟愛騎車、模仿周董超搞笑",
+  "slug": "vocus-20260526-01dd88f5",
+  "series": "幸福點滴",
+  "category": "幸福點滴",
+  "published": "2026-05-26",
+  "updated": "2026-05-26",
+  "readingTime": 1,
+  "subtitle": "每天弟弟回家第一件事就是跳上四輪車，咚隆咚隆的騎到阿嬤房門喊著:「阿嬤~阿嬤~」，吵著要阿嬤陪他到遊戲間玩車車。遊戲間裡好幾箱玩具，就是最鍾愛車車那箱，找到喜歡的車車都要拿輪胎「咻~」一下，看看哪一台跑得遠，玩得笑呵呵~~。不過可能從小跟…",
+  "signature": "",
+  "people": [],
+  "relationship": [
+    "雞爸爸的生活研究"
+  ],
+  "tags": [
+    "日常分享",
+    "模仿",
+    "寶寶",
+    "龍弟弟",
+    "弟弟",
+    "媽媽"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "雞爸爸的生活研究"
+  ],
+  "cover": "assets/posts/vocus-20260526-01dd88f5/0788b5ae-5669-4e6f-a650-7fb2636b603b.webp",
+  "coverAlt": "src",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "post",
+    "sourceId": "6a15452efd89780001dd88f5",
+    "sourceUrl": "https://vocus.cc/post/6a15452efd89780001dd88f5",
+    "canonicalUrl": "https://vocus.cc/post/6a15452efd89780001dd88f5",
+    "originalPublishedAt": "2026-05-26T15:01:02+08:00",
+    "originalUpdatedAtCandidate": "2026-05-26T15:40:06+08:00",
+    "bodySha256": "0a208389f4699b27c58babe7e2f24284f67a41147b7cf5a1077df097cd28e2dc",
+    "markdownSha256": "ec973bb13e700fd1ceac8bc191c4ce6a945c91b9d24d26f19c560ba24ce53404",
+    "mappingStatus": "resolved-pending-preview-approval",
+    "categoryProposal": {
+      "primary": "家庭誌",
+      "secondary": [],
+      "confidence": 1.0,
+      "needsReview": false,
+      "reason": "semantic editorial review",
+      "scores": {
+        "保健室": 0,
+        "風格誌": 0,
+        "圖書室": 0,
+        "光影誌": 0,
+        "家庭誌": 9
+      },
+      "hits": [
+        "龍弟弟",
+        "弟弟",
+        "媽媽"
+      ]
+    },
+    "seriesProposal": "幸福點滴",
+    "relationshipProposals": [
+      "雞爸爸的生活研究"
+    ],
+    "timelineProposal": {
+      "date": "2026-05-26",
+      "type": "publication",
+      "label": "龍弟弟愛騎車、模仿周董超搞笑",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/0788b5ae-5669-4e6f-a650-7fb2636b603b.jpg",
+        "file": "assets/posts/vocus-20260526-01dd88f5/0788b5ae-5669-4e6f-a650-7fb2636b603b.webp",
+        "alt": "src",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/66e9e396-00e5-4d23-9010-e57e4dcb6d03.jpg",
+        "file": "assets/posts/vocus-20260526-01dd88f5/66e9e396-00e5-4d23-9010-e57e4dcb6d03.webp",
+        "alt": "src",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "0788b5ae-5669-4e6f-a650-7fb2636b603b.webp",
+      "66e9e396-00e5-4d23-9010-e57e4dcb6d03.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true,
+    "contentTemplate": "compact",
+    "fallbackPolicy": {
+      "iframe": "safe-external-link",
+      "video": "safe-external-link",
+      "poll": "static-question-options-with-vocus-link"
+    },
+    "editorialReviewNotes": [
+      "採 compact template；仍納入時間軸、人物與標籤"
+    ],
+    "previewApprovalStatus": "pending"
+  }
+}

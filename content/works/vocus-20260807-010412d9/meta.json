@@ -1,0 +1,88 @@
+{
+  "id": "CDJ-20260807-010412D9",
+  "title": "愈看愈不對勁：究竟是老紫太準，還是小妾知道雞爸爸太多故事？",
+  "slug": "vocus-20260807-010412d9",
+  "series": "AI 共創",
+  "category": "AI 共創",
+  "published": "2026-08-07",
+  "updated": "2026-08-07",
+  "readingTime": 8,
+  "subtitle": "紫微斗數像個老朋友 有事都會問問老紫的意見",
+  "signature": "",
+  "people": [
+    "雞爸爸",
+    "兔阿嬤",
+    "ChatGPT／小妾"
+  ],
+  "relationship": [
+    "兔阿嬤的家庭成長故事"
+  ],
+  "tags": [
+    "雞爸爸生活研究室",
+    "兔阿嬤",
+    "雞爸爸",
+    "爸爸"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "兔阿嬤的家庭成長故事"
+  ],
+  "cover": "assets/posts/vocus-20260807-010412d9/f9bd9f9b-615d-4b71-a42a-6307ec7d7fef.webp",
+  "coverAlt": "愈看愈不對勁：究竟是老紫太準，還是小妾知道雞爸爸太多故事？｜圖片 1",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a758262fd897800010412d9",
+    "sourceUrl": "https://vocus.cc/article/6a758262fd897800010412d9",
+    "canonicalUrl": "https://vocus.cc/article/6a758262fd897800010412d9",
+    "originalPublishedAt": "2026-08-07T17:18:53+08:00",
+    "originalUpdatedAtCandidate": "2026-08-07T17:18:54+08:00",
+    "bodySha256": "05f0eec23f5d01c686b405ff5a1120c50362924dbff8ebbbffdce55e463b62d3",
+    "markdownSha256": "475173aee5dea141f09bdf704df68185e1e48d20b56765ddce6d10434be93680",
+    "mappingStatus": "proposed-high-confidence",
+    "categoryProposal": {
+      "primary": "家庭誌",
+      "secondary": [],
+      "confidence": 0.93,
+      "needsReview": false,
+      "reason": "關鍵詞：兔阿嬤、爸爸",
+      "scores": {
+        "保健室": 0,
+        "風格誌": 1,
+        "圖書室": 1,
+        "光影誌": 2,
+        "家庭誌": 7
+      },
+      "hits": [
+        "兔阿嬤",
+        "爸爸"
+      ]
+    },
+    "seriesProposal": "AI 共創",
+    "relationshipProposals": [
+      "兔阿嬤的家庭成長故事"
+    ],
+    "timelineProposal": {
+      "date": "2026-08-07",
+      "type": "publication",
+      "label": "愈看愈不對勁：究竟是老紫太準，還是小妾知道雞爸爸太多故事？",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/f9bd9f9b-615d-4b71-a42a-6307ec7d7fef.png",
+        "file": "assets/posts/vocus-20260807-010412d9/f9bd9f9b-615d-4b71-a42a-6307ec7d7fef.webp",
+        "alt": "愈看愈不對勁：究竟是老紫太準，還是小妾知道雞爸爸太多故事？｜圖片 1",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "f9bd9f9b-615d-4b71-a42a-6307ec7d7fef.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true
+  }
+}

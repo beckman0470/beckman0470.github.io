@@ -1,0 +1,91 @@
+{
+  "id": "CDJ-20260726-01086C84",
+  "title": "骨頭還沒放假：雞爸爸第二次被「整」",
+  "slug": "vocus-20260726-01086c84",
+  "series": "生活研究",
+  "category": "生活研究",
+  "published": "2026-07-26",
+  "updated": "2026-07-26",
+  "readingTime": 6,
+  "subtitle": "師父說，每一次調理都會站在前一次的基礎上。第一次先了解身體的大方向，第二次便能再往裡面細看。當然，人的身體只要認真檢查，通常都能找到不少可以調整的地方。",
+  "signature": "",
+  "people": [
+    "雞爸爸"
+  ],
+  "relationship": [
+    "雞爸爸的健康觀察"
+  ],
+  "tags": [
+    "身體",
+    "爸爸",
+    "師父",
+    "肌肉",
+    "骨頭",
+    "整復"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "雞爸爸的健康觀察"
+  ],
+  "cover": "assets/posts/vocus-20260726-01086c84/e9cef40e-a3c3-4e88-ae8f-09173e38b208.webp",
+  "coverAlt": "骨頭還沒放假：雞爸爸第二次被「整」｜圖片 1",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a65aa37fd89780001086c84",
+    "sourceUrl": "https://vocus.cc/article/6a65aa37fd89780001086c84",
+    "canonicalUrl": "https://vocus.cc/article/6a65aa37fd89780001086c84",
+    "originalPublishedAt": "2026-07-26T15:57:46+08:00",
+    "originalUpdatedAtCandidate": "2026-07-26T15:57:47+08:00",
+    "bodySha256": "9bd5a8eb779c9ca51f3a43e8d2a71739c2cdce808ba09f71b10cbf7350a7e4cc",
+    "markdownSha256": "4a460244c7d10766cfa12e6fbb935debf6439611abfa50ce04265d8490255a80",
+    "mappingStatus": "proposed-high-confidence",
+    "categoryProposal": {
+      "primary": "保健室",
+      "secondary": [
+        "家庭誌"
+      ],
+      "confidence": 0.83,
+      "needsReview": false,
+      "reason": "關鍵詞：肌肉、骨頭、整復",
+      "scores": {
+        "保健室": 6,
+        "風格誌": 0,
+        "圖書室": 1,
+        "光影誌": 0,
+        "家庭誌": 4
+      },
+      "hits": [
+        "肌肉",
+        "骨頭",
+        "整復"
+      ]
+    },
+    "seriesProposal": "生活研究",
+    "relationshipProposals": [
+      "雞爸爸的健康觀察"
+    ],
+    "timelineProposal": {
+      "date": "2026-07-26",
+      "type": "publication",
+      "label": "骨頭還沒放假：雞爸爸第二次被「整」",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/e9cef40e-a3c3-4e88-ae8f-09173e38b208.png",
+        "file": "assets/posts/vocus-20260726-01086c84/e9cef40e-a3c3-4e88-ae8f-09173e38b208.webp",
+        "alt": "骨頭還沒放假：雞爸爸第二次被「整」｜圖片 1",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "e9cef40e-a3c3-4e88-ae8f-09173e38b208.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true
+  }
+}

@@ -30,5 +30,63 @@
   ],
   "cover": "assets/story-covers/default.svg",
   "coverAlt": "當下的溫度，就是幸福的定義｜雞爸爸生活研究室代表插圖",
-  "coverStatus": "placeholder"
+  "coverStatus": "placeholder",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a448ee6fd89780001e14b7d",
+    "sourceUrl": "https://vocus.cc/article/6a448ee6fd89780001e14b7d",
+    "canonicalUrl": "https://vocus.cc/article/6a448ee6fd89780001e14b7d",
+    "originalPublishedAt": "2026-07-01T12:56:18+08:00",
+    "originalUpdatedAtCandidate": "2026-07-01T13:00:14+08:00",
+    "bodySha256": "c6451c0fc969502effb1f667755f9299699ce728df4df85b3adc48dad6affdc8",
+    "markdownSha256": "46f5f413dbdf1c58c3c434a6f09f455197a720aa34bdc25f1b7018d9697ec33e",
+    "mappingStatus": "proposed-high-confidence",
+    "categoryProposal": {
+      "primary": "家庭誌",
+      "secondary": [],
+      "confidence": 0.98,
+      "needsReview": false,
+      "reason": "關鍵詞：龍弟弟、鼠媽媽、弟弟、爸爸、媽媽、孩子",
+      "scores": {
+        "保健室": 0,
+        "風格誌": 0,
+        "圖書室": 0,
+        "光影誌": 0,
+        "家庭誌": 12
+      },
+      "hits": [
+        "龍弟弟",
+        "鼠媽媽",
+        "弟弟",
+        "爸爸",
+        "媽媽",
+        "孩子"
+      ]
+    },
+    "seriesProposal": "幸福點滴",
+    "relationshipProposals": [
+      "雞爸爸 × 龍弟弟"
+    ],
+    "timelineProposal": {
+      "date": "2026-07-01",
+      "type": "publication",
+      "label": "當下的溫度，就是幸福的定義",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/a8cfa281-aee2-4b16-ba34-88d94731fb32.png",
+        "file": "assets/posts/temperature-of-now/a8cfa281-aee2-4b16-ba34-88d94731fb32.webp",
+        "alt": "當下的溫度，就是幸福的定義｜圖片 1",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "a8cfa281-aee2-4b16-ba34-88d94731fb32.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true
+  }
 }

@@ -1,0 +1,118 @@
+{
+  "id": "CDJ-20260721-0151D145",
+  "title": "小妾出任務 Vimeo只花14分鐘就給了善意的9450",
+  "slug": "vocus-20260721-0151d145",
+  "series": "AI 共創",
+  "category": "AI 共創",
+  "published": "2026-07-21",
+  "updated": "2026-07-21",
+  "readingTime": 7,
+  "subtitle": "最近為了讓「雞爸爸宇宙」裡的人物動起來，雞爸爸陸續試用了Firefly、DeeVid AI、Vimeo...等影音工具。每一個平台都在研究，每一個功能都想試試看；帳號愈開愈多，試用期限也慢慢在腦袋裡打成一個結。就在剛剛，手機突然跳出一筆刷…",
+  "signature": "",
+  "people": [
+    "雞爸爸",
+    "鼠姊姊",
+    "龍弟弟",
+    "ChatGPT／小妾"
+  ],
+  "relationship": [
+    "雞爸爸的光影與創作記錄"
+  ],
+  "tags": [
+    "雞爸爸生活研究室",
+    "雞爸爸",
+    "AI",
+    "影片",
+    "短影音",
+    "Firefly",
+    "Vimeo"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "雞爸爸的光影與創作記錄"
+  ],
+  "cover": "assets/posts/vocus-20260721-0151d145/3e74fbda-4cc3-4185-8687-c0abe1f8df9e.webp",
+  "coverAlt": "小妾出任務 Vimeo只花14分鐘就給了善意的9450｜圖片 1",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a5f2ab6fd8978000151d145",
+    "sourceUrl": "https://vocus.cc/article/6a5f2ab6fd8978000151d145",
+    "canonicalUrl": "https://vocus.cc/article/6a5f2ab6fd8978000151d145",
+    "originalPublishedAt": "2026-07-21T17:34:53+08:00",
+    "originalUpdatedAtCandidate": "2026-07-21T21:00:57+08:00",
+    "bodySha256": "85930e1466f82149f85c540233229fe39fa46552cd000cabdfaaf28c91c51c88",
+    "markdownSha256": "739a185b4c1faf73fee7ba4a21d4a0713d4085c08815f2558410ebbb8d7a45f0",
+    "mappingStatus": "resolved-pending-preview-approval",
+    "categoryProposal": {
+      "primary": "光影誌",
+      "secondary": [],
+      "confidence": 1.0,
+      "needsReview": false,
+      "reason": "semantic editorial review",
+      "scores": {
+        "保健室": 0,
+        "風格誌": 0,
+        "圖書室": 0,
+        "光影誌": 7,
+        "家庭誌": 7
+      },
+      "hits": [
+        "影片",
+        "短影音",
+        "Firefly",
+        "Vimeo"
+      ]
+    },
+    "seriesProposal": "AI 共創",
+    "relationshipProposals": [
+      "雞爸爸的光影與創作記錄"
+    ],
+    "timelineProposal": {
+      "date": "2026-07-21",
+      "type": "publication",
+      "label": "小妾出任務 Vimeo只花14分鐘就給了善意的9450",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/3e74fbda-4cc3-4185-8687-c0abe1f8df9e.png",
+        "file": "assets/posts/vocus-20260721-0151d145/3e74fbda-4cc3-4185-8687-c0abe1f8df9e.webp",
+        "alt": "小妾出任務 Vimeo只花14分鐘就給了善意的9450｜圖片 1",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/53acdc04-5d30-4f9a-8343-53be0a1c1fc1.png",
+        "file": "assets/posts/vocus-20260721-0151d145/53acdc04-5d30-4f9a-8343-53be0a1c1fc1.avif",
+        "alt": "小妾出任務 Vimeo只花14分鐘就給了善意的9450｜圖片 2",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/3fe9a6ed-cee2-40c4-8e30-ee33e427eac5.png",
+        "file": "assets/posts/vocus-20260721-0151d145/3fe9a6ed-cee2-40c4-8e30-ee33e427eac5.avif",
+        "alt": "小妾出任務 Vimeo只花14分鐘就給了善意的9450｜圖片 3",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "3e74fbda-4cc3-4185-8687-c0abe1f8df9e.webp",
+      "3fe9a6ed-cee2-40c4-8e30-ee33e427eac5.avif",
+      "53acdc04-5d30-4f9a-8343-53be0a1c1fc1.avif"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true,
+    "contentTemplate": "article",
+    "fallbackPolicy": {
+      "iframe": "safe-external-link",
+      "video": "safe-external-link",
+      "poll": "static-question-options-with-vocus-link"
+    },
+    "editorialReviewNotes": [
+      "依正文核心主題完成語意校正"
+    ],
+    "previewApprovalStatus": "pending"
+  }
+}

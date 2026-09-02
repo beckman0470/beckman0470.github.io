@@ -1,0 +1,174 @@
+{
+  "id": "CDJ-20260718-01B3C510",
+  "title": "雞爸爸燒光點數  才知道AI剪不出愛心西瓜皮",
+  "slug": "vocus-20260718-01b3c510",
+  "series": "AI 共創",
+  "category": "AI 共創",
+  "published": "2026-07-18",
+  "updated": "2026-07-18",
+  "readingTime": 6,
+  "subtitle": "今天早上，雞爸爸看了一篇 Seedance2的文章，因為覺得之前阿格的影片有很多細節沒有達到雞爸爸的標準，譬如龍弟弟應該不會說話、兔阿嬤臉變形，於是想重新製作一次龍弟弟吃「阿格」的短影音。結果不論人物畫風、音效，整體感覺意外符合雞爸爸想要…",
+  "signature": "",
+  "people": [
+    "雞爸爸",
+    "鼠媽媽",
+    "龍弟弟",
+    "兔阿嬤",
+    "ChatGPT／小妾"
+  ],
+  "relationship": [
+    "鼠媽媽的家庭成長故事"
+  ],
+  "tags": [
+    "雞爸爸",
+    "雞爸爸生活研究室",
+    "西瓜皮",
+    "龍弟弟",
+    "鼠媽媽",
+    "兔阿嬤",
+    "弟弟",
+    "爸爸",
+    "媽媽",
+    "孩子",
+    "家庭"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "鼠媽媽的家庭成長故事"
+  ],
+  "cover": "assets/posts/vocus-20260718-01b3c510/e7018209-3edb-45e9-a23d-447d73607dd9.webp",
+  "coverAlt": "雞爸爸燒光點數  才知道AI剪不出愛心西瓜皮｜圖片 1",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a5ad43ffd89780001b3c510",
+    "sourceUrl": "https://vocus.cc/article/6a5ad43ffd89780001b3c510",
+    "canonicalUrl": "https://vocus.cc/article/6a5ad43ffd89780001b3c510",
+    "originalPublishedAt": "2026-07-18T11:14:42+08:00",
+    "originalUpdatedAtCandidate": "2026-07-18T11:15:50+08:00",
+    "bodySha256": "5b09d64fc806ca43d33dbd1e57fec4092c6c1eb93391b2c328d53b8f1691c7f2",
+    "markdownSha256": "2c75ad4270aad7b9ec5a9b609e94b54d0546f5e1177919f0bfdca383671a450d",
+    "mappingStatus": "resolved-pending-preview-approval",
+    "categoryProposal": {
+      "primary": "家庭誌",
+      "secondary": [],
+      "confidence": 1.0,
+      "needsReview": false,
+      "reason": "semantic editorial review",
+      "scores": {
+        "保健室": 0,
+        "風格誌": 0,
+        "圖書室": 0,
+        "光影誌": 5,
+        "家庭誌": 11
+      },
+      "hits": [
+        "龍弟弟",
+        "鼠媽媽",
+        "兔阿嬤",
+        "弟弟",
+        "爸爸",
+        "媽媽",
+        "孩子",
+        "家庭"
+      ]
+    },
+    "seriesProposal": "AI 共創",
+    "relationshipProposals": [
+      "鼠媽媽的家庭成長故事"
+    ],
+    "timelineProposal": {
+      "date": "2026-07-18",
+      "type": "publication",
+      "label": "雞爸爸燒光點數  才知道AI剪不出愛心西瓜皮",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/e7018209-3edb-45e9-a23d-447d73607dd9.png",
+        "file": "assets/posts/vocus-20260718-01b3c510/e7018209-3edb-45e9-a23d-447d73607dd9.webp",
+        "alt": "雞爸爸燒光點數  才知道AI剪不出愛心西瓜皮｜圖片 1",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/40705322-3fe7-4d7f-891d-ba197fcb4713.png",
+        "file": "assets/posts/vocus-20260718-01b3c510/40705322-3fe7-4d7f-891d-ba197fcb4713.webp",
+        "alt": "雞爸爸燒光點數  才知道AI剪不出愛心西瓜皮｜圖片 2",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/e774f397-80a7-4e95-ac20-92af084ab225.png",
+        "file": "assets/posts/vocus-20260718-01b3c510/e774f397-80a7-4e95-ac20-92af084ab225.webp",
+        "alt": "雞爸爸燒光點數  才知道AI剪不出愛心西瓜皮｜圖片 3",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/4d4347ff-f96e-427c-86f4-172ec94f7b9c.png",
+        "file": "assets/posts/vocus-20260718-01b3c510/4d4347ff-f96e-427c-86f4-172ec94f7b9c.webp",
+        "alt": "雞爸爸燒光點數  才知道AI剪不出愛心西瓜皮｜圖片 4",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/f32b35eb-94c5-4401-ad06-1c3fddefef20.png",
+        "file": "assets/posts/vocus-20260718-01b3c510/f32b35eb-94c5-4401-ad06-1c3fddefef20.webp",
+        "alt": "雞爸爸燒光點數  才知道AI剪不出愛心西瓜皮｜圖片 5",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/79a8b715-905e-41ea-ba22-299dc0a855b3.png",
+        "file": "assets/posts/vocus-20260718-01b3c510/79a8b715-905e-41ea-ba22-299dc0a855b3.webp",
+        "alt": "雞爸爸燒光點數  才知道AI剪不出愛心西瓜皮｜圖片 6",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/f7a36330-2b95-4906-a639-a2b8984183f5.png",
+        "file": "assets/posts/vocus-20260718-01b3c510/f7a36330-2b95-4906-a639-a2b8984183f5.webp",
+        "alt": "雞爸爸燒光點數  才知道AI剪不出愛心西瓜皮｜圖片 7",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/d7becac9-0765-4b4f-8f4a-540c7123d109.png",
+        "file": "assets/posts/vocus-20260718-01b3c510/d7becac9-0765-4b4f-8f4a-540c7123d109.webp",
+        "alt": "雞爸爸燒光點數  才知道AI剪不出愛心西瓜皮｜圖片 8",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/8f720981-fc02-4cff-87e2-67b46fccc138.png",
+        "file": "assets/posts/vocus-20260718-01b3c510/8f720981-fc02-4cff-87e2-67b46fccc138.webp",
+        "alt": "雞爸爸燒光點數  才知道AI剪不出愛心西瓜皮｜圖片 9",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "40705322-3fe7-4d7f-891d-ba197fcb4713.webp",
+      "4d4347ff-f96e-427c-86f4-172ec94f7b9c.webp",
+      "79a8b715-905e-41ea-ba22-299dc0a855b3.webp",
+      "8f720981-fc02-4cff-87e2-67b46fccc138.webp",
+      "d7becac9-0765-4b4f-8f4a-540c7123d109.webp",
+      "e7018209-3edb-45e9-a23d-447d73607dd9.webp",
+      "e774f397-80a7-4e95-ac20-92af084ab225.webp",
+      "f32b35eb-94c5-4401-ad06-1c3fddefef20.webp",
+      "f7a36330-2b95-4906-a639-a2b8984183f5.webp"
+    ],
+    "interactiveKinds": [
+      "iframe"
+    ],
+    "embedUrls": [
+      "https://www.youtube-nocookie.com/embed/SC5Z0nlXuV4",
+      "https://www.youtube-nocookie.com/embed/P4aFn87ne_4"
+    ],
+    "doNotPublishUntilApproved": true,
+    "contentTemplate": "article",
+    "fallbackPolicy": {
+      "iframe": "safe-external-link",
+      "video": "safe-external-link",
+      "poll": "static-question-options-with-vocus-link"
+    },
+    "editorialReviewNotes": [
+      "影音改為安全外連；投票保留問題與選項並連回 Vocus"
+    ],
+    "previewApprovalStatus": "pending"
+  }
+}

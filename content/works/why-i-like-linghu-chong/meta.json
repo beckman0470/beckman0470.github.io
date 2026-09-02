@@ -43,5 +43,74 @@
   ],
   "cover": "assets/story-covers/default.svg",
   "coverAlt": "為什麼喜歡金庸筆下的令狐沖？｜雞爸爸生活研究室代表插圖",
-  "coverStatus": "placeholder"
+  "coverStatus": "placeholder",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a1b9d4afd8978000152c7d1",
+    "sourceUrl": "https://vocus.cc/article/6a1b9d4afd8978000152c7d1",
+    "canonicalUrl": "https://vocus.cc/article/6a1b9d4afd8978000152c7d1",
+    "originalPublishedAt": "2026-05-31T11:47:14+08:00",
+    "originalUpdatedAtCandidate": "2026-05-31T11:57:06+08:00",
+    "bodySha256": "e83031d9bd4f04927d3a05e6a4befb738acb68ababe81244c017477afa240511",
+    "markdownSha256": "37bad6c35c541516f5034c9ac2f38c17eec67209b33bbfa1a63ede51f7d44913",
+    "mappingStatus": "resolved-pending-preview-approval",
+    "categoryProposal": {
+      "primary": "圖書室",
+      "secondary": [],
+      "confidence": 1.0,
+      "needsReview": false,
+      "reason": "semantic editorial review",
+      "scores": {
+        "保健室": 0,
+        "風格誌": 0,
+        "圖書室": 13,
+        "光影誌": 1,
+        "家庭誌": 0
+      },
+      "hits": [
+        "金庸",
+        "令狐沖",
+        "笑傲江湖",
+        "小說",
+        "武俠"
+      ]
+    },
+    "seriesProposal": "生活研究",
+    "relationshipProposals": [
+      "雞爸爸 × 令狐沖的自由人生觀"
+    ],
+    "timelineProposal": {
+      "date": "2026-05-31",
+      "type": "publication",
+      "label": "為什麼喜歡金庸筆下的令狐沖？",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/6b707ec9-f91e-4424-b5c9-768bd2a12ea0.jpg",
+        "file": "assets/posts/why-i-like-linghu-chong/6b707ec9-f91e-4424-b5c9-768bd2a12ea0.webp",
+        "alt": "誰是你心目中那個笑傲江湖的令狐沖",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "6b707ec9-f91e-4424-b5c9-768bd2a12ea0.webp"
+    ],
+    "interactiveKinds": [
+      "poll"
+    ],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true,
+    "contentTemplate": "article",
+    "fallbackPolicy": {
+      "iframe": "safe-external-link",
+      "video": "safe-external-link",
+      "poll": "static-question-options-with-vocus-link"
+    },
+    "editorialReviewNotes": [
+      "影音改為安全外連；投票保留問題與選項並連回 Vocus"
+    ],
+    "previewApprovalStatus": "pending"
+  }
 }

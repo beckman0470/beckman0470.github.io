@@ -1,0 +1,105 @@
+{
+  "id": "CDJ-20260730-018E0198",
+  "title": "鼠姊姊決定說對不起：有些事情不是誰對誰錯，而是誰願意先靠近",
+  "slug": "vocus-20260730-018e0198",
+  "series": "幸福點滴",
+  "category": "幸福點滴",
+  "published": "2026-07-30",
+  "updated": "2026-07-30",
+  "readingTime": 6,
+  "subtitle": "突如其來的夏令營 即將再次面對陌生環境",
+  "signature": "",
+  "people": [
+    "雞爸爸",
+    "鼠媽媽",
+    "鼠姊姊",
+    "龍弟弟",
+    "兔阿嬤"
+  ],
+  "relationship": [
+    "鼠媽媽的家庭成長故事"
+  ],
+  "tags": [
+    "雞爸爸生活研究室",
+    "鼠姊姊",
+    "幼兒園生活",
+    "龍弟弟",
+    "鼠媽媽",
+    "兔阿嬤",
+    "姊姊",
+    "弟弟",
+    "爸爸",
+    "媽媽"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "鼠媽媽的家庭成長故事"
+  ],
+  "cover": "assets/posts/vocus-20260730-018e0198/89ef6eb2-ea19-4506-983e-fdc36da4ad97.webp",
+  "coverAlt": "鼠姊姊決定說對不起：有些事情不是誰對誰錯，而是誰願意先靠近｜圖片 1",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a6ab460fd897800018e0198",
+    "sourceUrl": "https://vocus.cc/article/6a6ab460fd897800018e0198",
+    "canonicalUrl": "https://vocus.cc/article/6a6ab460fd897800018e0198",
+    "originalPublishedAt": "2026-07-30T11:16:30+08:00",
+    "originalUpdatedAtCandidate": "2026-07-30T11:16:31+08:00",
+    "bodySha256": "cb136dfb34d6e9bd12c2f594d2445a9f909fe91bf3a77ca39a146619df2d0bf5",
+    "markdownSha256": "d3f98553d577a6a0b6d633ac2535a504a63eb99fdf52c27f7e74bfc3333938ee",
+    "mappingStatus": "proposed-high-confidence",
+    "categoryProposal": {
+      "primary": "家庭誌",
+      "secondary": [],
+      "confidence": 0.98,
+      "needsReview": false,
+      "reason": "關鍵詞：鼠姊姊、龍弟弟、鼠媽媽、兔阿嬤、姊姊、弟弟",
+      "scores": {
+        "保健室": 0,
+        "風格誌": 0,
+        "圖書室": 0,
+        "光影誌": 0,
+        "家庭誌": 21
+      },
+      "hits": [
+        "鼠姊姊",
+        "龍弟弟",
+        "鼠媽媽",
+        "兔阿嬤",
+        "姊姊",
+        "弟弟",
+        "爸爸",
+        "媽媽",
+        "孩子",
+        "家庭",
+        "幼兒園"
+      ]
+    },
+    "seriesProposal": "幸福點滴",
+    "relationshipProposals": [
+      "鼠媽媽的家庭成長故事"
+    ],
+    "timelineProposal": {
+      "date": "2026-07-30",
+      "type": "publication",
+      "label": "鼠姊姊決定說對不起：有些事情不是誰對誰錯，而是誰願意先靠近",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/89ef6eb2-ea19-4506-983e-fdc36da4ad97.png",
+        "file": "assets/posts/vocus-20260730-018e0198/89ef6eb2-ea19-4506-983e-fdc36da4ad97.webp",
+        "alt": "鼠姊姊決定說對不起：有些事情不是誰對誰錯，而是誰願意先靠近｜圖片 1",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "89ef6eb2-ea19-4506-983e-fdc36da4ad97.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true
+  }
+}
