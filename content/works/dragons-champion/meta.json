@@ -1,0 +1,113 @@
+{
+  "id": "CDJ-20260620-01C03108",
+  "title": "味全龍這一冠，屬於用心經營的球團！",
+  "slug": "dragons-champion",
+  "series": "棒球札記",
+  "category": "棒球札記",
+  "published": "2026-06-20",
+  "updated": "2026-06-21",
+  "readingTime": 5,
+  "subtitle": "今天澄清湖球場一片紅潮～2026味全龍上半季冠軍！紅彩帶太美了💖🐲❤️",
+  "signature": "",
+  "people": [],
+  "relationship": [
+    "雞爸爸的棒球觀察"
+  ],
+  "tags": [
+    "中華職棒",
+    "CPBL",
+    "味全龍",
+    "棒球",
+    "投手",
+    "陳子豪",
+    "徐若熙",
+    "龍隊",
+    "球團",
+    "盜壘"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "雞爸爸的棒球觀察"
+  ],
+  "cover": "assets/posts/dragons-champion/5f0f8127-4ccb-4eac-8dbf-1ef16836b39f.webp",
+  "coverAlt": "味全龍這一冠，屬於用心經營的球團！｜圖片 1",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a366d54fd89780001c03108",
+    "sourceUrl": "https://vocus.cc/article/6a366d54fd89780001c03108",
+    "canonicalUrl": "https://vocus.cc/article/6a366d54fd89780001c03108",
+    "originalPublishedAt": "2026-06-20T22:57:29+08:00",
+    "originalUpdatedAtCandidate": "2026-06-21T07:56:17+08:00",
+    "bodySha256": "ec9e6bc56a0338b9c3381593274f1d486c23d317f1af122ae556b70e3816e01b",
+    "markdownSha256": "8bfaaecc91a495f61a3452a8dd6f542dba4e47e12afa4ab1d87276456999774e",
+    "mappingStatus": "proposed-high-confidence",
+    "categoryProposal": {
+      "primary": "風格誌",
+      "secondary": [],
+      "confidence": 0.98,
+      "needsReview": false,
+      "reason": "關鍵詞：味全龍、棒球、投手、陳子豪、徐若熙、龍隊",
+      "scores": {
+        "保健室": 1,
+        "風格誌": 17,
+        "圖書室": 0,
+        "光影誌": 0,
+        "家庭誌": 0
+      },
+      "hits": [
+        "味全龍",
+        "棒球",
+        "投手",
+        "陳子豪",
+        "徐若熙",
+        "龍隊",
+        "球團",
+        "盜壘",
+        "投捕",
+        "吉力吉撈",
+        "李凱威"
+      ]
+    },
+    "seriesProposal": "棒球札記",
+    "relationshipProposals": [
+      "雞爸爸的棒球觀察"
+    ],
+    "timelineProposal": {
+      "date": "2026-06-20",
+      "type": "publication",
+      "label": "味全龍這一冠，屬於用心經營的球團！",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/5f0f8127-4ccb-4eac-8dbf-1ef16836b39f.jpg",
+        "file": "assets/posts/dragons-champion/5f0f8127-4ccb-4eac-8dbf-1ef16836b39f.webp",
+        "alt": "味全龍這一冠，屬於用心經營的球團！｜圖片 1",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/4b458ad8-aa25-423e-a2d3-df509839aa71.jpg",
+        "file": "assets/posts/dragons-champion/4b458ad8-aa25-423e-a2d3-df509839aa71.webp",
+        "alt": "味全龍這一冠，屬於用心經營的球團！｜圖片 2",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/c4278b1f-f379-4a4e-b390-658bf9f4481b.png",
+        "file": "assets/posts/dragons-champion/c4278b1f-f379-4a4e-b390-658bf9f4481b.avif",
+        "alt": "味全龍這一冠，屬於用心經營的球團！｜圖片 3",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "4b458ad8-aa25-423e-a2d3-df509839aa71.webp",
+      "5f0f8127-4ccb-4eac-8dbf-1ef16836b39f.webp",
+      "c4278b1f-f379-4a4e-b390-658bf9f4481b.avif"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true
+  }
+}

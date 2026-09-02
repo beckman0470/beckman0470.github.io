@@ -1,0 +1,119 @@
+{
+  "id": "CDJ-20260714-01FD0251",
+  "title": "全家動起來! 雞爸爸的第一支短影片",
+  "slug": "vocus-20260714-01fd0251",
+  "series": "AI 共創",
+  "category": "AI 共創",
+  "published": "2026-07-14",
+  "updated": "2026-07-14",
+  "readingTime": 6,
+  "subtitle": "前陣子，雞爸爸花了不少時間，把「雞爸爸宇宙」裡的一家五口重新整理了一遍。",
+  "signature": "",
+  "people": [
+    "雞爸爸",
+    "鼠媽媽",
+    "鼠姊姊",
+    "龍弟弟",
+    "兔阿嬤",
+    "ChatGPT／小妾"
+  ],
+  "relationship": [
+    "雞爸爸的光影與創作記錄"
+  ],
+  "tags": [
+    "雞爸爸",
+    "AI短影音",
+    "Firefly",
+    "影片",
+    "短影音",
+    "Vimeo",
+    "YouTube",
+    "鏡頭",
+    "動畫"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "雞爸爸的光影與創作記錄"
+  ],
+  "cover": "assets/posts/vocus-20260714-01fd0251/5255264e-9906-4181-8ab9-9b2a5ae50daa.webp",
+  "coverAlt": "全家動起來! 雞爸爸的第一支短影片｜圖片 1",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a55fddbfd89780001fd0251",
+    "sourceUrl": "https://vocus.cc/article/6a55fddbfd89780001fd0251",
+    "canonicalUrl": "https://vocus.cc/article/6a55fddbfd89780001fd0251",
+    "originalPublishedAt": "2026-07-14T18:03:28+08:00",
+    "originalUpdatedAtCandidate": "2026-07-14T18:03:29+08:00",
+    "bodySha256": "73e7efd6a796126544a41ddb2ff495212289fb96bc3eb9e02f1a0ed0e56b8d4a",
+    "markdownSha256": "7d39387d735109352c4e798e3a0073b02a8410e58085028a9e12565765d9dd0b",
+    "mappingStatus": "resolved-pending-preview-approval",
+    "categoryProposal": {
+      "primary": "光影誌",
+      "secondary": [
+        "家庭誌"
+      ],
+      "confidence": 1.0,
+      "needsReview": false,
+      "reason": "semantic editorial review",
+      "scores": {
+        "保健室": 0,
+        "風格誌": 0,
+        "圖書室": 1,
+        "光影誌": 14,
+        "家庭誌": 15
+      },
+      "hits": [
+        "影片",
+        "短影音",
+        "Firefly",
+        "Vimeo",
+        "YouTube",
+        "鏡頭",
+        "動畫"
+      ]
+    },
+    "seriesProposal": "AI 共創",
+    "relationshipProposals": [
+      "雞爸爸的光影與創作記錄"
+    ],
+    "timelineProposal": {
+      "date": "2026-07-14",
+      "type": "publication",
+      "label": "全家動起來! 雞爸爸的第一支短影片",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/5255264e-9906-4181-8ab9-9b2a5ae50daa.jpg",
+        "file": "assets/posts/vocus-20260714-01fd0251/5255264e-9906-4181-8ab9-9b2a5ae50daa.webp",
+        "alt": "全家動起來! 雞爸爸的第一支短影片｜圖片 1",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "5255264e-9906-4181-8ab9-9b2a5ae50daa.webp"
+    ],
+    "interactiveKinds": [
+      "iframe"
+    ],
+    "embedUrls": [
+      "https://www.youtube-nocookie.com/embed/fazCeOgb3wY",
+      "https://www.youtube-nocookie.com/embed/GhQJbCUdqo4"
+    ],
+    "doNotPublishUntilApproved": true,
+    "contentTemplate": "article",
+    "fallbackPolicy": {
+      "iframe": "safe-external-link",
+      "video": "safe-external-link",
+      "poll": "static-question-options-with-vocus-link"
+    },
+    "editorialReviewNotes": [
+      "依正文核心主題完成語意校正",
+      "影音改為安全外連；投票保留問題與選項並連回 Vocus"
+    ],
+    "previewApprovalStatus": "pending"
+  }
+}

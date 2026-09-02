@@ -1,0 +1,108 @@
+{
+  "id": "CDJ-20260817-01C4C38C",
+  "title": "特別企劃｜雞爸爸到底是哪種創作者？",
+  "slug": "vocus-20260817-01c4c38c",
+  "series": "AI 共創",
+  "category": "AI 共創",
+  "published": "2026-08-17",
+  "updated": "2026-08-17",
+  "readingTime": 10,
+  "subtitle": "第100篇讓小妾拿起麥克風：人機協作專訪ChickenDad",
+  "signature": "",
+  "people": [
+    "雞爸爸",
+    "鼠媽媽",
+    "鼠姊姊",
+    "龍弟弟",
+    "兔阿嬤",
+    "ChatGPT／小妾"
+  ],
+  "relationship": [
+    "鼠媽媽的家庭成長故事"
+  ],
+  "tags": [
+    "雞爸爸生活研究室",
+    "雞爸爸",
+    "小妾",
+    "鼠姊姊",
+    "龍弟弟",
+    "鼠媽媽",
+    "兔阿嬤",
+    "姊姊",
+    "弟弟",
+    "父母",
+    "爸爸"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "鼠媽媽的家庭成長故事"
+  ],
+  "cover": "assets/posts/vocus-20260817-01c4c38c/7dd8f287-27ff-4407-af30-c5ef5144a082.webp",
+  "coverAlt": "特別企劃｜雞爸爸到底是哪種創作者？｜圖片 1",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a82a32bfd89780001c4c38c",
+    "sourceUrl": "https://vocus.cc/article/6a82a32bfd89780001c4c38c",
+    "canonicalUrl": "https://vocus.cc/article/6a82a32bfd89780001c4c38c",
+    "originalPublishedAt": "2026-08-17T16:35:23+08:00",
+    "originalUpdatedAtCandidate": "2026-08-17T16:35:24+08:00",
+    "bodySha256": "b7d8df99fd69b8a422de60d02dc2282f23787a75d773cfd5505d8ec0541d9c20",
+    "markdownSha256": "e56b3d54418b70d0af3b7b601ee88526db087bbadbfde1d1b7bf5660e0882b86",
+    "mappingStatus": "proposed-high-confidence",
+    "categoryProposal": {
+      "primary": "家庭誌",
+      "secondary": [],
+      "confidence": 0.98,
+      "needsReview": false,
+      "reason": "關鍵詞：鼠姊姊、龍弟弟、鼠媽媽、兔阿嬤、姊姊、弟弟",
+      "scores": {
+        "保健室": 6,
+        "風格誌": 6,
+        "圖書室": 0,
+        "光影誌": 1,
+        "家庭誌": 15
+      },
+      "hits": [
+        "鼠姊姊",
+        "龍弟弟",
+        "鼠媽媽",
+        "兔阿嬤",
+        "姊姊",
+        "弟弟",
+        "父母",
+        "爸爸",
+        "媽媽",
+        "孩子",
+        "家庭",
+        "親子"
+      ]
+    },
+    "seriesProposal": "AI 共創",
+    "relationshipProposals": [
+      "鼠媽媽的家庭成長故事"
+    ],
+    "timelineProposal": {
+      "date": "2026-08-17",
+      "type": "publication",
+      "label": "特別企劃｜雞爸爸到底是哪種創作者？",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/7dd8f287-27ff-4407-af30-c5ef5144a082.png",
+        "file": "assets/posts/vocus-20260817-01c4c38c/7dd8f287-27ff-4407-af30-c5ef5144a082.webp",
+        "alt": "特別企劃｜雞爸爸到底是哪種創作者？｜圖片 1",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "7dd8f287-27ff-4407-af30-c5ef5144a082.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true
+  }
+}

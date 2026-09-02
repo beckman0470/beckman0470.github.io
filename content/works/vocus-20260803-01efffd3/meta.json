@@ -1,0 +1,99 @@
+{
+  "id": "CDJ-20260803-01EFFFD3",
+  "title": "Threads帳號被永久停用後，雞爸爸才明白：平台從來不是生活的證明",
+  "slug": "vocus-20260803-01efffd3",
+  "series": "幸福點滴",
+  "category": "幸福點滴",
+  "published": "2026-08-03",
+  "updated": "2026-08-03",
+  "readingTime": 9,
+  "subtitle": "AI裁判看錯了？好吧，等一下挑戰成功就好",
+  "signature": "",
+  "people": [
+    "雞爸爸",
+    "龍弟弟"
+  ],
+  "relationship": [
+    "龍弟弟的家庭成長故事"
+  ],
+  "tags": [
+    "雞爸爸生活研究室",
+    "雞爸爸",
+    "Threads",
+    "龍弟弟",
+    "弟弟",
+    "爸爸",
+    "親子"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "龍弟弟的家庭成長故事"
+  ],
+  "cover": "assets/posts/vocus-20260803-01efffd3/20fce394-b37f-4da0-88d4-b86283edea58.webp",
+  "coverAlt": "Threads帳號被永久停用後，雞爸爸才明白：平台從來不是生活的證明｜圖片 1",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a7051d8fd89780001efffd3",
+    "sourceUrl": "https://vocus.cc/article/6a7051d8fd89780001efffd3",
+    "canonicalUrl": "https://vocus.cc/article/6a7051d8fd89780001efffd3",
+    "originalPublishedAt": "2026-08-03T18:12:43+08:00",
+    "originalUpdatedAtCandidate": "2026-08-03T18:12:43+08:00",
+    "bodySha256": "d0ad59cd2d7852bd7341d2cbbff1a0e1f14b352b52f0d154891fc6023bbbc181",
+    "markdownSha256": "72b8d70c7e6328c9fc2904ab294668503a7ff21741d2ee8d13931de650e8a705",
+    "mappingStatus": "proposed-high-confidence",
+    "categoryProposal": {
+      "primary": "家庭誌",
+      "secondary": [],
+      "confidence": 0.93,
+      "needsReview": false,
+      "reason": "關鍵詞：龍弟弟、弟弟、爸爸、親子",
+      "scores": {
+        "保健室": 0,
+        "風格誌": 2,
+        "圖書室": 1,
+        "光影誌": 2,
+        "家庭誌": 7
+      },
+      "hits": [
+        "龍弟弟",
+        "弟弟",
+        "爸爸",
+        "親子"
+      ]
+    },
+    "seriesProposal": "幸福點滴",
+    "relationshipProposals": [
+      "龍弟弟的家庭成長故事"
+    ],
+    "timelineProposal": {
+      "date": "2026-08-03",
+      "type": "publication",
+      "label": "Threads帳號被永久停用後，雞爸爸才明白：平台從來不是生活的證明",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/20fce394-b37f-4da0-88d4-b86283edea58.png",
+        "file": "assets/posts/vocus-20260803-01efffd3/20fce394-b37f-4da0-88d4-b86283edea58.webp",
+        "alt": "Threads帳號被永久停用後，雞爸爸才明白：平台從來不是生活的證明｜圖片 1",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/7ebf579f-f2fc-4161-ae6d-577fca07cb0a.png",
+        "file": "assets/posts/vocus-20260803-01efffd3/7ebf579f-f2fc-4161-ae6d-577fca07cb0a.avif",
+        "alt": "Threads帳號被永久停用後，雞爸爸才明白：平台從來不是生活的證明｜圖片 2",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "20fce394-b37f-4da0-88d4-b86283edea58.webp",
+      "7ebf579f-f2fc-4161-ae6d-577fca07cb0a.avif"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true
+  }
+}

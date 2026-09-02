@@ -1,0 +1,101 @@
+{
+  "id": "CDJ-20260717-01F4A3BE",
+  "title": "龍弟弟「真．家庭理髮」之超萌西瓜皮",
+  "slug": "vocus-20260717-01f4a3be",
+  "series": "幸福點滴",
+  "category": "幸福點滴",
+  "published": "2026-07-17",
+  "updated": "2026-07-17",
+  "readingTime": 6,
+  "subtitle": "武俠魂上身 路見頭髮不齊 拔刀相助",
+  "signature": "",
+  "people": [
+    "雞爸爸",
+    "鼠媽媽",
+    "龍弟弟",
+    "兔阿嬤"
+  ],
+  "relationship": [
+    "鼠媽媽的家庭成長故事"
+  ],
+  "tags": [
+    "雞爸爸",
+    "雞爸爸生活研究室",
+    "龍弟弟",
+    "鼠媽媽",
+    "兔阿嬤",
+    "弟弟",
+    "爸爸",
+    "媽媽",
+    "孩子",
+    "家庭"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "鼠媽媽的家庭成長故事"
+  ],
+  "cover": "assets/posts/vocus-20260717-01f4a3be/fc81a08f-2757-41f5-bbc7-d84ab6bd066a.webp",
+  "coverAlt": "龍弟弟「真．家庭理髮」之超萌西瓜皮｜圖片 1",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a59d55afd89780001f4a3be",
+    "sourceUrl": "https://vocus.cc/article/6a59d55afd89780001f4a3be",
+    "canonicalUrl": "https://vocus.cc/article/6a59d55afd89780001f4a3be",
+    "originalPublishedAt": "2026-07-17T16:21:34+08:00",
+    "originalUpdatedAtCandidate": "2026-07-17T16:21:35+08:00",
+    "bodySha256": "cc160894bea93a3a500349caa686713d947f21554864a8a7ffbf2f78c93fb226",
+    "markdownSha256": "8678214559902cb86ef8728c1cef50743bfd267d92aa5c75f05a29d104ad5570",
+    "mappingStatus": "proposed-high-confidence",
+    "categoryProposal": {
+      "primary": "家庭誌",
+      "secondary": [],
+      "confidence": 0.98,
+      "needsReview": false,
+      "reason": "關鍵詞：龍弟弟、鼠媽媽、兔阿嬤、弟弟、爸爸、媽媽",
+      "scores": {
+        "保健室": 0,
+        "風格誌": 0,
+        "圖書室": 2,
+        "光影誌": 1,
+        "家庭誌": 19
+      },
+      "hits": [
+        "龍弟弟",
+        "鼠媽媽",
+        "兔阿嬤",
+        "弟弟",
+        "爸爸",
+        "媽媽",
+        "孩子",
+        "家庭"
+      ]
+    },
+    "seriesProposal": "幸福點滴",
+    "relationshipProposals": [
+      "鼠媽媽的家庭成長故事"
+    ],
+    "timelineProposal": {
+      "date": "2026-07-17",
+      "type": "publication",
+      "label": "龍弟弟「真．家庭理髮」之超萌西瓜皮",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/fc81a08f-2757-41f5-bbc7-d84ab6bd066a.png",
+        "file": "assets/posts/vocus-20260717-01f4a3be/fc81a08f-2757-41f5-bbc7-d84ab6bd066a.webp",
+        "alt": "龍弟弟「真．家庭理髮」之超萌西瓜皮｜圖片 1",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "fc81a08f-2757-41f5-bbc7-d84ab6bd066a.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true
+  }
+}

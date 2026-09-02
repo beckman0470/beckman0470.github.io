@@ -1,0 +1,95 @@
+{
+  "id": "CDJ-20260727-016797DF",
+  "title": "老納要退休了——從檔案總管，轉任辦公室管理員",
+  "slug": "vocus-20260727-016797df",
+  "series": "生活研究",
+  "category": "生活研究",
+  "published": "2026-07-27",
+  "updated": "2026-07-27",
+  "readingTime": 6,
+  "subtitle": "今天主管正式宣布，從八月開始，公司將全面改用 OneDrive 進行雲端共編。這也代表，陪伴我們辦公室多年的老納，終於要從第一線退下來了。",
+  "signature": "",
+  "people": [
+    "雞爸爸"
+  ],
+  "relationship": [
+    "雞爸爸的生活研究"
+  ],
+  "tags": [
+    "雞爸爸生活研究室",
+    "雞爸爸",
+    "NAS",
+    "爸爸"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "雞爸爸的生活研究"
+  ],
+  "cover": "assets/posts/vocus-20260727-016797df/e00ebe4a-a660-4ffd-ac34-04cc58350d99.webp",
+  "coverAlt": "老納要退休了——從檔案總管，轉任辦公室管理員｜圖片 1",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a67091afd897800016797df",
+    "sourceUrl": "https://vocus.cc/article/6a67091afd897800016797df",
+    "canonicalUrl": "https://vocus.cc/article/6a67091afd897800016797df",
+    "originalPublishedAt": "2026-07-27T15:49:38+08:00",
+    "originalUpdatedAtCandidate": "2026-07-27T16:08:54+08:00",
+    "bodySha256": "f181d7ca89c1f03f93bcded3b6b809b59c746334f314664af6b1aa925e454881",
+    "markdownSha256": "e12bfed6c4a6030e2fe3738d3793383fc68f2d237830fafb7cff2d3216f915ec",
+    "mappingStatus": "resolved-pending-preview-approval",
+    "categoryProposal": {
+      "primary": "風格誌",
+      "secondary": [],
+      "confidence": 1.0,
+      "needsReview": false,
+      "reason": "semantic editorial review",
+      "scores": {
+        "保健室": 1,
+        "風格誌": 0,
+        "圖書室": 0,
+        "光影誌": 0,
+        "家庭誌": 3
+      },
+      "hits": [
+        "爸爸"
+      ]
+    },
+    "seriesProposal": "生活研究",
+    "relationshipProposals": [
+      "雞爸爸的生活研究"
+    ],
+    "timelineProposal": {
+      "date": "2026-07-27",
+      "type": "publication",
+      "label": "老納要退休了——從檔案總管，轉任辦公室管理員",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/e00ebe4a-a660-4ffd-ac34-04cc58350d99.png",
+        "file": "assets/posts/vocus-20260727-016797df/e00ebe4a-a660-4ffd-ac34-04cc58350d99.webp",
+        "alt": "老納要退休了——從檔案總管，轉任辦公室管理員｜圖片 1",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "e00ebe4a-a660-4ffd-ac34-04cc58350d99.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true,
+    "contentTemplate": "article",
+    "fallbackPolicy": {
+      "iframe": "safe-external-link",
+      "video": "safe-external-link",
+      "poll": "static-question-options-with-vocus-link"
+    },
+    "editorialReviewNotes": [
+      "依正文核心主題完成語意校正"
+    ],
+    "previewApprovalStatus": "pending"
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "id": "CDJ-20260816-0166AB30",
+  "title": "不能妥協的不是美食，而是自己的健康：44歲才開始讀懂血管",
+  "slug": "vocus-20260816-0166ab30",
+  "series": "生活研究",
+  "category": "生活研究",
+  "published": "2026-08-16",
+  "updated": "2026-08-16",
+  "readingTime": 15,
+  "subtitle": "從視力點穴聊到血管硬化：遺傳是拿到的牌，生活才是每天出的牌",
+  "signature": "",
+  "people": [
+    "雞爸爸",
+    "鼠姊姊"
+  ],
+  "relationship": [
+    "鼠姊姊的健康觀察"
+  ],
+  "tags": [
+    "雞爸爸生活研究室",
+    "雞爸爸",
+    "心血管疾病",
+    "健康",
+    "血管",
+    "體重",
+    "整復",
+    "ApoB",
+    "健檢",
+    "膽固醇"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "鼠姊姊的健康觀察"
+  ],
+  "cover": "assets/posts/vocus-20260816-0166ab30/162a84b2-0fa3-4ab5-82c7-aeb8df40d9a4.avif",
+  "coverAlt": "不能妥協的不是美食，而是自己的健康：44歲才開始讀懂血管｜圖片 1",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a813ffdfd8978000166ab30",
+    "sourceUrl": "https://vocus.cc/article/6a813ffdfd8978000166ab30",
+    "canonicalUrl": "https://vocus.cc/article/6a813ffdfd8978000166ab30",
+    "originalPublishedAt": "2026-08-16T15:35:43+08:00",
+    "originalUpdatedAtCandidate": "2026-08-16T15:35:44+08:00",
+    "bodySha256": "85d358166df0a514fa020ab21d7233f8a098715bcef591533f1f369ebf97aa03",
+    "markdownSha256": "874d3eb1772ca85df87e57b76388abee29cfeb915ba879dafff1a9ce8fc4f0d6",
+    "mappingStatus": "proposed-high-confidence",
+    "categoryProposal": {
+      "primary": "保健室",
+      "secondary": [
+        "家庭誌"
+      ],
+      "confidence": 0.98,
+      "needsReview": false,
+      "reason": "關鍵詞：健康、血管、體重、整復、ApoB、健檢",
+      "scores": {
+        "保健室": 13,
+        "風格誌": 0,
+        "圖書室": 1,
+        "光影誌": 0,
+        "家庭誌": 7
+      },
+      "hits": [
+        "健康",
+        "血管",
+        "體重",
+        "整復",
+        "ApoB",
+        "健檢",
+        "膽固醇"
+      ]
+    },
+    "seriesProposal": "生活研究",
+    "relationshipProposals": [
+      "鼠姊姊的健康觀察"
+    ],
+    "timelineProposal": {
+      "date": "2026-08-16",
+      "type": "publication",
+      "label": "不能妥協的不是美食，而是自己的健康：44歲才開始讀懂血管",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/162a84b2-0fa3-4ab5-82c7-aeb8df40d9a4.png",
+        "file": "assets/posts/vocus-20260816-0166ab30/162a84b2-0fa3-4ab5-82c7-aeb8df40d9a4.avif",
+        "alt": "不能妥協的不是美食，而是自己的健康：44歲才開始讀懂血管｜圖片 1",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "162a84b2-0fa3-4ab5-82c7-aeb8df40d9a4.avif"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true
+  }
+}

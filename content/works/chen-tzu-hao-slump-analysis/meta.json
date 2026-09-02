@@ -36,5 +36,64 @@
   ],
   "cover": "assets/story-covers/default.svg",
   "coverAlt": "陳子豪在味全的低潮：究竟是心態、環境，還是玄學？｜雞爸爸生活研究室代表插圖",
-  "coverStatus": "placeholder"
+  "coverStatus": "placeholder",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a1017befd897800017acd06",
+    "sourceUrl": "https://vocus.cc/article/6a1017befd897800017acd06",
+    "canonicalUrl": "https://vocus.cc/article/6a1017befd897800017acd06",
+    "originalPublishedAt": "2026-05-22T17:14:25+08:00",
+    "originalUpdatedAtCandidate": "2026-05-25T10:42:14+08:00",
+    "bodySha256": "c7ec795f11ffa0a96f6a9aa24bfa367d345fa719d0606145b8b36b9244b34b41",
+    "markdownSha256": "a4c7195810330391c561da750d582665de04a9879d9c0cea27ef0e845611c3b2",
+    "mappingStatus": "proposed-high-confidence",
+    "categoryProposal": {
+      "primary": "風格誌",
+      "secondary": [],
+      "confidence": 0.98,
+      "needsReview": false,
+      "reason": "關鍵詞：味全龍、棒球、投手、TTO、陳子豪、龍隊",
+      "scores": {
+        "保健室": 0,
+        "風格誌": 10,
+        "圖書室": 0,
+        "光影誌": 0,
+        "家庭誌": 0
+      },
+      "hits": [
+        "味全龍",
+        "棒球",
+        "投手",
+        "TTO",
+        "陳子豪",
+        "龍隊",
+        "李凱威"
+      ]
+    },
+    "seriesProposal": "棒球札記",
+    "relationshipProposals": [
+      "雞爸爸 × 味全龍打者低潮分析"
+    ],
+    "timelineProposal": {
+      "date": "2026-05-22",
+      "type": "publication",
+      "label": "陳子豪在味全的低潮：究竟是心態、環境，還是玄學？",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/1351923a-53dd-47da-8975-5adace78428b.jpg",
+        "file": "assets/posts/chen-tzu-hao-slump-analysis/1351923a-53dd-47da-8975-5adace78428b.webp",
+        "alt": "龍迷對於陳子豪的期待其實非常高",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "1351923a-53dd-47da-8975-5adace78428b.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true
+  }
 }

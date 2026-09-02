@@ -36,5 +36,67 @@
   ],
   "cover": "assets/story-covers/default.svg",
   "coverAlt": "女孩，讓我們看雲去｜雞爸爸生活研究室代表插圖",
-  "coverStatus": "placeholder"
+  "coverStatus": "placeholder",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a460943fd89780001ef6e84",
+    "sourceUrl": "https://vocus.cc/article/6a460943fd89780001ef6e84",
+    "canonicalUrl": "https://vocus.cc/article/6a460943fd89780001ef6e84",
+    "originalPublishedAt": "2026-07-02T15:38:55+08:00",
+    "originalUpdatedAtCandidate": "2026-07-03T15:23:50+08:00",
+    "bodySha256": "e2d3dc0c7bbe7151acbfe709bb92d5237ba2604278982fab6436199d43a4404f",
+    "markdownSha256": "4e9c23f590e38190ba89e4f0df136c0730e2c9212e02d53cf3e9a63898807869",
+    "mappingStatus": "proposed-high-confidence",
+    "categoryProposal": {
+      "primary": "家庭誌",
+      "secondary": [],
+      "confidence": 0.98,
+      "needsReview": false,
+      "reason": "關鍵詞：鼠姊姊、龍弟弟、鼠媽媽、姊姊、弟弟、爸媽",
+      "scores": {
+        "保健室": 0,
+        "風格誌": 0,
+        "圖書室": 0,
+        "光影誌": 1,
+        "家庭誌": 16
+      },
+      "hits": [
+        "鼠姊姊",
+        "龍弟弟",
+        "鼠媽媽",
+        "姊姊",
+        "弟弟",
+        "爸媽",
+        "爸爸",
+        "媽媽",
+        "孩子",
+        "家庭"
+      ]
+    },
+    "seriesProposal": "幸福點滴",
+    "relationshipProposals": [
+      "雞爸爸 × 鼠媽媽"
+    ],
+    "timelineProposal": {
+      "date": "2026-07-02",
+      "type": "publication",
+      "label": "女孩，讓我們看雲去",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/767616e0-829c-43c6-b516-927db7eb5d4e.png",
+        "file": "assets/posts/girls-let-us-watch-clouds/767616e0-829c-43c6-b516-927db7eb5d4e.webp",
+        "alt": "女孩，讓我們看雲去｜圖片 1",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "767616e0-829c-43c6-b516-927db7eb5d4e.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true
+  }
 }

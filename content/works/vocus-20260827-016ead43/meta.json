@@ -1,0 +1,104 @@
+{
+  "id": "CDJ-20260827-016EAD43",
+  "title": "雞爸爸得流感了：昨天還在拜中元節，今天連坐計程車都累",
+  "slug": "vocus-20260827-016ead43",
+  "series": "幸福點滴",
+  "category": "幸福點滴",
+  "published": "2026-08-27",
+  "updated": "2026-08-27",
+  "readingTime": 7,
+  "subtitle": "因為颱風的緣故，昨天雞爸爸提前拜了中元節。本來以為拜完拜、收完東西，回家覺得累，大概就是一般中年男子忙完一天之後的正常反應。",
+  "signature": "",
+  "people": [
+    "雞爸爸",
+    "鼠媽媽",
+    "鼠姊姊",
+    "龍弟弟",
+    "兔阿嬤"
+  ],
+  "relationship": [
+    "鼠媽媽的家庭成長故事"
+  ],
+  "tags": [
+    "雞爸爸生活研究室",
+    "雞爸爸",
+    "鼠媽媽",
+    "鼠姊姊",
+    "龍弟弟",
+    "兔阿嬤",
+    "姊姊",
+    "弟弟",
+    "爸媽",
+    "爸爸"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "鼠媽媽的家庭成長故事"
+  ],
+  "cover": "assets/posts/vocus-20260827-016ead43/71720d3a-ff8b-4b31-b852-a0033943db94.webp",
+  "coverAlt": "雞爸爸得流感了：昨天還在拜中元節，今天連坐計程車都累｜圖片 1",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a9004e9fd897800016ead43",
+    "sourceUrl": "https://vocus.cc/article/6a9004e9fd897800016ead43",
+    "canonicalUrl": "https://vocus.cc/article/6a9004e9fd897800016ead43",
+    "originalPublishedAt": "2026-08-27T18:15:04+08:00",
+    "originalUpdatedAtCandidate": "2026-08-27T18:15:05+08:00",
+    "bodySha256": "58865c77ffe8887d319a56d2b1b64b710d3b185fb5399b1dc70029f8567942a5",
+    "markdownSha256": "a6696f0734fb31ea4eb9c0c454eae5b3ba472e42d48c94599baf6073d2294b2c",
+    "mappingStatus": "proposed-high-confidence",
+    "categoryProposal": {
+      "primary": "家庭誌",
+      "secondary": [],
+      "confidence": 0.98,
+      "needsReview": false,
+      "reason": "關鍵詞：鼠姊姊、龍弟弟、鼠媽媽、兔阿嬤、姊姊、弟弟",
+      "scores": {
+        "保健室": 6,
+        "風格誌": 0,
+        "圖書室": 0,
+        "光影誌": 0,
+        "家庭誌": 17
+      },
+      "hits": [
+        "鼠姊姊",
+        "龍弟弟",
+        "鼠媽媽",
+        "兔阿嬤",
+        "姊姊",
+        "弟弟",
+        "爸媽",
+        "爸爸",
+        "媽媽",
+        "孩子"
+      ]
+    },
+    "seriesProposal": "幸福點滴",
+    "relationshipProposals": [
+      "鼠媽媽的家庭成長故事"
+    ],
+    "timelineProposal": {
+      "date": "2026-08-27",
+      "type": "publication",
+      "label": "雞爸爸得流感了：昨天還在拜中元節，今天連坐計程車都累",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/71720d3a-ff8b-4b31-b852-a0033943db94.png",
+        "file": "assets/posts/vocus-20260827-016ead43/71720d3a-ff8b-4b31-b852-a0033943db94.webp",
+        "alt": "雞爸爸得流感了：昨天還在拜中元節，今天連坐計程車都累｜圖片 1",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "71720d3a-ff8b-4b31-b852-a0033943db94.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true
+  }
+}

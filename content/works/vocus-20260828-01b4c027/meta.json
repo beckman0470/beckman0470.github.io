@@ -1,0 +1,122 @@
+{
+  "id": "CDJ-20260828-01B4C027",
+  "title": "《反正也沒時間活》：以前總說要賣命工作，現在雞爸爸開始捨不得了",
+  "slug": "vocus-20260828-01b4c027",
+  "series": "幸福點滴",
+  "category": "幸福點滴",
+  "published": "2026-08-28",
+  "updated": "2026-08-28",
+  "readingTime": 11,
+  "subtitle": "從兩支外星人AI短片到功夫胖〈全家福〉，工作永遠有下一件，但人生有些事情沒有下一次",
+  "signature": "",
+  "people": [
+    "雞爸爸",
+    "鼠媽媽",
+    "鼠姊姊",
+    "龍弟弟",
+    "兔阿嬤"
+  ],
+  "relationship": [
+    "鼠媽媽的家庭成長故事"
+  ],
+  "tags": [
+    "雞爸爸生活研究室",
+    "雞爸爸",
+    "時間",
+    "鼠姊姊",
+    "龍弟弟",
+    "鼠媽媽",
+    "兔阿嬤",
+    "姊姊",
+    "弟弟",
+    "父母",
+    "爸爸"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "鼠媽媽的家庭成長故事"
+  ],
+  "cover": "assets/posts/vocus-20260828-01b4c027/02a10758-b0c6-41d0-80ab-eff375869f78.webp",
+  "coverAlt": "《反正也沒時間活》：以前總說要賣命工作，現在雞爸爸開始捨不得了｜圖片 1",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a918b15fd89780001b4c027",
+    "sourceUrl": "https://vocus.cc/article/6a918b15fd89780001b4c027",
+    "canonicalUrl": "https://vocus.cc/article/6a918b15fd89780001b4c027",
+    "originalPublishedAt": "2026-08-28T21:57:08+08:00",
+    "originalUpdatedAtCandidate": "2026-08-28T21:59:01+08:00",
+    "bodySha256": "b397970be12949d25e67312920345e8d30f86c20dd0cbca73e1e9b2fb6e42326",
+    "markdownSha256": "d931df3ff2a47dfcddf0816867b82d982b21ed3157266ca5b5b4c0832f1dbf91",
+    "mappingStatus": "resolved-pending-preview-approval",
+    "categoryProposal": {
+      "primary": "家庭誌",
+      "secondary": [],
+      "confidence": 1.0,
+      "needsReview": false,
+      "reason": "semantic editorial review",
+      "scores": {
+        "保健室": 0,
+        "風格誌": 0,
+        "圖書室": 0,
+        "光影誌": 2,
+        "家庭誌": 14
+      },
+      "hits": [
+        "鼠姊姊",
+        "龍弟弟",
+        "鼠媽媽",
+        "兔阿嬤",
+        "姊姊",
+        "弟弟",
+        "父母",
+        "爸爸",
+        "媽媽",
+        "孩子",
+        "家庭"
+      ]
+    },
+    "seriesProposal": "幸福點滴",
+    "relationshipProposals": [
+      "鼠媽媽的家庭成長故事"
+    ],
+    "timelineProposal": {
+      "date": "2026-08-28",
+      "type": "publication",
+      "label": "《反正也沒時間活》：以前總說要賣命工作，現在雞爸爸開始捨不得了",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/02a10758-b0c6-41d0-80ab-eff375869f78.png",
+        "file": "assets/posts/vocus-20260828-01b4c027/02a10758-b0c6-41d0-80ab-eff375869f78.webp",
+        "alt": "《反正也沒時間活》：以前總說要賣命工作，現在雞爸爸開始捨不得了｜圖片 1",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "02a10758-b0c6-41d0-80ab-eff375869f78.webp"
+    ],
+    "interactiveKinds": [
+      "iframe"
+    ],
+    "embedUrls": [
+      "https://www.youtube-nocookie.com/embed/VoYFAVrTWpk",
+      "https://www.youtube-nocookie.com/embed/03chkZQ8m9M",
+      "https://www.youtube-nocookie.com/embed/hE0fENfORvo"
+    ],
+    "doNotPublishUntilApproved": true,
+    "contentTemplate": "article",
+    "fallbackPolicy": {
+      "iframe": "safe-external-link",
+      "video": "safe-external-link",
+      "poll": "static-question-options-with-vocus-link"
+    },
+    "editorialReviewNotes": [
+      "影音改為安全外連；投票保留問題與選項並連回 Vocus"
+    ],
+    "previewApprovalStatus": "pending"
+  }
+}

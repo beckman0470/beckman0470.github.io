@@ -1,0 +1,108 @@
+{
+  "id": "CDJ-20260525-018A488A",
+  "title": "愛唱歌跳舞的鼠姊姊",
+  "slug": "vocus-20260525-018a488a",
+  "series": "幸福點滴",
+  "category": "幸福點滴",
+  "published": "2026-05-25",
+  "updated": "2026-05-25",
+  "readingTime": 1,
+  "subtitle": "喜歡唱歌跳舞的鼠姊姊，從小就喜歡跟著MV唱唱跳跳，從泡泡葛格一下子進階到BlackPink和BabyMonster，不過隨著龍弟弟的到來，現在已經越來越會照顧弟弟，已經是好姐姐的樣子了~",
+  "signature": "",
+  "people": [
+    "鼠姊姊",
+    "龍弟弟"
+  ],
+  "relationship": [
+    "雞爸爸的光影與創作記錄"
+  ],
+  "tags": [
+    "BLACKPINK",
+    "BABYMONSTER",
+    "泡泡星球",
+    "唱歌",
+    "跳舞"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "雞爸爸的光影與創作記錄"
+  ],
+  "cover": "assets/posts/vocus-20260525-018a488a/bed61581-d88c-4a31-a271-2304196ef8d6.webp",
+  "coverAlt": "src",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "post",
+    "sourceId": "6a1417b2fd897800018a488a",
+    "sourceUrl": "https://vocus.cc/post/6a1417b2fd897800018a488a",
+    "canonicalUrl": "https://vocus.cc/post/6a1417b2fd897800018a488a",
+    "originalPublishedAt": "2026-05-25T17:34:42+08:00",
+    "originalUpdatedAtCandidate": "2026-05-25T17:38:48+08:00",
+    "bodySha256": "e9d1df864d2a2ad528374662f4caddadb015d2ad66ee8ab59b9e01343e0f4c0a",
+    "markdownSha256": "f065029fad148a350a5a3ea6742af96b1fbddfae556d9c0e6a878dad7ef5860a",
+    "mappingStatus": "resolved-pending-preview-approval",
+    "categoryProposal": {
+      "primary": "家庭誌",
+      "secondary": [
+        "光影誌"
+      ],
+      "confidence": 1.0,
+      "needsReview": false,
+      "reason": "semantic editorial review",
+      "scores": {
+        "保健室": 0,
+        "風格誌": 0,
+        "圖書室": 0,
+        "光影誌": 8,
+        "家庭誌": 10
+      },
+      "hits": [
+        "唱歌",
+        "跳舞"
+      ]
+    },
+    "seriesProposal": "幸福點滴",
+    "relationshipProposals": [
+      "雞爸爸的光影與創作記錄"
+    ],
+    "timelineProposal": {
+      "date": "2026-05-25",
+      "type": "publication",
+      "label": "愛唱歌跳舞的鼠姊姊",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/bed61581-d88c-4a31-a271-2304196ef8d6.png",
+        "file": "assets/posts/vocus-20260525-018a488a/bed61581-d88c-4a31-a271-2304196ef8d6.webp",
+        "alt": "src",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/434fad97-5077-483d-8564-b62c466c9563.jpg",
+        "file": "assets/posts/vocus-20260525-018a488a/434fad97-5077-483d-8564-b62c466c9563.webp",
+        "alt": "src",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "434fad97-5077-483d-8564-b62c466c9563.webp",
+      "bed61581-d88c-4a31-a271-2304196ef8d6.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true,
+    "contentTemplate": "compact",
+    "fallbackPolicy": {
+      "iframe": "safe-external-link",
+      "video": "safe-external-link",
+      "poll": "static-question-options-with-vocus-link"
+    },
+    "editorialReviewNotes": [
+      "依正文核心主題完成語意校正",
+      "採 compact template；仍納入時間軸、人物與標籤"
+    ],
+    "previewApprovalStatus": "pending"
+  }
+}

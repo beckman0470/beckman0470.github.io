@@ -1,0 +1,102 @@
+{
+  "id": "CDJ-20260717-01E08BFC",
+  "title": "坐你開的車，真的很有壓力？雞爸爸的駕駛座反省",
+  "slug": "vocus-20260717-01e08bfc",
+  "series": "幸福點滴",
+  "category": "幸福點滴",
+  "published": "2026-07-17",
+  "updated": "2026-07-17",
+  "readingTime": 6,
+  "subtitle": "雞爸爸原本有點困惑，我又沒有罵人，也沒有生氣，只是把事情說清楚，怎麼我的語氣讓家人覺得像被訓話了？隨著鼠媽媽最近反映的頻率增加，雞爸爸也忍不住上網查了一下：「有沒有人開車時會不自覺精神緊繃？路怒症是什麼？我有路怒症嗎？」",
+  "signature": "",
+  "people": [
+    "雞爸爸",
+    "鼠媽媽",
+    "鼠姊姊",
+    "龍弟弟",
+    "ChatGPT／小妾"
+  ],
+  "relationship": [
+    "鼠媽媽的家庭成長故事"
+  ],
+  "tags": [
+    "雞爸爸",
+    "鼠媽媽",
+    "雞爸爸生活研究室",
+    "鼠姊姊",
+    "龍弟弟",
+    "姊姊",
+    "弟弟",
+    "爸爸",
+    "媽媽",
+    "孩子"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "鼠媽媽的家庭成長故事"
+  ],
+  "cover": "assets/posts/vocus-20260717-01e08bfc/8949d8a9-8c36-4aab-8200-92d6106bf465.webp",
+  "coverAlt": "坐你開的車，真的很有壓力？雞爸爸的駕駛座反省｜圖片 1",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a599003fd89780001e08bfc",
+    "sourceUrl": "https://vocus.cc/article/6a599003fd89780001e08bfc",
+    "canonicalUrl": "https://vocus.cc/article/6a599003fd89780001e08bfc",
+    "originalPublishedAt": "2026-07-17T11:22:24+08:00",
+    "originalUpdatedAtCandidate": "2026-07-17T11:38:23+08:00",
+    "bodySha256": "519946afdeeb108020f2a332701aaf00100ecd9589f02345abc817577951d287",
+    "markdownSha256": "111404c2acf4c102f72a2033b0f2cb6c06d64002e191d0c0972b21715fea893b",
+    "mappingStatus": "proposed-high-confidence",
+    "categoryProposal": {
+      "primary": "家庭誌",
+      "secondary": [],
+      "confidence": 0.98,
+      "needsReview": false,
+      "reason": "關鍵詞：鼠姊姊、龍弟弟、鼠媽媽、姊姊、弟弟、爸爸",
+      "scores": {
+        "保健室": 0,
+        "風格誌": 0,
+        "圖書室": 0,
+        "光影誌": 0,
+        "家庭誌": 15
+      },
+      "hits": [
+        "鼠姊姊",
+        "龍弟弟",
+        "鼠媽媽",
+        "姊姊",
+        "弟弟",
+        "爸爸",
+        "媽媽",
+        "孩子"
+      ]
+    },
+    "seriesProposal": "幸福點滴",
+    "relationshipProposals": [
+      "鼠媽媽的家庭成長故事"
+    ],
+    "timelineProposal": {
+      "date": "2026-07-17",
+      "type": "publication",
+      "label": "坐你開的車，真的很有壓力？雞爸爸的駕駛座反省",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/8949d8a9-8c36-4aab-8200-92d6106bf465.png",
+        "file": "assets/posts/vocus-20260717-01e08bfc/8949d8a9-8c36-4aab-8200-92d6106bf465.webp",
+        "alt": "坐你開的車，真的很有壓力？雞爸爸的駕駛座反省｜圖片 1",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "8949d8a9-8c36-4aab-8200-92d6106bf465.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true
+  }
+}

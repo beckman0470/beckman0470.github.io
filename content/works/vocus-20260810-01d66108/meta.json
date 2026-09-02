@@ -1,0 +1,108 @@
+{
+  "id": "CDJ-20260810-01D66108",
+  "title": "對不起鼠姊姊，我把玫瑰養成向日葵",
+  "slug": "vocus-20260810-01d66108",
+  "series": "幸福點滴",
+  "category": "幸福點滴",
+  "published": "2026-08-10",
+  "updated": "2026-08-12",
+  "readingTime": 6,
+  "subtitle": "─兔姑姑的一句話，讓雞爸爸重新理解鼠姊姊自己的氣質",
+  "signature": "",
+  "people": [
+    "雞爸爸",
+    "鼠姊姊"
+  ],
+  "relationship": [
+    "鼠姊姊的家庭成長故事"
+  ],
+  "tags": [
+    "雞爸爸生活研究室",
+    "教養相談室",
+    "教養",
+    "鼠姊姊",
+    "姊姊",
+    "爸媽",
+    "父母",
+    "爸爸",
+    "媽媽",
+    "孩子",
+    "家庭"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "鼠姊姊的家庭成長故事"
+  ],
+  "cover": "assets/posts/vocus-20260810-01d66108/96ebf673-857c-49f3-a89a-a3dd788bf75c.webp",
+  "coverAlt": "對不起鼠姊姊，我把玫瑰養成向日葵｜圖片 1",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a7929e5fd89780001d66108",
+    "sourceUrl": "https://vocus.cc/article/6a7929e5fd89780001d66108",
+    "canonicalUrl": "https://vocus.cc/article/6a7929e5fd89780001d66108",
+    "originalPublishedAt": "2026-08-10T11:15:07+08:00",
+    "originalUpdatedAtCandidate": "2026-08-12T09:16:02+08:00",
+    "bodySha256": "b1a8bd6b88121de0a2f0a99f7de1d6f775b5fd24d5a2fb41baa11938beb87ff2",
+    "markdownSha256": "7cb6fa762b3aff6136731e8aa26d5224445f64579d347f33563b645a0da4f763",
+    "mappingStatus": "proposed-high-confidence",
+    "categoryProposal": {
+      "primary": "家庭誌",
+      "secondary": [],
+      "confidence": 0.98,
+      "needsReview": false,
+      "reason": "關鍵詞：鼠姊姊、姊姊、爸媽、父母、爸爸、媽媽",
+      "scores": {
+        "保健室": 0,
+        "風格誌": 0,
+        "圖書室": 0,
+        "光影誌": 1,
+        "家庭誌": 17
+      },
+      "hits": [
+        "鼠姊姊",
+        "姊姊",
+        "爸媽",
+        "父母",
+        "爸爸",
+        "媽媽",
+        "孩子",
+        "家庭",
+        "親子"
+      ]
+    },
+    "seriesProposal": "幸福點滴",
+    "relationshipProposals": [
+      "鼠姊姊的家庭成長故事"
+    ],
+    "timelineProposal": {
+      "date": "2026-08-10",
+      "type": "publication",
+      "label": "對不起鼠姊姊，我把玫瑰養成向日葵",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/96ebf673-857c-49f3-a89a-a3dd788bf75c.png",
+        "file": "assets/posts/vocus-20260810-01d66108/96ebf673-857c-49f3-a89a-a3dd788bf75c.webp",
+        "alt": "對不起鼠姊姊，我把玫瑰養成向日葵｜圖片 1",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/5ec27d9d-cf66-4e50-b8f3-9d696f06a695.png",
+        "file": "assets/posts/vocus-20260810-01d66108/5ec27d9d-cf66-4e50-b8f3-9d696f06a695.avif",
+        "alt": "對不起鼠姊姊，我把玫瑰養成向日葵｜圖片 2",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "5ec27d9d-cf66-4e50-b8f3-9d696f06a695.avif",
+      "96ebf673-857c-49f3-a89a-a3dd788bf75c.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true
+  }
+}

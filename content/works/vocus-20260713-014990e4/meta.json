@@ -1,0 +1,118 @@
+{
+  "id": "CDJ-20260713-014990E4",
+  "title": "感謝方格子把雞爸爸普通的生活，變成值得珍藏的故事",
+  "slug": "vocus-20260713-014990e4",
+  "series": "幸福點滴",
+  "category": "幸福點滴",
+  "published": "2026-07-13",
+  "updated": "2026-07-13",
+  "readingTime": 6,
+  "subtitle": "雞爸爸的個人網站「雞爸爸生活研究室」剛完成不久，另一邊，方格子也陸續傳來了即時精選的通知。上週有五篇文章獲得即時精選，這週也有三篇文章，分別在：健康、自我成長、親子與教育。看到不少格子前輩都會特別寫文章，感謝方格子的鼓勵，雞爸爸原本還想說…",
+  "signature": "",
+  "people": [
+    "雞爸爸",
+    "鼠媽媽",
+    "鼠姊姊",
+    "龍弟弟",
+    "兔阿嬤"
+  ],
+  "relationship": [
+    "鼠媽媽的家庭成長故事"
+  ],
+  "tags": [
+    "雞爸爸",
+    "鼠媽媽",
+    "鼠姊姊",
+    "龍弟弟",
+    "兔阿嬤",
+    "姊姊",
+    "弟弟",
+    "爸爸",
+    "媽媽"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "鼠媽媽的家庭成長故事"
+  ],
+  "cover": "assets/posts/vocus-20260713-014990e4/a80d1491-25f9-41cf-9ca3-7a88c3566b64.webp",
+  "coverAlt": "感謝方格子把雞爸爸普通的生活，變成值得珍藏的故事｜圖片 1",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a5489d6fd897800014990e4",
+    "sourceUrl": "https://vocus.cc/article/6a5489d6fd897800014990e4",
+    "canonicalUrl": "https://vocus.cc/article/6a5489d6fd897800014990e4",
+    "originalPublishedAt": "2026-07-13T15:15:46+08:00",
+    "originalUpdatedAtCandidate": "2026-07-13T15:29:10+08:00",
+    "bodySha256": "7e167e12f7d45b03dabfee934dd7e14b5a3b0f43af3ffa53777403f9571a649c",
+    "markdownSha256": "6f2d4ad148e6053fd74617e96d9697fdc5c35f887d6639050afd7c6c47a0ee0d",
+    "mappingStatus": "proposed-high-confidence",
+    "categoryProposal": {
+      "primary": "家庭誌",
+      "secondary": [],
+      "confidence": 0.98,
+      "needsReview": false,
+      "reason": "關鍵詞：鼠姊姊、龍弟弟、鼠媽媽、兔阿嬤、姊姊、弟弟",
+      "scores": {
+        "保健室": 3,
+        "風格誌": 0,
+        "圖書室": 1,
+        "光影誌": 1,
+        "家庭誌": 22
+      },
+      "hits": [
+        "鼠姊姊",
+        "龍弟弟",
+        "鼠媽媽",
+        "兔阿嬤",
+        "姊姊",
+        "弟弟",
+        "爸爸",
+        "媽媽",
+        "孩子",
+        "家庭",
+        "親子"
+      ]
+    },
+    "seriesProposal": "幸福點滴",
+    "relationshipProposals": [
+      "鼠媽媽的家庭成長故事"
+    ],
+    "timelineProposal": {
+      "date": "2026-07-13",
+      "type": "publication",
+      "label": "感謝方格子把雞爸爸普通的生活，變成值得珍藏的故事",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/a80d1491-25f9-41cf-9ca3-7a88c3566b64.jpg",
+        "file": "assets/posts/vocus-20260713-014990e4/a80d1491-25f9-41cf-9ca3-7a88c3566b64.webp",
+        "alt": "感謝方格子把雞爸爸普通的生活，變成值得珍藏的故事｜圖片 1",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/b71f60ed-0f3d-45be-a664-9c60f5e286cc.png",
+        "file": "assets/posts/vocus-20260713-014990e4/b71f60ed-0f3d-45be-a664-9c60f5e286cc.avif",
+        "alt": "感謝方格子把雞爸爸普通的生活，變成值得珍藏的故事｜圖片 2",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/406d4eef-11b8-479f-bbad-7fc034c6d159.jpg",
+        "file": "assets/posts/vocus-20260713-014990e4/406d4eef-11b8-479f-bbad-7fc034c6d159.webp",
+        "alt": "感謝方格子把雞爸爸普通的生活，變成值得珍藏的故事｜圖片 3",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "406d4eef-11b8-479f-bbad-7fc034c6d159.webp",
+      "a80d1491-25f9-41cf-9ca3-7a88c3566b64.webp",
+      "b71f60ed-0f3d-45be-a664-9c60f5e286cc.avif"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true
+  }
+}

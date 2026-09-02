@@ -1,0 +1,107 @@
+{
+  "id": "CDJ-20260812-0129315B",
+  "title": "鼠姊姊心中的千千結：她缺的也許不是更多選擇，而是一種篤定",
+  "slug": "vocus-20260812-0129315b",
+  "series": "幸福點滴",
+  "category": "幸福點滴",
+  "published": "2026-08-12",
+  "updated": "2026-08-12",
+  "readingTime": 11,
+  "subtitle": "今天終於排到鼠姊姊的院長診，最近雞爸爸和鼠媽媽一直卡在一個問題：",
+  "signature": "",
+  "people": [
+    "雞爸爸",
+    "鼠媽媽",
+    "鼠姊姊",
+    "龍弟弟"
+  ],
+  "relationship": [
+    "鼠媽媽的家庭成長故事"
+  ],
+  "tags": [
+    "雞爸爸生活研究室",
+    "百胤",
+    "視力整復所",
+    "鼠姊姊",
+    "龍弟弟",
+    "鼠媽媽",
+    "姊姊",
+    "弟弟",
+    "爸媽",
+    "父母",
+    "爸爸"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "鼠媽媽的家庭成長故事"
+  ],
+  "cover": "assets/posts/vocus-20260812-0129315b/a2de9ef8-d9e2-4caa-9d29-6e99a9c10e8a.webp",
+  "coverAlt": "鼠姊姊心中的千千結：她缺的也許不是更多選擇，而是一種篤定｜圖片 1",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a7bd8a4fd8978000129315b",
+    "sourceUrl": "https://vocus.cc/article/6a7bd8a4fd8978000129315b",
+    "canonicalUrl": "https://vocus.cc/article/6a7bd8a4fd8978000129315b",
+    "originalPublishedAt": "2026-08-12T11:11:46+08:00",
+    "originalUpdatedAtCandidate": "2026-08-12T11:15:43+08:00",
+    "bodySha256": "6e6cc780094039a7b098bc653215d6cc557e28b476dafe224cab2645a6348620",
+    "markdownSha256": "0bbec3c963835b4526545cf0fe005b3f1d2da6ebfdf171177950ec96023cd070",
+    "mappingStatus": "proposed-high-confidence",
+    "categoryProposal": {
+      "primary": "家庭誌",
+      "secondary": [],
+      "confidence": 0.98,
+      "needsReview": false,
+      "reason": "關鍵詞：鼠姊姊、龍弟弟、鼠媽媽、姊姊、弟弟、爸媽",
+      "scores": {
+        "保健室": 5,
+        "風格誌": 0,
+        "圖書室": 1,
+        "光影誌": 0,
+        "家庭誌": 21
+      },
+      "hits": [
+        "鼠姊姊",
+        "龍弟弟",
+        "鼠媽媽",
+        "姊姊",
+        "弟弟",
+        "爸媽",
+        "父母",
+        "爸爸",
+        "媽媽",
+        "孩子",
+        "家庭",
+        "幼兒園",
+        "分房"
+      ]
+    },
+    "seriesProposal": "幸福點滴",
+    "relationshipProposals": [
+      "鼠媽媽的家庭成長故事"
+    ],
+    "timelineProposal": {
+      "date": "2026-08-12",
+      "type": "publication",
+      "label": "鼠姊姊心中的千千結：她缺的也許不是更多選擇，而是一種篤定",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/a2de9ef8-d9e2-4caa-9d29-6e99a9c10e8a.png",
+        "file": "assets/posts/vocus-20260812-0129315b/a2de9ef8-d9e2-4caa-9d29-6e99a9c10e8a.webp",
+        "alt": "鼠姊姊心中的千千結：她缺的也許不是更多選擇，而是一種篤定｜圖片 1",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "a2de9ef8-d9e2-4caa-9d29-6e99a9c10e8a.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true
+  }
+}

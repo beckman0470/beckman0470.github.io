@@ -1,0 +1,113 @@
+{
+  "id": "CDJ-20260825-010129C1",
+  "title": "鼠姊姊重新變成缺牙女孩：但有一天，她也會自己走向更大的世界",
+  "slug": "vocus-20260825-010129c1",
+  "series": "幸福點滴",
+  "category": "幸福點滴",
+  "published": "2026-08-25",
+  "updated": "2026-08-25",
+  "readingTime": 9,
+  "subtitle": "拿掉眼鏡、走進牙醫診間，都像個勇敢的小女孩；但裝小BABY或是認真數著牙仙子的錢...孩子的獨立，只在她認真的時候...",
+  "signature": "",
+  "people": [
+    "雞爸爸",
+    "鼠媽媽",
+    "鼠姊姊",
+    "龍弟弟",
+    "兔阿嬤"
+  ],
+  "relationship": [
+    "鼠媽媽的家庭成長故事"
+  ],
+  "tags": [
+    "雞爸爸生活研究室",
+    "雞爸爸",
+    "鼠姊姊",
+    "龍弟弟",
+    "鼠媽媽",
+    "兔阿嬤",
+    "姊姊",
+    "弟弟",
+    "爸媽",
+    "爸爸"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "鼠媽媽的家庭成長故事"
+  ],
+  "cover": "assets/posts/vocus-20260825-010129c1/231fcbf8-3f93-406e-ba02-2ed11e2b2af6.webp",
+  "coverAlt": "鼠姊姊重新變成缺牙女孩：但有一天，她也會自己走向更大的世界｜圖片 1",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a8cfab3fd897800010129c1",
+    "sourceUrl": "https://vocus.cc/article/6a8cfab3fd897800010129c1",
+    "canonicalUrl": "https://vocus.cc/article/6a8cfab3fd897800010129c1",
+    "originalPublishedAt": "2026-08-25T11:00:24+08:00",
+    "originalUpdatedAtCandidate": "2026-08-25T11:03:33+08:00",
+    "bodySha256": "d6929e3e151dc7f7c21817c4dba14b4e8e43741b7be2d8f6d1b9f3074f035468",
+    "markdownSha256": "5f7984ec30abf739c2f1054fd5184ee0c63c5dbb4a93415c6e0fc655252599cd",
+    "mappingStatus": "proposed-high-confidence",
+    "categoryProposal": {
+      "primary": "家庭誌",
+      "secondary": [],
+      "confidence": 0.98,
+      "needsReview": false,
+      "reason": "關鍵詞：鼠姊姊、龍弟弟、鼠媽媽、兔阿嬤、姊姊、弟弟",
+      "scores": {
+        "保健室": 2,
+        "風格誌": 0,
+        "圖書室": 1,
+        "光影誌": 0,
+        "家庭誌": 20
+      },
+      "hits": [
+        "鼠姊姊",
+        "龍弟弟",
+        "鼠媽媽",
+        "兔阿嬤",
+        "姊姊",
+        "弟弟",
+        "爸媽",
+        "爸爸",
+        "媽媽",
+        "孩子",
+        "家庭",
+        "幼兒園"
+      ]
+    },
+    "seriesProposal": "幸福點滴",
+    "relationshipProposals": [
+      "鼠媽媽的家庭成長故事"
+    ],
+    "timelineProposal": {
+      "date": "2026-08-25",
+      "type": "publication",
+      "label": "鼠姊姊重新變成缺牙女孩：但有一天，她也會自己走向更大的世界",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/231fcbf8-3f93-406e-ba02-2ed11e2b2af6.png",
+        "file": "assets/posts/vocus-20260825-010129c1/231fcbf8-3f93-406e-ba02-2ed11e2b2af6.webp",
+        "alt": "鼠姊姊重新變成缺牙女孩：但有一天，她也會自己走向更大的世界｜圖片 1",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/6ef2ef70-43d1-49a4-b44b-c4647015f552.png",
+        "file": "assets/posts/vocus-20260825-010129c1/6ef2ef70-43d1-49a4-b44b-c4647015f552.avif",
+        "alt": "鼠姊姊重新變成缺牙女孩：但有一天，她也會自己走向更大的世界｜圖片 2",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "231fcbf8-3f93-406e-ba02-2ed11e2b2af6.webp",
+      "6ef2ef70-43d1-49a4-b44b-c4647015f552.avif"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true
+  }
+}

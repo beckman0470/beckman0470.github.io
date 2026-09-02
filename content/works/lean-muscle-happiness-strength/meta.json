@@ -1,0 +1,102 @@
+{
+  "id": "CDJ-20260620-01AA17E8",
+  "title": "雞爸爸的精實薄肌策略：預儲幸福的力量",
+  "slug": "lean-muscle-happiness-strength",
+  "series": "生活研究",
+  "category": "生活研究",
+  "published": "2026-06-20",
+  "updated": "2026-07-11",
+  "readingTime": 7,
+  "subtitle": "有了孩子之後，雞爸爸進健身房的理由變了。",
+  "signature": "",
+  "people": [
+    "雞爸爸"
+  ],
+  "relationship": [
+    "雞爸爸的健康觀察"
+  ],
+  "tags": [
+    "雞爸爸",
+    "肌肉",
+    "力量",
+    "健康",
+    "血管",
+    "體重"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "雞爸爸的健康觀察"
+  ],
+  "cover": "assets/posts/lean-muscle-happiness-strength/96792035-54f2-4996-993c-3b65fb827148.webp",
+  "coverAlt": "雞爸爸的精實薄肌策略：預儲幸福的力量｜圖片 1",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a361e71fd89780001aa17e8",
+    "sourceUrl": "https://vocus.cc/article/6a361e71fd89780001aa17e8",
+    "canonicalUrl": "https://vocus.cc/article/6a361e71fd89780001aa17e8",
+    "originalPublishedAt": "2026-06-20T15:29:21+08:00",
+    "originalUpdatedAtCandidate": "2026-07-11T00:13:47+08:00",
+    "bodySha256": "5667d0ceae17fcd1bb99f62b978db171aec1db1d5408e1e42de59c4d5651d86f",
+    "markdownSha256": "b55f090b7cdc7fd20edec96528258832a67b0984d61d03b6a75d1ab159625fe4",
+    "mappingStatus": "resolved-pending-preview-approval",
+    "categoryProposal": {
+      "primary": "保健室",
+      "secondary": [
+        "家庭誌"
+      ],
+      "confidence": 1.0,
+      "needsReview": false,
+      "reason": "semantic editorial review",
+      "scores": {
+        "保健室": 6,
+        "風格誌": 0,
+        "圖書室": 0,
+        "光影誌": 0,
+        "家庭誌": 7
+      },
+      "hits": [
+        "健康",
+        "血管",
+        "肌肉",
+        "體重"
+      ]
+    },
+    "seriesProposal": "生活研究",
+    "relationshipProposals": [
+      "雞爸爸的健康觀察"
+    ],
+    "timelineProposal": {
+      "date": "2026-06-20",
+      "type": "publication",
+      "label": "雞爸爸的精實薄肌策略：預儲幸福的力量",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/96792035-54f2-4996-993c-3b65fb827148.png",
+        "file": "assets/posts/lean-muscle-happiness-strength/96792035-54f2-4996-993c-3b65fb827148.webp",
+        "alt": "雞爸爸的精實薄肌策略：預儲幸福的力量｜圖片 1",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "96792035-54f2-4996-993c-3b65fb827148.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true,
+    "contentTemplate": "article",
+    "fallbackPolicy": {
+      "iframe": "safe-external-link",
+      "video": "safe-external-link",
+      "poll": "static-question-options-with-vocus-link"
+    },
+    "editorialReviewNotes": [
+      "依正文核心主題完成語意校正"
+    ],
+    "previewApprovalStatus": "pending"
+  }
+}

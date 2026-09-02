@@ -1,0 +1,109 @@
+{
+  "id": "CDJ-20260820-0198F9EC",
+  "title": "《我的弱雞爸爸》：八月讀一本爸爸的故事，原來孩子要的不是最強老爸",
+  "slug": "vocus-20260820-0198f9ec",
+  "series": "幸福點滴",
+  "category": "幸福點滴",
+  "published": "2026-08-20",
+  "updated": "2026-08-20",
+  "readingTime": 9,
+  "subtitle": "只要在網路上搜尋「雞爸爸」，除了偶爾會看到雞爸爸自己寫的文章之外，搜尋結果裡常常會出現一本書—王文華老師的《我的弱雞爸爸》。",
+  "signature": "",
+  "people": [
+    "雞爸爸",
+    "鼠媽媽",
+    "鼠姊姊",
+    "龍弟弟"
+  ],
+  "relationship": [
+    "鼠媽媽的家庭成長故事"
+  ],
+  "tags": [
+    "雞爸爸生活研究室",
+    "雞爸爸",
+    "父親節快樂",
+    "鼠姊姊",
+    "龍弟弟",
+    "鼠媽媽",
+    "姊姊",
+    "弟弟",
+    "爸爸",
+    "媽媽",
+    "孩子"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "鼠媽媽的家庭成長故事"
+  ],
+  "cover": "assets/posts/vocus-20260820-0198f9ec/015e016e-52a9-4953-8e7f-a5e3cb211da5.webp",
+  "coverAlt": "《我的弱雞爸爸》：八月讀一本爸爸的故事，原來孩子要的不是最強老爸｜圖片 1",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a865c2efd8978000198f9ec",
+    "sourceUrl": "https://vocus.cc/article/6a865c2efd8978000198f9ec",
+    "canonicalUrl": "https://vocus.cc/article/6a865c2efd8978000198f9ec",
+    "originalPublishedAt": "2026-08-20T10:24:10+08:00",
+    "originalUpdatedAtCandidate": "2026-08-20T10:40:54+08:00",
+    "bodySha256": "70b751ce21ff4c2c6f4da92a9d3e6c1caefc9d26709fde435d516aa416b06441",
+    "markdownSha256": "19607a63d4d7480d54049e50de98abbf57d350c15ce42f2e6c0de189573ed80c",
+    "mappingStatus": "proposed-high-confidence",
+    "categoryProposal": {
+      "primary": "家庭誌",
+      "secondary": [],
+      "confidence": 0.98,
+      "needsReview": false,
+      "reason": "關鍵詞：鼠姊姊、龍弟弟、鼠媽媽、姊姊、弟弟、爸爸",
+      "scores": {
+        "保健室": 1,
+        "風格誌": 0,
+        "圖書室": 6,
+        "光影誌": 0,
+        "家庭誌": 14
+      },
+      "hits": [
+        "鼠姊姊",
+        "龍弟弟",
+        "鼠媽媽",
+        "姊姊",
+        "弟弟",
+        "爸爸",
+        "媽媽",
+        "孩子"
+      ]
+    },
+    "seriesProposal": "幸福點滴",
+    "relationshipProposals": [
+      "鼠媽媽的家庭成長故事"
+    ],
+    "timelineProposal": {
+      "date": "2026-08-20",
+      "type": "publication",
+      "label": "《我的弱雞爸爸》：八月讀一本爸爸的故事，原來孩子要的不是最強老爸",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/015e016e-52a9-4953-8e7f-a5e3cb211da5.png",
+        "file": "assets/posts/vocus-20260820-0198f9ec/015e016e-52a9-4953-8e7f-a5e3cb211da5.webp",
+        "alt": "《我的弱雞爸爸》：八月讀一本爸爸的故事，原來孩子要的不是最強老爸｜圖片 1",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/ba1f6b0e-e843-429a-b4ed-3787709347d1.jpg",
+        "file": "assets/posts/vocus-20260820-0198f9ec/ba1f6b0e-e843-429a-b4ed-3787709347d1.webp",
+        "alt": "《我的弱雞爸爸》：八月讀一本爸爸的故事，原來孩子要的不是最強老爸｜圖片 2",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "015e016e-52a9-4953-8e7f-a5e3cb211da5.webp",
+      "ba1f6b0e-e843-429a-b4ed-3787709347d1.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true
+  }
+}

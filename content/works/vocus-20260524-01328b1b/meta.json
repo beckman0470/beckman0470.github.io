@@ -1,0 +1,159 @@
+{
+  "id": "CDJ-20260524-01328B1B",
+  "title": "新一代設計展",
+  "slug": "vocus-20260524-01328b1b",
+  "series": "生活研究",
+  "category": "生活研究",
+  "published": "2026-05-24",
+  "updated": "2026-05-24",
+  "readingTime": 1,
+  "subtitle": "今天受邀跟小朋友到南港展覽館，看到很多大學生的創意，除了很多環境保護、老年照護，還有許多解決日常生活需求的實用設計，感受到年青人真的創意無限…連弟弟都玩得很開心…",
+  "signature": "",
+  "people": [],
+  "relationship": [
+    "雞爸爸的生活研究"
+  ],
+  "tags": [
+    "新一代設計展",
+    "南港展覽館",
+    "工業設計",
+    "弟弟"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "雞爸爸的生活研究"
+  ],
+  "cover": "assets/posts/vocus-20260524-01328b1b/49d6a357-a744-49a2-a344-22708887cbd3.webp",
+  "coverAlt": "src",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "post",
+    "sourceId": "6a12c138fd89780001328b1b",
+    "sourceUrl": "https://vocus.cc/post/6a12c138fd89780001328b1b",
+    "canonicalUrl": "https://vocus.cc/post/6a12c138fd89780001328b1b",
+    "originalPublishedAt": "2026-05-24T17:13:28+08:00",
+    "originalUpdatedAtCandidate": "2026-05-24T17:13:28+08:00",
+    "bodySha256": "540a6c5b02b56ca4be8a6ebde64a7ffa502c743b16ba095ebb8a2f9eead7ca8c",
+    "markdownSha256": "a6b9affe9b57b4a1296b649b2528dbcbcf475ef93b27355ed5aacace0ab72d78",
+    "mappingStatus": "resolved-pending-preview-approval",
+    "categoryProposal": {
+      "primary": "風格誌",
+      "secondary": [
+        "家庭誌"
+      ],
+      "confidence": 1.0,
+      "needsReview": false,
+      "reason": "semantic editorial review",
+      "scores": {
+        "保健室": 0,
+        "風格誌": 0,
+        "圖書室": 0,
+        "光影誌": 0,
+        "家庭誌": 1
+      },
+      "hits": [
+        "弟弟"
+      ]
+    },
+    "seriesProposal": "生活研究",
+    "relationshipProposals": [
+      "雞爸爸的生活研究"
+    ],
+    "timelineProposal": {
+      "date": "2026-05-24",
+      "type": "publication",
+      "label": "新一代設計展",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/49d6a357-a744-49a2-a344-22708887cbd3.jpg",
+        "file": "assets/posts/vocus-20260524-01328b1b/49d6a357-a744-49a2-a344-22708887cbd3.webp",
+        "alt": "src",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/4d834431-e785-4ad1-af6e-e7246d7d21d3.jpg",
+        "file": "assets/posts/vocus-20260524-01328b1b/4d834431-e785-4ad1-af6e-e7246d7d21d3.webp",
+        "alt": "src",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/a8ea1e4b-ae6f-4f19-880c-d83c1559aacf.jpg",
+        "file": "assets/posts/vocus-20260524-01328b1b/a8ea1e4b-ae6f-4f19-880c-d83c1559aacf.webp",
+        "alt": "src",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/0e57ae16-5a34-46f1-94b3-b8df0a63474a.jpg",
+        "file": "assets/posts/vocus-20260524-01328b1b/0e57ae16-5a34-46f1-94b3-b8df0a63474a.webp",
+        "alt": "src",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/9c517c6b-04f6-4d5a-b3de-5688d6262130.jpg",
+        "file": "assets/posts/vocus-20260524-01328b1b/9c517c6b-04f6-4d5a-b3de-5688d6262130.webp",
+        "alt": "src",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/825b8707-6588-468b-b165-abebde4b022a.jpg",
+        "file": "assets/posts/vocus-20260524-01328b1b/825b8707-6588-468b-b165-abebde4b022a.webp",
+        "alt": "src",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/cb82a84c-e075-49a2-971a-c67529f936ec.jpg",
+        "file": "assets/posts/vocus-20260524-01328b1b/cb82a84c-e075-49a2-971a-c67529f936ec.webp",
+        "alt": "src",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/eddffa69-e0bf-4240-88a4-cc5424cd5098.jpg",
+        "file": "assets/posts/vocus-20260524-01328b1b/eddffa69-e0bf-4240-88a4-cc5424cd5098.webp",
+        "alt": "src",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/03e05689-a431-4852-8468-c34d4f9fd263.jpg",
+        "file": "assets/posts/vocus-20260524-01328b1b/03e05689-a431-4852-8468-c34d4f9fd263.webp",
+        "alt": "src",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/ab3ffd6f-28f5-43bf-bccf-e545a5c65db1.jpg",
+        "file": "assets/posts/vocus-20260524-01328b1b/ab3ffd6f-28f5-43bf-bccf-e545a5c65db1.webp",
+        "alt": "src",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "03e05689-a431-4852-8468-c34d4f9fd263.webp",
+      "0e57ae16-5a34-46f1-94b3-b8df0a63474a.webp",
+      "49d6a357-a744-49a2-a344-22708887cbd3.webp",
+      "4d834431-e785-4ad1-af6e-e7246d7d21d3.webp",
+      "825b8707-6588-468b-b165-abebde4b022a.webp",
+      "9c517c6b-04f6-4d5a-b3de-5688d6262130.webp",
+      "a8ea1e4b-ae6f-4f19-880c-d83c1559aacf.webp",
+      "ab3ffd6f-28f5-43bf-bccf-e545a5c65db1.webp",
+      "cb82a84c-e075-49a2-971a-c67529f936ec.webp",
+      "eddffa69-e0bf-4240-88a4-cc5424cd5098.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true,
+    "contentTemplate": "compact",
+    "fallbackPolicy": {
+      "iframe": "safe-external-link",
+      "video": "safe-external-link",
+      "poll": "static-question-options-with-vocus-link"
+    },
+    "editorialReviewNotes": [
+      "依正文核心主題完成語意校正",
+      "採 compact template；仍納入時間軸、人物與標籤"
+    ],
+    "previewApprovalStatus": "pending"
+  }
+}

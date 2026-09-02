@@ -1,0 +1,119 @@
+{
+  "id": "CDJ-20260818-010513A4",
+  "title": "雞爸爸保健室｜從西瓜到ApoB：搞懂血管保養的４個關鍵機制",
+  "slug": "vocus-20260818-010513a4",
+  "series": "生活研究",
+  "category": "生活研究",
+  "published": "2026-08-18",
+  "updated": "2026-08-18",
+  "readingTime": 13,
+  "subtitle": "從瓜胺酸、NO、血管內皮，動脈粥樣硬化與ApoB",
+  "signature": "",
+  "people": [
+    "雞爸爸",
+    "ChatGPT／小妾"
+  ],
+  "relationship": [
+    "雞爸爸的健康觀察"
+  ],
+  "tags": [
+    "雞爸爸生活研究室",
+    "雞爸爸",
+    "血管硬化",
+    "健康",
+    "血管",
+    "脂肪",
+    "保健",
+    "ApoB",
+    "健檢",
+    "膽固醇"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "雞爸爸的健康觀察"
+  ],
+  "cover": "assets/posts/vocus-20260818-010513a4/e4fc88b3-a31c-414f-8640-e2de13dcddff.webp",
+  "coverAlt": "雞爸爸保健室｜從西瓜到ApoB：搞懂血管保養的４個關鍵機制｜圖片 1",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a83c442fd897800010513a4",
+    "sourceUrl": "https://vocus.cc/article/6a83c442fd897800010513a4",
+    "canonicalUrl": "https://vocus.cc/article/6a83c442fd897800010513a4",
+    "originalPublishedAt": "2026-08-18T12:03:19+08:00",
+    "originalUpdatedAtCandidate": "2026-08-18T12:03:21+08:00",
+    "bodySha256": "50e1bab99ac6f49b624587504d177018472b196fa1e266df8ab011180141d021",
+    "markdownSha256": "16113192e337113a9aa71aab11a5d0beb06793a69a12160e68d308418c167d75",
+    "mappingStatus": "proposed-high-confidence",
+    "categoryProposal": {
+      "primary": "保健室",
+      "secondary": [],
+      "confidence": 0.98,
+      "needsReview": false,
+      "reason": "關鍵詞：健康、血管、脂肪、保健、ApoB、健檢",
+      "scores": {
+        "保健室": 16,
+        "風格誌": 0,
+        "圖書室": 1,
+        "光影誌": 0,
+        "家庭誌": 4
+      },
+      "hits": [
+        "健康",
+        "血管",
+        "脂肪",
+        "保健",
+        "ApoB",
+        "健檢",
+        "膽固醇"
+      ]
+    },
+    "seriesProposal": "生活研究",
+    "relationshipProposals": [
+      "雞爸爸的健康觀察"
+    ],
+    "timelineProposal": {
+      "date": "2026-08-18",
+      "type": "publication",
+      "label": "雞爸爸保健室｜從西瓜到ApoB：搞懂血管保養的４個關鍵機制",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/e4fc88b3-a31c-414f-8640-e2de13dcddff.png",
+        "file": "assets/posts/vocus-20260818-010513a4/e4fc88b3-a31c-414f-8640-e2de13dcddff.webp",
+        "alt": "雞爸爸保健室｜從西瓜到ApoB：搞懂血管保養的４個關鍵機制｜圖片 1",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/1ad7cf1e-5022-4b7f-87f8-9a2ab9fd7b36.png",
+        "file": "assets/posts/vocus-20260818-010513a4/1ad7cf1e-5022-4b7f-87f8-9a2ab9fd7b36.avif",
+        "alt": "雞爸爸保健室｜從西瓜到ApoB：搞懂血管保養的４個關鍵機制｜圖片 2",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/9ebecf8b-83ad-4902-abe5-6de5e57edd2c.png",
+        "file": "assets/posts/vocus-20260818-010513a4/9ebecf8b-83ad-4902-abe5-6de5e57edd2c.avif",
+        "alt": "雞爸爸保健室｜從西瓜到ApoB：搞懂血管保養的４個關鍵機制｜圖片 3",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/e35ca104-7179-4738-bdc8-23f378a4bdec.png",
+        "file": "assets/posts/vocus-20260818-010513a4/e35ca104-7179-4738-bdc8-23f378a4bdec.webp",
+        "alt": "雞爸爸保健室｜從西瓜到ApoB：搞懂血管保養的４個關鍵機制｜圖片 4",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "1ad7cf1e-5022-4b7f-87f8-9a2ab9fd7b36.avif",
+      "9ebecf8b-83ad-4902-abe5-6de5e57edd2c.avif",
+      "e35ca104-7179-4738-bdc8-23f378a4bdec.webp",
+      "e4fc88b3-a31c-414f-8640-e2de13dcddff.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true
+  }
+}

@@ -35,5 +35,118 @@
   ],
   "cover": "assets/story-covers/default.svg",
   "coverAlt": "鼠姊姊的中班畢業典禮：唱跳、氣球與一整天的願望清單｜雞爸爸生活研究室代表插圖",
-  "coverStatus": "placeholder"
+  "coverStatus": "placeholder",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a3c8df4fd897800013e4e04",
+    "sourceUrl": "https://vocus.cc/article/6a3c8df4fd897800013e4e04",
+    "canonicalUrl": "https://vocus.cc/article/6a3c8df4fd897800013e4e04",
+    "originalPublishedAt": "2026-06-25T11:32:43+08:00",
+    "originalUpdatedAtCandidate": "2026-07-10T23:39:00+08:00",
+    "bodySha256": "cc12f7a326903cf2a05f3dfb9d316a775751a375ed63260ce0dfb6ed2c80808d",
+    "markdownSha256": "47367a1c5b09c59b025a6f4947f714fc82f5eb1c636fd32a9f4338169897a246",
+    "mappingStatus": "proposed-high-confidence",
+    "categoryProposal": {
+      "primary": "家庭誌",
+      "secondary": [],
+      "confidence": 0.98,
+      "needsReview": false,
+      "reason": "關鍵詞：鼠姊姊、鼠媽媽、姊姊、爸媽、父母、爸爸",
+      "scores": {
+        "保健室": 0,
+        "風格誌": 0,
+        "圖書室": 0,
+        "光影誌": 3,
+        "家庭誌": 23
+      },
+      "hits": [
+        "鼠姊姊",
+        "鼠媽媽",
+        "姊姊",
+        "爸媽",
+        "父母",
+        "爸爸",
+        "媽媽",
+        "孩子",
+        "家庭",
+        "親子",
+        "幼兒園",
+        "畢業典禮"
+      ]
+    },
+    "seriesProposal": "幸福點滴",
+    "relationshipProposals": [
+      "雞爸爸 × 鼠姊姊"
+    ],
+    "timelineProposal": {
+      "date": "2026-06-25",
+      "type": "publication",
+      "label": "鼠姊姊的中班畢業典禮：唱跳、氣球與一整天的願望清單",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/fe7fc827-c24d-4a14-8698-ef84f6aaf557.png",
+        "file": "assets/posts/graduation-day/fe7fc827-c24d-4a14-8698-ef84f6aaf557.webp",
+        "alt": "鼠姊姊的中班畢業典禮：唱跳、氣球與一整天的願望清單｜圖片 1",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/8f87353d-e01e-4d1a-b0e9-3c2638cac584.jpg",
+        "file": "assets/posts/graduation-day/8f87353d-e01e-4d1a-b0e9-3c2638cac584.webp",
+        "alt": "鼠姊姊的中班畢業典禮：唱跳、氣球與一整天的願望清單｜圖片 2",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/03af0614-9086-4cc6-a023-3cecce1b8409.jpg",
+        "file": "assets/posts/graduation-day/03af0614-9086-4cc6-a023-3cecce1b8409.webp",
+        "alt": "鼠姊姊的中班畢業典禮：唱跳、氣球與一整天的願望清單｜圖片 3",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/9ddbad9b-0df7-4719-af50-cd636c058571.jpg",
+        "file": "assets/posts/graduation-day/9ddbad9b-0df7-4719-af50-cd636c058571.webp",
+        "alt": "鼠姊姊的中班畢業典禮：唱跳、氣球與一整天的願望清單｜圖片 4",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/5d33791a-f325-4dfa-a01d-42c0f4c85aa8.jpg",
+        "file": "assets/posts/graduation-day/5d33791a-f325-4dfa-a01d-42c0f4c85aa8.webp",
+        "alt": "鼠姊姊的中班畢業典禮：唱跳、氣球與一整天的願望清單｜圖片 5",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/95ff814c-c5a4-43bf-8207-c3a4319c87e7.jpg",
+        "file": "assets/posts/graduation-day/95ff814c-c5a4-43bf-8207-c3a4319c87e7.webp",
+        "alt": "鼠姊姊的中班畢業典禮：唱跳、氣球與一整天的願望清單｜圖片 6",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/482bfb70-d0ef-4ad6-bd9e-65a97eb30b47.jpg",
+        "file": "assets/posts/graduation-day/482bfb70-d0ef-4ad6-bd9e-65a97eb30b47.webp",
+        "alt": "鼠姊姊的中班畢業典禮：唱跳、氣球與一整天的願望清單｜圖片 7",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/dc13af59-ae77-411b-9895-cdf5eb4d9b38.jpg",
+        "file": "assets/posts/graduation-day/dc13af59-ae77-411b-9895-cdf5eb4d9b38.webp",
+        "alt": "鼠姊姊的中班畢業典禮：唱跳、氣球與一整天的願望清單｜圖片 8",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "03af0614-9086-4cc6-a023-3cecce1b8409.webp",
+      "482bfb70-d0ef-4ad6-bd9e-65a97eb30b47.webp",
+      "5d33791a-f325-4dfa-a01d-42c0f4c85aa8.webp",
+      "8f87353d-e01e-4d1a-b0e9-3c2638cac584.webp",
+      "95ff814c-c5a4-43bf-8207-c3a4319c87e7.webp",
+      "9ddbad9b-0df7-4719-af50-cd636c058571.webp",
+      "dc13af59-ae77-411b-9895-cdf5eb4d9b38.webp",
+      "fe7fc827-c24d-4a14-8698-ef84f6aaf557.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true
+  }
 }

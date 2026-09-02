@@ -1,0 +1,102 @@
+{
+  "id": "CDJ-20260726-018033DA",
+  "title": "第一次踏浪，原來海浪也有不同的擁抱方式",
+  "slug": "vocus-20260726-018033da",
+  "series": "幸福點滴",
+  "category": "幸福點滴",
+  "published": "2026-07-26",
+  "updated": "2026-07-31",
+  "readingTime": 4,
+  "subtitle": "白浪滔滔我不怕 鼠姊姊笑到合不攏嘴",
+  "signature": "",
+  "people": [
+    "雞爸爸",
+    "鼠媽媽",
+    "鼠姊姊",
+    "龍弟弟"
+  ],
+  "relationship": [
+    "鼠媽媽的家庭成長故事"
+  ],
+  "tags": [
+    "雞爸爸生活研究室",
+    "鼠姊姊",
+    "龍弟弟",
+    "鼠姐姐",
+    "鼠媽媽",
+    "姊姊",
+    "弟弟",
+    "爸爸",
+    "媽媽"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "鼠媽媽的家庭成長故事"
+  ],
+  "cover": "assets/posts/vocus-20260726-018033da/460f01f4-8754-478a-adc3-93e0b5006b02.webp",
+  "coverAlt": "第一次踏浪，原來海浪也有不同的擁抱方式｜圖片 1",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a6551c2fd897800018033da",
+    "sourceUrl": "https://vocus.cc/article/6a6551c2fd897800018033da",
+    "canonicalUrl": "https://vocus.cc/article/6a6551c2fd897800018033da",
+    "originalPublishedAt": "2026-07-26T09:38:51+08:00",
+    "originalUpdatedAtCandidate": "2026-07-31T17:11:50+08:00",
+    "bodySha256": "68f71ecd41c327d95d91583af9ba8f9f0f49ff7fcef630f1ecf8ca857bf39115",
+    "markdownSha256": "df5ee5cd2a941652f75bc78d9611237d3436a2bfc1de1c0a26c2ce580209781a",
+    "mappingStatus": "proposed-high-confidence",
+    "categoryProposal": {
+      "primary": "家庭誌",
+      "secondary": [],
+      "confidence": 0.98,
+      "needsReview": false,
+      "reason": "關鍵詞：鼠姊姊、鼠姐姐、龍弟弟、鼠媽媽、姊姊、弟弟",
+      "scores": {
+        "保健室": 0,
+        "風格誌": 0,
+        "圖書室": 0,
+        "光影誌": 0,
+        "家庭誌": 20
+      },
+      "hits": [
+        "鼠姊姊",
+        "鼠姐姐",
+        "龍弟弟",
+        "鼠媽媽",
+        "姊姊",
+        "弟弟",
+        "爸爸",
+        "媽媽",
+        "孩子",
+        "親子"
+      ]
+    },
+    "seriesProposal": "幸福點滴",
+    "relationshipProposals": [
+      "鼠媽媽的家庭成長故事"
+    ],
+    "timelineProposal": {
+      "date": "2026-07-26",
+      "type": "publication",
+      "label": "第一次踏浪，原來海浪也有不同的擁抱方式",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/460f01f4-8754-478a-adc3-93e0b5006b02.png",
+        "file": "assets/posts/vocus-20260726-018033da/460f01f4-8754-478a-adc3-93e0b5006b02.webp",
+        "alt": "第一次踏浪，原來海浪也有不同的擁抱方式｜圖片 1",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "460f01f4-8754-478a-adc3-93e0b5006b02.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true
+  }
+}

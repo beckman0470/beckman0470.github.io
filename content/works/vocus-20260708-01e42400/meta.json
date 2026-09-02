@@ -1,0 +1,120 @@
+{
+  "id": "CDJ-20260708-01E42400",
+  "title": "雞爸爸的心靈暑期作業－歸納生活",
+  "slug": "vocus-20260708-01e42400",
+  "series": "幸福點滴",
+  "category": "幸福點滴",
+  "published": "2026-07-08",
+  "updated": "2026-07-13",
+  "readingTime": 9,
+  "subtitle": "可是，就在這些忙碌到快要喘不過氣的日常裡，我反而越來越常想起一件事：如果心靈也可以放個暑假，我想要替自己留一個小小的園地，不是逃離家庭，也不是放下責任，而是在每天被工作、孩子、家務和生活推著走的縫隙裡，好好回放自己和家人們的生活。",
+  "signature": "",
+  "people": [
+    "雞爸爸",
+    "鼠媽媽",
+    "鼠姊姊",
+    "龍弟弟",
+    "兔阿嬤",
+    "ChatGPT／小妾"
+  ],
+  "relationship": [
+    "鼠媽媽的家庭成長故事"
+  ],
+  "tags": [
+    "夏日特休",
+    "雞爸爸",
+    "方格新手",
+    "鼠姊姊",
+    "龍弟弟",
+    "鼠媽媽",
+    "兔阿嬤",
+    "姊姊",
+    "弟弟",
+    "爸爸",
+    "媽媽"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "鼠媽媽的家庭成長故事"
+  ],
+  "cover": "assets/posts/vocus-20260708-01e42400/cf2f265c-9e6a-46f0-8ad0-edc1093da97e.webp",
+  "coverAlt": "雞爸爸的心靈暑期作業－歸納生活｜圖片 1",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a4da47cfd89780001e42400",
+    "sourceUrl": "https://vocus.cc/article/6a4da47cfd89780001e42400",
+    "canonicalUrl": "https://vocus.cc/article/6a4da47cfd89780001e42400",
+    "originalPublishedAt": "2026-07-08T14:03:25+08:00",
+    "originalUpdatedAtCandidate": "2026-07-13T13:09:44+08:00",
+    "bodySha256": "2ac47a66aea3c823947e813419f7538f028ec0c16e6741bd65e7b3aa26cbe1b1",
+    "markdownSha256": "0b260e8ffae23ba903bb5bafe97d7124ddae3d625b15918ac96269b6eba02334",
+    "mappingStatus": "proposed-high-confidence",
+    "categoryProposal": {
+      "primary": "家庭誌",
+      "secondary": [],
+      "confidence": 0.98,
+      "needsReview": false,
+      "reason": "關鍵詞：鼠姊姊、龍弟弟、鼠媽媽、兔阿嬤、姊姊、弟弟",
+      "scores": {
+        "保健室": 5,
+        "風格誌": 2,
+        "圖書室": 2,
+        "光影誌": 3,
+        "家庭誌": 13
+      },
+      "hits": [
+        "鼠姊姊",
+        "龍弟弟",
+        "鼠媽媽",
+        "兔阿嬤",
+        "姊姊",
+        "弟弟",
+        "爸爸",
+        "媽媽",
+        "孩子",
+        "家庭"
+      ]
+    },
+    "seriesProposal": "幸福點滴",
+    "relationshipProposals": [
+      "鼠媽媽的家庭成長故事"
+    ],
+    "timelineProposal": {
+      "date": "2026-07-08",
+      "type": "publication",
+      "label": "雞爸爸的心靈暑期作業－歸納生活",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/cf2f265c-9e6a-46f0-8ad0-edc1093da97e.png",
+        "file": "assets/posts/vocus-20260708-01e42400/cf2f265c-9e6a-46f0-8ad0-edc1093da97e.webp",
+        "alt": "雞爸爸的心靈暑期作業－歸納生活｜圖片 1",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/fd0e955d-6018-40b0-87a9-6a0d40d0e8ab.png",
+        "file": "assets/posts/vocus-20260708-01e42400/fd0e955d-6018-40b0-87a9-6a0d40d0e8ab.avif",
+        "alt": "雞爸爸的心靈暑期作業－歸納生活｜圖片 2",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/9e73f7ac-3bd2-46cf-9fb1-267fe31ba16f.png",
+        "file": "assets/posts/vocus-20260708-01e42400/9e73f7ac-3bd2-46cf-9fb1-267fe31ba16f.avif",
+        "alt": "雞爸爸的心靈暑期作業－歸納生活｜圖片 3",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "9e73f7ac-3bd2-46cf-9fb1-267fe31ba16f.avif",
+      "cf2f265c-9e6a-46f0-8ad0-edc1093da97e.webp",
+      "fd0e955d-6018-40b0-87a9-6a0d40d0e8ab.avif"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "id": "CDJ-20260720-01404F6C",
+  "title": "乘風破浪的鼠姊姊與龍弟弟：雞爸爸吹出一艘夏日幸福號",
+  "slug": "vocus-20260720-01404f6c",
+  "series": "幸福點滴",
+  "category": "幸福點滴",
+  "published": "2026-07-20",
+  "updated": "2026-07-20",
+  "readingTime": 7,
+  "subtitle": "星期天，是一個陽光很誠實的日子。",
+  "signature": "",
+  "people": [
+    "雞爸爸",
+    "鼠媽媽",
+    "鼠姊姊",
+    "龍弟弟",
+    "兔阿嬤"
+  ],
+  "relationship": [
+    "鼠媽媽的家庭成長故事"
+  ],
+  "tags": [
+    "雞爸爸生活研究室",
+    "鼠姊姊",
+    "龍弟弟",
+    "鼠媽媽",
+    "兔阿嬤",
+    "姊姊",
+    "弟弟",
+    "爸媽",
+    "爸爸"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "鼠媽媽的家庭成長故事"
+  ],
+  "cover": "assets/posts/vocus-20260720-01404f6c/15640fb4-8b3b-4de0-99ca-f321d804763f.avif",
+  "coverAlt": "乘風破浪的鼠姊姊與龍弟弟：雞爸爸吹出一艘夏日幸福號｜圖片 1",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a5d8b90fd89780001404f6c",
+    "sourceUrl": "https://vocus.cc/article/6a5d8b90fd89780001404f6c",
+    "canonicalUrl": "https://vocus.cc/article/6a5d8b90fd89780001404f6c",
+    "originalPublishedAt": "2026-07-20T11:42:17+08:00",
+    "originalUpdatedAtCandidate": "2026-07-20T11:42:37+08:00",
+    "bodySha256": "1da6a67d41e52ca22a724eb7acbd7edb510a373fca83650a4243a75b03ac15c5",
+    "markdownSha256": "4036821e4c39f767291975697af4ab3482e8262583385826a00b5b13848d515c",
+    "mappingStatus": "proposed-high-confidence",
+    "categoryProposal": {
+      "primary": "家庭誌",
+      "secondary": [],
+      "confidence": 0.98,
+      "needsReview": false,
+      "reason": "關鍵詞：鼠姊姊、龍弟弟、鼠媽媽、兔阿嬤、姊姊、弟弟",
+      "scores": {
+        "保健室": 0,
+        "風格誌": 0,
+        "圖書室": 0,
+        "光影誌": 0,
+        "家庭誌": 26
+      },
+      "hits": [
+        "鼠姊姊",
+        "龍弟弟",
+        "鼠媽媽",
+        "兔阿嬤",
+        "姊姊",
+        "弟弟",
+        "爸媽",
+        "爸爸",
+        "媽媽",
+        "孩子",
+        "家庭"
+      ]
+    },
+    "seriesProposal": "幸福點滴",
+    "relationshipProposals": [
+      "鼠媽媽的家庭成長故事"
+    ],
+    "timelineProposal": {
+      "date": "2026-07-20",
+      "type": "publication",
+      "label": "乘風破浪的鼠姊姊與龍弟弟：雞爸爸吹出一艘夏日幸福號",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/15640fb4-8b3b-4de0-99ca-f321d804763f.png",
+        "file": "assets/posts/vocus-20260720-01404f6c/15640fb4-8b3b-4de0-99ca-f321d804763f.avif",
+        "alt": "乘風破浪的鼠姊姊與龍弟弟：雞爸爸吹出一艘夏日幸福號｜圖片 1",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/e04a0797-4237-43e1-95e8-3c0491615929.png",
+        "file": "assets/posts/vocus-20260720-01404f6c/e04a0797-4237-43e1-95e8-3c0491615929.webp",
+        "alt": "乘風破浪的鼠姊姊與龍弟弟：雞爸爸吹出一艘夏日幸福號｜圖片 2",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "15640fb4-8b3b-4de0-99ca-f321d804763f.avif",
+      "e04a0797-4237-43e1-95e8-3c0491615929.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true
+  }
+}

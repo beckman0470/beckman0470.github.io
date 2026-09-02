@@ -1,0 +1,96 @@
+{
+  "id": "CDJ-20260520-016D1A17",
+  "title": "鼠姊姊的草莓果凍變小了！",
+  "slug": "vocus-20260520-016d1a17",
+  "series": "生活研究",
+  "category": "生活研究",
+  "published": "2026-05-20",
+  "updated": "2026-05-20",
+  "readingTime": 6,
+  "subtitle": "前言、草莓果凍的製作方法",
+  "signature": "",
+  "people": [
+    "鼠姊姊",
+    "龍弟弟"
+  ],
+  "relationship": [
+    "鼠姊姊的健康觀察"
+  ],
+  "tags": [
+    "脂肪",
+    "肌肉",
+    "體重",
+    "健康",
+    "血管",
+    "膽固醇"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "鼠姊姊的健康觀察"
+  ],
+  "cover": "assets/story-covers/default.svg",
+  "coverAlt": "鼠姊姊的草莓果凍變小了！｜雞爸爸生活研究室代表插圖",
+  "coverStatus": "placeholder",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a0d0f89fd897800016d1a17",
+    "sourceUrl": "https://vocus.cc/article/6a0d0f89fd897800016d1a17",
+    "canonicalUrl": "https://vocus.cc/article/6a0d0f89fd897800016d1a17",
+    "originalPublishedAt": "2026-05-20T12:05:24+08:00",
+    "originalUpdatedAtCandidate": "2026-05-20T12:05:24+08:00",
+    "bodySha256": "09b893c914694f9018fdbc362cf019a35c5262629316be089880060cfa2384fc",
+    "markdownSha256": "ac89d9d8afec741c912ed5819ecf8740da42d81d1efbb06d461a4e171e76a1b2",
+    "mappingStatus": "resolved-pending-preview-approval",
+    "categoryProposal": {
+      "primary": "保健室",
+      "secondary": [
+        "家庭誌"
+      ],
+      "confidence": 1.0,
+      "needsReview": false,
+      "reason": "semantic editorial review",
+      "scores": {
+        "保健室": 12,
+        "風格誌": 0,
+        "圖書室": 0,
+        "光影誌": 0,
+        "家庭誌": 12
+      },
+      "hits": [
+        "健康",
+        "血管",
+        "脂肪",
+        "肌肉",
+        "體重",
+        "膽固醇"
+      ]
+    },
+    "seriesProposal": "生活研究",
+    "relationshipProposals": [
+      "鼠姊姊的健康觀察"
+    ],
+    "timelineProposal": {
+      "date": "2026-05-20",
+      "type": "publication",
+      "label": "鼠姊姊的草莓果凍變小了！",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [],
+    "copiedAssets": [],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true,
+    "contentTemplate": "article",
+    "fallbackPolicy": {
+      "iframe": "safe-external-link",
+      "video": "safe-external-link",
+      "poll": "static-question-options-with-vocus-link"
+    },
+    "editorialReviewNotes": [
+      "依正文核心主題完成語意校正"
+    ],
+    "previewApprovalStatus": "pending"
+  }
+}

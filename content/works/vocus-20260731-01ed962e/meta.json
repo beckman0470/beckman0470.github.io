@@ -1,0 +1,104 @@
+{
+  "id": "CDJ-20260731-01ED962E",
+  "title": "牙齒「啵」一聲掉下來，孩子的勇敢卻在安心裡長出來",
+  "slug": "vocus-20260731-01ed962e",
+  "series": "幸福點滴",
+  "category": "幸福點滴",
+  "published": "2026-07-31",
+  "updated": "2026-07-31",
+  "readingTime": 6,
+  "subtitle": "牙仙子再次來敲門 孩子們的成長不能拖",
+  "signature": "",
+  "people": [
+    "雞爸爸",
+    "鼠媽媽",
+    "鼠姊姊",
+    "龍弟弟",
+    "兔阿嬤"
+  ],
+  "relationship": [
+    "鼠媽媽的家庭成長故事"
+  ],
+  "tags": [
+    "雞爸爸生活研究室",
+    "鼠姊姊",
+    "乳牙",
+    "龍弟弟",
+    "鼠媽媽",
+    "兔阿嬤",
+    "姊姊",
+    "弟弟",
+    "父母",
+    "爸爸"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "鼠媽媽的家庭成長故事"
+  ],
+  "cover": "assets/posts/vocus-20260731-01ed962e/e4f76f84-0b9d-4e73-9155-fe95d2d72a85.webp",
+  "coverAlt": "牙齒「啵」一聲掉下來，孩子的勇敢卻在安心裡長出來｜圖片 1",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a6bf9f5fd89780001ed962e",
+    "sourceUrl": "https://vocus.cc/article/6a6bf9f5fd89780001ed962e",
+    "canonicalUrl": "https://vocus.cc/article/6a6bf9f5fd89780001ed962e",
+    "originalPublishedAt": "2026-07-31T10:16:20+08:00",
+    "originalUpdatedAtCandidate": "2026-07-31T10:16:21+08:00",
+    "bodySha256": "25c100ffa180ffe3aa7ad3a8e730061e6215fbe042306d754e8d8d3ee19b49b9",
+    "markdownSha256": "6d76665c5f5cecd82f4f8c8cc61a2ae23c0e2c8079951e847a60ac0aa17ac0a2",
+    "mappingStatus": "proposed-high-confidence",
+    "categoryProposal": {
+      "primary": "家庭誌",
+      "secondary": [],
+      "confidence": 0.98,
+      "needsReview": false,
+      "reason": "關鍵詞：鼠姊姊、龍弟弟、鼠媽媽、兔阿嬤、姊姊、弟弟",
+      "scores": {
+        "保健室": 4,
+        "風格誌": 0,
+        "圖書室": 1,
+        "光影誌": 0,
+        "家庭誌": 19
+      },
+      "hits": [
+        "鼠姊姊",
+        "龍弟弟",
+        "鼠媽媽",
+        "兔阿嬤",
+        "姊姊",
+        "弟弟",
+        "父母",
+        "爸爸",
+        "媽媽",
+        "孩子"
+      ]
+    },
+    "seriesProposal": "幸福點滴",
+    "relationshipProposals": [
+      "鼠媽媽的家庭成長故事"
+    ],
+    "timelineProposal": {
+      "date": "2026-07-31",
+      "type": "publication",
+      "label": "牙齒「啵」一聲掉下來，孩子的勇敢卻在安心裡長出來",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/e4f76f84-0b9d-4e73-9155-fe95d2d72a85.png",
+        "file": "assets/posts/vocus-20260731-01ed962e/e4f76f84-0b9d-4e73-9155-fe95d2d72a85.webp",
+        "alt": "牙齒「啵」一聲掉下來，孩子的勇敢卻在安心裡長出來｜圖片 1",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "e4f76f84-0b9d-4e73-9155-fe95d2d72a85.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true
+  }
+}

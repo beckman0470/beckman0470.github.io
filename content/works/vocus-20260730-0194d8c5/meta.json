@@ -1,0 +1,94 @@
+{
+  "id": "CDJ-20260730-0194D8C5",
+  "title": "兔阿嬤的假牙，讓雞爸爸知道有些距離，值得多開半小時",
+  "slug": "vocus-20260730-0194d8c5",
+  "series": "幸福點滴",
+  "category": "幸福點滴",
+  "published": "2026-07-30",
+  "updated": "2026-07-30",
+  "readingTime": 6,
+  "subtitle": "第一次看診，快得讓人來不及思考",
+  "signature": "",
+  "people": [
+    "雞爸爸",
+    "兔阿嬤"
+  ],
+  "relationship": [
+    "兔阿嬤的家庭成長故事"
+  ],
+  "tags": [
+    "雞爸爸生活研究室",
+    "兔阿嬤",
+    "牙套",
+    "爸爸"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "兔阿嬤的家庭成長故事"
+  ],
+  "cover": "assets/posts/vocus-20260730-0194d8c5/6da745fe-e180-409f-825d-068566a10caf.avif",
+  "coverAlt": "兔阿嬤的假牙，讓雞爸爸知道有些距離，值得多開半小時｜圖片 1",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a6ac99efd8978000194d8c5",
+    "sourceUrl": "https://vocus.cc/article/6a6ac99efd8978000194d8c5",
+    "canonicalUrl": "https://vocus.cc/article/6a6ac99efd8978000194d8c5",
+    "originalPublishedAt": "2026-07-30T12:39:40+08:00",
+    "originalUpdatedAtCandidate": "2026-07-30T12:39:40+08:00",
+    "bodySha256": "edd056d9fcd2b02744803a4725c1e5b12b2909c55335ed74fe83c9e2025e52c5",
+    "markdownSha256": "1f7b34407198e6581d6c8e1d161f94ce590392658fed5429f7e3f14299a42011",
+    "mappingStatus": "proposed-high-confidence",
+    "categoryProposal": {
+      "primary": "家庭誌",
+      "secondary": [],
+      "confidence": 0.97,
+      "needsReview": false,
+      "reason": "關鍵詞：兔阿嬤、爸爸",
+      "scores": {
+        "保健室": 2,
+        "風格誌": 0,
+        "圖書室": 0,
+        "光影誌": 0,
+        "家庭誌": 8
+      },
+      "hits": [
+        "兔阿嬤",
+        "爸爸"
+      ]
+    },
+    "seriesProposal": "幸福點滴",
+    "relationshipProposals": [
+      "兔阿嬤的家庭成長故事"
+    ],
+    "timelineProposal": {
+      "date": "2026-07-30",
+      "type": "publication",
+      "label": "兔阿嬤的假牙，讓雞爸爸知道有些距離，值得多開半小時",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/6da745fe-e180-409f-825d-068566a10caf.png",
+        "file": "assets/posts/vocus-20260730-0194d8c5/6da745fe-e180-409f-825d-068566a10caf.avif",
+        "alt": "兔阿嬤的假牙，讓雞爸爸知道有些距離，值得多開半小時｜圖片 1",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/de077e79-041b-42e8-ae35-6b31f0307c23.png",
+        "file": "assets/posts/vocus-20260730-0194d8c5/de077e79-041b-42e8-ae35-6b31f0307c23.webp",
+        "alt": "兔阿嬤的假牙，讓雞爸爸知道有些距離，值得多開半小時｜圖片 2",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "6da745fe-e180-409f-825d-068566a10caf.avif",
+      "de077e79-041b-42e8-ae35-6b31f0307c23.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true
+  }
+}

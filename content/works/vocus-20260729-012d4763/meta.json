@@ -1,0 +1,100 @@
+{
+  "id": "CDJ-20260729-012D4763",
+  "title": "那位一直照顧我牙齒的人離開後，我才開始長大",
+  "slug": "vocus-20260729-012d4763",
+  "series": "生活研究",
+  "category": "生活研究",
+  "published": "2026-07-29",
+  "updated": "2026-07-29",
+  "readingTime": 7,
+  "subtitle": "牙齦流血的問題已經困擾雞爸爸好久好久，以為就像是面對生活，不能接受就試著享受。所以每次刷牙流血，都稀鬆平常；偶爾嘴巴有異味，也以為只是昨天吃了重口味的東西。直到最近，我才願意正視和面對，健康的牙齦，本來就不應該紅腫還是常常刷牙流血。",
+  "signature": "",
+  "people": [
+    "雞爸爸"
+  ],
+  "relationship": [
+    "雞爸爸的健康觀察"
+  ],
+  "tags": [
+    "雞爸爸生活研究室",
+    "雞爸爸",
+    "牙齒矯正",
+    "健康",
+    "血管",
+    "脂肪",
+    "骨頭",
+    "牙齒"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "雞爸爸的健康觀察"
+  ],
+  "cover": "assets/posts/vocus-20260729-012d4763/d51c1748-c128-416d-b006-16550e730266.webp",
+  "coverAlt": "那位一直照顧我牙齒的人離開後，我才開始長大｜圖片 1",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a69786cfd897800012d4763",
+    "sourceUrl": "https://vocus.cc/article/6a69786cfd897800012d4763",
+    "canonicalUrl": "https://vocus.cc/article/6a69786cfd897800012d4763",
+    "originalPublishedAt": "2026-07-29T15:54:10+08:00",
+    "originalUpdatedAtCandidate": "2026-07-29T15:58:42+08:00",
+    "bodySha256": "1d83d48916747468e9cb86e89ae00316e0667b7d660866e7818547dfc8eef561",
+    "markdownSha256": "fc145810ce5ba91db8663e19b32e0e44eba69edfc0327c2c56f898e209ce9030",
+    "mappingStatus": "proposed-high-confidence",
+    "categoryProposal": {
+      "primary": "保健室",
+      "secondary": [],
+      "confidence": 0.92,
+      "needsReview": false,
+      "reason": "關鍵詞：健康、血管、脂肪、骨頭、牙齒",
+      "scores": {
+        "保健室": 8,
+        "風格誌": 0,
+        "圖書室": 0,
+        "光影誌": 0,
+        "家庭誌": 4
+      },
+      "hits": [
+        "健康",
+        "血管",
+        "脂肪",
+        "骨頭",
+        "牙齒"
+      ]
+    },
+    "seriesProposal": "生活研究",
+    "relationshipProposals": [
+      "雞爸爸的健康觀察"
+    ],
+    "timelineProposal": {
+      "date": "2026-07-29",
+      "type": "publication",
+      "label": "那位一直照顧我牙齒的人離開後，我才開始長大",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/d51c1748-c128-416d-b006-16550e730266.png",
+        "file": "assets/posts/vocus-20260729-012d4763/d51c1748-c128-416d-b006-16550e730266.webp",
+        "alt": "那位一直照顧我牙齒的人離開後，我才開始長大｜圖片 1",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/5360743e-787f-4a6f-911b-a8b076918887.png",
+        "file": "assets/posts/vocus-20260729-012d4763/5360743e-787f-4a6f-911b-a8b076918887.avif",
+        "alt": "那位一直照顧我牙齒的人離開後，我才開始長大｜圖片 2",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "5360743e-787f-4a6f-911b-a8b076918887.avif",
+      "d51c1748-c128-416d-b006-16550e730266.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true
+  }
+}

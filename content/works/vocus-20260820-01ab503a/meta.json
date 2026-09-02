@@ -1,0 +1,103 @@
+{
+  "id": "CDJ-20260820-01AB503A",
+  "title": "爸媽口中的「堅持」，到底是孩子該要學的，還是我們捨不得報名費？",
+  "slug": "vocus-20260820-01ab503a",
+  "series": "幸福點滴",
+  "category": "幸福點滴",
+  "published": "2026-08-20",
+  "updated": "2026-08-20",
+  "readingTime": 6,
+  "subtitle": "以爸爸媽媽的角度，這種時候很容易立刻啟動「教育模式」。報名都報了，也已經去過了，怎麼距離星期日只剩兩天，突然說不去？",
+  "signature": "",
+  "people": [
+    "雞爸爸",
+    "鼠媽媽",
+    "鼠姊姊",
+    "龍弟弟"
+  ],
+  "relationship": [
+    "鼠媽媽的家庭成長故事"
+  ],
+  "tags": [
+    "雞爸爸生活研究室",
+    "雞爸爸",
+    "鼠姊姊",
+    "龍弟弟",
+    "鼠媽媽",
+    "姊姊",
+    "弟弟",
+    "爸媽",
+    "爸爸",
+    "媽媽"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "鼠媽媽的家庭成長故事"
+  ],
+  "cover": "assets/posts/vocus-20260820-01ab503a/e06365a1-8933-4dfe-bb80-f7b75a47013d.webp",
+  "coverAlt": "爸媽口中的「堅持」，到底是孩子該要學的，還是我們捨不得報名費？｜圖片 1",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a86a8c3fd89780001ab503a",
+    "sourceUrl": "https://vocus.cc/article/6a86a8c3fd89780001ab503a",
+    "canonicalUrl": "https://vocus.cc/article/6a86a8c3fd89780001ab503a",
+    "originalPublishedAt": "2026-08-20T17:11:02+08:00",
+    "originalUpdatedAtCandidate": "2026-08-20T18:20:09+08:00",
+    "bodySha256": "0c85ff7744671535ea8e2e68e403ff6b5e4c02bc0aee1e20b54941158732c233",
+    "markdownSha256": "a5eebd4fbcba008a28213c8fcb9ac14bd003b6e7fd2e29bb9e970753fb6e5a32",
+    "mappingStatus": "proposed-high-confidence",
+    "categoryProposal": {
+      "primary": "家庭誌",
+      "secondary": [],
+      "confidence": 0.98,
+      "needsReview": false,
+      "reason": "關鍵詞：鼠姊姊、龍弟弟、鼠媽媽、姊姊、弟弟、爸媽",
+      "scores": {
+        "保健室": 0,
+        "風格誌": 0,
+        "圖書室": 0,
+        "光影誌": 0,
+        "家庭誌": 22
+      },
+      "hits": [
+        "鼠姊姊",
+        "龍弟弟",
+        "鼠媽媽",
+        "姊姊",
+        "弟弟",
+        "爸媽",
+        "爸爸",
+        "媽媽",
+        "孩子",
+        "家庭"
+      ]
+    },
+    "seriesProposal": "幸福點滴",
+    "relationshipProposals": [
+      "鼠媽媽的家庭成長故事"
+    ],
+    "timelineProposal": {
+      "date": "2026-08-20",
+      "type": "publication",
+      "label": "爸媽口中的「堅持」，到底是孩子該要學的，還是我們捨不得報名費？",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/e06365a1-8933-4dfe-bb80-f7b75a47013d.png",
+        "file": "assets/posts/vocus-20260820-01ab503a/e06365a1-8933-4dfe-bb80-f7b75a47013d.webp",
+        "alt": "爸媽口中的「堅持」，到底是孩子該要學的，還是我們捨不得報名費？｜圖片 1",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "e06365a1-8933-4dfe-bb80-f7b75a47013d.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true
+  }
+}

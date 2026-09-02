@@ -1,0 +1,118 @@
+{
+  "id": "CDJ-20260817-01BCFD9F",
+  "title": "99 | 自己回過頭看看雞爸爸走過的日子",
+  "slug": "vocus-20260817-01bcfd9f",
+  "series": "生活研究",
+  "category": "生活研究",
+  "published": "2026-08-17",
+  "updated": "2026-08-17",
+  "readingTime": 11,
+  "subtitle": "原來回顧，指的就是這樣一個意味深長的轉身，加了時光的味道...",
+  "signature": "",
+  "people": [
+    "雞爸爸",
+    "鼠媽媽",
+    "鼠姊姊",
+    "龍弟弟",
+    "兔阿嬤",
+    "ChatGPT／小妾"
+  ],
+  "relationship": [
+    "鼠媽媽的健康觀察"
+  ],
+  "tags": [
+    "雞爸爸生活研究室",
+    "雞爸爸",
+    "VOCUS",
+    "健康",
+    "血管",
+    "氣喘",
+    "皮質醇",
+    "減脂",
+    "脂肪",
+    "保健",
+    "肌酸"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "鼠媽媽的健康觀察"
+  ],
+  "cover": "assets/posts/vocus-20260817-01bcfd9f/5cdb0ec8-648e-46d2-8061-4165b5ad6be0.webp",
+  "coverAlt": "99 | 自己回過頭看看雞爸爸走過的日子｜圖片 1",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a8282b1fd89780001bcfd9f",
+    "sourceUrl": "https://vocus.cc/article/6a8282b1fd89780001bcfd9f",
+    "canonicalUrl": "https://vocus.cc/article/6a8282b1fd89780001bcfd9f",
+    "originalPublishedAt": "2026-08-17T12:20:54+08:00",
+    "originalUpdatedAtCandidate": "2026-08-17T12:20:54+08:00",
+    "bodySha256": "fc94135820db898ba7c31638140420e89b71957fbc0dfa15b8c325c6296e13da",
+    "markdownSha256": "64c88acf92b66ff26b16a5d448ef5bda82a3c7ea274616585a30384fc3e9bbab",
+    "mappingStatus": "resolved-pending-preview-approval",
+    "categoryProposal": {
+      "primary": "家庭誌",
+      "secondary": [],
+      "confidence": 1.0,
+      "needsReview": false,
+      "reason": "semantic editorial review",
+      "scores": {
+        "保健室": 12,
+        "風格誌": 8,
+        "圖書室": 2,
+        "光影誌": 5,
+        "家庭誌": 15
+      },
+      "hits": [
+        "健康",
+        "血管",
+        "氣喘",
+        "皮質醇",
+        "減脂",
+        "脂肪",
+        "保健",
+        "肌酸",
+        "遠視",
+        "斜視",
+        "整復",
+        "牙齒"
+      ]
+    },
+    "seriesProposal": "生活研究",
+    "relationshipProposals": [
+      "鼠媽媽的健康觀察"
+    ],
+    "timelineProposal": {
+      "date": "2026-08-17",
+      "type": "publication",
+      "label": "99 | 自己回過頭看看雞爸爸走過的日子",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/5cdb0ec8-648e-46d2-8061-4165b5ad6be0.png",
+        "file": "assets/posts/vocus-20260817-01bcfd9f/5cdb0ec8-648e-46d2-8061-4165b5ad6be0.webp",
+        "alt": "99 | 自己回過頭看看雞爸爸走過的日子｜圖片 1",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "5cdb0ec8-648e-46d2-8061-4165b5ad6be0.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true,
+    "contentTemplate": "article",
+    "fallbackPolicy": {
+      "iframe": "safe-external-link",
+      "video": "safe-external-link",
+      "poll": "static-question-options-with-vocus-link"
+    },
+    "editorialReviewNotes": [
+      "依正文核心主題完成語意校正"
+    ],
+    "previewApprovalStatus": "pending"
+  }
+}

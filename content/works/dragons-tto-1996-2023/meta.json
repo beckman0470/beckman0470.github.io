@@ -48,5 +48,86 @@
   ],
   "cover": "assets/story-covers/default.svg",
   "coverAlt": "跨越世代龍魂：純種砲手指數 TTO 看味全龍 1996 vs. 2023 打線演變｜雞爸爸生活研究室代表插圖",
-  "coverStatus": "placeholder"
+  "coverStatus": "placeholder",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a0fec0cfd897800016d448c",
+    "sourceUrl": "https://vocus.cc/article/6a0fec0cfd897800016d448c",
+    "canonicalUrl": "https://vocus.cc/article/6a0fec0cfd897800016d448c",
+    "originalPublishedAt": "2026-05-22T15:33:54+08:00",
+    "originalUpdatedAtCandidate": "2026-05-25T17:03:00+08:00",
+    "bodySha256": "dfaccbed25a9ef33c9bbef1d101173ce06681a47836efcb984e2a33a1d623977",
+    "markdownSha256": "fb773ba07c06f767e5e6ba7fcaff63e5c0beb9deba2815b88b8460367eac5334",
+    "mappingStatus": "proposed-high-confidence",
+    "categoryProposal": {
+      "primary": "風格誌",
+      "secondary": [],
+      "confidence": 0.98,
+      "needsReview": false,
+      "reason": "關鍵詞：味全龍、棒球、投手、打線、TTO、龍隊",
+      "scores": {
+        "保健室": 0,
+        "風格誌": 21,
+        "圖書室": 0,
+        "光影誌": 0,
+        "家庭誌": 0
+      },
+      "hits": [
+        "味全龍",
+        "棒球",
+        "投手",
+        "打線",
+        "TTO",
+        "龍隊",
+        "吉力吉撈",
+        "李凱威"
+      ]
+    },
+    "seriesProposal": "棒球札記",
+    "relationshipProposals": [
+      "雞爸爸 × 味全龍打線進化觀察"
+    ],
+    "timelineProposal": {
+      "date": "2026-05-22",
+      "type": "publication",
+      "label": "跨越世代龍魂：純種砲手指數TTO 看味全龍 1996 vs. 2023 打線演變",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/b7696497-32f3-4b72-b0c1-a85f33d980d3.jpg",
+        "file": "assets/posts/dragons-tto-1996-2023/b7696497-32f3-4b72-b0c1-a85f33d980d3.webp",
+        "alt": "吉力吉撈 是CPBL最具代表性的TTO打者",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/ed82b50f-2f16-4597-8f41-774c806665c8.png",
+        "file": "assets/posts/dragons-tto-1996-2023/ed82b50f-2f16-4597-8f41-774c806665c8.avif",
+        "alt": "跨越世代龍魂：純種砲手指數TTO 看味全龍 1996 vs. 2023 打線演變｜圖片 2",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/70aa185d-a8ff-4dc4-85dd-838c5b2fd9a9.jpg",
+        "file": "assets/posts/dragons-tto-1996-2023/70aa185d-a8ff-4dc4-85dd-838c5b2fd9a9.webp",
+        "alt": "亞洲巨砲呂明賜曾因三振率過高陷入低潮，在96年找回狀態",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/14e8d992-6d2d-43fe-9030-e3b7144842f1.png",
+        "file": "assets/posts/dragons-tto-1996-2023/14e8d992-6d2d-43fe-9030-e3b7144842f1.webp",
+        "alt": "跨越世代龍魂：純種砲手指數TTO 看味全龍 1996 vs. 2023 打線演變｜圖片 4",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "14e8d992-6d2d-43fe-9030-e3b7144842f1.webp",
+      "70aa185d-a8ff-4dc4-85dd-838c5b2fd9a9.webp",
+      "b7696497-32f3-4b72-b0c1-a85f33d980d3.webp",
+      "ed82b50f-2f16-4597-8f41-774c806665c8.avif"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true
+  }
 }

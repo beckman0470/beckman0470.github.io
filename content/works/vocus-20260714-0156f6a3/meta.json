@@ -1,0 +1,126 @@
+{
+  "id": "CDJ-20260714-0156F6A3",
+  "title": "鼠姊姊的閃亮回憶和老師的鏡頭",
+  "slug": "vocus-20260714-0156f6a3",
+  "series": "幸福點滴",
+  "category": "幸福點滴",
+  "published": "2026-07-14",
+  "updated": "2026-07-15",
+  "readingTime": 5,
+  "subtitle": "──當照片和回憶重疊時，我看見了五歲孩子眼中的世界",
+  "signature": "",
+  "people": [
+    "雞爸爸",
+    "鼠媽媽",
+    "鼠姊姊"
+  ],
+  "relationship": [
+    "鼠媽媽的家庭成長故事"
+  ],
+  "tags": [
+    "鼠姊姊",
+    "雞爸爸",
+    "綠世界",
+    "鼠媽媽",
+    "姊姊",
+    "爸媽",
+    "爸爸",
+    "媽媽",
+    "孩子"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "鼠媽媽的家庭成長故事"
+  ],
+  "cover": "assets/posts/vocus-20260714-0156f6a3/6732125e-6669-4e04-aa85-cb85d5b73ae7.webp",
+  "coverAlt": "孩子眼中的綠世界，老師鏡頭裡的鼠姊姊。",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a54b99afd8978000156f6a3",
+    "sourceUrl": "https://vocus.cc/article/6a54b99afd8978000156f6a3",
+    "canonicalUrl": "https://vocus.cc/article/6a54b99afd8978000156f6a3",
+    "originalPublishedAt": "2026-07-14T11:13:03+08:00",
+    "originalUpdatedAtCandidate": "2026-07-15T15:25:58+08:00",
+    "bodySha256": "466c6e960481bbc49004f35287ade1375dab254a4333a78c6f41caeabb11f0b6",
+    "markdownSha256": "106faffcd7d94f1cfa91f7fa7cdf6b074ef92e7783043d5d5a7a7d5249d084f9",
+    "mappingStatus": "resolved-pending-preview-approval",
+    "categoryProposal": {
+      "primary": "家庭誌",
+      "secondary": [],
+      "confidence": 1.0,
+      "needsReview": false,
+      "reason": "semantic editorial review",
+      "scores": {
+        "保健室": 0,
+        "風格誌": 0,
+        "圖書室": 1,
+        "光影誌": 4,
+        "家庭誌": 15
+      },
+      "hits": [
+        "鼠姊姊",
+        "鼠媽媽",
+        "姊姊",
+        "爸媽",
+        "爸爸",
+        "媽媽",
+        "孩子"
+      ]
+    },
+    "seriesProposal": "幸福點滴",
+    "relationshipProposals": [
+      "鼠媽媽的家庭成長故事"
+    ],
+    "timelineProposal": {
+      "date": "2026-07-14",
+      "type": "publication",
+      "label": "鼠姊姊的閃亮回憶和老師的鏡頭",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/6732125e-6669-4e04-aa85-cb85d5b73ae7.png",
+        "file": "assets/posts/vocus-20260714-0156f6a3/6732125e-6669-4e04-aa85-cb85d5b73ae7.webp",
+        "alt": "孩子眼中的綠世界，老師鏡頭裡的鼠姊姊。",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/497eda33-4ea8-40b0-9486-04cf118d42d5.png",
+        "file": "assets/posts/vocus-20260714-0156f6a3/497eda33-4ea8-40b0-9486-04cf118d42d5.avif",
+        "alt": "鼠姊姊的閃亮回憶和老師的鏡頭｜圖片 2",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/26ae4317-ebd4-4cf9-937d-dbff3ddbbcea.jpg",
+        "file": "assets/posts/vocus-20260714-0156f6a3/26ae4317-ebd4-4cf9-937d-dbff3ddbbcea.webp",
+        "alt": "鼠姊姊的閃亮回憶和老師的鏡頭｜圖片 3",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "26ae4317-ebd4-4cf9-937d-dbff3ddbbcea.webp",
+      "497eda33-4ea8-40b0-9486-04cf118d42d5.avif",
+      "6732125e-6669-4e04-aa85-cb85d5b73ae7.webp"
+    ],
+    "interactiveKinds": [
+      "iframe"
+    ],
+    "embedUrls": [
+      "https://www.youtube-nocookie.com/embed/Rfg6SpruQKo"
+    ],
+    "doNotPublishUntilApproved": true,
+    "contentTemplate": "article",
+    "fallbackPolicy": {
+      "iframe": "safe-external-link",
+      "video": "safe-external-link",
+      "poll": "static-question-options-with-vocus-link"
+    },
+    "editorialReviewNotes": [
+      "影音改為安全外連；投票保留問題與選項並連回 Vocus"
+    ],
+    "previewApprovalStatus": "pending"
+  }
+}

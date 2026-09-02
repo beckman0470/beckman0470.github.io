@@ -36,5 +36,62 @@
   ],
   "cover": "assets/story-covers/default.svg",
   "coverAlt": "如何降低家庭專屬的「數據雜訊」｜雞爸爸生活研究室代表插圖",
-  "coverStatus": "placeholder"
+  "coverStatus": "placeholder",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a1cea09fd8978000154a8ed",
+    "sourceUrl": "https://vocus.cc/article/6a1cea09fd8978000154a8ed",
+    "canonicalUrl": "https://vocus.cc/article/6a1cea09fd8978000154a8ed",
+    "originalPublishedAt": "2026-06-01T11:29:33+08:00",
+    "originalUpdatedAtCandidate": "2026-07-17T12:07:34+08:00",
+    "bodySha256": "e578b2528220f9650ff2bb1886bf86614bf1846e69a5087345e40b017d8d7961",
+    "markdownSha256": "0bc332f6d4d0540338b95b8fa1db45f4caeda7bda57de773cf2d96dab7fabe8b",
+    "mappingStatus": "proposed-high-confidence",
+    "categoryProposal": {
+      "primary": "家庭誌",
+      "secondary": [],
+      "confidence": 0.95,
+      "needsReview": false,
+      "reason": "關鍵詞：鼠媽媽、爸爸、媽媽、孩子、家庭",
+      "scores": {
+        "保健室": 0,
+        "風格誌": 3,
+        "圖書室": 0,
+        "光影誌": 0,
+        "家庭誌": 8
+      },
+      "hits": [
+        "鼠媽媽",
+        "爸爸",
+        "媽媽",
+        "孩子",
+        "家庭"
+      ]
+    },
+    "seriesProposal": "生活研究",
+    "relationshipProposals": [
+      "雞爸爸 × 家庭溝通頻率"
+    ],
+    "timelineProposal": {
+      "date": "2026-06-01",
+      "type": "publication",
+      "label": "如何降低家庭專屬的「數據雜訊」",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/a3d82fb9-50e9-47aa-b3ba-f4e32570336e.png",
+        "file": "assets/posts/family-data-noise-hsp/a3d82fb9-50e9-47aa-b3ba-f4e32570336e.webp",
+        "alt": "適當叫個暫停，確認場邊暗號有沒有看錯",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "a3d82fb9-50e9-47aa-b3ba-f4e32570336e.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true
+  }
 }

@@ -40,5 +40,80 @@
   ],
   "cover": "assets/story-covers/default.svg",
   "coverAlt": "關注「能量用球數」：HSP 的守護神基因｜雞爸爸生活研究室代表插圖",
-  "coverStatus": "placeholder"
+  "coverStatus": "placeholder",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a194ee8fd897800019622a7",
+    "sourceUrl": "https://vocus.cc/article/6a194ee8fd897800019622a7",
+    "canonicalUrl": "https://vocus.cc/article/6a194ee8fd897800019622a7",
+    "originalPublishedAt": "2026-05-29T18:10:15+08:00",
+    "originalUpdatedAtCandidate": "2026-07-21T10:59:03+08:00",
+    "bodySha256": "ed3ffb9c5d7cbf9df5a2f1a76a39630f19677230a0ac2566a885d9e1772d40be",
+    "markdownSha256": "170590cd0067ea711733fc834a2e59e1005974d00c7c0dd5dd372659a1b23e70",
+    "mappingStatus": "resolved-pending-preview-approval",
+    "categoryProposal": {
+      "primary": "保健室",
+      "secondary": [
+        "風格誌"
+      ],
+      "confidence": 1.0,
+      "needsReview": false,
+      "reason": "semantic editorial review",
+      "scores": {
+        "保健室": 0,
+        "風格誌": 4,
+        "圖書室": 1,
+        "光影誌": 0,
+        "家庭誌": 7
+      },
+      "hits": [
+        "味全龍",
+        "棒球",
+        "投手",
+        "捕手"
+      ]
+    },
+    "seriesProposal": "生活研究",
+    "relationshipProposals": [
+      "雞爸爸 × HSP 能量管理"
+    ],
+    "timelineProposal": {
+      "date": "2026-05-29",
+      "type": "publication",
+      "label": "關注「能量用球數」高敏感族群的守護神基因",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/1d96b8f3-905c-40e0-9dfd-4d80f0520316.png",
+        "file": "assets/posts/hsp-energy-pitch-count/1d96b8f3-905c-40e0-9dfd-4d80f0520316.webp",
+        "alt": "關注「能量用球數」高敏感族群的守護神基因｜圖片 1",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/43579cee-cdd3-43a7-a27a-69ca8996740b.jpg",
+        "file": "assets/posts/hsp-energy-pitch-count/43579cee-cdd3-43a7-a27a-69ca8996740b.webp",
+        "alt": "味全龍傳奇球星-救援王賈西",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "1d96b8f3-905c-40e0-9dfd-4d80f0520316.webp",
+      "43579cee-cdd3-43a7-a27a-69ca8996740b.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true,
+    "contentTemplate": "article",
+    "fallbackPolicy": {
+      "iframe": "safe-external-link",
+      "video": "safe-external-link",
+      "poll": "static-question-options-with-vocus-link"
+    },
+    "editorialReviewNotes": [
+      "依正文核心主題完成語意校正"
+    ],
+    "previewApprovalStatus": "pending"
+  }
 }

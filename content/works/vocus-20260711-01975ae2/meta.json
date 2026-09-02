@@ -1,0 +1,107 @@
+{
+  "id": "CDJ-20260711-01975AE2",
+  "title": "冬病夏治：雞鼠父女的三伏貼初體驗",
+  "slug": "vocus-20260711-01975ae2",
+  "series": "生活研究",
+  "category": "生活研究",
+  "published": "2026-07-11",
+  "updated": "2026-07-11",
+  "readingTime": 6,
+  "subtitle": "陽氣最旺盛的時節，雞爸爸和鼠姐姐來體驗九陽神功",
+  "signature": "",
+  "people": [
+    "雞爸爸",
+    "鼠媽媽",
+    "鼠姊姊"
+  ],
+  "relationship": [
+    "鼠媽媽的健康觀察"
+  ],
+  "tags": [
+    "雞爸爸",
+    "鼠姊姊",
+    "中醫",
+    "氣喘",
+    "喘鳴",
+    "三伏貼",
+    "過敏",
+    "整復"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "鼠媽媽的健康觀察"
+  ],
+  "cover": "assets/posts/vocus-20260711-01975ae2/bf4ceb81-33df-4ab9-9256-0a1ff36e728d.webp",
+  "coverAlt": "冬病夏治：雞鼠父女的三伏貼初體驗｜圖片 1",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a51d4b3fd89780001975ae2",
+    "sourceUrl": "https://vocus.cc/article/6a51d4b3fd89780001975ae2",
+    "canonicalUrl": "https://vocus.cc/article/6a51d4b3fd89780001975ae2",
+    "originalPublishedAt": "2026-07-11T14:11:44+08:00",
+    "originalUpdatedAtCandidate": "2026-07-11T14:11:45+08:00",
+    "bodySha256": "2047e8242a8077b0b0e2d939c50fffd3ca157418f48cbd067870f452c47a80eb",
+    "markdownSha256": "75426c0f5fec3fb294d3dbb278464203f92608d3317d99a92f3d70922541add1",
+    "mappingStatus": "resolved-pending-preview-approval",
+    "categoryProposal": {
+      "primary": "保健室",
+      "secondary": [
+        "家庭誌"
+      ],
+      "confidence": 1.0,
+      "needsReview": false,
+      "reason": "semantic editorial review",
+      "scores": {
+        "保健室": 8,
+        "風格誌": 0,
+        "圖書室": 2,
+        "光影誌": 0,
+        "家庭誌": 12
+      },
+      "hits": [
+        "氣喘",
+        "喘鳴",
+        "三伏貼",
+        "過敏",
+        "整復"
+      ]
+    },
+    "seriesProposal": "生活研究",
+    "relationshipProposals": [
+      "鼠媽媽的健康觀察"
+    ],
+    "timelineProposal": {
+      "date": "2026-07-11",
+      "type": "publication",
+      "label": "冬病夏治：雞鼠父女的三伏貼初體驗",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/bf4ceb81-33df-4ab9-9256-0a1ff36e728d.png",
+        "file": "assets/posts/vocus-20260711-01975ae2/bf4ceb81-33df-4ab9-9256-0a1ff36e728d.webp",
+        "alt": "冬病夏治：雞鼠父女的三伏貼初體驗｜圖片 1",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "bf4ceb81-33df-4ab9-9256-0a1ff36e728d.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true,
+    "contentTemplate": "article",
+    "fallbackPolicy": {
+      "iframe": "safe-external-link",
+      "video": "safe-external-link",
+      "poll": "static-question-options-with-vocus-link"
+    },
+    "editorialReviewNotes": [
+      "依正文核心主題完成語意校正"
+    ],
+    "previewApprovalStatus": "pending"
+  }
+}

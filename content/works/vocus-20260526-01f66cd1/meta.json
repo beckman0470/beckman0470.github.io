@@ -1,0 +1,95 @@
+{
+  "id": "CDJ-20260526-01F66CD1",
+  "title": "雞爸爸的保健實驗室",
+  "slug": "vocus-20260526-01f66cd1",
+  "series": "生活研究",
+  "category": "生活研究",
+  "published": "2026-05-26",
+  "updated": "2026-06-01",
+  "readingTime": 3,
+  "subtitle": "雞爸爸身高174公分，體重67公斤上下，有心血管疾病的遺傳史，剛從膽固醇過高、腰圍過粗、肌肉量過低的狀態改善，目前仍有腎絲球過濾率略低(eGFR 87)、輕微血管硬化(指數1440左右)的問題。",
+  "signature": "",
+  "people": [
+    "雞爸爸",
+    "Gemini"
+  ],
+  "relationship": [
+    "雞爸爸的健康觀察"
+  ],
+  "tags": [
+    "肌肉",
+    "心血管疾病",
+    "心血管",
+    "健康",
+    "血管",
+    "體重",
+    "保健",
+    "膽固醇"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "雞爸爸的健康觀察"
+  ],
+  "cover": "assets/posts/vocus-20260526-01f66cd1/8220a319-f374-4831-bf1a-2c5cd32818ee.webp",
+  "coverAlt": "雞爸爸的保健實驗室｜圖片 1",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a156947fd89780001f66cd1",
+    "sourceUrl": "https://vocus.cc/article/6a156947fd89780001f66cd1",
+    "canonicalUrl": "https://vocus.cc/article/6a156947fd89780001f66cd1",
+    "originalPublishedAt": "2026-05-26T17:47:44+08:00",
+    "originalUpdatedAtCandidate": "2026-06-01T15:56:50+08:00",
+    "bodySha256": "ed21d30b0c5cf71ce9ea66f7afaa0e88108d9ed2d4f79a7d326d2d25dd7ae5d6",
+    "markdownSha256": "8ba4d97931618dfe51c5f8c8f5cd3d3422a506b8c89f71b266fcab8bac91138d",
+    "mappingStatus": "proposed-high-confidence",
+    "categoryProposal": {
+      "primary": "保健室",
+      "secondary": [],
+      "confidence": 0.98,
+      "needsReview": false,
+      "reason": "關鍵詞：健康、血管、肌肉、體重、保健、膽固醇",
+      "scores": {
+        "保健室": 13,
+        "風格誌": 0,
+        "圖書室": 0,
+        "光影誌": 0,
+        "家庭誌": 4
+      },
+      "hits": [
+        "健康",
+        "血管",
+        "肌肉",
+        "體重",
+        "保健",
+        "膽固醇"
+      ]
+    },
+    "seriesProposal": "生活研究",
+    "relationshipProposals": [
+      "雞爸爸的健康觀察"
+    ],
+    "timelineProposal": {
+      "date": "2026-05-26",
+      "type": "publication",
+      "label": "雞爸爸的保健實驗室",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/8220a319-f374-4831-bf1a-2c5cd32818ee.png",
+        "file": "assets/posts/vocus-20260526-01f66cd1/8220a319-f374-4831-bf1a-2c5cd32818ee.webp",
+        "alt": "雞爸爸的保健實驗室｜圖片 1",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "8220a319-f374-4831-bf1a-2c5cd32818ee.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "id": "CDJ-20260805-015E28DB",
+  "title": "當生活像老鼠圈轉個不停：你找到屬於自己的「電子布洛芬」了嗎?",
+  "slug": "vocus-20260805-015e28db",
+  "series": "幸福點滴",
+  "category": "幸福點滴",
+  "published": "2026-08-05",
+  "updated": "2026-08-05",
+  "readingTime": 9,
+  "subtitle": "原來，「電子布洛芬」不是真的藥，而是網路上的一種比喻。",
+  "signature": "",
+  "people": [
+    "雞爸爸",
+    "鼠媽媽",
+    "鼠姊姊",
+    "龍弟弟",
+    "兔阿嬤"
+  ],
+  "relationship": [
+    "鼠媽媽的家庭成長故事"
+  ],
+  "tags": [
+    "雞爸爸生活研究室",
+    "2026巔峰對決",
+    "那奇沃夫",
+    "鼠姊姊",
+    "龍弟弟",
+    "鼠媽媽",
+    "兔阿嬤",
+    "姊姊",
+    "弟弟",
+    "爸爸",
+    "媽媽"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "鼠媽媽的家庭成長故事"
+  ],
+  "cover": "assets/posts/vocus-20260805-015e28db/4e3f1aa9-d4be-48db-a750-c82a6b5e3fce.webp",
+  "coverAlt": "當生活像老鼠圈轉個不停：你找到屬於自己的「電子布洛芬」了嗎?｜圖片 1",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a72d368fd897800015e28db",
+    "sourceUrl": "https://vocus.cc/article/6a72d368fd897800015e28db",
+    "canonicalUrl": "https://vocus.cc/article/6a72d368fd897800015e28db",
+    "originalPublishedAt": "2026-08-05T15:59:20+08:00",
+    "originalUpdatedAtCandidate": "2026-08-05T15:59:21+08:00",
+    "bodySha256": "ce586aa2bd8b2254fa1db1acc9c3b5406ea07a56bee799874d31d88a3d53a13c",
+    "markdownSha256": "9b94d13633b33278515caf25fc69822003de7f4e78d0b09ab2db52332c404b9b",
+    "mappingStatus": "resolved-pending-preview-approval",
+    "categoryProposal": {
+      "primary": "家庭誌",
+      "secondary": [],
+      "confidence": 1.0,
+      "needsReview": false,
+      "reason": "semantic editorial review",
+      "scores": {
+        "保健室": 1,
+        "風格誌": 1,
+        "圖書室": 0,
+        "光影誌": 2,
+        "家庭誌": 12
+      },
+      "hits": [
+        "鼠姊姊",
+        "龍弟弟",
+        "鼠媽媽",
+        "兔阿嬤",
+        "姊姊",
+        "弟弟",
+        "爸爸",
+        "媽媽",
+        "孩子",
+        "家庭"
+      ]
+    },
+    "seriesProposal": "幸福點滴",
+    "relationshipProposals": [
+      "鼠媽媽的家庭成長故事"
+    ],
+    "timelineProposal": {
+      "date": "2026-08-05",
+      "type": "publication",
+      "label": "當生活像老鼠圈轉個不停：你找到屬於自己的「電子布洛芬」了嗎?",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/4e3f1aa9-d4be-48db-a750-c82a6b5e3fce.png",
+        "file": "assets/posts/vocus-20260805-015e28db/4e3f1aa9-d4be-48db-a750-c82a6b5e3fce.webp",
+        "alt": "當生活像老鼠圈轉個不停：你找到屬於自己的「電子布洛芬」了嗎?｜圖片 1",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "4e3f1aa9-d4be-48db-a750-c82a6b5e3fce.webp"
+    ],
+    "interactiveKinds": [
+      "iframe"
+    ],
+    "embedUrls": [
+      "https://www.youtube-nocookie.com/embed/p4_l7bP5btI"
+    ],
+    "doNotPublishUntilApproved": true,
+    "contentTemplate": "article",
+    "fallbackPolicy": {
+      "iframe": "safe-external-link",
+      "video": "safe-external-link",
+      "poll": "static-question-options-with-vocus-link"
+    },
+    "editorialReviewNotes": [
+      "影音改為安全外連；投票保留問題與選項並連回 Vocus"
+    ],
+    "previewApprovalStatus": "pending"
+  }
+}

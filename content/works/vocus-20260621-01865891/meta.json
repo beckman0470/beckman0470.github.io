@@ -1,0 +1,124 @@
+{
+  "id": "CDJ-20260621-01865891",
+  "title": "龍隊爭冠的關鍵拼圖：終結者投捕組合",
+  "slug": "vocus-20260621-01865891",
+  "series": "棒球札記",
+  "category": "棒球札記",
+  "published": "2026-06-21",
+  "updated": "2026-06-21",
+  "readingTime": 5,
+  "subtitle": "味全龍最大的收穫 主戰選手面臨良性競爭",
+  "signature": "",
+  "people": [],
+  "relationship": [
+    "雞爸爸的棒球觀察"
+  ],
+  "tags": [
+    "雞爸爸",
+    "味全龍",
+    "林凱威",
+    "投手",
+    "捕手",
+    "打線",
+    "龍隊",
+    "盜壘",
+    "終結者",
+    "投捕"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "雞爸爸的棒球觀察"
+  ],
+  "cover": "assets/posts/vocus-20260621-01865891/bab1a39d-e4bd-4c60-9ed7-3d241116aaf3.webp",
+  "coverAlt": "龍隊爭冠的關鍵拼圖：終結者投捕組合｜圖片 1",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a379255fd89780001865891",
+    "sourceUrl": "https://vocus.cc/article/6a379255fd89780001865891",
+    "canonicalUrl": "https://vocus.cc/article/6a379255fd89780001865891",
+    "originalPublishedAt": "2026-06-21T16:24:34+08:00",
+    "originalUpdatedAtCandidate": "2026-06-21T16:24:34+08:00",
+    "bodySha256": "b6f23056e995d949c92be8dae8f19b12c09d3206d1ac63c5488df6b087fa9e67",
+    "markdownSha256": "c2875cf880fbaf89fb1cc01ff542c2cf203a641c64c7464d320613fc62500ea9",
+    "mappingStatus": "proposed-high-confidence",
+    "categoryProposal": {
+      "primary": "風格誌",
+      "secondary": [],
+      "confidence": 0.98,
+      "needsReview": false,
+      "reason": "關鍵詞：味全龍、投手、捕手、打線、龍隊、盜壘",
+      "scores": {
+        "保健室": 0,
+        "風格誌": 19,
+        "圖書室": 0,
+        "光影誌": 0,
+        "家庭誌": 3
+      },
+      "hits": [
+        "味全龍",
+        "投手",
+        "捕手",
+        "打線",
+        "龍隊",
+        "盜壘",
+        "終結者",
+        "投捕"
+      ]
+    },
+    "seriesProposal": "棒球札記",
+    "relationshipProposals": [
+      "雞爸爸的棒球觀察"
+    ],
+    "timelineProposal": {
+      "date": "2026-06-21",
+      "type": "publication",
+      "label": "龍隊爭冠的關鍵拼圖：終結者投捕組合",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/bab1a39d-e4bd-4c60-9ed7-3d241116aaf3.png",
+        "file": "assets/posts/vocus-20260621-01865891/bab1a39d-e4bd-4c60-9ed7-3d241116aaf3.webp",
+        "alt": "龍隊爭冠的關鍵拼圖：終結者投捕組合｜圖片 1",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/81e91e94-a002-4776-a884-9654e062b14c.jpg",
+        "file": "assets/posts/vocus-20260621-01865891/81e91e94-a002-4776-a884-9654e062b14c.webp",
+        "alt": "龍隊爭冠的關鍵拼圖：終結者投捕組合｜圖片 2",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/c2ead461-ac9f-4c7e-abb3-b178362457d2.jpg",
+        "file": "assets/posts/vocus-20260621-01865891/c2ead461-ac9f-4c7e-abb3-b178362457d2.webp",
+        "alt": "龍隊爭冠的關鍵拼圖：終結者投捕組合｜圖片 3",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/9578e0e5-32b7-4147-a198-a4d38d238c8b.jpg",
+        "file": "assets/posts/vocus-20260621-01865891/9578e0e5-32b7-4147-a198-a4d38d238c8b.webp",
+        "alt": "龍隊爭冠的關鍵拼圖：終結者投捕組合｜圖片 4",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/00fedf7f-809e-4ca6-bbf8-568673d69c05.jpg",
+        "file": "assets/posts/vocus-20260621-01865891/00fedf7f-809e-4ca6-bbf8-568673d69c05.webp",
+        "alt": "龍隊爭冠的關鍵拼圖：終結者投捕組合｜圖片 5",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "00fedf7f-809e-4ca6-bbf8-568673d69c05.webp",
+      "81e91e94-a002-4776-a884-9654e062b14c.webp",
+      "9578e0e5-32b7-4147-a198-a4d38d238c8b.webp",
+      "bab1a39d-e4bd-4c60-9ed7-3d241116aaf3.webp",
+      "c2ead461-ac9f-4c7e-abb3-b178362457d2.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true
+  }
+}

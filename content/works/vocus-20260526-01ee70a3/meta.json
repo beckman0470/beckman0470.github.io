@@ -1,0 +1,93 @@
+{
+  "id": "CDJ-20260526-01EE70A3",
+  "title": "AI生成圖片很耗能嗎？關鍵在於怎麼用",
+  "slug": "vocus-20260526-01ee70a3",
+  "series": "AI 共創",
+  "category": "AI 共創",
+  "published": "2026-05-26",
+  "updated": "2026-05-26",
+  "readingTime": 4,
+  "subtitle": "結論：AI 生成圖片確實需要電力，但沒有想像中那麼誇張。",
+  "signature": "",
+  "people": [],
+  "relationship": [
+    "雞爸爸的光影與創作記錄"
+  ],
+  "tags": [
+    "日常分享",
+    "AI生成",
+    "環保",
+    "AI生成圖片"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "雞爸爸的光影與創作記錄"
+  ],
+  "cover": "assets/posts/vocus-20260526-01ee70a3/9191b0a8-20f6-445e-b665-2ee35588c639.webp",
+  "coverAlt": "AI生成圖片很耗能嗎？關鍵在於怎麼用｜圖片 1",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a1552a1fd89780001ee70a3",
+    "sourceUrl": "https://vocus.cc/article/6a1552a1fd89780001ee70a3",
+    "canonicalUrl": "https://vocus.cc/article/6a1552a1fd89780001ee70a3",
+    "originalPublishedAt": "2026-05-26T17:10:59+08:00",
+    "originalUpdatedAtCandidate": "2026-05-26T17:12:10+08:00",
+    "bodySha256": "f35cb05d8f01253a14084d4d33d12aae454688238411d5a89f109a85015ccef1",
+    "markdownSha256": "4cf5755334ee1b2ea25b9bc844ba6079e2363b7bf25e56ae3b15e6acf7a48d45",
+    "mappingStatus": "resolved-pending-preview-approval",
+    "categoryProposal": {
+      "primary": "光影誌",
+      "secondary": [],
+      "confidence": 1.0,
+      "needsReview": false,
+      "reason": "semantic editorial review",
+      "scores": {
+        "保健室": 0,
+        "風格誌": 0,
+        "圖書室": 1,
+        "光影誌": 4,
+        "家庭誌": 1
+      },
+      "hits": [
+        "AI生成圖片"
+      ]
+    },
+    "seriesProposal": "AI 共創",
+    "relationshipProposals": [
+      "雞爸爸的光影與創作記錄"
+    ],
+    "timelineProposal": {
+      "date": "2026-05-26",
+      "type": "publication",
+      "label": "AI生成圖片很耗能嗎？關鍵在於怎麼用",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/9191b0a8-20f6-445e-b665-2ee35588c639.png",
+        "file": "assets/posts/vocus-20260526-01ee70a3/9191b0a8-20f6-445e-b665-2ee35588c639.webp",
+        "alt": "AI生成圖片很耗能嗎？關鍵在於怎麼用｜圖片 1",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "9191b0a8-20f6-445e-b665-2ee35588c639.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true,
+    "contentTemplate": "article",
+    "fallbackPolicy": {
+      "iframe": "safe-external-link",
+      "video": "safe-external-link",
+      "poll": "static-question-options-with-vocus-link"
+    },
+    "editorialReviewNotes": [
+      "依正文核心主題完成語意校正"
+    ],
+    "previewApprovalStatus": "pending"
+  }
+}

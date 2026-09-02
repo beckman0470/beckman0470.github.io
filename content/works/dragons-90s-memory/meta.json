@@ -57,5 +57,99 @@
   ],
   "cover": "assets/story-covers/default.svg",
   "coverAlt": "雞爸爸 90~99 味全龍系列回顧｜雞爸爸生活研究室代表插圖",
-  "coverStatus": "placeholder"
+  "coverStatus": "placeholder",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a0d6260fd8978000187d475",
+    "sourceUrl": "https://vocus.cc/article/6a0d6260fd8978000187d475",
+    "canonicalUrl": "https://vocus.cc/article/6a0d6260fd8978000187d475",
+    "originalPublishedAt": "2026-05-20T17:29:59+08:00",
+    "originalUpdatedAtCandidate": "2026-05-25T17:14:27+08:00",
+    "bodySha256": "f4f7d68e8ad82c8ae4227c81df9ad78cbd10cc7040eaa8976477d937c457ac3d",
+    "markdownSha256": "5a5c83a97a336a1c852672536eec63ddc03761f075b385a15391cff38ee806e8",
+    "mappingStatus": "proposed-high-confidence",
+    "categoryProposal": {
+      "primary": "風格誌",
+      "secondary": [],
+      "confidence": 0.98,
+      "needsReview": false,
+      "reason": "關鍵詞：味全龍、棒球、投手、打線、徐若熙、龍隊",
+      "scores": {
+        "保健室": 0,
+        "風格誌": 10,
+        "圖書室": 0,
+        "光影誌": 0,
+        "家庭誌": 4
+      },
+      "hits": [
+        "味全龍",
+        "棒球",
+        "投手",
+        "打線",
+        "徐若熙",
+        "龍隊",
+        "盜壘"
+      ]
+    },
+    "seriesProposal": "棒球札記",
+    "relationshipProposals": [
+      "雞爸爸 × 味全龍青春記憶"
+    ],
+    "timelineProposal": {
+      "date": "2026-05-20",
+      "type": "publication",
+      "label": "雞爸爸 90~99味全龍系列回顧",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/8d27e74a-23d5-49c2-ba3e-ad149101474c.jpg",
+        "file": "assets/posts/dragons-90s-memory/8d27e74a-23d5-49c2-ba3e-ad149101474c.webp",
+        "alt": "摺疊式口袋賽程表",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/88fd8ee0-6c08-4138-bfcb-02c0a57eb681.png",
+        "file": "assets/posts/dragons-90s-memory/88fd8ee0-6c08-4138-bfcb-02c0a57eb681.avif",
+        "alt": "讓我喜歡上味全龍的隊徽",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/8dfdf99d-0e81-456d-8edc-d6a80425e090.jpg",
+        "file": "assets/posts/dragons-90s-memory/8dfdf99d-0e81-456d-8edc-d6a80425e090.webp",
+        "alt": "味全龍王牌投手-金臂人黃平洋",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/6a783987-9a8f-4dd6-a46b-5516311f8254.jpg",
+        "file": "assets/posts/dragons-90s-memory/6a783987-9a8f-4dd6-a46b-5516311f8254.webp",
+        "alt": "二度20-20的全壘打王坎沙諾",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/68f94308-fdf5-443a-bdfa-cab3da660eea.jpg",
+        "file": "assets/posts/dragons-90s-memory/68f94308-fdf5-443a-bdfa-cab3da660eea.webp",
+        "alt": "史上唯一救援王+防禦率王-賈西",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/04207561-03d6-4e3f-a1cd-fa151f8024e2.jpg",
+        "file": "assets/posts/dragons-90s-memory/04207561-03d6-4e3f-a1cd-fa151f8024e2.webp",
+        "alt": "王牌投手-龍之子徐若熙(資料來源:味全龍官網)",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "04207561-03d6-4e3f-a1cd-fa151f8024e2.webp",
+      "68f94308-fdf5-443a-bdfa-cab3da660eea.webp",
+      "6a783987-9a8f-4dd6-a46b-5516311f8254.webp",
+      "88fd8ee0-6c08-4138-bfcb-02c0a57eb681.avif",
+      "8d27e74a-23d5-49c2-ba3e-ad149101474c.webp",
+      "8dfdf99d-0e81-456d-8edc-d6a80425e090.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true
+  }
 }

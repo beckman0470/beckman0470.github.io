@@ -36,5 +36,70 @@
   ],
   "cover": "assets/story-covers/default.svg",
   "coverAlt": "鼠姊姊五歲了還沒分房睡，是我們做錯了嗎？｜雞爸爸生活研究室代表插圖",
-  "coverStatus": "placeholder"
+  "coverStatus": "placeholder",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a20cc9ffd897800018d781e",
+    "sourceUrl": "https://vocus.cc/article/6a20cc9ffd897800018d781e",
+    "canonicalUrl": "https://vocus.cc/article/6a20cc9ffd897800018d781e",
+    "originalPublishedAt": "2026-06-04T10:15:46+08:00",
+    "originalUpdatedAtCandidate": "2026-07-10T23:03:36+08:00",
+    "bodySha256": "7dfde08ec1dce452cba06a1215f654442e9b22c946a6a19b3d39fe8e27902f6c",
+    "markdownSha256": "89667fa4bd8cc073f4cdd930383c2776dfcb5191d528fc183a5f6e16b42d24e8",
+    "mappingStatus": "proposed-high-confidence",
+    "categoryProposal": {
+      "primary": "家庭誌",
+      "secondary": [],
+      "confidence": 0.98,
+      "needsReview": false,
+      "reason": "關鍵詞：鼠姊姊、鼠姐姐、龍弟弟、鼠媽媽、姊姊、弟弟",
+      "scores": {
+        "保健室": 0,
+        "風格誌": 0,
+        "圖書室": 1,
+        "光影誌": 0,
+        "家庭誌": 22
+      },
+      "hits": [
+        "鼠姊姊",
+        "鼠姐姐",
+        "龍弟弟",
+        "鼠媽媽",
+        "姊姊",
+        "弟弟",
+        "爸媽",
+        "父母",
+        "爸爸",
+        "媽媽",
+        "孩子",
+        "幼兒園",
+        "分房"
+      ]
+    },
+    "seriesProposal": "幸福點滴",
+    "relationshipProposals": [
+      "父母 × 鼠姊姊的安全感陪伴"
+    ],
+    "timelineProposal": {
+      "date": "2026-06-04",
+      "type": "publication",
+      "label": "鼠姊姊五歲了還沒分房睡，是我們做錯了嗎？",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/9a5c0bcc-146c-4d34-88cd-1af284fc9414.png",
+        "file": "assets/posts/five-year-old-not-sleeping-alone/9a5c0bcc-146c-4d34-88cd-1af284fc9414.webp",
+        "alt": "鼠姊姊五歲了還沒分房睡，是我們做錯了嗎？｜圖片 1",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "9a5c0bcc-146c-4d34-88cd-1af284fc9414.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true
+  }
 }

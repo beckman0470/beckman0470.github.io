@@ -1,0 +1,113 @@
+{
+  "id": "CDJ-20260613-01F74185",
+  "title": "減脂最大的敵人不是炸雞，而是你的皮質醇",
+  "slug": "vocus-20260613-01f74185",
+  "series": "生活研究",
+  "category": "生活研究",
+  "published": "2026-06-13",
+  "updated": "2026-06-13",
+  "readingTime": 5,
+  "subtitle": "你的意志力 就是種慢性壓力",
+  "signature": "",
+  "people": [
+    "雞爸爸"
+  ],
+  "relationship": [
+    "雞爸爸的健康觀察"
+  ],
+  "tags": [
+    "皮質醇",
+    "壓力賀爾蒙",
+    "短期壓力",
+    "健康",
+    "減脂",
+    "脂肪",
+    "體重"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "雞爸爸的健康觀察"
+  ],
+  "cover": "assets/posts/vocus-20260613-01f74185/29d6753e-b2ec-4b4e-88f5-039e0e24b206.webp",
+  "coverAlt": "減脂最大的敵人不是炸雞，而是你的皮質醇｜圖片 1",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a1fc094fd89780001f74185",
+    "sourceUrl": "https://vocus.cc/article/6a1fc094fd89780001f74185",
+    "canonicalUrl": "https://vocus.cc/article/6a1fc094fd89780001f74185",
+    "originalPublishedAt": "2026-06-13T12:26:08+08:00",
+    "originalUpdatedAtCandidate": "2026-06-13T12:36:50+08:00",
+    "bodySha256": "fa9cbbad697e9dd742de90c2638c4ca99a5e7463b0a0fa063f4b43ac7433ebd2",
+    "markdownSha256": "747019a64938e043eacae2709ad7f0dd247ee3be0189324d19a5fb07a9a56f89",
+    "mappingStatus": "resolved-pending-preview-approval",
+    "categoryProposal": {
+      "primary": "保健室",
+      "secondary": [],
+      "confidence": 1.0,
+      "needsReview": false,
+      "reason": "semantic editorial review",
+      "scores": {
+        "保健室": 11,
+        "風格誌": 0,
+        "圖書室": 0,
+        "光影誌": 2,
+        "家庭誌": 2
+      },
+      "hits": [
+        "健康",
+        "皮質醇",
+        "減脂",
+        "脂肪",
+        "體重"
+      ]
+    },
+    "seriesProposal": "生活研究",
+    "relationshipProposals": [
+      "雞爸爸的健康觀察"
+    ],
+    "timelineProposal": {
+      "date": "2026-06-13",
+      "type": "publication",
+      "label": "減脂最大的敵人不是炸雞，而是你的皮質醇",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/29d6753e-b2ec-4b4e-88f5-039e0e24b206.png",
+        "file": "assets/posts/vocus-20260613-01f74185/29d6753e-b2ec-4b4e-88f5-039e0e24b206.webp",
+        "alt": "減脂最大的敵人不是炸雞，而是你的皮質醇｜圖片 1",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/c660b093-2fdc-4808-8632-0dd7053c6c36.png",
+        "file": "assets/posts/vocus-20260613-01f74185/c660b093-2fdc-4808-8632-0dd7053c6c36.webp",
+        "alt": "減脂最大的敵人不是炸雞，而是你的皮質醇｜圖片 2",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "29d6753e-b2ec-4b4e-88f5-039e0e24b206.webp",
+      "c660b093-2fdc-4808-8632-0dd7053c6c36.webp"
+    ],
+    "interactiveKinds": [
+      "iframe"
+    ],
+    "embedUrls": [
+      "https://www.youtube-nocookie.com/embed/VUD_VLDKDjs"
+    ],
+    "doNotPublishUntilApproved": true,
+    "contentTemplate": "article",
+    "fallbackPolicy": {
+      "iframe": "safe-external-link",
+      "video": "safe-external-link",
+      "poll": "static-question-options-with-vocus-link"
+    },
+    "editorialReviewNotes": [
+      "影音改為安全外連；投票保留問題與選項並連回 Vocus"
+    ],
+    "previewApprovalStatus": "pending"
+  }
+}

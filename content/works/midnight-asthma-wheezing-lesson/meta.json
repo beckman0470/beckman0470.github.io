@@ -40,5 +40,94 @@
   ],
   "cover": "assets/story-covers/default.svg",
   "coverAlt": "鼠姊姊半夜兩點的喘鳴聲：那一晚，我們又再次認識「急性氣喘」｜雞爸爸生活研究室代表插圖",
-  "coverStatus": "placeholder"
+  "coverStatus": "placeholder",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a4b2488fd89780001eb3455",
+    "sourceUrl": "https://vocus.cc/article/6a4b2488fd89780001eb3455",
+    "canonicalUrl": "https://vocus.cc/article/6a4b2488fd89780001eb3455",
+    "originalPublishedAt": "2026-07-06T12:57:20+08:00",
+    "originalUpdatedAtCandidate": "2026-07-10T23:02:24+08:00",
+    "bodySha256": "5effb139013609838c3b73ecf670c6395b457e8ce4197a0a5e2b100364c83592",
+    "markdownSha256": "73011344cbd42e9617b6b486a2d2814f572c7a640bfb1336bbb6939a361ccb66",
+    "mappingStatus": "proposed-high-confidence",
+    "categoryProposal": {
+      "primary": "家庭誌",
+      "secondary": [],
+      "confidence": 0.98,
+      "needsReview": false,
+      "reason": "關鍵詞：鼠姊姊、龍弟弟、鼠媽媽、姊姊、弟弟、父母",
+      "scores": {
+        "保健室": 9,
+        "風格誌": 0,
+        "圖書室": 0,
+        "光影誌": 0,
+        "家庭誌": 17
+      },
+      "hits": [
+        "鼠姊姊",
+        "龍弟弟",
+        "鼠媽媽",
+        "姊姊",
+        "弟弟",
+        "父母",
+        "爸爸",
+        "媽媽",
+        "孩子"
+      ]
+    },
+    "seriesProposal": "生活研究",
+    "relationshipProposals": [
+      "父母 × 鼠姊姊急性氣喘照護"
+    ],
+    "timelineProposal": {
+      "date": "2026-07-06",
+      "type": "publication",
+      "label": "鼠姊姊半夜兩點的喘鳴聲：那一晚，我們又再次認識「急性氣喘」",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/fa1ee41b-f11b-48c2-ba84-87d804d5f39f.png",
+        "file": "assets/posts/midnight-asthma-wheezing-lesson/fa1ee41b-f11b-48c2-ba84-87d804d5f39f.webp",
+        "alt": "鼠姊姊半夜兩點的喘鳴聲：那一晚，我們又再次認識「急性氣喘」｜圖片 1",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/a1c19d52-ed4d-48b5-8674-6eca857733f3.png",
+        "file": "assets/posts/midnight-asthma-wheezing-lesson/a1c19d52-ed4d-48b5-8674-6eca857733f3.avif",
+        "alt": "鼠姊姊半夜兩點的喘鳴聲：那一晚，我們又再次認識「急性氣喘」｜圖片 2",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/62fdc745-fece-4cb2-976f-957d63b5a006.png",
+        "file": "assets/posts/midnight-asthma-wheezing-lesson/62fdc745-fece-4cb2-976f-957d63b5a006.avif",
+        "alt": "鼠姊姊半夜兩點的喘鳴聲：那一晚，我們又再次認識「急性氣喘」｜圖片 3",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/989d5ab2-7279-4ab9-aafc-f10f9615f59a.png",
+        "file": "assets/posts/midnight-asthma-wheezing-lesson/989d5ab2-7279-4ab9-aafc-f10f9615f59a.webp",
+        "alt": "鼠姊姊半夜兩點的喘鳴聲：那一晚，我們又再次認識「急性氣喘」｜圖片 4",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/8239477a-efcb-4978-839d-4d8a6eb0de9d.png",
+        "file": "assets/posts/midnight-asthma-wheezing-lesson/8239477a-efcb-4978-839d-4d8a6eb0de9d.webp",
+        "alt": "鼠姊姊半夜兩點的喘鳴聲：那一晚，我們又再次認識「急性氣喘」｜圖片 5",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "62fdc745-fece-4cb2-976f-957d63b5a006.avif",
+      "8239477a-efcb-4978-839d-4d8a6eb0de9d.webp",
+      "989d5ab2-7279-4ab9-aafc-f10f9615f59a.webp",
+      "a1c19d52-ed4d-48b5-8674-6eca857733f3.avif",
+      "fa1ee41b-f11b-48c2-ba84-87d804d5f39f.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true
+  }
 }

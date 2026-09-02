@@ -39,5 +39,69 @@
   ],
   "cover": "assets/story-covers/default.svg",
   "coverAlt": "我與我的老夥伴：納斯 NAS｜雞爸爸生活研究室代表插圖",
-  "coverStatus": "placeholder"
+  "coverStatus": "placeholder",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a1e7471fd8978000168a403",
+    "sourceUrl": "https://vocus.cc/article/6a1e7471fd8978000168a403",
+    "canonicalUrl": "https://vocus.cc/article/6a1e7471fd8978000168a403",
+    "originalPublishedAt": "2026-06-02T15:34:51+08:00",
+    "originalUpdatedAtCandidate": "2026-07-11T09:29:10+08:00",
+    "bodySha256": "8b4a26f4e9620af95aab34bfdf3949d6d030d89790c4f9a47ad54f08b4e2ea35",
+    "markdownSha256": "865f2961a542f1c54623d2c3897e975194acbe24911452a0dac3102755883a7a",
+    "mappingStatus": "resolved-pending-preview-approval",
+    "categoryProposal": {
+      "primary": "風格誌",
+      "secondary": [],
+      "confidence": 1.0,
+      "needsReview": false,
+      "reason": "semantic editorial review",
+      "scores": {
+        "保健室": 4,
+        "風格誌": 0,
+        "圖書室": 1,
+        "光影誌": 0,
+        "家庭誌": 0
+      },
+      "hits": [
+        "健康",
+        "健檢"
+      ]
+    },
+    "seriesProposal": "生活研究",
+    "relationshipProposals": [
+      "雞爸爸 × NAS 維運日常"
+    ],
+    "timelineProposal": {
+      "date": "2026-06-02",
+      "type": "publication",
+      "label": "我與我的老夥伴-納斯NAS",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/9e176515-543b-441b-b8d2-b0147f0917e1.png",
+        "file": "assets/posts/old-partner-nas/9e176515-543b-441b-b8d2-b0147f0917e1.webp",
+        "alt": "我與我的老夥伴-納斯NAS｜圖片 1",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "9e176515-543b-441b-b8d2-b0147f0917e1.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true,
+    "contentTemplate": "article",
+    "fallbackPolicy": {
+      "iframe": "safe-external-link",
+      "video": "safe-external-link",
+      "poll": "static-question-options-with-vocus-link"
+    },
+    "editorialReviewNotes": [
+      "依正文核心主題完成語意校正"
+    ],
+    "previewApprovalStatus": "pending"
+  }
 }

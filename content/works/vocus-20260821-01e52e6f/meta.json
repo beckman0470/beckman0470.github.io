@@ -1,0 +1,109 @@
+{
+  "id": "CDJ-20260821-01E52E6F",
+  "title": "滑到武志紅的短影音後，我突然開始好奇：為什麼他會吸引我？",
+  "slug": "vocus-20260821-01e52e6f",
+  "series": "幸福點滴",
+  "category": "幸福點滴",
+  "published": "2026-08-21",
+  "updated": "2026-08-21",
+  "readingTime": 7,
+  "subtitle": "雞爸爸的手指突然停了一下...看到武志紅談父親對小孩的影響、談安全感、談一個人為什麼會在關係裡退縮...，本來只是起床後隨手滑一下，結果不知道為什麼，雞爸爸竟然點進武志紅的頻道裡，一篇接著一篇點進去看。",
+  "signature": "",
+  "people": [
+    "雞爸爸",
+    "鼠姊姊",
+    "龍弟弟"
+  ],
+  "relationship": [
+    "鼠姊姊的家庭成長故事"
+  ],
+  "tags": [
+    "雞爸爸生活研究室",
+    "雞爸爸",
+    "武志紅",
+    "鼠姊姊",
+    "龍弟弟",
+    "姊姊",
+    "弟弟",
+    "爸媽",
+    "爸爸",
+    "媽媽",
+    "孩子"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "鼠姊姊的家庭成長故事"
+  ],
+  "cover": "assets/posts/vocus-20260821-01e52e6f/95409467-f375-4977-a45f-0f9561d58312.webp",
+  "coverAlt": "滑到武志紅的短影音後，我突然開始好奇：為什麼他會吸引我？｜圖片 1",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a87ac71fd89780001e52e6f",
+    "sourceUrl": "https://vocus.cc/article/6a87ac71fd89780001e52e6f",
+    "canonicalUrl": "https://vocus.cc/article/6a87ac71fd89780001e52e6f",
+    "originalPublishedAt": "2026-08-21T10:32:21+08:00",
+    "originalUpdatedAtCandidate": "2026-08-21T10:40:56+08:00",
+    "bodySha256": "01a2d820fa9b9c2c81ba62c480d514a1daae91be1136da3a6fbcd8e52580ea7a",
+    "markdownSha256": "69284a8b9267c75881057683aefadf317a0db4bf401422e667a038e37cd99852",
+    "mappingStatus": "proposed-high-confidence",
+    "categoryProposal": {
+      "primary": "家庭誌",
+      "secondary": [],
+      "confidence": 0.98,
+      "needsReview": false,
+      "reason": "關鍵詞：鼠姊姊、龍弟弟、姊姊、弟弟、爸媽、爸爸",
+      "scores": {
+        "保健室": 0,
+        "風格誌": 0,
+        "圖書室": 0,
+        "光影誌": 4,
+        "家庭誌": 11
+      },
+      "hits": [
+        "鼠姊姊",
+        "龍弟弟",
+        "姊姊",
+        "弟弟",
+        "爸媽",
+        "爸爸",
+        "媽媽",
+        "孩子",
+        "家庭"
+      ]
+    },
+    "seriesProposal": "幸福點滴",
+    "relationshipProposals": [
+      "鼠姊姊的家庭成長故事"
+    ],
+    "timelineProposal": {
+      "date": "2026-08-21",
+      "type": "publication",
+      "label": "滑到武志紅的短影音後，我突然開始好奇：為什麼他會吸引我？",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/95409467-f375-4977-a45f-0f9561d58312.png",
+        "file": "assets/posts/vocus-20260821-01e52e6f/95409467-f375-4977-a45f-0f9561d58312.webp",
+        "alt": "滑到武志紅的短影音後，我突然開始好奇：為什麼他會吸引我？｜圖片 1",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/30912909-4bba-4ff8-a7c2-ed583c318052.png",
+        "file": "assets/posts/vocus-20260821-01e52e6f/30912909-4bba-4ff8-a7c2-ed583c318052.avif",
+        "alt": "滑到武志紅的短影音後，我突然開始好奇：為什麼他會吸引我？｜圖片 2",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "30912909-4bba-4ff8-a7c2-ed583c318052.avif",
+      "95409467-f375-4977-a45f-0f9561d58312.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true
+  }
+}

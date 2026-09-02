@@ -1,0 +1,93 @@
+{
+  "id": "CDJ-20260620-01B63856",
+  "title": "壓力正壓垮你的臉：從皮質醇到下垂臉的真相",
+  "slug": "cortisol-sagging-face-truth",
+  "series": "生活研究",
+  "category": "生活研究",
+  "published": "2026-06-20",
+  "updated": "2026-07-11",
+  "readingTime": 5,
+  "subtitle": "雞爸爸的第一個反應是：「是不是復胖了？」「是不是膠原蛋白流失了？」 「要不要買抗老精華液？」但有趣的是，後來發現問題不是脂肪，也不是膚質變差了。真正的兇手，可能是你每天都在分泌的——皮質醇（Cortisol）。",
+  "signature": "",
+  "people": [
+    "雞爸爸"
+  ],
+  "relationship": [
+    "雞爸爸的健康觀察"
+  ],
+  "tags": [
+    "雞爸爸",
+    "臉下垂",
+    "臉色",
+    "皮質醇",
+    "復胖",
+    "脂肪",
+    "肌肉",
+    "體重"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "雞爸爸的健康觀察"
+  ],
+  "cover": "assets/posts/cortisol-sagging-face-truth/1a66555f-4fab-4c63-8a4b-4a9663f5f131.webp",
+  "coverAlt": "壓力正壓垮你的臉：從皮質醇到下垂臉的真相｜圖片 1",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a364776fd89780001b63856",
+    "sourceUrl": "https://vocus.cc/article/6a364776fd89780001b63856",
+    "canonicalUrl": "https://vocus.cc/article/6a364776fd89780001b63856",
+    "originalPublishedAt": "2026-06-20T16:27:10+08:00",
+    "originalUpdatedAtCandidate": "2026-07-11T00:06:00+08:00",
+    "bodySha256": "44878505a9d7c9a58b9b09c4c955b1b5dc742baa4726ace6a811659b705e2f0a",
+    "markdownSha256": "9e561844ee9f3ad7bfb1ee8131d9235217b42598005101b223b014036304f835",
+    "mappingStatus": "proposed-high-confidence",
+    "categoryProposal": {
+      "primary": "保健室",
+      "secondary": [],
+      "confidence": 0.95,
+      "needsReview": false,
+      "reason": "關鍵詞：皮質醇、復胖、脂肪、肌肉、體重",
+      "scores": {
+        "保健室": 8,
+        "風格誌": 0,
+        "圖書室": 0,
+        "光影誌": 0,
+        "家庭誌": 3
+      },
+      "hits": [
+        "皮質醇",
+        "復胖",
+        "脂肪",
+        "肌肉",
+        "體重"
+      ]
+    },
+    "seriesProposal": "生活研究",
+    "relationshipProposals": [
+      "雞爸爸的健康觀察"
+    ],
+    "timelineProposal": {
+      "date": "2026-06-20",
+      "type": "publication",
+      "label": "壓力正壓垮你的臉：從皮質醇到下垂臉的真相",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/1a66555f-4fab-4c63-8a4b-4a9663f5f131.png",
+        "file": "assets/posts/cortisol-sagging-face-truth/1a66555f-4fab-4c63-8a4b-4a9663f5f131.webp",
+        "alt": "壓力正壓垮你的臉：從皮質醇到下垂臉的真相｜圖片 1",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "1a66555f-4fab-4c63-8a4b-4a9663f5f131.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true
+  }
+}

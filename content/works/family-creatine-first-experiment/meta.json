@@ -35,5 +35,68 @@
   ],
   "cover": "assets/story-covers/default.svg",
   "coverAlt": "雞爸爸、兔阿嬤、鼠媽媽的肌酸初體驗｜雞爸爸生活研究室代表插圖",
-  "coverStatus": "placeholder"
+  "coverStatus": "placeholder",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a297f34fd89780001e9f583",
+    "sourceUrl": "https://vocus.cc/article/6a297f34fd89780001e9f583",
+    "canonicalUrl": "https://vocus.cc/article/6a297f34fd89780001e9f583",
+    "originalPublishedAt": "2026-06-10T23:42:01+08:00",
+    "originalUpdatedAtCandidate": "2026-07-10T23:01:56+08:00",
+    "bodySha256": "fa09ee5f363303055fc51b371dd37b99ebd06a24b21ca0390c738dd0d8095a33",
+    "markdownSha256": "4d79c95d81a0708b854caa589f5a682c5aaebb662ab68b8f4719277e2a9118ba",
+    "mappingStatus": "proposed-high-confidence",
+    "categoryProposal": {
+      "primary": "家庭誌",
+      "secondary": [],
+      "confidence": 0.98,
+      "needsReview": false,
+      "reason": "關鍵詞：鼠媽媽、兔阿嬤、爸爸、媽媽",
+      "scores": {
+        "保健室": 6,
+        "風格誌": 0,
+        "圖書室": 0,
+        "光影誌": 1,
+        "家庭誌": 16
+      },
+      "hits": [
+        "鼠媽媽",
+        "兔阿嬤",
+        "爸爸",
+        "媽媽"
+      ]
+    },
+    "seriesProposal": "生活研究",
+    "relationshipProposals": [
+      "家庭成員 × 健康補充實驗"
+    ],
+    "timelineProposal": {
+      "date": "2026-06-10",
+      "type": "publication",
+      "label": "雞爸爸、兔阿嬤、鼠媽媽的肌酸初體驗",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/b8c9565b-64c6-42dd-b315-9b64460480d4.png",
+        "file": "assets/posts/family-creatine-first-experiment/b8c9565b-64c6-42dd-b315-9b64460480d4.webp",
+        "alt": "雞爸爸、兔阿嬤、鼠媽媽的肌酸初體驗｜圖片 1",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/ee1e89d1-c9a9-4374-a71c-ffba251be326.png",
+        "file": "assets/posts/family-creatine-first-experiment/ee1e89d1-c9a9-4374-a71c-ffba251be326.avif",
+        "alt": "雞爸爸、兔阿嬤、鼠媽媽的肌酸初體驗｜圖片 2",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "b8c9565b-64c6-42dd-b315-9b64460480d4.webp",
+      "ee1e89d1-c9a9-4374-a71c-ffba251be326.avif"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true
+  }
 }

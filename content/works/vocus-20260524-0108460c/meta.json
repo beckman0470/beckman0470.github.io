@@ -1,0 +1,94 @@
+{
+  "id": "CDJ-20260524-0108460C",
+  "title": "鄧愷威的蛻變成功",
+  "slug": "vocus-20260524-0108460c",
+  "series": "棒球札記",
+  "category": "棒球札記",
+  "published": "2026-05-24",
+  "updated": "2026-05-24",
+  "readingTime": 1,
+  "subtitle": "休士頓太空人隊台灣投手鄧愷威今天先發6局被敲2支安打無失分，並送出6次三振、3次保送，加上隊友火力支援幫忙，讓他奪得本季第3場勝投。",
+  "signature": "",
+  "people": [],
+  "relationship": [
+    "雞爸爸的棒球觀察"
+  ],
+  "tags": [
+    "投手",
+    "大谷翔平",
+    "鄧愷威"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "雞爸爸的棒球觀察"
+  ],
+  "cover": "assets/posts/vocus-20260524-0108460c/df1a3604-c28f-424f-8135-3f89df064567.webp",
+  "coverAlt": "src",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "post",
+    "sourceId": "6a124572fd8978000108460c",
+    "sourceUrl": "https://vocus.cc/post/6a124572fd8978000108460c",
+    "canonicalUrl": "https://vocus.cc/post/6a124572fd8978000108460c",
+    "originalPublishedAt": "2026-05-24T08:25:22+08:00",
+    "originalUpdatedAtCandidate": "2026-05-24T08:25:22+08:00",
+    "bodySha256": "dccd607b60c28696e5221122669e5d48a5d409778ee900de6a34aa3fcffb3ec1",
+    "markdownSha256": "878a0d6d28f5474cf90c5edca0459bb7e867fda9e53c9a302121cdc5270df581",
+    "mappingStatus": "resolved-pending-preview-approval",
+    "categoryProposal": {
+      "primary": "風格誌",
+      "secondary": [],
+      "confidence": 1.0,
+      "needsReview": false,
+      "reason": "semantic editorial review",
+      "scores": {
+        "保健室": 0,
+        "風格誌": 6,
+        "圖書室": 0,
+        "光影誌": 0,
+        "家庭誌": 0
+      },
+      "hits": [
+        "投手",
+        "大谷翔平",
+        "鄧愷威"
+      ]
+    },
+    "seriesProposal": "棒球札記",
+    "relationshipProposals": [
+      "雞爸爸的棒球觀察"
+    ],
+    "timelineProposal": {
+      "date": "2026-05-24",
+      "type": "publication",
+      "label": "鄧愷威的蛻變成功",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/df1a3604-c28f-424f-8135-3f89df064567.jpg",
+        "file": "assets/posts/vocus-20260524-0108460c/df1a3604-c28f-424f-8135-3f89df064567.webp",
+        "alt": "src",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "df1a3604-c28f-424f-8135-3f89df064567.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true,
+    "contentTemplate": "compact",
+    "fallbackPolicy": {
+      "iframe": "safe-external-link",
+      "video": "safe-external-link",
+      "poll": "static-question-options-with-vocus-link"
+    },
+    "editorialReviewNotes": [
+      "採 compact template；仍納入時間軸、人物與標籤"
+    ],
+    "previewApprovalStatus": "pending"
+  }
+}

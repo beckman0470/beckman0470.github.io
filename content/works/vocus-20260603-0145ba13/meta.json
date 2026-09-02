@@ -1,0 +1,91 @@
+{
+  "id": "CDJ-20260603-0145BA13",
+  "title": "今日休刊",
+  "slug": "vocus-20260603-0145ba13",
+  "series": "生活研究",
+  "category": "生活研究",
+  "published": "2026-06-03",
+  "updated": "2026-06-03",
+  "readingTime": 1,
+  "subtitle": "以前每週看連載漫畫都很羨慕作者✍️",
+  "signature": "",
+  "people": [],
+  "relationship": [
+    "雞爸爸的閱讀與角色觀察"
+  ],
+  "tags": [
+    "漫畫"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "雞爸爸的閱讀與角色觀察"
+  ],
+  "cover": "assets/posts/vocus-20260603-0145ba13/466a4a58-65ed-4adc-a776-be63e5b5c690.webp",
+  "coverAlt": "src",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "post",
+    "sourceId": "6a201b7afd8978000145ba13",
+    "sourceUrl": "https://vocus.cc/post/6a201b7afd8978000145ba13",
+    "canonicalUrl": "https://vocus.cc/post/6a201b7afd8978000145ba13",
+    "originalPublishedAt": "2026-06-03T20:18:02+08:00",
+    "originalUpdatedAtCandidate": "2026-06-03T20:18:02+08:00",
+    "bodySha256": "7f5f4d2589c444989a44d3a10121a77ab5765b1a31180fddce8f3f4e525cd153",
+    "markdownSha256": "3fbb15dab9ad4afacd97f960d0acdc80bd6f6e6c3b16cfc9e2ca14fb7f5561bb",
+    "mappingStatus": "resolved-pending-preview-approval",
+    "categoryProposal": {
+      "primary": "圖書室",
+      "secondary": [],
+      "confidence": 1.0,
+      "needsReview": false,
+      "reason": "semantic editorial review",
+      "scores": {
+        "保健室": 0,
+        "風格誌": 0,
+        "圖書室": 1,
+        "光影誌": 0,
+        "家庭誌": 0
+      },
+      "hits": [
+        "漫畫"
+      ]
+    },
+    "seriesProposal": "生活研究",
+    "relationshipProposals": [
+      "雞爸爸的閱讀與角色觀察"
+    ],
+    "timelineProposal": {
+      "date": "2026-06-03",
+      "type": "publication",
+      "label": "今日休刊",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/466a4a58-65ed-4adc-a776-be63e5b5c690.png",
+        "file": "assets/posts/vocus-20260603-0145ba13/466a4a58-65ed-4adc-a776-be63e5b5c690.webp",
+        "alt": "src",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "466a4a58-65ed-4adc-a776-be63e5b5c690.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true,
+    "contentTemplate": "compact",
+    "fallbackPolicy": {
+      "iframe": "safe-external-link",
+      "video": "safe-external-link",
+      "poll": "static-question-options-with-vocus-link"
+    },
+    "editorialReviewNotes": [
+      "依正文核心主題完成語意校正",
+      "採 compact template；仍納入時間軸、人物與標籤"
+    ],
+    "previewApprovalStatus": "pending"
+  }
+}

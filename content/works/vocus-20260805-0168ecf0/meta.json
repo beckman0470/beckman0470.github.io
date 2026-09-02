@@ -1,0 +1,97 @@
+{
+  "id": "CDJ-20260805-0168ECF0",
+  "title": "眼鏡磨花了，鼠姊姊可以不戴了嗎？老師會不會認不出她？",
+  "slug": "vocus-20260805-0168ecf0",
+  "series": "幸福點滴",
+  "category": "幸福點滴",
+  "published": "2026-08-05",
+  "updated": "2026-08-05",
+  "readingTime": 6,
+  "subtitle": "幫助看清楚的眼鏡，鏡片卻已經磨花了",
+  "signature": "",
+  "people": [
+    "雞爸爸",
+    "鼠姊姊"
+  ],
+  "relationship": [
+    "鼠姊姊的家庭成長故事"
+  ],
+  "tags": [
+    "雞爸爸生活研究室",
+    "鼠姊姊",
+    "視力",
+    "姊姊",
+    "爸媽",
+    "父母",
+    "爸爸",
+    "媽媽",
+    "孩子"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "鼠姊姊的家庭成長故事"
+  ],
+  "cover": "assets/posts/vocus-20260805-0168ecf0/3dd65cce-c2ae-4059-838f-002ee86cbbc6.webp",
+  "coverAlt": "眼鏡磨花了，鼠姊姊可以不戴了嗎？老師會不會認不出她？｜圖片 1",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a72fdc1fd8978000168ecf0",
+    "sourceUrl": "https://vocus.cc/article/6a72fdc1fd8978000168ecf0",
+    "canonicalUrl": "https://vocus.cc/article/6a72fdc1fd8978000168ecf0",
+    "originalPublishedAt": "2026-08-05T18:04:53+08:00",
+    "originalUpdatedAtCandidate": "2026-08-05T18:04:54+08:00",
+    "bodySha256": "ece9ddc45e7b15148341ad0143b5bfe5825abcb80421882a650573ef4a029174",
+    "markdownSha256": "4d29f36dc26ac2ff2f80092b40e3e7187d253fb791952276a03922e9409d4226",
+    "mappingStatus": "proposed-high-confidence",
+    "categoryProposal": {
+      "primary": "家庭誌",
+      "secondary": [],
+      "confidence": 0.98,
+      "needsReview": false,
+      "reason": "關鍵詞：鼠姊姊、姊姊、爸媽、父母、爸爸、媽媽",
+      "scores": {
+        "保健室": 2,
+        "風格誌": 0,
+        "圖書室": 0,
+        "光影誌": 0,
+        "家庭誌": 15
+      },
+      "hits": [
+        "鼠姊姊",
+        "姊姊",
+        "爸媽",
+        "父母",
+        "爸爸",
+        "媽媽",
+        "孩子"
+      ]
+    },
+    "seriesProposal": "幸福點滴",
+    "relationshipProposals": [
+      "鼠姊姊的家庭成長故事"
+    ],
+    "timelineProposal": {
+      "date": "2026-08-05",
+      "type": "publication",
+      "label": "眼鏡磨花了，鼠姊姊可以不戴了嗎？老師會不會認不出她？",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/3dd65cce-c2ae-4059-838f-002ee86cbbc6.png",
+        "file": "assets/posts/vocus-20260805-0168ecf0/3dd65cce-c2ae-4059-838f-002ee86cbbc6.webp",
+        "alt": "眼鏡磨花了，鼠姊姊可以不戴了嗎？老師會不會認不出她？｜圖片 1",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "3dd65cce-c2ae-4059-838f-002ee86cbbc6.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true
+  }
+}

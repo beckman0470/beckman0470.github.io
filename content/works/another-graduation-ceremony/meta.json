@@ -1,0 +1,101 @@
+{
+  "id": "CDJ-20260625-01451741",
+  "title": "突如其來的臉書文章  另一種畢業典禮",
+  "slug": "another-graduation-ceremony",
+  "series": "幸福點滴",
+  "category": "幸福點滴",
+  "published": "2026-06-25",
+  "updated": "2026-07-10",
+  "readingTime": 4,
+  "subtitle": "畢業典禮原來也分好幾種",
+  "signature": "",
+  "people": [
+    "雞爸爸",
+    "鼠姊姊"
+  ],
+  "relationship": [
+    "鼠姊姊的家庭成長故事"
+  ],
+  "tags": [
+    "雞爸爸",
+    "人生",
+    "人生旅程",
+    "鼠姊姊",
+    "姊姊",
+    "爸媽",
+    "父母",
+    "爸爸",
+    "媽媽",
+    "孩子",
+    "幼兒園"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "鼠姊姊的家庭成長故事"
+  ],
+  "cover": "assets/posts/another-graduation-ceremony/fbf31a82-3b8b-43a5-9bf1-bd0e36ca1da7.webp",
+  "coverAlt": "突如其來的臉書文章  另一種畢業典禮｜圖片 1",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a3ca4b3fd89780001451741",
+    "sourceUrl": "https://vocus.cc/article/6a3ca4b3fd89780001451741",
+    "canonicalUrl": "https://vocus.cc/article/6a3ca4b3fd89780001451741",
+    "originalPublishedAt": "2026-06-25T12:09:46+08:00",
+    "originalUpdatedAtCandidate": "2026-07-10T23:37:30+08:00",
+    "bodySha256": "8b0f201e870e20e48c391551e4647b014472afdbb17e18030460f66263108e11",
+    "markdownSha256": "417aa2361e65b867c5bb4c47365875f2c1abf6e6d6ab0b459bdce844045bd4a9",
+    "mappingStatus": "proposed-high-confidence",
+    "categoryProposal": {
+      "primary": "家庭誌",
+      "secondary": [],
+      "confidence": 0.98,
+      "needsReview": false,
+      "reason": "關鍵詞：鼠姊姊、姊姊、爸媽、父母、爸爸、媽媽",
+      "scores": {
+        "保健室": 0,
+        "風格誌": 0,
+        "圖書室": 4,
+        "光影誌": 0,
+        "家庭誌": 14
+      },
+      "hits": [
+        "鼠姊姊",
+        "姊姊",
+        "爸媽",
+        "父母",
+        "爸爸",
+        "媽媽",
+        "孩子",
+        "幼兒園",
+        "畢業典禮"
+      ]
+    },
+    "seriesProposal": "幸福點滴",
+    "relationshipProposals": [
+      "鼠姊姊的家庭成長故事"
+    ],
+    "timelineProposal": {
+      "date": "2026-06-25",
+      "type": "publication",
+      "label": "突如其來的臉書文章  另一種畢業典禮",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/fbf31a82-3b8b-43a5-9bf1-bd0e36ca1da7.png",
+        "file": "assets/posts/another-graduation-ceremony/fbf31a82-3b8b-43a5-9bf1-bd0e36ca1da7.webp",
+        "alt": "突如其來的臉書文章  另一種畢業典禮｜圖片 1",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "fbf31a82-3b8b-43a5-9bf1-bd0e36ca1da7.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true
+  }
+}

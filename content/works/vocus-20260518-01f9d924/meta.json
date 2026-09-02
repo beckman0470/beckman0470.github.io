@@ -1,0 +1,97 @@
+{
+  "id": "CDJ-20260518-01F9D924",
+  "title": "紀錄生活中的小確幸-二寶爸的偷閒人生",
+  "slug": "vocus-20260518-01f9d924",
+  "series": "幸福點滴",
+  "category": "幸福點滴",
+  "published": "2026-05-18",
+  "updated": "2026-05-18",
+  "readingTime": 1,
+  "subtitle": "好久以前就想學攝影，生活許多平凡的瞬間，在不同的時間回頭，都有不同的感受...",
+  "signature": "",
+  "people": [],
+  "relationship": [
+    "雞爸爸的生活研究"
+  ],
+  "tags": [
+    "小確幸"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "雞爸爸的生活研究"
+  ],
+  "cover": "assets/posts/vocus-20260518-01f9d924/8bc0e7b3-f0ed-44ae-a964-d272280cd585.webp",
+  "coverAlt": "src",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "post",
+    "sourceId": "6a0abd7efd89780001f9d924",
+    "sourceUrl": "https://vocus.cc/post/6a0abd7efd89780001f9d924",
+    "canonicalUrl": "https://vocus.cc/post/6a0abd7efd89780001f9d924",
+    "originalPublishedAt": "2026-05-18T15:19:26+08:00",
+    "originalUpdatedAtCandidate": "2026-05-18T15:48:36+08:00",
+    "bodySha256": "38096abd4cc906165c9852c9c5a8a496bfbc099b90482f181dcb4b044174ca1a",
+    "markdownSha256": "63b530568b13e57d2fc8f56a52bfc8860f99880d96aee7f30fef9d6095140f4c",
+    "mappingStatus": "resolved-pending-preview-approval",
+    "categoryProposal": {
+      "primary": "家庭誌",
+      "secondary": [],
+      "confidence": 1.0,
+      "needsReview": false,
+      "reason": "semantic editorial review",
+      "scores": {
+        "保健室": 0,
+        "風格誌": 0,
+        "圖書室": 0,
+        "光影誌": 0,
+        "家庭誌": 4
+      },
+      "hits": [
+        "小確幸"
+      ]
+    },
+    "seriesProposal": "幸福點滴",
+    "relationshipProposals": [
+      "雞爸爸的生活研究"
+    ],
+    "timelineProposal": {
+      "date": "2026-05-18",
+      "type": "publication",
+      "label": "紀錄生活中的小確幸-二寶爸的偷閒人生",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/8bc0e7b3-f0ed-44ae-a964-d272280cd585.jpg",
+        "file": "assets/posts/vocus-20260518-01f9d924/8bc0e7b3-f0ed-44ae-a964-d272280cd585.webp",
+        "alt": "src",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/536ccf18-26c2-4513-a280-4b722851c1bc.jpg",
+        "file": "assets/posts/vocus-20260518-01f9d924/536ccf18-26c2-4513-a280-4b722851c1bc.webp",
+        "alt": "src",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "536ccf18-26c2-4513-a280-4b722851c1bc.webp",
+      "8bc0e7b3-f0ed-44ae-a964-d272280cd585.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true,
+    "contentTemplate": "compact",
+    "fallbackPolicy": {
+      "iframe": "safe-external-link",
+      "video": "safe-external-link",
+      "poll": "static-question-options-with-vocus-link"
+    },
+    "editorialReviewNotes": [
+      "採 compact template；仍納入時間軸、人物與標籤"
+    ],
+    "previewApprovalStatus": "pending"
+  }
+}

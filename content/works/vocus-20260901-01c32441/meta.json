@@ -1,0 +1,95 @@
+{
+  "id": "CDJ-20260901-01C32441",
+  "title": "A流之後，雞爸爸累累的：燒退了，怎麼感覺人還沒回來？",
+  "slug": "vocus-20260901-01c32441",
+  "series": "生活研究",
+  "category": "生活研究",
+  "published": "2026-09-01",
+  "updated": "2026-09-01",
+  "readingTime": 6,
+  "subtitle": "原來流感不是退燒就結束...有時身體回到生活，腦袋和力氣卻還在病假中...孩子開學了，爸爸這個角色卻沒有「恢復期」...",
+  "signature": "",
+  "people": [
+    "雞爸爸",
+    "鼠姊姊"
+  ],
+  "relationship": [
+    "鼠姊姊的健康觀察"
+  ],
+  "tags": [
+    "雞爸爸生活研究室",
+    "雞爸爸",
+    "Ａ型流感",
+    "流感",
+    "A流",
+    "減肥",
+    "肌肉"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "鼠姊姊的健康觀察"
+  ],
+  "cover": "assets/posts/vocus-20260901-01c32441/d3adf282-387a-4248-8f68-6727b83dee05.webp",
+  "coverAlt": "A流之後，雞爸爸累累的：燒退了，怎麼感覺人還沒回來？｜圖片 1",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a963aeefd89780001c32441",
+    "sourceUrl": "https://vocus.cc/article/6a963aeefd89780001c32441",
+    "canonicalUrl": "https://vocus.cc/article/6a963aeefd89780001c32441",
+    "originalPublishedAt": "2026-09-01T11:04:47+08:00",
+    "originalUpdatedAtCandidate": "2026-09-01T11:04:48+08:00",
+    "bodySha256": "881da5b80d2af4d422de825e462c8f358715a45c89e8d565b981caec54760d25",
+    "markdownSha256": "d27350a6ef1b594659e6bd24a0a316e2ebe32e34bd53566f645211fbadce0b38",
+    "mappingStatus": "proposed-high-confidence",
+    "categoryProposal": {
+      "primary": "保健室",
+      "secondary": [
+        "家庭誌"
+      ],
+      "confidence": 0.98,
+      "needsReview": false,
+      "reason": "關鍵詞：流感、A流、Ａ型流感、減肥、肌肉",
+      "scores": {
+        "保健室": 12,
+        "風格誌": 0,
+        "圖書室": 0,
+        "光影誌": 0,
+        "家庭誌": 8
+      },
+      "hits": [
+        "流感",
+        "A流",
+        "Ａ型流感",
+        "減肥",
+        "肌肉"
+      ]
+    },
+    "seriesProposal": "生活研究",
+    "relationshipProposals": [
+      "鼠姊姊的健康觀察"
+    ],
+    "timelineProposal": {
+      "date": "2026-09-01",
+      "type": "publication",
+      "label": "A流之後，雞爸爸累累的：燒退了，怎麼感覺人還沒回來？",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/d3adf282-387a-4248-8f68-6727b83dee05.png",
+        "file": "assets/posts/vocus-20260901-01c32441/d3adf282-387a-4248-8f68-6727b83dee05.webp",
+        "alt": "A流之後，雞爸爸累累的：燒退了，怎麼感覺人還沒回來？｜圖片 1",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "d3adf282-387a-4248-8f68-6727b83dee05.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true
+  }
+}

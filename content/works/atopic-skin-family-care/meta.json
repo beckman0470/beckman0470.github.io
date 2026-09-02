@@ -36,5 +36,66 @@
   ],
   "cover": "assets/story-covers/default.svg",
   "coverAlt": "異位性皮膚家庭的理解與陪伴｜雞爸爸生活研究室代表插圖",
-  "coverStatus": "placeholder"
+  "coverStatus": "placeholder",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a252ac1fd897800014aa9a1",
+    "sourceUrl": "https://vocus.cc/article/6a252ac1fd897800014aa9a1",
+    "canonicalUrl": "https://vocus.cc/article/6a252ac1fd897800014aa9a1",
+    "originalPublishedAt": "2026-06-07T17:33:07+08:00",
+    "originalUpdatedAtCandidate": "2026-07-11T00:17:54+08:00",
+    "bodySha256": "91cc90adf3443970c0e56f3a49ddaddcbd2ced6db258b8c08b55886fef109211",
+    "markdownSha256": "ccb1929dc52068c1e7eda5319727cb2bccabeffdd053ad9c85ddc39b70ddc6d2",
+    "mappingStatus": "proposed-high-confidence",
+    "categoryProposal": {
+      "primary": "家庭誌",
+      "secondary": [],
+      "confidence": 0.98,
+      "needsReview": false,
+      "reason": "關鍵詞：鼠姐姐、龍弟弟、鼠媽媽、弟弟、父母、爸爸",
+      "scores": {
+        "保健室": 5,
+        "風格誌": 0,
+        "圖書室": 0,
+        "光影誌": 0,
+        "家庭誌": 14
+      },
+      "hits": [
+        "鼠姐姐",
+        "龍弟弟",
+        "鼠媽媽",
+        "弟弟",
+        "父母",
+        "爸爸",
+        "媽媽",
+        "孩子",
+        "家庭"
+      ]
+    },
+    "seriesProposal": "生活研究",
+    "relationshipProposals": [
+      "雞爸爸 × 異膚孩子的理解與陪伴"
+    ],
+    "timelineProposal": {
+      "date": "2026-06-07",
+      "type": "publication",
+      "label": "異位性皮膚家庭的理解與陪伴",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/5f3f92b7-5450-4922-9430-e156c81cb97e.png",
+        "file": "assets/posts/atopic-skin-family-care/5f3f92b7-5450-4922-9430-e156c81cb97e.webp",
+        "alt": "異位性皮膚家庭的理解與陪伴｜圖片 1",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "5f3f92b7-5450-4922-9430-e156c81cb97e.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true
+  }
 }

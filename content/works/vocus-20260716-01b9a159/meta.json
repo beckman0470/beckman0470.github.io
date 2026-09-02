@@ -1,0 +1,114 @@
+{
+  "id": "CDJ-20260716-01B9A159",
+  "title": "台灣尚勇：為什麼總撐到讓身體喊停？",
+  "slug": "vocus-20260716-01b9a159",
+  "series": "棒球札記",
+  "category": "棒球札記",
+  "published": "2026-07-16",
+  "updated": "2026-07-16",
+  "readingTime": 5,
+  "subtitle": "從徐若熙、林維恩、林詩翔與陳柏毓的傷病，重新思考「台灣尚勇」背後的過勞文化",
+  "signature": "",
+  "people": [
+    "雞爸爸"
+  ],
+  "relationship": [
+    "雞爸爸的棒球觀察"
+  ],
+  "tags": [
+    "雞爸爸",
+    "棒球",
+    "世界棒球12強賽",
+    "投手",
+    "徐若熙"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "雞爸爸的棒球觀察"
+  ],
+  "cover": "assets/posts/vocus-20260716-01b9a159/714c588e-14c7-4d16-b249-40ef04746dc1.webp",
+  "coverAlt": "世界棒球12強擊敗日本職棒組成的國家隊，與有榮焉",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a5883b1fd89780001b9a159",
+    "sourceUrl": "https://vocus.cc/article/6a5883b1fd89780001b9a159",
+    "canonicalUrl": "https://vocus.cc/article/6a5883b1fd89780001b9a159",
+    "originalPublishedAt": "2026-07-16T16:15:08+08:00",
+    "originalUpdatedAtCandidate": "2026-07-16T16:19:56+08:00",
+    "bodySha256": "40a04edd9915c20cdf3ac8d793490b1e5d691f22e078ebe332af8f6959fff9f9",
+    "markdownSha256": "79cc67fc2b95dbbaf2e70127c85f14b3cd8d99a3a1f0ae7ecd8e5eb2106ba386",
+    "mappingStatus": "resolved-pending-preview-approval",
+    "categoryProposal": {
+      "primary": "風格誌",
+      "secondary": [
+        "保健室"
+      ],
+      "confidence": 1.0,
+      "needsReview": false,
+      "reason": "semantic editorial review",
+      "scores": {
+        "保健室": 1,
+        "風格誌": 5,
+        "圖書室": 0,
+        "光影誌": 0,
+        "家庭誌": 6
+      },
+      "hits": [
+        "棒球",
+        "投手",
+        "徐若熙"
+      ]
+    },
+    "seriesProposal": "棒球札記",
+    "relationshipProposals": [
+      "雞爸爸的棒球觀察"
+    ],
+    "timelineProposal": {
+      "date": "2026-07-16",
+      "type": "publication",
+      "label": "台灣尚勇：為什麼總撐到讓身體喊停？",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/714c588e-14c7-4d16-b249-40ef04746dc1.jpg",
+        "file": "assets/posts/vocus-20260716-01b9a159/714c588e-14c7-4d16-b249-40ef04746dc1.webp",
+        "alt": "世界棒球12強擊敗日本職棒組成的國家隊，與有榮焉",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/bc492f63-3af0-4936-beae-b6e64929ece1.jpg",
+        "file": "assets/posts/vocus-20260716-01b9a159/bc492f63-3af0-4936-beae-b6e64929ece1.webp",
+        "alt": "「18號」在日本棒球界，是屬於王牌投手的號碼",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/486312e8-10b3-4df0-a5eb-4ff6e4971e7d.png",
+        "file": "assets/posts/vocus-20260716-01b9a159/486312e8-10b3-4df0-a5eb-4ff6e4971e7d.avif",
+        "alt": "19歲就屠殺小聯盟層級的林維恩，獲聯盟單月最佳投手",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "486312e8-10b3-4df0-a5eb-4ff6e4971e7d.avif",
+      "714c588e-14c7-4d16-b249-40ef04746dc1.webp",
+      "bc492f63-3af0-4936-beae-b6e64929ece1.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true,
+    "contentTemplate": "article",
+    "fallbackPolicy": {
+      "iframe": "safe-external-link",
+      "video": "safe-external-link",
+      "poll": "static-question-options-with-vocus-link"
+    },
+    "editorialReviewNotes": [
+      "依正文核心主題完成語意校正"
+    ],
+    "previewApprovalStatus": "pending"
+  }
+}

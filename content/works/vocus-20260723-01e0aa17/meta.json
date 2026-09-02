@@ -1,0 +1,95 @@
+{
+  "id": "CDJ-20260723-01E0AA17",
+  "title": "差點被扣9450，卻讓雞爸爸重新蓋了一次品牌地基",
+  "slug": "vocus-20260723-01e0aa17",
+  "series": "AI 共創",
+  "category": "AI 共創",
+  "published": "2026-07-23",
+  "updated": "2026-07-23",
+  "readingTime": 4,
+  "subtitle": "雞爸爸希望小妾能夠幫我管理",
+  "signature": "",
+  "people": [
+    "雞爸爸",
+    "ChatGPT／小妾"
+  ],
+  "relationship": [
+    "雞爸爸的生活研究"
+  ],
+  "tags": [
+    "雞爸爸生活研究室",
+    "雞爸爸",
+    "小妾",
+    "爸爸",
+    "家庭"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "雞爸爸的生活研究"
+  ],
+  "cover": "assets/posts/vocus-20260723-01e0aa17/7768925a-5edd-450c-8ca8-505c6638d713.webp",
+  "coverAlt": "差點被扣9450，卻讓雞爸爸重新蓋了一次品牌地基｜圖片 1",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a6175a0fd89780001e0aa17",
+    "sourceUrl": "https://vocus.cc/article/6a6175a0fd89780001e0aa17",
+    "canonicalUrl": "https://vocus.cc/article/6a6175a0fd89780001e0aa17",
+    "originalPublishedAt": "2026-07-23T11:14:06+08:00",
+    "originalUpdatedAtCandidate": "2026-07-23T11:14:07+08:00",
+    "bodySha256": "c04fc121d883aba41a3a517cb160ff3689e2f9609776c65653543bbd7327da28",
+    "markdownSha256": "20c68bdb64c07405000a83f68fb1252c7a39c1aa77606124ed38a01a3ccf5bf0",
+    "mappingStatus": "proposed-high-confidence",
+    "categoryProposal": {
+      "primary": "家庭誌",
+      "secondary": [],
+      "confidence": 0.83,
+      "needsReview": false,
+      "reason": "關鍵詞：爸爸、家庭",
+      "scores": {
+        "保健室": 0,
+        "風格誌": 0,
+        "圖書室": 1,
+        "光影誌": 2,
+        "家庭誌": 5
+      },
+      "hits": [
+        "爸爸",
+        "家庭"
+      ]
+    },
+    "seriesProposal": "AI 共創",
+    "relationshipProposals": [
+      "雞爸爸的生活研究"
+    ],
+    "timelineProposal": {
+      "date": "2026-07-23",
+      "type": "publication",
+      "label": "差點被扣9450，卻讓雞爸爸重新蓋了一次品牌地基",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/7768925a-5edd-450c-8ca8-505c6638d713.png",
+        "file": "assets/posts/vocus-20260723-01e0aa17/7768925a-5edd-450c-8ca8-505c6638d713.webp",
+        "alt": "差點被扣9450，卻讓雞爸爸重新蓋了一次品牌地基｜圖片 1",
+        "altStatus": "proposed"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/ae95b7fe-f56c-4275-b734-908b9fe61313.png",
+        "file": "assets/posts/vocus-20260723-01e0aa17/ae95b7fe-f56c-4275-b734-908b9fe61313.avif",
+        "alt": "差點被扣9450，卻讓雞爸爸重新蓋了一次品牌地基｜圖片 2",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "7768925a-5edd-450c-8ca8-505c6638d713.webp",
+      "ae95b7fe-f56c-4275-b734-908b9fe61313.avif"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true
+  }
+}

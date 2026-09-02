@@ -1,0 +1,105 @@
+{
+  "id": "CDJ-20260815-012F03C0",
+  "title": "兩個不用奶瓶的孩子 展開一場小北鼻奶瓶爭奪戰",
+  "slug": "vocus-20260815-012f03c0",
+  "series": "幸福點滴",
+  "category": "幸福點滴",
+  "published": "2026-08-15",
+  "updated": "2026-08-16",
+  "readingTime": 9,
+  "subtitle": "最近，雞爸爸家出現了一個很奇妙的現象。鼠姊姊突然開始說：",
+  "signature": "",
+  "people": [
+    "雞爸爸",
+    "鼠媽媽",
+    "鼠姊姊",
+    "龍弟弟"
+  ],
+  "relationship": [
+    "鼠媽媽的家庭成長故事"
+  ],
+  "tags": [
+    "雞爸爸生活研究室",
+    "鼠姊姊",
+    "龍弟弟",
+    "鼠姐姐",
+    "鼠媽媽",
+    "姊姊",
+    "弟弟",
+    "爸媽",
+    "父母"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "鼠媽媽的家庭成長故事"
+  ],
+  "cover": "assets/posts/vocus-20260815-012f03c0/30207067-42c8-4444-a41d-2ba050b4d8dd.webp",
+  "coverAlt": "兩個不用奶瓶的孩子 展開一場小北鼻奶瓶爭奪戰｜圖片 1",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a8040effd897800012f03c0",
+    "sourceUrl": "https://vocus.cc/article/6a8040effd897800012f03c0",
+    "canonicalUrl": "https://vocus.cc/article/6a8040effd897800012f03c0",
+    "originalPublishedAt": "2026-08-15T19:32:34+08:00",
+    "originalUpdatedAtCandidate": "2026-08-16T12:23:34+08:00",
+    "bodySha256": "51108a348bdecd61abcf7668fb6e6e785f4a01eb8b8fc09100c316ff3c4ee4a3",
+    "markdownSha256": "aa0b52c9a92e6fd4caf11da8e96a37b995a145832b0f266f189ad61a3ed75fe7",
+    "mappingStatus": "proposed-high-confidence",
+    "categoryProposal": {
+      "primary": "家庭誌",
+      "secondary": [],
+      "confidence": 0.98,
+      "needsReview": false,
+      "reason": "關鍵詞：鼠姊姊、鼠姐姐、龍弟弟、鼠媽媽、姊姊、弟弟",
+      "scores": {
+        "保健室": 1,
+        "風格誌": 0,
+        "圖書室": 0,
+        "光影誌": 0,
+        "家庭誌": 26
+      },
+      "hits": [
+        "鼠姊姊",
+        "鼠姐姐",
+        "龍弟弟",
+        "鼠媽媽",
+        "姊姊",
+        "弟弟",
+        "爸媽",
+        "父母",
+        "爸爸",
+        "媽媽",
+        "孩子",
+        "家庭",
+        "幼兒園"
+      ]
+    },
+    "seriesProposal": "幸福點滴",
+    "relationshipProposals": [
+      "鼠媽媽的家庭成長故事"
+    ],
+    "timelineProposal": {
+      "date": "2026-08-15",
+      "type": "publication",
+      "label": "兩個不用奶瓶的孩子 展開一場小北鼻奶瓶爭奪戰",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/30207067-42c8-4444-a41d-2ba050b4d8dd.png",
+        "file": "assets/posts/vocus-20260815-012f03c0/30207067-42c8-4444-a41d-2ba050b4d8dd.webp",
+        "alt": "兩個不用奶瓶的孩子 展開一場小北鼻奶瓶爭奪戰｜圖片 1",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "30207067-42c8-4444-a41d-2ba050b4d8dd.webp"
+    ],
+    "interactiveKinds": [],
+    "embedUrls": [],
+    "doNotPublishUntilApproved": true
+  }
+}

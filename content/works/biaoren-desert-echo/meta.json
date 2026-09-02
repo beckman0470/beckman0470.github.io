@@ -48,5 +48,78 @@
   ],
   "cover": "assets/story-covers/default.svg",
   "coverAlt": "【大漠餘響】為《鏢人》補上亂世的魂｜雞爸爸生活研究室代表插圖",
-  "coverStatus": "placeholder"
+  "coverStatus": "placeholder",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a20e7dafd89780001960ced",
+    "sourceUrl": "https://vocus.cc/article/6a20e7dafd89780001960ced",
+    "canonicalUrl": "https://vocus.cc/article/6a20e7dafd89780001960ced",
+    "originalPublishedAt": "2026-06-04T12:08:21+08:00",
+    "originalUpdatedAtCandidate": "2026-06-15T15:55:46+08:00",
+    "bodySha256": "a05ba773c86832889312f8e3661d5f3a370c7d354998d092cb2177049a2a4eef",
+    "markdownSha256": "f05bab6191f00f2ef67772e712b0d786eadc553e10beb59b8a1d7f05f5848737",
+    "mappingStatus": "resolved-pending-preview-approval",
+    "categoryProposal": {
+      "primary": "圖書室",
+      "secondary": [
+        "家庭誌"
+      ],
+      "confidence": 1.0,
+      "needsReview": false,
+      "reason": "semantic editorial review",
+      "scores": {
+        "保健室": 0,
+        "風格誌": 0,
+        "圖書室": 11,
+        "光影誌": 1,
+        "家庭誌": 3
+      },
+      "hits": [
+        "鏢人",
+        "漫畫",
+        "武俠",
+        "諦聽",
+        "大漠餘響"
+      ]
+    },
+    "seriesProposal": "生活研究",
+    "relationshipProposals": [
+      "雞爸爸 × 《鏢人》原著解讀"
+    ],
+    "timelineProposal": {
+      "date": "2026-06-04",
+      "type": "publication",
+      "label": "【大漠餘響】為《鏢人》補上亂世的魂",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/391a6e6c-18ee-46ed-ac0f-e35d2aae6765.jpg",
+        "file": "assets/posts/biaoren-desert-echo/391a6e6c-18ee-46ed-ac0f-e35d2aae6765.webp",
+        "alt": "最初注意到《鏢人》，是源於那段節奏凌厲、大漠肅殺的電影預告片。",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "391a6e6c-18ee-46ed-ac0f-e35d2aae6765.webp"
+    ],
+    "interactiveKinds": [
+      "iframe"
+    ],
+    "embedUrls": [
+      "https://www.youtube-nocookie.com/embed/Pn-E4mGQ4S0"
+    ],
+    "doNotPublishUntilApproved": true,
+    "contentTemplate": "article",
+    "fallbackPolicy": {
+      "iframe": "safe-external-link",
+      "video": "safe-external-link",
+      "poll": "static-question-options-with-vocus-link"
+    },
+    "editorialReviewNotes": [
+      "影音改為安全外連；投票保留問題與選項並連回 Vocus"
+    ],
+    "previewApprovalStatus": "pending"
+  }
 }

@@ -1,0 +1,116 @@
+{
+  "id": "CDJ-20260814-01D619E8",
+  "title": "《It's Not About the Nail》：笑完才發現，雞爸爸就是那個男朋友",
+  "slug": "vocus-20260814-01d619e8",
+  "series": "幸福點滴",
+  "category": "幸福點滴",
+  "published": "2026-08-14",
+  "updated": "2026-08-14",
+  "readingTime": 9,
+  "subtitle": "男朋友為了女友的情緒價值忍了半天，最後抱在一起時頭撞到真的痛到受不了念了一句：「如果把妳頭上的釘子拔掉就不會...。」女生瞬間爆炸...因為她根本不想聽男朋友怎麼處理那根釘子，她就是希望他先聽她把話說完...",
+  "signature": "",
+  "people": [
+    "雞爸爸",
+    "鼠媽媽",
+    "鼠姊姊",
+    "兔阿嬤"
+  ],
+  "relationship": [
+    "鼠媽媽的家庭成長故事"
+  ],
+  "tags": [
+    "雞爸爸生活研究室",
+    "男朋友",
+    "頭上有釘子",
+    "鼠姊姊",
+    "鼠媽媽",
+    "兔阿嬤",
+    "姊姊",
+    "爸媽",
+    "爸爸",
+    "媽媽",
+    "孩子"
+  ],
+  "source": "Vocus",
+  "status": "draft",
+  "cardGroup": [
+    "鼠媽媽的家庭成長故事"
+  ],
+  "cover": "assets/posts/vocus-20260814-01d619e8/8544e1a3-a8d9-4a41-acaa-bad3a4ef2f5c.webp",
+  "coverAlt": "《It's Not About the Nail》：笑完才發現，雞爸爸就是那個男朋友｜圖片 1",
+  "coverStatus": "migrated",
+  "migration": {
+    "schemaVersion": "full-stage-1",
+    "contentType": "article",
+    "sourceId": "6a7eae53fd89780001d619e8",
+    "sourceUrl": "https://vocus.cc/article/6a7eae53fd89780001d619e8",
+    "canonicalUrl": "https://vocus.cc/article/6a7eae53fd89780001d619e8",
+    "originalPublishedAt": "2026-08-14T16:40:33+08:00",
+    "originalUpdatedAtCandidate": "2026-08-14T16:40:33+08:00",
+    "bodySha256": "9334c1128423e4a37493c7cff78ecfebb970024f236c7d240edf92007173af43",
+    "markdownSha256": "35bccda6650e33379b7a67e57e3b3e0bb3cac0316cd2dba9cdf7b9b28d2acdc2",
+    "mappingStatus": "resolved-pending-preview-approval",
+    "categoryProposal": {
+      "primary": "家庭誌",
+      "secondary": [],
+      "confidence": 1.0,
+      "needsReview": false,
+      "reason": "semantic editorial review",
+      "scores": {
+        "保健室": 0,
+        "風格誌": 0,
+        "圖書室": 0,
+        "光影誌": 1,
+        "家庭誌": 11
+      },
+      "hits": [
+        "鼠姊姊",
+        "鼠媽媽",
+        "兔阿嬤",
+        "姊姊",
+        "爸媽",
+        "爸爸",
+        "媽媽",
+        "孩子"
+      ]
+    },
+    "seriesProposal": "幸福點滴",
+    "relationshipProposals": [
+      "鼠媽媽的家庭成長故事"
+    ],
+    "timelineProposal": {
+      "date": "2026-08-14",
+      "type": "publication",
+      "label": "《It's Not About the Nail》：笑完才發現，雞爸爸就是那個男朋友",
+      "familyEventDateKnown": false
+    },
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/8544e1a3-a8d9-4a41-acaa-bad3a4ef2f5c.png",
+        "file": "assets/posts/vocus-20260814-01d619e8/8544e1a3-a8d9-4a41-acaa-bad3a4ef2f5c.webp",
+        "alt": "《It's Not About the Nail》：笑完才發現，雞爸爸就是那個男朋友｜圖片 1",
+        "altStatus": "proposed"
+      }
+    ],
+    "copiedAssets": [
+      "8544e1a3-a8d9-4a41-acaa-bad3a4ef2f5c.webp"
+    ],
+    "interactiveKinds": [
+      "iframe"
+    ],
+    "embedUrls": [
+      "https://www.youtube-nocookie.com/embed/-4EDhdAHrOg"
+    ],
+    "doNotPublishUntilApproved": true,
+    "contentTemplate": "article",
+    "fallbackPolicy": {
+      "iframe": "safe-external-link",
+      "video": "safe-external-link",
+      "poll": "static-question-options-with-vocus-link"
+    },
+    "editorialReviewNotes": [
+      "影音改為安全外連；投票保留問題與選項並連回 Vocus"
+    ],
+    "previewApprovalStatus": "pending"
+  }
+}
