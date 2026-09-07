@@ -11,7 +11,7 @@
   <meta property="og:title" content="關於雞爸爸 ChickenDad｜雞爸爸生活研究室">
   <meta property="og:description" content="雞爸爸 ChickenDad 是《雞爸爸生活研究室》的創作者，主要在 Vocus 記錄一家人的生活故事。">
   <meta property="og:url" content="https://beckman0470.github.io/about.html">
-  <meta property="og:image" content="https://beckman0470.github.io/assets/og/og-image.svg">
+  <meta property="og:image" content="https://beckman0470.github.io/assets/og/og-image.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#263328">
   <link rel="manifest" href="./site.webmanifest">
@@ -114,7 +114,7 @@
   </section>
 
   <section class="about-wrap about-stats" aria-label="網站統計">
-    <div class="about-stat"><b>26</b><span>已整理作品</span></div>
+    <div class="about-stat"><b data-total-count>119</b><span>已整理作品</span></div>
     <div class="about-stat"><b>5</b><span>內容入口</span></div>
     <div class="about-stat"><b>5</b><span>家庭核心人物</span></div>
     <div class="about-stat"><b>1</b><span>慢慢長大的生活宇宙</span></div>
@@ -191,5 +191,19 @@
     <span>追蹤雞爸爸</span><span>f</span><span>◎</span><span>▶</span><span>vocus</span>
   </div>
 </section>
+<script>
+(async function syncTotalCount() {
+  try {
+    const response = await fetch('data/articles.json', { cache: 'no-store' });
+    if (!response.ok) return;
+    const articles = await response.json();
+    const total = Array.isArray(articles) ? articles.length : 0;
+    if (!total) return;
+    document.querySelectorAll('[data-total-count]').forEach((element) => {
+      element.textContent = total;
+    });
+  } catch (_) {}
+})();
+</script>
 </body>
 </html>
