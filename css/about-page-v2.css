@@ -47,7 +47,7 @@
 .about-card h3{margin:0 0 10px;font-size:21px}
 .about-card p{margin:0;color:var(--about-muted)}
 .about-quote{font-size:23px;font-weight:950;line-height:1.45;color:#704115}
-.about-grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.about-grid-4{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
 .about-story-card{background:var(--about-paper);border:1px solid var(--about-line);border-radius:26px;padding:24px;box-shadow:0 12px 32px rgba(99,62,24,.08);min-height:238px;display:flex;flex-direction:column}
 .about-story-card .tag{align-self:flex-start;font-size:12px;font-weight:950;color:#8b561a;background:#fff0d8;border-radius:999px;padding:5px 10px;margin-bottom:14px}
 .about-story-card h3{margin:0 0 10px;font-size:21px}
@@ -58,7 +58,7 @@
 .about-avatar{width:64px;height:64px;border-radius:22px;display:grid;place-items:center;font-size:34px;background:#fff1dc;margin-bottom:14px}
 .about-avatar-card h3{margin:0 0 8px;font-size:20px}
 .about-avatar-card p{font-size:14px;color:var(--about-muted);margin:0}
-.about-routes{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.about-routes{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
 .about-route{background:linear-gradient(180deg,#fff,#fff9f0);border:1px solid var(--about-line);border-radius:26px;padding:24px;box-shadow:0 12px 32px rgba(99,62,24,.08)}
 .about-route b{display:inline-grid;place-items:center;width:42px;height:42px;border-radius:16px;background:#fff0d8;color:#a85f1a;margin-bottom:12px;font-size:20px}
 .about-route h3{margin:0 0 8px;font-size:20px}
