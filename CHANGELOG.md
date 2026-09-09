@@ -1,3 +1,5 @@
+2026-09-09：修正官方 Instagram、About 作者連結；重用文章目錄同步最新文章、統計、列表與 sitemap；補上 metadata 匯入與模板 Article schema。
+
 # Changelog
 
 ## v5.1 Repository Foundation

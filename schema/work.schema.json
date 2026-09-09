@@ -44,7 +44,10 @@
       }
     },
     "readingTime": {
-      "type": "string"
+      "type": [
+        "string",
+        "number"
+      ]
     },
     "hero": {
       "type": "string"
@@ -54,6 +57,21 @@
       "items": {
         "type": "string"
       }
+    },
+    "published": {
+      "type": "string"
+    },
+    "updated": {
+      "type": "string"
+    },
+    "cover": {
+      "type": "string"
+    },
+    "sourceUrl": {
+      "type": "string"
+    },
+    "canonicalUrl": {
+      "type": "string"
     }
   }
 }

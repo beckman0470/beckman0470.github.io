@@ -1,6 +1,7 @@
 from datetime import date
 from email.utils import formatdate
 import time
+from urllib.parse import urljoin, urlparse
 
 SITE_URL = "https://beckman0470.github.io"
 SITE_TITLE = "雞爸爸生活研究室"
@@ -24,6 +25,12 @@ def build_sitemap(stories):
         ("subscribe.html", "0.7"),
         ("family.html", "0.8"),
         ("about.html", "0.7"),
+        ("knowledge.html", "0.8"),
+        ("memory.html", "0.8"),
+        ("clinic.html", "0.8"),
+        ("library.html", "0.8"),
+        ("style.html", "0.8"),
+        ("photo.html", "0.8"),
     ]
 
     lines = ['<?xml version="1.0" encoding="UTF-8"?>',
@@ -37,9 +44,13 @@ def build_sitemap(stories):
         lines.append("  </url>")
 
     for story in stories:
+        url = urljoin(SITE_URL + '/', story.get('url', ''))
+        canonical = story.get('canonicalUrl') or url
+        if urlparse(url).netloc != urlparse(SITE_URL).netloc or canonical != url:
+            continue
         lines.append("  <url>")
-        lines.append(f"    <loc>{SITE_URL}/{story.get('url')}</loc>")
-        lines.append(f"    <lastmod>{story.get('date', today)}</lastmod>")
+        lines.append(f"    <loc>{xml_escape(url)}</loc>")
+        lines.append(f"    <lastmod>{xml_escape(story.get('updated') or story.get('date', today))}</lastmod>")
         lines.append("    <priority>0.7</priority>")
         lines.append("  </url>")
 

@@ -3,9 +3,9 @@
   "title": "請填入文章標題",
   "slug": "please-fill-slug",
   "series": "幸福點滴",
-  "category": "幸福點滴",
+  "category": "家庭誌",
   "source": "Vocus",
-  "status": "published",
+  "status": "draft",
   "published": "2026-07-04",
   "updated": "2026-07-04",
   "readingTime": 5,
@@ -18,5 +18,9 @@
   "tags": [
     "幸福點滴"
   ],
-  "related": []
+  "related": [],
+  "summary": "請填入文章摘要",
+  "cover": "assets/story-covers/default.svg",
+  "sourceUrl": "https://vocus.cc/article/請填入文章ID",
+  "canonicalUrl": "https://vocus.cc/article/請填入文章ID"
 }

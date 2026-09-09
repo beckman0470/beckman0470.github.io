@@ -1,3 +1,5 @@
+目前上稿請見 [Vocus metadata 同步流程](docs/metadata-sync.md)，不再手動維護文章卡與統計。
+
 # 雞爸爸網站｜光影誌短影音 Patch
 
 ## 內容

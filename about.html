@@ -42,7 +42,7 @@
         "url": "https://beckman0470.github.io/",
         "sameAs": [
           "https://vocus.cc/user/@beckman",
-          "https://www.instagram.com/beckman0470/"
+          "https://www.instagram.com/chickendadjournal/"
         ],
         "brand": { "@id": "https://beckman0470.github.io/#organization" },
         "worksFor": { "@id": "https://beckman0470.github.io/#organization" }
@@ -94,7 +94,7 @@
     <div class="about-panel">
       <div class="about-kicker">About Chicken Dad Journal</div>
       <h1>這不是完美生活教科書，這是一個家的故事地圖。</h1>
-      <p class="about-lead">雞爸爸 ChickenDad，是《雞爸爸生活研究室》的創作者，主要在 Vocus 記錄一家人的生活故事。</p>
+      <p class="about-lead">雞爸爸 ChickenDad，是《雞爸爸生活研究室》的創作者，主要在 <a href="https://vocus.cc/user/@beckman">Vocus</a> 記錄一家人的生活故事。</p>
       <p class="about-lead">雞爸爸生活研究室記錄的，不是標準答案，而是一個家庭如何在日常裡，一次又一次學會陪伴、理解與重新調整。</p>
       <div class="about-actions">
         <a class="about-btn primary" href="articles.html">開始閱讀故事</a>
@@ -191,19 +191,6 @@
     <span>追蹤雞爸爸</span><span>f</span><span>◎</span><span>▶</span><span>vocus</span>
   </div>
 </section>
-<script>
-(async function syncTotalCount() {
-  try {
-    const response = await fetch('data/articles.json', { cache: 'no-store' });
-    if (!response.ok) return;
-    const articles = await response.json();
-    const total = Array.isArray(articles) ? articles.length : 0;
-    if (!total) return;
-    document.querySelectorAll('[data-total-count]').forEach((element) => {
-      element.textContent = total;
-    });
-  } catch (_) {}
-})();
-</script>
+<script src="js/article-summary.js" defer></script>
 </body>
 </html>
