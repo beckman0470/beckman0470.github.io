@@ -1,5 +1,6 @@
 """Regression checks for the small publishing bridge (no network access)."""
 import copy
+from datetime import date, timedelta
 import json
 from pathlib import Path
 import re
@@ -25,9 +26,11 @@ class CatalogueTests(unittest.TestCase):
                          published='2026-09-09', summary='測試摘要', cover='assets/story-covers/default.svg',
                          category='家庭誌', source='Vocus', sourceUrl='https://vocus.cc/article/test',
                          canonicalUrl='https://vocus.cc/article/test', status='published')
+        self.meta['published'] = (date.fromisoformat(max(a['date'] for a in load_catalogue(self.root))) + timedelta(days=1)).isoformat()
 
     def test_metadata_import_is_repeatable_and_drives_all_outputs(self):
         before = len(load_catalogue(self.root))
+        family_before = sum(a['category'] == '家庭誌' for a in load_catalogue(self.root))
         validate_meta(self.meta)
         upsert(self.meta, True, self.root)
         upsert(self.meta, True, self.root)
@@ -36,7 +39,7 @@ class CatalogueTests(unittest.TestCase):
         self.assertEqual(articles[0]['slug'], 'test-import')
         self.assertIn('data-total-count>' + str(before + 1), (self.root / 'about.html').read_text(encoding='utf-8'))
         self.assertIn('data-latest-article href="https://vocus.cc/article/test"', (self.root / 'index.html').read_text(encoding='utf-8'))
-        self.assertIn('data-journal-count="家庭誌">72 篇文章', (self.root / 'index.html').read_text(encoding='utf-8'))
+        self.assertIn(f'data-journal-count="家庭誌">{family_before + 1} 篇文章', (self.root / 'index.html').read_text(encoding='utf-8'))
         self.assertIn('測試 &lt;標題&gt; &amp; 引號', (self.root / 'articles.html').read_text(encoding='utf-8'))
         urls = [e.text for e in ET.parse(self.root / 'sitemap.xml').iter('{http://www.sitemaps.org/schemas/sitemap/0.9}loc')]
         self.assertNotIn(self.meta['sourceUrl'], urls)
@@ -51,7 +54,7 @@ class CatalogueTests(unittest.TestCase):
         page = render_article(self.meta, '<p>測試</p>')
         data = json.loads(re.search(r'<script type="application/ld\+json">(.*?)</script>', page)[1])
         self.assertEqual(data['author']['name'], '雞爸爸 ChickenDad')
-        self.assertEqual(data['datePublished'], '2026-09-09')
+        self.assertEqual(data['datePublished'], self.meta['published'])
         self.assertEqual(data['mainEntityOfPage'], self.meta['canonicalUrl'])
         (self.root / 'articles/test-import.html').write_text(page, encoding='utf-8')
         upsert(self.meta, False, self.root)
