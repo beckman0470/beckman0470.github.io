@@ -2,6 +2,7 @@ from pathlib import Path
 import re
 import json
 import sys
+from urllib.parse import urlsplit, unquote
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -20,10 +21,13 @@ REQUIRED_FILES = [
     "sitemap.xml",
     "robots.txt",
     "data/stories.json",
+    "data/articles.json",
 ]
 
 REQUIRED_ANCHORS = {
-    "index.html": ['id="contact"']
+    "index.html": ['data-latest-article', *[f'data-journal-count="{name}"' for name in
+                    ('家庭誌', '保健室', '圖書室', '風格誌', '光影誌')]],
+    "about.html": ['data-total-count']
 }
 
 def fail(msg):
@@ -63,17 +67,17 @@ def main():
         except Exception as e:
             errors += fail(f"data/stories.json invalid JSON: {e}")
 
-    for html in ["index.html", "articles.html", "series.html", "timeline.html", "search.html", "tags.html", "subscribe.html"]:
+    for html in ["index.html", "about.html", "articles.html", "series.html", "timeline.html", "search.html", "tags.html", "subscribe.html"]:
         p = ROOT / html
         if p.exists():
             text = p.read_text(encoding="utf-8", errors="ignore")
             for href in re.findall(r'href=["\']([^"\']+)["\']', text):
-                if href.startswith(("http://", "https://", "mailto:", "#")):
+                if urlsplit(href).scheme or href.startswith(("//", "#")):
                     continue
-                clean = href.split("#")[0].split("?")[0]
+                clean = unquote(urlsplit(href).path)
                 if not clean:
                     continue
-                target = (p.parent / clean).resolve()
+                target = ((ROOT / clean.lstrip('/')) if clean.startswith('/') else (p.parent / clean)).resolve()
                 if not target.exists():
                     print("WARN: possible missing link", html, "->", href)
 
