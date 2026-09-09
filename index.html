@@ -26,7 +26,7 @@
         "url": "https://beckman0470.github.io/",
         "sameAs": [
           "https://vocus.cc/user/@beckman",
-          "https://www.instagram.com/beckman0470/"
+          "https://www.instagram.com/chickendadjournal/"
         ],
         "brand": { "@id": "https://beckman0470.github.io/#organization" },
         "worksFor": { "@id": "https://beckman0470.github.io/#organization" }
@@ -80,7 +80,7 @@
         <div class="hero-copy">
           <h1>用科學理解生活<br>用陪伴記錄成長</h1>
           <p class="hero-quote">以故事連結人心，以思考理解生活</p>
-          <a class="btn btn-primary" href="articles/mischievous-yahoo-kitten.html">最新文章</a>
+          <a class="btn btn-primary" data-latest-article href="/articles/vocus-20260901-01c32441.html">最新文章</a>
         </div>
         <div class="hero-art-wrap">
           <img src="assets/img/hero-family.png?v=20260717-ama-v71" alt="雞爸爸、鼠媽媽、鼠姊姊、龍弟弟、兔阿嬤的家庭合照插圖" class="hero-art" width="1448" height="1086">
@@ -239,10 +239,10 @@
       <p>© 2025 雞爸爸生活研究室 Chicken Dad Journal. All rights reserved.</p>
       <div class="social-links" aria-label="社群連結">
         <a href="https://www.facebook.com/groups/1310256624217913" target="_blank" rel="noopener" aria-label="Facebook">f</a>
-        <a href="https://www.instagram.com/beckman0470/" target="_blank" rel="noopener" aria-label="Instagram">◎</a>
+        <a href="https://www.instagram.com/chickendadjournal/" target="_blank" rel="noopener" aria-label="Instagram">◎</a>
         <a href="https://www.youtube.com/@ChickenDadJournal" target="_blank" rel="noopener" aria-label="YouTube">▶</a>
       </div>
     </div>
   </footer>
-<script>(async function syncJournalCounts() {  try {    const response = await fetch('data/articles.json', { cache: 'no-store' });    if (!response.ok) return;    const articles = await response.json();    document.querySelectorAll('[data-journal-count]').forEach((element) => {      const category = element.dataset.journalCount;      const count = articles.filter((article) => article.category === category).length;      element.textContent = count + ' 篇文章';    });  } catch (_) {}})();</script></body>
+<script src="js/article-summary.js" defer></script></body>
 </html>

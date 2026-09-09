@@ -1,3 +1,5 @@
+2026-09-09：已完成最小 Vocus metadata 匯入流程，沿用 data/articles.json。後續新增作品可依 docs/metadata-sync.md 操作。
+
 # Chicken Dad Journal Roadmap
 
 ## v5.x：Creator Platform

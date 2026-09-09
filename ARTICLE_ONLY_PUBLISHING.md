@@ -1,3 +1,5 @@
+本文件下方為舊版操作記錄。現行五大入口與必填欄位請依 [metadata 同步流程](docs/metadata-sync.md)；勿使用舊四系列作為 category。
+
 # V7 Article-only 上架流程
 
 這包是 **V7 完整版乾淨基底** 加上「只上文章」工具。
