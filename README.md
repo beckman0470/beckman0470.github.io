@@ -21,3 +21,6 @@
 - 直式比例 9:16，播放器最大寬度 420px。
 - 使用 H.264 MP4，並加入 faststart，適合網頁串流。
 - 原始影片約 5.4 MB，網站版約 169 KB。
+# 2026-09-09 同步補齊
+
+已補上公開 Vocus metadata 每日同步與現行 QA 規則；125 篇作品仍由 `data/articles.json` 統一驅動。操作及分類方式見 [metadata 同步說明](docs/metadata-sync.md)。

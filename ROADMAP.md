@@ -26,3 +26,8 @@
 - Family Timeline
 - Vocus Sync
 - Multi-channel publishing
+## 2026-09-09 已完成
+
+- 公開 Vocus metadata 每日檢查、驗證後提交及 Pages 部署。
+- 6 篇新文章 metadata 匯入與 QA 舊規則修正。
+- 分類不明、短貼文及超過作者頁範圍的缺漏仍以人工 manifest 處理，避免錯誤自動發布。

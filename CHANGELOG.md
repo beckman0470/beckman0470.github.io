@@ -42,3 +42,8 @@
 - Updated homepage brand language.
 - Added `css/brand-homepage.css`.
 - Added homepage `living-notes` identity section.
+## 2026-09-09 — 公開同步與 QA
+
+- 匯入 6 篇公開 metadata，共 125 篇，補 GitHub Actions 每日同步與 Pages 發布。
+- 明確分類、來源去重、總數核對及失敗不改寫；補回歸測試。
+- 修正已過時的 contact QA 與根目錄連結解析。
