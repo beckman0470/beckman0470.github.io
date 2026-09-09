@@ -23,6 +23,9 @@ import json
 import html
 import re
 from datetime import date
+import argparse
+from catalogue import validate_meta, upsert, sync
+from engine.jsonld import article_schema, script
 
 ROOT = Path(__file__).resolve().parents[2]
 NEW_DIR = ROOT / "tools" / "article-only" / "new"
@@ -104,14 +107,16 @@ def esc(value) -> str:
 
 def render_article(meta, body_html):
     title = esc(meta.get("title"))
-    subtitle = esc(meta.get("subtitle"))
+    subtitle = esc(meta.get("subtitle") or meta.get("summary"))
     signature = esc(meta.get("signature"))
     series = esc(meta.get("series"))
     category = esc(meta.get("category"))
     published = esc(meta.get("published"))
     reading = esc(meta.get("readingTime"))
-    description = esc(meta.get("subtitle") or meta.get("signature") or meta.get("title"))
+    description = esc(meta.get("summary") or meta.get("subtitle") or meta.get("signature") or meta.get("title"))
     slug = esc(meta.get("slug"))
+    canonical = esc(meta.get('canonicalUrl') or f'https://beckman0470.github.io/articles/{slug}.html')
+    schema = script(article_schema(meta))
 
     tags = meta.get("tags") or []
     people = meta.get("people") or []
@@ -129,12 +134,13 @@ def render_article(meta, body_html):
 <link rel="stylesheet" href="../assets/css/style.css">
 <link rel="stylesheet" href="../css/visual-polish.css">
 <link rel="stylesheet" href="../css/global-layout-sync.css">
-<link rel="canonical" href="https://beckman0470.github.io/articles/{slug}.html">
+<link rel="canonical" href="{canonical}">
+{schema}
 <meta property="og:site_name" content="Chicken Dad Journal">
 <meta property="og:type" content="article">
 <meta property="og:title" content="{title}｜雞爸爸生活研究室">
 <meta property="og:description" content="{description}">
-<meta property="og:url" content="https://beckman0470.github.io/articles/{slug}.html">
+<meta property="og:url" content="{canonical}">
 <meta property="og:image" content="https://beckman0470.github.io/assets/og/og-image.svg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#263328">
@@ -209,13 +215,30 @@ def render_article(meta, body_html):
 """
 
 def main():
-    meta_path = NEW_DIR / "meta.json"
+    parser = argparse.ArgumentParser(description='發布文章或匯入 Vocus metadata，更新既有文章目錄與 sitemap')
+    parser.add_argument('--manifest', type=Path, help='使用既有 meta.json 格式的單篇匯入檔')
+    parser.add_argument('--metadata-only', action='store_true', help='僅新增文章卡，連至原文；不產生全文頁')
+    parser.add_argument('--sync-only', action='store_true', help='從 data/articles.json 更新統計、列表與 sitemap')
+    args = parser.parse_args()
+    if args.sync_only:
+        sync()
+        print('已同步首頁、About、文章列表與 sitemap。')
+        return
+    meta_path = args.manifest or NEW_DIR / "meta.json"
     article_path = NEW_DIR / "article.md"
+    if args.manifest:
+        article_path = args.manifest.parent / 'article.md'
 
-    if not meta_path.exists() or not article_path.exists():
+    if not meta_path.exists() or (not args.metadata_only and not article_path.exists()):
         raise SystemExit("請先建立 tools/article-only/new/meta.json 與 article.md")
 
     meta = read_json(meta_path)
+    validate_meta(meta)
+    if args.metadata_only:
+        upsert(meta, metadata_only=True)
+        sync()
+        print('已匯入 metadata 並同步首頁、About、文章列表與 sitemap。')
+        return
     slug = slugify(meta.get("slug") or meta.get("title"))
     meta["slug"] = slug
     meta.setdefault("source", "Vocus")
@@ -242,6 +265,8 @@ def main():
     articles_dir = ROOT / "articles"
     articles_dir.mkdir(exist_ok=True)
     (articles_dir / f"{slug}.html").write_text(render_article(meta, body_html), encoding="utf-8")
+    upsert(meta)
+    sync()
 
     print(f"文章已上架：articles/{slug}.html")
     print(f"內容已建立：content/works/{slug}/")
