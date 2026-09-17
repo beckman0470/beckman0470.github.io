@@ -1,0 +1,57 @@
+{
+  "id": "CDJ-20260909-01F2A4B1",
+  "title": "《Meow Life Story》：本來只是開給龍弟弟看的貓咪，最後變成全家的「另類爽片」",
+  "slug": "vocus-20260909-01f2a4b1",
+  "series": "影像故事",
+  "category": "光影誌",
+  "published": "2026-09-09",
+  "updated": "2026-09-09",
+  "readingTime": 7,
+  "summary": "鼠媽媽每天晚上去洗澡，都是龍弟弟最焦躁的時刻...\n\n昨晚雞爸爸原本只想開Youtube吸引他，沒想到一隻「騎車車的貓咪」讓他召集全家坐下來看。看貓媽媽和兩個寶貝遇到困難，如何解決。看完才發現，療癒的不只是可愛貓咪，而是一個努力會有回音的世界；即使結果不如預期，幸福也可能在轉角出現...",
+  "subtitle": "鼠媽媽每天晚上去洗澡，都是龍弟弟最焦躁的時刻...\n\n昨晚雞爸爸原本只想開Youtube吸引他，沒想到一隻「騎車車的貓咪」讓他召集全家坐下來看。看貓媽媽和兩個寶貝遇到困難，如何解決。看完才發現，療癒的不只是可愛貓咪，而是一個努力會有回音的世界；即使結果不如預期，幸福也可能在轉角出現...",
+  "people": [
+    "雞爸爸",
+    "鼠媽媽",
+    "鼠姊姊",
+    "龍弟弟",
+    "兔阿嬤"
+  ],
+  "tags": [
+    "雞爸爸生活研究室",
+    "雞爸爸",
+    "龍弟弟",
+    "兔阿嬤",
+    "鼠姊姊",
+    "鼠媽媽",
+    "右右",
+    "貓咪",
+    "爽片",
+    "YouTube",
+    "消防車",
+    "騎車"
+  ],
+  "source": "Vocus",
+  "sourceUrl": "https://vocus.cc/article/6aa0c6f4fd89780001f2a4b1",
+  "canonicalUrl": "https://vocus.cc/article/6aa0c6f4fd89780001f2a4b1",
+  "status": "published",
+  "contentType": "article",
+  "cover": "/assets/posts/vocus-20260909-01f2a4b1/9d3f6327-de44-4138-91be-fe82c2e129ed.webp",
+  "coverAlt": "《Meow Life Story》：本來只是開給龍弟弟看的貓咪，最後變成全家的「另類爽片」",
+  "originalPublishedAt": "2026-09-09T04:54:23.635Z",
+  "originalUpdatedAt": "2026-09-09T05:21:18.716Z",
+  "migration": {
+    "sourceId": "6aa0c6f4fd89780001f2a4b1",
+    "sourceUrl": "https://vocus.cc/article/6aa0c6f4fd89780001f2a4b1",
+    "bodySha256": "642010de2fd0141893358d0de6d2083dddf0d9f13b287ddb963efe6fbcc4fb98",
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/9d3f6327-de44-4138-91be-fe82c2e129ed.png",
+        "file": "assets/posts/vocus-20260909-01f2a4b1/9d3f6327-de44-4138-91be-fe82c2e129ed.webp"
+      },
+      {
+        "sourceUrl": "https://images.vocus.cc/94f96af6-e82f-4ab2-aff5-52c528a3c3e8.png",
+        "file": "assets/posts/vocus-20260909-01f2a4b1/94f96af6-e82f-4ab2-aff5-52c528a3c3e8.webp"
+      }
+    ]
+  }
+}
