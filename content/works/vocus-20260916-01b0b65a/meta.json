@@ -1,0 +1,54 @@
+{
+  "id": "CDJ-20260916-01B0B65A",
+  "title": "原來人生沒有 New Project，只有繼續寫下去",
+  "slug": "vocus-20260916-01b0b65a",
+  "series": "幸福點滴",
+  "category": "家庭誌",
+  "published": "2026-09-16",
+  "updated": "2026-09-16",
+  "readingTime": 5,
+  "summary": "每到一個新平台，都得從零開始。直到想起那個沉睡許久的「機器學習與深度學習資源分享」粉絲團，突然發現：以前研究資料、模型與演算法的自己，從來沒有離開。只是研究的對象，變成孩子、家庭與生活。也許人生沒有 New Project，不必刪掉過去才能成為新的自己；所謂重新開始，只是把曾經的自己帶上，繼續往前",
+  "subtitle": "每到一個新平台，都得從零開始。直到想起那個沉睡許久的「機器學習與深度學習資源分享」粉絲團，突然發現：以前研究資料、模型與演算法的自己，從來沒有離開。只是研究的對象，變成孩子、家庭與生活。也許人生沒有 New Project，不必刪掉過去才能成為新的自己；所謂重新開始，只是把曾經的自己帶上，繼續往前",
+  "people": [
+    "雞爸爸",
+    "鼠媽媽",
+    "鼠姊姊",
+    "龍弟弟",
+    "兔阿嬤"
+  ],
+  "tags": [
+    "雞爸爸生活研究室",
+    "雞爸爸ChickenDad",
+    "雞爸爸",
+    "vocus2026",
+    "Facebook",
+    "Instagram",
+    "Threads",
+    "Youtube",
+    "粉絲團",
+    "改名",
+    "重新開始",
+    "機器學習",
+    "機器學習與深度學習分享"
+  ],
+  "source": "Vocus",
+  "sourceUrl": "https://vocus.cc/article/6aaa3ebefd89780001b0b65a",
+  "canonicalUrl": "https://vocus.cc/article/6aaa3ebefd89780001b0b65a",
+  "status": "published",
+  "contentType": "article",
+  "cover": "/assets/posts/vocus-20260916-01b0b65a/5f20862c-96f6-4bb2-9148-216f5ebe6dba.webp",
+  "coverAlt": "原來人生沒有 New Project，只有繼續寫下去",
+  "originalPublishedAt": "2026-09-16T07:22:43.412Z",
+  "originalUpdatedAt": "2026-09-16T07:59:16.861Z",
+  "migration": {
+    "sourceId": "6aaa3ebefd89780001b0b65a",
+    "sourceUrl": "https://vocus.cc/article/6aaa3ebefd89780001b0b65a",
+    "bodySha256": "9536262496e65139442a94ac7560d9ae1598491c1c0e80af4f5c4f519d480de0",
+    "imageRegistry": [
+      {
+        "sourceUrl": "https://images.vocus.cc/5f20862c-96f6-4bb2-9148-216f5ebe6dba.png",
+        "file": "assets/posts/vocus-20260916-01b0b65a/5f20862c-96f6-4bb2-9148-216f5ebe6dba.webp"
+      }
+    ]
+  }
+}
