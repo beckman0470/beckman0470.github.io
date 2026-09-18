@@ -31,6 +31,7 @@ def build_sitemap(stories):
         ("library.html", "0.8"),
         ("style.html", "0.8"),
         ("photo.html", "0.8"),
+        ("privacy.html", "0.3"),
     ]
 
     lines = ['<?xml version="1.0" encoding="UTF-8"?>',
