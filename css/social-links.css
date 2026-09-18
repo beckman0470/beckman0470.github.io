@@ -1,0 +1,6 @@
+.cdj-social-links { box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 10px; width: 100%; max-width: 100%; margin: 0 auto; padding: 22px 16px; font: 15px/1.6 system-ui, sans-serif; background: #fffaf4; color: #4d3625; }
+.cdj-social-label { flex-basis: 100%; text-align: center; font-weight: 700; }
+.cdj-social-links a { box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 8px 14px; border: 1px solid #dbc6ac; border-radius: 22px; background: #fffdf8; color: #4d3625; text-decoration: none; font-weight: 600; }
+.cdj-social-links a:hover { background: #f3e8d8; }
+.cdj-social-links a:focus-visible { outline: 3px solid #a06a2f; outline-offset: 3px; }
+@media (max-width: 480px) { .cdj-social-links { gap: 8px; padding: 18px 12px; } .cdj-social-links a { flex: 1 1 120px; max-width: 100%; } }
