@@ -164,6 +164,8 @@ def render_article(meta, body_html):
 .article-actions a.secondary{{background:#FFFDF8;color:#263328;border:1px solid #E6DED1}}
 </style>
 <script defer src="/js/analytics-consent.js"></script>
+<link rel="stylesheet" href="/css/article-recommendations.css">
+<script defer src="/js/article-recommendations.js"></script>
 </head>
 <body class="article-page">
 <header class="site-header">
