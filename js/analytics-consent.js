@@ -96,3 +96,12 @@
   window.addEventListener('pageshow', e => { if(e.persisted) {const r=read(); if(!r || r.choice !== 'granted') stop();} });
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init, {once:true}); else init();
 })();
+
+// This existing site-wide entry point also loads public footer links, independently
+// of analytics consent. The follow links themselves never load social embeds.
+(() => {
+  if (document.getElementById('cdj-social-script')) return;
+  const script = document.createElement('script');
+  script.id = 'cdj-social-script'; script.src = '/js/social-links.js';
+  document.head.append(script);
+})();
