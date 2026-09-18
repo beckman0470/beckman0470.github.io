@@ -163,6 +163,7 @@ def render_article(meta, body_html):
 .article-actions a{{display:inline-flex;align-items:center;justify-content:center;padding:12px 20px;border-radius:999px;background:#263328;color:white;text-decoration:none;font-weight:900}}
 .article-actions a.secondary{{background:#FFFDF8;color:#263328;border:1px solid #E6DED1}}
 </style>
+<script defer src="/js/analytics-consent.js"></script>
 </head>
 <body class="article-page">
 <header class="site-header">
