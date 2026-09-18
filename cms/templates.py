@@ -81,6 +81,8 @@ def render_article_page(meta: dict, html_body: str, related_items=None, prev_nex
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#263328">
 <style>{BASE_CSS}</style>
+<link rel="stylesheet" href="/css/article-recommendations.css">
+<script defer src="/js/article-recommendations.js"></script>
 </head>
 <body>
 <header class="site-header">

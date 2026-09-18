@@ -1,0 +1,19 @@
+/* Scoped to reading cards; reuse the site's warm surfaces and typography. */
+.cdj-reading-section { margin: 48px 0 24px; color: var(--ink, #263328); }
+.cdj-reading-section h2 { font-size: clamp(25px, 3vw, 34px); line-height: 1.4; margin: 0 0 22px; }
+.cdj-reading-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+[data-latest-articles] .cdj-reading-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.cdj-reading-card { display: flex; flex-direction: column; min-width: 0; overflow: hidden; border: 1px solid var(--line, #E6DED1); border-radius: 22px; background: var(--surface, #FFFDF8); color: inherit; text-decoration: none; }
+.cdj-reading-card:hover { border-color: #A67C52; box-shadow: 0 10px 28px rgba(67,46,27,.08); }
+.cdj-reading-card:focus-visible { outline: 3px solid #A67C52; outline-offset: 4px; }
+.cdj-reading-card img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; }
+.cdj-reading-body { display: flex; flex: 1; flex-direction: column; padding: 22px; overflow-wrap: anywhere; }
+.cdj-reading-card h3 { color: inherit; font-size: 21px; line-height: 1.5; margin: 8px 0 12px; }
+.cdj-reading-meta { color: var(--muted, #687463); font-size: 13px; line-height: 1.6; margin: 0; }
+.cdj-reading-summary { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; color: var(--muted, #687463); font-size: 15px; line-height: 1.8; margin: 0 0 18px; }
+.cdj-reading-more { margin-top: auto; color: var(--accent, #8a603b); font-size: 15px; font-weight: 700; }
+.cdj-reading-all { display: inline-block; margin: 0 0 24px; text-decoration: underline; }
+.cdj-article-reading { clear: both; width: min(100%, 980px); margin-inline: auto; }
+main:not(.article-wrap) > .cdj-article-reading { width: min(980px, calc(100% - 40px)); }
+@media (max-width: 900px) { [data-latest-articles] .cdj-reading-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .cdj-reading-grid, [data-latest-articles] .cdj-reading-grid { grid-template-columns: minmax(0, 1fr); } .cdj-reading-body { padding: 18px; } }
