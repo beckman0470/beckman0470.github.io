@@ -1,0 +1,21 @@
+const assert=require('node:assert/strict');
+const fs=require('fs');
+const {catalogue,recommend,newest}=require('../js/article-recommendations.js');
+const base='https://beckman0470.github.io/';
+const data=JSON.parse(fs.readFileSync(require('node:path').join(__dirname, '../data/articles.json')));
+const actual=catalogue(data,base);
+assert(actual.length > 0);
+let distribution={};
+for(const a of actual){const r=recommend(a,actual,base);distribution[r.related.length]=(distribution[r.related.length]||0)+1;const all=[...r.related,...r.series];assert(all.every(x=>x.url!==a.url));assert.equal(new Set(all.map(x=>x.url)).size,all.length);assert(r.related.length<=4&&r.series.length<=4);}
+const current={id:'current',title:'current',url:'/current.html',status:'published',date:'2026-09-18',tags:['topic'],category:'health',series:'id',seriesTitle:'Health series'};
+const old={id:'old',title:'old',url:'/old.html',status:'published',date:'2020-01-01',tags:['topic'],category:'health'};
+const sibling={id:'series',title:'series',url:'/series.html',status:'published',seriesTitle:'Health series'};
+const filler=Array.from({length:10},(_,i)=>({title:'other'+i,url:'/other'+i+'.html',tags:['other'+i]}));
+const corpus=catalogue([current,old,sibling,...filler,{...old,url:'/draft.html',status:'draft'},{...old,url:'javascript:alert(1)'},{...old,url:'/old.html#duplicate'}],base);
+const result=recommend(current,corpus,base);
+assert.deepEqual(result.related.map(x=>x.id),['old']);
+assert.deepEqual(result.series.map(x=>x.id),['series']);
+assert.equal(corpus.length,13);
+assert.equal([...corpus].sort(newest)[0].id,'current');
+assert.equal(recommend({...current,tags:['雞爸爸']},corpus,base).related.length,0);
+console.log('Recommendation checks passed; live-catalogue topic count distribution:',distribution);
