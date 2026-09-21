@@ -1,6 +1,8 @@
 {
   "version": "vocus-migration-preview-1",
   "works": [
+    "content/works/vocus-20260918-0102e2dc/meta.json",
+    "content/works/vocus-20260917-01ede58c/meta.json",
     "content/works/vocus-20260916-01b5a802/meta.json",
     "content/works/vocus-20260916-01b0b65a/meta.json",
     "content/works/vocus-20260915-013f4896/meta.json",
