@@ -1,0 +1,6 @@
+/* Approved square masters: display the whole character without face cropping. */
+.character-art{height:auto!important;min-height:0!important;aspect-ratio:1;overflow:hidden}
+.character-art img,.character-portrait img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:contain}
+.character-portrait{background:none!important;min-height:0!important;height:auto!important;aspect-ratio:1;overflow:hidden}
+.about-avatar{width:100%;height:auto;aspect-ratio:1;overflow:hidden;border-radius:16px}
+.about-avatar img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:contain}

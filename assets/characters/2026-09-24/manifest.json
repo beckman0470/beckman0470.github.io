@@ -1,0 +1,55 @@
+{
+  "updated": "2026-09-29",
+  "source": "User-approved five masters and family portrait with subsequent requested glasses, body-proportion and subtle skin-tone corrections",
+  "assets": [
+    {
+      "file": "ama.webp",
+      "width": 900,
+      "height": 900,
+      "bytes": 159302
+    },
+    {
+      "file": "avatar.webp",
+      "width": 160,
+      "height": 160,
+      "bytes": 11226
+    },
+    {
+      "file": "dad.webp",
+      "width": 900,
+      "height": 900,
+      "bytes": 147964
+    },
+    {
+      "file": "dodo.webp",
+      "width": 900,
+      "height": 900,
+      "bytes": 158304
+    },
+    {
+      "file": "dragon.webp",
+      "width": 900,
+      "height": 900,
+      "bytes": 121054
+    },
+    {
+      "file": "family.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 307934
+    },
+    {
+      "file": "health.webp",
+      "width": 1100,
+      "height": 825,
+      "bytes": 244602
+    },
+    {
+      "file": "mom.webp",
+      "width": 900,
+      "height": 900,
+      "bytes": 117626
+    }
+  ],
+  "family_source": "User-selected original green-frame group v2; preserve mother head and hair proportions (exec-26690d60-9756-4c70-8a9a-3668737177c4.png)."
+}

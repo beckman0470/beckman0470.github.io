@@ -333,3 +333,9 @@ img { display: block; max-width: 100%; height: auto; }
   object-position: center center;
   padding: 0;
 }
+
+/* 2026-09-24 approved family masters: preserve all five faces. */
+.hero-art-wrap{min-height:0;display:flex;align-items:center}
+.hero-art{width:100%;height:auto;object-fit:contain}
+.family-image-link img,.family-grid .family-card:nth-child(3) .family-image-link img{aspect-ratio:1;padding:0;object-fit:contain}
+.feature-image-link img[src*="/assets/characters/"]{object-fit:contain;background:#fff8ee}
