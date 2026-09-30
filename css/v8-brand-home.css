@@ -38,7 +38,7 @@ body {
   width: 66px !important;
   height: 66px !important;
   border: 1px solid var(--cdj-line) !important;
-  background: url("../assets/brand-v8/logo-chickendad-v8.png") center/cover no-repeat !important;
+  background: url("/assets/characters/2026-09-24/avatar.webp") center/cover no-repeat !important;
   font-size: 0 !important;
   box-shadow: 0 10px 26px rgba(104, 67, 30, .12) !important;
 }
@@ -127,7 +127,7 @@ body {
   min-height: 530px;
   background:
     linear-gradient(90deg, rgba(255,248,236,.18), transparent 18%),
-    url("../assets/brand-v8/hero-family-v8.png") center right/cover no-repeat;
+    url("/assets/characters/2026-09-24/family.webp") center right/cover no-repeat;
 }
 
 .v8-hero-art::after {
