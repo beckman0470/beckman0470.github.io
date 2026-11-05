@@ -93,14 +93,24 @@ catStyle.textContent=`
 @media(max-width:600px){.cdj-resident{width:112px;height:96px}.cdj-resident.peek{height:49px}.cdj-resident.peek .cat-art{height:96px}.cdj-cat-toggle{font-size:12px;bottom:8px;left:8px}}
 @media(prefers-reduced-motion:reduce){.cdj-resident,.cdj-resident *{animation:none!important;transition:none!important}}
 `;
+catStyle.textContent+=`
+.cdj-resident .cdj-cat-image{display:block;width:100%;height:100%;object-fit:contain;pointer-events:none;user-select:none}
+.cdj-resident.walk .cat-art{animation:cdj-picture-walk .5s ease-in-out infinite alternate}
+.cdj-resident.sleep .cat-art img{transform-origin:center bottom;animation:cdj-breathe 3.5s ease-in-out infinite}
+.cdj-resident.peek{height:96px;overflow:visible}
+.cdj-resident.peek .cat-art{height:100%;transform:none}
+.cdj-resident.peek.facing-left .cat-art{transform:scaleX(-1)}
+@keyframes cdj-picture-walk{from{translate:0 0;rotate:-1deg}to{translate:0 -4px;rotate:1deg}}
+@media(max-width:600px){.cdj-resident.peek{height:70px}.cdj-resident.peek .cat-art{height:100%}}
+`;
 document.head.append(catStyle);
+['yahoo','youyou'].forEach(name=>['walk','peek','sleep'].forEach(mode=>{const img=new Image();img.src='/cat-'+name+'-'+mode+'.png?v=20261105-art1';}));
 const world=document.createElement('div');world.className='cdj-cat-world';world.setAttribute('aria-label','雅虎與右右的網站小日常');document.body.append(world);
 const toggle=document.createElement('button');toggle.type='button';toggle.className='cdj-cat-toggle';world.append(toggle);
 let paused=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 let bubbleTimer;const residents=[];
-function catDrawing(orange){
-const fur=orange?'#dda15d':'#333b40',stripe=orange?'#b7743e':'#333b40',belly=orange?'#efc48a':'#fff9ed';
-return '<svg viewBox="0 0 180 140" aria-hidden="true"><g class="cat-torso"><path class="cat-tail" d="M49 96Q9 101 20 62Q27 43 38 55" fill="none" stroke="'+fur+'" stroke-width="15" stroke-linecap="round"/><path class="cat-leg-a" d="M58 101v26h17" stroke="'+fur+'" stroke-width="12" stroke-linecap="round" fill="none"/><path class="cat-leg-b" d="M103 101v26h17" stroke="'+fur+'" stroke-width="12" stroke-linecap="round" fill="none"/><ellipse cx="83" cy="94" rx="'+(orange?'53':'45')+'" ry="'+(orange?'34':'27')+'" fill="'+fur+'"/><ellipse cx="103" cy="103" rx="25" ry="18" fill="'+belly+'"/>'+(orange?'<path d="m65 67 5 15m12-18 4 15m14-12 3 13" stroke="'+stripe+'" stroke-width="5" stroke-linecap="round"/>':'')+'</g><g class="cat-head"><path d="M113 50 112 22 133 36Q142 33 151 38L170 25 167 58Q178 95 143 98Q107 96 110 66Z" fill="'+fur+'"/><path d="m118 44-1-13 11 9m28 5 10-11-2 15" fill="#e8b0a1"/>'+(!orange?'<path d="m141 37-12 38h27Z" fill="#fff9ed"/><ellipse cx="144" cy="80" rx="22" ry="15" fill="#fff9ed"/>':'<path d="m136 39 4 12m7-12-2 12" stroke="'+stripe+'" stroke-width="4" stroke-linecap="round"/>')+'<g class="eyes-open"><ellipse cx="127" cy="63" rx="6" ry="7" fill="#bad18c"/><ellipse cx="157" cy="63" rx="6" ry="7" fill="#bad18c"/><path d="M128 60v6m28-6v6" stroke="#263936" stroke-width="3" stroke-linecap="round"/></g><g class="eyes-closed" stroke="#4c443c" stroke-width="3" stroke-linecap="round" fill="none"><path d="m121 65q6 5 12 0m18 0q6 5 12 0"/></g><path d="m138 76 6 4 6-4" fill="#c68582"/><path d="M144 80v5m-7 0q7 7 14 0" stroke="#514943" stroke-width="2" fill="none"/><path d="m113 78 18 3m-19 6 18-1m25-5 19-3m-19 8 19 1" stroke="#b9ac93" stroke-width="2"/></g><text class="cat-zzz" x="145" y="20">z z</text></svg>';
+function catDrawing(orange,mode='sleep'){
+return '<img class="cdj-cat-image" src="/cat-'+(orange?'youyou':'yahoo')+'-'+mode+'.png?v=20261105-art1" alt="" draggable="false" width="180" height="140">';
 }
 function size(){return innerWidth<=600?{w:112,h:96}:{w:152,h:126};}
 function setPos(p,x,y,instant=false){
@@ -117,16 +127,16 @@ if(paused||document.hidden)return;
 const s=size(),ledges=visiblePerches(),r=Math.random();
 let mode=initial?(p.orange?'sleep':'walk'):(p.orange?(r<.62?'sleep':r<.82?'peek':'walk'):(r<.53?'walk':r<.88?'peek':'sleep'));
 if(mode==='peek'&&!ledges.length)mode=p.orange?'sleep':'walk';
-p.mode=mode;p.el.className='cdj-resident '+mode+(p.left?' facing-left':'');
+p.mode=mode;p.el.querySelector('img').src='/cat-'+(p.orange?'youyou':'yahoo')+'-'+mode+'.png?v=20261105-art1';p.el.className='cdj-resident '+mode+(p.left?' facing-left':'');
 p.el.setAttribute('aria-label',p.name+'正在'+({walk:'散步',peek:'探頭',sleep:'睡覺'}[mode])+'，點一下摸摸牠');
 if(mode==='walk'){
 const dest=p.x<innerWidth/2?innerWidth-s.w-10:10;p.left=dest<p.x;
 p.el.classList.toggle('facing-left',p.left);setPos(p,dest,innerHeight-s.h-(p.orange?60:118));schedule(p,6800);
 }else if(mode==='peek'){
 const ledge=ledges[Math.floor(Math.random()*ledges.length)];p.left=false;p.el.classList.remove('facing-left');
-setPos(p,ledge.left+ledge.width*.4-s.w/2,ledge.top-50,true);schedule(p,p.orange?11000:6000);
+setPos(p,ledge.left+ledge.width*.4-s.w/2,ledge.top-(innerWidth<=600?66:92),true);schedule(p,p.orange?11000:6000);
 }else{
-setPos(p,p.orange?innerWidth-s.w-14:18,innerHeight-s.h-(p.orange?60:118));schedule(p,p.orange?14000:8500);
+setPos(p,p.x,innerHeight-s.h-(p.orange?60:118),true);schedule(p,p.orange?14000:8500);
 }
 }
 function showBubble(p){
@@ -143,7 +153,7 @@ setPos(p,p.x,p.y,true);el.setAttribute('aria-label',name+'正在休息，點一�
 });
 function updatePause(){
 world.classList.toggle('paused',paused);toggle.textContent=paused?'🐾 讓貓咪活動':'🐾 讓貓咪休息';toggle.setAttribute('aria-pressed',String(paused));
-residents.forEach(p=>{clearTimeout(p.timer);if(paused){p.el.classList.remove('walk','peek');p.el.classList.add('sleep');}else act(p,true);});
+residents.forEach(p=>{clearTimeout(p.timer);if(paused){p.el.classList.remove('walk','peek');p.el.classList.add('sleep');p.el.querySelector('img').src='/cat-'+(p.orange?'youyou':'yahoo')+'-sleep.png?v=20261105-art1';p.el.setAttribute('aria-label',p.name+'正在休息，點一下摸摸牠');}else act(p,true);});
 }
 toggle.addEventListener('click',()=>{paused=!paused;updatePause();});
 let reposition;
@@ -152,3 +162,4 @@ window.addEventListener('resize',onViewChanged);window.addEventListener('scroll'
 document.addEventListener('visibilitychange',()=>{residents.forEach(p=>{clearTimeout(p.timer);if(!document.hidden&&!paused)act(p,true);});});
 updatePause();
 })();
+
