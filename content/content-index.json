@@ -138,5 +138,13 @@
   "series": "content/series/index.json",
   "people": "content/people/index.json",
   "coverArchitecture": "assets/posts/<slug>/<image>.webp with default.svg fallback",
-  "status": "preview-not-published"
+  "status": "preview-not-published",
+  "importBatches": [
+    {
+      "path": "content/works/vocus-migration-20261105.json",
+      "format": "vocus-fulltext-batch-v1",
+      "articles": 65,
+      "cutoff": "2026-11-05"
+    }
+  ]
 }
