@@ -72,13 +72,15 @@ function jump(level='slow'){
 const stage=shell('jump');configs(stage,[['slow','慢速'],['normal','一般']],level,v=>jump(v));stage.append(el('p','question','看到紙箱靠近，按「跳一下」！跳過 5 個就過關。'));
 const track=el('div','mg-running'),label=el('div','mg-track-text','按開始後，雅虎就會出發。'),cat=catImage('yahoo','walk','mg-run-cat'),box=el('div','mg-box','✦');box.setAttribute('aria-hidden','true');track.append(label,cat,box);stage.append(track);
 const counter=el('p','mg-counter','已跳過 0 / 5 個紙箱');stage.append(counter);const feedback=status(stage),row=el('div','mg-choices');stage.append(row);
+// Slow boxes overlap the cat for longer; extend airtime while keeping the jump near 102px high.
+const motion=level==='slow'?{speed:118,launch:320,gravity:500}:{speed:165,launch:470,gravity:1100};
 let frame=0,last=0,y=0,velocity=0,x=0,score=0,running=false,paused=false,passed=false,ended=false;
-const action=btn('開始出發 ▶','primary',()=>{if(!running){if(ended){score=0;counter.textContent='已跳過 0 / 5 個紙箱';}start();return;}if(paused){feedback.textContent='先按繼續，再跳一下。';return;}if(y===0)velocity=470;});
+const action=btn('開始出發 ▶','primary',()=>{if(!running){if(ended){score=0;counter.textContent='已跳過 0 / 5 個紙箱';}start();return;}if(paused){feedback.textContent='先按繼續，再跳一下。';return;}if(y===0)velocity=motion.launch;});
 const pause=btn('暫停','secondary',()=>{if(!running)return;paused=!paused;cancelAnimationFrame(frame);pause.textContent=paused?'繼續':'暫停';last=0;feedback.textContent=paused?'先休息一下，準備好再繼續。':'';if(!paused)frame=requestAnimationFrame(tick);});pause.disabled=true;row.append(action,pause);
 function draw(){cat.style.transform='translateY('+(-y)+'px)';box.style.transform='translateX('+x+'px)';}
 function start(){cancelAnimationFrame(frame);running=true;paused=false;ended=false;last=0;y=0;velocity=0;score=score||0;x=Math.max(280,track.clientWidth)+30;passed=false;action.textContent='跳一下 ↑';pause.disabled=false;pause.textContent='暫停';label.textContent='雅虎出發囉！';feedback.textContent='';draw();frame=requestAnimationFrame(tick);}
 function stop(win){running=false;ended=true;cancelAnimationFrame(frame);pause.disabled=true;action.textContent=win?'再玩一回 ↻':'再試一次 ↻';feedback.textContent=win?'五個都跳過了！雅虎好厲害 ⭐':'碰到紙箱了，沒關係，再試一次！';}
-function tick(t){if(!running||paused)return;const dt=last?Math.min((t-last)/1000,.04):0;last=t;if(velocity||y){y=Math.max(0,y+velocity*dt);velocity-=1100*dt;if(y===0)velocity=0;}x-=(level==='slow'?118:165)*dt;
+function tick(t){if(!running||paused)return;const dt=last?Math.min((t-last)/1000,.04):0;last=t;if(velocity||y){y=Math.max(0,y+velocity*dt);velocity-=motion.gravity*dt;if(y===0)velocity=0;}x-=motion.speed*dt;
 if(x<100&&x+38>52&&y<39){draw();stop(false);return;}
 if(!passed&&x+38<52){passed=true;score++;counter.textContent='已跳過 '+score+' / 5 個紙箱';sound();if(score>=5){draw();stop(true);return;}}
 if(x<-50){x=Math.max(280,track.clientWidth)+60;passed=false;}draw();frame=requestAnimationFrame(tick);}
@@ -170,4 +172,5 @@ const again=btn('再幫忙一回 ↻','primary',chores);again.hidden=true;stage.
 }
 
 })();
+
 
