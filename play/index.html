@@ -7,7 +7,7 @@
 </style><script defer src="/play/games.js?v=20261105-twelve1"></script>
 </head><body>
 <header><a class="brand" href="https://beckman0470.github.io/">雞爸爸生活研究室 <span class="small">／互動樂園</span></a><a href="https://beckman0470.github.io/">回到首頁 ↗</a></header>
-<main><div class="intro"><span class="eyebrow">一起學，一起玩，一起長大</span><h1>今天，想玩什麼？</h1><p>鼠姊姊的字母小冒險，龍弟弟的貓咪小世界。<br>不用計時，慢慢玩也很棒。</p></div>
+<main><nav aria-label="親子與大人互動入口" style="display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:0 0 24px"><a class="tab" href="/play/" aria-current="page" style="text-decoration:none;background:#426b54;color:white">陪孩子玩</a><a class="tab" href="/relax.html" style="text-decoration:none">換大人放風 ☕</a></nav><div class="intro"><span class="eyebrow">一起學，一起玩，一起長大</span><h1>今天，想玩什麼？</h1><p>鼠姊姊的字母小冒險，龍弟弟的貓咪小世界。<br>不用計時，慢慢玩也很棒。</p></div>
 <div class="tabs" role="tablist" aria-label="選擇遊戲區"><button class="tab" role="tab" id="tab-dodo" aria-controls="panel-dodo" aria-selected="true">鼠姊姊・學習樂園</button><button class="tab" role="tab" id="tab-dragon" aria-controls="panel-dragon" aria-selected="false" tabindex="-1">龍弟弟・快樂天地</button></div>
 <section class="panel" role="tabpanel" id="panel-dodo" aria-labelledby="tab-dodo"><div class="panel-head"><img class="portrait" src="https://beckman0470.github.io/assets/img/portrait-dodo.png" alt="鼠姊姊"><div><span class="eyebrow">DODO'S LITTLE CLASSROOM</span><h2>每一次嘗試，都有新發現</h2><p class="hint">看一看、找一找，找出相同的注音或字母。</p></div></div>
 <div class="modes" aria-label="學習玩法"><button class="mode" data-learn="zh" aria-pressed="true">ㄅㄆㄇ 找朋友</button><button class="mode" data-learn="abc" aria-pressed="false">ABC 大小寫配對</button></div>
@@ -38,6 +38,7 @@ $$('[data-toddler]').forEach(b=>b.addEventListener('click',()=>{toddlerMode=b.da
 $('#hide-again').addEventListener('click',renderToddler);$('#sound').addEventListener('click',()=>{sound=!sound;$('#sound').textContent='聲音：'+(sound?'開':'關');$('#sound').setAttribute('aria-pressed',String(sound));});document.addEventListener('visibilitychange',()=>{if(document.hidden&&'speechSynthesis'in window)speechSynthesis.cancel();});
 start();renderToddler();
 </script></body></html>
+
 
 
 
