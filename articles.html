@@ -10,7 +10,14 @@
   <link rel="stylesheet" href="css/articles-v59.css">
 <script defer src="/js/analytics-consent.js"></script>
 <link rel="stylesheet" href="/css/site-entry-nav.css?v=20261106-brand2" data-entry-nav-style="brand2"><script defer src="/js/site-entry-nav.js?v=20261106-brand2"></script>
-</head>
+<style>
+.journal-categories{display:flex;flex-wrap:wrap;gap:12px;margin:26px 0 16px;justify-content:flex-start}
+.journal-categories a{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:10px 20px;background:#fffdf8;border:1px solid #bbcbb0;border-radius:99px;color:#42664d;font:20px/1.6 "Huninn","Microsoft JhengHei",sans-serif;text-decoration:none}
+.journal-categories a[aria-current=page]{background:#42664d;color:#fff;border-color:#42664d}
+.journal-categories a:focus-visible{outline:3px solid #b47a3b;outline-offset:4px}
+.journal-categories a:hover{box-shadow:0 0 0 2px #b5c6a7}
+@media(max-width:600px){.journal-categories{gap:10px}.journal-categories a{flex:1 1 calc(33.333% - 10px);padding:12px 9px;font-size:20px}}
+</style></head>
 <body>
   <header class="site-header cdj-unified-header" data-unified-header="brand2"><div class="cdj-unified-inner"><a class="cdj-unified-brand" href="/" aria-label="雞爸爸生活研究室首頁"><img src="/assets/img/logo-avatar.png" alt="" width="52" height="52"><span><strong>雞爸爸生活研究室</strong><small>CHICKEN DAD JOURNAL</small></span></a><nav class="entry-subnav" aria-label="主要導覽"><a href="/">首頁</a><a href="/play/">親子樂園</a><a href="/relax.html">大人放風</a><a href="/videos.html">影音館</a><a href="/articles.html" aria-current="page">生活文章</a><a href="/stickers.html">貼圖小舖</a><a href="/family.html">認識我們</a></nav></div></header>
 
@@ -22,11 +29,19 @@
         <div class="hero-heading">
           <div class="section-title-row">
             <span class="ornament">❦</span>
-            <h1 id="journal-title">家庭誌</h1>
+            <h1 id="journal-title">生活文章</h1>
             <span class="ornament">❦</span>
           </div>
           <p id="journal-subtitle" class="journal-subtitle"></p>
-          <div id="journal-pills" class="journal-pills"></div>
+          <nav class="journal-categories" aria-label="生活文章分類">
+<a href="/articles.html" data-journal-filter="all">全部文章</a>
+<a href="/articles.html?journal=family" data-journal-filter="family">家庭誌</a>
+<a href="/articles.html?journal=health" data-journal-filter="health">保健室</a>
+<a href="/articles.html?journal=library" data-journal-filter="library">圖書室</a>
+<a href="/articles.html?journal=style" data-journal-filter="style">風格誌</a>
+<a href="/articles.html?journal=light" data-journal-filter="light">光影誌</a>
+</nav>
+<div id="journal-pills" class="journal-pills"></div>
         </div>
 
         <section class="cards-panel" aria-labelledby="cards-heading">
@@ -63,6 +78,14 @@
 
   <script>
     const journals = {
+      all: {
+        label: '生活文章',
+        subtitle: '一家人的日常、健康、閱讀、棒球與影像，都從這裡開始。',
+        room: 'assets/img/room-family-clean-v61.png?v=61',
+        pills: [],
+        aboutTitle: '挑一個喜歡的方向，慢慢讀',
+        aboutText: '想讀一家人的故事，選家庭誌；想看生活健康研究，選保健室。圖書室收藏閱讀與思考，風格誌有棒球和生活興趣，光影誌留下影像與創作。也可以留在全部文章，從最近的故事開始。'
+      },
       family: {
         label: '家庭誌',
         subtitle: '家庭、孩子、陪伴與日常裡長出的幸福紀錄。',
@@ -111,7 +134,7 @@
     const aliases = { memory: 'family', clinic: 'health', photo: 'light' };
     const rawJournal = params.get('journal');
     const normalizedJournal = aliases[rawJournal] || rawJournal;
-    const key = journals[normalizedJournal] ? normalizedJournal : 'family';
+    const key = Object.prototype.hasOwnProperty.call(journals, normalizedJournal) ? normalizedJournal : 'all';
     const journal = journals[key];
 
     document.body.dataset.journal = key;
@@ -123,11 +146,11 @@
     const thumb = document.getElementById('about-thumb');
     thumb.src = journal.room;
     thumb.alt = `${journal.label} 房間場景插畫`;
-    document.getElementById('journal-more').textContent = `瀏覽更多${journal.label}文章 →`;
+    document.getElementById('journal-more').textContent = key === 'all' ? '回到全部文章列表 ↑' : `回到${journal.label}列表 ↑`;
     document.getElementById('room-bg').style.backgroundImage = `url('${journal.room}')`;
 
-    document.querySelectorAll('.main-nav a').forEach(link => {
-      const active = link.dataset.nav === key;
+    document.querySelectorAll('[data-journal-filter]').forEach(link => {
+      const active = link.dataset.journalFilter === key;
       link.classList.toggle('active', active);
       if (active) link.setAttribute('aria-current', 'page');
       else link.removeAttribute('aria-current');
@@ -154,7 +177,7 @@
     }
 
     const grid = document.getElementById('cards-grid');
-    const filtered = stories.filter(item => item.journal === key);
+    const filtered = key === 'all' ? stories : stories.filter(item => item.journal === key);
     filtered.forEach(item => {
       const a = document.createElement('a');
       a.className = 'story-card';
@@ -179,5 +202,6 @@
   </script>
 </body>
 </html>
+
 
 
