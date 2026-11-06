@@ -9,6 +9,7 @@
 </style><script defer src="/play/games.js?v=20261106-kidsvoice1"></script>
 <link rel="stylesheet" href="/css/mobile-readable.css?v=20261106-large1">
 <script defer src="/play/kids-voice.js?v=20261106-kidsvoice1"></script>
+<script defer src="/js/site-entry-nav.js?v=20261106-entry1"></script>
 </head><body>
 <header><a class="brand" href="https://beckman0470.github.io/">雞爸爸生活研究室 <span class="small">／互動樂園</span></a><a href="https://beckman0470.github.io/">回到首頁 ↗</a></header>
 <main><nav aria-label="親子與大人互動入口" style="display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:0 0 24px"><a class="tab" href="/play/" aria-current="page" style="text-decoration:none;background:#426b54;color:white">陪孩子玩</a><a class="tab" href="/relax.html" style="text-decoration:none">換大人放風 ☕</a></nav><div class="intro"><span class="eyebrow">一起學，一起玩，一起長大</span><h1>今天，想玩什麼？</h1><p>鼠姊姊的字母小冒險，龍弟弟的貓咪小世界。<br>不用計時，慢慢玩也很棒。</p></div>
@@ -154,7 +155,11 @@ document.addEventListener('visibilitychange',()=>{if(document.hidden)stopVideo()
 corner.addEventListener('keydown',event=>{if(event.key==='Escape'&&!player.hidden){event.preventDefault();stopVideo(true);}});
 })();
 </script>
+<script>
+(()=>{const area=new URLSearchParams(location.search).get('area');if(area==='dodo'||area==='dragon')document.getElementById('tab-'+area)?.click();})();
+</script>
 </body></html>
+
 
 
 

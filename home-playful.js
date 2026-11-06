@@ -36,7 +36,7 @@ document.body.classList.add('cdj-playful','cdj-motion');
 const marker=document.createElement('span');marker.dataset.cdjPlayful='true';marker.hidden=true;document.body.append(marker);
 const welcome=document.createElement('div');welcome.className='cdj-welcome';
 welcome.innerHTML='<a href="/play/">一起去互動樂園 →</a><small>今天，來雞爸爸家玩一下。</small>';
-document.querySelector('.hero-copy')?.append(welcome);
+if(!document.querySelector('[data-entry-home]'))document.querySelector('.hero-copy')?.append(welcome);
 const family=[
 ['雞爸爸','今天想研究什麼？先讀個故事，還是陪孩子玩一下？'],
 ['鼠媽媽','歡迎來我們家！玩完記得把玩具收好喔。'],
@@ -54,7 +54,7 @@ button.addEventListener('click',()=>{speech.hidden=!speech.hidden;button.setAttr
 });
 const banner=document.createElement('section');banner.className='cdj-play-banner';banner.setAttribute('aria-label','親子互動樂園');
 banner.innerHTML='<div><h2>故事讀累了？換你玩一下！</h2><p>和鼠姊姊學 ㄅㄆㄇ、ABC，陪龍弟弟找貓咪、敲節奏。</p></div><a class="cdj-play-link" href="/play/">進入互動樂園 →</a>';
-document.querySelector('.family-section')?.after(banner);
+if(!document.querySelector('[data-entry-home]'))document.querySelector('.family-section')?.after(banner);
 
 /* Two resident cats: Yahoo wanders; Youyou prefers a nap. */
 const catStyle=document.createElement('style');
@@ -162,4 +162,5 @@ window.addEventListener('resize',onViewChanged);window.addEventListener('scroll'
 document.addEventListener('visibilitychange',()=>{residents.forEach(p=>{clearTimeout(p.timer);if(!document.hidden&&!paused)act(p,true);});});
 updatePause();
 })();
+
 

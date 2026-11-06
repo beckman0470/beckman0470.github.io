@@ -134,3 +134,7 @@ if(typeof document==='undefined'||!document.querySelector('.article-body, .artic
 const script=document.createElement('script');script.src='/js/article-reader.js?v=20261106-reader1';script.dataset.cdjReaderScript='true';script.defer=true;document.head.append(script);
 })();
 
+
+/* Give article and archive pages the same destination navigation. */
+(()=>{if(typeof document==='undefined'||document.querySelector('script[data-entry-nav-script],script[src*="/js/site-entry-nav.js"]'))return;const script=document.createElement('script');script.src='/js/site-entry-nav.js?v=20261106-entry1';script.dataset.entryNavScript='true';script.defer=true;document.head.append(script);})();
+
