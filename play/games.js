@@ -18,22 +18,82 @@ const cards=[
 const css=document.createElement('style');css.textContent=`
 .mg-section{margin:28px 0 36px}.mg-kicker{text-align:center;color:#426b54;letter-spacing:2px;font-size:13px;font-weight:750}.mg-title{text-align:center;font-size:28px;margin:10px 0 22px}.mg-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.mg-card{text-align:left;border:1px solid #dcded0;border-radius:22px;padding:22px;background:#fff;box-shadow:0 5px 18px #304d3608;color:#353e39;transition:transform .18s}.mg-card:hover{transform:translateY(-3px)}.mg-card .mg-icon{font-size:34px;display:block;margin-bottom:10px}.mg-card strong{display:block;font-size:20px}.mg-card small{display:block;color:#73796b;line-height:1.7;margin:10px 0}.mg-tag{display:inline-block;border-radius:999px;background:#eef1df;color:#4d6d43;font-size:12px;padding:4px 10px}.mg-panel{border:1px solid #d9ddcc;border-radius:26px;background:white;padding:24px;margin:20px 0}.mg-top{display:flex;justify-content:space-between;gap:16px;align-items:center;flex-wrap:wrap}.mg-top h2{margin:8px 0;font-size:27px}.mg-stage{background:#f7f8f0;border-radius:20px;padding:24px;margin-top:20px;text-align:center;min-height:330px}.mg-stage button{font:inherit}.mg-status{min-height:32px;color:#426b54;font-size:18px;font-weight:700;line-height:1.7;margin:16px 0}.mg-choices{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin:20px 0}.mg-choice{background:#fff;border:2px solid #dde1d1;border-radius:18px;padding:18px;min-width:90px;min-height:78px;font-size:28px;color:#384331}.mg-choice:disabled{opacity:1}.mg-choice.correct{background:#dcecd5;border-color:#729b61}.mg-choice.wrong{background:#ffeedb;border-color:#dda86c}.mg-cat{width:190px;height:180px;object-fit:contain;display:block;margin:12px auto}.mg-counter{color:#6e7767;font-size:14px;margin:10px}.mg-bowl{border:2px dashed #b5c4a1;border-radius:24px;padding:18px;min-height:86px;max-width:400px;margin:16px auto;font-size:32px;background:#fffaf1}.mg-food{font-size:32px}.mg-sizes{display:flex;justify-content:center;align-items:flex-end;gap:12px;min-height:180px}.mg-sizes button{border:2px solid #dce0d2;border-radius:18px;background:#fff;padding:10px;min-width:64px}.mg-sizes img{object-fit:contain;max-width:100%}.mg-cats-count{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;max-width:450px;margin:22px auto}.mg-cats-count img{width:64px;height:64px;object-fit:contain}.mg-memory{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;max-width:680px;margin:20px auto}.mg-memory.easy{grid-template-columns:repeat(2,minmax(0,1fr));max-width:400px}.mg-memory button{height:118px;min-width:0;border:2px solid #d7dfc8;border-radius:18px;background:#e8efdf;font-size:38px;color:#456239}.mg-memory button img{width:100%;height:100%;object-fit:contain}.mg-memory button.matched{background:#fff5da;border-color:#d5b26c}.mg-word{font-size:20px;font-weight:650;display:block}.mg-emoji{font-size:44px;display:block;margin-bottom:6px}.mg-big-letter{font-size:76px;font-weight:800;color:#426b54;line-height:1.4;margin:16px auto}.mg-letter-mail{border:2px dashed #c5b48b;background:#fff6dc;border-radius:16px;width:140px;margin:20px auto;padding:12px;font-size:64px;cursor:grab}.mg-mailbox{min-width:100px;min-height:120px;background:#eff3e6;font-size:46px}.mg-mailbox small{display:block;font-size:15px}.mg-running{position:relative;height:220px;max-width:740px;margin:20px auto;border-radius:22px;overflow:hidden;background:linear-gradient(#e8f2e2 0%,#f5f3db 76%,#d8e0bd 76%);border:1px solid #d4ddc4;touch-action:manipulation}.mg-run-cat{position:absolute;left:40px;bottom:48px;width:74px;height:64px;object-fit:contain;pointer-events:none}.mg-box{position:absolute;left:0;bottom:48px;width:38px;height:43px;background:#bc8d53;border:3px solid #916b3f;border-radius:5px;color:#fff3d6;font-size:26px;font-weight:800;line-height:36px;pointer-events:none}.mg-track-text{position:absolute;top:16px;left:20px;color:#758267;font-size:14px}.mg-config{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin:14px 0}.mg-config button[aria-pressed=true]{background:#426b54;color:white}.mg-tip{color:#6a7465;font-size:14px;line-height:1.7}.mg-panel[hidden],.mg-section[hidden],.tabs[hidden]{display:none!important}.mg-sizes button{flex:1;max-width:175px;height:180px;display:flex;align-items:flex-end;justify-content:center}.mg-pet{border:0;background:none;padding:0}.mg-pet.roll img{animation:mg-roll .6s ease-in-out}@keyframes mg-roll{50%{transform:rotate(12deg) translateY(-4px)}}@media(max-width:680px){.mg-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.mg-card{padding:16px}.mg-card strong{font-size:18px}.mg-panel{padding:16px}.mg-stage{padding:18px 12px}.mg-memory{gap:8px;grid-template-columns:repeat(3,minmax(0,1fr))}.mg-memory button{height:100px}.mg-choices{gap:10px}.mg-choice{padding:12px;min-width:70px}.mg-cats-count img{width:50px;height:50px}.mg-cat{width:165px;height:165px}}@media(max-width:380px){.mg-grid{grid-template-columns:1fr}.mg-card .mg-icon{float:right}.mg-mailbox{min-width:66px}}@media(prefers-reduced-motion:reduce){.mg-card,.mg-pet img{transition:none!important;animation:none!important}}
 `;document.head.append(css);
-const root=document.createElement('section');root.className='mg-section';root.innerHTML='<p class="mg-kicker">今天的小冒險</p><h2 class="mg-title">十二個遊戲，挑一個來玩</h2><div class="mg-grid"></div>';
-const grid=root.querySelector('.mg-grid'),panel=document.createElement('section');panel.className='mg-panel';panel.hidden=true;panel.setAttribute('aria-label','小遊戲');
-document.querySelector('.tabs').before(root,panel);
-let cleanup=()=>{},active='';
+/* The two child tabs own their game menus and the shared game stage. */
+const groups={
+dodo:['phonetic','post','memory','count','jump','rhythm'],
+dragon:['feed','doors','puzzle','detective','coop','chores']
+};
+const areaNames={dodo:'鼠姊姊學習樂園',dragon:'龍弟弟快樂天地'};
+const areas={};
+const panel=document.createElement('section');panel.className='mg-panel';panel.hidden=true;panel.setAttribute('aria-label','小遊戲');
+let cleanup=()=>{},active='',activeArea='',lastLauncher=null;
 const img=(name,pose='peek')=>'/cat-'+name+'-'+pose+'.png?v=20261105-art1';
 function el(tag,cls,text){const e=document.createElement(tag);if(cls)e.className=cls;if(text!==undefined)e.textContent=text;return e;}
 function btn(text,cls='mg-choice',fn){const b=el('button',cls,text);b.type='button';if(fn)b.addEventListener('click',fn);return b;}
 function shuffle(xs){const a=xs.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
 function sound(){if(typeof tone==='function')tone('good');}
 function catImage(name,pose,cls='mg-cat'){const e=el('img',cls);e.src=img(name,pose);e.alt=name==='yahoo'?'雅虎':'右右';e.draggable=false;return e;}
-function hideOriginal(hide){document.querySelector('.tabs').hidden=hide;document.querySelectorAll('[role=tabpanel]').forEach(p=>{p.hidden=hide||document.querySelector('[aria-controls="'+p.id+'"]').getAttribute('aria-selected')!=='true';});}
-function leave(){cleanup();cleanup=()=>{};active='';panel.hidden=true;root.hidden=false;hideOriginal(false);root.querySelector('button').focus({preventScroll:true});root.scrollIntoView({block:'start'});}
-function shell(id){cleanup();cleanup=()=>{};active=id;root.hidden=true;hideOriginal(true);panel.hidden=false;panel.replaceChildren();const head=el('div','mg-top'),title=el('h2','',cards.find(x=>x[0]===id)[2]);title.tabIndex=-1;head.append(title,btn('← 返回遊戲選單','secondary',leave));const stage=el('div','mg-stage');panel.append(head,stage);panel.scrollIntoView({block:'start'});title.focus({preventScroll:true});return stage;}
+function currentArea(){return document.querySelector('#tab-dragon').getAttribute('aria-selected')==='true'?'dragon':'dodo';}
+function stopVideo(){const stop=document.querySelector('#dv-stop');if(stop)stop.click();}
+function resetActivities(){
+cleanup();cleanup=()=>{};active='';activeArea='';panel.hidden=true;
+Object.values(areas).forEach(area=>{area.menu.hidden=false;area.classic.hidden=true;if(area.video)area.video.hidden=false;});
+}
+function leave(){
+const area=areas[activeArea||currentArea()];resetActivities();
+const focus=lastLauncher&&area.menu.contains(lastLauncher)?lastLauncher:area.grid.querySelector('button');
+if(focus)focus.focus({preventScroll:true});area.menu.scrollIntoView({block:'start'});
+}
+function shell(id){
+const key=groups.dodo.includes(id)?'dodo':'dragon';
+const tab=document.querySelector('#tab-'+key);if(tab.getAttribute('aria-selected')!=='true')tab.click();
+cleanup();cleanup=()=>{};stopVideo();active=id;activeArea=key;
+const area=areas[key];area.menu.hidden=true;area.classic.hidden=true;if(area.video)area.video.hidden=true;
+area.host.append(panel);panel.hidden=false;panel.replaceChildren();
+const head=el('div','mg-top'),title=el('h2','',cards.find(x=>x[0]===id)[2]);title.tabIndex=-1;
+head.append(title,btn('← 回到'+areaNames[key],'secondary',leave));
+const stage=el('div','mg-stage');panel.append(head,stage);panel.scrollIntoView({block:'start'});title.focus({preventScroll:true});return stage;
+}
 function status(stage){const e=el('div','mg-status','');e.setAttribute('role','status');e.setAttribute('aria-live','polite');stage.append(e);return e;}
 function configs(stage,choices,current,fn){const row=el('div','mg-config');choices.forEach(([v,t])=>{const b=btn(t,'pill',()=>fn(v));b.setAttribute('aria-pressed',String(v===current));row.append(b);});stage.append(row);}
-cards.forEach(([id,icon,name,desc,tag])=>{const b=btn('','mg-card',()=>open(id));b.innerHTML='<span class="mg-icon" aria-hidden="true">'+icon+'</span><strong>'+name+'</strong><small>'+desc+'</small><span class="mg-tag">'+tag+'</span>';grid.append(b);});
+function menuCard(area,id,icon,name,desc,tag,action){
+const b=btn('','mg-card',()=>{lastLauncher=b;action();});b.dataset.gameId=id;
+b.innerHTML='<span class="mg-icon" aria-hidden="true">'+icon+'</span><strong>'+name+'</strong><small>'+desc+'</small><span class="mg-tag">'+tag+'</span>';
+area.grid.append(b);return b;
+}
+function openClassic(key,kind){
+resetActivities();stopVideo();const area=areas[key];active='classic-'+kind;activeArea=key;
+area.menu.hidden=true;area.classic.hidden=false;if(area.video)area.video.hidden=true;
+const selector=key==='dodo'?'[data-learn="'+kind+'"]':'[data-toddler="'+kind+'"]';
+const control=area.classic.querySelector(selector);if(control){control.click();control.focus({preventScroll:true});}
+area.classic.scrollIntoView({block:'start'});
+}
+['dodo','dragon'].forEach(key=>{
+const host=document.querySelector('#panel-'+key),modes=host.querySelector('.modes'),playbox=host.querySelector('.playbox'),video=host.querySelector('.dv-corner');
+const classic=el('section','mg-classic');classic.hidden=true;classic.setAttribute('aria-label',areaNames[key]+'的小活動');
+const back=btn('← 回到'+areaNames[key],'secondary',leave);classic.append(back,modes,playbox);
+const menu=el('section','mg-section');menu.setAttribute('aria-label',areaNames[key]+'遊戲選單');
+const title=el('h3','mg-menu-heading','選一個，開始玩！'),grid=el('div','mg-grid');menu.append(title,grid);
+host.querySelector('.panel-head').after(menu,classic);areas[key]={host,menu,grid,classic,video};
+});
+const originals={
+dodo:[['zh','🔤','ㄅㄆㄇ 找朋友','看注音，找出一樣的朋友。'],['abc','✉️','ABC 大小寫配對','大寫字母的小寫朋友在哪裡？']],
+dragon:[['hide','📦','貓咪躲貓貓','打開紙箱，找找雅虎和右右。'],['pet','🐾','摸摸貓咪','輕輕點一下，陪貓咪玩。'],['drum','🥁','BANG 節奏鼓','自由敲敲，玩自己的節奏。']]
+};
+Object.keys(areas).forEach(key=>{
+const area=areas[key];
+originals[key].forEach(([id,icon,name,desc])=>menuCard(area,'classic-'+id,icon,name,desc,'小活動',()=>openClassic(key,id)));
+groups[key].forEach(id=>{const [,icon,name,desc,tag]=cards.find(c=>c[0]===id);menuCard(area,id,icon,name,desc,tag,()=>open(id));});
+});
+document.querySelectorAll('.tabs [role="tab"]').forEach(tab=>tab.addEventListener('click',()=>{if(activeArea&&activeArea!==currentArea())resetActivities();}));
+const tabObserver=new MutationObserver(()=>{if(activeArea&&activeArea!==currentArea())resetActivities();});
+document.querySelectorAll('.tabs [role="tab"]').forEach(tab=>tabObserver.observe(tab,{attributes:true,attributeFilter:['aria-selected']}));
+const menuStyle=document.createElement('style');menuStyle.textContent=`
+.mg-classic[hidden],.mg-section[hidden],.dv-corner[hidden]{display:none!important}
+.mg-menu-heading{font-size:24px;line-height:1.5;margin:12px 0 22px}.mg-section{margin:28px 0 8px}.mg-classic{margin-top:24px}.mg-classic>.secondary{margin-bottom:10px}
+.mg-card{width:100%;min-height:180px}.mg-card strong{line-height:1.5}.mg-panel{scroll-margin-top:20px}
+@media(max-width:760px){.mg-grid{grid-template-columns:1fr;gap:16px}.mg-card{padding:22px;min-height:160px}.mg-card strong{font-size:23px}.mg-card small{font-size:18px;line-height:1.8}.mg-tag,.mg-tip,.mg-counter,.mg-track-text{font-size:17px;line-height:1.8}.mg-card .mg-icon{float:right;margin-left:12px;font-size:38px}.mg-stage .question,.mg-stage>p:not(.mg-counter):not(.mg-tip){font-size:20px;line-height:1.8}.mg-status{font-size:20px}.mg-choice{min-height:80px}.mg-top>.secondary{font-size:20px;min-height:52px}}
+`;document.head.append(menuStyle);
 function open(id){({feed,memory,count,jump,phonetic,post,doors,puzzle,detective,rhythm,coop,chores}[id])();}
 function feed(){
 const stage=shell('feed');stage.append(el('p','question','右右肚子餓了，餵牠 5 口點心吧。'));
@@ -176,6 +236,7 @@ const again=btn('再幫忙一回 ↻','primary',chores);again.hidden=true;stage.
 }
 
 })();
+
 
 
 
