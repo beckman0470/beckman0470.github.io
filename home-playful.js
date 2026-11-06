@@ -103,9 +103,17 @@ catStyle.textContent+=`
 @keyframes cdj-picture-walk{from{translate:0 0;rotate:-1deg}to{translate:0 -4px;rotate:1deg}}
 @media(max-width:600px){.cdj-resident.peek{height:70px}.cdj-resident.peek .cat-art{height:100%}}
 `;
+catStyle.textContent+=`
+/* Reading-safe resident lane: reserve real page space, never overlay content. */
+.cdj-cat-world{position:relative!important;inset:auto!important;width:100%;height:184px;box-sizing:border-box;z-index:0!important;overflow:hidden;isolation:isolate;background:#f3f2e7;border-top:1px solid #dfe3d3;margin:24px 0 0;pointer-events:none}
+.cdj-cat-world .cdj-resident{top:8px;transition:left 6s linear;max-width:none}
+.cdj-cat-world .cdj-cat-toggle{position:absolute!important;bottom:5px!important;left:12px!important;z-index:3}
+.cdj-cat-world .cdj-cat-bubble{position:absolute!important;top:4px!important;z-index:4;font-size:14px;max-width:220px}
+@media(max-width:600px){.cdj-cat-world{height:154px}.cdj-cat-world .cdj-cat-toggle{bottom:5px!important}}
+`;
 document.head.append(catStyle);
 ['yahoo','youyou'].forEach(name=>['walk','peek','sleep'].forEach(mode=>{const img=new Image();img.src='/cat-'+name+'-'+mode+'.png?v=20261105-art1';}));
-const world=document.createElement('div');world.className='cdj-cat-world';world.setAttribute('aria-label','雅虎與右右的網站小日常');document.body.append(world);
+const world=document.createElement('div');world.className='cdj-cat-world';world.setAttribute('aria-label','雅虎與右右的貓咪散步區');document.body.append(world);
 const toggle=document.createElement('button');toggle.type='button';toggle.className='cdj-cat-toggle';world.append(toggle);
 let paused=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 let bubbleTimer;const residents=[];
@@ -114,13 +122,13 @@ return '<img class="cdj-cat-image" src="/cat-'+(orange?'youyou':'yahoo')+'-'+mod
 }
 function size(){return innerWidth<=600?{w:112,h:96}:{w:152,h:126};}
 function setPos(p,x,y,instant=false){
-const s=size();p.x=Math.max(4,Math.min(x,innerWidth-s.w-6));p.y=Math.max(88,Math.min(y,innerHeight-s.h-52));
+const s=size(),laneWidth=world.clientWidth||innerWidth;
+p.x=Math.max(4,Math.min(x,laneWidth-s.w-6));p.y=8;
 if(instant)p.el.style.transition='none';p.el.style.left=p.x+'px';p.el.style.top=p.y+'px';
 if(instant){void p.el.offsetWidth;p.el.style.transition='';}
 }
-function visiblePerches(){
-return Array.from(document.querySelectorAll('.feature-card,.family-card,.hero-art-wrap')).map(el=>el.getBoundingClientRect()).filter(r=>r.width>70&&r.top>110&&r.top<innerHeight-95&&r.right>30&&r.left<innerWidth-40);
-}
+function visiblePerches(){return [];}
+
 function schedule(p,ms){clearTimeout(p.timer);if(!paused&&!document.hidden)p.timer=setTimeout(()=>act(p),ms);}
 function act(p,initial=false){
 if(paused||document.hidden)return;
@@ -143,7 +151,7 @@ function showBubble(p){
 world.querySelector('.cdj-cat-bubble')?.remove();clearTimeout(bubbleTimer);
 const b=document.createElement('div');b.className='cdj-cat-bubble';b.setAttribute('role','status');
 b.textContent=p.name+'：'+(p.orange?'呼嚕……陪我睡一下。':'喵！陪我玩嘛～');
-const rect=p.el.getBoundingClientRect();b.style.left=Math.max(8,Math.min(rect.left,innerWidth-250))+'px';b.style.top=Math.max(75,rect.top-48)+'px';world.append(b);
+b.style.left=Math.max(8,Math.min(p.x,(world.clientWidth||innerWidth)-230))+'px';b.style.top='4px';world.append(b);
 bubbleTimer=setTimeout(()=>b.remove(),2600);
 }
 [['雅虎',false],['右右',true]].forEach(([name,orange])=>{
