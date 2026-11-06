@@ -1,0 +1,20 @@
+/* Mobile reading comfort — 2026-11-06. Desktop sizes stay unchanged. */
+@media (max-width: 760px) {
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{font-size:20px!important;line-height:1.8!important}
+main p,main li,main dd,main label,.feature-body p,.family-body p,.cta-copy p{font-size:20px!important;line-height:1.85!important;overflow-wrap:anywhere}
+h1{overflow-wrap:anywhere}h2{font-size:28px!important;line-height:1.5!important}h3{font-size:24px!important;line-height:1.5!important}
+button,input,select,textarea{min-height:48px}
+input,select,textarea{font-size:20px!important;max-width:100%}
+.tab,.mode,.pill,.primary,.secondary,.btn,.buy,.dv-filter,.dv-stop,.chips button,.activity-tabs button,.mg-btn,.mg-button,.cdj-hello,.cdj-play-link{font-size:20px!important;line-height:1.5!important;white-space:normal!important;min-height:52px!important;padding:13px 18px!important}
+.small,.hint,.notice,.progress,.eyebrow,.footnote,.dv-note,.dv-help,.dv-category,.number,.note-label,.signature,.quote-card>span,.quote-card>p,.note-bottom>span,.activity-tabs small,footer,.site-footer,.brand small{font-size:17px!important;line-height:1.8!important;letter-spacing:normal!important}
+.dv-out,.nav a,.main-nav a,.footer-links a,.search-link,.start{font-size:18px!important;line-height:1.6!important;min-height:44px}
+.dv-out{padding:8px 0}.dv-name{font-size:23px!important;line-height:1.5!important}.dv-now{font-size:22px!important}.dv-heading{font-size:28px!important}
+.dv-grid{grid-template-columns:1fr!important}.dv-filters{gap:10px!important}.dv-filter{flex:1 1 auto}
+.activity-tabs{grid-template-columns:1fr!important;gap:12px!important}.activity-tabs button{text-align:left!important}.activity-tabs small{display:block!important;margin-top:5px}
+.hero-note p{font-size:24px!important;line-height:1.8!important}.quote-card blockquote{font-size:clamp(26px,7vw,34px)!important;line-height:1.85!important}
+.header-inner{display:flex!important;flex-wrap:wrap!important;gap:12px!important;padding-top:14px!important;padding-bottom:14px!important}.header-inner>.main-nav{flex-basis:100%!important;order:3;display:flex!important;flex-wrap:wrap!important;gap:10px 18px!important}.site-header .brand{max-width:100%!important}.brand-text strong{font-size:20px!important;line-height:1.5!important}.brand-text span{font-size:14px!important}
+.site-header .search-link{margin-left:auto}.top{gap:18px!important}.top .nav{gap:12px 18px!important}
+[hidden]{display:none!important}
+}
+
