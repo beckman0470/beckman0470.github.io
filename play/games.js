@@ -2,6 +2,18 @@
 (()=>{
 'use strict';
 const cards=[
+["truthdetective","👿","小惡魔真假偵探","聽小惡魔的說法，判斷哪裡對、哪裡不對。","小惡魔 · 新遊戲 · 5 題"],
+["opposite","🔄","小惡魔反口令","有時照著做、有時唱反調，先看規則再回答。","小惡魔 · 新遊戲 · 8 題"],
+["grocery","🧺","兔阿嬤買菜記憶","先記清單，再挑食物，隨時能回頭看。","兔阿嬤 · 新遊戲 · 3 張清單"],
+["clock","🕰️","兔阿嬤時間小高手","看短針和長針，練習整點、半點與一刻鐘。","兔阿嬤 · 新遊戲 · 5 題"],
+["tidy","🧹","鼠媽媽收納大作戰","幫物品找到廚房、衣櫃或書桌的家。","鼠媽媽 · 新遊戲 · 6 件物品"],
+["dayplan","🗓️","鼠媽媽行程排排看","按照時間，把一天的三件事排好。","鼠媽媽 · 新遊戲 · 5 天"],
+["numberhunt","🔢","雞爸爸猜數字","利用太大、太小的線索，找出藏起來的數字。","雞爸爸 · 新遊戲 · 30／100"],
+["spot","🔎","雞爸爸生活小偵探","比較兩張畫面，找到三處不同。","雞爸爸 · 新遊戲 · 5 組"],
+["maze","🗺️","貓咪迷宮探險","找出通道，帶雅虎走回家。","新遊戲 · 六歲＋ · 5 關"],
+["snackshop","🧮","點心小店長","算總價、練找零，完成五張訂單。","新遊戲 · 六歲＋ · 20／50 元"],
+["codequest","🔐","雅虎密碼研究所","觀察數字和圖形，解開規律密碼。","新遊戲 · 六歲＋ · 5 題"],
+["storytiles","📚","故事句子拼拼樂","依照先後順序，把四張句子卡排好。","新遊戲 · 六歲＋ · 5 個故事"],
 ['feed','🥣','幫右右找點心','點選或拖曳食物，餵飽右右陪牠睡。','龍弟弟'],
 ['memory','🐾','雅虎記憶翻牌','兩張一樣就是一對，姊弟都能挑戰。','2 組／6 組'],
 ['count','🐈','貓咪排排隊','找大小、數貓咪，慢慢觀察就能答對。','大小／數數'],
@@ -20,7 +32,7 @@ const css=document.createElement('style');css.textContent=`
 `;document.head.append(css);
 /* The two child tabs own their game menus and the shared game stage. */
 const groups={
-dodo:['phonetic','post','memory','count','jump','rhythm'],
+dodo:["truthdetective","opposite","grocery","clock","tidy","dayplan","numberhunt","spot",'maze','snackshop','codequest','storytiles','phonetic','post','memory','count','jump','rhythm'],
 dragon:['feed','doors','puzzle','detective','coop','chores']
 };
 const areaNames={dodo:'鼠姊姊學習樂園',dragon:'龍弟弟快樂天地'};
@@ -34,7 +46,7 @@ function shuffle(xs){const a=xs.slice();for(let i=a.length-1;i>0;i--){const j=Ma
 function sound(){if(typeof tone==='function')tone('good');}
 function catImage(name,pose,cls='mg-cat'){const e=el('img',cls);e.src=img(name,pose);e.alt=name==='yahoo'?'雅虎':'右右';e.draggable=false;return e;}
 function currentArea(){return document.querySelector('#tab-dragon').getAttribute('aria-selected')==='true'?'dragon':'dodo';}
-function stopVideo(){const stop=document.querySelector('#dv-stop');if(stop)stop.click();}
+function stopVideo(){document.querySelectorAll('.dv-stop').forEach(stop=>stop.click());}
 function resetActivities(){
 cleanup();cleanup=()=>{};active='';activeArea='';panel.hidden=true;
 Object.values(areas).forEach(area=>{area.menu.hidden=false;area.classic.hidden=true;if(area.video)area.video.hidden=false;});
@@ -94,7 +106,7 @@ const menuStyle=document.createElement('style');menuStyle.textContent=`
 .mg-card{width:100%;min-height:180px}.mg-card strong{line-height:1.5}.mg-panel{scroll-margin-top:20px}
 @media(max-width:760px){.mg-grid{grid-template-columns:1fr;gap:16px}.mg-card{padding:22px;min-height:160px}.mg-card strong{font-size:23px}.mg-card small{font-size:18px;line-height:1.8}.mg-tag,.mg-tip,.mg-counter,.mg-track-text{font-size:17px;line-height:1.8}.mg-card .mg-icon{float:right;margin-left:12px;font-size:38px}.mg-stage .question,.mg-stage>p:not(.mg-counter):not(.mg-tip){font-size:20px;line-height:1.8}.mg-status{font-size:20px}.mg-choice{min-height:80px}.mg-top>.secondary{font-size:20px;min-height:52px}}
 `;document.head.append(menuStyle);
-function open(id){({feed,memory,count,jump,phonetic,post,doors,puzzle,detective,rhythm,coop,chores}[id])();}
+function open(id){({feed,memory,count,jump,phonetic,post,doors,puzzle,detective,rhythm,coop,chores,maze,snackshop,codequest,storytiles,truthdetective,opposite,grocery,clock,tidy,dayplan,numberhunt,spot}[id])();}
 function feed(){
 const stage=shell('feed');stage.append(el('p','question','右右肚子餓了，餵牠 5 口點心吧。'));
 let n=0;const pet=btn('','mg-pet');pet.setAttribute('aria-label','摸摸右右的肚子');const picture=catImage('youyou','peek');pet.append(picture);stage.append(pet);
@@ -235,8 +247,262 @@ else{body.append(el('p','question','龍弟弟記得：車車躲在「星星毯�
 const again=btn('再幫忙一回 ↻','primary',chores);again.hidden=true;stage.append(again);show();
 }
 
+/* Six-plus adventures: untimed puzzles, hints and retries. */
+const plusStyle=el('style');plusStyle.textContent=`
+.sp-progress{font-size:18px;color:#527148;line-height:1.7}.sp-toolbar{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin:18px 0}.sp-receipt{max-width:520px;margin:20px auto;padding:20px;border:1px dashed #b8c5a8;border-radius:18px;background:#fffef8;text-align:left;font-size:22px;line-height:1.9}.sp-receipt p{margin:4px 0}.sp-pattern{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:22px auto}.sp-token{display:grid;place-items:center;min-width:58px;min-height:68px;border:2px solid #d4dec8;border-radius:16px;background:white;font-size:30px;padding:8px}.sp-maze{display:grid;max-width:440px;width:100%;margin:22px auto;background:#7b9868;border:3px solid #526e42;gap:0;outline-offset:5px}.sp-cell{aspect-ratio:1;background:#fcfbef;min-width:0;position:relative;border-color:#526e42;border-style:solid;border-width:0;display:grid;place-items:center;font-size:24px}.sp-cell .sp-cat{position:absolute;width:100%;height:100%;object-fit:contain;z-index:2}.sp-cell.visited{background:#edf4e6}.sp-cell.hint{background:#ffe8a6}.sp-directions{display:grid;grid-template-columns:repeat(3,64px);gap:10px;justify-content:center}.sp-direction{min-width:0;min-height:60px;font-size:28px;border:1px solid #aebf9b;border-radius:15px;background:white;color:#426b54}.sp-direction:first-child{grid-column:2}.sp-direction:nth-child(2){grid-column:1}.sp-direction:nth-child(3){grid-column:2}.sp-direction:nth-child(4){grid-column:3}.sp-story-slots{display:flex;flex-direction:column;gap:10px;max-width:620px;margin:20px auto;min-height:95px;padding:16px;border:2px dashed #c4d1b5;border-radius:18px;background:#fffdf6;text-align:left}.sp-story-piece{font-size:21px;line-height:1.7;padding:12px 18px;border:1px solid #c6d3b7;background:white;border-radius:14px;color:#3a5034;text-align:left;min-height:56px}.sp-story-choices{display:grid;gap:12px;max-width:620px;margin:20px auto}.sp-chosen{background:#e8f0df;border-color:#91ad76}.sp-new{border:2px solid #bf9d64;background:#fffcf1}.sp-new .mg-tag{background:#f0dfbd;color:#70522e}.sp-new-note{font-size:18px;line-height:1.8;color:#6e614b;background:#fff7df;border-radius:16px;padding:16px;margin:0 0 18px}
+@media(max-width:760px){.sp-receipt{font-size:22px;padding:16px}.sp-token{min-width:48px;font-size:26px}.sp-story-piece{font-size:21px;line-height:1.8}.sp-progress{font-size:18px}.sp-directions{grid-template-columns:repeat(3,68px)}.sp-direction{min-height:64px}.sp-new-note{font-size:19px}}
+`;document.head.append(plusStyle);
+function makeMaze(n,rng=Math.random){
+const walls=Array(n*n).fill(15),seen=new Set([0]),stack=[0];
+const dirs=[[-1,0,1,4],[0,1,2,8],[1,0,4,1],[0,-1,8,2]];
+while(stack.length){
+ const p=stack[stack.length-1],r=Math.floor(p/n),c=p%n;
+ const options=dirs.map(d=>({d,r:r+d[0],c:c+d[1]})).filter(v=>v.r>=0&&v.r<n&&v.c>=0&&v.c<n&&!seen.has(v.r*n+v.c));
+ if(!options.length){stack.pop();continue;}
+ const v=options[Math.min(options.length-1,Math.floor(rng()*options.length))],q=v.r*n+v.c;
+ walls[p]&=~v.d[2];walls[q]&=~v.d[3];seen.add(q);stack.push(q);
+}
+return walls;
+}
+function mazeStep(walls,n,p,dir){
+const ds={up:[-n,1],right:[1,2],down:[n,4],left:[-1,8]},d=ds[dir];if(!d||(walls[p]&d[1]))return p;
+const q=p+d[0];return q<0||q>=n*n?p:q;
+}
+function mazeRoute(walls,n,start,goal){
+const queue=[start],parents=new Map([[start,null]]);
+for(let k=0;k<queue.length;k++){const p=queue[k];if(p===goal)break;for(const dir of ['up','right','down','left']){const q=mazeStep(walls,n,p,dir);if(!parents.has(q)){parents.set(q,p);queue.push(q);}}}
+if(!parents.has(goal))return [];
+const route=[];for(let p=goal;p!==null;p=parents.get(p))route.push(p);return route.reverse();
+}
+function maze(){
+const stage=shell('maze');let level=0,walls=[],n=4,pos=0,moves=0,done=false,hint=-1,visited=new Set();
+const progress=el('p','sp-progress'),prompt=el('p','question','幫雅虎沿著通道走回家。方向鍵或下方箭頭都可以玩。'),board=el('div','sp-maze');
+board.tabIndex=0;board.setAttribute('role','group');board.setAttribute('aria-label','雅虎迷宮，可用方向鍵移動');
+stage.append(progress,prompt,board);const feedback=status(stage),directions=el('div','sp-directions');stage.append(directions);
+[['up','↑','往上'],['left','←','往左'],['down','↓','往下'],['right','→','往右']].forEach(([dir,text,label])=>{const b=btn(text,'sp-direction',()=>move(dir));b.setAttribute('aria-label',label);directions.append(b);});
+const tools=el('div','sp-toolbar'),help=btn('提示下一步','secondary',()=>{if(done)return;hint=mazeRoute(walls,n,pos,n*n-1)[1]??-1;feedback.textContent='黃色格子是下一步，可以慢慢走。';draw();}),retry=btn('這關重新走','secondary',()=>{pos=0;moves=0;done=false;hint=-1;visited=new Set([0]);help.disabled=false;feedback.textContent='重新出發，路線不會改變。';next.hidden=true;draw();}),next=btn('下一個迷宮 →','primary',()=>{level++;newLevel();});tools.append(help,retry,next);stage.append(tools);
+board.addEventListener('keydown',e=>{const dir={ArrowUp:'up',ArrowDown:'down',ArrowLeft:'left',ArrowRight:'right'}[e.key];if(dir){e.preventDefault();move(dir);}});
+function draw(){
+board.style.gridTemplateColumns='repeat('+n+',minmax(0,1fr))';board.replaceChildren();progress.textContent='第 '+(level+1)+' / 5 關 · 已走 '+moves+' 步';
+walls.forEach((wall,i)=>{const cell=el('div','sp-cell'+(visited.has(i)?' visited':'')+(i===hint?' hint':''));cell.dataset.cell=String(i);
+cell.style.borderTopWidth=(wall&1)?'2px':'0';cell.style.borderRightWidth=(wall&2)?'2px':'0';cell.style.borderBottomWidth=(wall&4)?'2px':'0';cell.style.borderLeftWidth=(wall&8)?'2px':'0';
+if(i===n*n-1){cell.textContent='🏠';cell.setAttribute('aria-label','終點，小屋');}
+if(i===pos){cell.append(catImage('yahoo','walk','sp-cat'));cell.setAttribute('aria-current','location');cell.setAttribute('aria-label','雅虎在第 '+(Math.floor(i/n)+1)+' 排第 '+(i%n+1)+' 格');}board.append(cell);});
+}
+function move(dir){
+if(done)return;const q=mazeStep(walls,n,pos,dir);if(q===pos){feedback.textContent='這邊是牆壁，換個方向試試看。';return;}
+pos=q;moves++;hint=-1;visited.add(pos);feedback.textContent='';
+if(pos===n*n-1){done=true;sound();feedback.textContent=level===4?'五個迷宮都完成了！雅虎安全到家 ⭐':'雅虎到家了！準備好再玩下一關。';next.hidden=level===4;help.disabled=true;if(level===4){retry.hidden=true;tools.append(btn('再探險一次 ↻','primary',maze));}}draw();
+}
+function newLevel(){n=4+level;walls=makeMaze(n);pos=0;moves=0;done=false;hint=-1;visited=new Set([0]);feedback.textContent='';next.hidden=true;help.disabled=false;draw();}
+newLevel();
+}
+function mathChoices(answer,max){
+const values=new Set([answer]);for(const delta of shuffle([-2,-1,1,2,3,-3,4])){const v=answer+delta;if(v>=0&&v<=max)values.add(v);if(values.size===4)break;}
+for(let v=0;values.size<4;v++)values.add(v);return shuffle([...values]);
+}
+function snackshop(limit=20){
+const stage=shell('snackshop');configs(stage,[[20,'20 元以內'],[50,'50 元以內']],limit,v=>snackshop(v));
+let round=0,done=false,showHint=()=>{};const body=el('div');stage.append(body);const feedback=status(stage),tools=el('div','sp-toolbar'),help=btn('看看計算提示','secondary',()=>showHint()),next=btn('下一張訂單 →','primary',()=>{round++;render();});tools.append(help,next);stage.append(tools);
+function render(){
+body.replaceChildren();feedback.textContent='';next.hidden=true;done=false;
+if(round>=5){help.hidden=true;body.append(el('h3','','五張訂單都完成了！小店長好棒 ⭐'),btn('再開店一次 ↻','primary',()=>snackshop(limit)));return;}
+const goods=shuffle([['🍎','蘋果'],['🍞','麵包'],['🥛','牛奶'],['🍪','餅乾']]).slice(0,2),max=limit===20?9:20,a=2+Math.floor(Math.random()*(max-1)),b=2+Math.floor(Math.random()*(max-1)),sum=a+b,change=round%2===1,answer=change?limit-sum:sum;
+body.append(el('p','sp-progress','第 '+(round+1)+' / 5 張訂單'));const receipt=el('div','sp-receipt');receipt.append(el('p','',goods[0][0]+' '+goods[0][1]+'：'+a+' 元'),el('p','',goods[1][0]+' '+goods[1][1]+'：'+b+' 元'));if(change)receipt.append(el('p','','客人付了 '+limit+' 元。'));body.append(receipt,el('p','question',change?'應該找回多少元？':'這張訂單一共多少元？'));
+const choices=el('div','mg-choices');mathChoices(answer,limit).forEach(value=>{const button=btn(value+' 元','mg-choice',()=>{if(done)return;if(value!==answer){feedback.textContent=change?'先算兩樣東西的總價，再從客人付的錢扣掉。':'先把兩個價格加起來，慢慢算就可以。';return;}done=true;button.classList.add('correct');choices.querySelectorAll('button').forEach(x=>x.disabled=true);feedback.textContent='算對了！'+(change?limit+' − '+sum:a+' ＋ '+b)+' ＝ '+answer+' 元。';sound();next.hidden=false;next.textContent=round===4?'看看我的店長星星 ⭐':'下一張訂單 →';});choices.append(button);});body.append(choices);
+showHint=()=>{feedback.textContent=a+' ＋ '+b+' ＝ '+sum+' 元。'+(change?'再算 '+limit+' − '+sum+' ＝ '+answer+' 元。':'兩樣東西加起來就是總價。');};
+}
+render();
+}
+const codePuzzles=[
+{tokens:['2','4','6','8','？'],answer:'10',choices:['9','10','12','14'],hint:'每次加 2，接著是 8 ＋ 2。'},
+{tokens:['1','3','5','7','？'],answer:'9',choices:['8','9','10','11'],hint:'每次加 2，接著是 7 ＋ 2。'},
+{tokens:['5','10','15','20','？'],answer:'25',choices:['21','24','25','30'],hint:'每次加 5，接著是 20 ＋ 5。'},
+{tokens:['20','17','14','11','？'],answer:'8',choices:['7','8','9','10'],hint:'每次少 3，接著是 11 − 3。'},
+{tokens:['1','2','4','8','？'],answer:'16',choices:['10','12','16','18'],hint:'每個數字都是前一個的兩倍。'},
+{tokens:['⭐','○','⭐','○','？'],answer:'⭐',choices:['⭐','○','△','□'],hint:'星星、圓圈，兩個一組重複出現。'},
+{tokens:['△','□','○','△','□','？'],answer:'○',choices:['△','□','○','⭐'],hint:'三角形、正方形、圓圈，三個一組。'},
+{tokens:['⭐','○','○','⭐','○','？'],answer:'○',choices:['△','□','○','⭐'],hint:'每組都是一顆星星、兩個圓圈。'},
+{tokens:['1','1','2','2','3','？'],answer:'3',choices:['2','3','4','6'],hint:'每個數字都連續出現兩次。'},
+{tokens:['3','6','9','12','？'],answer:'15',choices:['13','14','15','18'],hint:'每次加 3，接著是 12 ＋ 3。'}
+];
+function codequest(){
+const stage=shell('codequest');let round=0;const deck=shuffle(codePuzzles).slice(0,5),body=el('div');stage.append(body);const feedback=status(stage),tools=el('div','sp-toolbar'),hint=btn('看看規律提示','secondary',()=>{feedback.textContent=deck[round].hint;}),next=btn('下一個密碼 →','primary',()=>{round++;render();});tools.append(hint,next);stage.append(tools);
+function render(){
+body.replaceChildren();feedback.textContent='';next.hidden=true;
+if(round>=5){hint.hidden=true;body.append(el('h3','','五道密碼解開了！雅虎向你致敬 🔎 ⭐'),btn('再解一組新密碼 ↻','primary',codequest));return;}
+let done=false;const puzzle=deck[round];body.append(el('p','sp-progress','第 '+(round+1)+' / 5 道密碼'),el('p','question','觀察前面的規律，問號應該放什麼？'));
+const pattern=el('div','sp-pattern');puzzle.tokens.forEach(token=>pattern.append(el('span','sp-token',token)));body.append(pattern);const answers=el('div','mg-choices');
+shuffle(puzzle.choices).forEach(value=>{const button=btn(value,'mg-choice',()=>{if(done)return;if(value!==puzzle.answer){feedback.textContent='再看看前面是怎麼重複或變化的，也可以按提示。';return;}done=true;button.classList.add('correct');answers.querySelectorAll('button').forEach(x=>x.disabled=true);sound();feedback.textContent='密碼正確！'+puzzle.hint;next.hidden=false;next.textContent=round===4?'領取解謎星星 ⭐':'下一個密碼 →';});answers.append(button);});body.append(answers);
+}render();
+}
+const storySets=[
+{title:'一起吃早餐',parts:['先把雙手洗乾淨。','接著坐到餐桌旁。','然後開心吃早餐。','最後把碗筷收好。']},
+{title:'準備上學',parts:['先把要帶的東西放進書包。','接著換好外出的衣服。','然後穿上鞋子。','最後背起書包出門。']},
+{title:'陪右右吃點心',parts:['先把食碗洗乾淨。','接著把點心放進碗裡。','然後讓右右慢慢吃。','最後把吃完的碗收好。']},
+{title:'公園玩耍',parts:['先和家人一起走到公園。','接著排隊等溜滑梯。','然後輪到自己，開心滑下來。','最後向公園說再見，一起回家。']},
+{title:'畫一張圖',parts:['先準備好白紙和畫筆。','接著畫出喜歡的貓咪。','然後替貓咪塗上顏色。','最後把畫筆收回盒子裡。']}
+];
+function storytiles(){
+const stage=shell('storytiles');let round=0,selected=[],done=false,order=[];const deck=shuffle(storySets),body=el('div');stage.append(body);const feedback=status(stage),tools=el('div','sp-toolbar');
+const check=btn('排好了，看看故事','primary',checkStory),undo=btn('退回一張','secondary',()=>{if(done||!selected.length)return;selected.pop();feedback.textContent='';draw();}),reset=btn('重新排這一題','secondary',()=>{if(done)return;selected=[];feedback.textContent='';draw();}),hint=btn('給我一點提示','secondary',()=>{if(done)return;const correctPrefix=selected.findIndex((v,i)=>v!==i);const nextIndex=correctPrefix>=0?correctPrefix:Math.min(selected.length,3);feedback.textContent='看看順序詞「先、接著、然後、最後」。第 '+(nextIndex+1)+' 張可以找：「'+deck[round].parts[nextIndex]+'」';}),next=btn('下一個故事 →','primary',()=>{round++;fresh();});
+tools.append(check,undo,reset,hint,next);
+const listen=btn('🔊 聽聽完整故事','secondary',()=>{if(!('speechSynthesis'in window))return;window.speechSynthesis.cancel();const utterance=new SpeechSynthesisUtterance(deck[round].title+'。'+deck[round].parts.join(''));utterance.lang='zh-TW';utterance.rate=.8;window.speechSynthesis.speak(utterance);});listen.hidden=!('speechSynthesis'in window);tools.append(listen);stage.append(tools);
+cleanup=()=>{if('speechSynthesis'in window)window.speechSynthesis.cancel();};
+function fresh(){if('speechSynthesis'in window)window.speechSynthesis.cancel();selected=[];done=false;feedback.textContent='';next.hidden=true;
+if(round>=5){body.replaceChildren(el('h3','','五個故事排好了！你是小小故事家 📚 ⭐'),btn('再說一回故事 ↻','primary',storytiles));tools.hidden=true;return;}
+order=shuffle([0,1,2,3]);if(order.every((v,i)=>v===i))[order[0],order[1]]=[order[1],order[0]];draw();
+}
+function draw(){body.replaceChildren();body.append(el('p','sp-progress','第 '+(round+1)+' / 5 個故事：'+deck[round].title),el('p','question','把四張句子卡依照事情發生的順序排好。'));
+const slots=el('div','sp-story-slots');slots.setAttribute('aria-label','目前排好的故事');if(!selected.length)slots.append(el('p','mg-tip','點下方句子卡，就會排到這裡。'));selected.forEach((value,i)=>slots.append(el('p','sp-story-piece sp-chosen',(i+1)+'．'+deck[round].parts[value])));body.append(slots);
+const choices=el('div','sp-story-choices');order.forEach(value=>{const b=btn(deck[round].parts[value],'sp-story-piece',()=>{if(done||selected.includes(value))return;selected.push(value);feedback.textContent='';draw();});b.disabled=done||selected.includes(value);b.setAttribute('aria-pressed',String(selected.includes(value)));choices.append(b);});body.append(choices);check.disabled=done||selected.length!==4;undo.disabled=done||!selected.length;reset.disabled=done;hint.disabled=done;
+}
+function checkStory(){if(done||selected.length!==4)return;if(!selected.every((v,i)=>v===i)){feedback.textContent='有一張順序還可以調整。按「退回一張」或「重新排」，慢慢試。';return;}done=true;sound();feedback.textContent='故事排好了！讀一讀，事情就連起來了。';draw();next.hidden=false;next.textContent=round===4?'領取故事家星星 ⭐':'下一個故事 →';}
+fresh();
+}
+const freshIds=['maze','snackshop','codequest','storytiles'];
+const newButtons=freshIds.map(id=>areas.dodo.grid.querySelector('[data-game-id="'+id+'"]'));
+newButtons.forEach(b=>b.classList.add('sp-new'));areas.dodo.grid.prepend(...newButtons);
+const newNote=el('p','sp-new-note','✨ 六歲＋新挑戰在最前面！探索迷宮、當小店長、解密碼、排故事，每款都有多關和提示，不用趕時間。');
+areas.dodo.menu.querySelector('.mg-menu-heading').after(newNote);
+
+
+/* Family hosts: eight new untimed games for ages six and up. */
+const familyHosts={
+devil:{name:'小惡魔',icon:'👿'},
+ama:{name:'兔阿嬤',icon:'🧺',image:'/assets/img/portrait-ama.png'},
+mom:{name:'鼠媽媽',icon:'🌷',image:'/assets/img/portrait-mom.png'},
+dad:{name:'雞爸爸',icon:'👓',image:'/assets/img/portrait-dad.png'}
+};
+const familyGameHost={truthdetective:'devil',opposite:'devil',grocery:'ama',clock:'ama',tidy:'mom',dayplan:'mom',numberhunt:'dad',spot:'dad'};
+function familyStage(id){
+const stage=shell(id),host=familyHosts[familyGameHost[id]],banner=el('div','fg-host');
+if(host.image){const picture=el('img','fg-avatar');picture.src=host.image;picture.alt=host.name;banner.append(picture);}
+else banner.append(el('span','fg-devil',host.icon));
+banner.append(el('p','',host.name+'陪你玩 · 不限時，慢慢想也很棒。'));stage.append(banner);return stage;
+}
+const familyStyle=el('style');familyStyle.textContent=`
+.fg-host{display:flex;align-items:center;justify-content:center;gap:16px;margin:0 0 20px}.fg-host p{font-size:19px;line-height:1.8}.fg-avatar{width:66px;height:78px;object-fit:cover;object-position:top;border-radius:16px;display:block}.fg-devil{font-size:48px}.mg-card>.fg-avatar{float:right;margin:0 0 10px 12px}.fg-filter{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 22px}.fg-filter .pill[aria-pressed=true]{background:#426b54;color:white}.fg-claim{max-width:620px;margin:20px auto;padding:24px;background:#fff5df;border:1px solid #ead5af;border-radius:20px;font-size:25px;line-height:1.8}.fg-hero-word{font-size:38px;font-weight:800;color:#426b54;margin:18px}.fg-grocery{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;padding:20px;background:#fff9e8;border:2px dashed #d8c59b;border-radius:20px;margin:20px auto;max-width:620px}.fg-grocery-item{font-size:22px;padding:10px}.fg-list-buttons{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:20px auto;max-width:650px}.fg-list-buttons button{font-size:20px;line-height:1.7;padding:14px 8px;min-height:74px;border:2px solid #d7e1ca;border-radius:16px;background:#fff;color:#3c5334}.fg-list-buttons button[aria-pressed=true]{background:#e2efd4;border-color:#708e59}.fg-clock{display:block;width:min(100%,300px);height:auto;margin:20px auto}.fg-clock text{font:700 17px system-ui;fill:#384d37}.fg-clock .fg-hour{stroke:#426b54;stroke-width:7;stroke-linecap:round}.fg-clock .fg-minute{stroke:#94642f;stroke-width:4;stroke-linecap:round}.fg-room{min-width:120px;min-height:95px;line-height:1.6}.fg-timeline{display:flex;gap:10px;flex-wrap:wrap;max-width:620px;margin:20px auto;justify-content:center}.fg-slot{font-size:20px;padding:16px;background:#eaf0df;border:1px dashed #b8cba4;border-radius:14px;flex:1;min-width:135px}.fg-number-input{font:inherit;font-size:28px;width:150px;max-width:100%;padding:12px;border:2px solid #a9be94;border-radius:14px;text-align:center}.fg-number-range{font-size:30px;font-weight:800;color:#426b54;padding:20px}.fg-scenes{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:740px;margin:20px auto}.fg-scene{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.fg-scene-cell{min-height:68px;aspect-ratio:1;font-size:34px;border:2px solid #d9e0ca;border-radius:14px;display:grid;place-items:center;background:white;padding:5px;color:#35472f}.fg-scene-cell.found{background:#e1efd3;border-color:#719655}.fg-scene-cell.hinted{outline:4px solid #e4ae46;outline-offset:1px}.fg-clue-note{font-size:20px;line-height:1.8;margin:18px auto;max-width:620px}
+@media(max-width:560px){.fg-list-buttons{grid-template-columns:repeat(2,minmax(0,1fr))}.fg-scenes{grid-template-columns:1fr;gap:14px}.fg-scene{max-width:320px;margin:auto}.fg-scene-cell{min-height:62px;font-size:32px}.fg-claim{font-size:23px;padding:20px}.fg-hero-word{font-size:34px}.fg-filter .pill{flex:1 1 auto}.fg-avatar{width:60px;height:72px}}
+`;document.head.append(familyStyle);
+const truthBank=[
+{claim:'2 ＋ 2 ＋ 2 等於 6。',answer:true,reason:'三個 2 相加：2 ＋ 2 ＋ 2 ＝ 6。'},
+{claim:'一星期有八天。',answer:false,reason:'一星期有七天，不是八天。'},
+{claim:'9 比 12 大。',answer:false,reason:'9 比 12 小，數字可以放在數線上比較。'},
+{claim:'三角形有三條邊。',answer:true,reason:'三角形的三條邊連成一圈。'},
+{claim:'10 元買了 6 元的東西，應找回 4 元。',answer:true,reason:'10 − 6 ＝ 4。'},
+{claim:'每個月都剛好有 30 天。',answer:false,reason:'月份的天數不同，有的 30 天、有的 31 天，二月也不同。'},
+{claim:'兩個 5 元，和一個 10 元一樣多。',answer:true,reason:'5 ＋ 5 ＝ 10，總金額一樣。'},
+{claim:'正方形有五個角。',answer:false,reason:'正方形有四個角。'},
+{claim:'半小時就是 30 分鐘。',answer:true,reason:'一小時 60 分鐘，一半是 30 分鐘。'},
+{claim:'1、3、5、7 都是雙數。',answer:false,reason:'它們都是單數；2、4、6、8 才是雙數。'},
+{claim:'18 是兩個 9 相加。',answer:true,reason:'9 ＋ 9 ＝ 18。'},
+{claim:'12 減掉 5，還有 8。',answer:false,reason:'12 − 5 ＝ 7。'}
+];
+function truthdetective(){
+const stage=familyStage('truthdetective'),deck=shuffle(truthBank).slice(0,5);let round=0;const body=el('div');stage.append(body);const feedback=status(stage),next=btn('下一個說法 →','primary',()=>{round++;render();});stage.append(next);
+function render(){body.replaceChildren();feedback.textContent='';next.hidden=true;if(round>=5){body.append(el('h3','','五個說法都看懂了！你是清醒的小偵探 👿 ⭐'),btn('再查一組說法 ↻','primary',truthdetective));return;}
+const item=deck[round];let done=false;body.append(el('p','sp-progress','第 '+(round+1)+' / 5 題'),el('p','question','小惡魔的這句話，對不對？'),el('p','fg-claim','👿「'+item.claim+'」'));const row=el('div','mg-choices');[[true,'✓ 這句是對的'],[false,'✕ 這句不對']].forEach(([value,label])=>{const b=btn(label,'mg-choice',()=>{if(done)return;if(value!==item.answer){feedback.textContent='再想一想，可以數一數、算一算。';return;}done=true;b.classList.add('correct');row.querySelectorAll('button').forEach(x=>x.disabled=true);feedback.textContent='看懂了！'+item.reason;sound();next.hidden=false;next.textContent=round===4?'領取偵探星星 ⭐':'下一個說法 →';});row.append(b);});body.append(row);
+}render();
+}
+const oppositePairs=[['大','小'],['高','低'],['長','短'],['快','慢'],['上','下'],['左','右'],['多','少'],['開','關']];
+function opposite(mode='reverse'){
+const stage=familyStage('opposite');configs(stage,[['reverse','先練習：唱反調'],['mixed','挑戰：規則會換']],mode,v=>opposite(v));let round=0;const body=el('div');stage.append(body);const feedback=status(stage),next=btn('下一個口令 →','primary',()=>{round++;render();});stage.append(next);
+function render(){body.replaceChildren();feedback.textContent='';next.hidden=true;if(round>=8){body.append(el('h3','','八個口令都完成！你有先看清楚規則 👿 ⭐'),btn('再挑戰一回 ↻','primary',()=>opposite(mode)));return;}
+const pair=oppositePairs[round],reverse=mode==='reverse'||round%2===0,from=Math.random()<.5?0:1,word=pair[from],answer=pair[reverse?1-from:from];let done=false;
+body.append(el('p','sp-progress','第 '+(round+1)+' / 8 個口令'),el('p','fg-claim',reverse?'👿 這次唱反調：請按「相反的字」。':'👿 這次照著做：請按「一樣的字」。'),el('div','fg-hero-word',word));const row=el('div','mg-choices');shuffle(pair).forEach(value=>{const b=btn(value,'mg-choice',()=>{if(done)return;if(value!==answer){feedback.textContent=reverse?'這一題要找相反的字，再看一下規則。':'這一題要找一樣的字，再看一下規則。';return;}done=true;b.classList.add('correct');row.querySelectorAll('button').forEach(x=>x.disabled=true);feedback.textContent='規則看清楚了！'+word+(reverse?'的相反是':'和這個字一樣：')+answer+'。';sound();next.hidden=false;next.textContent=round===7?'看看口令成果 ⭐':'下一個口令 →';});row.append(b);});body.append(row);
+}render();
+}
+const groceryItems=[['🍎','蘋果'],['🥕','紅蘿蔔'],['🍌','香蕉'],['🥚','雞蛋'],['🥛','牛奶'],['🍞','麵包'],['🥦','花椰菜'],['🍅','番茄'],['🍇','葡萄'],['🌽','玉米'],['🥔','馬鈴薯'],['🍊','橘子']];
+function grocery(level=3){
+const stage=familyStage('grocery');configs(stage,[[3,'記住 3 樣'],[5,'挑戰 5 樣']],level,v=>grocery(v));let round=0,list=[],options=[],picked=new Set(),phase='list';const body=el('div');stage.append(body);const feedback=status(stage),tools=el('div','sp-toolbar');
+const ready=btn('我記好了，去買菜！','primary',()=>{phase='choose';feedback.textContent='';render();}),again=btn('再看一次清單','secondary',()=>{phase='list';feedback.textContent='';render();}),check=btn('買好了，核對清單','primary',()=>{if(picked.size!==level){feedback.textContent='這次要買 '+level+' 樣，再數一數。';return;}if([...picked].some(i=>!list.includes(i))){feedback.textContent='有一樣還可以換一換；按「再看一次清單」也沒關係。';return;}phase='done';sound();render();feedback.textContent='清單上的都買齊了！兔阿嬤謝謝你。';}),next=btn('下一張清單 →','primary',()=>{round++;fresh();});tools.append(ready,again,check,next);stage.append(tools);
+function fresh(){if(round>=3){body.replaceChildren(el('h3','','三張清單完成！記憶小幫手 ⭐'),btn('再陪兔阿嬤買一次 ↻','primary',()=>grocery(level)));tools.hidden=true;feedback.textContent='';return;}list=shuffle(Array.from({length:groceryItems.length},(_,i)=>i)).slice(0,level);options=shuffle([...list,...shuffle(Array.from({length:groceryItems.length},(_,i)=>i).filter(i=>!list.includes(i))).slice(0,4)]);picked=new Set();phase='list';feedback.textContent='';render();}
+function render(){body.replaceChildren();body.append(el('p','sp-progress','第 '+(round+1)+' / 3 張清單'),el('p','question',phase==='list'?'慢慢看清楚，不用趕時間。記好了再按出發。':'選出清單上的 '+level+' 樣食物。'));
+ready.hidden=phase!=='list';again.hidden=phase!=='choose';check.hidden=phase!=='choose';next.hidden=phase!=='done';next.textContent=round===2?'看看採買成果 ⭐':'下一張清單 →';
+if(phase==='list'){const row=el('div','fg-grocery');list.forEach(i=>row.append(el('span','fg-grocery-item',groceryItems[i].join(' '))));body.append(row);}
+else{body.append(el('p','mg-counter','已選 '+picked.size+' / '+level+' 樣'));const row=el('div','fg-list-buttons');options.forEach(i=>{const b=btn(groceryItems[i].join(' '),'',()=>{if(phase!=='choose')return;if(picked.has(i))picked.delete(i);else if(picked.size<level)picked.add(i);else{feedback.textContent='先取消一樣，再換成想選的食物。';return;}feedback.textContent='';render();});b.setAttribute('aria-pressed',String(picked.has(i)));b.disabled=phase==='done';row.append(b);});body.append(row);}
+}fresh();
+}
+function clockLabel(hour,minute){return hour+'：'+String(minute).padStart(2,'0');}
+function clockFace(hour,minute){
+const point=(angle,length)=>({x:150+Math.sin(angle*Math.PI/180)*length,y:150-Math.cos(angle*Math.PI/180)*length});
+let svg='<svg class="fg-clock" viewBox="0 0 300 300" role="img" aria-label="時鐘：短針在 '+hour+' 點附近，長針指向 '+(minute/5||12)+'"><circle cx="150" cy="150" r="142" fill="#fffdf3" stroke="#b4c59e" stroke-width="5"/>';
+for(let number=1;number<=12;number++){const p=point(number*30,116);svg+='<text x="'+p.x+'" y="'+(p.y+6)+'" text-anchor="middle">'+number+'</text>';}
+const h=point((hour%12)*30+minute*.5,67),m=point(minute*6,98);
+svg+='<line class="fg-hour" x1="150" y1="150" x2="'+h.x+'" y2="'+h.y+'"/><line class="fg-minute" x1="150" y1="150" x2="'+m.x+'" y2="'+m.y+'"/><circle cx="150" cy="150" r="7" fill="#426b54"/></svg>';return svg;
+}
+function clock(level='half'){
+const stage=familyStage('clock');configs(stage,[['half','整點與半點'],['quarter','加入一刻鐘']],level,v=>clock(v));let round=0;const body=el('div');stage.append(body);const feedback=status(stage),next=btn('下一個時鐘 →','primary',()=>{round++;render();});stage.append(next);
+function render(){body.replaceChildren();feedback.textContent='';next.hidden=true;if(round>=5){body.append(el('h3','','五個時鐘都看懂了！時間小高手 ⭐'),btn('再看一回時鐘 ↻','primary',()=>clock(level)));return;}
+let done=false;const hour=1+Math.floor(Math.random()*12),mins=level==='half'?[0,30]:[0,15,30,45],minute=mins[Math.floor(Math.random()*mins.length)],answer=clockLabel(hour,minute);
+body.append(el('p','sp-progress','第 '+(round+1)+' / 5 個時鐘'),el('p','question','現在是幾點幾分？'));const face=el('div');face.innerHTML=clockFace(hour,minute);body.append(face,el('p','mg-tip','綠色短針看小時，棕色長針看分鐘；長針走一格數字是 5 分鐘。'));
+const choices=new Set([answer,clockLabel(hour%12+1,minute)]);for(const m of [0,15,30,45]){choices.add(clockLabel(hour,m));if(choices.size>=4)break;}
+const row=el('div','mg-choices');shuffle([...choices]).forEach(value=>{const b=btn(value,'mg-choice',()=>{if(done)return;if(value!==answer){feedback.textContent='先看短針接近幾點，再看長針指到哪一個數字。';return;}done=true;b.classList.add('correct');row.querySelectorAll('button').forEach(x=>x.disabled=true);feedback.textContent='對了，是 '+hour+' 點 '+minute+' 分。';sound();next.hidden=false;next.textContent=round===4?'領取時間星星 ⭐':'下一個時鐘 →';});row.append(b);});body.append(row);
+}render();
+}
+const tidyItems=[{icon:'🥣',name:'飯碗',room:'廚房'},{icon:'🥄',name:'湯匙',room:'廚房'},{icon:'🍳',name:'平底鍋',room:'廚房'},{icon:'🧦',name:'襪子',room:'衣櫃'},{icon:'🧥',name:'外套',room:'衣櫃'},{icon:'👕',name:'上衣',room:'衣櫃'},{icon:'✏️',name:'鉛筆',room:'書桌'},{icon:'📚',name:'故事書',room:'書桌'},{icon:'📏',name:'尺',room:'書桌'}];
+function tidy(){
+const stage=familyStage('tidy'),deck=shuffle(tidyItems).slice(0,6);let round=0;const body=el('div');stage.append(body);const feedback=status(stage),next=btn('收下一樣 →','primary',()=>{round++;render();});stage.append(next);
+function render(){body.replaceChildren();feedback.textContent='';next.hidden=true;if(round>=6){body.append(el('h3','','六樣東西都回家了！鼠媽媽的小幫手 ⭐'),btn('再整理一回 ↻','primary',tidy));return;}
+let done=false;const item=deck[round];body.append(el('p','sp-progress','第 '+(round+1)+' / 6 樣物品'),el('p','question','幫這樣東西找個合適的家。'),el('div','fg-hero-word',item.icon+' '+item.name));const row=el('div','mg-choices');[['🍳','廚房'],['👕','衣櫃'],['📖','書桌']].forEach(([icon,room])=>{const b=btn(icon+' '+room,'mg-choice fg-room',()=>{if(done)return;if(room!==item.room){feedback.textContent='想一想，這樣東西平常在哪裡使用或收納？';return;}done=true;b.classList.add('correct');row.querySelectorAll('button').forEach(x=>x.disabled=true);feedback.textContent=item.name+'收進'+room+'，整齊又好找！';sound();next.hidden=false;next.textContent=round===5?'看看整理成果 ⭐':'收下一樣 →';});row.append(b);});body.append(row);
+}render();
+}
+const planSets=[
+[{time:8,label:'吃早餐'},{time:10,label:'去公園'},{time:12,label:'吃午餐'}],
+[{time:9,label:'畫一張圖'},{time:11,label:'收好畫筆'},{time:14,label:'讀故事書'}],
+[{time:7,label:'起床'},{time:8,label:'到學校'},{time:16,label:'回到家'}],
+[{time:14,label:'整理玩具'},{time:16,label:'吃點心'},{time:18,label:'吃晚餐'}],
+[{time:15,label:'陪貓咪玩'},{time:18,label:'吃晚餐'},{time:20,label:'準備睡覺'}]
+];
+function dayplan(){
+const stage=familyStage('dayplan'),deck=shuffle(planSets);let round=0,picked=[],order=[],done=false;const body=el('div');stage.append(body);const feedback=status(stage),tools=el('div','sp-toolbar');
+const undo=btn('退回一張','secondary',()=>{if(done||!picked.length)return;picked.pop();feedback.textContent='';draw();}),check=btn('排好了！','primary',()=>{if(done||picked.length!==3)return;if(!picked.every((v,i)=>v===i)){feedback.textContent='先看時間的小時數字，數字小的先發生。可以退回調整。';return;}done=true;sound();draw();feedback.textContent='先後順序排好了，鼠媽媽可以照計畫出發囉！';next.hidden=false;}),next=btn('下一天的計畫 →','primary',()=>{round++;fresh();});tools.append(undo,check,next);stage.append(tools);
+function fresh(){picked=[];done=false;feedback.textContent='';next.hidden=true;if(round>=5){tools.hidden=true;body.replaceChildren(el('h3','','五天的計畫排好了！時間安排小幫手 ⭐'),btn('再排一回 ↻','primary',dayplan));return;}order=shuffle([0,1,2]);if(order.every((v,i)=>v===i))[order[0],order[1]]=[order[1],order[0]];draw();}
+function draw(){body.replaceChildren();body.append(el('p','sp-progress','第 '+(round+1)+' / 5 天的計畫'),el('p','question','看 24 小時制的時間，把三件事從早到晚排好。'));
+const line=el('div','fg-timeline');for(let i=0;i<3;i++){const item=picked[i]!==undefined?deck[round][picked[i]]:null;line.append(el('div','fg-slot',item?String(item.time).padStart(2,'0')+':00 '+item.label:'第 '+(i+1)+' 件事'));}body.append(line);
+const row=el('div','sp-story-choices');order.forEach(i=>{const item=deck[round][i],b=btn(String(item.time).padStart(2,'0')+':00 '+item.label,'sp-story-piece',()=>{if(done||picked.includes(i))return;picked.push(i);feedback.textContent='';draw();});b.disabled=done||picked.includes(i);row.append(b);});body.append(row,el('p','mg-tip','例如 14:00 是下午 2 點，18:00 是下午 6 點。'));check.disabled=done||picked.length!==3;undo.disabled=done||!picked.length;next.textContent=round===4?'領取計畫星星 ⭐':'下一天的計畫 →';
+}fresh();
+}
+function numberhunt(max=30){
+const stage=familyStage('numberhunt');configs(stage,[[30,'1 到 30'],[100,'挑戰到 100']],max,v=>numberhunt(v));
+let target=1+Math.floor(Math.random()*max),low=1,high=max,tries=0,done=false;stage.append(el('p','question','雞爸爸藏了一個整數。每猜一次，都會告訴你太大還是太小。'));
+const range=el('p','fg-number-range'),count=el('p','mg-counter','已猜 0 次，沒有次數限制。'),row=el('div','sp-toolbar'),input=el('input','fg-number-input');
+input.type='number';input.inputMode='numeric';input.min='1';input.max=String(max);input.step='1';input.setAttribute('aria-label','輸入猜的整數');const label=el('label','','我猜是：');label.append(input);row.append(label);
+const submit=btn('猜猜看','primary',guess);row.append(submit);stage.append(range,count,row);const feedback=status(stage),again=btn('再猜一個數字 ↻','primary',()=>numberhunt(max));again.hidden=true;stage.append(again,el('p','mg-tip','小提示：先猜範圍中間的數字，可以更快縮小範圍。'));
+function draw(){range.textContent='目前範圍：'+low+' ～ '+high;input.min=String(low);input.max=String(high);}
+function guess(){if(done)return;const text=String(input.value??'').trim(),value=Number(text);if(!/^\d+$/.test(text)||!Number.isInteger(value)||value<low||value>high){feedback.textContent='請輸入 '+low+' 到 '+high+' 之間的整數。';return;}
+tries++;count.textContent='已猜 '+tries+' 次，沒有次數限制。';if(value===target){done=true;feedback.textContent='猜中了！雞爸爸藏的是 '+target+'，你用了 '+tries+' 次 ⭐';submit.disabled=true;input.disabled=true;again.hidden=false;sound();}
+else{if(value<target){low=value+1;feedback.textContent='太小了！再找一個大一點的數字。';}else{high=value-1;feedback.textContent='太大了！再找一個小一點的數字。';}input.value='';draw();input.focus();}
+}
+input.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();guess();}});draw();
+}
+const sceneItems=[['🍎','紅蘋果'],['🍏','青蘋果'],['🍌','香蕉'],['🍊','橘子'],['🚗','小汽車'],['🚕','計程車'],['⚽','足球'],['🏀','籃球'],['🧸','小熊'],['📚','書本'],['🌷','鬱金香'],['🌻','向日葵'],['⭐','星星'],['🌙','月亮'],['🎈','氣球'],['🎁','禮物']];
+function spot(){
+const stage=familyStage('spot');let round=0,differences=[],found=new Set(),left=[],right=[];const body=el('div');stage.append(body);const feedback=status(stage),tools=el('div','sp-toolbar'),hint=btn('提示一個位置','secondary',()=>{const index=differences.find(i=>!found.has(i));if(index!==undefined){const cell=body.querySelectorAll('.fg-right-cell')[index];cell.classList.add('hinted');feedback.textContent='看看黃色外框這一格，和左圖有什麼不同？';}}),next=btn('下一組生活畫面 →','primary',()=>{round++;fresh();});tools.append(hint,next);stage.append(tools);
+function fresh(){body.replaceChildren();feedback.textContent='';next.hidden=true;if(round>=5){hint.hidden=true;body.append(el('h3','','五組不同都找到了！生活小偵探 ⭐'),btn('再觀察一回 ↻','primary',spot));return;}
+left=shuffle(sceneItems).slice(0,9);right=left.slice();differences=shuffle([0,1,2,3,4,5,6,7,8]).slice(0,3);found=new Set();
+differences.forEach(i=>{right[i]=shuffle(sceneItems.filter(item=>item[1]!==left[i][1]))[0];});
+body.append(el('p','sp-progress','第 '+(round+1)+' / 5 組 · 找到 0 / 3 處不同'),el('p','question','比較兩張圖，點右圖不一樣的三個格子。'));const scenes=el('div','fg-scenes');
+for(let side=0;side<2;side++){const box=el('div');box.append(el('h3','',side?'右圖：點不同的地方':'左圖：參考圖'));const grid=el('div','fg-scene');(side?right:left).forEach((item,index)=>{const cell=side?btn(item[0],'fg-scene-cell fg-right-cell',()=>choose(index,cell)):el('div','fg-scene-cell',item[0]);cell.setAttribute('aria-label',(side?'右圖':'左圖')+'第 '+(index+1)+' 格：'+item[1]);grid.append(cell);});box.append(grid);scenes.append(box);}body.append(scenes);
+}
+function choose(index,cell){if(found.has(index))return;if(!differences.includes(index)){feedback.textContent='這一格一樣，找找其他地方。';return;}
+found.add(index);cell.classList.remove('hinted');cell.classList.add('found');cell.disabled=true;body.querySelector('.sp-progress').textContent='第 '+(round+1)+' / 5 組 · 找到 '+found.size+' / 3 處不同';feedback.textContent=found.size===3?'三處都找到了！雞爸爸佩服你的觀察力。':'找到一處了，再看看另外兩處。';sound();if(found.size===3){next.hidden=false;next.textContent=round===4?'領取觀察星星 ⭐':'下一組生活畫面 →';}
+}fresh();
+}
+const familyIds=Object.keys(familyGameHost);
+const familyCards=familyIds.map(id=>areas.dodo.grid.querySelector('[data-game-id="'+id+'"]'));
+familyCards.forEach((card,i)=>{
+const host=familyHosts[familyGameHost[familyIds[i]]];card.dataset.host=familyGameHost[familyIds[i]];card.classList.add('sp-new');
+if(host.image){const picture=el('img','fg-avatar');picture.src=host.image;picture.alt=host.name;picture.loading='lazy';card.prepend(picture);const icon=card.querySelector('.mg-icon');if(icon)icon.hidden=true;}
+});
+areas.dodo.grid.prepend(...familyCards);
+const roleFilters=el('div','fg-filter');roleFilters.setAttribute('role','group');roleFilters.setAttribute('aria-label','依角色找遊戲');
+[['all','全部遊戲'],['new','八款新遊戲'],['devil','👿 小惡魔'],['ama','兔阿嬤'],['mom','鼠媽媽'],['dad','雞爸爸']].forEach(([key,label])=>{
+const b=btn(label,'pill',()=>{roleFilters.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));areas.dodo.grid.querySelectorAll('.mg-card').forEach(card=>{card.hidden=key!=='all'&&(key==='new'?!familyIds.includes(card.dataset.gameId):card.dataset.host!==key);});});
+b.setAttribute('aria-pressed',String(key==='all'));roleFilters.append(b);
+});
+areas.dodo.menu.querySelector('.mg-menu-heading').after(roleFilters);
+
+
 })();
-
-
-
-

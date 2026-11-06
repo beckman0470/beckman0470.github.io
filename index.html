@@ -1,162 +1,273 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-Hant">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>互動樂園｜雞爸爸生活研究室</title><meta name="description" content="和鼠姊姊學注音與ABC，陪龍弟弟找貓咪、玩節奏。"><style>
-:root{--ink:#353e39;--green:#426b54;--paper:#faf7ef;--line:#e4e4d7;--orange:#f1bc80}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:system-ui,"Microsoft JhengHei",sans-serif}button,a{-webkit-tap-highlight-color:transparent}button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible{outline:4px solid #d88037;outline-offset:5px}header{max-width:1120px;margin:auto;padding:24px;display:flex;align-items:center;justify-content:space-between;gap:12px}a{color:var(--green)}.brand{font-weight:800;text-decoration:none}.small{font-size:14px;color:#687369}main{max-width:1080px;margin:auto;padding:24px 24px 60px}.intro{text-align:center;margin:18px 0 36px}.eyebrow{letter-spacing:3px;font-size:13px;color:var(--green);font-weight:700}h1{font-size:clamp(32px,5vw,52px);margin:12px 0}h2{font-size:28px;margin:10px 0}p{line-height:1.8}.tabs{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:24px 0}.tab,.pill{border:1px solid #cbd5ca;border-radius:999px;padding:12px 20px;background:white;color:var(--green);font-weight:700}.tab[aria-selected=true]{background:var(--green);color:white}.panel{background:#fff;border:1px solid var(--line);border-radius:28px;padding:28px;box-shadow:0 12px 40px #304d3610}.panel-head{display:flex;align-items:center;gap:18px}.portrait{width:76px;height:88px;object-fit:cover;object-position:top;border-radius:20px;background:#efe6d5}.hint{margin:4px 0;color:#69736b}.modes{display:flex;gap:10px;flex-wrap:wrap;margin:24px 0}.mode{border:1px solid #ddd;border-radius:13px;padding:12px 18px;background:var(--paper);color:var(--ink)}.mode[aria-pressed=true]{background:#e4efdf;border-color:#7f9c76;font-weight:800}.playbox{text-align:center;background:#f7f8f1;border-radius:22px;padding:24px;min-height:340px}.question{font-size:21px;margin:8px}.target{font-size:76px;font-weight:800;line-height:1.4;color:var(--green)}.answers{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;max-width:640px;margin:22px auto}.answer{border:2px solid #dedfd2;border-radius:20px;background:#fff;min-height:96px;font-size:42px;color:var(--ink);transition:transform .15s,background .15s}.answer:hover{transform:translateY(-3px)}.answer.good{background:#d5ead3;border-color:#719c64}.answer.wrong{background:#ffeddb;border-color:#dda26b}.feedback{min-height:32px;font-size:18px;font-weight:700;margin:12px 0;color:var(--green)}.controls{display:flex;gap:12px;justify-content:center;align-items:center;flex-wrap:wrap}.primary{border:0;border-radius:14px;padding:14px 24px;background:var(--green);color:white;font-weight:750}.secondary{border:1px solid #bac9b8;border-radius:14px;padding:12px 20px;background:white;color:var(--green)}.progress{font-size:14px;color:#65715f}.stars{letter-spacing:5px;color:#986f28}.closets{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:650px;margin:24px auto}.closet{border:2px solid #e1d4bd;background:#f2e5cc;border-radius:22px;min-height:160px;font-size:64px}.cat-wrap{margin:22px auto}.cat-button{background:#fff4df;border:2px solid #eddbb9;border-radius:40px;width:220px;height:200px}.cat-button svg{width:170px;height:160px}.cat-button.bounce{animation:bounce .35s}.pads{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;max-width:520px;margin:24px auto}.pad{min-height:135px;border:0;border-radius:28px;color:#343d37;font-weight:800;font-size:27px;box-shadow:0 7px 0 #00000016}.pad:nth-child(1){background:#f0c395}.pad:nth-child(2){background:#c4d6b5}.pad:nth-child(3){background:#d0c9df}.pad:nth-child(4){background:#e9d78c}.pad:active,.pad.hit{transform:translateY(5px);box-shadow:0 2px 0 #00000016}.notice{font-size:13px;color:#73796f;max-width:720px;margin:24px auto 0;text-align:center}footer{text-align:center;font-size:13px;color:#75806f;margin:30px}button:disabled{cursor:default}.round{margin:12px auto;width:min(100%,640px);height:7px;background:#e1e7dc;border-radius:9px;overflow:hidden}.round span{display:block;background:#79976c;height:100%;transition:width .2s}@keyframes bounce{50%{transform:translateY(-12px) rotate(-4deg)}}@media(max-width:600px){header{padding:18px;font-size:14px}main{padding:12px 14px 40px}.panel{padding:18px}.playbox{padding:18px 12px}.answers{grid-template-columns:repeat(2,1fr);gap:12px}.answer{min-height:82px}.closets{gap:8px}.closet{min-height:120px;font-size:45px}.panel-head{gap:12px}h2{font-size:23px}.portrait{width:62px;height:76px}.tabs .tab{padding:12px 16px}}
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
-.game-cat{display:block;max-width:100%;width:180px;height:170px;object-fit:contain;margin:auto;user-select:none}.closet .game-cat{width:100%;height:130px}.closet:disabled{opacity:1}.cat-wrap{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;max-width:500px}.cat-wrap .cat-button{width:100%;height:210px;margin:0!important}.cat-choice{display:flex;flex-direction:column;align-items:center;gap:8px;min-width:0}.cat-choice .small{font-size:18px;font-weight:700;color:#426b54}@media(max-width:600px){.cat-wrap{gap:12px}.cat-wrap .cat-button{height:170px}.game-cat{height:145px}.closet .game-cat{height:95px}}
-/* Dragon video corner: scoped to preserve existing games. */
-.dv-corner{margin-top:30px;border-top:1px solid #e4e4d7;padding-top:28px}.dv-heading{font-size:25px;margin:8px 0}.dv-intro{color:#687369;margin:8px 0 18px}.dv-filters{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0}.dv-filter{border:1px solid #cad5c7;border-radius:999px;padding:10px 16px;background:#fff;color:#426b54;min-height:44px}.dv-filter[aria-pressed=true]{background:#426b54;color:white;border-color:#426b54}.dv-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.dv-card{border:1px solid #e0e4d7;border-radius:20px;overflow:hidden;background:#faf9f2;min-width:0}.dv-watch{display:block;width:100%;border:0;padding:0;background:transparent;color:#353e39;text-align:left}.dv-cover{display:block;position:relative;background:#e9eddf;aspect-ratio:16/9;overflow:hidden}.dv-cover img{width:100%;height:100%;object-fit:cover}.dv-cover b{position:absolute;inset:0;display:grid;place-items:center;font-size:36px;color:white;text-shadow:0 2px 10px #000c;background:#0001}.dv-copy{display:block;padding:14px 16px 10px}.dv-category{display:block;color:#66805a;font-size:12px;letter-spacing:1px}.dv-name{display:block;font-size:18px;font-weight:800;margin-top:5px}.dv-out{display:inline-block;font-size:13px;margin:0 16px 15px;min-height:30px}.dv-player{background:#f2f4eb;border:1px solid #dce4d1;border-radius:20px;padding:18px;margin-bottom:22px;scroll-margin-top:20px}.dv-player-top{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:12px}.dv-now{font-size:18px;margin:0}.dv-stop{border:1px solid #aebbab;border-radius:999px;background:white;color:#426b54;padding:10px 16px;min-height:44px}.dv-frame{aspect-ratio:16/9;background:#26332a;border-radius:12px;overflow:hidden}.dv-frame iframe{display:block;width:100%;height:100%;border:0}.dv-help{font-size:13px;color:#6b7667;margin:12px 0 0;line-height:1.8}.dv-note{font-size:13px;color:#727b6b;margin-top:20px;line-height:1.8}.dv-grid [hidden],.dv-corner [hidden]{display:none!important}@media(max-width:800px){.dv-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:480px){.dv-grid{grid-template-columns:1fr}.dv-heading{font-size:22px}.dv-player{padding:12px}.dv-filter{padding:10px 13px}}
-</style><script defer src="/play/games.js?v=20261106-sixplus1"></script>
+<head>
+<!-- CDJ_HOME_AMA_NO_GLASSES_V71_20260717 -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>雞爸爸生活研究室 | Chicken Dad Journal</title>
+  <meta name="description" content="用科學理解生活，用陪伴記錄成長。雞爸爸 ChickenDad 在《雞爸爸生活研究室》記錄一家人的生活故事。">
+  <link rel="canonical" href="https://beckman0470.github.io/">
+  <meta property="og:site_name" content="雞爸爸生活研究室 | Chicken Dad Journal">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="雞爸爸生活研究室 | Chicken Dad Journal">
+  <meta property="og:description" content="用科學理解生活，用陪伴記錄成長。雞爸爸 ChickenDad 在《雞爸爸生活研究室》記錄一家人的生活故事。">
+  <meta property="og:url" content="https://beckman0470.github.io/">
+  <meta property="og:image" content="https://beckman0470.github.io/assets/og/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://beckman0470.github.io/#chickendad",
+        "name": "雞爸爸 ChickenDad",
+        "alternateName": "ChickenDad",
+        "url": "https://beckman0470.github.io/",
+        "sameAs": [
+          "https://vocus.cc/user/@beckman",
+          "https://www.instagram.com/chickendadjournal/",
+          "https://www.facebook.com/ChickenDadJournal/",
+          "https://www.tiktok.com/@chickendad_official",
+          "https://www.youtube.com/@ChickenDadJournal"
+        ],
+        "brand": { "@id": "https://beckman0470.github.io/#organization" },
+        "worksFor": { "@id": "https://beckman0470.github.io/#organization" }
+      },
+      {
+        "@type": ["Organization", "Brand"],
+        "@id": "https://beckman0470.github.io/#organization",
+        "name": "雞爸爸生活研究室",
+        "alternateName": "Chicken Dad Journal",
+        "url": "https://beckman0470.github.io/",
+        "founder": { "@id": "https://beckman0470.github.io/#chickendad" }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://beckman0470.github.io/#website",
+        "name": "雞爸爸生活研究室",
+        "alternateName": "Chicken Dad Journal",
+        "url": "https://beckman0470.github.io/",
+        "publisher": { "@id": "https://beckman0470.github.io/#organization" }
+      }
+    ]
+  }
+  </script>
+  <link rel="stylesheet" href="css/homepage-hd-v2.css?v=20261106-large1">
+<script defer src="/js/analytics-consent.js"></script>
+<link rel="stylesheet" href="/css/article-recommendations.css">
+<script defer src="/js/article-recommendations.js"></script>
+<link rel="stylesheet" href="/css/social-links.css">
+<script defer src="/home-playful.js?v=20261105-cats-art1"></script>
 <link rel="stylesheet" href="/css/mobile-readable.css?v=20261106-large1">
-</head><body>
-<header><a class="brand" href="https://beckman0470.github.io/">雞爸爸生活研究室 <span class="small">／互動樂園</span></a><a href="https://beckman0470.github.io/">回到首頁 ↗</a></header>
-<main><nav aria-label="親子與大人互動入口" style="display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:0 0 24px"><a class="tab" href="/play/" aria-current="page" style="text-decoration:none;background:#426b54;color:white">陪孩子玩</a><a class="tab" href="/relax.html" style="text-decoration:none">換大人放風 ☕</a></nav><div class="intro"><span class="eyebrow">一起學，一起玩，一起長大</span><h1>今天，想玩什麼？</h1><p>鼠姊姊的字母小冒險，龍弟弟的貓咪小世界。<br>不用計時，慢慢玩也很棒。</p></div>
-<div class="tabs" role="tablist" aria-label="選擇遊戲區"><button class="tab" role="tab" id="tab-dodo" aria-controls="panel-dodo" aria-selected="true">鼠姊姊・學習樂園</button><button class="tab" role="tab" id="tab-dragon" aria-controls="panel-dragon" aria-selected="false" tabindex="-1">龍弟弟・快樂天地</button></div>
-<section class="panel" role="tabpanel" id="panel-dodo" aria-labelledby="tab-dodo"><div class="panel-head"><img class="portrait" src="https://beckman0470.github.io/assets/img/portrait-dodo.png" alt="鼠姊姊"><div><span class="eyebrow">DODO'S LITTLE CLASSROOM</span><h2>鼠姊姊學習樂園</h2><p class="hint">六歲＋新挑戰來了！探索迷宮、經營點心店、解密碼、排故事。</p></div></div>
-<div class="modes" aria-label="學習玩法"><button class="mode" data-learn="zh" aria-pressed="true">ㄅㄆㄇ 找朋友</button><button class="mode" data-learn="abc" aria-pressed="false">ABC 大小寫配對</button></div>
-<div class="playbox"><div class="progress" id="progress"></div><div class="round"><span id="bar"></span></div><p class="question" id="question"></p><div class="target" id="target"></div><div class="answers" id="answers"></div><div class="feedback" id="learn-feedback" role="status" aria-live="polite"></div><div class="controls"><button class="secondary" id="speak" hidden>🔊 聽英文字母</button><button class="primary" id="next" hidden>下一題 →</button><button class="secondary" id="restart">重新開始</button></div></div><section class="dv-corner" aria-labelledby="dd-title"><span class="eyebrow">DODO'S VIDEO CORNER</span><h2 class="dv-heading" id="dd-title">鼠姊姊的影音小客廳</h2><p class="dv-intro">今天想聽哪一首？點一張封面，跟著喜歡的音樂一起唱唱跳跳！</p><div class="dv-player" id="dd-player" hidden><div class="dv-player-top"><h3 class="dv-now" id="dd-now"></h3><button class="dv-stop" type="button" id="dd-stop">停止播放 ✕</button></div><div class="dv-frame" id="dd-frame"></div><p class="dv-help">如果影片無法在這裡播放，<a id="dd-external" target="_blank" rel="noopener noreferrer">到 YouTube 觀看 ↗</a></p></div><div class="dv-grid"><article class="dv-card" data-video-category="babymonster"><button type="button" class="dv-watch" data-video-id="-A6YAHHOEwA" aria-label="播放BABYMONSTER 精選"><span class="dv-cover"><img src="https://i.ytimg.com/vi/-A6YAHHOEwA/hqdefault.jpg" width="480" height="360" loading="lazy" alt="" onerror="this.hidden=true"><b aria-hidden="true">▶</b></span><span class="dv-copy"><span class="dv-category">BABYMONSTER</span><span class="dv-name">BABYMONSTER 精選</span></span></button><a class="dv-out" href="https://www.youtube.com/watch?v=-A6YAHHOEwA" target="_blank" rel="noopener noreferrer">到 YouTube 觀看 ↗</a></article>
-<article class="dv-card" data-video-category="babymonster"><button type="button" class="dv-watch" data-video-id="Y3ti9ODHrNU" aria-label="播放WE GO UP"><span class="dv-cover"><img src="https://i.ytimg.com/vi/Y3ti9ODHrNU/hqdefault.jpg" width="480" height="360" loading="lazy" alt="" onerror="this.hidden=true"><b aria-hidden="true">▶</b></span><span class="dv-copy"><span class="dv-category">BABYMONSTER</span><span class="dv-name">WE GO UP</span></span></button><a class="dv-out" href="https://www.youtube.com/watch?v=Y3ti9ODHrNU" target="_blank" rel="noopener noreferrer">到 YouTube 觀看 ↗</a></article>
-<article class="dv-card" data-video-category="babymonster"><button type="button" class="dv-watch" data-video-id="08ZFPaIk4DU" aria-label="播放SUGAR HONEY ICE TEA"><span class="dv-cover"><img src="https://i.ytimg.com/vi/08ZFPaIk4DU/hqdefault.jpg" width="480" height="360" loading="lazy" alt="" onerror="this.hidden=true"><b aria-hidden="true">▶</b></span><span class="dv-copy"><span class="dv-category">BABYMONSTER</span><span class="dv-name">SUGAR HONEY ICE TEA</span></span></button><a class="dv-out" href="https://www.youtube.com/watch?v=08ZFPaIk4DU" target="_blank" rel="noopener noreferrer">到 YouTube 觀看 ↗</a></article>
-<article class="dv-card" data-video-category="babymonster"><button type="button" class="dv-watch" data-video-id="TQfC0xdpiw4" aria-label="播放FOREVER"><span class="dv-cover"><img src="https://i.ytimg.com/vi/TQfC0xdpiw4/hqdefault.jpg" width="480" height="360" loading="lazy" alt="" onerror="this.hidden=true"><b aria-hidden="true">▶</b></span><span class="dv-copy"><span class="dv-category">BABYMONSTER</span><span class="dv-name">FOREVER</span></span></button><a class="dv-out" href="https://www.youtube.com/watch?v=TQfC0xdpiw4" target="_blank" rel="noopener noreferrer">到 YouTube 觀看 ↗</a></article><article class="dv-card" data-video-category="babymonster"><button type="button" class="dv-watch" data-video-id="OnO6cDEiDtQ" aria-label="播放CLIK CLAK"><span class="dv-cover"><img src="https://i.ytimg.com/vi/OnO6cDEiDtQ/hqdefault.jpg" width="480" height="360" loading="lazy" alt="" onerror="this.hidden=true"><b aria-hidden="true">▶</b></span><span class="dv-copy"><span class="dv-category">BABYMONSTER</span><span class="dv-name">CLIK CLAK</span></span></button><a class="dv-out" href="https://www.youtube.com/watch?v=OnO6cDEiDtQ" target="_blank" rel="noopener noreferrer">到 YouTube 觀看 ↗</a></article>
-<article class="dv-card" data-video-category="babymonster"><button type="button" class="dv-watch" data-video-id="aG9S0sRfO18" aria-label="播放Really Like You"><span class="dv-cover"><img src="https://i.ytimg.com/vi/aG9S0sRfO18/hqdefault.jpg" width="480" height="360" loading="lazy" alt="" onerror="this.hidden=true"><b aria-hidden="true">▶</b></span><span class="dv-copy"><span class="dv-category">BABYMONSTER</span><span class="dv-name">Really Like You</span></span></button><a class="dv-out" href="https://www.youtube.com/watch?v=aG9S0sRfO18" target="_blank" rel="noopener noreferrer">到 YouTube 觀看 ↗</a></article>
-<article class="dv-card" data-video-category="babymonster"><button type="button" class="dv-watch" data-video-id="1nWQysvZQjU" aria-label="播放I LIKE IT"><span class="dv-cover"><img src="https://i.ytimg.com/vi/1nWQysvZQjU/hqdefault.jpg" width="480" height="360" loading="lazy" alt="" onerror="this.hidden=true"><b aria-hidden="true">▶</b></span><span class="dv-copy"><span class="dv-category">BABYMONSTER</span><span class="dv-name">I LIKE IT</span></span></button><a class="dv-out" href="https://www.youtube.com/watch?v=1nWQysvZQjU" target="_blank" rel="noopener noreferrer">到 YouTube 觀看 ↗</a></article>
-<article class="dv-card" data-video-category="babymonster"><button type="button" class="dv-watch" data-video-id="SbdOIdg2McI" aria-label="播放SUPA DUPA LUV"><span class="dv-cover"><img src="https://i.ytimg.com/vi/SbdOIdg2McI/hqdefault.jpg" width="480" height="360" loading="lazy" alt="" onerror="this.hidden=true"><b aria-hidden="true">▶</b></span><span class="dv-copy"><span class="dv-category">BABYMONSTER</span><span class="dv-name">SUPA DUPA LUV</span></span></button><a class="dv-out" href="https://www.youtube.com/watch?v=SbdOIdg2McI" target="_blank" rel="noopener noreferrer">到 YouTube 觀看 ↗</a></article><article class="dv-card" data-video-category="favorites"><button type="button" class="dv-watch" data-video-id="yAXnEHFKKaY" aria-label="播放PSYCHO"><span class="dv-cover"><img src="https://i.ytimg.com/vi/yAXnEHFKKaY/hqdefault.jpg" width="480" height="360" loading="lazy" alt="" onerror="this.hidden=true"><b aria-hidden="true">▶</b></span><span class="dv-copy"><span class="dv-category">鼠姊姊點播</span><span class="dv-name">PSYCHO</span></span></button><a class="dv-out" href="https://www.youtube.com/watch?v=yAXnEHFKKaY" target="_blank" rel="noopener noreferrer">到 YouTube 觀看 ↗</a></article>
-<article class="dv-card" data-video-category="favorites"><button type="button" class="dv-watch" data-video-id="xw7Y2gviWbA" aria-label="播放Dangerously"><span class="dv-cover"><img src="https://i.ytimg.com/vi/xw7Y2gviWbA/hqdefault.jpg" width="480" height="360" loading="lazy" alt="" onerror="this.hidden=true"><b aria-hidden="true">▶</b></span><span class="dv-copy"><span class="dv-category">鼠姊姊點播</span><span class="dv-name">Dangerously</span></span></button><a class="dv-out" href="https://www.youtube.com/watch?v=xw7Y2gviWbA" target="_blank" rel="noopener noreferrer">到 YouTube 觀看 ↗</a></article>
-<article class="dv-card" data-video-category="favorites"><button type="button" class="dv-watch" data-video-id="2V6lvCUPT8I" aria-label="播放earthquake"><span class="dv-cover"><img src="https://i.ytimg.com/vi/2V6lvCUPT8I/hqdefault.jpg" width="480" height="360" loading="lazy" alt="" onerror="this.hidden=true"><b aria-hidden="true">▶</b></span><span class="dv-copy"><span class="dv-category">鼠姊姊點播</span><span class="dv-name">earthquake</span></span></button><a class="dv-out" href="https://www.youtube.com/watch?v=2V6lvCUPT8I" target="_blank" rel="noopener noreferrer">到 YouTube 觀看 ↗</a></article></div><p class="dv-note">十一支影片都從頭開始，點選封面後才載入播放器。只播放選定的單支影片，不帶入原連結的播放清單或電台設定。若要停下來，按「停止播放」或切換樂園即可。</p></section></section>
-<section class="panel" role="tabpanel" id="panel-dragon" aria-labelledby="tab-dragon" hidden><div class="panel-head"><img class="portrait" src="https://beckman0470.github.io/assets/img/portrait-dragon.png" alt="龍弟弟"><div><span class="eyebrow">DRAGON'S HAPPY PLACE</span><h2>龍弟弟快樂天地</h2><p class="hint">找貓咪、餵點心、玩拼圖，也可以一起看喜歡的影片。</p></div></div>
-<div class="modes" aria-label="遊戲玩法"><button class="mode" data-toddler="hide" aria-pressed="true">📦 貓咪躲貓貓</button><button class="mode" data-toddler="pet" aria-pressed="false">🐾 摸摸貓咪</button><button class="mode" data-toddler="drum" aria-pressed="false">🥁 BANG 節奏鼓</button></div>
-<div class="playbox"><div id="toddler-stage"></div><div class="feedback" id="cat-feedback" role="status" aria-live="polite"></div><div class="controls"><button class="primary" id="hide-again">再躲一次 ↻</button><button class="secondary" id="sound" aria-pressed="true">聲音：開</button></div></div>
-<section class="dv-corner" aria-labelledby="dv-title"><span class="eyebrow">DRAGON'S VIDEO CORNER</span><h2 class="dv-heading" id="dv-title">龍弟弟的影音小客廳</h2><p class="dv-intro">貓咪、垃圾車，還有喜歡的唱唱跳跳。點一張封面，一起看一下！</p><div class="dv-filters" role="group" aria-label="選擇影片分類"><button class="dv-filter" type="button" data-video-filter="all" aria-pressed="true">全部</button><button class="dv-filter" type="button" data-video-filter="cats" aria-pressed="false">🐱 貓咪</button><button class="dv-filter" type="button" data-video-filter="trucks" aria-pressed="false">🚛 垃圾車</button><button class="dv-filter" type="button" data-video-filter="bebefinn" aria-pressed="false">🎵 貝貝彬</button><button class="dv-filter" type="button" data-video-filter="shimajiro" aria-pressed="false">🐯 巧虎</button><button class="dv-filter" type="button" data-video-filter="cocomelon" aria-pressed="false">🍉 CoComelon</button><button class="dv-filter" type="button" data-video-filter="music" aria-pressed="false">🎤 BANGBANGBANG</button></div><div class="dv-player" id="dv-player" hidden><div class="dv-player-top"><h3 class="dv-now" id="dv-now"></h3><button class="dv-stop" type="button" id="dv-stop">停止播放 ✕</button></div><div class="dv-frame" id="dv-frame"></div><p class="dv-help">如果影片無法在這裡播放，<a id="dv-external" target="_blank" rel="noopener noreferrer">到 YouTube 觀看 ↗</a></p></div><div class="dv-grid"><article class="dv-card" data-video-category="cats"><button type="button" class="dv-watch" data-video-id="w2T0tbPYIuw" aria-label="播放貓咪時間 ①"><span class="dv-cover"><img src="https://i.ytimg.com/vi/w2T0tbPYIuw/hqdefault.jpg" width="480" height="360" loading="lazy" alt="" onerror="this.hidden=true"><b aria-hidden="true">▶</b></span><span class="dv-copy"><span class="dv-category">貓咪</span><span class="dv-name">貓咪時間 ①</span></span></button><a class="dv-out" href="https://www.youtube.com/watch?v=w2T0tbPYIuw" target="_blank" rel="noopener noreferrer">到 YouTube 觀看 ↗</a></article>
-<article class="dv-card" data-video-category="cats"><button type="button" class="dv-watch" data-video-id="KRfDrHpRxEo" aria-label="播放貓咪時間 ②"><span class="dv-cover"><img src="https://i.ytimg.com/vi/KRfDrHpRxEo/hqdefault.jpg" width="480" height="360" loading="lazy" alt="" onerror="this.hidden=true"><b aria-hidden="true">▶</b></span><span class="dv-copy"><span class="dv-category">貓咪</span><span class="dv-name">貓咪時間 ②</span></span></button><a class="dv-out" href="https://www.youtube.com/watch?v=KRfDrHpRxEo" target="_blank" rel="noopener noreferrer">到 YouTube 觀看 ↗</a></article>
-<article class="dv-card" data-video-category="trucks"><button type="button" class="dv-watch" data-video-id="ONhHtqFziZ0" aria-label="播放垃圾車來囉"><span class="dv-cover"><img src="https://i.ytimg.com/vi/ONhHtqFziZ0/hqdefault.jpg" width="480" height="360" loading="lazy" alt="" onerror="this.hidden=true"><b aria-hidden="true">▶</b></span><span class="dv-copy"><span class="dv-category">垃圾車</span><span class="dv-name">垃圾車來囉</span></span></button><a class="dv-out" href="https://www.youtube.com/watch?v=ONhHtqFziZ0" target="_blank" rel="noopener noreferrer">到 YouTube 觀看 ↗</a></article>
-<article class="dv-card" data-video-category="bebefinn"><button type="button" class="dv-watch" data-video-id="QsNij0F8vLU" aria-label="播放貝貝彬唱唱跳跳"><span class="dv-cover"><img src="https://i.ytimg.com/vi/QsNij0F8vLU/hqdefault.jpg" width="480" height="360" loading="lazy" alt="" onerror="this.hidden=true"><b aria-hidden="true">▶</b></span><span class="dv-copy"><span class="dv-category">貝貝彬</span><span class="dv-name">貝貝彬唱唱跳跳</span></span></button><a class="dv-out" href="https://www.youtube.com/watch?v=QsNij0F8vLU" target="_blank" rel="noopener noreferrer">到 YouTube 觀看 ↗</a></article>
-<article class="dv-card" data-video-category="shimajiro"><button type="button" class="dv-watch" data-video-id="E1UKNVB-TGI" aria-label="播放和巧虎一起看"><span class="dv-cover"><img src="https://i.ytimg.com/vi/E1UKNVB-TGI/hqdefault.jpg" width="480" height="360" loading="lazy" alt="" onerror="this.hidden=true"><b aria-hidden="true">▶</b></span><span class="dv-copy"><span class="dv-category">巧虎</span><span class="dv-name">和巧虎一起看</span></span></button><a class="dv-out" href="https://www.youtube.com/watch?v=E1UKNVB-TGI" target="_blank" rel="noopener noreferrer">到 YouTube 觀看 ↗</a></article>
-<article class="dv-card" data-video-category="cocomelon"><button type="button" class="dv-watch" data-video-id="e_04ZrNroTo" aria-label="播放CoComelon 歡樂時間"><span class="dv-cover"><img src="https://i.ytimg.com/vi/e_04ZrNroTo/hqdefault.jpg" width="480" height="360" loading="lazy" alt="" onerror="this.hidden=true"><b aria-hidden="true">▶</b></span><span class="dv-copy"><span class="dv-category">CoComelon</span><span class="dv-name">CoComelon 歡樂時間</span></span></button><a class="dv-out" href="https://www.youtube.com/watch?v=e_04ZrNroTo" target="_blank" rel="noopener noreferrer">到 YouTube 觀看 ↗</a></article><article class="dv-card" data-video-category="music"><button type="button" class="dv-watch" data-video-id="2ips2mM7Zqw" aria-label="播放BANGBANGBANG"><span class="dv-cover"><img src="https://i.ytimg.com/vi/2ips2mM7Zqw/hqdefault.jpg" width="480" height="360" loading="lazy" alt="" onerror="this.hidden=true"><b aria-hidden="true">▶</b></span><span class="dv-copy"><span class="dv-category">BANGBANGBANG</span><span class="dv-name">BANGBANGBANG</span></span></button><a class="dv-out" href="https://www.youtube.com/watch?v=2ips2mM7Zqw" target="_blank" rel="noopener noreferrer">到 YouTube 觀看 ↗</a></article></div><p class="dv-note">給爸爸媽媽：七支影片都從頭開始，點選封面後才載入播放器。影片由 YouTube 提供，可能出現廣告或推薦內容；樂園的聲音開關僅控制遊戲音效，影片音量請用播放器調整。</p></section>
-</section>
-<p class="notice">給爸爸媽媽：每回合 5 題，隨時可以停下來。英文字母發音使用裝置語音；注音採看字配對。節奏鼓使用合成音效。這裡不蒐集孩子姓名，也不需要登入。</p></main><footer>雞爸爸生活研究室 · 把陪伴，變成好玩的日常</footer>
-<script>
-'use strict';
-const $=s=>document.querySelector(s), $$=s=>Array.from(document.querySelectorAll(s));
-let learnMode='zh',round=0,answered=false,deck=[],sound=true,audioCtx=null,catAt=0,found=false,pets=0,toddlerMode='hide';
-const zh=Array.from('ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦ');
-const alphabet=Array.from('ABCDEFGHIJKLMNOPQRSTUVWXYZ');
-function shuffle(xs){const a=xs.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
-function tone(kind){if(!sound)return;try{audioCtx=audioCtx||new(window.AudioContext||window.webkitAudioContext)();audioCtx.resume();const t=audioCtx.currentTime,o=audioCtx.createOscillator(),g=audioCtx.createGain();o.connect(g);g.connect(audioCtx.destination);const f={good:660,pet:480,kick:140,snare:310,bell:880,clap:220}[kind]||440;o.type=kind==='snare'?'triangle':'sine';o.frequency.setValueAtTime(f,t);o.frequency.exponentialRampToValueAtTime(kind==='kick'?45:f*.7,t+.18);g.gain.setValueAtTime(.14,t);g.gain.exponentialRampToValueAtTime(.001,t+.28);o.start(t);o.stop(t+.3);}catch(e){}}
-function start(){round=0;deck=shuffle(learnMode==='zh'?zh:alphabet).slice(0,5);renderQuestion();}
-function renderQuestion(){answered=false;$('#next').hidden=true;$('#restart').hidden=false;$('#speak').hidden=learnMode!=='abc'||!('speechSynthesis'in window);$('#learn-feedback').textContent='';$('#progress').textContent='第 '+(round+1)+' / 5 題 · 已完成 '+round+' 題';$('#bar').style.width=(round/5*100)+'%';const target=deck[round];$('#question').textContent=learnMode==='zh'?'找出和上面一樣的注音':'找出這個大寫字母的小寫朋友';$('#target').textContent=target;const pool=learnMode==='zh'?zh:alphabet;const choices=shuffle([target,...shuffle(pool.filter(x=>x!==target)).slice(0,3)]);$('#answers').replaceChildren();choices.forEach(letter=>{const b=document.createElement('button');b.className='answer';b.textContent=learnMode==='abc'?letter.toLowerCase():letter;b.setAttribute('aria-label','選擇 '+b.textContent);b.addEventListener('click',()=>{if(answered)return;if(letter===target){answered=true;b.classList.add('good');tone('good');$('#learn-feedback').textContent='找到了！你觀察得好仔細 ⭐';$$('.answer').forEach(x=>x.disabled=true);$('#next').textContent=round===4?'看看我的小星星 ⭐':'下一題 →';$('#next').hidden=false;$('#bar').style.width=((round+1)/5*100)+'%';}else{b.classList.add('wrong');b.disabled=true;$('#learn-feedback').textContent='再看一看上面的字，試試另一個。';}});$('#answers').append(b);});}
-$('#next').addEventListener('click',()=>{if(!answered)return;if(round<4){round++;renderQuestion();}else{$('#question').textContent='今天的 5 題都完成了！';$('#target').textContent='好棒！';$('#answers').replaceChildren();$('#learn-feedback').textContent='⭐ ⭐ ⭐ ⭐ ⭐';$('#progress').textContent='已完成 5 / 5 題';$('#next').hidden=true;$('#speak').hidden=true;$('#restart').textContent='再玩一回合 ↻';}});
-$('#restart').addEventListener('click',()=>{$('#restart').textContent='重新開始';start();});
-$$('[data-learn]').forEach(b=>b.addEventListener('click',()=>{learnMode=b.dataset.learn;$$('[data-learn]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));$('#restart').textContent='重新開始';if('speechSynthesis'in window)speechSynthesis.cancel();start();}));
-$('#speak').addEventListener('click',()=>{if(!('speechSynthesis'in window))return;speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(deck[round]);u.lang='en-US';u.rate=.7;speechSynthesis.speak(u);});
-function selectTab(name){const d=name==='dodo';$('#panel-dodo').hidden=!d;$('#panel-dragon').hidden=d;$$('[role=tab]').forEach(b=>{const active=b.id==='tab-'+name;b.setAttribute('aria-selected',String(active));b.tabIndex=active?0:-1;});if('speechSynthesis'in window)speechSynthesis.cancel();}
-$$('[role=tab]').forEach(b=>{b.addEventListener('click',()=>selectTab(b.id.slice(4)));b.addEventListener('keydown',e=>{if(['ArrowLeft','ArrowRight','Home','End'].includes(e.key)){e.preventDefault();const name=e.key==='Home'?'dodo':e.key==='End'?'dragon':b.id==='tab-dodo'?'dragon':'dodo';selectTab(name);$('#tab-'+name).focus();}});});
-function catPicture(orange,pose){return '<img class="game-cat" src="/cat-'+(orange?'youyou':'yahoo')+'-'+pose+'.png?v=20261105-art1" alt="'+(orange?'右右':'雅虎')+'" width="180" height="180" draggable="false">';}
-function renderToddler(){const stage=$('#toddler-stage');stage.replaceChildren();$('#cat-feedback').textContent='';$('#hide-again').hidden=toddlerMode!=='hide';if(toddlerMode==='hide'){catAt=Math.floor(Math.random()*3);found=false;const hiddenOrange=Math.random()<.5;const hiddenName=hiddenOrange?'右右':'雅虎';const p=document.createElement('p');p.className='question';p.textContent='貓咪躲進箱子裡了，打開看看！';const row=document.createElement('div');row.className='closets';for(let i=0;i<3;i++){const b=document.createElement('button');b.className='closet';b.textContent='📦';b.setAttribute('aria-label','打開第 '+(i+1)+' 個箱子');b.addEventListener('click',()=>{if(found)return;if(i===catAt){found=true;b.innerHTML=catPicture(hiddenOrange,'peek');b.setAttribute('aria-label','找到'+hiddenName+'了');$('#cat-feedback').textContent=hiddenName+'：喵～你找到我了！';tone('pet');row.querySelectorAll('button').forEach(x=>x.disabled=true);}else{b.textContent='🐾';b.disabled=true;$('#cat-feedback').textContent='這裡有小腳印，找找其他箱子！';}});row.append(b);}stage.append(p,row);}else if(toddlerMode==='pet'){pets=0;const p=document.createElement('p');p.className='question';p.textContent='輕輕摸摸貓咪，聽牠開心的聲音。';const row=document.createElement('div');row.className='cat-wrap';['雅虎','右右'].forEach((name,i)=>{const b=document.createElement('button');b.className='cat-button';b.style.margin='8px';b.innerHTML=catPicture(i===1,i===1?'sleep':'peek');b.setAttribute('aria-label','摸摸'+name);b.addEventListener('click',()=>{pets++;b.classList.remove('bounce');void b.offsetWidth;b.classList.add('bounce');tone('pet');$('#cat-feedback').textContent=name+'：'+['喵～謝謝你陪我！','呼嚕呼嚕，好舒服！','再陪我玩一下嘛～'][pets%3];});const choice=document.createElement('div');choice.className='cat-choice';const label=document.createElement('span');label.className='small';label.textContent=name;choice.append(b,label);row.append(choice);});stage.append(p,row);}else{const p=document.createElement('p');p.className='question';p.textContent='點一下、拍一下，打出你自己的節奏！';const row=document.createElement('div');row.className='pads';[['咚！','kick'],['啪！','snare'],['叮！','bell'],['砰！','clap']].forEach(([label,key])=>{const b=document.createElement('button');b.className='pad';b.textContent=label;b.addEventListener('click',()=>{tone(key);$('#cat-feedback').textContent=label+' 你的節奏真好聽！';});row.append(b);});stage.append(p,row);}}
-$$('[data-toddler]').forEach(b=>b.addEventListener('click',()=>{toddlerMode=b.dataset.toddler;$$('[data-toddler]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));renderToddler();}));
-$('#hide-again').addEventListener('click',renderToddler);$('#sound').addEventListener('click',()=>{sound=!sound;$('#sound').textContent='聲音：'+(sound?'開':'關');$('#sound').setAttribute('aria-pressed',String(sound));});document.addEventListener('visibilitychange',()=>{if(document.hidden&&'speechSynthesis'in window)speechSynthesis.cancel();});
-start();renderToddler();
-</script><script>
-/* Dragon video corner: no player loads until a cover is clicked. */
-(() => {
-'use strict';
-const videos=[{"id":"w2T0tbPYIuw","name":"貓咪時間 ①","category":"cats","group":"貓咪"},{"id":"KRfDrHpRxEo","name":"貓咪時間 ②","category":"cats","group":"貓咪"},{"id":"ONhHtqFziZ0","name":"垃圾車來囉","category":"trucks","group":"垃圾車"},{"id":"QsNij0F8vLU","name":"貝貝彬唱唱跳跳","category":"bebefinn","group":"貝貝彬"},{"id":"E1UKNVB-TGI","name":"和巧虎一起看","category":"shimajiro","group":"巧虎"},{"id":"e_04ZrNroTo","name":"CoComelon 歡樂時間","category":"cocomelon","group":"CoComelon"},{"id":"2ips2mM7Zqw","name":"BANGBANGBANG","category":"music","group":"BANGBANGBANG"}];
-const corner=document.querySelector('#panel-dragon .dv-corner');
-if(!corner)return;
-const player=corner.querySelector('#dv-player');
-const frame=corner.querySelector('#dv-frame');
-const now=corner.querySelector('#dv-now');
-const external=corner.querySelector('#dv-external');
-const stop=corner.querySelector('#dv-stop');
-let lastButton=null;
-function stopVideo(restoreFocus=false){
-frame.replaceChildren();player.hidden=true;
-if(restoreFocus&&lastButton&&!lastButton.closest('[hidden]'))lastButton.focus();
-}
-corner.querySelectorAll('[data-video-id]').forEach(button=>button.addEventListener('click',()=>{
-const video=videos.find(v=>v.id===button.dataset.videoId);
-if(!video)return;
-document.dispatchEvent(new CustomEvent('cdj-video-start',{detail:corner}));
-lastButton=button;
-frame.replaceChildren();
-const iframe=document.createElement('iframe');
-iframe.src='https://www.youtube-nocookie.com/embed/'+video.id+'?autoplay=1&playsinline=1&rel=0&start=0';
-iframe.title=video.name+' — YouTube 影片';
-iframe.setAttribute('allow','autoplay; encrypted-media; picture-in-picture; fullscreen');
-iframe.setAttribute('allowfullscreen','');
-iframe.referrerPolicy='strict-origin-when-cross-origin';
-now.textContent='正在播放：'+video.name;
-external.href='https://www.youtube.com/watch?v='+video.id;
-frame.append(iframe);player.hidden=false;
-if('speechSynthesis' in window)window.speechSynthesis.cancel();
-player.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'start'});
-stop.focus({preventScroll:true});
-}));
-document.addEventListener('cdj-video-start',event=>{if(event.detail!==corner)stopVideo();});
-stop.addEventListener('click',()=>stopVideo(true));
-corner.querySelectorAll('[data-video-filter]').forEach(button=>button.addEventListener('click',()=>{
-stopVideo();
-const selected=button.dataset.videoFilter;
-corner.querySelectorAll('[data-video-filter]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
-corner.querySelectorAll('[data-video-category]').forEach(card=>{card.hidden=selected!=='all'&&card.dataset.videoCategory!==selected;});
-}));
-new MutationObserver(()=>{if(document.querySelector('#panel-dragon').hidden)stopVideo();}).observe(document.querySelector('#panel-dragon'),{attributes:true,attributeFilter:['hidden']});
-document.addEventListener('visibilitychange',()=>{if(document.hidden)stopVideo();});
-corner.addEventListener('keydown',event=>{if(event.key==='Escape'&&!player.hidden){event.preventDefault();stopVideo(true);}});
-})();
-</script>
-<script>
-/* Dodo video corner: no player loads until a cover is clicked. */
-(() => {
-'use strict';
-const videos=[{"id":"-A6YAHHOEwA","name":"BABYMONSTER 精選","category":"babymonster","group":"BABYMONSTER"},{"id":"Y3ti9ODHrNU","name":"WE GO UP","category":"babymonster","group":"BABYMONSTER"},{"id":"08ZFPaIk4DU","name":"SUGAR HONEY ICE TEA","category":"babymonster","group":"BABYMONSTER"},{"id":"TQfC0xdpiw4","name":"FOREVER","category":"babymonster","group":"BABYMONSTER"},{"id":"OnO6cDEiDtQ","name":"CLIK CLAK","category":"babymonster","group":"BABYMONSTER"},{"id":"aG9S0sRfO18","name":"Really Like You","category":"babymonster","group":"BABYMONSTER"},{"id":"1nWQysvZQjU","name":"I LIKE IT","category":"babymonster","group":"BABYMONSTER"},{"id":"SbdOIdg2McI","name":"SUPA DUPA LUV","category":"babymonster","group":"BABYMONSTER"},{"id":"yAXnEHFKKaY","name":"PSYCHO","category":"favorites","group":"鼠姊姊點播"},{"id":"xw7Y2gviWbA","name":"Dangerously","category":"favorites","group":"鼠姊姊點播"},{"id":"2V6lvCUPT8I","name":"earthquake","category":"favorites","group":"鼠姊姊點播"}];
-const corner=document.querySelector('#panel-dodo .dv-corner');
-if(!corner)return;
-const player=corner.querySelector('#dd-player');
-const frame=corner.querySelector('#dd-frame');
-const now=corner.querySelector('#dd-now');
-const external=corner.querySelector('#dd-external');
-const stop=corner.querySelector('#dd-stop');
-let lastButton=null;
-function stopVideo(restoreFocus=false){
-frame.replaceChildren();player.hidden=true;
-if(restoreFocus&&lastButton&&!lastButton.closest('[hidden]'))lastButton.focus();
-}
-corner.querySelectorAll('[data-video-id]').forEach(button=>button.addEventListener('click',()=>{
-const video=videos.find(v=>v.id===button.dataset.videoId);
-if(!video)return;
-document.dispatchEvent(new CustomEvent('cdj-video-start',{detail:corner}));
-lastButton=button;
-frame.replaceChildren();
-const iframe=document.createElement('iframe');
-iframe.src='https://www.youtube-nocookie.com/embed/'+video.id+'?autoplay=1&playsinline=1&rel=0&start=0';
-iframe.title=video.name+' — YouTube 影片';
-iframe.setAttribute('allow','autoplay; encrypted-media; picture-in-picture; fullscreen');
-iframe.setAttribute('allowfullscreen','');
-iframe.referrerPolicy='strict-origin-when-cross-origin';
-now.textContent='正在播放：'+video.name;
-external.href='https://www.youtube.com/watch?v='+video.id;
-frame.append(iframe);player.hidden=false;
-if('speechSynthesis' in window)window.speechSynthesis.cancel();
-player.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'start'});
-stop.focus({preventScroll:true});
-}));
-document.addEventListener('cdj-video-start',event=>{if(event.detail!==corner)stopVideo();});
-stop.addEventListener('click',()=>stopVideo(true));
-corner.querySelectorAll('[data-video-filter]').forEach(button=>button.addEventListener('click',()=>{
-stopVideo();
-const selected=button.dataset.videoFilter;
-corner.querySelectorAll('[data-video-filter]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
-corner.querySelectorAll('[data-video-category]').forEach(card=>{card.hidden=selected!=='all'&&card.dataset.videoCategory!==selected;});
-}));
-new MutationObserver(()=>{if(document.querySelector('#panel-dodo').hidden)stopVideo();}).observe(document.querySelector('#panel-dodo'),{attributes:true,attributeFilter:['hidden']});
-document.addEventListener('visibilitychange',()=>{if(document.hidden)stopVideo();});
-corner.addEventListener('keydown',event=>{if(event.key==='Escape'&&!player.hidden){event.preventDefault();stopVideo(true);}});
-})();
-</script>
-</body></html>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="回到首頁">
+        <img src="assets/img/logo-avatar.png?v=20260709-43" alt="雞爸爸生活研究室 LOGO" class="brand-avatar">
+        <div class="brand-text">
+          <strong>雞爸爸生活研究室</strong>
+          <span>Chicken Dad Journal</span>
+        </div>
+      </a>
+      <nav class="main-nav" aria-label="主要導覽">
+        <a class="active" href="index.html">首頁</a>
+        <a href="articles.html?journal=family">家庭誌</a>
+        <a href="articles.html?journal=health">保健室</a>
+        <a href="articles.html?journal=library">圖書室</a>
+        <a href="articles.html?journal=style">風格誌</a>
+        <a href="articles.html?journal=light">光影誌</a>
+      </nav>
+      <a href="/stickers.html" style="font-weight:700;color:#42664b;text-decoration:none;white-space:nowrap">LINE 貼圖小舖</a>
+      <a class="search-link" href="search.html" aria-label="搜尋">⌕</a>
+    </div>
+  </header>
 
+  <main class="wrap page-main">
+    <section class="hero-section">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <h1>用科學理解生活<br>用陪伴記錄成長</h1>
+          <p class="hero-quote">以故事連結人心，以思考理解生活</p>
+          <a class="btn btn-primary" href="/relax.html" style="margin:0 10px 12px 0">換大人放風 ☕</a>
+          <a class="btn btn-primary" data-latest-article href="/articles/vocus-20261105-0175e775.html">最新文章</a>
+        </div>
+        <div class="hero-art-wrap">
+          <img src="assets/img/hero-family.png?v=20260717-ama-v71" alt="雞爸爸、鼠媽媽、鼠姊姊、龍弟弟、兔阿嬤的家庭合照插圖" class="hero-art" width="1448" height="1086">
+        </div>
+      </div>
+    </section>
 
+    <div data-latest-articles><p><a href="articles.html">瀏覽最新文章 →</a></p></div>
 
+    <section class="section">
+      <div class="section-title-row">
+        <span class="ornament">❦</span>
+        <h2>生活研究室</h2>
+        <span class="ornament">❦</span>
+      </div>
+      <p class="family-subtitle">行勝於言 厚德載物</p>
+      <div class="cards five-grid">
+        <article class="feature-card">
+          <a class="feature-image-link" href="articles.html?journal=family" aria-label="前往家庭誌">
+            <img src="assets/img/category-memory.png" alt="家庭誌插圖：一家五人圍著相簿回味家庭時光" width="1448" height="1086" loading="lazy">
+          </a>
+          <div class="feature-body">
+            <span class="feature-icon icon-memory">⌂</span>
+            <h3>家庭誌</h3>
+            <p>記錄一家人的生活片刻，珍藏那些平凡卻珍貴的家庭日常。</p>
+            <a class="feature-link memory" href="articles.html?journal=family" data-journal-count="家庭誌">110 篇文章</a>
+          </div>
+        </article>
+        <article class="feature-card">
+          <a class="feature-image-link" href="articles.html?journal=health" aria-label="前往保健室">
+            <img src="assets/img/category-health.png" alt="保健室插圖：公園裡的健康生活與家人日常" width="1448" height="1086" loading="lazy">
+          </a>
+          <div class="feature-body">
+            <span class="feature-icon icon-health">❃</span>
+            <h3>保健室</h3>
+            <p>研究健康與身心平衡，守護家人的生活品質與幸福能量。</p>
+            <a class="feature-link health" href="articles.html?journal=health" data-journal-count="保健室">28 篇文章</a>
+          </div>
+        </article>
+        <article class="feature-card">
+          <a class="feature-image-link" href="articles.html?journal=library" aria-label="前往圖書室">
+            <img src="assets/img/category-library.png" alt="圖書室插圖：溫暖閱讀角落與筆記書桌" width="1448" height="1086" loading="lazy">
+          </a>
+          <div class="feature-body">
+            <span class="feature-icon icon-library">✦</span>
+            <h3>圖書室</h3>
+            <p>與 AI 共讀，沉澱思緒，探索知識與智慧的無限可能。</p>
+            <a class="feature-link library" href="articles.html?journal=library" data-journal-count="圖書室">9 篇文章</a>
+          </div>
+        </article>
+        <article class="feature-card">
+          <a class="feature-image-link" href="articles.html?journal=style" aria-label="前往風格誌">
+            <img src="assets/img/category-style.png" alt="風格誌插圖：棒球、電影、音樂與暖色房間氛圍" width="1448" height="1086" loading="lazy">
+          </a>
+          <div class="feature-body">
+            <span class="feature-icon icon-style">⚾</span>
+            <h3>風格誌</h3>
+            <p>棒球、電影、音樂與生活風格，熱愛的事物讓日子更有滋味。</p>
+            <a class="feature-link style" href="articles.html?journal=style" data-journal-count="風格誌">41 篇文章</a>
+          </div>
+        </article>
+        <article class="feature-card">
+          <a class="feature-image-link" href="articles.html?journal=light" aria-label="前往光影誌">
+            <img src="assets/img/category-light.png" alt="光影誌插圖：相機、風景與收藏光影的旅行感" width="1448" height="1086" loading="lazy">
+          </a>
+          <div class="feature-body">
+            <span class="feature-icon icon-light">◔</span>
+            <h3>光影誌</h3>
+            <p>用照片與文字，收藏光影中的感動瞬間與故事溫度。</p>
+            <a class="feature-link light" href="articles.html?journal=light" data-journal-count="光影誌">10 篇文章</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section family-section">
+      <div class="section-title-row compact">
+        <span class="ornament">❦</span>
+        <h2>我們這一家</h2>
+        <span class="ornament">❦</span>
+      </div>
+      <p class="family-subtitle">因為愛，我們成為彼此的日常</p>
+      <div class="cards five-grid family-grid">
+        <article class="family-card">
+          <a class="family-image-link" href="family.html#dad" aria-label="了解雞爸爸">
+            <img src="assets/img/portrait-dad.png" alt="雞爸爸角色插圖" width="1086" height="1448" loading="lazy">
+          </a>
+          <div class="family-body">
+            <h3>雞爸爸</h3>
+            <p>努力成為更穩定、更溫柔、更有力量的爸爸，陪伴家人一起成長。</p>
+            <a class="btn btn-small" href="family.html#dad">了解更多</a>
+          </div>
+        </article>
+        <article class="family-card">
+          <a class="family-image-link" href="family.html#mom" aria-label="了解鼠媽媽">
+            <img src="assets/img/portrait-mom.png" alt="鼠媽媽角色插圖" width="1086" height="1448" loading="lazy">
+          </a>
+          <div class="family-body">
+            <h3>鼠媽媽</h3>
+            <p>家中的溫柔支柱，用愛與耐心守護著家人的每一天。</p>
+            <a class="btn btn-small" href="family.html#mom">了解更多</a>
+          </div>
+        </article>
+        <article class="family-card">
+          <a class="family-image-link" href="family.html#dodo" aria-label="了解鼠姊姊">
+            <img src="assets/img/portrait-dodo.png" alt="鼠姊姊角色插圖" width="1086" height="1448" loading="lazy">
+          </a>
+          <div class="family-body">
+            <h3>鼠姊姊</h3>
+            <p>活潑可愛的小姊姊，充滿好奇心與創造力，是家裡的開心果。</p>
+            <a class="btn btn-small" href="family.html#dodo">了解更多</a>
+          </div>
+        </article>
+        <article class="family-card">
+          <a class="family-image-link" href="family.html#dragon" aria-label="了解龍弟弟">
+            <img src="assets/img/portrait-dragon.png" alt="龍弟弟角色插圖" width="1086" height="1448" loading="lazy">
+          </a>
+          <div class="family-body">
+            <h3>龍弟弟</h3>
+            <p>天真活潑的一歲半小男孩，總是帶給家人歡笑與驚喜。</p>
+            <a class="btn btn-small" href="family.html#dragon">了解更多</a>
+          </div>
+        </article>
+        <article class="family-card">
+          <a class="family-image-link" href="family.html#ama" aria-label="了解兔阿嬤">
+            <img src="assets/img/portrait-ama.png?v=20260717-ama-v71" alt="兔阿嬤角色插圖" width="1086" height="1448" loading="lazy">
+          </a>
+          <div class="family-body">
+            <h3>兔阿嬤</h3>
+            <p>默默支持著這個家，用關愛與智慧守護每一個家人。</p>
+            <a class="btn btn-small" href="family.html#ama">了解更多</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="line-sticker-heading" style="background:#edf1e6;border:1px solid #dce1cf;border-radius:24px;padding:30px;margin-bottom:30px">
+      <p style="font-size:12px;letter-spacing:2px;color:#89633d;margin:0 0 8px">把雞爸爸一家帶進聊天室</p>
+      <h2 id="line-sticker-heading" style="margin:0 0 12px">LINE 貼圖小舖</h2>
+      <p style="line-height:1.8;margin:0 0 22px">右右、雅虎、兔阿嬤，還有雞爸爸內心的小惡魔。挑一組喜歡的貼圖，陪你一起聊天。</p>
+      <a class="btn btn-primary" href="/stickers.html">逛逛七組 LINE 貼圖 →</a>
+    </section>
+    <section class="section cta-section">
+      <div class="cta-box">
+        <div class="cta-image-wrap">
+          <img src="assets/img/cta-study.png" alt="書桌、筆記本與溫暖日光的生活研究室氛圍插圖" width="1672" height="941" loading="lazy">
+        </div>
+        <div class="cta-copy">
+          <p>這裡，生活的記憶、健康的智慧、閱讀的深度、風格的趣味、光影的溫度，交織成雞爸爸的日常誌。</p>
+          <a class="btn btn-primary" href="articles.html?journal=family">開始探索雞爸爸的生活研究</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <nav class="footer-links" aria-label="輔助導覽">
+        <a href="knowledge.html">知識圖譜</a>
+        <a href="family.html">我們一家</a>
+        <a href="about.html">關於</a>
+        <a href="search.html">搜尋</a>
+      </nav>
+      <p>© 2025 雞爸爸生活研究室 Chicken Dad Journal. All rights reserved.</p>
+      <nav class="cdj-social-links" aria-label="追蹤雞爸爸">
+        <span class="cdj-social-label">追蹤雞爸爸</span>
+        <a href="https://www.facebook.com/ChickenDadJournal/" target="_blank" rel="noopener noreferrer">Facebook 粉絲專頁</a>
+        <a href="https://www.instagram.com/chickendadjournal/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://www.tiktok.com/@chickendad_official" target="_blank" rel="noopener noreferrer">TikTok</a>
+        <a href="https://vocus.cc/salon/jisoopama-baby-cat" target="_blank" rel="noopener noreferrer">Vocus 方格子</a>
+        <a href="https://www.youtube.com/@ChickenDadJournal" target="_blank" rel="noopener noreferrer">YouTube</a>
+      </nav>
+    </div>
+  </footer>
+<script src="js/article-summary.js" defer></script></body>
+</html>
 
 
 
