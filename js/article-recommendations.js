@@ -127,3 +127,10 @@
   }
   init();
 })();
+
+/* Shared article reader loader: only article bodies receive controls. */
+(() => {
+if(typeof document==='undefined'||!document.querySelector('.article-body, .article-content, [data-article-body]')||document.querySelector('[data-cdj-reader-script]'))return;
+const script=document.createElement('script');script.src='/js/article-reader.js?v=20261106-reader1';script.dataset.cdjReaderScript='true';script.defer=true;document.head.append(script);
+})();
+
