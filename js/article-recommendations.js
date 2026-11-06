@@ -136,6 +136,7 @@ const script=document.createElement('script');script.src='/js/article-reader.js?
 
 
 /* Give article and archive pages the same destination navigation. */
-(()=>{if(typeof document==='undefined'||document.querySelector('script[data-entry-nav-script],script[src*="/js/site-entry-nav.js"]'))return;const script=document.createElement('script');script.src='/js/site-entry-nav.js?v=20261106-brand2';script.dataset.entryNavScript='true';script.defer=true;document.head.append(script);})();
+(()=>{if(typeof document==='undefined'||document.querySelector('script[data-entry-nav-script],script[src*="/js/site-entry-nav.js"]'))return;const script=document.createElement('script');script.src='/js/site-entry-nav.js?v=20261106-order2';script.dataset.entryNavScript='true';script.defer=true;document.head.append(script);})();
+
 
 
