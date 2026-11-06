@@ -12,3 +12,10 @@
 .entry-site .entry-family-grid{align-items:stretch}.entry-site .family-card{display:flex;flex-direction:column;align-items:stretch}.entry-site .family-card>.family-body{display:flex;flex-direction:column;flex:1}.entry-site .family-card>.family-body>p:not(.cdj-speech){min-height:3.6em;line-height:1.8;margin:8px 0 16px;text-wrap:pretty}.entry-site .family-card>.family-body>a{margin-top:auto;min-height:36px;display:flex;align-items:center;justify-content:center}.entry-site .family-card .cdj-hello{min-height:54px;margin-top:12px}
 @media(max-width:760px){.entry-site .brand-entry-grid{gap:12px}.entry-site .brand-entry-art{height:110px;padding:8px}.entry-site .brand-entry-art>img{max-width:170px}.entry-site .brand-entry-copy{padding:15px 13px 18px;gap:9px}.entry-site .brand-entry strong{font-size:23px}.entry-site .brand-entry-desc{font-size:18px;min-height:5.4em}.entry-site .brand-entry-next{font-size:18px}.entry-site .family-card>.family-body>p:not(.cdj-speech){min-height:5.4em}}
 
+
+/* Fix light text inherited from the old green entrance card. */
+.entry-site .brand-entry .brand-entry-copy{background:#fffdf8!important}
+.entry-site .brand-entry .brand-entry-copy strong{color:#344b38!important}
+.entry-site .brand-entry .brand-entry-copy .brand-entry-desc{color:#5e7059!important;opacity:1!important}
+.entry-site .brand-entry .brand-entry-copy .brand-entry-next{color:#42664d!important;opacity:1!important}
+

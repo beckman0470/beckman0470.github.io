@@ -49,3 +49,52 @@ header.cdj-unified-header .entry-subnav a{font-family:"Huninn","Microsoft JhengH
 }
 @media(max-width:360px){header.cdj-unified-header .cdj-unified-brand strong{font-size:20px!important}}
 
+
+/* topics1: consistent page titles, including playground and adult corner. */
+body:has(header.cdj-unified-header) main h1,
+body:has(header.cdj-unified-header) main h2,
+body:has(header.cdj-unified-header) main .hero-heading h1,
+body:has(header.cdj-unified-header) main .page-hero h1{
+ font-family:"Huninn","Microsoft JhengHei","PingFang TC",sans-serif!important;font-weight:400!important;color:#344b38!important;letter-spacing:.02em!important
+}
+body:has(header.cdj-unified-header) main h1{font-size:clamp(36px,5vw,64px)!important;line-height:1.45!important}
+body:has(header.cdj-unified-header) .entry-wrap,
+body:has(header.cdj-unified-header) main.wrap,
+body.cdj-play main,
+body:has(header.cdj-unified-header) .journal-page .wrap,
+body.cdj-family .container{width:min(1120px,calc(100% - 40px))!important;max-width:1120px!important;margin-left:auto!important;margin-right:auto!important}
+body.cdj-play main{padding-left:0!important;padding-right:0!important}
+body:has(header.cdj-unified-header) .intro,
+body:has(header.cdj-unified-header) .hero-heading,
+body:has(header.cdj-unified-header) .page-hero,
+body:has(header.cdj-unified-header) .video-hero,
+body:has(header.cdj-unified-header) main>.hero{text-align:left!important}
+body:has(header.cdj-unified-header) .intro{max-width:none!important;margin-left:0!important;margin-right:0!important}
+body:has(header.cdj-unified-header) .section-title-row{display:flex!important;justify-content:flex-start!important}
+body:has(header.cdj-unified-header) .journal-subtitle{margin-left:0!important;text-align:left!important}
+body:has(header.cdj-unified-header) .journal-pills{justify-content:flex-start!important}
+body.cdj-play .intro>.tabs{justify-content:flex-start!important}
+body.cdj-stickers .hero{padding:54px 0 32px!important}
+body.cdj-stickers .hero p,body.cdj-family .lead{font-size:21px!important;line-height:1.9!important;color:#63735d!important;max-width:800px!important}
+body.cdj-stickers .hero h1{max-width:900px}
+body.cdj-stickers .card{box-shadow:none!important;border:1px solid #dfe3d3!important;border-radius:24px!important;background:#fffdf8!important}
+body.cdj-stickers .card h2{font-family:"Huninn","Microsoft JhengHei",sans-serif!important;font-weight:400!important;color:#344b38!important}
+body.cdj-family{background:#faf8f0!important;color:#344b38!important}
+body.cdj-family .page-hero{padding:54px 0 36px!important;background:#faf8f0!important}
+body.cdj-family .page-hero h1{margin:16px 0 20px!important}
+body.cdj-family .section{padding:16px 0 54px!important;background:#faf8f0!important}
+body.cdj-family .character-card{background:#fffdf8!important;border:1px solid #dfe3d3!important;border-radius:24px!important;box-shadow:none!important;grid-template-columns:180px 1fr!important}
+body.cdj-family .character-art{background:#eef2e5!important;min-height:220px!important;padding:18px!important;display:flex!important;align-items:center!important;justify-content:center!important}
+body.cdj-family .character-art img{display:block!important;width:130px!important;height:185px!important;object-fit:contain!important}
+body.cdj-family .character-body{padding:26px!important}
+body.cdj-family .character-body h2{font-size:32px!important}
+body.cdj-family .tag{font-size:16px!important;font-weight:400!important;background:#eef2e5!important;color:#42664d!important}
+body.cdj-family .kicker{font-size:16px!important;font-weight:400!important;color:#718062!important}
+@media(max-width:760px){
+ body.cdj-family .character-card{grid-template-columns:1fr!important}
+ body.cdj-family .character-art{min-height:190px!important}
+ body.cdj-family .character-art img{height:160px!important}
+ body:has(header.cdj-unified-header) main h1{font-size:36px!important}
+ body.cdj-family .page-hero,body.cdj-stickers .hero{padding-top:32px!important}
+}
+
