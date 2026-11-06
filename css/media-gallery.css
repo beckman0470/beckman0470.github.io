@@ -4,3 +4,10 @@
 /* Supplied IG covers stay whole; lettering is never cropped. */
 .media-ig-thumb{aspect-ratio:9/16;background:#f5eee4}.media-ig-thumb .media-custom-cover{display:block;width:100%;height:100%;object-fit:contain!important;object-position:center}.media-ig-thumb .media-custom-cover[hidden],.media-cover-fallback[hidden]{display:none!important}.media-cover-fallback{text-align:center;line-height:1.8;color:#74526c}.media-modal .media-frame iframe{max-width:100%}
 
+
+/* Natural image height: no empty portrait frame around landscape covers. */
+.media-card .media-watch{flex:0 0 auto!important;align-items:start}
+.media-card .media-thumb{display:block!important;aspect-ratio:auto!important;height:auto!important;min-height:0!important;align-self:start;background:#f5f1e7}
+.media-card .media-thumb img{display:block;width:100%!important;height:auto!important;min-height:0!important;max-height:none!important;aspect-ratio:auto!important;object-fit:contain!important}
+.media-card .media-thumb img[hidden]{display:none!important}
+.media-ig-thumb .media-cover-fallback{padding:28px 16px}.media-grid{align-items:start}
