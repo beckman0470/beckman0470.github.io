@@ -17,6 +17,22 @@
 .journal-categories a:focus-visible{outline:3px solid #b47a3b;outline-offset:4px}
 .journal-categories a:hover{box-shadow:0 0 0 2px #b5c6a7}
 @media(max-width:600px){.journal-categories{gap:10px}.journal-categories a{flex:1 1 calc(33.333% - 10px);padding:12px 9px;font-size:20px}}
+</style><style>
+/* Mobile article layout repair 20261106 */
+@media(max-width:860px){
+.journal-page,.journal-hero,.hero-inner,.hero-heading,.cards-panel,.cards-grid,.story-card,.about-panel,.about-copy{min-width:0;box-sizing:border-box}
+.journal-page .wrap{width:calc(100% - 32px)!important;max-width:100%!important;margin-inline:auto!important}
+.cards-grid{grid-template-columns:minmax(0,1fr)!important;gap:18px}
+.story-card{padding:18px 16px;max-width:100%;overflow-wrap:anywhere}
+.card-head{flex-wrap:wrap;gap:8px}.card-tags{flex-wrap:wrap;min-width:0}.card-tags span{max-width:100%;white-space:normal;overflow-wrap:anywhere}
+.card-media{min-width:0;max-width:100%;aspect-ratio:16/9;height:auto}
+.story-card h3{font-size:24px;line-height:1.6}.card-excerpt{font-size:18px;line-height:1.9}
+.journal-subtitle{font-size:19px;line-height:1.9}.journal-pills{gap:8px}.pill{white-space:normal;max-width:100%}
+.journal-categories{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.journal-categories a{min-width:0;min-height:48px;padding:10px 4px;font-size:18px;box-sizing:border-box}
+.about-panel{grid-template-columns:minmax(0,1fr);padding:20px 16px}.about-thumb-wrap{min-width:0}.about-thumb{max-width:100%}
+.cards-actions .btn{min-width:0;max-width:100%;box-sizing:border-box}
+}
 </style></head>
 <body>
   <header class="site-header cdj-unified-header" data-unified-header="order2"><div class="cdj-unified-inner"><a class="cdj-unified-brand" href="/" aria-label="雞爸爸生活研究室首頁"><img src="/assets/img/logo-avatar.png" alt="" width="52" height="52"><span><strong>雞爸爸生活研究室</strong><small>CHICKEN DAD JOURNAL</small></span></a><nav class="entry-subnav" aria-label="主要導覽"><a href="/">首頁</a><a href="/articles.html" aria-current="page">生活文章</a><a href="/videos.html">影音館</a><a href="/play/">親子樂園</a><a href="/relax.html">大人放風</a><a href="/stickers.html">貼圖小舖</a><a href="/family.html">認識我們</a></nav></div></header>
