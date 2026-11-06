@@ -17,3 +17,35 @@ header.cdj-unified-header .entry-subnav a{font-family:"Huninn","Microsoft JhengH
 header.cdj-unified-header .entry-subnav a[aria-current=page]{font-weight:400!important;color:#344b38!important}
 .entry-site h1,.entry-site h2,.entry-site .brand-entry-title{font-family:"Huninn","Microsoft JhengHei",sans-serif;font-weight:400}
 
+
+/* 20261106 brand3: one top-left signature across every page. */
+header.cdj-unified-header .cdj-unified-inner{
+ width:min(1448px,calc(100% - 48px))!important;max-width:1448px!important;
+ min-height:104px!important;padding:18px 0!important;gap:20px 32px!important;
+ flex-direction:row!important;flex-wrap:wrap!important;justify-content:space-between!important;align-items:center!important
+}
+header.cdj-unified-header .cdj-unified-brand{margin:0!important;flex:0 0 auto!important;gap:12px!important;justify-content:flex-start!important}
+header.cdj-unified-header .cdj-unified-brand>span{text-align:left!important}
+header.cdj-unified-header .cdj-unified-brand strong{
+ font-family:"Huninn","Microsoft JhengHei","PingFang TC",sans-serif!important;
+ font-size:24px!important;font-weight:400!important;letter-spacing:.04em!important;
+ line-height:1.5!important;white-space:nowrap!important;color:#344b38!important
+}
+header.cdj-unified-header .cdj-unified-brand small{
+ font-family:"Huninn","Microsoft JhengHei",sans-serif!important;
+ font-size:11px!important;font-weight:400!important;letter-spacing:2px!important;line-height:1.8!important;color:#7e806d!important
+}
+header.cdj-unified-header .entry-subnav{width:auto!important;flex:0 1 auto!important;margin:0!important;gap:4px 22px!important;justify-content:center!important}
+header.cdj-unified-header .entry-subnav a{font-family:"Huninn","Microsoft JhengHei","PingFang TC",sans-serif!important;font-weight:400!important;font-size:20px!important}
+@media(max-width:1200px){
+ header.cdj-unified-header .cdj-unified-inner{gap:12px!important}
+ header.cdj-unified-header .entry-subnav{width:100%!important}
+}
+@media(max-width:760px){
+ header.cdj-unified-header .cdj-unified-inner{width:calc(100% - 32px)!important;min-height:0!important;padding:14px 0 10px!important}
+ header.cdj-unified-header .cdj-unified-brand strong{font-size:22px!important}
+ header.cdj-unified-header .cdj-unified-brand small{font-size:10px!important;letter-spacing:1.4px!important}
+ header.cdj-unified-header .entry-subnav{gap:0 18px!important}
+}
+@media(max-width:360px){header.cdj-unified-header .cdj-unified-brand strong{font-size:20px!important}}
+
