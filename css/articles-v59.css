@@ -425,3 +425,26 @@ body[data-journal="light"] .journal-page { --page-bg: url('../assets/img/room-li
   display: block;
   object-fit: cover;
 }
+
+/* 20261106: calm article rooms, shared brand palette. */
+:root{--bg:#faf8f0;--paper:#fffdf8;--paper-2:#fffdf8;--line:#dfe3d3;--text:#344b38;--muted:#65735f;--accent:#42664d;--shadow:0 8px 24px rgba(52,75,56,.04)}
+.journal-page::before,.room-bg,.room-fade{display:none}
+.journal-page,.journal-hero{background:var(--bg)}
+.hero-heading{padding:48px 0 32px}
+.section-title-row h1,.about-copy h2{font-family:"Huninn","Microsoft JhengHei",sans-serif;font-weight:400}
+.ornament{display:none}
+.journal-subtitle,.card-excerpt,.about-copy p{color:var(--muted)}
+.pill{background:#f0f2e7;border-color:var(--line);color:var(--accent);box-shadow:none;font-size:17px;font-weight:500}
+.cards-panel{background:transparent;border:0;box-shadow:none;backdrop-filter:none;padding:12px 0 30px}
+.story-card{background:var(--paper);border-color:var(--line);box-shadow:none}
+.story-card:hover,.story-card:focus-visible{border-color:#8ca084;box-shadow:var(--shadow)}
+.card-media{border-color:var(--line);box-shadow:none;background:#f1eee4}
+.card-journal,.card-date{background:#f4f4ea;border-color:var(--line);color:var(--accent);font-size:15px;font-weight:500}
+.card-tags span{background:#f5f4ed;border-color:var(--line);color:var(--muted);font-size:14px}
+.card-excerpt{font-size:18px}
+.btn-primary{background:var(--accent);box-shadow:none}
+.about-panel{background:var(--paper);border-color:var(--line);box-shadow:none;backdrop-filter:none}
+.site-footer{background:var(--paper);border-color:var(--line);backdrop-filter:none}
+.footer-links a{color:var(--accent)}
+@media(max-width:860px){.hero-heading{padding:32px 0 24px}.cards-panel{padding:10px 0 24px}.pill{font-size:17px}.card-excerpt,.about-copy p{font-size:18px}.card-tags span{font-size:15px}}
+

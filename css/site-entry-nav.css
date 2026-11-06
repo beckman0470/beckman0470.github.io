@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Huninn&display=swap");
 /* One centered brand header for every part of ChickenDad Journal. */
 header.cdj-unified-header{box-sizing:border-box!important;display:block!important;position:relative!important;inset:auto!important;margin:0!important;padding:0!important;width:100%!important;max-width:none!important;background:#fffdf8!important;color:#344b38!important;border:0!important;border-bottom:1px solid #e2e3d6!important;box-shadow:none!important;backdrop-filter:none!important;font-family:"Microsoft JhengHei","PingFang TC","Noto Sans TC",system-ui,sans-serif!important;line-height:1.6!important}
 .cdj-unified-inner{box-sizing:border-box!important;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;gap:13px!important;width:min(1160px,calc(100% - 32px))!important;max-width:1160px!important;margin:0 auto!important;padding:18px 0 12px!important}
@@ -8,4 +9,11 @@ header.cdj-unified-header{box-sizing:border-box!important;display:block!importan
 .cdj-unified-header .entry-subnav a{display:inline-flex!important;align-items:center!important;justify-content:center!important;min-height:46px!important;white-space:nowrap!important;flex:0 0 auto!important;font-family:inherit!important;font-size:19px!important;font-weight:500!important;line-height:1.6!important;text-decoration:none!important;text-transform:none!important;color:#42664d!important;padding:7px 0!important;margin:0!important;border:0!important;border-bottom:2px solid transparent!important;box-shadow:none!important}
 .cdj-unified-header .entry-subnav a:before,.cdj-unified-header .entry-subnav a:after{display:none!important}.cdj-unified-header .entry-subnav a[aria-current=page]{font-weight:800!important;border-bottom-color:#a67b46!important}.cdj-unified-header a:focus-visible{outline:3px solid #bd8044!important;outline-offset:4px!important}
 @media(max-width:760px){.cdj-unified-inner{padding:14px 0 8px!important;gap:10px!important}.cdj-unified-brand img{width:46px!important;height:46px!important;flex-basis:46px!important}.cdj-unified-brand strong{font-size:20px!important}.cdj-unified-brand small{font-size:10px!important;letter-spacing:1.5px!important}.cdj-unified-header .entry-subnav{gap:0 18px!important}.cdj-unified-header .entry-subnav a{font-size:20px!important;min-height:48px!important}}
+
+
+/* Rounded Traditional Chinese lettering; retain readable body text. */
+header.cdj-unified-header .cdj-unified-brand strong,
+header.cdj-unified-header .entry-subnav a{font-family:"Huninn","Microsoft JhengHei","PingFang TC",sans-serif!important;font-weight:400!important;letter-spacing:.04em!important}
+header.cdj-unified-header .entry-subnav a[aria-current=page]{font-weight:400!important;color:#344b38!important}
+.entry-site h1,.entry-site h2,.entry-site .brand-entry-title{font-family:"Huninn","Microsoft JhengHei",sans-serif;font-weight:400}
 
