@@ -24,7 +24,9 @@
     "canonicalUrl": "https://vocus.cc/article/6aec19c2fd8978000175e775",
     "status": "published",
     "url": "/articles/vocus-20261105-0175e775.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "devil",
+    "roomLabel": "雞爸爸內心小惡魔"
   },
   {
     "id": "CDJ-20261105-016C57E5",
@@ -59,7 +61,9 @@
     "canonicalUrl": "https://vocus.cc/article/6aebe6a0fd897800016c57e5",
     "status": "published",
     "url": "/articles/vocus-20261105-016c57e5.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20261105-016A6213",
@@ -96,7 +100,9 @@
     "canonicalUrl": "https://vocus.cc/article/6aebdd3cfd897800016a6213",
     "status": "published",
     "url": "/articles/vocus-20261105-016a6213.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20261104-01520DC8",
@@ -137,7 +143,9 @@
     "canonicalUrl": "https://vocus.cc/article/6aeaa43afd89780001520dc8",
     "status": "published",
     "url": "/articles/vocus-20261104-01520dc8.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20261103-0120C0E8",
@@ -170,7 +178,9 @@
     "canonicalUrl": "https://vocus.cc/article/6ae978affd8978000120c0e8",
     "status": "published",
     "url": "/articles/vocus-20261103-0120c0e8.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20261103-011A2773",
@@ -207,7 +217,9 @@
     "canonicalUrl": "https://vocus.cc/article/6ae957ccfd897800011a2773",
     "status": "published",
     "url": "/articles/vocus-20261103-011a2773.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20261103-0115E145",
@@ -246,7 +258,9 @@
     "canonicalUrl": "https://vocus.cc/article/6ae942eefd8978000115e145",
     "status": "published",
     "url": "/articles/vocus-20261103-0115e145.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "cdhj",
+    "roomLabel": "雞爸爸健康期刊"
   },
   {
     "id": "CDJ-20261102-01B7D847",
@@ -283,7 +297,9 @@
     "canonicalUrl": "https://vocus.cc/article/6ae83983fd89780001b7d847",
     "status": "published",
     "url": "/articles/vocus-20261102-01b7d847.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20261102-01FDFC06",
@@ -321,7 +337,9 @@
     "canonicalUrl": "https://vocus.cc/article/6ae81a0afd89780001fdfc06",
     "status": "published",
     "url": "/articles/vocus-20261102-01fdfc06.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20261102-01F61DF1",
@@ -362,7 +380,9 @@
     "canonicalUrl": "https://vocus.cc/article/6ae7f2f0fd89780001f61df1",
     "status": "published",
     "url": "/articles/vocus-20261102-01f61df1.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20261029-01C7E957",
@@ -392,7 +412,9 @@
     "canonicalUrl": "https://vocus.cc/article/6ae31399fd89780001c7e957",
     "status": "published",
     "url": "/articles/vocus-20261029-01c7e957.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "devil",
+    "roomLabel": "雞爸爸內心小惡魔"
   },
   {
     "id": "CDJ-20261029-01C5DDB0",
@@ -421,7 +443,9 @@
     "canonicalUrl": "https://vocus.cc/article/6ae3091efd89780001c5ddb0",
     "status": "published",
     "url": "/articles/vocus-20261029-01c5ddb0.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "devil",
+    "roomLabel": "雞爸爸內心小惡魔"
   },
   {
     "id": "CDJ-20261029-01507525",
@@ -454,7 +478,9 @@
     "canonicalUrl": "https://vocus.cc/article/6ae2b068fd89780001507525",
     "status": "published",
     "url": "/articles/vocus-20261029-01507525.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20261027-018E4A1D",
@@ -486,7 +512,9 @@
     "canonicalUrl": "https://vocus.cc/article/6ae04b6efd897800018e4a1d",
     "status": "published",
     "url": "/articles/vocus-20261027-018e4a1d.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20261026-01123537",
@@ -522,7 +550,9 @@
     "canonicalUrl": "https://vocus.cc/article/6adf268afd89780001123537",
     "status": "published",
     "url": "/articles/vocus-20261026-01123537.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "devil",
+    "roomLabel": "雞爸爸內心小惡魔"
   },
   {
     "id": "CDJ-20261026-01FF647A",
@@ -552,7 +582,9 @@
     "canonicalUrl": "https://vocus.cc/article/6adec4d9fd89780001ff647a",
     "status": "published",
     "url": "/articles/vocus-20261026-01ff647a.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "devil",
+    "roomLabel": "雞爸爸內心小惡魔"
   },
   {
     "id": "CDJ-20261022-011A3A50",
@@ -581,7 +613,9 @@
     "canonicalUrl": "https://vocus.cc/article/6ad9d9d0fd897800011a3a50",
     "status": "published",
     "url": "/articles/vocus-20261022-011a3a50.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "devil",
+    "roomLabel": "雞爸爸內心小惡魔"
   },
   {
     "id": "CDJ-20261022-011480BA",
@@ -611,7 +645,9 @@
     "canonicalUrl": "https://vocus.cc/article/6ad9b825fd897800011480ba",
     "status": "published",
     "url": "/articles/vocus-20261022-011480ba.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20261022-01084F77",
@@ -640,7 +676,9 @@
     "canonicalUrl": "https://vocus.cc/article/6ad9a3acfd89780001084f77",
     "status": "published",
     "url": "/articles/vocus-20261022-01084f77.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "devil",
+    "roomLabel": "雞爸爸內心小惡魔"
   },
   {
     "id": "CDJ-20261021-01D57717",
@@ -668,7 +706,9 @@
     "canonicalUrl": "https://vocus.cc/article/6ad8583ffd89780001d57717",
     "status": "published",
     "url": "/articles/vocus-20261021-01d57717.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20261021-01D45002",
@@ -699,7 +739,9 @@
     "canonicalUrl": "https://vocus.cc/article/6ad8508dfd89780001d45002",
     "status": "published",
     "url": "/articles/vocus-20261021-01d45002.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20261021-01CF4E92",
@@ -736,7 +778,9 @@
     "canonicalUrl": "https://vocus.cc/article/6ad83216fd89780001cf4e92",
     "status": "published",
     "url": "/articles/vocus-20261021-01cf4e92.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "cdhj",
+    "roomLabel": "雞爸爸健康期刊"
   },
   {
     "id": "CDJ-20261020-01AC1776",
@@ -763,7 +807,9 @@
     "canonicalUrl": "https://vocus.cc/article/6ad737d0fd89780001ac1776",
     "status": "published",
     "url": "/articles/vocus-20261020-01ac1776.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20261020-01A72004",
@@ -799,7 +845,9 @@
     "canonicalUrl": "https://vocus.cc/article/6ad71967fd89780001a72004",
     "status": "published",
     "url": "/articles/vocus-20261020-01a72004.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "cdhj",
+    "roomLabel": "雞爸爸健康期刊"
   },
   {
     "id": "CDJ-20261020-01A581E4",
@@ -825,7 +873,9 @@
     "canonicalUrl": "https://vocus.cc/article/6ad70f96fd89780001a581e4",
     "status": "published",
     "url": "/articles/vocus-20261020-01a581e4.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "devil",
+    "roomLabel": "雞爸爸內心小惡魔"
   },
   {
     "id": "CDJ-20261019-012DC8A7",
@@ -866,7 +916,9 @@
     "canonicalUrl": "https://vocus.cc/article/6ad5d965fd897800012dc8a7",
     "status": "published",
     "url": "/articles/vocus-20261019-012dc8a7.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "cdhj",
+    "roomLabel": "雞爸爸健康期刊"
   },
   {
     "id": "CDJ-20261019-013A13BD",
@@ -904,7 +956,9 @@
     "canonicalUrl": "https://vocus.cc/article/6ad5c7c0fd897800013a13bd",
     "status": "published",
     "url": "/articles/vocus-20261019-013a13bd.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "cdpj",
+    "roomLabel": "雞爸爸親子期刊"
   },
   {
     "id": "CDJ-20261019-01389B9D",
@@ -944,7 +998,9 @@
     "canonicalUrl": "https://vocus.cc/article/6ad5bf69fd89780001389b9d",
     "status": "published",
     "url": "/articles/vocus-20261019-01389b9d.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "cdpj",
+    "roomLabel": "雞爸爸親子期刊"
   },
   {
     "id": "CDJ-20261019-01375941",
@@ -975,7 +1031,9 @@
     "canonicalUrl": "https://vocus.cc/article/6ad5b806fd89780001375941",
     "status": "published",
     "url": "/articles/vocus-20261019-01375941.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20261019-012F4DBE",
@@ -1016,7 +1074,9 @@
     "canonicalUrl": "https://vocus.cc/article/6ad58a56fd897800012f4dbe",
     "status": "published",
     "url": "/articles/vocus-20261019-012f4dbe.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20261019-012CD8DD",
@@ -1047,7 +1107,9 @@
     "canonicalUrl": "https://vocus.cc/article/6ad57c27fd897800012cd8dd",
     "status": "published",
     "url": "/articles/vocus-20261019-012cd8dd.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20261015-01E64F84",
@@ -1073,7 +1135,9 @@
     "canonicalUrl": "https://vocus.cc/article/6ad09ff9fd89780001e64f84",
     "status": "published",
     "url": "/articles/vocus-20261015-01e64f84.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "devil",
+    "roomLabel": "雞爸爸內心小惡魔"
   },
   {
     "id": "CDJ-20261015-01E40DAB",
@@ -1101,7 +1165,9 @@
     "canonicalUrl": "https://vocus.cc/article/6ad093d2fd89780001e40dab",
     "status": "published",
     "url": "/articles/vocus-20261015-01e40dab.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "devil",
+    "roomLabel": "雞爸爸內心小惡魔"
   },
   {
     "id": "CDJ-20261014-019005E9",
@@ -1136,7 +1202,9 @@
     "canonicalUrl": "https://vocus.cc/article/6acf2c1ffd897800019005e9",
     "status": "published",
     "url": "/articles/vocus-20261014-019005e9.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "zschen",
+    "roomLabel": "珍山陳經典語錄"
   },
   {
     "id": "CDJ-20261014-018EF5C2",
@@ -1169,7 +1237,9 @@
     "canonicalUrl": "https://vocus.cc/article/6acf2701fd897800018ef5c2",
     "status": "published",
     "url": "/articles/vocus-20261014-018ef5c2.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "zschen",
+    "roomLabel": "珍山陳經典語錄"
   },
   {
     "id": "CDJ-20261014-018D54BE",
@@ -1204,7 +1274,9 @@
     "canonicalUrl": "https://vocus.cc/article/6acf1f0afd897800018d54be",
     "status": "published",
     "url": "/articles/vocus-20261014-018d54be.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "zschen",
+    "roomLabel": "珍山陳經典語錄"
   },
   {
     "id": "CDJ-20261014-013939B4",
@@ -1235,7 +1307,9 @@
     "canonicalUrl": "https://vocus.cc/article/6acf1664fd897800013939b4",
     "status": "published",
     "url": "/articles/vocus-20261014-013939b4.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "zschen",
+    "roomLabel": "珍山陳經典語錄"
   },
   {
     "id": "CDJ-20261014-01332AA4",
@@ -1267,7 +1341,9 @@
     "canonicalUrl": "https://vocus.cc/article/6acef5befd89780001332aa4",
     "status": "published",
     "url": "/articles/vocus-20261014-01332aa4.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "zschen",
+    "roomLabel": "珍山陳經典語錄"
   },
   {
     "id": "CDJ-20261014-012F7621",
@@ -1305,7 +1381,9 @@
     "canonicalUrl": "https://vocus.cc/article/6acee2d0fd897800012f7621",
     "status": "published",
     "url": "/articles/vocus-20261014-012f7621.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20261013-0105DEB6",
@@ -1336,7 +1414,9 @@
     "canonicalUrl": "https://vocus.cc/article/6acdeb3cfd8978000105deb6",
     "status": "published",
     "url": "/articles/vocus-20261013-0105deb6.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "devil",
+    "roomLabel": "雞爸爸內心小惡魔"
   },
   {
     "id": "CDJ-20261013-017ED7A7",
@@ -1369,7 +1449,9 @@
     "canonicalUrl": "https://vocus.cc/article/6acde0f5fd897800017ed7a7",
     "status": "published",
     "url": "/articles/vocus-20261013-017ed7a7.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20261013-017B7EB4",
@@ -1400,7 +1482,9 @@
     "canonicalUrl": "https://vocus.cc/article/6acdd035fd897800017b7eb4",
     "status": "published",
     "url": "/articles/vocus-20261013-017b7eb4.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20261008-01FB5214",
@@ -1427,7 +1511,9 @@
     "canonicalUrl": "https://vocus.cc/article/6ac76502fd89780001fb5214",
     "status": "published",
     "url": "/articles/vocus-20261008-01fb5214.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "devil",
+    "roomLabel": "雞爸爸內心小惡魔"
   },
   {
     "id": "CDJ-20261007-017A816F",
@@ -1467,7 +1553,9 @@
     "canonicalUrl": "https://vocus.cc/article/6ac5a606fd897800017a816f",
     "status": "published",
     "url": "/articles/vocus-20261007-017a816f.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20261006-0181471C",
@@ -1501,7 +1589,9 @@
     "canonicalUrl": "https://vocus.cc/article/6ac4bb10fd8978000181471c",
     "status": "published",
     "url": "/articles/vocus-20261006-0181471c.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20261006-01785257",
@@ -1536,7 +1626,9 @@
     "canonicalUrl": "https://vocus.cc/article/6ac498f0fd89780001785257",
     "status": "published",
     "url": "/articles/vocus-20261006-01785257.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20261006-01932A79",
@@ -1577,7 +1669,9 @@
     "canonicalUrl": "https://vocus.cc/article/6ac35e2bfd89780001932a79",
     "status": "published",
     "url": "/articles/vocus-20261006-01932a79.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20261005-0193AFF4",
@@ -1609,7 +1703,9 @@
     "canonicalUrl": "https://vocus.cc/article/6ac3415efd8978000193aff4",
     "status": "published",
     "url": "/articles/vocus-20261005-0193aff4.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20261003-01EDE4C1",
@@ -1642,7 +1738,9 @@
     "canonicalUrl": "https://vocus.cc/article/6ac05bf9fd89780001ede4c1",
     "status": "published",
     "url": "/articles/vocus-20261003-01ede4c1.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20261003-01E74C76",
@@ -1669,7 +1767,9 @@
     "canonicalUrl": "https://vocus.cc/article/6ac04ed8fd89780001e74c76",
     "status": "published",
     "url": "/articles/vocus-20261003-01e74c76.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "devil",
+    "roomLabel": "雞爸爸內心小惡魔"
   },
   {
     "id": "CDJ-20261001-0176E025",
@@ -1699,7 +1799,9 @@
     "canonicalUrl": "https://vocus.cc/article/6abe105afd8978000176e025",
     "status": "published",
     "url": "/articles/vocus-20261001-0176e025.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "devil",
+    "roomLabel": "雞爸爸內心小惡魔"
   },
   {
     "id": "CDJ-20260930-019DAC25",
@@ -1729,7 +1831,9 @@
     "canonicalUrl": "https://vocus.cc/article/6abca38bfd897800019dac25",
     "status": "published",
     "url": "/articles/vocus-20260930-019dac25.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "devil",
+    "roomLabel": "雞爸爸內心小惡魔"
   },
   {
     "id": "CDJ-20260929-01149CBE",
@@ -1761,7 +1865,9 @@
     "canonicalUrl": "https://vocus.cc/article/6abb5ec8fd89780001149cbe",
     "status": "published",
     "url": "/articles/vocus-20260929-01149cbe.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "devil",
+    "roomLabel": "雞爸爸內心小惡魔"
   },
   {
     "id": "CDJ-20260928-01A215C2",
@@ -1789,7 +1895,9 @@
     "canonicalUrl": "https://vocus.cc/article/6aba41d3fd89780001a215c2",
     "status": "published",
     "url": "/articles/vocus-20260928-01a215c2.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "devil",
+    "roomLabel": "雞爸爸內心小惡魔"
   },
   {
     "id": "CDJ-20260928-01899236",
@@ -1827,7 +1935,9 @@
     "canonicalUrl": "https://vocus.cc/article/6ab9e4aafd89780001899236",
     "status": "published",
     "url": "/articles/vocus-20260928-01899236.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260928-018416B8",
@@ -1865,7 +1975,9 @@
     "canonicalUrl": "https://vocus.cc/article/6ab9cffefd897800018416b8",
     "status": "published",
     "url": "/articles/vocus-20260928-018416b8.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260928-01824712",
@@ -1903,7 +2015,9 @@
     "canonicalUrl": "https://vocus.cc/article/6ab9c922fd89780001824712",
     "status": "published",
     "url": "/articles/vocus-20260928-01824712.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260927-01409BCB",
@@ -1931,7 +2045,9 @@
     "canonicalUrl": "https://vocus.cc/article/6ab89513fd89780001409bcb",
     "status": "published",
     "url": "/articles/vocus-20260927-01409bcb.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "devil",
+    "roomLabel": "雞爸爸內心小惡魔"
   },
   {
     "id": "CDJ-20260924-016225DB",
@@ -1957,7 +2073,9 @@
     "canonicalUrl": "https://vocus.cc/article/6ab4d1acfd897800016225db",
     "status": "published",
     "url": "/articles/vocus-20260924-016225db.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "devil",
+    "roomLabel": "雞爸爸內心小惡魔"
   },
   {
     "id": "CDJ-20260924-0161491C",
@@ -1981,7 +2099,9 @@
     "canonicalUrl": "https://vocus.cc/article/6ab4ce54fd8978000161491c",
     "status": "published",
     "url": "/articles/vocus-20260924-0161491c.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "devil",
+    "roomLabel": "雞爸爸內心小惡魔"
   },
   {
     "id": "CDJ-20260924-01603443",
@@ -2007,7 +2127,9 @@
     "canonicalUrl": "https://vocus.cc/article/6ab4c907fd89780001603443",
     "status": "published",
     "url": "/articles/vocus-20260924-01603443.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "devil",
+    "roomLabel": "雞爸爸內心小惡魔"
   },
   {
     "id": "CDJ-20260923-01EFC149",
@@ -2048,7 +2170,9 @@
     "canonicalUrl": "https://vocus.cc/article/6ab343a8fd89780001efc149",
     "status": "published",
     "url": "/articles/vocus-20260923-01efc149.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260922-0160556C",
@@ -2081,7 +2205,9 @@
     "canonicalUrl": "https://vocus.cc/article/6ab23d75fd8978000160556c",
     "status": "published",
     "url": "/articles/vocus-20260922-0160556c.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260921-01013923",
@@ -2122,7 +2248,9 @@
     "canonicalUrl": "https://vocus.cc/article/6ab0cd63fd89780001013923",
     "status": "published",
     "url": "/articles/vocus-20260921-01013923.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260921-01FB1884",
@@ -2158,7 +2286,9 @@
     "canonicalUrl": "https://vocus.cc/article/6ab0b968fd89780001fb1884",
     "status": "published",
     "url": "/articles/vocus-20260921-01fb1884.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260918-0102E2DC",
@@ -2192,7 +2322,9 @@
     "canonicalUrl": "https://vocus.cc/article/6aac9791fd8978000102e2dc",
     "status": "published",
     "url": "/articles/vocus-20260918-0102e2dc.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260917-01EDE58C",
@@ -2230,7 +2362,9 @@
     "canonicalUrl": "https://vocus.cc/article/6aab459afd89780001ede58c",
     "status": "published",
     "url": "/articles/vocus-20260917-01ede58c.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260916-01B5A802",
@@ -2268,7 +2402,9 @@
     "canonicalUrl": "https://vocus.cc/article/6aaa518efd89780001b5a802",
     "status": "published",
     "url": "/articles/vocus-20260916-01b5a802.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260916-01B0B65A",
@@ -2302,7 +2438,9 @@
     "canonicalUrl": "https://vocus.cc/article/6aaa3ebefd89780001b0b65a",
     "status": "published",
     "url": "/articles/vocus-20260916-01b0b65a.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260915-013F4896",
@@ -2337,7 +2475,9 @@
     "canonicalUrl": "https://vocus.cc/article/6aa8fc68fd897800013f4896",
     "status": "published",
     "url": "/articles/vocus-20260915-013f4896.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260914-01405379",
@@ -2375,7 +2515,9 @@
     "canonicalUrl": "https://vocus.cc/article/6aa75a3cfd89780001405379",
     "status": "published",
     "url": "/articles/vocus-20260914-01405379.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260911-01B3EB74",
@@ -2414,7 +2556,9 @@
     "canonicalUrl": "https://vocus.cc/article/6a9fba7dfd89780001b3eb74",
     "status": "published",
     "url": "/articles/vocus-20260911-01b3eb74.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260910-01FF2026",
@@ -2453,7 +2597,9 @@
     "canonicalUrl": "https://vocus.cc/article/6aa22326fd89780001ff2026",
     "status": "published",
     "url": "/articles/vocus-20260910-01ff2026.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260909-01F2A4B1",
@@ -2486,7 +2632,9 @@
     "canonicalUrl": "https://vocus.cc/article/6aa0c6f4fd89780001f2a4b1",
     "status": "published",
     "url": "/articles/vocus-20260909-01f2a4b1.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260908-019F8AF6",
@@ -2521,7 +2669,9 @@
     "canonicalUrl": "https://vocus.cc/article/6a9f749ffd897800019f8af6",
     "status": "published",
     "url": "/articles/vocus-20260908-019f8af6.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260907-015C94B3",
@@ -2551,7 +2701,9 @@
     "canonicalUrl": "https://vocus.cc/article/6a9e6575fd897800015c94b3",
     "status": "published",
     "url": "/articles/vocus-20260907-015c94b3.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260907-0141D98C",
@@ -2585,7 +2737,9 @@
     "canonicalUrl": "https://vocus.cc/article/6a9e1813fd8978000141d98c",
     "status": "published",
     "url": "/articles/vocus-20260907-0141d98c.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260904-01574C0B",
@@ -2620,7 +2774,9 @@
     "canonicalUrl": "https://vocus.cc/article/6a9a2b6ffd89780001574c0b",
     "status": "published",
     "url": "/articles/vocus-20260904-01574c0b.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260902-0189853B",
@@ -2655,7 +2811,9 @@
     "canonicalUrl": "https://vocus.cc/article/6a97d449fd8978000189853b",
     "status": "published",
     "url": "/articles/vocus-20260902-0189853b.html",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260901-01C32441",
@@ -2685,7 +2843,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260831-01756392",
@@ -2720,7 +2880,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260829-01E7D771",
@@ -2754,7 +2916,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260829-01E0AE3F",
@@ -2783,7 +2947,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260828-01B4C027",
@@ -2820,7 +2986,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260827-01753700",
@@ -2852,7 +3020,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260827-016EAD43",
@@ -2888,7 +3058,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260825-011D3DD7",
@@ -2925,7 +3097,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260825-01170BCC",
@@ -2961,7 +3135,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260825-010129C1",
@@ -2997,7 +3173,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260821-01F59ECE",
@@ -3023,7 +3201,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260821-01E9C0FC",
@@ -3058,7 +3238,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260821-01E52E6F",
@@ -3093,7 +3275,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260820-01AB503A",
@@ -3128,7 +3312,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260820-0198F9EC",
@@ -3164,7 +3350,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260819-01690F3A",
@@ -3199,7 +3387,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260819-015F0400",
@@ -3232,7 +3422,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260819-014B709B",
@@ -3266,7 +3458,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260818-010513A4",
@@ -3299,7 +3493,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260817-01C4C38C",
@@ -3337,7 +3533,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260817-01BCFD9F",
@@ -3375,7 +3573,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260817-01B7ACF2",
@@ -3412,7 +3612,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260816-0166AB30",
@@ -3445,7 +3647,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260815-012F03C0",
@@ -3479,7 +3683,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260815-0119A0BB",
@@ -3513,7 +3719,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260814-01D619E8",
@@ -3549,7 +3757,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260814-01C6611B",
@@ -3585,7 +3795,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260812-0129315B",
@@ -3621,7 +3833,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260811-013DEE4B",
@@ -3658,7 +3872,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260810-01E19098",
@@ -3693,7 +3909,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260810-01D66108",
@@ -3727,7 +3945,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260807-010412D9",
@@ -3755,7 +3975,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260806-0199EC35",
@@ -3785,7 +4007,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260805-0168ECF0",
@@ -3817,7 +4041,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260805-015E28DB",
@@ -3854,7 +4080,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260803-01EFFFD3",
@@ -3884,7 +4112,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260803-01D22105",
@@ -3920,7 +4150,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260802-017AB88C",
@@ -3954,7 +4186,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260731-01ED962E",
@@ -3990,7 +4224,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260730-01C92B26",
@@ -4018,7 +4254,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260730-0194D8C5",
@@ -4045,7 +4283,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260730-018E0198",
@@ -4081,7 +4321,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260729-012D4763",
@@ -4111,7 +4353,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260727-016797DF",
@@ -4137,7 +4381,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260726-01086C84",
@@ -4165,7 +4411,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260726-018033DA",
@@ -4199,7 +4447,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260723-0102189E",
@@ -4234,7 +4484,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260723-01E0AA17",
@@ -4262,7 +4514,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260722-018E56CF",
@@ -4297,7 +4551,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260721-0151D145",
@@ -4329,7 +4585,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260721-013C4458",
@@ -4363,7 +4621,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260720-019B648A",
@@ -4399,7 +4659,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260720-01404F6C",
@@ -4434,7 +4696,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260718-01E0C76D",
@@ -4471,7 +4735,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260718-01B3C510",
@@ -4508,7 +4774,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260717-01F4A3BE",
@@ -4543,7 +4811,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260717-01E08BFC",
@@ -4579,7 +4849,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260716-01B9A159",
@@ -4606,7 +4878,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260715-011768D0",
@@ -4635,7 +4909,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260715-01396ED9",
@@ -4671,7 +4947,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260714-01FD0251",
@@ -4707,7 +4985,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260714-0156F6A3",
@@ -4740,7 +5020,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260713-014990E4",
@@ -4775,7 +5057,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260711-01975AE2",
@@ -4807,7 +5091,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260708-01E42400",
@@ -4845,7 +5131,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260706-PICTURE-HAND-COURAGE",
@@ -4886,7 +5174,9 @@
     "featured": false,
     "hero": false,
     "quote": "真正的勇敢不是沒有哭，而是哭完還願意繼續。",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260706-MIDNIGHT-ASTHMA",
@@ -4923,7 +5213,9 @@
     "featured": false,
     "hero": false,
     "quote": "保養藥不是滅火器，血氧計也不是護身符。",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260703-RAP-DRAGON",
@@ -4955,7 +5247,9 @@
     "featured": false,
     "hero": false,
     "quote": "孩子聽音樂不需要懂歌詞，只要旋律一響起，身體就會先替快樂找到答案。",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-0002",
@@ -4988,7 +5282,9 @@
     "featured": false,
     "hero": false,
     "quote": "夫妻偶爾把彼此排在第一，不是自私，而是在替整個家庭充電。",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-0001",
@@ -5015,7 +5311,9 @@
     "featured": false,
     "hero": false,
     "quote": "幸福大概就是這樣，不驚天動地，也沒有轟轟烈烈。",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260630-AI-WEBSITE-CONCUBINE",
@@ -5048,7 +5346,9 @@
     "featured": false,
     "hero": false,
     "quote": "我只是想架個網站，妳卻想替我規劃人生。",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-0003",
@@ -5080,7 +5380,9 @@
     "featured": false,
     "hero": false,
     "quote": "孩子的童年，不只是那些盛大的旅行組成的。",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260626-AI-FAKE-ARTSY-MEME",
@@ -5113,7 +5415,9 @@
     "featured": false,
     "hero": false,
     "quote": "有時候作品不用 100 分，珍貴的反而是偶爾翻車時，那帶給我們一些意料之外快樂的瞬間。",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260626-018FD0A2",
@@ -5146,7 +5450,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260625-01451741",
@@ -5180,7 +5486,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-0004",
@@ -5211,7 +5519,9 @@
     "featured": false,
     "hero": false,
     "quote": "對大人來說，只是一場幼兒園的畢業典禮；對孩子來說，這可能是和朋友們的重要告別。",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260621-01865891",
@@ -5241,7 +5551,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260620-01C03108",
@@ -5271,7 +5583,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260620-01B63856",
@@ -5301,7 +5615,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260620-01AA17E8",
@@ -5329,7 +5645,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260616-PULLUP-SWING",
@@ -5359,7 +5677,9 @@
     "featured": false,
     "hero": false,
     "quote": "有了孩子之後，很多東西都會意外走出新的方向；單槓不是我想像中的樣子，但好像變成了更好的樣子。",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260615-01BD248C",
@@ -5393,7 +5713,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260613-01F74185",
@@ -5422,7 +5744,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260610-CREATINE-FAMILY",
@@ -5455,7 +5779,9 @@
     "featured": false,
     "hero": false,
     "quote": "有些補充品是買給自己的，有些補充品收到後，想到的是家人。",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260608-01C0B739",
@@ -5481,7 +5807,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "post"
+    "contentType": "post",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260607-ATOPIC-SKIN-FAMILY",
@@ -5515,7 +5843,9 @@
     "featured": false,
     "hero": false,
     "quote": "我沒有辦法替你癢，但我們可以陪你一起加油。",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260606-BIAOREN-DITING-ASANG",
@@ -5555,7 +5885,9 @@
     "featured": false,
     "hero": false,
     "quote": "其實，我們一直都有選擇。",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260604-BIAOREN-DESERT-ECHO",
@@ -5601,7 +5933,9 @@
     "featured": false,
     "hero": false,
     "quote": "我想補完那些電影無法說出口的話。",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260604-FIVE-YEAR-OLD-SLEEP",
@@ -5634,7 +5968,9 @@
     "featured": false,
     "hero": false,
     "quote": "原來獨立睡覺從來不是年齡問題，其實更像是一個安全感問題。",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260603-0145BA13",
@@ -5655,7 +5991,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "post"
+    "contentType": "post",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260602-OLD-PARTNER-NAS",
@@ -5692,7 +6030,9 @@
     "featured": false,
     "hero": false,
     "quote": "它既然還在位子上，我就會守護它到底。",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260602-0156381B",
@@ -5721,7 +6061,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260601-KIDS-FIRST-BASEBALL",
@@ -5757,7 +6099,9 @@
     "featured": false,
     "hero": false,
     "quote": "居然有一天可以打我女兒投給我的球。",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260601-FAMILY-DATA-NOISE-HSP",
@@ -5790,7 +6134,9 @@
     "featured": false,
     "hero": false,
     "quote": "適當叫個暫停，確認場邊暗號有沒有看錯。",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260531-HSU-JO-HSI-SIX-SCORELESS",
@@ -5822,7 +6168,9 @@
     "featured": false,
     "hero": false,
     "quote": "有些勝利記錄在計分板上，有些勝利則發生在心裡。",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260531-LINGHU-CHONG",
@@ -5863,7 +6211,9 @@
     "featured": false,
     "hero": false,
     "quote": "令狐沖之所以迷人，不是因為他劍法高，而是因為他活成了很多人想活卻不敢活的樣子。",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260530-01EF727B",
@@ -5891,7 +6241,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260530-01ED957D",
@@ -5919,7 +6271,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260529-HSP-ENERGY-PITCH-COUNT",
@@ -5957,7 +6311,9 @@
     "featured": false,
     "hero": false,
     "quote": "真正成熟的情緒管理，從來不是硬撐，而是看懂自己的用球數。",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260529-HSP-NOT-OVERTHINKING",
@@ -5994,7 +6350,9 @@
     "featured": false,
     "hero": false,
     "quote": "問題從來不是誰比較弱，而是你有沒有看懂自己的投球數據。",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260528-014BAC7A",
@@ -6017,7 +6375,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "post"
+    "contentType": "post",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260528-01F27848",
@@ -6042,7 +6402,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260527-01DBEAC4",
@@ -6063,7 +6425,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "post"
+    "contentType": "post",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260527-01BD1501",
@@ -6086,7 +6450,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "post"
+    "contentType": "post",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260526-01F66CD1",
@@ -6117,7 +6483,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260526-01EE70A3",
@@ -6141,7 +6509,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260526-01DD88F5",
@@ -6167,7 +6537,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "post"
+    "contentType": "post",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260526-01DA88B4",
@@ -6195,7 +6567,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "post"
+    "contentType": "post",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260525-018A488A",
@@ -6223,7 +6597,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "post"
+    "contentType": "post",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260525-0189D299",
@@ -6250,7 +6626,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "post"
+    "contentType": "post",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260524-01328B1B",
@@ -6274,7 +6652,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "post"
+    "contentType": "post",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260524-0108460C",
@@ -6297,7 +6677,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "post"
+    "contentType": "post",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260523-01D55ADD",
@@ -6324,7 +6706,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "post"
+    "contentType": "post",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260522-DRAGONS-SPEED-GAME",
@@ -6368,7 +6752,9 @@
     "featured": false,
     "hero": false,
     "quote": "用速度，校正大數據的無情。",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260522-CHEN-TZU-HAO-SLUMP",
@@ -6402,7 +6788,9 @@
     "featured": false,
     "hero": false,
     "quote": "不要看現在的打擊率，去看他上場時，有沒有找回 12% 的保送率。",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260522-DRAGONS-TTO-1996-2023",
@@ -6448,7 +6836,9 @@
     "featured": false,
     "hero": false,
     "quote": "龍魂的傳承不僅在於拚勁，更在於不斷進化的打擊智慧。",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260520-DRAGONS-90S-MEMORY",
@@ -6503,7 +6893,9 @@
     "featured": false,
     "hero": false,
     "quote": "生命中曾有的那一抹紅，從來沒有真正褪去過。",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260520-016D1A17",
@@ -6532,7 +6924,9 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "article"
+    "contentType": "article",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   },
   {
     "id": "CDJ-20260518-01F9D924",
@@ -6553,6 +6947,8 @@
     "featured": false,
     "hero": false,
     "quote": "",
-    "contentType": "post"
+    "contentType": "post",
+    "room": "family",
+    "roomLabel": "雞爸爸一家生活紀錄"
   }
 ]
