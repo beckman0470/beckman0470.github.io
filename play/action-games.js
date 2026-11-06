@@ -4,6 +4,19 @@
 const clamp=(v,min,max)=>Math.max(min,Math.min(max,v));
 function battingResult(progress,easy=true){const error=Math.abs(progress-.78);return error<=(easy?.23:.13)?(error<=.065?'全壘打':'安打'):'揮空';}
 function aimResult(progress,ax,ay,bx,by,easy=true){const timing=Math.abs(progress-.78);if(timing>(easy?.23:.13))return '揮空';if(Math.abs(ax-bx)>(easy?57:44)||Math.abs(ay-by)>(easy?43:34))return '瞄準偏了';return timing<=.065&&Math.hypot(ax-bx,ay-by)<=22?'全壘打':'安打';}
+
+const pitcherProfiles={
+ ohtani:{name:'大谷翔平',hand:'R',types:['sweeper','splitter','fastball'],signature:'橫掃球、指叉球'},
+ yamamoto:{name:'山本由伸',hand:'R',types:['curve','splitter','fastball'],signature:'曲球、指叉球'},
+ sasaki:{name:'佐佐木朗希',hand:'R',types:['splitter','fastball','splitter'],signature:'快速球、指叉球'},
+ kershaw:{name:'Clayton Kershaw',hand:'L',types:['curve','curve','fastball'],signature:'招牌曲球'}
+};
+const pitchNames={fastball:'四縫線快速球',sweeper:'橫掃球',splitter:'指叉球',curve:'曲球'};
+function pitchDuration(type,easy){return ({fastball:1.9,sweeper:2.4,splitter:2.1,curve:2.7}[type]||2.2)*(easy?1.35:1);}
+function pitchPosition(progress,landing,type,hand='R'){const q=progress/.78,p=clamp(q,0,1),wave=Math.sin(Math.PI*p),start=hand==='L'?320:280;return {x:start+(landing.x-start)*q+(type==='sweeper'?(hand==='L'?-1:1)*65*wave:0),y:98+(landing.y-98)*q-(type==='curve'?80:type==='splitter'?40:0)*wave};}
+const hoopLevels={easy:{label:'簡單',speed:1.4,half:.22},medium:{label:'中等',speed:2.4,half:.145},hard:{label:'困難',speed:3.8,half:.085}};
+function hoopResult(direction,power,level='easy'){const half=hoopLevels[level].half;return Math.abs(direction-.5)<=half&&Math.abs(power-.5)<=half;}
+
 function newKingdom(){return {gold:12,food:18,troops:12,turn:1,actions:2,selected:0,ended:false,cities:[{name:'成都',owner:'you',def:0},{name:'漢中',owner:'neutral',def:4},{name:'長安',owner:'enemy',def:8},{name:'荊州',owner:'neutral',def:5},{name:'建業',owner:'enemy',def:7},{name:'許昌',owner:'enemy',def:10}]};}
 const adjacent=(a,b)=>Math.abs(Math.floor(a/3)-Math.floor(b/3))+Math.abs(a%3-b%3)===1;
 function kingdomAct(state,type){const s=JSON.parse(JSON.stringify(state));if(s.ended)return {state:s,text:'這一局已結束，可以重新開局。'};let text='';const own=s.cities.filter(c=>c.owner==='you').length;
@@ -14,7 +27,7 @@ else if(type==='recruit'){if(s.gold<4||s.food<4)return {state:s,text:'招兵需�
 else if(type==='attack'){const t=s.cities[s.selected];if(t.owner==='you')return {state:s,text:'這是自己的城池，請先選一座鄰近城池。'};if(!s.cities.some((c,i)=>c.owner==='you'&&adjacent(i,s.selected)))return {state:s,text:'距離太遠，先攻下相鄰的城池。'};if(s.food<3)return {state:s,text:'出征需要三份糧食，先準備糧食。'};if(s.troops<t.def+2)return {state:s,text:'需要至少'+(t.def+2)+'名士兵，再招兵就能穩穩出發。'};s.food-=3;s.troops-=Math.ceil(t.def/2);t.owner='you';text='攻下'+t.name+'！士兵休息後，這座城會在下回合提供資源。';}
 else return {state:s,text:'請選擇一個行動。'};
 s.actions--;if(s.cities.every(c=>c.owner==='you')){s.ended=true;text='六座城都加入你了！你完成了這場迷你三國遠征。';}return {state:s,text};}
-if(typeof module!=='undefined'&&module.exports){module.exports={clamp,battingResult,aimResult,newKingdom,kingdomAct,adjacent};return;}
+if(typeof module!=='undefined'&&module.exports){module.exports={clamp,battingResult,aimResult,pitcherProfiles,pitchDuration,pitchPosition,hoopResult,hoopLevels,newKingdom,kingdomAct,adjacent};return;}
 const NS='http://www.w3.org/2000/svg';
 function svg(tag,attrs={},text){const n=document.createElementNS(NS,tag);Object.entries(attrs).forEach(([k,v])=>n.setAttribute(k,v));if(text)n.textContent=text;return n;}
 function node(tag,cls,text){const n=document.createElement(tag);if(cls)n.className=cls;if(text)n.textContent=text;return n;}
@@ -29,32 +42,64 @@ on(document,'visibilitychange',()=>{if(document.hidden){paused=true;holding=fals
 function loop(step){function tick(now){if(disposed)return;const dt=last?Math.min((now-last)/1000,.05):0;last=now;if(!paused)step(dt,now);frame=requestAnimationFrame(tick);}frame=requestAnimationFrame(tick);}
 function hold(button,change){on(button,'pointerdown',e=>{e.preventDefault();button.setPointerCapture?.(e.pointerId);change(true);});['pointerup','pointercancel','lostpointercapture'].forEach(type=>on(button,type,()=>change(false)));on(button,'keydown',e=>{if(e.code==='Space'||e.code==='Enter'){e.preventDefault();change(true);}});on(button,'keyup',e=>{if(e.code==='Space'||e.code==='Enter'){e.preventDefault();change(false);}});on(button,'blur',()=>change(false));}
 function scene(label){const s=svg('svg',{viewBox:'0 0 600 320',role:'img','aria-label':label});screen.append(s);return s;}
-if(id==='baseball'){
+if(id==='basketball'){
+const s=scene('籃球場：先鎖定左右方向，再鎖定投籃力度。');s.setAttribute('viewBox','0 0 600 340');s.append(svg('rect',{width:600,height:340,fill:'#eee6cf'}),svg('path',{d:'M0 260 L600 220 V340 H0 Z',fill:'#bd956a'}),svg('line',{x1:515,y1:40,x2:515,y2:230,stroke:'#6d8176','stroke-width':9}),svg('rect',{x:432,y:42,width:108,height:72,rx:6,fill:'#fffdf8',stroke:'#6d8176','stroke-width':4}),svg('rect',{x:462,y:67,width:39,height:32,fill:'none',stroke:'#b87642','stroke-width':3}),svg('ellipse',{cx:470,cy:112,rx:34,ry:9,fill:'none',stroke:'#c36c34','stroke-width':7}),svg('path',{d:'M438 115 L451 157 L487 157 L504 115 M449 119 L460 154 M461 120 L469 155 M479 120 L478 155 M493 119 L488 151',fill:'none',stroke:'#fffdf8','stroke-width':3}),svg('image',{href:'/assets/img/portrait-dad.png',x:50,y:171,width:88,height:140}));const ball=svg('circle',{cx:130,cy:230,r:16,fill:'#d58a39',stroke:'#754d29','stroke-width':3});s.append(ball);
+let level='easy',phase='direction',clock=0,dir=.5,power=.5,lockedDir=.5,lockedPower=.5,shots=0,goals=0,flight=0,success=false;
+const score=node('p','ag-score');root.prepend(score);const instruction=node('p','ag-hoop-instruction');
+const bars=node('div','ag-hoop-bars'),horizontal=node('div','ag-bar ag-horizontal'),vertical=node('div','ag-bar ag-vertical');horizontal.setAttribute('role','img');vertical.setAttribute('role','img');const hzone=node('span','ag-valid-zone'),vzone=node('span','ag-valid-zone'),hdot=node('span','ag-meter-dot'),vdot=node('span','ag-meter-dot');horizontal.append(hzone,hdot);vertical.append(vzone,vdot);
+const hwrap=node('div','ag-bar-wrap'),vwrap=node('div','ag-bar-wrap');hwrap.append(node('p','','① 左右方向'),horizontal,node('p','note','左 ←　有效區間　→ 右'));vwrap.append(node('p','','② 投籃力度'),vertical,node('p','note','上方強、下方弱'));bars.append(hwrap,vwrap);root.append(instruction,bars);
+function sync(){score.textContent='第 '+shots+' / 5 球 · 進球 '+goals+' · '+hoopLevels[level].label;const half=hoopLevels[level].half;hzone.style.left=(.5-half)*100+'%';hzone.style.width=half*200+'%';vzone.style.bottom=(.5-half)*100+'%';vzone.style.height=half*200+'%';hdot.style.left=dir*100+'%';vdot.style.bottom=power*100+'%';horizontal.setAttribute('aria-label','方向指標 '+Math.round(dir*100)+'，有效區間 '+Math.round((.5-half)*100)+' 到 '+Math.round((.5+half)*100));vertical.setAttribute('aria-label','力度指標 '+Math.round(power*100)+'，有效區間相同');instruction.textContent=phase==='direction'?'第一步：看橫向點點，進入綠色區間時鎖定方向。':phase==='power'?'第二步：看直向點點，進入綠色區間時鎖定力度並投籃。':phase==='flight'?'籃球飛出去了！':shots>=5?'五球完成，想再來一輪嗎？':'準備下一球。';lock.textContent=phase==='direction'?'鎖定左右方向':phase==='power'?'鎖定力度，投籃！':shots>=5?'五球完成':'投下一球';lock.disabled=phase==='flight'||(shots>=5&&phase==='between');}
+function choose(){if(paused)return;if(phase==='direction'){lockedDir=dir;phase='power';clock=0;tell('方向鎖定！接著看上下移動的力度點點。');}else if(phase==='power'){lockedPower=power;shots++;success=hoopResult(lockedDir,lockedPower,level);phase='flight';flight=0;}else if(phase==='between'&&shots<5){phase='direction';clock=0;dir=power=.5;ball.setAttribute('cx',130);ball.setAttribute('cy',230);}sync();}
+const lock=btn('鎖定左右方向',choose,'primary ag-hit');controls.append(lock,pause,btn('再投五球',()=>reset(level)));const difficulty=node('div','ag-hoop-levels');Object.entries(hoopLevels).forEach(([id,item])=>{const b=btn(item.label,()=>reset(id));b.dataset.hoopLevel=id;difficulty.append(b);});root.prepend(difficulty);
+function reset(id){level=id;phase='direction';clock=0;dir=power=.5;shots=goals=0;ball.setAttribute('cx',130);ball.setAttribute('cy',230);Array.from(difficulty.children).forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.hoopLevel===id)));tip.textContent='先鎖定方向，再鎖定力度。兩個點點都在綠色區間，就能進球。';sync();}
+loop(dt=>{if(phase==='direction'||phase==='power'){clock+=dt;const value=.5+.5*Math.sin(clock*hoopLevels[level].speed);if(phase==='direction')dir=value;else power=value;sync();}else if(phase==='flight'){flight+=dt;const p=Math.min(1,flight/1.2),targetX=470+(success?0:(lockedDir-.5)*210),targetY=112+(success?0:(.5-lockedPower)*150);ball.setAttribute('cx',130+(targetX-130)*p);ball.setAttribute('cy',230+(targetY-230)*p-Math.sin(Math.PI*p)*160);if(p===1){phase='between';if(success)goals++;tell(success?'空心入網！方向與力度都抓對了！':'差一點！'+(Math.abs(lockedDir-.5)>hoopLevels[level].half?'方向偏了，':'方向不錯，')+(Math.abs(lockedPower-.5)>hoopLevels[level].half?'力度再調整一下。':'力度不錯。'));sync();}}});
+root.append(node('p','note','難度越高，點點擺動越快、有效區間越窄。每回合五球，不限重試。空白鍵也可操作目前聚焦的鎖定按鈕。'));reset('easy');api.announce('投籃練習。先看左右擺動的點點，在綠色區間按鎖定方向。再看上下點點，按鎖定力度就會投籃。');
+}else if(id==='baseball'){
 const s=scene('打者視角：用滑鼠或手指移動金色打擊框，球接近框框時按打擊。');s.setAttribute('viewBox','0 0 600 360');s.classList.add('ag-batting-view');s.tabIndex=0;
-s.append(svg('rect',{width:600,height:360,fill:'#dcebd1'}),svg('path',{d:'M0 155 Q300 70 600 155 L600 0 H0 Z',fill:'#bad4dc'}),svg('path',{d:'M0 175 Q300 30 600 175',fill:'none',stroke:'#668674','stroke-width':32}),svg('path',{d:'M300 342 L120 190 L300 86 L480 190 Z',fill:'#ddc49b'}),svg('path',{d:'M0 345 L300 320 L600 345',stroke:'white','stroke-width':4,fill:'none'}),svg('rect',{x:245,y:278,width:110,height:62,fill:'#c7ad8b'}),svg('path',{d:'M283 314 H317 L322 327 L300 340 L278 327 Z',fill:'white'}));
-s.append(svg('image',{href:'/assets/img/portrait-dad.png',x:408,y:193,width:76,height:135}),svg('circle',{cx:300,cy:95,r:14,fill:'#42664d'}),svg('line',{x1:300,y1:110,x2:300,y2:134,stroke:'#42664d','stroke-width':12}));
+
+const indoor=svg('g'),outdoor=svg('g',{visibility:'hidden'});
+outdoor.append(svg('rect',{width:600,height:360,fill:'#9dcee2'}));
+indoor.append(svg('rect',{width:600,height:360,fill:'#dee6e9'}),svg('path',{d:'M0 110 Q300 -90 600 110 L600 0 H0 Z',fill:'#9caeb5'}));
+for(let i=0;i<9;i++){const x=i*75;indoor.append(svg('path',{d:'M'+x+' 0 Q300 40 '+(x-50)+' 130',stroke:'#dce5e9','stroke-width':5,fill:'none'}));}
+indoor.append(svg('path',{d:'M0 105 Q300 -15 600 105',stroke:'#657f8b','stroke-width':8,fill:'none'}),svg('rect',{x:248,y:30,width:104,height:36,rx:5,fill:'#344b38'}),svg('text',{x:300,y:54,'text-anchor':'middle','font-size':17,fill:'white'},'大巨蛋風格'));
+s.append(outdoor,indoor,svg('rect',{x:0,y:110,width:600,height:250,fill:'#8ebc7a'}),svg('path',{d:'M0 150 Q300 75 600 150',stroke:'#7a8b78','stroke-width':32,fill:'none'}));
+for(let row=0;row<3;row++)for(let i=0;i<24;i++)s.append(svg('circle',{cx:12+i*25,cy:116+row*9,r:3,fill:['#f1d6a6','#6b9ac1','#d5ddec'][i%3]}));
+s.append(svg('path',{d:'M300 342 L120 190 L300 120 L480 190 Z',fill:'#ddc49b'}),svg('path',{d:'M0 345 L300 320 L600 345',stroke:'white','stroke-width':4,fill:'none'}),svg('ellipse',{cx:300,cy:150,rx:45,ry:10,fill:'#c2a278'}),svg('path',{d:'M283 314 H317 L322 327 L300 340 L278 327 Z',fill:'white'}),svg('image',{href:'/assets/img/portrait-dad.png',x:408,y:193,width:76,height:135}));
+const pitcherArt=svg('g');pitcherArt.append(svg('path',{d:'M294 132 L284 158 M306 132 L314 158',stroke:'#f6f4ea','stroke-width':8}),svg('rect',{x:289,y:104,width:22,height:32,rx:7,fill:'#4e80ab'}),svg('circle',{cx:300,cy:94,r:12,fill:'#edc49a'}),svg('path',{d:'M288 91 Q300 70 312 91 Z',fill:'#426d99'}),svg('path',{d:'M290 111 L280 98',stroke:'#edc49a','stroke-width':7,'stroke-linecap':'round'}),svg('circle',{cx:312,cy:114,r:6,fill:'#8d653f'}));s.append(pitcherArt);
+const pitcherLabel=svg('text',{x:300,y:179,'text-anchor':'middle','font-size':17,fill:'#344b38'});s.append(pitcherLabel);
 const bat=svg('line',{x1:427,y1:268,x2:391,y2:170,stroke:'#906136','stroke-width':11,'stroke-linecap':'round'});s.append(bat);
 s.append(svg('rect',{x:205,y:148,width:175,height:136,rx:4,fill:'white','fill-opacity':'.06',stroke:'#fffdf8','stroke-width':3,'stroke-dasharray':'8 6'}),svg('text',{x:210,y:139,'font-size':17,fill:'#344b38'},'好球帶'));
 const hint=svg('circle',{r:14,fill:'#547faa','fill-opacity':'.18',stroke:'#547faa','stroke-dasharray':'4 3',visibility:'hidden'});s.append(hint);
 const ball=svg('circle',{cx:300,cy:105,r:5,fill:'white',stroke:'#ac6351','stroke-width':2,visibility:'hidden'});s.append(ball);
 const aim=svg('g',{'pointer-events':'none'}),box=svg('rect',{width:100,height:72,rx:12,fill:'#fff2aa','fill-opacity':'.2',stroke:'#a16a17','stroke-width':3}),cross=svg('path',{d:'M-12 0 H12 M0 -12 V12',stroke:'#42664d','stroke-width':2});aim.append(box,cross);s.append(aim);
-let ax=300,ay=220,landing={x:300,y:220},shots=0,hits=0,homers=0,progress=0,flying=false,flight=0,swingFlash=0,easy=true;
+let ax=300,ay=220,landing={x:300,y:220},shots=0,hits=0,homers=0,progress=0,flying=false,flight=0,swingFlash=0,easy=true,pitcherId='ohtani',pitchType='sweeper',pitchChoice='mix';
 const score=node('p','ag-score');root.prepend(score);
 const aimStatus=node('p','ag-aim-status');aimStatus.setAttribute('aria-live','off');root.append(aimStatus);
 function moveAim(x,y){ax=clamp(x,190,395);ay=clamp(y,140,286);aim.setAttribute('transform','translate('+ax+' '+ay+')');const w=easy?100:74,h=easy?72:54;box.setAttribute('x',-w/2);box.setAttribute('y',-h/2);box.setAttribute('width',w);box.setAttribute('height',h);aimStatus.textContent='瞄準位置：橫向 '+Math.round(ax)+'，高度 '+Math.round(ay)+'。可拖動框框，也可點選球場後用方向鍵。';}
 function point(event){const r=s.getBoundingClientRect();if(!r.width||!r.height)return;moveAim((event.clientX-r.left)*600/r.width,(event.clientY-r.top)*360/r.height);}
-on(s,'pointerdown',event=>{if(paused)return;event.preventDefault();s.setPointerCapture?.(event.pointerId);point(event);});
-on(s,'pointermove',event=>{if(paused)return;if(event.pointerType==='mouse'||event.buttons||s.hasPointerCapture?.(event.pointerId)){event.preventDefault();point(event);}});
+let touchStart=null,touchMoved=false;
+on(s,'pointerdown',event=>{if(paused)return;event.preventDefault();if(event.pointerType==='mouse'){if(event.button!==undefined&&event.button!==0)return;point(event);swing();return;}s.setPointerCapture?.(event.pointerId);touchStart={x:event.clientX,y:event.clientY,id:event.pointerId};touchMoved=false;point(event);});
+on(s,'pointermove',event=>{if(paused)return;if(touchStart&&touchStart.id===event.pointerId&&Math.hypot(event.clientX-touchStart.x,event.clientY-touchStart.y)>12)touchMoved=true;if(event.pointerType==='mouse'||event.buttons||s.hasPointerCapture?.(event.pointerId)||touchStart?.id===event.pointerId){event.preventDefault();point(event);}});
+on(s,'pointerup',event=>{if(touchStart?.id!==event.pointerId)return;event.preventDefault();const tapped=!touchMoved;touchStart=null;if(tapped&&!paused){point(event);swing();}});
+on(s,'pointercancel',()=>{touchStart=null;touchMoved=false;});
 on(s,'keydown',event=>{const d={ArrowLeft:[-12,0],ArrowRight:[12,0],ArrowUp:[0,-12],ArrowDown:[0,12]}[event.code];if(d){event.preventDefault();if(!paused)moveAim(ax+d[0],ay+d[1]);}if(event.code==='Space'){event.preventDefault();swing();}});
-const pitch=btn('投下一球',()=>{if(paused||flying||flight>0||shots>=5)return;shots++;progress=0;landing={x:225+Math.random()*130,y:178+Math.random()*75};flying=true;ball.setAttribute('visibility','visible');hint.setAttribute('cx',landing.x);hint.setAttribute('cy',landing.y);hint.setAttribute('visibility',easy?'visible':'hidden');pitch.disabled=true;tip.textContent=easy?'藍色圈是來球落點。把金框移過去，等球靠近再打擊！':'看來球移動金框，等接近本壘再打擊！';update();},'primary');
+const pitch=btn('投下一球',()=>{if(paused||flying||flight>0||shots>=5)return;shots++;progress=0;const profile=pitcherProfiles[pitcherId];pitchType=pitchChoice==='mix'?profile.types[Math.floor(Math.random()*profile.types.length)]:pitchChoice;landing={x:225+Math.random()*130,y:178+Math.random()*75};flying=true;ball.setAttribute('visibility','visible');hint.setAttribute('cx',landing.x);hint.setAttribute('cy',landing.y);hint.setAttribute('visibility',easy?'visible':'hidden');pitch.disabled=true;tip.textContent=profile.name+'投出'+pitchNames[pitchType]+'。'+(easy?'瞄準藍圈，接近時點球場打擊！':'看準來球，點球場打擊！');update();},'primary');
 function result(kind){flying=false;hits+=['安打','全壘打'].includes(kind)?1:0;homers+=kind==='全壘打'?1:0;flight=['安打','全壘打'].includes(kind)?1.2:0;hint.setAttribute('visibility','hidden');let text=kind==='瞄準偏了'?'時機接近了！但框框偏離落點，再移準一點。':kind==='揮空'?'這次時機差一點，等球更靠近金框再打擊。':kind+'！瞄準與時機都抓到了！';if(shots===5)text+=' 五球完成：'+hits+' 支安打，其中 '+homers+' 支全壘打。';tell(text);pitch.disabled=shots>=5||flight>0;update();}
 function swing(){if(paused||!flying)return;swingFlash=.3;result(aimResult(progress,ax,ay,landing.x,landing.y,easy));}
 const hit=btn('打擊！',swing,'primary ag-hit'),difficulty=btn('模式：輕鬆・落點提示',()=>{if(flying||flight>0)return;easy=!easy;difficulty.textContent=easy?'模式：輕鬆・落點提示':'模式：挑戰・自己瞄準';moveAim(ax,ay);});
 controls.append(pitch,hit,difficulty,pause,btn('再打五球',()=>{flying=false;flight=0;shots=hits=homers=0;pitch.disabled=false;ball.setAttribute('visibility','hidden');hint.setAttribute('visibility','hidden');update();tip.textContent='準備好了，移動金框，再投一球。';}));
-function update(){score.textContent='第 '+shots+' / 5 球 · 安打 '+hits+' · 全壘打 '+homers;hit.disabled=!flying;}
-loop(dt=>{if(flying){progress+=dt/(easy?3.0:2.2);const p=progress/.78;ball.setAttribute('cx',300+(landing.x-300)*p);ball.setAttribute('cy',105+(landing.y-105)*p);ball.setAttribute('r',5+clamp(p,0,1.3)*6);if(progress>1.08)result('揮空');}else if(flight>0){flight-=dt;const p=1-flight/1.2;ball.setAttribute('cx',landing.x-170*p);ball.setAttribute('cy',landing.y-205*Math.sin(p*1.5));if(flight<=0){ball.setAttribute('visibility','hidden');pitch.disabled=shots>=5;}}swingFlash=Math.max(0,swingFlash-dt);bat.setAttribute('transform',swingFlash?'rotate(-85 427 268)':'');});
-moveAim(ax,ay);update();root.append(node('p','note','金框是你移動的打擊位置，白色虛線框是固定好球帶。先用滑鼠或手指瞄準，再按下方「打擊！」；電腦也能在球場用方向鍵瞄準、空白鍵打擊。'));
-api.announce('先按投下一球，把金色打擊框移到藍色落點圈，等球靠近，再按打擊。可以用滑鼠或手指移動框框。');
+function update(){score.textContent=pitcherProfiles[pitcherId].name+' · '+(pitcherProfiles[pitcherId].hand==='L'?'左投':'右投')+' · 第 '+shots+' / 5 球 · 安打 '+hits+' · 全壘打 '+homers;hit.disabled=!flying;if(typeof pitcherButtons!=='undefined')pitcherButtons.forEach(b=>b.disabled=flying||flight>0);}
+loop(dt=>{if(flying){progress+=dt/pitchDuration(pitchType,easy);const p=progress/.78,position=pitchPosition(progress,landing,pitchType,pitcherProfiles[pitcherId].hand);ball.setAttribute('cx',position.x);ball.setAttribute('cy',position.y);ball.setAttribute('r',5+clamp(p,0,1.3)*6);if(progress>1.08)result('揮空');}else if(flight>0){flight-=dt;const p=1-flight/1.2;ball.setAttribute('cx',landing.x-170*p);ball.setAttribute('cy',landing.y-205*Math.sin(p*1.5));if(flight<=0){ball.setAttribute('visibility','hidden');pitch.disabled=shots>=5;update();}}swingFlash=Math.max(0,swingFlash-dt);bat.setAttribute('transform',swingFlash?'rotate(-85 427 268)':'');});
+
+const picker=node('div','ag-pitcher-picker');picker.append(node('p','', '選投手（換人會重新開始五球）'));const pitcherButtons=[];Object.entries(pitcherProfiles).forEach(([id,profile])=>{const b=btn(profile.name+' · '+(profile.hand==='L'?'左投':'右投'),()=>{if(flying||flight>0)return;pitcherId=id;pitchChoice='mix';shots=hits=homers=0;ball.setAttribute('visibility','hidden');configurePitcher();update();});b.dataset.pitcher=id;pitcherButtons.push(b);picker.append(b);});
+const types=node('div','ag-pitch-types');const description=node('p','note');
+const stadium=btn('球場：卡通大巨蛋',()=>{const isIndoor=indoor.getAttribute('visibility')!=='hidden';indoor.setAttribute('visibility',isIndoor?'hidden':'visible');outdoor.setAttribute('visibility',isIndoor?'visible':'hidden');stadium.textContent=isIndoor?'球場：戶外練習場':'球場：卡通大巨蛋';});
+picker.append(types,description,stadium);root.prepend(picker);
+function configurePitcher(){const profile=pitcherProfiles[pitcherId];pitcherArt.setAttribute('transform',profile.hand==='L'?'translate(600 0) scale(-1 1)':'');pitcherLabel.textContent=profile.hand==='L'?'左投':'右投';pitcherButtons.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.pitcher===pitcherId)));types.replaceChildren();['mix',...new Set(profile.types)].forEach(type=>{const b=btn(type==='mix'?'混合配球':pitchNames[type],()=>{if(flying||flight>0)return;pitchChoice=type;configurePitcher();});b.setAttribute('aria-pressed',String(type===pitchChoice));types.append(b);});description.textContent=profile.name+'：'+profile.signature+'。球速與軌跡是方便練習的遊戲示意，非實際測量。';}
+configurePitcher();
+
+moveAim(ax,ay);update();root.append(node('p','note','金框是你移動的打擊位置，白色虛線框是固定好球帶。滑鼠移動瞄準，左鍵點球場就揮棒；手機拖曳瞄準，輕點球場就揮棒。拖曳放開不會誤揮，也保留方向鍵、空白鍵和打擊按鈕。'));
+api.announce('選投手，再投下一球。滑鼠移動瞄準，直接點球場打擊。手機拖曳瞄準，再輕點球場打擊。');
 }else if(id==='coffee'){
 const s=scene('咖啡操作台：磨豆機、手沖壺、濾杯和咖啡杯。');s.append(svg('rect',{width:600,height:320,fill:'#f3ecd9'}),svg('rect',{x:0,y:278,width:600,height:42,fill:'#d8bd92'}));
 const grinder=svg('g');grinder.append(svg('rect',{x:55,y:115,width:110,height:135,rx:18,fill:'#b39473'}),svg('ellipse',{cx:110,cy:112,rx:50,ry:18,fill:'#72533a'}));const handle=svg('line',{x1:110,y1:82,x2:175,y2:82,stroke:'#42664d','stroke-width':9,'stroke-linecap':'round'});grinder.append(handle);s.append(grinder,svg('path',{d:'M280 125 L400 125 L370 190 L310 190 Z',fill:'#fdfbf3',stroke:'#9b886e','stroke-width':3}),svg('path',{d:'M300 130 L380 130 L365 163 L315 163 Z',fill:'#795039'}),svg('rect',{x:300,y:198,width:80,height:78,rx:12,fill:'#fffdf8',stroke:'#9b886e','stroke-width':3}));
@@ -88,4 +133,5 @@ return ()=>{disposed=true;cancelAnimationFrame(frame);cleanups.forEach(fn=>fn())
 }
 window.CDJActionGames={mount};
 })();
+
 

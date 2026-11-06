@@ -1,0 +1,2 @@
+/* Original generated face sheet: six columns, five rows. */
+(()=>{'use strict';const names=['曹操','夏侯惇','張遼','許褚','徐晃','荀彧','郭嘉','賈詡','劉備','關羽','張飛','趙雲','黃忠','諸葛亮','龐統','法正','孫權','甘寧','太史慈','周泰','黃蓋','周瑜','魯肅','陸遜','令狐沖','張無忌','段譽'];function avatar(name){const n=document.createElement('span'),index=names.indexOf(name);n.className='rp-avatar';n.setAttribute('aria-hidden','true');if(index>=0)n.style.backgroundPosition=((index%6)/5*100)+'% '+(Math.floor(index/6)/4*100)+'%';return n;}window.CDJPortraits={avatar,names};})();
