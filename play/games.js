@@ -69,25 +69,29 @@ if(mode==='size'){const big=Math.random()<.5;content.append(el('p','question','�
 render();
 }
 function jump(level='slow'){
-const stage=shell('jump');configs(stage,[['slow','慢速'],['normal','一般']],level,v=>jump(v));stage.append(el('p','question','看到紙箱靠近，按「跳一下」！跳過 5 個就過關。'));
+const stage=shell('jump');configs(stage,[['slow','慢速'],['normal','一般']],level,v=>jump(v));stage.append(el('p','question',level==='slow'?'看到「現在跳！」就按跳躍。跳過 5 個就過關，碰到也保留進度。':'看到紙箱靠近，按「跳一下」！跳過 5 個就過關。'));
 const track=el('div','mg-running'),label=el('div','mg-track-text','按開始後，雅虎就會出發。'),cat=catImage('yahoo','walk','mg-run-cat'),box=el('div','mg-box','✦');box.setAttribute('aria-hidden','true');track.append(label,cat,box);stage.append(track);
 const counter=el('p','mg-counter','已跳過 0 / 5 個紙箱');stage.append(counter);const feedback=status(stage),row=el('div','mg-choices');stage.append(row);
-// Slow boxes overlap the cat for longer; extend airtime while keeping the jump near 102px high.
-const motion=level==='slow'?{speed:118,launch:320,gravity:500}:{speed:165,launch:470,gravity:1100};
+// Slow mode gives a longer jump window, a smaller body hitbox, and retries without losing progress.
+const motion=level==='slow'?{speed:118,launch:250,gravity:300}:{speed:165,launch:470,gravity:1100};
 let frame=0,last=0,y=0,velocity=0,x=0,score=0,running=false,paused=false,passed=false,ended=false;
-const action=btn('開始出發 ▶','primary',()=>{if(!running){if(ended){score=0;counter.textContent='已跳過 0 / 5 個紙箱';}start();return;}if(paused){feedback.textContent='先按繼續，再跳一下。';return;}if(y===0)velocity=motion.launch;});
+const action=btn('開始出發 ▶','primary',()=>{if(!running){if(ended){score=0;counter.textContent='已跳過 0 / 5 個紙箱';}start();return;}if(paused){feedback.textContent='先按繼續，再跳一下。';return;}if(y===0){velocity=motion.launch;if(level==='slow')feedback.textContent='';}});
 const pause=btn('暫停','secondary',()=>{if(!running)return;paused=!paused;cancelAnimationFrame(frame);pause.textContent=paused?'繼續':'暫停';last=0;feedback.textContent=paused?'先休息一下，準備好再繼續。':'';if(!paused)frame=requestAnimationFrame(tick);});pause.disabled=true;row.append(action,pause);
 function draw(){cat.style.transform='translateY('+(-y)+'px)';box.style.transform='translateX('+x+'px)';}
 function start(){cancelAnimationFrame(frame);running=true;paused=false;ended=false;last=0;y=0;velocity=0;score=score||0;x=Math.max(280,track.clientWidth)+30;passed=false;action.textContent='跳一下 ↑';pause.disabled=false;pause.textContent='暫停';label.textContent='雅虎出發囉！';feedback.textContent='';draw();frame=requestAnimationFrame(tick);}
 function stop(win){running=false;ended=true;cancelAnimationFrame(frame);pause.disabled=true;action.textContent=win?'再玩一回 ↻':'再試一次 ↻';feedback.textContent=win?'五個都跳過了！雅虎好厲害 ⭐':'碰到紙箱了，沒關係，再試一次！';}
 function tick(t){if(!running||paused)return;const dt=last?Math.min((t-last)/1000,.04):0;last=t;if(velocity||y){y=Math.max(0,y+velocity*dt);velocity-=motion.gravity*dt;if(y===0)velocity=0;}x-=motion.speed*dt;
-if(x<100&&x+38>52&&y<39){draw();stop(false);return;}
+if(level==='slow'){
+ const cue=y>0?'雅虎跳躍中 ↑':x<=205&&x>=100?'現在跳！按「跳一下」↑':'紙箱過來囉，準備一下！';
+ if(label.textContent!==cue)label.textContent=cue;
+ if(x<88&&x+38>64&&y<24){x=Math.max(280,track.clientWidth)+60;y=0;velocity=0;passed=false;feedback.textContent='沒關係！已跳過的紙箱幫你留著，再試一次。';label.textContent='準備好，再跳一次！';draw();frame=requestAnimationFrame(tick);return;}
+}else if(x<100&&x+38>52&&y<39){draw();stop(false);return;}
 if(!passed&&x+38<52){passed=true;score++;counter.textContent='已跳過 '+score+' / 5 個紙箱';sound();if(score>=5){draw();stop(true);return;}}
 if(x<-50){x=Math.max(280,track.clientWidth)+60;passed=false;}draw();frame=requestAnimationFrame(tick);}
 const onHidden=()=>{if(document.hidden&&running&&!paused){paused=true;pause.textContent='繼續';last=0;feedback.textContent='遊戲已暫停，回來後按繼續。';}};
 document.addEventListener('visibilitychange',onHidden);
 cleanup=()=>{running=false;cancelAnimationFrame(frame);document.removeEventListener('visibilitychange',onHidden);};
-box.style.transform='translateX(250px)';stage.append(el('p','mg-tip','可用滑鼠、觸控或在按鈕上按空白鍵。沒有倒數計時，隨時能暫停。'));
+box.style.transform='translateX(250px)';stage.append(el('p','mg-tip',level==='slow'?'慢速有更長的起跳時間，擦過尾巴也不算碰撞；碰到紙箱會保留進度。可用滑鼠、觸控或空白鍵，隨時能暫停。':'可用滑鼠、觸控或在按鈕上按空白鍵。沒有倒數計時，隨時能暫停。'));
 }
 const things=[['ㄇ','帽子','🎩'],['ㄅ','杯子','🥤'],['ㄆ','蘋果','🍎'],['ㄉ','蛋','🥚'],['ㄊ','太陽','☀️'],['ㄋ','牛奶','🥛'],['ㄌ','老虎','🐯'],['ㄍ','狗','🐶'],['ㄎ','恐龍','🦕'],['ㄏ','花','🌼'],['ㄐ','雞','🐔'],['ㄑ','氣球','🎈'],['ㄒ','西瓜','🍉']];
 function phonetic(){
@@ -172,5 +176,6 @@ const again=btn('再幫忙一回 ↻','primary',chores);again.hidden=true;stage.
 }
 
 })();
+
 
 
