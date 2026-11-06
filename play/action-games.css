@@ -5,3 +5,12 @@
 
 .ag-pitcher-picker{margin:20px 0;padding:18px;background:#f1f3e6;border-radius:20px;display:flex;flex-wrap:wrap;gap:12px}.ag-pitcher-picker>p,.ag-pitch-types{flex-basis:100%}.ag-pitcher-picker button[aria-pressed=true],.ag-hoop-levels button[aria-pressed=true]{background:#42664d;color:white}.ag-pitch-types{display:flex;flex-wrap:wrap;gap:10px}.ag-pitcher-picker button{font-size:19px;min-height:54px}.ag-hoop-bars{display:flex;gap:40px;align-items:center;max-width:700px;margin:28px 0}.ag-bar-wrap:first-child{flex:1}.ag-bar{position:relative;border:2px solid #8d9e83;background:#f0eadc;border-radius:16px;overflow:visible}.ag-horizontal{height:44px;width:100%}.ag-vertical{height:210px;width:44px;margin:auto}.ag-valid-zone{position:absolute;background:#bfd799;border-radius:12px}.ag-horizontal .ag-valid-zone{top:0;bottom:0}.ag-vertical .ag-valid-zone{left:0;right:0}.ag-meter-dot{position:absolute;width:22px;height:22px;background:#a85e33;border:3px solid #fffdf8;border-radius:50%;box-shadow:0 0 0 1px #6d583b}.ag-horizontal .ag-meter-dot{top:9px;transform:translateX(-50%)}.ag-vertical .ag-meter-dot{left:9px;transform:translateY(50%)}.ag-hoop-levels{display:flex;gap:12px;flex-wrap:wrap;margin:22px 0}.ag-hoop-instruction{padding:16px;background:#edf2e2;border-radius:16px;font-size:21px}@media(max-width:600px){.ag-hoop-bars{gap:20px}.ag-vertical{height:180px}.ag-bar-wrap p{font-size:18px}.ag-pitcher-picker button{flex:1 1 45%}}
 
+
+.ag-geography-map{display:block!important;overflow-x:auto!important;overflow-y:hidden!important;max-width:100%;background:#dcebf0;overscroll-behavior-x:contain;touch-action:pan-x pan-y}
+.ag-geography-map .ag-kingdom-geography{display:block;width:100%;min-width:700px;height:auto;max-height:none}
+.ag-kingdom-geography [role=button]{cursor:pointer;outline:none}
+.ag-kingdom-geography [role=button]:focus-visible rect{stroke:#b27632;stroke-width:6}
+.ag-kingdom-geography [role=button]:hover rect{fill:#f6e7b9}
+.ag-city-select-label{display:block;font-size:20px;margin:18px 0 8px}.ag-city-select{font:20px/1.7 "Microsoft JhengHei",sans-serif;min-height:56px;width:min(100%,400px);padding:10px 16px;border:1px solid #9bb18c;border-radius:14px;color:#344b38;background:#fffdf8}
+.ag-map-legend{font-size:19px;line-height:1.8}.ag-map-credit{margin-top:24px}.ag-map-credit a{display:block;font-size:18px;margin:12px 0}
+
