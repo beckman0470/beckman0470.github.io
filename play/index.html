@@ -9,9 +9,10 @@
 </style><script defer src="/play/games.js?v=20261106-kidsvoice1"></script>
 <link rel="stylesheet" href="/css/mobile-readable.css?v=20261106-large1">
 <script defer src="/play/kids-voice.js?v=20261106-kidsvoice1"></script>
-<script defer src="/js/site-entry-nav.js?v=20261106-entry1"></script>
+
+<link rel="stylesheet" href="/css/site-entry-nav.css?v=20261106-brand2" data-entry-nav-style="brand2"><script defer src="/js/site-entry-nav.js?v=20261106-brand2"></script>
 </head><body>
-<header><a class="brand" href="https://beckman0470.github.io/">雞爸爸生活研究室 <span class="small">／互動樂園</span></a><a href="https://beckman0470.github.io/">回到首頁 ↗</a></header>
+<header class="site-header cdj-unified-header" data-unified-header="brand2"><div class="cdj-unified-inner"><a class="cdj-unified-brand" href="/" aria-label="雞爸爸生活研究室首頁"><img src="/assets/img/logo-avatar.png" alt="" width="52" height="52"><span><strong>雞爸爸生活研究室</strong><small>CHICKEN DAD JOURNAL</small></span></a><nav class="entry-subnav" aria-label="主要導覽"><a href="/">首頁</a><a href="/play/" aria-current="page">親子樂園</a><a href="/relax.html">大人放風</a><a href="/videos.html">影音館</a><a href="/articles.html">生活文章</a><a href="/stickers.html">貼圖小舖</a><a href="/family.html">認識我們</a></nav></div></header>
 <main><nav aria-label="親子與大人互動入口" style="display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:0 0 24px"><a class="tab" href="/play/" aria-current="page" style="text-decoration:none;background:#426b54;color:white">陪孩子玩</a><a class="tab" href="/relax.html" style="text-decoration:none">換大人放風 ☕</a></nav><div class="intro"><span class="eyebrow">一起學，一起玩，一起長大</span><h1>今天，想玩什麼？</h1><p>鼠姊姊的字母小冒險，龍弟弟的貓咪小世界。<br>不用計時，慢慢玩也很棒。</p></div>
 <div class="tabs" role="tablist" aria-label="選擇遊戲區"><button class="tab" role="tab" id="tab-dodo" aria-controls="panel-dodo" aria-selected="true">鼠姊姊・學習樂園</button><button class="tab" role="tab" id="tab-dragon" aria-controls="panel-dragon" aria-selected="false" tabindex="-1">龍弟弟・快樂天地</button></div>
 <section class="panel" role="tabpanel" id="panel-dodo" aria-labelledby="tab-dodo"><div class="panel-head"><img class="portrait" src="https://beckman0470.github.io/assets/img/portrait-dodo.png" alt="鼠姊姊"><div><span class="eyebrow">DODO'S LITTLE CLASSROOM</span><h2>鼠姊姊學習樂園</h2><p class="hint">全家人陪你挑戰！小惡魔、兔阿嬤、鼠媽媽、雞爸爸，今天想跟誰玩？</p></div></div>
@@ -159,6 +160,7 @@ corner.addEventListener('keydown',event=>{if(event.key==='Escape'&&!player.hidde
 (()=>{const area=new URLSearchParams(location.search).get('area');if(area==='dodo'||area==='dragon')document.getElementById('tab-'+area)?.click();})();
 </script>
 </body></html>
+
 
 
 
