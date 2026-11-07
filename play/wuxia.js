@@ -45,7 +45,7 @@ const avatar=name=>window.CDJPortraits.avatar(name);
 function mount(root,api){let state=null,tab='journey',disposed=false;const key='cdj-wuxia-v1';try{state=restore(localStorage.getItem(key));}catch(_){}root.classList.add('wx-root');
 const el=(tag,cls,text)=>{const n=document.createElement(tag);if(cls)n.className=cls;if(text)n.textContent=text;return n;};const button=(text,fn,cls='')=>{const b=el('button',cls,text);b.type='button';b.addEventListener('click',fn);return b;};
 function save(){try{localStorage.setItem(key,JSON.stringify(state));}catch(_){}}
-function perform(fn){const result=fn();save();render();api.message(result.text,!!result.ok);}
+function perform(fn){const fighting=state?.phase==='battle';const result=fn();window.CDJAudio?.play(result.ok?(fighting?'magic':'correct'):'wrong');save();render();api.message(result.text,!!result.ok);}
 function render(){if(disposed)return;root.replaceChildren();root.append(el('h3','wx-heading','江湖修練錄'),el('p','note','三部作品人物的跨書架空小冒險。教習、任務、招式效果與數值為原創遊戲設定；不重現原著劇情。'));
 if(!state){const grid=el('div','wx-grid');Object.entries(routes).forEach(([id,r])=>{const c=el('article','wx-card');c.append(avatar(r.name),el('h4','',r.name),el('p','wx-label','《'+r.book+'》 · '+r.route),el('p','',r.blurb),button('以'+r.name+'出發',()=>{state=create(id);save();render();api.announce('先到師門拜師，再修練、跑腿賺錢，準備切磋闖關。');},'primary'));grid.append(c);});root.append(grid);sources();return;}
 const a=attributes(state),r=routes[state.route];root.append(avatar(r.name));root.append(el('p','wx-summary',r.name+' · 等級 '+state.level+' · 經驗 '+state.xp+' / '+state.level*50+' · 銀兩 '+state.gold+' · 已過 '+state.stage+' / 10 關'));
@@ -69,4 +69,5 @@ function sources(){const d=el('details','wx-sources');d.append(el('summary','','
 render();api.announce('江湖修練錄。先選令狐沖、張無忌或段譽，拜師學藝，再修練、賺錢換裝和闖關。');return()=>{disposed=true;root.classList.remove('wx-root');};}
 window.CDJWuxia={mount};
 })();
+
 

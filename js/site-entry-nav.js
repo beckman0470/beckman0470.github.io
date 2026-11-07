@@ -32,3 +32,4 @@ inner.append(brand,nav);host.replaceChildren(inner);host.dataset.unifiedHeader=v
  eyebrow.classList.add('cdj-page-eyebrow');eyebrow.textContent=section;
  const lead=title.nextElementSibling;if(lead?.matches('p'))lead.dataset.cdjLead='true';
 })();
+

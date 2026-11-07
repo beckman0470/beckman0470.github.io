@@ -6,3 +6,7 @@ function move(state,from,to){const run=source(state,from);if(!run)return null;le
 function won(s){return s.foundations.every(p=>p.length===13)}
 const api={deal,draw,source,move,won,red};if(typeof module!=='undefined')module.exports=api;else root.SolitaireCore=api;
 })(typeof window!=='undefined'?window:this);
+
+
+// Legal destinations and automatic placement share exactly the manual-move rules.
+(function(root){const C=typeof module!=='undefined'&&module.exports?module.exports:root.SolitaireCore;C.destinations=function(s,from){const result=[];for(let pile=0;pile<7;pile++){const to={kind:'pile',pile};if(C.move(s,from,to))result.push(to);}for(let pile=0;pile<4;pile++){const to={kind:'foundation',pile};if(C.move(s,from,to))result.push(to);}return result;};C.autoMove=function(s,from){const moves=C.destinations(s,from);let to;if(from.kind==='waste')to=moves.find(t=>t.kind==='pile'&&s.piles[t.pile].length)||moves.find(t=>t.kind==='pile')||moves[0];else to=moves.find(t=>t.kind==='foundation')||moves.find(t=>t.kind==='pile'&&s.piles[t.pile].length)||moves[0];return to?{state:C.move(s,from,to),to}:null;};})(typeof window!=='undefined'?window:this);

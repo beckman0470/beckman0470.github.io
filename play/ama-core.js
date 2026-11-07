@@ -18,3 +18,4 @@ function dateKey(date=new Date()){return new Intl.DateTimeFormat('sv-SE',{timeZo
 function dailyIndex(key){let h=0;for(const c of key)h=(h*31+c.charCodeAt(0))>>>0;return h%quotes.length}
 const api={goal,neighbors,solved,move,shuffled,quotes,dateKey,dailyIndex};if(typeof module!=='undefined')module.exports=api;else root.AmaCore=api;
 })(typeof window!=='undefined'?window:this);
+

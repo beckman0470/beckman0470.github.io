@@ -105,8 +105,8 @@ on(s,'pointerup',event=>{if(touchStart?.id!==event.pointerId)return;event.preven
 on(s,'pointercancel',()=>{touchStart=null;touchMoved=false;});
 on(s,'keydown',event=>{const d={ArrowLeft:[-12,0],ArrowRight:[12,0],ArrowUp:[0,-12],ArrowDown:[0,12]}[event.code];if(d){event.preventDefault();if(!paused)moveAim(ax+d[0],ay+d[1]);}if(event.code==='Space'){event.preventDefault();swing();}});
 const pitch=btn('投下一球',()=>{if(paused||flying||flight>0||shots>=5)return;shots++;progress=0;const profile=pitcherProfiles[pitcherId];pitchType=pitchChoice==='mix'?profile.types[Math.floor(Math.random()*profile.types.length)]:pitchChoice;landing={x:225+Math.random()*130,y:178+Math.random()*75};flying=true;ball.setAttribute('visibility','visible');hint.setAttribute('cx',landing.x);hint.setAttribute('cy',landing.y);hint.setAttribute('visibility',easy?'visible':'hidden');pitch.disabled=true;tip.textContent=profile.name+'投出'+pitchNames[pitchType]+'。'+(easy?'瞄準藍圈，接近時點球場打擊！':'看準來球，點球場打擊！');update();},'primary');
-function result(kind){flying=false;hits+=['安打','全壘打'].includes(kind)?1:0;homers+=kind==='全壘打'?1:0;flight=['安打','全壘打'].includes(kind)?1.2:0;hint.setAttribute('visibility','hidden');let text=kind==='瞄準偏了'?'時機接近了！但框框偏離落點，再移準一點。':kind==='揮空'?'這次時機差一點，等球更靠近金框再打擊。':kind+'！瞄準與時機都抓到了！';if(shots===5)text+=' 五球完成：'+hits+' 支安打，其中 '+homers+' 支全壘打。';tell(text);pitch.disabled=shots>=5||flight>0;update();}
-function swing(){if(paused||!flying)return;swingFlash=.3;result(aimResult(progress,ax,ay,landing.x,landing.y,easy));}
+function result(kind){window.CDJAudio?.play(kind==='全壘打'?'win':kind==='安打'?'hit':'miss');flying=false;hits+=['安打','全壘打'].includes(kind)?1:0;homers+=kind==='全壘打'?1:0;flight=['安打','全壘打'].includes(kind)?1.2:0;hint.setAttribute('visibility','hidden');let text=kind==='瞄準偏了'?'時機接近了！但框框偏離落點，再移準一點。':kind==='揮空'?'這次時機差一點，等球更靠近金框再打擊。':kind+'！瞄準與時機都抓到了！';if(shots===5)text+=' 五球完成：'+hits+' 支安打，其中 '+homers+' 支全壘打。';tell(text);pitch.disabled=shots>=5||flight>0;update();}
+function swing(){if(paused||!flying)return;window.CDJAudio?.play('shot');swingFlash=.3;result(aimResult(progress,ax,ay,landing.x,landing.y,easy));}
 const hit=btn('打擊！',swing,'primary ag-hit'),difficulty=btn('模式：輕鬆・落點提示',()=>{if(flying||flight>0)return;easy=!easy;difficulty.textContent=easy?'模式：輕鬆・落點提示':'模式：挑戰・自己瞄準';moveAim(ax,ay);});
 controls.append(pitch,hit,difficulty,pause,btn('再打五球',()=>{flying=false;flight=0;shots=hits=homers=0;pitch.disabled=false;ball.setAttribute('visibility','hidden');hint.setAttribute('visibility','hidden');update();tip.textContent='準備好了，移動金框，再投一球。';}));
 function update(){score.textContent=batterProfiles[batterId].name+'（'+(batterProfiles[batterId].hand==='L'?'左打':'右打')+'） 對 '+pitcherProfiles[pitcherId].name+' · '+(pitcherProfiles[pitcherId].hand==='L'?'左投':'右投')+' · 第 '+shots+' / 5 球 · 安打 '+hits+' · 全壘打 '+homers;hit.disabled=!flying;if(typeof pitcherButtons!=='undefined')pitcherButtons.forEach(b=>b.disabled=flying||flight>0);}
@@ -139,7 +139,7 @@ const player=svg('image',{href:'/assets/img/portrait-dad.png',width:45,height:64
 let x=180,y=160,spawned=0,beaten=0,gate=6,time=0,cooldown=0,flash=0,ended=false;const enemies=[],directions=new Set();const score=node('p','ag-score');root.prepend(score);
 function update(){score.textContent='守住城門 '+gate+' / 6 · 擊退 '+beaten+' / 10';player.setAttribute('x',x-22);player.setAttribute('y',y-40);slash.setAttribute('cx',x);slash.setAttribute('cy',y);}
 function end(won){ended=true;tell(won?'守城成功！你擊退了'+beaten+'名敵兵，城門還有'+gate+'格力量。':'城門需要休息了。再玩一次，也可以把敵兵引到一起再揮刀。');}
-function attack(){if(paused||ended||cooldown>0)return;cooldown=.28;flash=.16;for(const e of enemies)if(!e.gone&&Math.hypot(e.x-x,e.y-y)<90){e.gone=true;e.node.remove();beaten++;}if(beaten>=10)end(true);update();}
+function attack(){if(paused||ended||cooldown>0)return;window.CDJAudio?.play('hit');cooldown=.28;flash=.16;for(const e of enemies)if(!e.gone&&Math.hypot(e.x-x,e.y-y)<90){e.gone=true;e.node.remove();beaten++;}if(beaten>=10)end(true);update();}
 const pad=node('div','ag-pad');[['↑','up'],['←','left'],['↓','down'],['→','right']].forEach(([label,dir])=>{const b=btn(label,()=>{});b.setAttribute('aria-label','往'+({up:'上',left:'左',down:'下',right:'右'}[dir])+'移動');hold(b,down=>down?directions.add(dir):directions.delete(dir));pad.append(b);});controls.append(pad,btn('揮刀！',attack,'primary ag-hit'),pause,btn('重新守城',()=>{enemies.forEach(e=>e.node.remove());enemies.length=0;spawned=beaten=0;gate=6;time=0;ended=false;x=180;y=160;directions.clear();tip.textContent='守住城門！靠近敵兵，再按揮刀。';update();}));
 screen.tabIndex=0;screen.setAttribute('aria-label','戰場，點選後可用方向鍵移動、空白鍵揮刀');const keys={ArrowUp:'up',ArrowDown:'down',ArrowLeft:'left',ArrowRight:'right'};
 on(screen,'keydown',e=>{if(keys[e.code]){e.preventDefault();directions.add(keys[e.code]);}if(e.code==='Space'){e.preventDefault();attack();}});on(screen,'keyup',e=>{if(keys[e.code]){e.preventDefault();directions.delete(keys[e.code]);}});on(screen,'blur',()=>directions.clear());on(document,'visibilitychange',()=>directions.clear());
@@ -155,6 +155,7 @@ return ()=>{disposed=true;cancelAnimationFrame(frame);cleanups.forEach(fn=>fn())
 }
 window.CDJActionGames={mount};
 })();
+
 
 
 

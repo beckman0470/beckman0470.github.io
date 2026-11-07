@@ -75,3 +75,4 @@ read.addEventListener('click',()=>say(spoken,language));voiceToggle.addEventList
 
 
 
+
