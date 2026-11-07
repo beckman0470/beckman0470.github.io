@@ -138,3 +138,18 @@ html body[data-cdj-page] .topic-menu .topic{grid-column:auto!important;height:10
  html body[data-cdj-page] .topic-menu .topic{min-height:100px}
 }
 
+
+
+/* Unified entrance rhythm: one title, one lead, no repeated section label. */
+html body[data-cdj-page] main .cdj-entrance-section{box-sizing:border-box!important;min-height:0!important;height:auto!important;padding:48px 0 28px!important;margin-top:0!important;margin-bottom:0!important;text-align:left!important;align-items:start!important;justify-content:start!important}
+html body[data-cdj-page] main .cdj-entrance-copy{display:block!important;min-height:0!important;padding-top:0!important;padding-bottom:0!important;text-align:left!important}
+html body[data-cdj-page][data-cdj-page] main .cdj-entrance-section h1[data-cdj-title]{font-size:52px!important;line-height:1.35!important;margin:0 0 18px!important;color:#344b38!important}
+html body[data-cdj-page] main .cdj-entrance-section [data-cdj-lead]{font-family:"Huninn","Microsoft JhengHei",sans-serif!important;font-size:20px!important;line-height:1.8!important;color:#64715f!important;margin:0!important;max-width:900px!important}
+html body[data-cdj-page] main .cdj-entrance-section .hero-heading{margin:0!important;display:block!important}
+html body[data-cdj-page] main .arrival-scenes{margin-top:0!important}
+html body[data-cdj-page] main .media-library-label{font-size:20px!important;margin:10px 0!important}
+@media(max-width:760px){html body[data-cdj-page] main .cdj-entrance-section{padding-top:32px!important;padding-bottom:24px!important}html body[data-cdj-page][data-cdj-page] main .cdj-entrance-section h1[data-cdj-title]{font-size:36px!important;margin-bottom:14px!important}html body[data-cdj-page] main .cdj-entrance-section [data-cdj-lead]{font-size:18px!important}}
+
+html body[data-cdj-page] main .cdj-entrance-copy>.ornament{display:none!important}
+html body[data-cdj-page] main [data-cdj-lead]{font-family:"Huninn","Microsoft JhengHei",sans-serif!important;font-size:20px!important;line-height:1.8!important;color:#64715f!important}
+@media(max-width:760px){html body[data-cdj-page] main [data-cdj-lead]{font-size:18px!important}}

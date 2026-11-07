@@ -27,9 +27,18 @@ inner.append(brand,nav);host.replaceChildren(inner);host.dataset.unifiedHeader=v
  else if(route.startsWith('/stickers'))section='貼圖小舖';
  document.body.dataset.cdjPage=route.includes('family')||route.includes('about')?'family':section;
  title.dataset.cdjTitle='true';
+ const entrance=['/articles.html','/videos.html','/family.html','/about.html','/play/','/play/index.html','/relax.html','/relax-family.html','/stickers.html'].includes(route);
  let eyebrow=title.previousElementSibling;
- if(!eyebrow?.matches('.eyebrow,.entry-eyebrow,.our-eyebrow,.about-kicker,.kicker,.cdj-page-eyebrow')){eyebrow=document.createElement('p');title.before(eyebrow);}
- eyebrow.classList.add('cdj-page-eyebrow');eyebrow.textContent=section;
- const lead=title.nextElementSibling;if(lead?.matches('p'))lead.dataset.cdjLead='true';
+ if(entrance){
+  const hasEyebrow=eyebrow?.matches('.eyebrow,.entry-eyebrow,.our-eyebrow,.about-kicker,.screening-kicker,.kicker,.cdj-page-eyebrow');
+  if(title.textContent.replace(/\s/g,'')===section){if(hasEyebrow)eyebrow.remove();}else{if(!hasEyebrow){eyebrow=document.createElement('p');title.before(eyebrow);}eyebrow.classList.add('cdj-page-eyebrow');eyebrow.textContent=section;}
+  title.parentElement.classList.add('cdj-entrance-copy');
+  (title.closest('section')||title.parentElement).classList.add('cdj-entrance-section');
+ }else{
+  if(!eyebrow?.matches('.eyebrow,.entry-eyebrow,.our-eyebrow,.about-kicker,.kicker,.cdj-page-eyebrow')){eyebrow=document.createElement('p');title.before(eyebrow);}
+  eyebrow.classList.add('cdj-page-eyebrow');eyebrow.textContent=section;
+ }
+ const lead=title.nextElementSibling?.matches('p')?title.nextElementSibling:title.parentElement.nextElementSibling;if(lead?.matches('p'))lead.dataset.cdjLead='true';
 })();
+
 
