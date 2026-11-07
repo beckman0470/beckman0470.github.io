@@ -147,7 +147,10 @@
       a.href = item.href || '#';
       const cardImage = autoCover(item);
       const cardPosition = autoCoverPosition(item).replace(/"/g, '&quot;');
-      const cardAlt = (item.coverAlt || `${item.title} 封面`).replace(/"/g, '&quot;');
+      function cleanListingText(value){return String(value||'').replace(/[#＃][\p{L}\p{N}_-]+/gu,'').replace(/[ \t]+/g,' ').trim();}
+      const listTitle = cleanListingText(item.title);
+      const listExcerpt = cleanListingText(item.excerpt);
+      const cardAlt = cleanListingText(item.coverAlt || `${listTitle} 封面`).replace(/"/g, '&quot;');
       a.innerHTML = `
         <div class="card-media">
           <img src="${cardImage}" alt="${cardAlt}" loading="lazy" style="object-position:${cardPosition};" onerror="this.onerror=null;this.src='assets/story-covers/default.svg';">
@@ -156,14 +159,15 @@
           <span class="card-journal">${item.roomLabel}</span>
           <span class="card-date">${item.date}</span>
         </div>
-        <h3>${item.title}</h3>
-        <p class="card-excerpt">${item.excerpt}</p>
+        <h3>${listTitle}</h3>
+        <p class="card-excerpt">${listExcerpt}</p>
       `;
       grid.appendChild(a);
     });
   </script>
 </body>
 </html>
+
 
 
 
