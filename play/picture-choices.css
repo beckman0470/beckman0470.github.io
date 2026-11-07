@@ -21,3 +21,10 @@
 .kg-choice-symbol.drum1{color:#a34540}.kg-choice-symbol.drum2{color:#4375a0}.kg-choice-symbol.drum3{color:#a37820}.kg-choice-symbol.drum4{color:#557c49}
 .sp-story-piece.kg-picture-choice{min-height:130px;flex:1 1 140px}
 @media(max-width:560px){.panel-head{align-items:flex-start;flex-wrap:wrap}.panel-head>.portrait{width:140px!important;height:94px!important}.mg-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}.mg-grid .mg-card strong{font-size:20px}.mg-grid .mg-card small{font-size:16px!important}.kg-boolean{min-width:116px!important;min-height:116px!important}.kg-picture-choice{min-width:92px;min-height:100px}}
+
+
+/* Each game has its own complete 3:2 scene; no cropped faces or reused story covers. */
+.mg-grid .mg-card>.mg-card-art{aspect-ratio:3/2;object-fit:contain;background:#f8f3e9}
+.fg-host>.fg-avatar{width:min(240px,100%)!important;height:auto!important;aspect-ratio:3/2;object-fit:contain!important}
+.panel-head>.portrait{width:180px!important;height:auto!important;aspect-ratio:3/2;object-fit:contain!important}
+@media(max-width:560px){.panel-head>.portrait{width:150px!important}.fg-host>.fg-avatar{width:180px!important}}
