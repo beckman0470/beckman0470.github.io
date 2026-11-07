@@ -10,3 +10,8 @@
 .media-grid .media-title,.media-home-grid .media-title{font-size:21px!important;line-height:1.6!important;min-height:3.2em}
 .media-home-grid .media-platform,.media-home-grid .media-cta{font-size:17px;line-height:1.6}.media-home-grid .media-original{margin:auto 20px 20px;color:#42664d;font-size:17px}
 @media(max-width:900px){.media-grid,.media-home-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}}@media(max-width:560px){.media-grid,.media-home-grid{grid-template-columns:minmax(0,360px)!important;justify-content:center!important;gap:22px!important}}
+
+/* Keep covers in normal flow: older ID-scoped rules reset aspect-ratio. */
+body #video-main .media-card .media-thumb,body .media-home-grid .media-card .media-thumb{display:block!important;position:relative!important;width:100%!important;height:auto!important;aspect-ratio:auto!important;flex:none!important;align-self:stretch!important}
+body #video-main .media-card .media-thumb img,body .media-home-grid .media-card .media-thumb img{position:static!important;display:block!important;inset:auto!important;width:100%!important;height:auto!important;aspect-ratio:9/16!important;object-fit:contain!important;flex:none!important;max-height:none!important}
+body #video-main .media-grid .media-card[hidden]{display:none!important}
