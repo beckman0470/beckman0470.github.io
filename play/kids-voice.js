@@ -1,12 +1,19 @@
 /* Kids' spoken instructions and questions. Never reads hidden answers or game state. */
 (() => {
 'use strict';
-function text(node){return String(node?.textContent||'').replace(/\s+/g,' ').trim();}
+function text(node){
+ if(!node)return '';
+ if(node.dataset?.speechLabel)return node.dataset.speechLabel;
+ const copy=node.cloneNode(true);
+ copy.querySelectorAll('[aria-hidden="true"],.mg-icon,.mg-card-art,.fg-avatar,.portrait,.fg-devil,[data-speech-ignore]').forEach(n=>n.remove());
+ copy.querySelectorAll('[data-speech-label]').forEach(n=>{n.textContent=n.dataset.speechLabel;});
+ return String(copy.textContent||'').replace(/\s+/g,' ').trim();
+}
 function visible(node){for(let n=node;n;n=n.parentElement)if(n.hidden||n.getAttribute?.('aria-hidden')==='true')return false;return true;}
 function speakable(value){
 return String(value||'').replace(/https?:\/\/\S+/g,'')
 .replace(/(\d{1,2})[：:](\d{2})/g,(_,h,m)=>Number(h)+'點'+(Number(m)?Number(m)+'分':'整'))
-.replace(/👿/g,'小惡魔，').replace(/⭐|★/g,'星星，').replace(/○/g,'圓形，').replace(/△/g,'三角形，').replace(/□/g,'正方形，').replace(/☾/g,'月亮，').replace(/？/g,'問號').replace(/✓/g,'對，').replace(/✕/g,'不對，').replace(/[＝=]/g,'等於').replace(/＋/g,'加').replace(/[−]/g,'減').replace(/\s+/g,' ').trim();
+.replace(/👿/g,'').replace(/⭐|★/g,'星星，').replace(/○/g,'圈，').replace(/×/g,'叉，').replace(/△/g,'三角形，').replace(/□/g,'正方形，').replace(/☾/g,'月亮，').replace(/？/g,'。').replace(/✓/g,'對，').replace(/✕/g,'不對，').replace(/[＝=]/g,'等於').replace(/＋/g,'加').replace(/[−]/g,'減').replace(/[\p{Extended_Pictographic}\p{Regional_Indicator}\u200D\uFE0E\uFE0F\u20E3]/gu,'').replace(/\s+/g,' ').trim();
 }
 function promptFor(ctx){
 const stage=ctx.stage;
@@ -20,7 +27,7 @@ if(face?.getAttribute('aria-label'))parts.push(face.getAttribute('aria-label'));
 if(!parts.length)stage.querySelectorAll('h3').forEach(n=>{if(visible(n))parts.push(text(n));});
 const choiceIds=new Set(['truthdetective','opposite','snackshop','codequest','clock','grocery','tidy','dayplan','storytiles','trashsort','bath','doors','coop','chores']);
 if(choiceIds.has(ctx.id)){
-const choices=Array.from(stage.querySelectorAll('.mg-choices .mg-choice,.fg-list-buttons button,.sp-story-choices button')).filter(visible).map(text).filter(Boolean);
+const choices=Array.from(stage.querySelectorAll('.mg-choices .mg-choice,.fg-list-buttons button,.sp-story-choices button,.sp-direction,.mg-beat')).filter(visible).map(text).filter(Boolean);
 if(choices.length)parts.push('選項有，'+choices.join('。'));
 }
 const marker=text(stage.querySelector('.sp-progress,.mg-counter,#progress')).match(/^第\s*\d+\s*\/\s*\d+/)?.[0]||'';
@@ -95,4 +102,5 @@ observer.observe(main,{childList:true,subtree:true,characterData:true,attributes
 window.addEventListener('pagehide',stop);
 window.cdjKidsVoice={read:()=>read(true),stop};
 })();
+
 

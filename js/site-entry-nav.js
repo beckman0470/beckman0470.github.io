@@ -12,3 +12,23 @@ inner.append(brand,nav);host.replaceChildren(inner);host.dataset.unifiedHeader=v
 })();
 
 
+
+
+/* A single heading system for section entrances and article/person detail pages. */
+(()=>{
+ if(typeof document==='undefined')return;
+ const route=location.pathname;if(route==='/'||route==='/index.html')return;
+ const title=document.querySelector('main h1');if(!title)return;
+ let section='認識我們';
+ if(route.startsWith('/articles'))section='生活文章';
+ else if(route.startsWith('/videos'))section='影音館';
+ else if(route.startsWith('/play/'))section='親子樂園';
+ else if(route.startsWith('/relax'))section='大人放風';
+ else if(route.startsWith('/stickers'))section='貼圖小舖';
+ document.body.dataset.cdjPage=route.includes('family')||route.includes('about')?'family':section;
+ title.dataset.cdjTitle='true';
+ let eyebrow=title.previousElementSibling;
+ if(!eyebrow?.matches('.eyebrow,.entry-eyebrow,.our-eyebrow,.about-kicker,.kicker,.cdj-page-eyebrow')){eyebrow=document.createElement('p');title.before(eyebrow);}
+ eyebrow.classList.add('cdj-page-eyebrow');eyebrow.textContent=section;
+ const lead=title.nextElementSibling;if(lead?.matches('p'))lead.dataset.cdjLead='true';
+})();

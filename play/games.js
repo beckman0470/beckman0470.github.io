@@ -1,6 +1,21 @@
 /* Six family mini-games. All progress stays in this page. */
 (()=>{
 'use strict';
+
+// Use the current homepage artwork rather than the previous portraits or emoji.
+const menuArtwork={"dad":"/assets/home-life/dad-v2.png","mom":"/assets/home-life/mom-ama-v2.png","ama":"/assets/home-life/mom-ama-v2.png","dodo":"/assets/home-life/dodo-detective.png","dragon":"/assets/home-life/dragon-dishes.png","devil":"/assets/rooms/devil.png"};
+function artworkFor(id){
+ if(['truthdetective','opposite'].includes(id))return menuArtwork.devil;
+ if(['grocery','clock','sweep'].includes(id))return menuArtwork.ama;
+ if(['tidy','dayplan','mop'].includes(id))return menuArtwork.mom;
+ if(['numberhunt','spot','trashsort','chores'].includes(id))return menuArtwork.dad;
+ if(id==='dishwash'||id==='bath')return menuArtwork.dragon;
+ if(['feed','puzzle','pet'].includes(id))return '/cat-youyou-peek.png';
+ if(['memory','count','jump','maze','codequest','doors','hide','detective'].includes(id))return '/cat-yahoo-walk.png';
+ if(id==='coop')return '/assets/home-life/kids-v2.png';
+ return menuArtwork.dodo;
+}
+
 const cards=[
 ["dishwash","🧽","洗碗泡泡小幫手","海綿起泡、洗掉髒污、沖乾淨再收好。","生活任務 · 洗 3 個碗盤"],
 ["trashsort","♻️","垃圾分類小隊長","幫常見垃圾找到正確的桶子。","生活任務 · 分類 6 樣"],
@@ -75,7 +90,7 @@ function status(stage){const e=el('div','mg-status','');e.setAttribute('role','s
 function configs(stage,choices,current,fn){const row=el('div','mg-config');choices.forEach(([v,t])=>{const b=btn(t,'pill',()=>fn(v));b.setAttribute('aria-pressed',String(v===current));row.append(b);});stage.append(row);}
 function menuCard(area,id,icon,name,desc,tag,action){
 const b=btn('','mg-card',()=>{lastLauncher=b;action();});b.dataset.gameId=id;
-b.innerHTML='<span class="mg-icon" aria-hidden="true">'+icon+'</span><strong>'+name+'</strong><small>'+desc+'</small><span class="mg-tag">'+tag+'</span>';
+b.innerHTML='<img class="mg-card-art" src="'+artworkFor(id)+'" alt="" aria-hidden="true" loading="lazy"><strong>'+name+'</strong><small>'+desc+'</small><span class="mg-tag">'+tag+'</span>';
 area.grid.append(b);return b;
 }
 function openClassic(key,kind){
@@ -374,10 +389,10 @@ areas.dodo.menu.querySelector('.mg-menu-heading').after(newNote);
 
 /* Family hosts: eight new untimed games for ages six and up. */
 const familyHosts={
-devil:{name:'小惡魔',icon:'👿'},
-ama:{name:'兔阿嬤',icon:'🧺',image:'/assets/img/portrait-ama.png'},
-mom:{name:'鼠媽媽',icon:'🌷',image:'/assets/img/portrait-mom.png'},
-dad:{name:'雞爸爸',icon:'👓',image:'/assets/img/portrait-dad.png'}
+devil:{name:'小惡魔',image:menuArtwork.devil},
+ama:{name:'兔阿嬤',icon:'🧺',image:'/assets/home-life/mom-ama-v2.png'},
+mom:{name:'鼠媽媽',icon:'🌷',image:'/assets/home-life/mom-ama-v2.png'},
+dad:{name:'雞爸爸',icon:'👓',image:'/assets/home-life/dad-v2.png'}
 };
 const familyGameHost={truthdetective:'devil',opposite:'devil',grocery:'ama',clock:'ama',tidy:'mom',dayplan:'mom',numberhunt:'dad',spot:'dad'};
 function familyStage(id){
@@ -407,7 +422,7 @@ const truthBank=[
 function truthdetective(){
 const stage=familyStage('truthdetective'),deck=shuffle(truthBank).slice(0,5);let round=0;const body=el('div');stage.append(body);const feedback=status(stage),next=btn('下一個說法 →','primary',()=>{round++;render();});stage.append(next);
 function render(){body.replaceChildren();feedback.textContent='';next.hidden=true;if(round>=5){body.append(el('h3','','五個說法都看懂了！你是清醒的小偵探 👿 ⭐'),btn('再查一組說法 ↻','primary',truthdetective));return;}
-const item=deck[round];let done=false;body.append(el('p','sp-progress','第 '+(round+1)+' / 5 題'),el('p','question','小惡魔的這句話，對不對？'),el('p','fg-claim','👿「'+item.claim+'」'));const row=el('div','mg-choices');[[true,'✓ 這句是對的'],[false,'✕ 這句不對']].forEach(([value,label])=>{const b=btn(label,'mg-choice',()=>{if(done)return;if(value!==item.answer){feedback.textContent='再想一想，可以數一數、算一算。';return;}done=true;b.classList.add('correct');row.querySelectorAll('button').forEach(x=>x.disabled=true);feedback.textContent='看懂了！'+item.reason;sound();next.hidden=false;next.textContent=round===4?'領取偵探星星 ⭐':'下一個說法 →';});row.append(b);});body.append(row);
+const item=deck[round];let done=false;body.append(el('p','sp-progress','第 '+(round+1)+' / 5 題'),el('p','question','小惡魔的這句話，對不對？覺得對就按圈，覺得不對就按叉。'),el('p','fg-claim','「'+item.claim+'」'));const row=el('div','mg-choices');[[true,'○'],[false,'×']].forEach(([value,label])=>{const b=btn(label,'mg-choice kg-boolean',()=>{if(done)return;if(value!==item.answer){feedback.textContent='再想一想，可以數一數、算一算。';return;}done=true;b.classList.add('correct');row.querySelectorAll('button').forEach(x=>x.disabled=true);feedback.textContent='看懂了！'+item.reason;sound();next.hidden=false;next.textContent=round===4?'領取偵探星星 ⭐':'下一個說法 →';});row.append(b);});body.append(row);
 }render();
 }
 const oppositePairs=[['大','小'],['高','低'],['長','短'],['快','慢'],['上','下'],['左','右'],['多','少'],['開','關']];
@@ -572,3 +587,4 @@ homeCards.forEach(card=>card.classList.add('sp-new'));areas.dragon.grid.prepend(
 
 
 })();
+

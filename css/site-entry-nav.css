@@ -98,3 +98,42 @@ body.cdj-family .kicker{font-size:16px!important;font-weight:400!important;color
  body.cdj-family .page-hero,body.cdj-stickers .hero{padding-top:32px!important}
 }
 
+
+
+/* One entrance title scale, color, alignment and eyebrow across sections. */
+html body[data-cdj-page][data-cdj-page] main h1[data-cdj-title]{font-family:"Huninn","Microsoft JhengHei","PingFang TC",sans-serif!important;font-size:52px!important;font-weight:400!important;line-height:1.4!important;letter-spacing:.02em!important;text-align:left!important;color:#344b38!important;margin:12px 0 22px!important;max-width:100%!important;overflow-wrap:anywhere}
+html body[data-cdj-page] main .cdj-page-eyebrow{font-family:"Huninn","Microsoft JhengHei",sans-serif!important;font-size:17px!important;font-weight:400!important;letter-spacing:.12em!important;line-height:1.6!important;color:#64765e!important;text-align:left!important;margin:0 0 12px!important;padding:0!important;background:transparent!important}
+html body[data-cdj-page] main [data-cdj-lead]{font-size:21px!important;font-weight:400!important;line-height:1.85!important;color:#64715f!important;letter-spacing:0!important;text-align:left!important;margin:0 0 24px!important}
+html body[data-cdj-page] main .intro,html body[data-cdj-page] main .hero-heading{text-align:left!important}
+html body[data-cdj-page=family] .our-people{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:22px!important}
+html body[data-cdj-page=family] .our-person.family-chapter{display:flex!important;flex-direction:column!important;grid-column:auto!important;gap:20px!important;padding:20px!important;transform:none!important}
+html body[data-cdj-page=family] .our-person.family-chapter>img{width:100%!important;height:auto!important;aspect-ratio:3/2!important;object-fit:contain!important;background:#f5f2e8!important;border-radius:16px!important}
+html body[data-cdj-page=family] .our-pick>a>img{aspect-ratio:3/2!important;object-fit:contain!important;background:#f5f2e8}
+html body[data-cdj-page=family] .our-person h3{font-size:28px!important;margin:0 0 12px!important}
+html body[data-cdj-page=family] .chapter-number{display:none!important}
+html body[data-cdj-page] .adult-family-zone{padding:20px 0 38px!important;border-top:1px solid #e2e5d8}
+html body[data-cdj-page] .adult-host-grid{gap:20px!important;margin-top:22px!important}
+html body[data-cdj-page] .adult-host-card{padding:18px!important;gap:12px!important}
+html body[data-cdj-page] .adult-host-card>img{display:block;width:100%!important;height:auto!important;aspect-ratio:3/2;object-fit:contain;background:#f5f2e8;border-radius:16px}
+html body[data-cdj-page] .adult-host-card strong{font-size:27px!important}
+html body[data-cdj-page] .activity-tabs{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:12px!important}
+html body[data-cdj-page] .activity-tabs button{font-size:20px!important;min-height:100px!important;text-align:left}
+html body[data-cdj-page] .family-host-switch{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:14px!important}
+html body[data-cdj-page] .family-host-switch button{padding:10px!important;font-size:24px!important}
+html body[data-cdj-page] .family-host-switch img{display:block;width:100%;aspect-ratio:3/2;object-fit:contain;border-radius:12px;margin-bottom:10px;background:#faf7ef}
+html body[data-cdj-page] .topic-menu>.host{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;align-items:start}
+html body[data-cdj-page] .topic-menu>.host[hidden]{display:none!important}
+html body[data-cdj-page] .topic-menu .host-photo{display:none!important}
+html body[data-cdj-page] .topic-menu .host h2{grid-column:1/-1;margin:0!important}
+html body[data-cdj-page] .topic-menu .topic{grid-column:auto!important;height:100%;min-height:118px;margin:0!important;padding:20px!important;border-radius:18px!important;font-size:20px!important}
+@media(max-width:760px){
+ html body[data-cdj-page][data-cdj-page] main h1[data-cdj-title]{font-size:36px!important;line-height:1.45!important;margin:10px 0 18px!important}
+ html body[data-cdj-page] main .cdj-page-eyebrow{font-size:16px!important;margin-bottom:10px!important}
+ html body[data-cdj-page] main [data-cdj-lead]{font-size:20px!important}
+ html body[data-cdj-page=family] .our-people{grid-template-columns:1fr!important}
+ html body[data-cdj-page] .activity-tabs{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+ html body[data-cdj-page] .family-host-switch{gap:8px!important}
+ html body[data-cdj-page] .family-host-switch button{font-size:20px!important}
+ html body[data-cdj-page] .topic-menu>.host{grid-template-columns:1fr!important;padding:18px!important}
+ html body[data-cdj-page] .topic-menu .topic{min-height:100px}
+}
