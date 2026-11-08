@@ -7,6 +7,7 @@ function embedURL(item){if(!valid(item))return null;return item.platform==='yout
 function filterItems(items,platform='all',topic='all'){return items.filter(item=>valid(item)&&(platform==='all'||item.platform===platform)&&(topic==='all'||item.topic===topic));}
 if(typeof module!=='undefined'&&module.exports){module.exports={catalogue,valid,watchURL,embedURL,filterItems};return;}
 if(typeof document==='undefined'||document.querySelector('[data-media-dialog]'))return;
+if(location.pathname==='/videos.html'){const p=new URLSearchParams(location.search).get('person'),to={ama:'/rooms.html?room=ama#ama-room-media',dodo:'/play/?area=dodo',dragon:'/play/?area=dragon'}[p];if(to){location.replace(to);return;}}
 const dialog=document.createElement('dialog');dialog.className='media-modal';dialog.dataset.mediaDialog='true';dialog.setAttribute('aria-labelledby','media-dialog-title');
 const head=document.createElement('div');head.className='media-modal-head';
 const title=document.createElement('h2');title.id='media-dialog-title';

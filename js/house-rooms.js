@@ -23,23 +23,33 @@ const host=$('#house-content');host.replaceChildren();
 function heading(t){const h=document.createElement('h2');h.textContent=t;host.append(h);}
 function grid(){const g=document.createElement('div');g.className='house-cards';host.append(g);return g;}
 function card(g,title,desc,href,image){const a=document.createElement('a');a.href=href;a.className='house-card';if(image){const i=document.createElement('img');i.src=image;i.alt='';i.loading='lazy';i.width=600;i.height=400;a.append(i);}const div=document.createElement('div'),h=document.createElement('h3'),p=document.createElement('p'),go=document.createElement('span');h.textContent=title;p.textContent=desc;go.textContent='進去看看 →';div.append(h,p,go);a.append(div);g.append(a);}
-if(key==='mom'||key==='ama'){heading(key==='mom'?'鼠媽媽的小天地':'兔阿嬤的小天地');const g=grid();D.games[key].forEach(([id,t,d,url])=>{const covers={'ama-video':'ama-temple-v4','solitaire':'ama-solitaire-v4','sudoku':'ama-sudoku-v4','blocks':'ama-blocks-v4'};card(g,t,d,id==='ama-video'?'/videos.html?person=ama':url==='topic'?'/relax-family.html?host='+key+'&game='+id:url,id==='ama-exercise'?'/assets/ama-exercise/pose-1.webp':'/assets/adult-games/'+(covers[id]||id)+'.webp');});
+if(key==='mom'||key==='ama'){
+if(key==='ama'){
+const media=document.createElement('section');media.id='ama-room-media';media.className='ama-room-media';
+media.innerHTML='<h2>兔阿嬤的數位養生佛堂</h2><p>佛經、超慢跑與健康影片，選一支慢慢看。</p><div class="media-filters" role="group" aria-label="兔阿嬤影片分類">'+[['all','全部影片'],['sutra','佛經講解'],['slow','超慢跑'],['health','健康養生']].map(([k,t])=>'<button type="button" data-media-topic-filter="'+k+'" aria-pressed="'+(k==='all')+'">'+t+'</button>').join('')+'</div><p data-media-result role="status"></p><div class="media-grid" data-media-grid>'+D.amaMedia.join('')+'</div><p data-media-empty hidden>這個分類目前沒有影片。</p><a class="house-all" href="/ama-exercise.html">跟兔阿嬤做健康操 →</a>';
+host.append(media);
+['/css/media-gallery.css','/css/media-compact.css'].forEach(href=>{const link=document.createElement('link');link.rel='stylesheet';link.href=href;document.head.append(link);});
+const player=document.createElement('script');player.src='/js/media-gallery.js?v=20261108-room3';document.body.append(player);
+}
+heading(key==='mom'?'鼠媽媽的小天地':'兔阿嬤的小遊戲');const g=grid();D.games[key].filter(([id])=>key!=='ama'||!['ama-video','ama-exercise'].includes(id)).forEach(([id,t,d,url])=>{const covers={'solitaire':'ama-solitaire-v4','sudoku':'ama-sudoku-v4','blocks':'ama-blocks-v4'};card(g,t,d,url==='topic'?'/relax-family.html?host='+key+'&game='+id:url,'/assets/adult-games/'+(covers[id]||id)+'.webp');});
 if(key==='mom'){heading('要聽故事睡覺了嗎？');const g=grid();card(g,'一起讀故事','挑一篇雞爸爸家的故事，陪孩子慢慢讀。','/articles.html?room=family');card(g,'睡前生活小任務','洗澡、刷牙、洗臉與點眼藥水的小步驟。','/play/?zone=life&flow=bedtime');card(g,'一家人的客廳','一起看家人的日常與喜歡的影片。','/videos.html');}
 }else if(key==='games'){heading('今天想跟誰玩？');const g=grid();[
-['鼠姊姊學習與生活','ㄅㄆㄇ、ABC、數學與日常習慣。','/play/?area=dodo','/assets/play-covers/v1/area-dodo.webp'],
-['龍弟弟快樂天地','找貓咪、唱唱跳跳，慢慢探索。','/play/?area=dragon','/assets/play-covers/v1/area-dragon.webp'],
+['鼠姊姊學習與生活','ㄅㄆㄇ、ABC、數學、日常習慣與鼠姊姊的影片。','/play/?area=dodo','/assets/play-covers/v1/area-dodo.webp'],
+['龍弟弟快樂天地','找貓咪、唱唱跳跳，還有弟弟喜歡的影片。','/play/?area=dragon','/assets/play-covers/v1/area-dragon.webp'],
 ['雞爸爸遊戲場','三國、棒球、投籃、節奏與街機。','/relax-family.html?host=dad','/assets/adult-hosts/dad.webp'],
-['鼠媽媽房間','英文、咖啡、麻將與打磚塊。','/rooms.html?room=mom','/assets/adult-hosts/mom.webp'],
-['兔阿嬤房間','接龍、數獨、方塊，輕鬆玩一會。','/rooms.html?room=ama','/assets/adult-hosts/ama.webp'],
+['鼠窩','英文、咖啡、麻將與打磚塊。','/rooms.html?room=mom','/assets/adult-hosts/mom.webp'],
+['兔窩','接龍、數獨、方塊，輕鬆玩一會。','/rooms.html?room=ama','/assets/adult-hosts/ama.webp'],
 ['一家大富翁','選喜歡的角色，和家人走一圈。','/dad-arcade.html?game=board','/assets/adult-games/board.webp']].forEach(x=>card(g,...x));
-}else{if(key==='bathroom'){heading('把日常練習變成小習慣');const g=grid();card(g,'鼠姊姊的生活專區','起床、回家和睡前的日常小步驟。','/play/?zone=life','/assets/play-covers/v1/dishwash.webp');card(g,'兔阿嬤的養生數位佛堂','慢慢看健康與跟練影片。','/videos.html?person=ama','/assets/adult-games/ama-temple-v4.webp');}
-heading(key==='bathroom'?'生活健康故事':'餐桌邊的故事');const g=grid();(D.stories[key]||[]).forEach(x=>card(g,x.title,x.excerpt.slice(0,72)+'…',x.href,x.cover));const a=document.createElement('a');a.className='house-all';a.href='/articles.html'+(key==='bathroom'?'?room=cdhj':'');a.textContent='到雞爸爸書房讀更多 →';host.append(a);}
+}else{if(key==='bathroom'){heading('把日常練習變成小習慣');const g=grid();card(g,'鼠姊姊的生活專區','起床、回家和睡前的日常小步驟。','/play/?zone=life','/assets/play-covers/v1/dishwash.webp');}
+const a=document.createElement('a');a.className='house-all';a.href='/articles.html'+(key==='bathroom'?'?room=cdhj':'?room=family');a.textContent='到雞窩挑一篇'+(key==='bathroom'?'健康文章':'生活故事')+' →';host.append(a);}
 }else if(path==='/'||path==='/index.html'){$('.life-hero-copy')?.insertAdjacentHTML('beforeend',stage('home',null,['mom-home'],'歡迎回家，今天過得好嗎？'));}
 else{
 const key=path==='/articles.html'?'study':path==='/videos.html'?'living':path.startsWith('/play/')?'play':path==='/relax.html'?'relax':path==='/stickers.html'?'stickers':path==='/family.html'?'family':null;
-const cfg={study:['study',['dad-reader','devil','zschen'],'歡迎來雞爸爸書房！'],living:['living',D.family,'歡迎來我們這一家！'],play:[null,['dodo-abc'],'一起玩，一起發現新東西！'],relax:[null,['ama-tea'],'坐一下，陪阿嬤喝杯茶。'],stickers:[null,['mom-chat'],'讓家人的小表情，陪你聊天。'],family:[null,['dad-greeter'],'歡迎來我們家！']}[key];
-if(cfg){$('.cdj-welcome-picture')?.insertAdjacentHTML('afterend',stage(key,...cfg));$('.cdj-welcome-picture')?.remove();if(key==='study'){$('.journal-categories')?.remove();$('.cdj-welcome-label').textContent='雞爸爸書房';$('#cdj-welcome-title').innerHTML='歡迎來書房，<br>坐下來讀一段。';$('.cdj-welcome-summary').textContent='雞爸爸、小惡魔、珍山陳阿祖和兩隻貓，陪你慢慢挑故事。';window.cdjSelectJournal?.(new URLSearchParams(location.search).get('room')||'all',false);}if(key==='living'){$('.cdj-welcome-label').textContent='客廳';$('#cdj-welcome-title').innerHTML='歡迎來，<br>我們這一家。';$('.cdj-welcome-summary').textContent='家人的日常、喜歡的歌，還有兔阿嬤的養生數位佛堂，都在客廳一起看。';}}
+const cfg={study:['study',['dad-reader','devil','zschen'],'歡迎來雞窩！'],living:['living',D.family,'歡迎來我們這一家！'],play:[null,['dodo-abc'],'一起玩，一起發現新東西！'],relax:[null,['ama-tea'],'坐一下，陪阿嬤喝杯茶。'],stickers:[null,['mom-chat'],'讓家人的小表情，陪你聊天。'],family:[null,['dad-greeter'],'歡迎來我們家！']}[key];
+if(cfg){$('.cdj-welcome-picture')?.insertAdjacentHTML('afterend',stage(key,...cfg));$('.cdj-welcome-picture')?.remove();if(key==='study'){$('.journal-categories')?.remove();$('.cdj-welcome-label').textContent='雞窩';$('#cdj-welcome-title').innerHTML='歡迎來書房，<br>坐下來讀一段。';$('.cdj-welcome-summary').textContent='雞爸爸的文章都在這裡，小惡魔、珍山陳阿祖和兩隻貓陪你挑故事。';window.cdjSelectJournal?.(new URLSearchParams(location.search).get('room')||'all',false);}if(key==='living'){$('.cdj-welcome-label').textContent='客廳';$('#cdj-welcome-title').innerHTML='歡迎來，<br>我們這一家。';$('.cdj-welcome-summary').textContent='雞爸爸拍的一家日常、雅虎右右與創作短片，點封面就能看。';}}
 }
+document.querySelectorAll('.cdj-welcome .cdj-greeting[data-room]').forEach(el=>el.closest('.cdj-welcome').classList.add('cdj-room-entrance'));
+function viewportSize(){document.documentElement.style.setProperty('--cdj-scrollbar',(innerWidth-document.documentElement.clientWidth)+'px');}viewportSize();window.addEventListener('resize',viewportSize);
 document.addEventListener('click',e=>{const a=e.target.closest('[data-journal-filter]');if(a&&window.cdjSelectJournal){e.preventDefault();window.cdjSelectJournal(a.dataset.journalFilter);}});
 bind();
 })();
