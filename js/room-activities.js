@@ -44,17 +44,15 @@ if(key==='kitchen'){
  function serve(){cp.innerHTML='<div class="coffee-scene" aria-hidden="true">☕ ✨</div><p role="status">咖啡完成！鼠媽媽說：謝謝你，坐下來喝一杯。</p><button type="button" data-coffee-again>再沖一杯</button>';cp.querySelector('[data-coffee-again]').onclick=()=>{ground=0;water=0;grind();};}
  grind();
 }
-// Objects are actual links: hover/focus glow; touch taps jump to the matching section.
+// Match links to objects already painted in each room; never add replacement props.
 if(key!=='study'){
- const hint={living:'點神桌找拼圖與語錄，點電視看影片，也幫忙掃紙屑。',dining:'點餐盤，練習餐桌禮儀。',mom:'點故事書或拼圖，選一段小時光。',ama:'點蓮花看影片，點骰子玩遊戲。',games:'點遊戲手把，挑一個遊戲。',kitchen:'點咖啡杯來手沖，點湯鍋來點菜。',bathroom:'點馬桶練習浴室生活，點肥皂找日常任務。'}[key];const caption=document.querySelector('.greeting-caption');if(hint&&caption)caption.textContent=hint;
+ const hint={living:'點神桌找拼圖與語錄，點電視看影片，也幫忙掃紙屑。',dining:'點餐盤，練習餐桌禮儀。',mom:'點書櫃玩小遊戲，點床鋪選睡前故事。',ama:'點佛像與經書看影片，點扶手椅玩小遊戲。',games:'點街機、積木、畫桌或桌遊櫃，挑一段遊戲時光。',kitchen:'點咖啡杯來手沖，點湯鍋來點菜。',bathroom:'點馬桶練習浴室生活，點肥皂找日常任務。'}[key];const caption=document.querySelector('.greeting-caption');if(hint&&caption)caption.textContent=hint;
  if(key==='ama'){const h=[...document.querySelectorAll('#house-content h2')].find(x=>x.textContent.includes('小遊戲'));if(h)h.id='ama-room-games';}
  if(key==='mom'){const hs=[...document.querySelectorAll('#house-content h2')];if(hs[0])hs[0].id='mom-games';if(hs[1])hs[1].id='mom-bedtime';}
  const entries={
  living:[['','看一家人的影片','media-library-title',21,44]],
  dining:[['🍽️','餐桌禮儀小遊戲','room-activity-dining',22,70]],
- mom:[['📖','睡前故事與生活','mom-bedtime',20,65],['🧩','鼠媽媽的小天地','mom-games',84,35]],
- ama:[['🪷','數位養生佛堂','ama-room-media',83,28],['🎲','兔阿嬤的小遊戲','ama-room-games',25,68]],
- games:[['🎮','選一個遊戲開始玩','house-content',23,65]],
+ mom:[], ama:[], games:[],
  kitchen:[['☕','手沖咖啡小遊戲','kitchen-coffee',82,33],['🍲','鼠媽媽拿手料理','room-activity-kitchen',22,66]],
  bathroom:[['🚽','浴室生活小遊戲','room-activity-bathroom',19,56],['🧼','日常生活小任務','house-content',82,40]]
  }[key]||[];
@@ -63,6 +61,22 @@ if(key!=='study'){
  [['珍山陳祖先・列祖列宗','/articles.html?room=zschen#cards-grid',35.8],['清水祖師','/ama-games.html?game=puzzle&person=qingshui',39.7],['觀世音菩薩','/ama-games.html?game=puzzle&person=guanyin',42.3],['關聖帝君','/ama-games.html?game=puzzle&person=guansheng',44.8]].forEach(([name,href,x])=>{const a=document.createElement('a');a.className='room-item altar-item'+(x===35.8?' ancestor-shrine':'');a.href=href;a.style.left=x+'%';a.style.top='37%';a.setAttribute('aria-label',name+(x===35.8?'：珍山陳經典語錄':'：兔阿嬤神明拼圖'));a.innerHTML='<span class="room-item-label">'+name+'</span>';nav.append(a);});
  const mobileShrine=document.createElement('a');mobileShrine.className='room-item shrine-mobile';mobileShrine.href='#family-shrine';mobileShrine.setAttribute('aria-label','神桌：選擇神明拼圖或祖先語錄');mobileShrine.innerHTML='<span class="room-item-label">點神桌</span>';nav.append(mobileShrine);
  }
- stage.append(nav);}
+ stage.append(nav);
+ const painted={
+ mom:[['書櫃：鼠媽媽的小天地','mom-games','414,47 564,44 566,280 413,280'],['床鋪：睡前故事與生活','mom-bedtime','789,135 892,136 903,273 873,298 634,282 632,237 655,201 786,191']],
+ ama:[['佛像與經書：數位養生佛堂','ama-room-media','719,186 809,186 812,286 719,286'],['扶手椅：兔阿嬤的小遊戲','ama-room-games','90,230 220,233 256,344 339,347 360,375 344,509 322,528 111,523 74,469 70,350']],
+ games:[['街機：雞爸爸遊戲場','games-dad','292,179 379,178 401,282 393,365 347,374 294,356 287,220'],['積木：龍弟弟快樂天地','games-dragon','29,272 151,268 155,342 27,355'],['畫桌：鼠姊姊學習與生活','games-dodo','685,302 886,303 918,327 904,348 895,429 870,429 861,352 715,351 711,411 692,411 682,343'],['桌遊櫃：全部遊戲','house-content','410,282 592,277 594,369 408,371']]
+ }[key];
+ if(painted){
+ const cards=[...document.querySelectorAll('#house-content .house-card')];
+ if(key==='games')cards.slice(0,3).forEach((card,i)=>card.id=['games-dodo','games-dragon','games-dad'][i]);
+ const scene=stage.querySelector('.greeting-scene');
+ const map=document.createElementNS('http://www.w3.org/2000/svg','svg');map.classList.add('room-background-map');map.setAttribute('aria-label','點房間裡的物品前往內容');
+ painted.forEach(([label,id,points])=>{if(!document.getElementById(id))return;const a=document.createElementNS(map.namespaceURI,'a');a.setAttribute('href','#'+id);a.setAttribute('aria-label',label);const title=document.createElementNS(map.namespaceURI,'title');title.textContent=label;const polygon=document.createElementNS(map.namespaceURI,'polygon');polygon.setAttribute('points',points);a.append(title,polygon);a.addEventListener('click',()=>{const target=document.getElementById(id);target.setAttribute('tabindex','-1');requestAnimationFrame(()=>target.focus({preventScroll:true}));});map.append(a);});stage.append(map);
+ // Use the identical cover crop as the background, including the compact mobile room.
+ const align=()=>{const s=scene.getBoundingClientRect(),r=stage.getBoundingClientRect(),zoom=Math.max(s.width/960,s.height/640);if(!zoom)return;const pos=getComputedStyle(scene).backgroundPosition.split(' '),px=parseFloat(pos[0])/100,py=parseFloat(pos[1]||pos[0])/100;map.style.left=s.left-r.left+'px';map.style.top=s.top-r.top+'px';map.style.width=s.width+'px';map.style.height=s.height+'px';map.setAttribute('viewBox',[(960-s.width/zoom)*px,(640-s.height/zoom)*py,s.width/zoom,s.height/zoom].join(' '));};
+ new ResizeObserver(align).observe(scene);align();
+ }
+ }
 }
 })();

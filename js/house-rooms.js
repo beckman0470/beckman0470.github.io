@@ -2,7 +2,7 @@
 const D=window.CDJHouseData,A=D.actors;
 const $=s=>document.querySelector(s);
 function actor(key,msg){return '<button type="button" class="greeting-character" aria-label="和'+A[key]+'打招呼" data-greeting="'+msg+'"><span class="greeting-sprite" aria-hidden="true" style="background-image:url(/assets/greetings/v1/'+key+'.webp)"></span></button>';}
-function stage(key,room,people,msg){let content='<div class="greeting-scene" aria-hidden="true"'+(room?' style="background-image:url(/assets/greetings/v1/room-'+room+'.webp?v=20261108-room6)"':'')+'></div>';
+function stage(key,room,people,msg){let content='<div class="greeting-scene" aria-hidden="true"'+(room?' style="background-image:url(/assets/greetings/v1/room-'+room+'.webp?v=20261108-welcome9)"':'')+'></div>';
 if(key==='study')content+='<nav class="study-objects" aria-label="點房間物件選文章">'+[
 ['family','一家日常','family-photo','<img src="/assets/style-refresh/family-album.webp" alt="雞爸爸一家的相片">'],
 ['devil','內心小惡魔','devil-doll','<span class="object-devil" aria-hidden="true"></span>'],
@@ -54,8 +54,30 @@ const key=path==='/articles.html'?'study':path==='/videos.html'?'living':path.st
 const cfg={study:['study',['dad-reader','devil','zschen'],'歡迎來雞窩！'],living:['living',D.family,'歡迎來我們這一家！'],play:[null,['dodo-abc'],'一起玩，一起發現新東西！'],relax:[null,['ama-tea'],'坐一下，陪阿嬤喝杯茶。'],stickers:[null,['mom-chat'],'讓家人的小表情，陪你聊天。'],family:[null,['dad-greeter'],'歡迎來我們家！']}[key];
 if(cfg){$('.cdj-welcome-picture')?.insertAdjacentHTML('afterend',stage(key,...cfg));$('.cdj-welcome-picture')?.remove();if(key==='study'){$('.journal-categories')?.remove();$('.cdj-welcome-label').textContent='雞窩';$('#cdj-welcome-title').innerHTML='歡迎來書房，<br>坐下來讀一段。';$('.cdj-welcome-summary').textContent='雞爸爸的文章都在這裡，小惡魔、珍山陳阿祖和兩隻貓陪你挑故事。';window.cdjSelectJournal?.(new URLSearchParams(location.search).get('room')||'all',false);}if(key==='living'){$('.cdj-welcome-label').textContent='客廳';$('#cdj-welcome-title').innerHTML='歡迎來，<br>我們這一家。';$('.cdj-welcome-summary').textContent='雞爸爸拍的一家日常、雅虎右右與創作短片，點封面就能看。';}}
 }
-document.querySelectorAll('.cdj-welcome .cdj-greeting[data-room]').forEach(el=>el.closest('.cdj-welcome').classList.add('cdj-room-entrance'));
+document.querySelectorAll('.cdj-welcome .cdj-greeting[data-room]').forEach(el=>{
+const hero=el.closest('.cdj-welcome');hero.classList.add('cdj-room-entrance');
+const welcome={living:'歡迎來我們這一家。',dining:'來吃飯了！',mom:'一起聽個故事吧。',ama:'回來了，坐一下。',study:'坐下來，讀一段。',games:'一起玩一局吧。',kitchen:'飯菜香，等一下就好。',bathroom:'慢慢走，小心地滑。'}[el.dataset.room];
+if(welcome)hero.querySelector('h1').textContent=welcome;
+const summary=hero.querySelector('.cdj-welcome-summary');if(summary)summary.hidden=true;
+});
 function viewportSize(){document.documentElement.style.setProperty('--cdj-scrollbar',(innerWidth-document.documentElement.clientWidth)+'px');document.documentElement.style.setProperty('--cdj-header-height',(document.querySelector('header')?.getBoundingClientRect().height||104)+'px');}viewportSize();window.addEventListener('resize',viewportSize);if('ResizeObserver'in window&&document.querySelector('header'))new ResizeObserver(viewportSize).observe(document.querySelector('header'));
 document.addEventListener('click',e=>{const a=e.target.closest('[data-journal-filter]');if(a&&window.cdjSelectJournal){e.preventDefault();window.cdjSelectJournal(a.dataset.journalFilter);}});
 bind();
+// Gentle, staggered room life. Speech starts only after a visitor taps a person.
+document.querySelectorAll('.cdj-greeting').forEach(room=>{
+const people=[...room.querySelectorAll('.greeting-character:not(.greeting-cat)')];
+people.forEach((person,i)=>{const name=person.getAttribute('aria-label');const col=name.includes('雞爸爸')?0:name.includes('鼠媽媽')?1:name.includes('兔阿嬤')?2:name.includes('鼠姊姊')?3:name.includes('龍弟弟')?4:-1;
+person.style.setProperty('--pose-col',Math.max(0,col)*25+'%');person.style.setProperty('--life-delay',(-i*6)+'s');person.classList.add(col>=3?'room-child':col>=0?'room-adult':'room-guest');if(col>=0)person.dataset.greeting=['歡迎來我們這一家！','今天想一起做些什麼呢？','回來了，坐一下。','我們一起玩，好不好？','呵呵呵，開心！'][col];
+const pose=document.createElement('span');pose.className='greeting-pose';pose.setAttribute('aria-hidden','true');person.append(pose);
+const original=person.onclick;person.onclick=()=>{if(person.classList.contains('is-resting')){person.classList.remove('is-resting','is-sleeping','is-riding','is-vibrating');person.restControl?.setAttribute('aria-pressed','false');room.querySelector('.greeting-caption').textContent='休息好了，起來打個招呼！';}original?.();room.querySelectorAll('.is-speaking').forEach(p=>p.classList.remove('is-speaking'));person.classList.add('is-speaking');setTimeout(()=>person.classList.remove('is-speaking'),3500);
+if('speechSynthesis'in window){speechSynthesis.cancel();const speech=new SpeechSynthesisUtterance(person.dataset.greeting);speech.lang='zh-TW';speech.rate=.9;speechSynthesis.speak(speech);}};
+});
+const roomKey=room.dataset.room;
+const rests={living:[['坐沙發休息',0,'sit',84,76]],mom:[['躺床閉眼休息',1,'sleep',79,43]],ama:[['站上震動機',0,'vibrate',65,83]],games:[['弟弟玩跳跳馬',4,'ride',58,79]]}[roomKey]||[];
+rests.forEach(([label,index,mode,x,y])=>{const person=people[index];if(!person)return;const control=document.createElement('button');control.type='button';control.className='room-rest-control';control.setAttribute('aria-label',label);control.title=label;control.setAttribute('aria-pressed','false');person.restControl=control;const scene=room.querySelector('.greeting-scene');
+const align=()=>{const r=scene.getBoundingClientRect(),p=room.getBoundingClientRect(),w=roomKey==='living'?1672:960,h=roomKey==='living'?941:640,z=Math.max(r.width/w,r.height/h),pos=getComputedStyle(scene).backgroundPosition.split(' '),px=parseFloat(pos[0])/100,py=parseFloat(pos[1]||pos[0])/100;const left=r.left-p.left+(r.width-w*z)*px+w*z*x/100,top=r.top-p.top+(r.height-h*z)*py+h*z*y/100;control.style.left=left+'px';control.style.top=top+'px';person.style.setProperty('--rest-x',left+'px');person.style.setProperty('--rest-bottom',(p.height-top)+'px');};new ResizeObserver(align).observe(scene);align();
+control.onclick=()=>{const active=!person.classList.contains('is-resting');person.classList.toggle('is-resting',active);person.classList.toggle('is-sleeping',active&&mode==='sleep');person.classList.toggle('is-riding',active&&mode==='ride');person.classList.toggle('is-vibrating',active&&mode==='vibrate');control.setAttribute('aria-pressed',String(active));room.querySelector('.greeting-caption').textContent=active?({sit:'坐下來休息一下，點人物就能起來。',sleep:'噓，閉眼睛休息一下。點人物就能起來。',ride:'弟弟開心玩跳跳馬！再點一下就停下。',vibrate:'兔阿嬤抖抖抖～再點一下就停下。'}[mode]):'休息好了，歡迎陪我們玩。';};room.append(control);
+});
+room.querySelector('.greeting-pause')?.addEventListener('click',()=>{if('speechSynthesis'in window)speechSynthesis.cancel();});
+});
 })();

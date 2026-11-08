@@ -61,3 +61,62 @@ html body[data-welcome-page] .cdj-room-entrance .cdj-welcome-summary{font-size:c
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.room-item,.study-object{transition:none}}
 
 @media(min-width:761px){.altar-item:hover .room-item-label,.altar-item:focus-visible .room-item-label{opacity:1}}
+
+/* Quiet outlines: preserve the artwork instead of flooding it with light. */
+.cdj-greeting .greeting-character{scale:.88;transform-origin:50% 100%}
+.room-item,.study-object{filter:none;transition:outline-color .18s}
+.room-item:hover,.room-item:focus-visible,.room-item:active,
+.room-item.altar-item:hover,.room-item.altar-item:focus-visible,
+.study-object:hover,.study-object:focus-visible,.study-object.active,.study-object:active{
+ transform:none;filter:none;background:transparent;box-shadow:none;
+ outline:1.5px solid #fff5cfb3;outline-offset:1px;border-color:transparent;
+}
+.room-item:focus-visible .room-item-label,.room-item:hover .room-item-label{background:#fff9e5ed}
+.room-paper:hover,.room-paper:focus-visible{filter:none;background:#fff8;outline:1.5px solid #fff5cfb3}
+.room-background-map{position:absolute;z-index:5;overflow:hidden;pointer-events:none}
+.room-background-map a{pointer-events:visiblePainted;cursor:pointer;outline:none}
+.room-background-map polygon{fill:transparent;stroke:transparent;stroke-width:1.5;vector-effect:non-scaling-stroke;stroke-linejoin:round;transition:stroke .18s}
+.room-background-map a:hover polygon,.room-background-map a:focus-visible polygon{stroke:#fff5cfd9}
+.room-background-map a:active polygon{stroke:#fff9e9}
+.cdj-greeting[data-room] .greeting-character{animation:none!important}
+.cdj-greeting[data-room] .room-adult{animation:room-adult-idle 41s ease-in-out var(--life-delay,0s) infinite!important}
+.cdj-greeting[data-room] .room-child{animation:room-child-idle 27s ease-in-out var(--life-delay,0s) infinite!important}
+.cdj-greeting[data-room] .greeting-cat{animation:room-cat-run 48s ease-in-out -17s infinite!important}
+.cdj-greeting[data-room] .greeting-cat:last-of-type{animation-delay:-33s!important}
+.cdj-greeting .greeting-sprite{animation-duration:23s;animation-delay:var(--life-delay,0s)}
+@keyframes room-adult-idle{0%,75%,100%{transform:none}78%{transform:rotate(-2deg)}81%{transform:rotate(2deg)}86%{transform:scaleY(1.035)}90%{transform:none}}
+@keyframes room-child-idle{0%,65%,100%{transform:none}68%{transform:rotate(-3deg)}71%{transform:rotate(3deg)}76%{transform:scaleY(.85)}79%{transform:translateY(-9px)}82%{transform:none}}
+@keyframes room-cat-run{0%,83%,100%{transform:none}88%{transform:translateX(-22px)}93%{transform:translateX(20px)}}
+.greeting-pose{display:none;position:absolute;left:50%;bottom:calc(var(--frame)*-.55);width:var(--frame);height:var(--frame);transform:translateX(-50%);pointer-events:none;background:url('/assets/greetings/v1/family-rest.webp') var(--pose-col) 0/500% 300% no-repeat}
+.room-adult:not(.is-resting) .greeting-pose,.room-child:not(.is-resting) .greeting-pose{display:block;visibility:hidden;background-position-y:100%}
+.room-adult:not(.is-resting) .greeting-pose{animation:room-stretch-pose 41s steps(1) var(--life-delay,0s) infinite}
+.room-child:not(.is-resting) .greeting-pose{animation:room-squat-pose 27s steps(1) var(--life-delay,0s) infinite}
+.room-adult:not(.is-resting):not(.is-waving) .greeting-sprite{animation:cdj-greet 23s steps(1,end) var(--life-delay,0s) infinite,room-stretch-hide 41s steps(1) var(--life-delay,0s) infinite}
+.room-child:not(.is-resting):not(.is-waving) .greeting-sprite{animation:cdj-greet 23s steps(1,end) var(--life-delay,0s) infinite,room-squat-hide 27s steps(1) var(--life-delay,0s) infinite}
+@keyframes room-stretch-pose{0%,90%,100%{visibility:hidden}85%{visibility:visible}}
+@keyframes room-stretch-hide{0%,90%,100%{visibility:visible}85%{visibility:hidden}}
+@keyframes room-squat-pose{0%,79%,100%{visibility:hidden}75%{visibility:visible}}
+@keyframes room-squat-hide{0%,79%,100%{visibility:visible}75%{visibility:hidden}}
+.is-waving:not(.is-resting) .greeting-pose{display:none}
+html body[data-welcome-page] .cdj-room-entrance .cdj-greeting .greeting-character.is-resting{left:var(--rest-x)!important;bottom:var(--rest-bottom)!important;animation:none!important;z-index:7}
+.is-resting .greeting-sprite{visibility:hidden}.is-resting .greeting-pose{display:block}
+.is-resting:not(.is-sleeping):not(.is-vibrating) .greeting-pose{height:calc(var(--frame)*1.13);background-size:500% 265.5%}
+.is-resting.is-sleeping .greeting-pose{background-position-y:50%;clip-path:inset(0 6%)}
+.is-resting.is-vibrating .greeting-pose{display:none}.is-resting.is-vibrating .greeting-sprite{visibility:visible;animation:none;background-position:0 0}
+html body[data-welcome-page] .cdj-room-entrance .cdj-greeting .greeting-character.is-resting.is-vibrating{animation:room-vibrate .14s linear infinite!important}
+html body[data-welcome-page] .cdj-room-entrance .cdj-greeting .greeting-character.is-resting.is-riding{animation:room-hop .85s ease-in-out infinite!important}
+@keyframes room-vibrate{0%,100%{transform:translateX(-1px)}50%{transform:translateX(1px)}}
+@keyframes room-hop{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+.room-rest-control{position:absolute;z-index:8;translate:-50% -50%;width:12%;height:12%;min-width:44px;min-height:44px;border:1.5px solid transparent;border-radius:12px;background:transparent;cursor:pointer;padding:0}
+.room-rest-control:hover,.room-rest-control:focus-visible{outline:none;border-color:#fff5cfd9;background:transparent;box-shadow:none}
+.is-speaking:after{content:attr(data-greeting);position:absolute;left:50%;bottom:calc(var(--frame)*.48);translate:-50% 0;width:max-content;max-width:155px;padding:7px 10px;border:1px solid #e4d9bb;border-radius:12px;background:#fffdf5;color:#3c5742;font:13px/1.6 system-ui;z-index:10;pointer-events:none}
+.cdj-greeting.is-paused .greeting-character,.cdj-greeting.is-offscreen .greeting-character,.cdj-greeting.is-paused .greeting-pose,.cdj-greeting.is-offscreen .greeting-pose{animation-play-state:paused!important}
+@media(prefers-reduced-motion:reduce){.cdj-greeting[data-room] .greeting-character,.cdj-greeting .greeting-sprite,.cdj-greeting .greeting-pose{animation:none!important}}
+.cdj-room-entrance .cdj-welcome-summary[hidden]{display:none!important}
+@media(min-width:761px){
+ .cdj-room-entrance [data-room=games] .greeting-character:nth-of-type(4){left:30%!important}
+html body[data-welcome-page] .cdj-room-entrance>.cdj-welcome-copy{width:auto;max-width:27%!important;padding:10px 14px!important;border-radius:10px;background:#fffdf2c9;box-shadow:none}
+html body[data-welcome-page] main>.cdj-welcome.cdj-room-entrance h1{font-size:clamp(17px,1.6cqw,23px)!important;margin:0!important;line-height:1.5!important}
+html body[data-welcome-page] .cdj-room-entrance .cdj-welcome-label{font-size:11px!important;margin-bottom:4px!important}
+}
+@media(max-width:760px){html body[data-welcome-page] main>.cdj-room-entrance h1{font-size:25px!important;line-height:1.5!important;margin-bottom:0!important}}
