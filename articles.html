@@ -37,22 +37,18 @@
 .card-media{display:flex!important;align-items:center!important;justify-content:center!important;aspect-ratio:3/2!important;height:auto!important;min-height:0!important;overflow:hidden;background:#f7f4ec!important}
 .card-media img{display:block!important;width:100%!important;height:100%!important;max-height:100%!important;object-fit:contain!important;object-position:center!important}
 .card-tags{display:none!important}
-</style></head>
-<body>
+</style><script defer src="/js/article-community.js?v=20261108-1"></script><link rel="stylesheet" href="/css/welcome-headers.css?v=20261108-1"></head>
+<body data-welcome-page="articles">
   <header class="site-header cdj-unified-header" data-unified-header="order2"><div class="cdj-unified-inner"><a class="cdj-unified-brand" href="/" aria-label="雞爸爸生活研究室首頁"><img src="/assets/img/logo-avatar.png" alt="" width="52" height="52"><span><strong>雞爸爸生活研究室</strong><small>CHICKEN DAD JOURNAL</small></span></a><nav class="entry-subnav" aria-label="主要導覽"><a href="/">首頁</a><a href="/articles.html" aria-current="page">生活文章</a><a href="/videos.html">影音館</a><a href="/play/">親子樂園</a><a href="/relax.html">大人放風</a><a href="/stickers.html">貼圖小舖</a><a href="/family.html">認識我們</a></nav></div></header>
 
-  <main class="journal-page" id="journal-page">
+  <main class="journal-page cdj-welcome-main" id="journal-page"><section class="cdj-welcome" aria-labelledby="cdj-welcome-title"><div class="cdj-welcome-copy"><p class="cdj-welcome-label">生活文章</p><h1 id="cdj-welcome-title">日子慢慢過，<br>故事慢慢讀。</h1><p class="cdj-welcome-summary">一家人的日常、生活裡的領悟，還有親子與健康研究。</p></div><figure class="cdj-welcome-picture"><img src="/assets/welcome/articles.webp?v=20261108-1" width="1200" height="800" alt="雞爸爸一家在桌邊一起讀書" fetchpriority="high"></figure></section>
     <section class="journal-hero">
       <div class="room-bg" id="room-bg" aria-hidden="true"></div>
       <div class="room-fade" aria-hidden="true"></div>
       <div class="wrap hero-inner">
         <div class="hero-heading">
-          <div class="section-title-row">
-            <span class="ornament">❦</span>
-            <h1 id="journal-title">生活文章</h1>
-            <span class="ornament">❦</span>
-          </div>
-          <p id="journal-subtitle" class="journal-subtitle"></p>
+          
+          
           <nav class="journal-categories" aria-label="Vocus 五個房間"><a href="/articles.html" data-journal-filter="all">全部文章</a><a href="/articles.html?room=family" data-journal-filter="family"><img src="/assets/img/hero-family.png" alt="" width="1448" height="1086" loading="lazy"><span>①</span> 雞爸爸一家生活紀錄</a><a href="/articles.html?room=devil" data-journal-filter="devil"><img src="/assets/rooms/devil.png" alt="" width="1000" height="525" loading="lazy"><span>②</span> 雞爸爸內心小惡魔</a><a href="/articles.html?room=zschen" data-journal-filter="zschen"><img src="/assets/rooms/zschen.png" alt="" width="1000" height="525" loading="lazy"><span>③</span> 珍山陳經典語錄</a><a href="/articles.html?room=cdpj" data-journal-filter="cdpj"><img src="/assets/rooms/cdpj.png" alt="" width="1000" height="525" loading="lazy"><span>④</span> 雞爸爸親子期刊</a><a href="/articles.html?room=cdhj" data-journal-filter="cdhj"><img src="/assets/rooms/cdhj.png?v=20261106-health1" alt="" width="1000" height="525" loading="lazy"><span>⑤</span> 雞爸爸健康期刊</a></nav>
 <div id="journal-pills" class="journal-pills"></div>
         </div>
@@ -102,8 +98,8 @@
 
     document.body.dataset.journal = key;
     document.title = `雞爸爸生活研究室｜${journal.label}`;
-    document.getElementById('journal-title').textContent = journal.label;
-    document.getElementById('journal-subtitle').textContent = journal.subtitle;
+    /* Room is indicated by the active filter; the welcome headline stays consistent. */
+    /* Room summaries remain below the shared welcome. */
     document.getElementById('about-title').textContent = journal.aboutTitle;
     document.getElementById('about-text').textContent = journal.aboutText;
     const thumb = document.getElementById('about-thumb');
@@ -167,6 +163,7 @@
   </script>
 </body>
 </html>
+
 
 
 

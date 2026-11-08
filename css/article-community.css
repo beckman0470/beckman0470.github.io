@@ -1,0 +1,17 @@
+.cdj-community{margin:48px 0;padding:28px;border:1px solid #d9dfcf;border-radius:22px;background:#fffdf8;color:#354c3a;font-family:"Microsoft JhengHei","PingFang TC",system-ui,sans-serif;text-align:left;box-sizing:border-box}
+.cdj-community *{box-sizing:border-box}.cdj-community [hidden]{display:none!important}
+.cdj-community .cdj-community-kicker{margin:0 0 8px;color:#826a4f;font-size:14px;letter-spacing:.12em}
+main .cdj-community h2{margin:0 0 22px;font-size:clamp(24px,4vw,32px);line-height:1.5;color:#354c3a}
+main .cdj-community h3{font-size:22px;margin:30px 0 18px;line-height:1.5;color:#354c3a}
+.cdj-community button{font:inherit;min-height:46px;border:1px solid #b5c5ad;border-radius:24px;padding:10px 20px;background:#fffdf8;color:#365541;cursor:pointer}
+.cdj-community button:disabled{opacity:.6;cursor:wait}.cdj-community button:focus-visible,.cdj-community input:focus-visible,.cdj-community textarea:focus-visible{outline:3px solid #b88f52;outline-offset:3px}
+.cdj-community .cdj-like[aria-pressed=true],.cdj-community .cdj-submit{background:#40654e;color:#fff}
+.cdj-comment-form{display:grid;gap:10px}.cdj-comment-form label{font-size:16px;font-weight:700}
+.cdj-community input,.cdj-community textarea{display:block;width:100%;min-width:0;background:#fff;border:1px solid #bdcbb7;border-radius:10px;padding:12px;font:inherit;font-size:17px;color:#354c3a;line-height:1.6}
+.cdj-community input{max-width:320px}.cdj-community textarea{resize:vertical;min-height:130px}.cdj-community .cdj-submit{justify-self:start}
+.cdj-community .cdj-community-hint,.cdj-community .cdj-community-status,.cdj-community-empty{font-size:14px;line-height:1.7;color:#687465;margin:2px 0 12px}.cdj-community .cdj-community-status{min-height:24px;margin:18px 0}
+.cdj-comment{border-top:1px solid #e3e7dc;padding:20px 0}.cdj-comment-meta{display:flex;gap:10px;justify-content:space-between;flex-wrap:wrap;align-items:baseline}.cdj-comment-meta strong{font-size:17px}.cdj-comment-meta time{font-size:13px;color:#6b7567}
+.cdj-comment .cdj-comment-text{white-space:pre-wrap;overflow-wrap:anywhere;font-size:17px;line-height:1.9;margin:10px 0 0;color:#435443}
+.cdj-community .cdj-community-refresh{font-size:14px;margin:12px 0 0}.cdj-community .cdj-community-more{margin:12px 12px 0 0}
+.story-card .cdj-card-counts{display:block;font-size:14px;color:#58705a;margin-top:auto;padding-top:12px;line-height:1.6}
+@media(max-width:600px){.cdj-community{padding:20px 16px;margin:32px 0;border-radius:16px}.cdj-comment-meta{display:block}.cdj-comment-meta time{display:block;margin-top:4px}}

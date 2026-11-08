@@ -1,0 +1,27 @@
+/* Seven entrances share one explicit component; page labels are always the eyebrow. */
+html body[data-welcome-page] main.cdj-welcome-main{display:block!important;width:min(1180px,calc(100% - 48px))!important;max-width:1180px!important;margin:0 auto!important;padding:0 0 64px!important;box-sizing:border-box}
+html body[data-welcome-page] main>.cdj-welcome{display:grid!important;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr)!important;align-items:start!important;gap:48px!important;margin:0!important;padding:48px 0 40px!important;min-height:0!important;position:relative!important;transform:none!important}
+html body[data-welcome-page] .cdj-welcome-copy{display:block!important;margin:0!important;padding:0!important;text-align:left!important;min-width:0!important}
+html body[data-welcome-page] .cdj-welcome .cdj-welcome-label{display:block!important;font:500 16px/1.6 "Microsoft JhengHei","PingFang TC",system-ui,sans-serif!important;letter-spacing:.12em!important;color:#7b715e!important;margin:0 0 16px!important;padding:0!important}
+html body[data-welcome-page] main .cdj-welcome h1{display:block!important;position:static!important;font-family:"Huninn","jf-openhuninn","Microsoft JhengHei","PingFang TC",system-ui,sans-serif!important;font-size:clamp(34px,3.6vw,48px)!important;line-height:1.4!important;font-weight:500!important;letter-spacing:.025em!important;color:#354c3a!important;margin:0 0 20px!important;padding:0!important;max-width:none!important;text-align:left!important;white-space:normal!important;transform:none!important}
+html body[data-welcome-page] .cdj-welcome .cdj-welcome-summary{font:400 18px/1.9 "Microsoft JhengHei","PingFang TC",system-ui,sans-serif!important;letter-spacing:.02em!important;color:#667262!important;max-width:32em!important;margin:0!important;padding:0!important;text-align:left!important}
+html body[data-welcome-page] .cdj-welcome-picture{display:block!important;position:relative!important;aspect-ratio:3/2!important;width:100%!important;height:auto!important;margin:0!important;padding:0!important;overflow:hidden!important;background:#f1efdf!important;border:1px solid #dce1d2!important;border-radius:22px!important;box-shadow:none!important;transform:none!important}
+html body[data-welcome-page] .cdj-welcome-picture img{display:block!important;width:100%!important;height:100%!important;max-width:100%!important;position:absolute!important;inset:0!important;object-fit:contain!important;object-position:center!important;border:0!important;border-radius:0!important;transform:none!important}
+html body[data-welcome-page=articles] .journal-hero{padding:0!important;margin:0!important;background:none!important;min-height:0!important;display:block!important}
+html body[data-welcome-page=articles] .journal-hero .room-bg,html body[data-welcome-page=articles] .journal-hero .room-fade{display:none!important}
+html body[data-welcome-page=articles] .journal-hero .hero-inner{display:block!important;width:100%!important;max-width:none!important;padding:0!important;margin:0!important}
+html body[data-welcome-page=articles] .journal-hero .hero-heading{padding:0!important;margin:0 0 24px!important;background:none!important;display:block!important}
+html body[data-welcome-page=articles] .journal-categories{margin-top:0!important}
+html body[data-welcome-page=articles] .journal-hero .wrap{width:100%!important}
+html body[data-welcome-page=family] .our-wrap{max-width:none;width:100%}
+html body[data-welcome-page=home] .life-shortcuts{margin-top:0!important}
+html body[data-welcome-page=play] main>.tabs{margin:0 0 24px!important}
+html body[data-welcome-page] #cdj-audio-tools{margin:0 0 32px!important;width:100%!important;box-sizing:border-box!important}
+@media(max-width:760px){
+html body[data-welcome-page] main.cdj-welcome-main{width:calc(100% - 32px)!important}
+html body[data-welcome-page] main>.cdj-welcome{grid-template-columns:minmax(0,1fr)!important;gap:24px!important;padding:28px 0 32px!important}
+html body[data-welcome-page] main .cdj-welcome h1{font-size:clamp(29px,8.4vw,36px)!important;line-height:1.45!important;margin-bottom:16px!important}
+html body[data-welcome-page] .cdj-welcome .cdj-welcome-label{font-size:15px!important;margin-bottom:12px!important}
+html body[data-welcome-page] .cdj-welcome .cdj-welcome-summary{font-size:17px!important;line-height:1.85!important}
+html body[data-welcome-page] .cdj-welcome-picture{border-radius:18px!important}
+}

@@ -17,6 +17,7 @@ inner.append(brand,nav);host.replaceChildren(inner);host.dataset.unifiedHeader=v
 /* A single heading system for section entrances and article/person detail pages. */
 (()=>{
  if(typeof document==='undefined')return;
+ if(document.querySelector('.cdj-welcome'))return;
  const route=location.pathname;if(route==='/'||route==='/index.html')return;
  const title=document.querySelector('main h1');if(!title)return;
  let section='認識我們';
@@ -40,5 +41,6 @@ inner.append(brand,nav);host.replaceChildren(inner);host.dataset.unifiedHeader=v
  }
  const lead=title.nextElementSibling?.matches('p')?title.nextElementSibling:title.parentElement.nextElementSibling;if(lead?.matches('p'))lead.dataset.cdjLead='true';
 })();
+
 
 
