@@ -3,10 +3,18 @@
 'use strict';
 
 // Use the current homepage artwork rather than the previous portraits or emoji.
-const coverRoot="/assets/play-covers/v1/";
-const menuArtwork={dad:coverRoot+"numberhunt.webp",mom:coverRoot+"tidy.webp",ama:coverRoot+"grocery.webp",dodo:coverRoot+"area-dodo.webp",dragon:coverRoot+"area-dragon.webp",devil:coverRoot+"truthdetective.webp"};
-const gameCoverIds=new Set(["classic-zh", "classic-abc", "classic-hide", "classic-pet", "classic-drum", "truthdetective", "opposite", "grocery", "clock", "tidy", "dayplan", "numberhunt", "spot", "maze", "snackshop", "codequest", "storytiles", "phonetic", "post", "memory", "count", "jump", "rhythm", "dishwash", "trashsort", "sweep", "mop", "bath", "feed", "doors", "puzzle", "detective", "coop", "chores", "area-dodo", "area-dragon"]);
-function artworkFor(id){return coverRoot+(gameCoverIds.has(id)?id:"area-dodo")+".webp"}
+const menuArtwork={"dad":"/assets/home-life/dad-v2.png","mom":"/assets/home-life/mom-ama-v2.png","ama":"/assets/home-life/mom-ama-v2.png","dodo":"/assets/home-life/dodo-detective.png","dragon":"/assets/home-life/dragon-dishes.png","devil":"/assets/rooms/devil.png"};
+function artworkFor(id){
+ if(['truthdetective','opposite'].includes(id))return menuArtwork.devil;
+ if(['grocery','clock','sweep'].includes(id))return menuArtwork.ama;
+ if(['tidy','dayplan','mop'].includes(id))return menuArtwork.mom;
+ if(['numberhunt','spot','trashsort','chores'].includes(id))return menuArtwork.dad;
+ if(id==='dishwash'||id==='bath')return menuArtwork.dragon;
+ if(['feed','puzzle','pet'].includes(id))return '/cat-youyou-peek.png';
+ if(['memory','count','jump','maze','codequest','doors','hide','detective'].includes(id))return '/cat-yahoo-walk.png';
+ if(id==='coop')return '/assets/home-life/kids-v2.png';
+ return menuArtwork.dodo;
+}
 
 const cards=[
 ["dishwash","🧽","洗碗泡泡小幫手","海綿起泡、洗掉髒污、沖乾淨再收好。","生活任務 · 洗 3 個碗盤"],
@@ -382,14 +390,14 @@ areas.dodo.menu.querySelector('.mg-menu-heading').after(newNote);
 /* Family hosts: eight new untimed games for ages six and up. */
 const familyHosts={
 devil:{name:'小惡魔',image:menuArtwork.devil},
-ama:{name:'兔阿嬤',icon:'🧺',image:menuArtwork.ama},
-mom:{name:'鼠媽媽',icon:'🌷',image:menuArtwork.mom},
-dad:{name:'雞爸爸',icon:'👓',image:menuArtwork.dad}
+ama:{name:'兔阿嬤',icon:'🧺',image:'/assets/home-life/mom-ama-v2.png'},
+mom:{name:'鼠媽媽',icon:'🌷',image:'/assets/home-life/mom-ama-v2.png'},
+dad:{name:'雞爸爸',icon:'👓',image:'/assets/home-life/dad-v2.png'}
 };
 const familyGameHost={truthdetective:'devil',opposite:'devil',grocery:'ama',clock:'ama',tidy:'mom',dayplan:'mom',numberhunt:'dad',spot:'dad'};
 function familyStage(id){
 const stage=shell(id),host=familyHosts[familyGameHost[id]],banner=el('div','fg-host');
-if(host.image){const picture=el('img','fg-avatar');picture.src=artworkFor(id);picture.alt=host.name+"陪你玩這個遊戲";banner.append(picture);}
+if(host.image){const picture=el('img','fg-avatar');picture.src=host.image;picture.alt=host.name;banner.append(picture);}
 else banner.append(el('span','fg-devil',host.icon));
 banner.append(el('p','',host.name+'陪你玩 · 不限時，慢慢想也很棒。'));stage.append(banner);return stage;
 }
@@ -520,7 +528,7 @@ areas.dodo.menu.querySelector('.mg-menu-heading').after(roleFilters);
 /* Hands-on home routines. All actions are pretend play, without timers. */
 const homeRoutineHosts={dishwash:'mom',trashsort:'dad',sweep:'ama',mop:'mom',bath:'dad'};
 function homeRoutineStage(id){
-const stage=shell(id),host=familyHosts[homeRoutineHosts[id]],banner=el('div','fg-host'),portrait=el('img','fg-avatar');portrait.src=artworkFor(id);portrait.alt=host.name+"陪你練習這個生活任務";banner.append(portrait,el('p','',host.name+'陪你練習生活小任務。'));stage.append(banner);return stage;
+const stage=shell(id),host=familyHosts[homeRoutineHosts[id]],banner=el('div','fg-host'),portrait=el('img','fg-avatar');portrait.src=host.image;portrait.alt=host.name;banner.append(portrait,el('p','',host.name+'陪你練習生活小任務。'));stage.append(banner);return stage;
 }
 const hcStyle=el('style');hcStyle.textContent=`
 .hc-board{max-width:500px;margin:22px auto;padding:18px;border-radius:24px;background:#eef1df}.hc-floor{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.hc-tile{aspect-ratio:1;min-height:70px;border:2px solid #d4dfc4;border-radius:16px;background:#fffdf5;font-size:34px;color:#405734}.hc-tile:disabled{opacity:1}.hc-plate{background:#fffef9;border:12px solid #d9e4d1;border-radius:50%;padding:30px;max-width:320px;aspect-ratio:1;margin:20px auto;display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap}.hc-stain{border:0;border-radius:50%;width:64px;height:64px;min-height:64px;background:#d7aa74;font-size:26px;color:#493d26}.hc-stain:disabled{background:#eaf3e2;opacity:1}.hc-tools{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin:20px 0}.hc-duck{text-align:center;font-size:76px;margin:20px}.hc-note{font-size:17px;color:#6c7763;line-height:1.8}
@@ -577,7 +585,11 @@ draw();
 const homeIds=Object.keys(homeRoutineHosts),homeCards=homeIds.map(id=>areas.dragon.grid.querySelector('[data-game-id="'+id+'"]'));
 homeCards.forEach(card=>card.classList.add('sp-new'));areas.dragon.grid.prepend(...homeCards);
 
+// The living room fur links directly to the existing broom-and-grid activity.
+if(new URLSearchParams(location.search).get('game')==='sweep'){
+ document.addEventListener('DOMContentLoaded',()=>sweep(),{once:true});
+}
+
 
 })();
-
 

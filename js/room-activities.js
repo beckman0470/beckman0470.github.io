@@ -14,9 +14,7 @@ if(key==='study'){
  const caption=document.querySelector('.greeting-caption');if(caption)caption.textContent='點相片、小惡魔或健康小物，挑一類文章。';
 }
 if(key==='living'){
- const s=block('幫客廳掃掃地','找到房間地上的 6 張紙屑，點一下就能收乾淨。'),stage=document.querySelector('.cdj-greeting[data-room=living]');if(!stage)return;
- const info=document.createElement('p');info.className='cleaning-status';info.setAttribute('role','status');const restart=document.createElement('button');restart.type='button';restart.textContent='重新放紙屑';s.append(info,restart);
- let clean=0;function start(){clean=0;stage.querySelectorAll('.room-paper').forEach(x=>x.remove());info.textContent='已清理 0 / 6 張紙屑';[[36,84],[48,74],[58,89],[68,77],[82,86],[93,72]].forEach(([x,y],i)=>{const b=document.createElement('button');b.type='button';b.className='room-paper';b.style.left=x+'%';b.style.top=y+'%';b.setAttribute('aria-label','清理第 '+(i+1)+' 張紙屑');b.innerHTML='<span aria-hidden="true">▱</span>';b.onclick=()=>{clean++;b.remove();info.textContent=clean===6?'客廳變乾淨了！謝謝小幫手。':'已清理 '+clean+' / 6 張紙屑';};stage.append(b);});}restart.onclick=start;start();
+ const s=block('客廳的小角落','點神桌認識家人的信仰與故事。'),stage=document.querySelector('.cdj-greeting[data-room=living]');if(!stage)return;
  const shrine=document.createElement('section');shrine.id='family-shrine';shrine.className='shrine-menu';shrine.innerHTML='<h3>神桌小角落</h3><div><a href="/articles.html?room=zschen#cards-grid">珍山陳祖先・列祖列宗｜讀經典語錄</a>'+['清水祖師','觀世音菩薩','關聖帝君'].map((n,i)=>'<a href="/ama-games.html?game=puzzle&person='+['qingshui','guanyin','guansheng'][i]+'">'+n+'｜玩兔阿嬤神明拼圖</a>').join('')+'</div>';s.append(shrine);
 }
 if(key==='bathroom')choicesGame('浴室生活小遊戲','陪鼠姊姊和龍弟弟練習，安全又乾淨。',[
