@@ -475,15 +475,7 @@ const planSets=[
 [{time:14,label:'整理玩具'},{time:16,label:'吃點心'},{time:18,label:'吃晚餐'}],
 [{time:15,label:'陪貓咪玩'},{time:18,label:'吃晚餐'},{time:20,label:'準備睡覺'}]
 ];
-function dayplan(){
-const stage=familyStage('dayplan'),deck=shuffle(planSets);let round=0,picked=[],order=[],done=false;const body=el('div');stage.append(body);const feedback=status(stage),tools=el('div','sp-toolbar');
-const undo=btn('退回一張','secondary',()=>{if(done||!picked.length)return;picked.pop();feedback.textContent='';draw();}),check=btn('排好了！','primary',()=>{if(done||picked.length!==3)return;if(!picked.every((v,i)=>v===i)){feedback.textContent='先看時間的小時數字，數字小的先發生。可以退回調整。';return;}done=true;sound();draw();feedback.textContent='先後順序排好了，鼠媽媽可以照計畫出發囉！';next.hidden=false;}),next=btn('下一天的計畫 →','primary',()=>{round++;fresh();});tools.append(undo,check,next);stage.append(tools);
-function fresh(){picked=[];done=false;feedback.textContent='';next.hidden=true;if(round>=5){tools.hidden=true;body.replaceChildren(el('h3','','五天的計畫排好了！時間安排小幫手 ⭐'),btn('再排一回 ↻','primary',dayplan));return;}order=shuffle([0,1,2]);if(order.every((v,i)=>v===i))[order[0],order[1]]=[order[1],order[0]];draw();}
-function draw(){body.replaceChildren();body.append(el('p','sp-progress','第 '+(round+1)+' / 5 天的計畫'),el('p','question','看 24 小時制的時間，把三件事從早到晚排好。'));
-const line=el('div','fg-timeline');for(let i=0;i<3;i++){const item=picked[i]!==undefined?deck[round][picked[i]]:null;line.append(el('div','fg-slot',item?String(item.time).padStart(2,'0')+':00 '+item.label:'第 '+(i+1)+' 件事'));}body.append(line);
-const row=el('div','sp-story-choices');order.forEach(i=>{const item=deck[round][i],b=btn(String(item.time).padStart(2,'0')+':00 '+item.label,'sp-story-piece',()=>{if(done||picked.includes(i))return;picked.push(i);feedback.textContent='';draw();});b.disabled=done||picked.includes(i);row.append(b);});body.append(row,el('p','mg-tip','例如 14:00 是下午 2 點，18:00 是下午 6 點。'));check.disabled=done||picked.length!==3;undo.disabled=done||!picked.length;next.textContent=round===4?'領取計畫星星 ⭐':'下一天的計畫 →';
-}fresh();
-}
+function dayplan(){location.href='/rooms.html?room=mom#mom-plan';}
 function numberhunt(max=30){
 const stage=familyStage('numberhunt');configs(stage,[[30,'1 到 30'],[100,'挑戰到 100']],max,v=>numberhunt(v));
 let target=1+Math.floor(Math.random()*max),low=1,high=max,tries=0,done=false;stage.append(el('p','question','雞爸爸藏了一個整數。每猜一次，都會告訴你太大還是太小。'));

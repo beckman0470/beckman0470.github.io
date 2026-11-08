@@ -37,15 +37,15 @@ host.append(media);
 const player=document.createElement('script');player.src='/js/media-gallery.js?v=20261108-room3';document.body.append(player);
 }
 heading(key==='mom'?'鼠媽媽的小天地':'兔阿嬤的小遊戲');const g=grid();D.games[key].filter(([id])=>key==='mom'?id!=='coffee':!['ama-video','ama-exercise'].includes(id)).forEach(([id,t,d,url])=>{const covers={'solitaire':'ama-solitaire-v4','sudoku':'ama-sudoku-v4','blocks':'ama-blocks-v4'};card(g,t,d,url==='topic'?'/relax-family.html?host='+key+'&game='+id:url,'/assets/adult-games/'+(covers[id]||id)+'.webp');});
-if(key==='mom'){heading('要聽故事睡覺了嗎？');const g=grid();card(g,'一起讀故事','挑一篇雞爸爸家的故事，陪孩子慢慢讀。','/articles.html?room=family');card(g,'睡前生活小任務','洗澡、刷牙、洗臉與點眼藥水的小步驟。','/play/?zone=life&flow=bedtime');card(g,'一家人的客廳','一起看家人的日常與喜歡的影片。','/videos.html');}
+if(key==='mom'){heading('要聽故事睡覺了嗎？');const g=grid();card(g,'一起讀故事','挑一篇雞爸爸家的故事，陪孩子慢慢讀。','/articles.html?room=family');card(g,'睡前生活小任務','洗澡、刷牙、洗臉與點眼藥水的小步驟。','/rooms.html?room=mom&flow=bedtime#mom-life');card(g,'一家人的客廳','一起看家人的日常與喜歡的影片。','/videos.html');}
 }else if(key==='games'){heading('今天想跟誰玩？');const g=grid();[
-['鼠姊姊學習與生活','ㄅㄆㄇ、ABC、數學、日常習慣與鼠姊姊的影片。','/play/?area=dodo','/assets/play-covers/v1/area-dodo.webp'],
+['鼠姊姊學習樂園','ㄅㄆㄇ、ABC、數學與鼠姊姊的影片；生活練習請到鼠窩。','/play/?area=dodo','/assets/play-covers/v1/area-dodo.webp'],
 ['龍弟弟快樂天地','找貓咪、唱唱跳跳，還有弟弟喜歡的影片。','/play/?area=dragon','/assets/play-covers/v1/area-dragon.webp'],
 ['雞爸爸遊戲場','三國、棒球、投籃、節奏與街機。','/relax-family.html?host=dad','/assets/adult-hosts/dad.webp'],
 ['鼠窩','英文、麻將與打磚塊。','/rooms.html?room=mom','/assets/adult-hosts/mom.webp'],
 ['兔窩','接龍、數獨、方塊，輕鬆玩一會。','/rooms.html?room=ama','/assets/adult-hosts/ama.webp'],
 ['一家大富翁','選喜歡的角色，和家人走一圈。','/dad-arcade.html?game=board','/assets/adult-games/board.webp']].forEach(x=>card(g,...x));
-}else{if(key==='bathroom'){heading('把日常練習變成小習慣');const g=grid();card(g,'鼠姊姊的生活專區','起床、回家和睡前的日常小步驟。','/play/?zone=life','/assets/play-covers/v1/dishwash.webp');}
+}else{if(key==='bathroom'){heading('把日常練習變成小習慣');const g=grid();card(g,'鼠姊姊的生活專區','起床、回家和睡前的日常小步驟。','/rooms.html?room=mom#mom-life','/assets/play-covers/v1/dishwash.webp');}
 const a=document.createElement('a');a.className='house-all';a.href='/articles.html'+(key==='bathroom'?'?room=cdhj':'?room=family');a.textContent='到雞窩挑一篇'+(key==='bathroom'?'健康文章':'生活故事')+' →';host.append(a);}
 }else if(path==='/'||path==='/index.html'){$('.life-hero-copy')?.insertAdjacentHTML('beforeend',stage('home',null,['mom-home'],'歡迎回家，今天過得好嗎？'));}
 else{
