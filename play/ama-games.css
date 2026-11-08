@@ -2,3 +2,12 @@
 
 #ama-game-main h1{font-size:36px!important;line-height:1.4!important;color:#344b38!important}@media(max-width:700px){#ama-game-main h1{font-size:29px!important}}
 
+/* Square originals stay square in the picker, reference and nine-tile board. */
+.ama-character-picker{grid-template-columns:repeat(5,minmax(0,1fr));align-items:stretch}
+.ama-character-picker button{min-width:0;padding:9px 7px;line-height:1.5}
+.ama-character-picker img{display:block;width:min(100%,132px);height:auto!important;aspect-ratio:1/1;object-fit:contain;margin:0 auto 7px}
+.ama-preview{height:auto!important;aspect-ratio:1/1;object-fit:contain}
+.ama-board{grid-template-rows:repeat(3,minmax(0,1fr))}
+.ama-tile,.ama-empty{min-width:0;min-height:0;aspect-ratio:1/1;background-repeat:no-repeat}
+@media(max-width:900px){.ama-character-picker{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:450px){.ama-character-picker button{font-size:13px;padding:6px 4px}.ama-character-picker img{margin-bottom:5px}}
