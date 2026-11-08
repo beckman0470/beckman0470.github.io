@@ -127,7 +127,7 @@ body {
   min-height: 530px;
   background:
     linear-gradient(90deg, rgba(255,248,236,.18), transparent 18%),
-    url("../assets/brand-v8/hero-family-v8.png") center right/cover no-repeat;
+    url("../assets/style-refresh/family-kitchen.webp") center right/cover no-repeat;
 }
 
 .v8-hero-art::after {

@@ -1,0 +1,49 @@
+/* Bounded, independent welcome residents. */
+html body[data-welcome-page] main>.cdj-welcome{grid-template-columns:minmax(0,1fr) minmax(280px,440px)!important;gap:36px!important}
+.cdj-greeting{position:relative;isolation:isolate;width:100%;max-width:440px;height:292px;margin:0;overflow:hidden;align-self:start;border-radius:22px;box-sizing:border-box;background:radial-gradient(ellipse at 50% 75%,#e5eadb,transparent 72%)}
+.greeting-scene{position:absolute;inset:0 0 35px;background:center/cover no-repeat;border-radius:22px;overflow:hidden;pointer-events:none}
+.cdj-greeting .greeting-character{--frame:210px;position:absolute;left:50%;bottom:33px;width:calc(var(--frame)*.55);height:calc(var(--frame)*.4);margin-left:calc(var(--frame)*-.275);translate:0 calc(var(--frame)*-.55);padding:0;border:0;background:none;appearance:none;border-radius:25%;cursor:pointer;z-index:2;touch-action:manipulation;box-shadow:none}
+.cdj-greeting .greeting-sprite{position:absolute;left:50%;bottom:calc(var(--frame)*-.55);width:var(--frame);height:var(--frame);transform:translateX(-50%);background-size:300% 200%;background-repeat:no-repeat;background-position:0 0;pointer-events:none;animation:cdj-greet 9s steps(1,end) infinite}
+@keyframes cdj-greet{0%,31%{background-position:0 0}33%{background-position:50% 0}35%,55%{background-position:0 0}57%{background-position:100% 0}61%{background-position:0 100%}65%{background-position:50% 100%}69%{background-position:0 100%}73%{background-position:50% 100%}77%,100%{background-position:100% 100%}}
+@keyframes cdj-wave{0%{background-position:100% 0}20%{background-position:0 100%}40%{background-position:50% 100%}60%{background-position:0 100%}80%{background-position:50% 100%}100%{background-position:100% 100%}}
+.cdj-greeting .is-waving .greeting-sprite{animation:cdj-wave 1.3s steps(1,end) 1}
+.greeting-character:focus-visible{outline:3px solid #b28b4e;outline-offset:3px}
+.greeting-caption{position:absolute;bottom:5px;left:14px;right:88px;margin:0!important;font:400 12px/1.6 system-ui!important;color:#64725d}
+.greeting-pause{position:absolute;bottom:3px;right:10px;z-index:5;min-height:32px;padding:5px 9px!important;border:1px solid #cbd3bd!important;border-radius:20px!important;background:#fffdf6!important;color:#52664d;font:400 12px/1.5 system-ui!important;cursor:pointer}
+.cdj-greeting.is-paused .greeting-sprite,.cdj-greeting.is-paused .greeting-character,.cdj-greeting.is-offscreen .greeting-sprite,.cdj-greeting.is-offscreen .greeting-character{animation-play-state:paused!important}
+.cdj-greeting-group .greeting-character{--frame:153px;bottom:61px}
+.cdj-greeting-group .greeting-character:nth-of-type(1){left:19%}
+.cdj-greeting-group .greeting-character:nth-of-type(2){left:43%;bottom:66px}
+.cdj-greeting-group .greeting-character:nth-of-type(3){left:71%}
+.cdj-greeting-group .greeting-character:nth-of-type(4){--frame:128px;left:34%;bottom:33px}
+.cdj-greeting-group .greeting-character:nth-of-type(5){--frame:125px;left:61%;bottom:30px}
+.cdj-greeting[data-room=living] .greeting-character,.cdj-greeting[data-room=games] .greeting-character{animation:cdj-stroll 12s ease-in-out infinite}
+@keyframes cdj-stroll{0%,20%,100%{transform:translateX(-10px)}35%,70%{transform:translateX(10px)}40%,50%,60%{transform:translate(10px,-2px)}}
+.cdj-greeting .greeting-character:nth-of-type(2){animation-delay:-3s}.cdj-greeting .greeting-character:nth-of-type(3){animation-delay:-6s}.cdj-greeting .greeting-character:nth-of-type(4){animation-delay:-9s}
+.cdj-greeting[data-room=mom] .greeting-character:nth-of-type(1){--frame:205px;left:48%;bottom:34px}
+.cdj-greeting[data-room=mom] .greeting-character:nth-of-type(2){--frame:145px;left:23%;bottom:34px}
+.cdj-greeting[data-room=mom] .greeting-character:nth-of-type(3){--frame:140px;left:73%;bottom:34px}
+.cdj-greeting[data-room=kitchen] .greeting-character,.cdj-greeting[data-room=bathroom] .greeting-character{--frame:195px;bottom:34px}
+.cdj-greeting[data-room=kitchen] .greeting-character:nth-of-type(1),.cdj-greeting[data-room=bathroom] .greeting-character:nth-of-type(1){left:32%}
+.cdj-greeting[data-room=kitchen] .greeting-character:nth-of-type(2),.cdj-greeting[data-room=bathroom] .greeting-character:nth-of-type(2){left:68%}
+.cdj-greeting[data-room=dining] .greeting-character{--frame:155px;bottom:74px}
+.cdj-greeting[data-room=dining] .greeting-character:nth-of-type(1){left:14%}.cdj-greeting[data-room=dining] .greeting-character:nth-of-type(2){left:38%}.cdj-greeting[data-room=dining] .greeting-character:nth-of-type(3){left:64%}
+.cdj-greeting[data-room=dining] .greeting-character:nth-of-type(4){--frame:133px;left:27%;bottom:40px}.cdj-greeting[data-room=dining] .greeting-character:nth-of-type(5){--frame:133px;left:77%;bottom:40px}
+.greeting-table{position:absolute;bottom:48px;left:4%;width:92%;height:78px;z-index:3;border-radius:50% 50% 32% 32%;background:linear-gradient(#d6aa6d,#ae773e);border:2px solid #9a6838;box-shadow:0 10px 0 #92602f;pointer-events:none;display:flex;justify-content:space-around;align-items:center}
+.greeting-table span{background:#fff6dd;border-radius:50%;width:42px;height:22px;color:#e5b784;text-align:center;line-height:15px}.greeting-table i{width:58px;height:30px;border-radius:50%;background:radial-gradient(ellipse,#9cab65,#d39b54 50%,#fff8e5 55%)}
+.cdj-greeting[data-room=study]{height:320px}
+.room-categories{position:absolute;inset:12px 10px auto;z-index:4;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}
+.room-categories a{min-width:0;display:block;box-sizing:border-box;text-align:center;min-height:35px;padding:7px 3px;background:#fffbeeeb;color:#435d40;font:600 11px/1.5 system-ui;text-decoration:none;border:1px solid #c5c8a7;border-bottom:4px solid #ad8556;border-radius:9px;transition:background .15s,box-shadow .15s}
+.room-categories a:hover,.room-categories a:focus-visible,.room-categories a.active{background:#fff0a7;box-shadow:0 0 14px #ffd965;outline:2px solid #aa8537}
+.cdj-greeting[data-room=study] .greeting-character:nth-of-type(1){--frame:178px;left:46%;bottom:34px;animation:cdj-stroll 14s ease-in-out infinite}
+.cdj-greeting[data-room=study] .greeting-character:nth-of-type(2){--frame:110px;left:19%;bottom:30px}
+.cdj-greeting[data-room=study] .greeting-character:nth-of-type(3){--frame:150px;left:78%;bottom:30px}
+.cdj-greeting .greeting-cat{translate:none;width:65px;height:55px;margin-left:-32px;left:36%;bottom:26px}.cdj-greeting .greeting-cat:last-of-type{left:60%;bottom:23px}
+.greeting-cat img{width:100%;height:100%;object-fit:contain;pointer-events:none}
+.cdj-greeting-home{width:190px;height:150px;margin:4px 0 10px;float:right;background:none}.cdj-greeting-home .greeting-character{--frame:144px;bottom:14px}.cdj-greeting-home .greeting-caption{font-size:10px!important;right:75px}
+.house-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin:18px 0 32px}.house-card{display:flex;flex-direction:column;overflow:hidden;min-width:0;border:1px solid #d8dfcc;border-radius:22px;background:#fffdf7;text-decoration:none;color:#354c3a}.house-card:hover{box-shadow:0 8px 22px #394b3915}.house-card img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;display:block}.house-card>div{padding:18px}.house-card h3{font-size:21px;line-height:1.5;margin:0 0 10px}.house-card p{font-size:16px;line-height:1.8;color:#687361;margin:0 0 14px}.house-card span{font-size:15px;color:#426b54}.house-all{display:inline-block;padding:12px 0}
+html body #video-main .media-card[hidden]{display:none!important}html body #video-main .media-card[data-media-format=video] .media-thumb{aspect-ratio:16/9!important}html body #video-main .media-grid{align-items:start!important}.media-more-filters{margin:12px 0;color:#64735d}.media-more-filters summary{font-size:14px;cursor:pointer;padding:5px 0}.media-family-filters button{font-size:15px!important;padding:9px 15px!important;min-height:42px}.cdj-filter-status{font:400 14px/1.6 system-ui;color:#64735d;margin:8px 0 20px}
+@media(max-width:760px){html body[data-welcome-page] main>.cdj-welcome{grid-template-columns:minmax(0,1fr)!important;gap:18px!important}.cdj-greeting{width:min(100%,360px);height:255px;justify-self:center}.cdj-greeting .greeting-character{--frame:178px}.cdj-greeting-group .greeting-character{--frame:128px}.cdj-greeting-group .greeting-character:nth-of-type(4),.cdj-greeting-group .greeting-character:nth-of-type(5){--frame:110px}.cdj-greeting[data-room=study]{height:278px}.cdj-greeting[data-room=study] .greeting-character:nth-of-type(1){--frame:146px}.cdj-greeting[data-room=study] .greeting-character:nth-of-type(2){--frame:95px}.cdj-greeting[data-room=study] .greeting-character:nth-of-type(3){--frame:128px}.cdj-greeting[data-room=mom] .greeting-character:nth-of-type(1){--frame:175px}.cdj-greeting[data-room=kitchen] .greeting-character,.cdj-greeting[data-room=bathroom] .greeting-character{--frame:166px}.cdj-greeting-home{float:none;width:155px;height:132px}.cdj-greeting-home .greeting-character{--frame:122px}.house-cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.house-card>div{padding:13px}.house-card h3{font-size:18px}.house-card p{font-size:14px}}
+@media(max-width:460px){.house-cards{grid-template-columns:minmax(0,1fr)}}
+@media(prefers-reduced-motion:reduce){.cdj-greeting .greeting-sprite,.cdj-greeting .greeting-character{animation:none!important}}
+

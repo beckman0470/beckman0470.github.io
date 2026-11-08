@@ -92,6 +92,7 @@
   });
  }
  render();
+ const initial=new URLSearchParams(location.search);if(initial.get('zone')==='life'){if(Object.prototype.hasOwnProperty.call(flows,initial.get('flow')))flow=initial.get('flow');chooseZone('life');}
  document.addEventListener('cdj-video-start',stop);
  document.querySelectorAll('.tabs [role=tab]').forEach(b=>b.addEventListener('click',stop));
  document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();else if(state.date!==date()){restore();render();}});

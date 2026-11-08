@@ -1,0 +1,13 @@
+/* Homepage remains a warm, three-photo scrapbook. Interior welcome headers stay unchanged. */
+html body[data-welcome-page=home] .life-hero{display:grid!important;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)!important;align-items:start!important;gap:40px!important;padding:48px 0 36px!important;margin:0!important}
+html body[data-welcome-page=home] .life-hero-copy{align-self:start!important;padding:0!important;margin:0!important;text-align:left!important}
+html body[data-welcome-page=home] .life-hero .entry-eyebrow{margin:0 0 16px!important;font-size:16px!important;line-height:1.6!important;letter-spacing:.12em!important;color:#7b715e!important}
+html body[data-welcome-page=home] main .life-hero h1{font-size:clamp(34px,3.6vw,48px)!important;line-height:1.4!important;margin:0 0 20px!important;color:#354c3a!important;letter-spacing:.025em!important}
+html body[data-welcome-page=home] .life-lead{font-size:18px!important;line-height:1.9!important;margin:0 0 24px!important;color:#667262!important}
+html body[data-welcome-page=home] .life-collage{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:20px 16px!important;padding:12px 8px!important;align-items:start!important}
+html body[data-welcome-page=home] .life-snapshot img{height:auto!important;aspect-ratio:3/2!important;object-fit:contain!important;filter:none!important}
+html body[data-welcome-page=home] .life-dad{grid-column:1/-1!important;max-width:82%!important;justify-self:center!important;transform:rotate(-3deg)!important}
+html body[data-welcome-page=home] .life-kids{transform:rotate(2.5deg)!important}
+html body[data-welcome-page=home] .life-grownups{transform:rotate(-2deg)!important;margin-top:14px!important}
+html body[data-welcome-page=home] .life-snapshot:hover,html body[data-welcome-page=home] .life-snapshot:focus-visible{transform:rotate(0deg) translateY(-3px)!important}
+@media(max-width:760px){html body[data-welcome-page=home] .life-hero{grid-template-columns:minmax(0,1fr)!important;padding:28px 0 24px!important;gap:20px!important}html body[data-welcome-page=home] main .life-hero h1{font-size:clamp(29px,8.4vw,36px)!important;line-height:1.45!important}html body[data-welcome-page=home] .life-lead{font-size:17px!important}html body[data-welcome-page=home] .life-collage{gap:16px 12px!important;padding:8px 5px 12px!important}html body[data-welcome-page=home] .life-dad{max-width:88%!important}html body[data-welcome-page=home] .life-grownups{margin-top:8px!important}}
