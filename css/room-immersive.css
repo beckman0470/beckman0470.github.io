@@ -4,27 +4,27 @@ html body[data-welcome-page] main>.cdj-welcome.cdj-room-entrance{display:block!i
 .cdj-room-entrance>.cdj-greeting[data-room]{width:100%;max-width:none;height:auto!important;aspect-ratio:16/9;border-radius:0;background:#edead9}
 .cdj-room-entrance .greeting-scene{inset:0;border-radius:0;background-position:center 55%}
 html body[data-welcome-page] .cdj-room-entrance>.cdj-welcome-copy{position:absolute!important;left:5%;top:6%;z-index:4;max-width:35%;box-sizing:border-box;padding:22px 26px!important;border:1px solid #fff8;border-radius:18px;background:#fffdf2ed;box-shadow:0 8px 28px #283c2510}
-html body[data-welcome-page] .cdj-room-entrance h1{font-size:clamp(28px,3vw,48px)!important;line-height:1.35!important;margin-bottom:16px!important}
-html body[data-welcome-page] .cdj-room-entrance .cdj-welcome-summary{font-size:clamp(15px,1.35vw,20px)!important;line-height:1.8!important}
-.cdj-room-entrance .greeting-character{--frame:clamp(220px,27vw,510px)!important;bottom:9%!important;left:64%!important}
-.cdj-room-entrance .cdj-greeting-group .greeting-character{--frame:clamp(180px,23vw,440px)!important;bottom:16%!important}
+html body[data-welcome-page] .cdj-room-entrance h1{font-size:clamp(28px,3cqw,48px)!important;line-height:1.35!important;margin-bottom:16px!important}
+html body[data-welcome-page] .cdj-room-entrance .cdj-welcome-summary{font-size:clamp(15px,1.35cqw,20px)!important;line-height:1.8!important}
+.cdj-room-entrance .greeting-character{--frame:clamp(220px,27cqw,510px)!important;bottom:9%!important;left:64%!important}
+.cdj-room-entrance .cdj-greeting-group .greeting-character{--frame:clamp(180px,23cqw,440px)!important;bottom:16%!important}
 .cdj-room-entrance .cdj-greeting-group .greeting-character:nth-of-type(1){left:43%!important}
 .cdj-room-entrance .cdj-greeting-group .greeting-character:nth-of-type(2){left:64%!important;bottom:20%!important}
 .cdj-room-entrance .cdj-greeting-group .greeting-character:nth-of-type(3){left:85%!important}
-.cdj-room-entrance .cdj-greeting-group .greeting-character:nth-of-type(4){--frame:clamp(160px,19vw,350px)!important;left:52%!important;bottom:6%!important}
-.cdj-room-entrance .cdj-greeting-group .greeting-character:nth-of-type(5){--frame:clamp(150px,18vw,340px)!important;left:75%!important;bottom:5%!important}
+.cdj-room-entrance .cdj-greeting-group .greeting-character:nth-of-type(4){--frame:clamp(160px,19cqw,350px)!important;left:52%!important;bottom:6%!important}
+.cdj-room-entrance .cdj-greeting-group .greeting-character:nth-of-type(5){--frame:clamp(150px,18cqw,340px)!important;left:75%!important;bottom:5%!important}
 .cdj-room-entrance [data-room=mom] .greeting-character:nth-of-type(1){left:65%!important;bottom:17%!important}
-.cdj-room-entrance [data-room=mom] .greeting-character:nth-of-type(2){--frame:clamp(160px,20vw,360px)!important;left:43%!important;bottom:5%!important}
-.cdj-room-entrance [data-room=mom] .greeting-character:nth-of-type(3){--frame:clamp(150px,18vw,340px)!important;left:85%!important;bottom:5%!important}
+.cdj-room-entrance [data-room=mom] .greeting-character:nth-of-type(2){--frame:clamp(160px,20cqw,360px)!important;left:43%!important;bottom:5%!important}
+.cdj-room-entrance [data-room=mom] .greeting-character:nth-of-type(3){--frame:clamp(150px,18cqw,340px)!important;left:85%!important;bottom:5%!important}
 .cdj-room-entrance [data-room=kitchen] .greeting-character:nth-of-type(1),.cdj-room-entrance [data-room=bathroom] .greeting-character:nth-of-type(1){left:52%!important;bottom:8%!important}
 .cdj-room-entrance [data-room=kitchen] .greeting-character:nth-of-type(2),.cdj-room-entrance [data-room=bathroom] .greeting-character:nth-of-type(2){left:80%!important;bottom:8%!important}
 .cdj-room-entrance [data-room=study] .greeting-character:nth-of-type(1){left:60%!important;bottom:8%!important}
-.cdj-room-entrance [data-room=study] .greeting-character:nth-of-type(2){--frame:clamp(140px,15vw,260px)!important;left:37%!important;bottom:8%!important}
-.cdj-room-entrance [data-room=study] .greeting-character:nth-of-type(3){--frame:clamp(170px,21vw,370px)!important;left:85%!important;bottom:8%!important}
-.cdj-room-entrance .cdj-greeting .greeting-cat{width:clamp(65px,8vw,140px);height:clamp(55px,7vw,120px);margin-left:-3vw;left:43%!important;bottom:4%!important;translate:none}
+.cdj-room-entrance [data-room=study] .greeting-character:nth-of-type(2){--frame:clamp(140px,15cqw,260px)!important;left:37%!important;bottom:8%!important}
+.cdj-room-entrance [data-room=study] .greeting-character:nth-of-type(3){--frame:clamp(170px,21cqw,370px)!important;left:85%!important;bottom:8%!important}
+.cdj-room-entrance .cdj-greeting .greeting-cat{width:clamp(65px,8cqw,140px);height:clamp(55px,7cqw,120px);margin-left:-3vw;left:43%!important;bottom:4%!important;translate:none}
 .cdj-room-entrance .cdj-greeting .greeting-cat:last-of-type{left:72%!important}
 .cdj-room-entrance .room-categories{top:6%;left:48%;right:5%;gap:12px;z-index:5}
-.cdj-room-entrance .room-categories a{font-size:clamp(13px,1.2vw,19px);min-height:46px;padding:12px 5px}
+.cdj-room-entrance .room-categories a{font-size:clamp(13px,1.2cqw,19px);min-height:46px;padding:12px 5px}
 .cdj-room-entrance .greeting-caption{bottom:12px;left:20px;right:auto;max-width:65%;padding:5px 12px;background:#fffdf3ed;border-radius:14px;font-size:13px!important;color:#354c3a}
 .cdj-room-entrance .greeting-pause{bottom:12px;right:20px}
 .cdj-room-entrance .greeting-table{left:32%;right:2%;bottom:3%;height:17%;width:auto}

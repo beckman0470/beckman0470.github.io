@@ -183,4 +183,4 @@
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init, {once: true}); else init();
 })();
 
-(()=>{if(!document.querySelector('script[src*="site-entry-nav.js"]')){const s=document.createElement('script');s.src='/js/site-entry-nav.js?v=20261108-room3';s.defer=true;document.head.append(s);}})();
+(()=>{if(!document.querySelector('script[src*="site-entry-nav.js"]')){const s=document.createElement('script');s.src='/js/site-entry-nav.js?v=20261108-room6';s.defer=true;document.head.append(s);}})();
