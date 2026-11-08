@@ -586,8 +586,9 @@ const homeIds=Object.keys(homeRoutineHosts),homeCards=homeIds.map(id=>areas.drag
 homeCards.forEach(card=>card.classList.add('sp-new'));areas.dragon.grid.prepend(...homeCards);
 
 // The living room fur links directly to the existing broom-and-grid activity.
-if(new URLSearchParams(location.search).get('game')==='sweep'){
- document.addEventListener('DOMContentLoaded',()=>sweep(),{once:true});
+const linkedGame=new URLSearchParams(location.search).get('game');
+if(['sweep','chores','feed'].includes(linkedGame)){
+ document.addEventListener('DOMContentLoaded',()=>open(linkedGame),{once:true});
 }
 
 

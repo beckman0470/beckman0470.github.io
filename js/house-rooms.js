@@ -12,7 +12,6 @@ if(key==='study')content+='<nav class="study-objects" aria-label="點房間物�
 ].map(([k,n,c,v])=>'<a href="/articles.html?room='+k+'#cards-grid" data-journal-filter="'+k+'" class="study-object '+c+'" aria-label="'+n+'">'+v+'<span class="object-label">'+n+'</span></a>').join('')+'</nav>';
 content+=people.map(k=>actor(k,msg)).join('');
 if(key==='study')content+=['yahoo','youyou'].map((k,i)=>'<button type="button" class="greeting-character greeting-cat" aria-label="和'+(i?'右右':'雅虎')+'打招呼" data-greeting="喵～歡迎來看故事！"><img src="/cat-'+k+'-'+(i?'sleep':'peek')+'.png" alt="" width="90" height="90"></button>').join('');
-if(key==='dining')content+='<div class="greeting-table" aria-hidden="true"><span>●</span><i></i><span>●</span></div>';
 return '<div class="cdj-greeting'+(people.length>1?' cdj-greeting-group':'')+(key==='home'?' cdj-greeting-home':'')+'"'+(room?' data-room="'+room+'"':'')+' aria-label="家人迎賓互動區">'+content+'<p class="greeting-caption" aria-live="polite">'+(key==='study'?'點房間裡的物件，挑一類文章':'點一下角色，打個招呼')+'</p><button type="button" class="greeting-pause" aria-pressed="false">暫停動作</button></div>';
 }
 function bind(){const reduce=matchMedia('(prefers-reduced-motion: reduce)');
