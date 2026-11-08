@@ -1,0 +1,10 @@
+/* Focused reading layout: title, date, body, then public reactions. */
+html body.article-page .article-wrap{width:min(800px,calc(100% - 36px));padding:38px 0 60px}
+html body.article-page .article-title{font-size:clamp(30px,4.4vw,48px);line-height:1.45;margin:0 0 14px;letter-spacing:.015em}
+html body.article-page .article-meta{display:block;margin:0 0 28px;font-size:14px;color:#77816e}
+html body.article-page .article-meta time{font-size:14px;font-weight:400;padding:0;background:none;border:0}
+html body.article-page .article-body{font-size:18px;line-height:1.95}
+html body.article-page .article-body h2{font-size:27px;line-height:1.5}
+html body.article-page .article-body h3{font-size:23px;line-height:1.5}
+html body.article-page .article-tags,html body.article-page .article-people{display:none!important}
+@media(max-width:600px){html body.article-page .article-wrap{padding-top:28px}html body.article-page .article-body{font-size:17px}}
