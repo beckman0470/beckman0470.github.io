@@ -1,7 +1,35 @@
 /* Six family mini-games. All progress stays in this page. */
 (()=>{
 'use strict';
+
+// Use the current homepage artwork rather than the previous portraits or emoji.
+const menuArtwork={"dad":"/assets/home-life/dad-v2.png","mom":"/assets/home-life/mom-ama-v2.png","ama":"/assets/home-life/mom-ama-v2.png","dodo":"/assets/home-life/dodo-detective.png","dragon":"/assets/home-life/dragon-dishes.png","devil":"/assets/rooms/devil.png"};
+function artworkFor(id){
+ if(['truthdetective','opposite'].includes(id))return menuArtwork.devil;
+ if(['grocery','clock','sweep'].includes(id))return menuArtwork.ama;
+ if(['tidy','dayplan','mop'].includes(id))return menuArtwork.mom;
+ if(['numberhunt','spot','trashsort','chores'].includes(id))return menuArtwork.dad;
+ if(id==='dishwash'||id==='bath')return menuArtwork.dragon;
+ if(['feed','puzzle','pet'].includes(id))return '/cat-youyou-peek.png';
+ if(['memory','count','jump','maze','codequest','doors','hide','detective'].includes(id))return '/cat-yahoo-walk.png';
+ if(id==='coop')return '/assets/home-life/kids-v2.png';
+ return menuArtwork.dodo;
+}
+
 const cards=[
+["dishwash","🧽","洗碗泡泡小幫手","海綿起泡、洗掉髒污、沖乾淨再收好。","生活任務 · 洗 3 個碗盤"],
+["trashsort","♻️","垃圾分類小隊長","幫常見垃圾找到正確的桶子。","生活任務 · 分類 6 樣"],
+["sweep","🧹","掃地小幫手","拿掃把掃紙屑，再用畚箕收好。","生活任務 · 整理 3 間房"],
+["mop","🪣","拖地亮晶晶","洗拖把、擰乾、拖掉腳印，最後收好。","生活任務 · 拖乾淨 6 格"],
+["bath","🛁","洗澡步驟小達人","準備溫水、洗泡泡、沖乾淨、擦乾換衣服。","生活任務 · 練習 6 步驟"],
+["truthdetective","👿","小惡魔真假偵探","聽小惡魔的說法，判斷哪裡對、哪裡不對。","小惡魔 · 新遊戲 · 5 題"],
+["opposite","🔄","小惡魔反口令","有時照著做、有時唱反調，先看規則再回答。","小惡魔 · 新遊戲 · 8 題"],
+["grocery","🧺","兔阿嬤買菜記憶","先記清單，再挑食物，隨時能回頭看。","兔阿嬤 · 新遊戲 · 3 張清單"],
+["clock","🕰️","兔阿嬤時間小高手","看短針和長針，練習整點、半點與一刻鐘。","兔阿嬤 · 新遊戲 · 5 題"],
+["tidy","🧹","鼠媽媽收納大作戰","幫物品找到廚房、衣櫃或書桌的家。","鼠媽媽 · 新遊戲 · 6 件物品"],
+["dayplan","🗓️","鼠媽媽行程排排看","按照時間，把一天的三件事排好。","鼠媽媽 · 新遊戲 · 5 天"],
+["numberhunt","🔢","雞爸爸猜數字","利用太大、太小的線索，找出藏起來的數字。","雞爸爸 · 新遊戲 · 30／100"],
+["spot","🔎","雞爸爸生活小偵探","比較兩張畫面，找到三處不同。","雞爸爸 · 新遊戲 · 5 組"],
 ["maze","🗺️","貓咪迷宮探險","找出通道，帶雅虎走回家。","新遊戲 · 六歲＋ · 5 關"],
 ["snackshop","🧮","點心小店長","算總價、練找零，完成五張訂單。","新遊戲 · 六歲＋ · 20／50 元"],
 ["codequest","🔐","雅虎密碼研究所","觀察數字和圖形，解開規律密碼。","新遊戲 · 六歲＋ · 5 題"],
@@ -24,8 +52,8 @@ const css=document.createElement('style');css.textContent=`
 `;document.head.append(css);
 /* The two child tabs own their game menus and the shared game stage. */
 const groups={
-dodo:['maze','snackshop','codequest','storytiles','phonetic','post','memory','count','jump','rhythm'],
-dragon:['feed','doors','puzzle','detective','coop','chores']
+dodo:["truthdetective","opposite","grocery","clock","tidy","dayplan","numberhunt","spot",'maze','snackshop','codequest','storytiles','phonetic','post','memory','count','jump','rhythm'],
+dragon:["dishwash","trashsort","sweep","mop","bath",'feed','doors','puzzle','detective','coop','chores']
 };
 const areaNames={dodo:'鼠姊姊學習樂園',dragon:'龍弟弟快樂天地'};
 const areas={};
@@ -56,18 +84,18 @@ const area=areas[key];area.menu.hidden=true;area.classic.hidden=true;if(area.vid
 area.host.append(panel);panel.hidden=false;panel.replaceChildren();
 const head=el('div','mg-top'),title=el('h2','',cards.find(x=>x[0]===id)[2]);title.tabIndex=-1;
 head.append(title,btn('← 回到'+areaNames[key],'secondary',leave));
-const stage=el('div','mg-stage');panel.append(head,stage);panel.scrollIntoView({block:'start'});title.focus({preventScroll:true});return stage;
+const stage=el('div','mg-stage');stage.dataset.gameId=id;panel.append(head,stage);panel.scrollIntoView({block:'start'});title.focus({preventScroll:true});return stage;
 }
 function status(stage){const e=el('div','mg-status','');e.setAttribute('role','status');e.setAttribute('aria-live','polite');stage.append(e);return e;}
 function configs(stage,choices,current,fn){const row=el('div','mg-config');choices.forEach(([v,t])=>{const b=btn(t,'pill',()=>fn(v));b.setAttribute('aria-pressed',String(v===current));row.append(b);});stage.append(row);}
 function menuCard(area,id,icon,name,desc,tag,action){
 const b=btn('','mg-card',()=>{lastLauncher=b;action();});b.dataset.gameId=id;
-b.innerHTML='<span class="mg-icon" aria-hidden="true">'+icon+'</span><strong>'+name+'</strong><small>'+desc+'</small><span class="mg-tag">'+tag+'</span>';
+b.innerHTML='<img class="mg-card-art" src="'+artworkFor(id)+'" alt="" aria-hidden="true" loading="lazy"><strong>'+name+'</strong><small>'+desc+'</small><span class="mg-tag">'+tag+'</span>';
 area.grid.append(b);return b;
 }
 function openClassic(key,kind){
 resetActivities();stopVideo();const area=areas[key];active='classic-'+kind;activeArea=key;
-area.menu.hidden=true;area.classic.hidden=false;if(area.video)area.video.hidden=true;
+area.menu.hidden=true;area.classic.hidden=false;area.classic.dataset.activity=kind;if(area.video)area.video.hidden=true;
 const selector=key==='dodo'?'[data-learn="'+kind+'"]':'[data-toddler="'+kind+'"]';
 const control=area.classic.querySelector(selector);if(control){control.click();control.focus({preventScroll:true});}
 area.classic.scrollIntoView({block:'start'});
@@ -98,7 +126,7 @@ const menuStyle=document.createElement('style');menuStyle.textContent=`
 .mg-card{width:100%;min-height:180px}.mg-card strong{line-height:1.5}.mg-panel{scroll-margin-top:20px}
 @media(max-width:760px){.mg-grid{grid-template-columns:1fr;gap:16px}.mg-card{padding:22px;min-height:160px}.mg-card strong{font-size:23px}.mg-card small{font-size:18px;line-height:1.8}.mg-tag,.mg-tip,.mg-counter,.mg-track-text{font-size:17px;line-height:1.8}.mg-card .mg-icon{float:right;margin-left:12px;font-size:38px}.mg-stage .question,.mg-stage>p:not(.mg-counter):not(.mg-tip){font-size:20px;line-height:1.8}.mg-status{font-size:20px}.mg-choice{min-height:80px}.mg-top>.secondary{font-size:20px;min-height:52px}}
 `;document.head.append(menuStyle);
-function open(id){({feed,memory,count,jump,phonetic,post,doors,puzzle,detective,rhythm,coop,chores,maze,snackshop,codequest,storytiles}[id])();}
+function open(id){({feed,memory,count,jump,phonetic,post,doors,puzzle,detective,rhythm,coop,chores,maze,snackshop,codequest,storytiles,truthdetective,opposite,grocery,clock,tidy,dayplan,numberhunt,spot,dishwash,trashsort,sweep,mop,bath}[id])();}
 function feed(){
 const stage=shell('feed');stage.append(el('p','question','右右肚子餓了，餵牠 5 口點心吧。'));
 let n=0;const pet=btn('','mg-pet');pet.setAttribute('aria-label','摸摸右右的肚子');const picture=catImage('youyou','peek');pet.append(picture);stage.append(pet);
@@ -357,6 +385,203 @@ const newButtons=freshIds.map(id=>areas.dodo.grid.querySelector('[data-game-id="
 newButtons.forEach(b=>b.classList.add('sp-new'));areas.dodo.grid.prepend(...newButtons);
 const newNote=el('p','sp-new-note','✨ 六歲＋新挑戰在最前面！探索迷宮、當小店長、解密碼、排故事，每款都有多關和提示，不用趕時間。');
 areas.dodo.menu.querySelector('.mg-menu-heading').after(newNote);
+
+
+/* Family hosts: eight new untimed games for ages six and up. */
+const familyHosts={
+devil:{name:'小惡魔',image:menuArtwork.devil},
+ama:{name:'兔阿嬤',icon:'🧺',image:'/assets/home-life/mom-ama-v2.png'},
+mom:{name:'鼠媽媽',icon:'🌷',image:'/assets/home-life/mom-ama-v2.png'},
+dad:{name:'雞爸爸',icon:'👓',image:'/assets/home-life/dad-v2.png'}
+};
+const familyGameHost={truthdetective:'devil',opposite:'devil',grocery:'ama',clock:'ama',tidy:'mom',dayplan:'mom',numberhunt:'dad',spot:'dad'};
+function familyStage(id){
+const stage=shell(id),host=familyHosts[familyGameHost[id]],banner=el('div','fg-host');
+if(host.image){const picture=el('img','fg-avatar');picture.src=host.image;picture.alt=host.name;banner.append(picture);}
+else banner.append(el('span','fg-devil',host.icon));
+banner.append(el('p','',host.name+'陪你玩 · 不限時，慢慢想也很棒。'));stage.append(banner);return stage;
+}
+const familyStyle=el('style');familyStyle.textContent=`
+.fg-host{display:flex;align-items:center;justify-content:center;gap:16px;margin:0 0 20px}.fg-host p{font-size:19px;line-height:1.8}.fg-avatar{width:66px;height:78px;object-fit:cover;object-position:top;border-radius:16px;display:block}.fg-devil{font-size:48px}.mg-card>.fg-avatar{float:right;margin:0 0 10px 12px}.fg-filter{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 22px}.fg-filter .pill[aria-pressed=true]{background:#426b54;color:white}.fg-claim{max-width:620px;margin:20px auto;padding:24px;background:#fff5df;border:1px solid #ead5af;border-radius:20px;font-size:25px;line-height:1.8}.fg-hero-word{font-size:38px;font-weight:800;color:#426b54;margin:18px}.fg-grocery{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;padding:20px;background:#fff9e8;border:2px dashed #d8c59b;border-radius:20px;margin:20px auto;max-width:620px}.fg-grocery-item{font-size:22px;padding:10px}.fg-list-buttons{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:20px auto;max-width:650px}.fg-list-buttons button{font-size:20px;line-height:1.7;padding:14px 8px;min-height:74px;border:2px solid #d7e1ca;border-radius:16px;background:#fff;color:#3c5334}.fg-list-buttons button[aria-pressed=true]{background:#e2efd4;border-color:#708e59}.fg-clock{display:block;width:min(100%,300px);height:auto;margin:20px auto}.fg-clock text{font:700 17px system-ui;fill:#384d37}.fg-clock .fg-hour{stroke:#426b54;stroke-width:7;stroke-linecap:round}.fg-clock .fg-minute{stroke:#94642f;stroke-width:4;stroke-linecap:round}.fg-room{min-width:120px;min-height:95px;line-height:1.6}.fg-timeline{display:flex;gap:10px;flex-wrap:wrap;max-width:620px;margin:20px auto;justify-content:center}.fg-slot{font-size:20px;padding:16px;background:#eaf0df;border:1px dashed #b8cba4;border-radius:14px;flex:1;min-width:135px}.fg-number-input{font:inherit;font-size:28px;width:150px;max-width:100%;padding:12px;border:2px solid #a9be94;border-radius:14px;text-align:center}.fg-number-range{font-size:30px;font-weight:800;color:#426b54;padding:20px}.fg-scenes{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:740px;margin:20px auto}.fg-scene{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.fg-scene-cell{min-height:68px;aspect-ratio:1;font-size:34px;border:2px solid #d9e0ca;border-radius:14px;display:grid;place-items:center;background:white;padding:5px;color:#35472f}.fg-scene-cell.found{background:#e1efd3;border-color:#719655}.fg-scene-cell.hinted{outline:4px solid #e4ae46;outline-offset:1px}.fg-clue-note{font-size:20px;line-height:1.8;margin:18px auto;max-width:620px}
+@media(max-width:560px){.fg-list-buttons{grid-template-columns:repeat(2,minmax(0,1fr))}.fg-scenes{grid-template-columns:1fr;gap:14px}.fg-scene{max-width:320px;margin:auto}.fg-scene-cell{min-height:62px;font-size:32px}.fg-claim{font-size:23px;padding:20px}.fg-hero-word{font-size:34px}.fg-filter .pill{flex:1 1 auto}.fg-avatar{width:60px;height:72px}}
+`;document.head.append(familyStyle);
+const truthBank=[
+{claim:'2 ＋ 2 ＋ 2 等於 6。',answer:true,reason:'三個 2 相加：2 ＋ 2 ＋ 2 ＝ 6。'},
+{claim:'一星期有八天。',answer:false,reason:'一星期有七天，不是八天。'},
+{claim:'9 比 12 大。',answer:false,reason:'9 比 12 小，數字可以放在數線上比較。'},
+{claim:'三角形有三條邊。',answer:true,reason:'三角形的三條邊連成一圈。'},
+{claim:'10 元買了 6 元的東西，應找回 4 元。',answer:true,reason:'10 − 6 ＝ 4。'},
+{claim:'每個月都剛好有 30 天。',answer:false,reason:'月份的天數不同，有的 30 天、有的 31 天，二月也不同。'},
+{claim:'兩個 5 元，和一個 10 元一樣多。',answer:true,reason:'5 ＋ 5 ＝ 10，總金額一樣。'},
+{claim:'正方形有五個角。',answer:false,reason:'正方形有四個角。'},
+{claim:'半小時就是 30 分鐘。',answer:true,reason:'一小時 60 分鐘，一半是 30 分鐘。'},
+{claim:'1、3、5、7 都是雙數。',answer:false,reason:'它們都是單數；2、4、6、8 才是雙數。'},
+{claim:'18 是兩個 9 相加。',answer:true,reason:'9 ＋ 9 ＝ 18。'},
+{claim:'12 減掉 5，還有 8。',answer:false,reason:'12 − 5 ＝ 7。'}
+];
+function truthdetective(){
+const stage=familyStage('truthdetective'),deck=shuffle(truthBank).slice(0,5);let round=0;const body=el('div');stage.append(body);const feedback=status(stage),next=btn('下一個說法 →','primary',()=>{round++;render();});stage.append(next);
+function render(){body.replaceChildren();feedback.textContent='';next.hidden=true;if(round>=5){body.append(el('h3','','五個說法都看懂了！你是清醒的小偵探 👿 ⭐'),btn('再查一組說法 ↻','primary',truthdetective));return;}
+const item=deck[round];let done=false;body.append(el('p','sp-progress','第 '+(round+1)+' / 5 題'),el('p','question','小惡魔的這句話，對不對？覺得對就按圈，覺得不對就按叉。'),el('p','fg-claim','「'+item.claim+'」'));const row=el('div','mg-choices');[[true,'○'],[false,'×']].forEach(([value,label])=>{const b=btn(label,'mg-choice kg-boolean',()=>{if(done)return;if(value!==item.answer){feedback.textContent='再想一想，可以數一數、算一算。';return;}done=true;b.classList.add('correct');row.querySelectorAll('button').forEach(x=>x.disabled=true);feedback.textContent='看懂了！'+item.reason;sound();next.hidden=false;next.textContent=round===4?'領取偵探星星 ⭐':'下一個說法 →';});row.append(b);});body.append(row);
+}render();
+}
+const oppositePairs=[['大','小'],['高','低'],['長','短'],['快','慢'],['上','下'],['左','右'],['多','少'],['開','關']];
+function opposite(mode='reverse'){
+const stage=familyStage('opposite');configs(stage,[['reverse','先練習：唱反調'],['mixed','挑戰：規則會換']],mode,v=>opposite(v));let round=0;const body=el('div');stage.append(body);const feedback=status(stage),next=btn('下一個口令 →','primary',()=>{round++;render();});stage.append(next);
+function render(){body.replaceChildren();feedback.textContent='';next.hidden=true;if(round>=8){body.append(el('h3','','八個口令都完成！你有先看清楚規則 👿 ⭐'),btn('再挑戰一回 ↻','primary',()=>opposite(mode)));return;}
+const pair=oppositePairs[round],reverse=mode==='reverse'||round%2===0,from=Math.random()<.5?0:1,word=pair[from],answer=pair[reverse?1-from:from];let done=false;
+body.append(el('p','sp-progress','第 '+(round+1)+' / 8 個口令'),el('p','fg-claim',reverse?'👿 這次唱反調：請按「相反的字」。':'👿 這次照著做：請按「一樣的字」。'),el('div','fg-hero-word',word));const row=el('div','mg-choices');shuffle(pair).forEach(value=>{const b=btn(value,'mg-choice',()=>{if(done)return;if(value!==answer){feedback.textContent=reverse?'這一題要找相反的字，再看一下規則。':'這一題要找一樣的字，再看一下規則。';return;}done=true;b.classList.add('correct');row.querySelectorAll('button').forEach(x=>x.disabled=true);feedback.textContent='規則看清楚了！'+word+(reverse?'的相反是':'和這個字一樣：')+answer+'。';sound();next.hidden=false;next.textContent=round===7?'看看口令成果 ⭐':'下一個口令 →';});row.append(b);});body.append(row);
+}render();
+}
+const groceryItems=[['🍎','蘋果'],['🥕','紅蘿蔔'],['🍌','香蕉'],['🥚','雞蛋'],['🥛','牛奶'],['🍞','麵包'],['🥦','花椰菜'],['🍅','番茄'],['🍇','葡萄'],['🌽','玉米'],['🥔','馬鈴薯'],['🍊','橘子']];
+function grocery(level=3){
+const stage=familyStage('grocery');configs(stage,[[3,'記住 3 樣'],[5,'挑戰 5 樣']],level,v=>grocery(v));let round=0,list=[],options=[],picked=new Set(),phase='list';const body=el('div');stage.append(body);const feedback=status(stage),tools=el('div','sp-toolbar');
+const ready=btn('我記好了，去買菜！','primary',()=>{phase='choose';feedback.textContent='';render();}),again=btn('再看一次清單','secondary',()=>{phase='list';feedback.textContent='';render();}),check=btn('買好了，核對清單','primary',()=>{if(picked.size!==level){feedback.textContent='這次要買 '+level+' 樣，再數一數。';return;}if([...picked].some(i=>!list.includes(i))){feedback.textContent='有一樣還可以換一換；按「再看一次清單」也沒關係。';return;}phase='done';sound();render();feedback.textContent='清單上的都買齊了！兔阿嬤謝謝你。';}),next=btn('下一張清單 →','primary',()=>{round++;fresh();});tools.append(ready,again,check,next);stage.append(tools);
+function fresh(){if(round>=3){body.replaceChildren(el('h3','','三張清單完成！記憶小幫手 ⭐'),btn('再陪兔阿嬤買一次 ↻','primary',()=>grocery(level)));tools.hidden=true;feedback.textContent='';return;}list=shuffle(Array.from({length:groceryItems.length},(_,i)=>i)).slice(0,level);options=shuffle([...list,...shuffle(Array.from({length:groceryItems.length},(_,i)=>i).filter(i=>!list.includes(i))).slice(0,4)]);picked=new Set();phase='list';feedback.textContent='';render();}
+function render(){body.replaceChildren();body.append(el('p','sp-progress','第 '+(round+1)+' / 3 張清單'),el('p','question',phase==='list'?'慢慢看清楚，不用趕時間。記好了再按出發。':'選出清單上的 '+level+' 樣食物。'));
+ready.hidden=phase!=='list';again.hidden=phase!=='choose';check.hidden=phase!=='choose';next.hidden=phase!=='done';next.textContent=round===2?'看看採買成果 ⭐':'下一張清單 →';
+if(phase==='list'){const row=el('div','fg-grocery');list.forEach(i=>row.append(el('span','fg-grocery-item',groceryItems[i].join(' '))));body.append(row);}
+else{body.append(el('p','mg-counter','已選 '+picked.size+' / '+level+' 樣'));const row=el('div','fg-list-buttons');options.forEach(i=>{const b=btn(groceryItems[i].join(' '),'',()=>{if(phase!=='choose')return;if(picked.has(i))picked.delete(i);else if(picked.size<level)picked.add(i);else{feedback.textContent='先取消一樣，再換成想選的食物。';return;}feedback.textContent='';render();});b.setAttribute('aria-pressed',String(picked.has(i)));b.disabled=phase==='done';row.append(b);});body.append(row);}
+}fresh();
+}
+function clockLabel(hour,minute){return hour+'：'+String(minute).padStart(2,'0');}
+function clockFace(hour,minute){
+const point=(angle,length)=>({x:150+Math.sin(angle*Math.PI/180)*length,y:150-Math.cos(angle*Math.PI/180)*length});
+let svg='<svg class="fg-clock" viewBox="0 0 300 300" role="img" aria-label="時鐘：短針在 '+hour+' 點附近，長針指向 '+(minute/5||12)+'"><circle cx="150" cy="150" r="142" fill="#fffdf3" stroke="#b4c59e" stroke-width="5"/>';
+for(let number=1;number<=12;number++){const p=point(number*30,116);svg+='<text x="'+p.x+'" y="'+(p.y+6)+'" text-anchor="middle">'+number+'</text>';}
+const h=point((hour%12)*30+minute*.5,67),m=point(minute*6,98);
+svg+='<line class="fg-hour" x1="150" y1="150" x2="'+h.x+'" y2="'+h.y+'"/><line class="fg-minute" x1="150" y1="150" x2="'+m.x+'" y2="'+m.y+'"/><circle cx="150" cy="150" r="7" fill="#426b54"/></svg>';return svg;
+}
+function clock(level='half'){
+const stage=familyStage('clock');configs(stage,[['half','整點與半點'],['quarter','加入一刻鐘']],level,v=>clock(v));let round=0;const body=el('div');stage.append(body);const feedback=status(stage),next=btn('下一個時鐘 →','primary',()=>{round++;render();});stage.append(next);
+function render(){body.replaceChildren();feedback.textContent='';next.hidden=true;if(round>=5){body.append(el('h3','','五個時鐘都看懂了！時間小高手 ⭐'),btn('再看一回時鐘 ↻','primary',()=>clock(level)));return;}
+let done=false;const hour=1+Math.floor(Math.random()*12),mins=level==='half'?[0,30]:[0,15,30,45],minute=mins[Math.floor(Math.random()*mins.length)],answer=clockLabel(hour,minute);
+body.append(el('p','sp-progress','第 '+(round+1)+' / 5 個時鐘'),el('p','question','現在是幾點幾分？'));const face=el('div');face.innerHTML=clockFace(hour,minute);body.append(face,el('p','mg-tip','綠色短針看小時，棕色長針看分鐘；長針走一格數字是 5 分鐘。'));
+const choices=new Set([answer,clockLabel(hour%12+1,minute)]);for(const m of [0,15,30,45]){choices.add(clockLabel(hour,m));if(choices.size>=4)break;}
+const row=el('div','mg-choices');shuffle([...choices]).forEach(value=>{const b=btn(value,'mg-choice',()=>{if(done)return;if(value!==answer){feedback.textContent='先看短針接近幾點，再看長針指到哪一個數字。';return;}done=true;b.classList.add('correct');row.querySelectorAll('button').forEach(x=>x.disabled=true);feedback.textContent='對了，是 '+hour+' 點 '+minute+' 分。';sound();next.hidden=false;next.textContent=round===4?'領取時間星星 ⭐':'下一個時鐘 →';});row.append(b);});body.append(row);
+}render();
+}
+const tidyItems=[{icon:'🥣',name:'飯碗',room:'廚房'},{icon:'🥄',name:'湯匙',room:'廚房'},{icon:'🍳',name:'平底鍋',room:'廚房'},{icon:'🧦',name:'襪子',room:'衣櫃'},{icon:'🧥',name:'外套',room:'衣櫃'},{icon:'👕',name:'上衣',room:'衣櫃'},{icon:'✏️',name:'鉛筆',room:'書桌'},{icon:'📚',name:'故事書',room:'書桌'},{icon:'📏',name:'尺',room:'書桌'}];
+function tidy(){
+const stage=familyStage('tidy'),deck=shuffle(tidyItems).slice(0,6);let round=0;const body=el('div');stage.append(body);const feedback=status(stage),next=btn('收下一樣 →','primary',()=>{round++;render();});stage.append(next);
+function render(){body.replaceChildren();feedback.textContent='';next.hidden=true;if(round>=6){body.append(el('h3','','六樣東西都回家了！鼠媽媽的小幫手 ⭐'),btn('再整理一回 ↻','primary',tidy));return;}
+let done=false;const item=deck[round];body.append(el('p','sp-progress','第 '+(round+1)+' / 6 樣物品'),el('p','question','幫這樣東西找個合適的家。'),el('div','fg-hero-word',item.icon+' '+item.name));const row=el('div','mg-choices');[['🍳','廚房'],['👕','衣櫃'],['📖','書桌']].forEach(([icon,room])=>{const b=btn(icon+' '+room,'mg-choice fg-room',()=>{if(done)return;if(room!==item.room){feedback.textContent='想一想，這樣東西平常在哪裡使用或收納？';return;}done=true;b.classList.add('correct');row.querySelectorAll('button').forEach(x=>x.disabled=true);feedback.textContent=item.name+'收進'+room+'，整齊又好找！';sound();next.hidden=false;next.textContent=round===5?'看看整理成果 ⭐':'收下一樣 →';});row.append(b);});body.append(row);
+}render();
+}
+const planSets=[
+[{time:8,label:'吃早餐'},{time:10,label:'去公園'},{time:12,label:'吃午餐'}],
+[{time:9,label:'畫一張圖'},{time:11,label:'收好畫筆'},{time:14,label:'讀故事書'}],
+[{time:7,label:'起床'},{time:8,label:'到學校'},{time:16,label:'回到家'}],
+[{time:14,label:'整理玩具'},{time:16,label:'吃點心'},{time:18,label:'吃晚餐'}],
+[{time:15,label:'陪貓咪玩'},{time:18,label:'吃晚餐'},{time:20,label:'準備睡覺'}]
+];
+function dayplan(){location.href='/rooms.html?room=mom#mom-plan';}
+function numberhunt(max=30){
+const stage=familyStage('numberhunt');configs(stage,[[30,'1 到 30'],[100,'挑戰到 100']],max,v=>numberhunt(v));
+let target=1+Math.floor(Math.random()*max),low=1,high=max,tries=0,done=false;stage.append(el('p','question','雞爸爸藏了一個整數。每猜一次，都會告訴你太大還是太小。'));
+const range=el('p','fg-number-range'),count=el('p','mg-counter','已猜 0 次，沒有次數限制。'),row=el('div','sp-toolbar'),input=el('input','fg-number-input');
+input.type='number';input.inputMode='numeric';input.min='1';input.max=String(max);input.step='1';input.setAttribute('aria-label','輸入猜的整數');const label=el('label','','我猜是：');label.append(input);row.append(label);
+const submit=btn('猜猜看','primary',guess);row.append(submit);stage.append(range,count,row);const feedback=status(stage),again=btn('再猜一個數字 ↻','primary',()=>numberhunt(max));again.hidden=true;stage.append(again,el('p','mg-tip','小提示：先猜範圍中間的數字，可以更快縮小範圍。'));
+function draw(){range.textContent='目前範圍：'+low+' ～ '+high;input.min=String(low);input.max=String(high);}
+function guess(){if(done)return;const text=String(input.value??'').trim(),value=Number(text);if(!/^\d+$/.test(text)||!Number.isInteger(value)||value<low||value>high){feedback.textContent='請輸入 '+low+' 到 '+high+' 之間的整數。';return;}
+tries++;count.textContent='已猜 '+tries+' 次，沒有次數限制。';if(value===target){done=true;feedback.textContent='猜中了！雞爸爸藏的是 '+target+'，你用了 '+tries+' 次 ⭐';submit.disabled=true;input.disabled=true;again.hidden=false;sound();}
+else{if(value<target){low=value+1;feedback.textContent='太小了！再找一個大一點的數字。';}else{high=value-1;feedback.textContent='太大了！再找一個小一點的數字。';}input.value='';draw();input.focus();}
+}
+input.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();guess();}});draw();
+}
+const sceneItems=[['🍎','紅蘋果'],['🍏','青蘋果'],['🍌','香蕉'],['🍊','橘子'],['🚗','小汽車'],['🚕','計程車'],['⚽','足球'],['🏀','籃球'],['🧸','小熊'],['📚','書本'],['🌷','鬱金香'],['🌻','向日葵'],['⭐','星星'],['🌙','月亮'],['🎈','氣球'],['🎁','禮物']];
+function spot(){
+const stage=familyStage('spot');let round=0,differences=[],found=new Set(),left=[],right=[];const body=el('div');stage.append(body);const feedback=status(stage),tools=el('div','sp-toolbar'),hint=btn('提示一個位置','secondary',()=>{const index=differences.find(i=>!found.has(i));if(index!==undefined){const cell=body.querySelectorAll('.fg-right-cell')[index];cell.classList.add('hinted');feedback.textContent='看看黃色外框這一格，和左圖有什麼不同？';}}),next=btn('下一組生活畫面 →','primary',()=>{round++;fresh();});tools.append(hint,next);stage.append(tools);
+function fresh(){body.replaceChildren();feedback.textContent='';next.hidden=true;if(round>=5){hint.hidden=true;body.append(el('h3','','五組不同都找到了！生活小偵探 ⭐'),btn('再觀察一回 ↻','primary',spot));return;}
+left=shuffle(sceneItems).slice(0,9);right=left.slice();differences=shuffle([0,1,2,3,4,5,6,7,8]).slice(0,3);found=new Set();
+differences.forEach(i=>{right[i]=shuffle(sceneItems.filter(item=>item[1]!==left[i][1]))[0];});
+body.append(el('p','sp-progress','第 '+(round+1)+' / 5 組 · 找到 0 / 3 處不同'),el('p','question','比較兩張圖，點右圖不一樣的三個格子。'));const scenes=el('div','fg-scenes');
+for(let side=0;side<2;side++){const box=el('div');box.append(el('h3','',side?'右圖：點不同的地方':'左圖：參考圖'));const grid=el('div','fg-scene');(side?right:left).forEach((item,index)=>{const cell=side?btn(item[0],'fg-scene-cell fg-right-cell',()=>choose(index,cell)):el('div','fg-scene-cell',item[0]);cell.setAttribute('aria-label',(side?'右圖':'左圖')+'第 '+(index+1)+' 格：'+item[1]);grid.append(cell);});box.append(grid);scenes.append(box);}body.append(scenes);
+}
+function choose(index,cell){if(found.has(index))return;if(!differences.includes(index)){feedback.textContent='這一格一樣，找找其他地方。';return;}
+found.add(index);cell.classList.remove('hinted');cell.classList.add('found');cell.disabled=true;body.querySelector('.sp-progress').textContent='第 '+(round+1)+' / 5 組 · 找到 '+found.size+' / 3 處不同';feedback.textContent=found.size===3?'三處都找到了！雞爸爸佩服你的觀察力。':'找到一處了，再看看另外兩處。';sound();if(found.size===3){next.hidden=false;next.textContent=round===4?'領取觀察星星 ⭐':'下一組生活畫面 →';}
+}fresh();
+}
+const familyIds=Object.keys(familyGameHost);
+const familyCards=familyIds.map(id=>areas.dodo.grid.querySelector('[data-game-id="'+id+'"]'));
+familyCards.forEach((card,i)=>{
+const host=familyHosts[familyGameHost[familyIds[i]]];card.dataset.host=familyGameHost[familyIds[i]];card.classList.add('sp-new');
+if(host.image){const picture=el('img','fg-avatar');picture.src=host.image;picture.alt=host.name;picture.loading='lazy';card.prepend(picture);const icon=card.querySelector('.mg-icon');if(icon)icon.hidden=true;}
+});
+areas.dodo.grid.prepend(...familyCards);
+const roleFilters=el('div','fg-filter');roleFilters.setAttribute('role','group');roleFilters.setAttribute('aria-label','依角色找遊戲');
+[['all','全部遊戲'],['new','八款新遊戲'],['devil','👿 小惡魔'],['ama','兔阿嬤'],['mom','鼠媽媽'],['dad','雞爸爸']].forEach(([key,label])=>{
+const b=btn(label,'pill',()=>{roleFilters.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));areas.dodo.grid.querySelectorAll('.mg-card').forEach(card=>{card.hidden=key!=='all'&&(key==='new'?!familyIds.includes(card.dataset.gameId):card.dataset.host!==key);});});
+b.setAttribute('aria-pressed',String(key==='all'));roleFilters.append(b);
+});
+areas.dodo.menu.querySelector('.mg-menu-heading').after(roleFilters);
+
+
+/* Hands-on home routines. All actions are pretend play, without timers. */
+const homeRoutineHosts={dishwash:'mom',trashsort:'dad',sweep:'ama',mop:'mom',bath:'dad'};
+function homeRoutineStage(id){
+const stage=shell(id),host=familyHosts[homeRoutineHosts[id]],banner=el('div','fg-host'),portrait=el('img','fg-avatar');portrait.src=host.image;portrait.alt=host.name;banner.append(portrait,el('p','',host.name+'陪你練習生活小任務。'));stage.append(banner);return stage;
+}
+const hcStyle=el('style');hcStyle.textContent=`
+.hc-board{max-width:500px;margin:22px auto;padding:18px;border-radius:24px;background:#eef1df}.hc-floor{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.hc-tile{aspect-ratio:1;min-height:70px;border:2px solid #d4dfc4;border-radius:16px;background:#fffdf5;font-size:34px;color:#405734}.hc-tile:disabled{opacity:1}.hc-plate{background:#fffef9;border:12px solid #d9e4d1;border-radius:50%;padding:30px;max-width:320px;aspect-ratio:1;margin:20px auto;display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap}.hc-stain{border:0;border-radius:50%;width:64px;height:64px;min-height:64px;background:#d7aa74;font-size:26px;color:#493d26}.hc-stain:disabled{background:#eaf3e2;opacity:1}.hc-tools{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin:20px 0}.hc-duck{text-align:center;font-size:76px;margin:20px}.hc-note{font-size:17px;color:#6c7763;line-height:1.8}
+@media(max-width:760px){.hc-board{padding:12px}.hc-tile{min-height:64px}.hc-plate{padding:20px;border-width:9px}.hc-note{font-size:17px}}
+`;document.head.append(hcStyle);
+function dishwash(){
+const stage=homeRoutineStage('dishwash');let round=0,phase='soap',cleaned=new Set();const body=el('div');stage.append(body);const feedback=status(stage);
+function draw(){body.replaceChildren();if(round>=3){body.append(el('h3','','三個碗盤都乾淨了！謝謝小幫手 🫧 ⭐'),btn('再洗一回 ↻','primary',dishwash));return;}
+body.append(el('p','sp-progress','第 '+(round+1)+' / 3 個碗盤'),el('p','question',{soap:'先讓海綿沾水、加一點清潔泡泡。',scrub:'用海綿點一點，把三個髒污洗掉。',rinse:'髒污都洗掉了，接著把泡泡沖乾淨。',dry:'碗盤沖乾淨了，擦乾後收好。'}[phase]));
+const plate=el('div','hc-plate');for(let i=0;i<3;i++){const b=btn(cleaned.has(i)?'✨':'●','hc-stain',()=>{if(phase!=='scrub'||cleaned.has(i))return;cleaned.add(i);if(cleaned.size===3)phase='rinse';feedback.textContent=cleaned.size===3?'三個髒污都洗掉了！':'洗掉一個髒污了。';draw();});b.disabled=phase!=='scrub'||cleaned.has(i);b.setAttribute('aria-label','洗第 '+(i+1)+' 個髒污');plate.append(b);}body.append(plate);
+if(phase==='soap')body.append(btn('🧽 海綿加泡泡','primary',()=>{phase='scrub';feedback.textContent='海綿準備好了！';draw();}));
+if(phase==='rinse')body.append(btn('🚰 沖掉泡泡','primary',()=>{phase='dry';feedback.textContent='泡泡沖乾淨了。';draw();}));
+if(phase==='dry')body.append(btn('🧻 擦乾，放回碗架','primary',()=>{sound();round++;phase='soap';cleaned=new Set();feedback.textContent=round<3?'收好了，換下一個碗盤。':'';draw();}));
+}draw();
+}
+const trashItems=[{icon:'🧴',name:'乾淨的空塑膠瓶',bin:'資源回收'},{icon:'📦',name:'乾淨的紙箱',bin:'資源回收'},{icon:'📰',name:'舊報紙',bin:'資源回收'},{icon:'🍌',name:'香蕉皮',bin:'廚餘'},{icon:'🥬',name:'摘下來的菜葉',bin:'廚餘'},{icon:'🧻',name:'用過的衛生紙',bin:'一般垃圾'},{icon:'🍬',name:'糖果包裝紙',bin:'一般垃圾'}];
+function trashsort(){
+const stage=homeRoutineStage('trashsort'),deck=shuffle(trashItems).slice(0,6);let round=0;const body=el('div');stage.append(body);const feedback=status(stage),next=btn('下一樣 →','primary',()=>{round++;draw();});stage.append(next,el('p','hc-note','遊戲練習常見分類，實際丟垃圾時請跟著家人和當地回收規定。'));
+function draw(){body.replaceChildren();feedback.textContent='';next.hidden=true;if(round>=6){body.append(el('h3','','六樣都分好了！垃圾也找到自己的家 ♻️ ⭐'),btn('再分類一次 ↻','primary',trashsort));return;}
+const item=deck[round];let done=false;body.append(el('p','sp-progress','第 '+(round+1)+' / 6 樣'),el('p','question','這樣東西應該放進哪一個桶子？'),el('div','fg-hero-word',item.icon+' '+item.name));const row=el('div','mg-choices');[['♻️','資源回收'],['🥬','廚餘'],['🗑️','一般垃圾']].forEach(([icon,bin])=>{const b=btn(icon+' '+bin,'mg-choice fg-room',()=>{if(done)return;if(bin!==item.bin){feedback.textContent='再想一想，這樣東西能回收、是食物殘渣，還是一般垃圾？';return;}done=true;b.classList.add('correct');feedback.textContent='分類正確！'+item.name+'放進'+bin+'。';sound();next.hidden=false;next.textContent=round===5?'看看分類成果 ⭐':'下一樣 →';});row.append(b);});body.append(row);
+}draw();
+}
+function sweep(){
+const stage=homeRoutineStage('sweep');let room=0,tool=false,swept=new Set(),dirt=[];const body=el('div');stage.append(body);const feedback=status(stage);
+function fresh(){tool=false;swept=new Set();dirt=shuffle([0,1,2,3,4,5,6,7,8]).slice(0,6);feedback.textContent='';draw();}
+function draw(){body.replaceChildren();if(room>=3){body.append(el('h3','','三間房都掃乾淨了！兔阿嬤給你拍拍手 🧹 ⭐'),btn('再掃一回 ↻','primary',sweep));return;}
+body.append(el('p','sp-progress','第 '+(room+1)+' / 3 間房 · 已掃 '+swept.size+' / 6 處'),el('p','question',!tool?'先拿起掃把，再點地上的紙屑。':swept.size<6?'把六處紙屑掃成一堆，最後再用畚箕收起來。':'紙屑掃成一堆了，拿畚箕收進垃圾桶。'));if(!tool)body.append(btn('🧹 拿起掃把','primary',()=>{tool=true;draw();}));
+const board=el('div','hc-board'),grid=el('div','hc-floor');for(let i=0;i<9;i++){const dirty=dirt.includes(i)&&!swept.has(i),b=btn(dirty?'🧻':'✨','hc-tile',()=>{if(!tool||!dirty)return;swept.add(i);feedback.textContent='掃好這一格了。';draw();});b.disabled=!tool||!dirty;b.setAttribute('aria-label',dirty?'掃第 '+(i+1)+' 格的紙屑':'第 '+(i+1)+' 格已乾淨');grid.append(b);}board.append(grid);body.append(board);
+if(swept.size===6)body.append(btn('🧹 用畚箕收好紙屑','primary',()=>{room++;sound();fresh();}));
+}fresh();
+}
+function mop(){
+const stage=homeRoutineStage('mop');let water='dry',charge=0,cleaned=new Set();const dirty=[0,1,3,5,7,8],body=el('div');stage.append(body);const feedback=status(stage);
+function draw(){body.replaceChildren();if(water==='done'){body.append(el('h3','','地板乾淨、拖把也收好了！鼠媽媽謝謝你 🪣 ⭐'),btn('再拖一回 ↻','primary',mop));return;}
+let prompt=cleaned.size===6?'地板乾淨了，把拖把洗好、擰乾、掛起來。':water==='dry'||water==='dirty'?'先把拖把放進水桶洗一洗。':water==='wet'?'拖把濕濕的，先擰乾一點再拖地。':'點髒污拖乾淨，拖把髒了就回去洗一洗。';
+body.append(el('p','sp-progress','已拖乾淨 '+cleaned.size+' / 6 格'),el('p','question',prompt));const tools=el('div','hc-tools');
+if(cleaned.size===6)tools.append(btn('🪣 洗淨、擰乾、掛好拖把','primary',()=>{water='done';sound();draw();}));
+else if(water==='dry'||water==='dirty')tools.append(btn('🪣 洗洗拖把','primary',()=>{water='wet';feedback.textContent='拖把洗乾淨了，接著擰乾。';draw();}));
+else if(water==='wet')tools.append(btn('🤲 把拖把擰乾','primary',()=>{water='ready';charge=3;feedback.textContent='準備好了，可以拖地囉。';draw();}));body.append(tools);
+const board=el('div','hc-board'),grid=el('div','hc-floor');for(let i=0;i<9;i++){const stain=dirty.includes(i)&&!cleaned.has(i),b=btn(stain?'🐾':'✨','hc-tile',()=>{if(water!=='ready'||!stain)return;cleaned.add(i);charge--;if(!charge)water='dirty';feedback.textContent=charge?'這一格乾淨了！':'拖把髒了，回水桶洗一洗。';draw();});b.disabled=water!=='ready'||!stain;b.setAttribute('aria-label',stain?'拖第 '+(i+1)+' 格的腳印':'第 '+(i+1)+' 格已乾淨');grid.append(b);}board.append(grid);body.append(board);
+}draw();
+}
+const bathSteps=[['🪣','請大人準備溫水','開始洗澡前，先請大人幫忙準備溫水。'],['🚿','用溫水沖濕','溫水準備好了，先把身體沖濕。'],['🫧','搓出洗澡泡泡','沖濕了，接著搓出泡泡洗一洗。'],['🚿','沖掉身上泡泡','洗好泡泡了，接著把泡泡沖乾淨。'],['🧻','用毛巾擦乾','身體沖乾淨了，接著用毛巾擦乾。'],['👕','換上乾淨衣服','擦乾了，最後換上乾淨的衣服。']];
+function bath(){
+const stage=homeRoutineStage('bath');let step=0,washed=new Set();const body=el('div');stage.append(body);const feedback=status(stage);
+function draw(){body.replaceChildren();if(step>=bathSteps.length){body.append(el('h3','','洗澡順序練習完成！乾乾淨淨好舒服 🦆 ⭐'),btn('再練習一次 ↻','primary',bath));return;}
+body.append(el('p','sp-progress','第 '+(step+1)+' / 6 個洗澡步驟'),el('p','question',step===2&&washed.size?'點一點泡泡，把手臂、肚肚、腿和背都洗一洗。':bathSteps[step][2]),el('div','hc-duck','🛁 🦆'));
+if(step===2&&washed.size){bubbles();return;}
+const choices=shuffle([step,...shuffle([0,1,2,3,4,5].filter(i=>i!==step)).slice(0,2)]),row=el('div','mg-choices');choices.forEach(i=>{const data=bathSteps[i],b=btn(data[0]+' '+data[1],'mg-choice',()=>{if(i!==step){feedback.textContent='先聽聽現在的步驟，慢慢照順序來。';return;}if(step===2){washed.add('start');draw();}else{step++;feedback.textContent='這一步完成了！';sound();draw();}});row.append(b);});body.append(row);
+}
+function bubbles(){const row=el('div','fg-list-buttons');['手臂','肚肚','腿','背'].forEach(part=>{const b=btn(washed.has(part)?'✨ '+part:'🫧 洗洗'+part,'',()=>{washed.add(part);if(washed.size===5){step++;feedback.textContent='都洗好了，接著沖掉泡泡。';sound();}draw();});b.disabled=washed.has(part);row.append(b);});body.append(row);}
+draw();
+}
+const homeIds=Object.keys(homeRoutineHosts),homeCards=homeIds.map(id=>areas.dragon.grid.querySelector('[data-game-id="'+id+'"]'));
+homeCards.forEach(card=>card.classList.add('sp-new'));areas.dragon.grid.prepend(...homeCards);
+
+// The living room fur links directly to the existing broom-and-grid activity.
+const linkedGame=new URLSearchParams(location.search).get('game');
+if(cards.some(card=>card[0]===linkedGame)&&linkedGame!=='dayplan'){
+ document.addEventListener('DOMContentLoaded',()=>open(linkedGame),{once:true});
+}
 
 
 })();
