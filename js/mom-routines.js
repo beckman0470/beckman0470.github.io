@@ -60,6 +60,7 @@
    board.append(b);
   });
  }
+ document.addEventListener('cdj-routine-flow',event=>{const next=event.detail?.flow;if(Object.prototype.hasOwnProperty.call(flows,next)){stop();flow=next;render();}});
  render();
  const initial=new URLSearchParams(location.search);if(Object.prototype.hasOwnProperty.call(flows,initial.get('flow'))) {flow=initial.get('flow');render();}
  document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();else if(state.date!==date()){restore();render();}});

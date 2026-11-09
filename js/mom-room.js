@@ -11,7 +11,7 @@ function jump(id){const e=document.getElementById(id);if(!e)return;e.tabIndex=-1
 const entries=[['mom-plan','鼠媽媽排行程'],['mom-life','鼠姊姊的一天'],['mom-needs','弟弟怎麼了？']];
 const blocks=entries.map(([id,label])=>{const section=make('section','mom-room-block');section.id=id;section.setAttribute('aria-label',label);section.append(make('h2','',label));return section;});
 host.prepend(...blocks);const [plan,life,needs]=blocks;life.classList.add('dr-life');
-const routines=make('script');routines.src='/js/mom-routines.js?v=20261108-mom12';document.body.append(routines);
+const routines=make('script');routines.src='/js/mom-routines.js?v=20261109-room14';document.body.append(routines);
 const people=[...stage.querySelectorAll('.greeting-character:not(.greeting-cat)')];
 ['mom-vanity-12','dodo-wake-12','dragon-needs-12'].forEach((name,i)=>{const p=people[i];p.classList.add('mom-task-character');p.querySelector('.greeting-sprite').style.backgroundImage='url('+base+name+'.webp)';p.setAttribute('aria-label',entries[i][1]+'：前往小遊戲');p.onclick=()=>jump(entries[i][0]);});
 const quick=make('nav','mom-quick-links');quick.setAttribute('aria-label','鼠窩生活小遊戲');entries.forEach(([id,label])=>{const a=make('a','',label);a.href='#'+id;a.onclick=e=>{e.preventDefault();jump(id);};quick.append(a);});stage.append(quick);
