@@ -19,7 +19,7 @@ const calendar=btn('',()=>jump('mom-plan'));calendar.className='mom-calendar-hit
 const dodoLabel=make('a','mom-dodo-label','鼠姊姊的一天');dodoLabel.href='#mom-life';dodoLabel.onclick=e=>{e.preventDefault();jump('mom-life');};stage.append(dodoLabel);
 stage.querySelector('.greeting-caption').textContent='';
 // Positions use the room image coordinates, including its crop on small screens.
-const anchors=[[165,565,285],[440,540,195],[770,265,155]];
+const anchors=[[165,565,285],[440,540,240],[770,265,145]];
 function align(){const r=scene.getBoundingClientRect(),p=stage.getBoundingClientRect(),z=Math.max(r.width/960,r.height/640),pos=getComputedStyle(scene).backgroundPosition.split(' '),dx=r.left-p.left+(r.width-960*z)*parseFloat(pos[0])/100,dy=r.top-p.top+(r.height-640*z)*parseFloat(pos[1]||pos[0])/100;
 anchors.forEach(([x,y,size],i)=>{people[i].style.setProperty('left',dx+x*z+'px','important');people[i].style.setProperty('bottom',p.height-dy-y*z+'px','important');people[i].style.setProperty('--frame',size*z+'px','important');});
 Object.assign(calendar.style,{left:dx+215*z+'px',top:dy+235*z+'px',width:65*z+'px',height:72*z+'px'});

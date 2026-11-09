@@ -48,7 +48,8 @@ if(typeof module!=='undefined'&&module.exports){module.exports={topics,rampSpeed
 const menu=document.getElementById('topic-menu'),stage=document.getElementById('topic-stage'),play=document.getElementById('topic-play'),title=document.getElementById('game-title'),feedback=document.getElementById('feedback'),read=document.getElementById('read'),voiceToggle=document.getElementById('voice-toggle');
 let disposeAction=null;
 function clearAction(){if(disposeAction){disposeAction();disposeAction=null;}}
-let current=null,round=0,deck=[],solved=false,autoVoice=true,spoken='',language='zh-TW',generation=0;
+let current=null,round=0,deck=[],solved=false,autoVoice=!new URLSearchParams(location.search).has('roomembed'),spoken='',language='zh-TW',generation=0;
+if(!autoVoice){voiceToggle.textContent='自動念題：關';voiceToggle.setAttribute('aria-pressed','false');}
 const supported='speechSynthesis'in window&&'SpeechSynthesisUtterance'in window;
 function stop(){generation++;if(supported)speechSynthesis.cancel();}
 function say(text,lang='zh-TW'){if(!supported)return;stop();const u=new SpeechSynthesisUtterance(text);u.lang=lang;u.rate=.85;const voices=speechSynthesis.getVoices().filter(v=>lang==='en-US'?v.lang.startsWith('en'):v.lang.toLowerCase().startsWith('zh'));u.voice=voices.find(v=>/yunjhe|yunxi|kangkang|male/i.test(v.name))||voices.find(v=>v.lang===lang)||voices[0]||null;speechSynthesis.speak(u);}
@@ -70,9 +71,3 @@ function start(id){clearAction();stop();current=topics.find(t=>t.id===id);if(!cu
 Object.entries(hosts).forEach(([id,host])=>{const group=document.createElement('section');group.className='host';group.dataset.host=id;const h=document.createElement('h2');h.textContent=host.name+'帶你玩';const img=document.createElement('img');img.src={"dad":"/assets/home-life/dad-v2.png","mom":"/assets/home-life/mom-ama-v2.png","ama":"/assets/home-life/mom-ama-v2.png"}[id];img.alt=host.name;img.className='host-photo';group.append(img,h);topics.filter(t=>t.host===id).forEach(t=>{const b=button(t.title+'\n'+t.desc,()=>start(t.id),'topic');b.dataset.topic=t.id;b.setAttribute('aria-pressed','false');group.append(b);});menu.append(group);});
 read.addEventListener('click',()=>say(spoken,language));voiceToggle.addEventListener('click',()=>{autoVoice=!autoVoice;voiceToggle.setAttribute('aria-pressed',String(autoVoice));voiceToggle.textContent=autoVoice?'自動念題：開':'自動念題：關';if(!autoVoice)stop();});document.getElementById('stop').addEventListener('click',stop);document.getElementById('back-topics').addEventListener('click',()=>{clearAction();stop();stage.hidden=true;menu.querySelector('[data-topic="'+current.id+'"]').focus();});if(!supported){read.disabled=true;voiceToggle.disabled=true;document.getElementById('voice-note').textContent='此瀏覽器沒有語音功能，可以看題目一起玩。英文也能顯示單字。';}window.addEventListener('pagehide',()=>{clearAction();stop();});document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();});
 })();
-
-
-
-
-
-

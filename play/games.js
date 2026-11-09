@@ -579,10 +579,9 @@ homeCards.forEach(card=>card.classList.add('sp-new'));areas.dragon.grid.prepend(
 
 // The living room fur links directly to the existing broom-and-grid activity.
 const linkedGame=new URLSearchParams(location.search).get('game');
-if(['sweep','chores','feed'].includes(linkedGame)){
+if(cards.some(card=>card[0]===linkedGame)&&linkedGame!=='dayplan'){
  document.addEventListener('DOMContentLoaded',()=>open(linkedGame),{once:true});
 }
 
 
 })();
-
