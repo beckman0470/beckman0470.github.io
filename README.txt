@@ -1,8 +1,8 @@
-BABYMONSTER DRIP 逐字時間碼驅動版（不含虛構時間）
+雞窩尺寸與廚房互動熱區更新｜2026-11-15
 
-上傳 babymonster-ep01.html 至 GitHub 根目錄（覆蓋舊檔）。
-本包保留網站既有 /assets/bm-approved/drip-stage.jpg 及 /assets/dodo/dodo-song.m4a 的引用，不重複包含私人的錄音。
+更新：僅覆蓋 GitHub 根目錄 css/room-activities.css。
+雞窩：960px 最大寬度，16:9 桌機比例，置中，標題仍在左上角。
+廚房：保留現有兩個 HTML 連結，只隱藏額外 emoji 圖示，點咖啡杯與料理鍋的位置依然能跳到既有功能。
+浴室：保留既有設定、不再調整。
 
-重要：需從 LyricTimestamps 取得 55 句逐字 JSON，或轉為內建的 {lines:[{start,end,words:[{start,end,text}]}]} 格式。匯入並驗證後，自動教學按鈕才會啟用。
-未取得真正時間碼前，程式不會使用估算秒數假裝同步。
-播放器的逐句暫停已依 JSON 起訖時間實作，但尚未進行真實逐字時碼與瀏覽器整合驗收。
+上傳 GitHub 後使用 Ctrl+Shift+R 強制重新整理。這是程式碼檢查後的修補包，尚未經線上瀏覽器視覺／點擊測試。
