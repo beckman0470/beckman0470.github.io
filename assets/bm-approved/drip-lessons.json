@@ -1,0 +1,2775 @@
+{
+  "source": "user-supplied lyrics and translations, with contextual teaching corrections",
+  "timing": "not-aligned",
+  "lines": [
+    {
+      "number": 1,
+      "english": "When I dress, I don’t think so much",
+      "chinese": "當我穿衣服時，我不會想太多。",
+      "romanization": "",
+      "cards": [
+        {
+          "word": "When",
+          "meaning": "當……的時候",
+          "emoji": "⏰",
+          "language": "en-US"
+        },
+        {
+          "word": "I",
+          "meaning": "我",
+          "emoji": "🙋",
+          "language": "en-US"
+        },
+        {
+          "word": "dress,",
+          "meaning": "穿衣服／打扮",
+          "emoji": "👗",
+          "language": "en-US"
+        },
+        {
+          "word": "I",
+          "meaning": "我",
+          "emoji": "🙋",
+          "language": "en-US"
+        },
+        {
+          "word": "don’t",
+          "meaning": "不",
+          "emoji": "🚫",
+          "language": "en-US"
+        },
+        {
+          "word": "think",
+          "meaning": "想／思考",
+          "emoji": "💭",
+          "language": "en-US"
+        },
+        {
+          "word": "so",
+          "meaning": "這麼",
+          "emoji": "✨",
+          "language": "en-US"
+        },
+        {
+          "word": "much",
+          "meaning": "很多",
+          "emoji": "📚",
+          "language": "en-US"
+        }
+      ],
+      "member": null
+    },
+    {
+      "number": 2,
+      "english": "I could be the G.O.A.T, I don’t need too much",
+      "chinese": "我可能是最厲害的人，我不需要太多。",
+      "romanization": "",
+      "cards": [
+        {
+          "word": "I",
+          "meaning": "我",
+          "emoji": "🙋",
+          "language": "en-US"
+        },
+        {
+          "word": "could",
+          "meaning": "可能／可以",
+          "emoji": "🌟",
+          "language": "en-US"
+        },
+        {
+          "word": "be",
+          "meaning": "是／成為",
+          "emoji": "🪄",
+          "language": "en-US"
+        },
+        {
+          "word": "the",
+          "meaning": "這個／那個（特定的）",
+          "emoji": "🔎",
+          "language": "en-US"
+        },
+        {
+          "word": "G.O.A.T,",
+          "meaning": "史上最棒的人",
+          "emoji": "🏆",
+          "language": "en-US"
+        },
+        {
+          "word": "I",
+          "meaning": "我",
+          "emoji": "🙋",
+          "language": "en-US"
+        },
+        {
+          "word": "don’t",
+          "meaning": "不",
+          "emoji": "🚫",
+          "language": "en-US"
+        },
+        {
+          "word": "need",
+          "meaning": "需要",
+          "emoji": "🎒",
+          "language": "en-US"
+        },
+        {
+          "word": "too",
+          "meaning": "太／過於",
+          "emoji": "📏",
+          "language": "en-US"
+        },
+        {
+          "word": "much",
+          "meaning": "很多",
+          "emoji": "📚",
+          "language": "en-US"
+        }
+      ],
+      "member": null
+    },
+    {
+      "number": 3,
+      "english": "I’ma set a goal, I’ma eat that lunch",
+      "chinese": "我要設定一個目標，我要吃那頓午餐。",
+      "romanization": "",
+      "cards": [
+        {
+          "word": "I’ma",
+          "meaning": "我要／我將",
+          "emoji": "🙋",
+          "language": "en-US"
+        },
+        {
+          "word": "set",
+          "meaning": "設定",
+          "emoji": "🎯",
+          "language": "en-US"
+        },
+        {
+          "word": "a",
+          "meaning": "一個",
+          "emoji": "1️⃣",
+          "language": "en-US"
+        },
+        {
+          "word": "goal,",
+          "meaning": "目標",
+          "emoji": "🎯",
+          "language": "en-US"
+        },
+        {
+          "word": "I’ma",
+          "meaning": "我要／我將",
+          "emoji": "🙋",
+          "language": "en-US"
+        },
+        {
+          "word": "eat",
+          "meaning": "吃",
+          "emoji": "🍽️",
+          "language": "en-US"
+        },
+        {
+          "word": "that",
+          "meaning": "那個",
+          "emoji": "👉",
+          "language": "en-US"
+        },
+        {
+          "word": "lunch",
+          "meaning": "午餐",
+          "emoji": "🍱",
+          "language": "en-US"
+        }
+      ],
+      "member": null
+    },
+    {
+      "number": 4,
+      "english": "Baby, so cold, get that ice cream truck",
+      "chinese": "寶貝，這麼冷，叫來那輛冰淇淋車。",
+      "romanization": "",
+      "cards": [
+        {
+          "word": "Baby,",
+          "meaning": "寶貝",
+          "emoji": "💗",
+          "language": "en-US"
+        },
+        {
+          "word": "so",
+          "meaning": "這麼",
+          "emoji": "✨",
+          "language": "en-US"
+        },
+        {
+          "word": "cold,",
+          "meaning": "冷的",
+          "emoji": "🧊",
+          "language": "en-US"
+        },
+        {
+          "word": "get",
+          "meaning": "取得／叫來",
+          "emoji": "🫴",
+          "language": "en-US"
+        },
+        {
+          "word": "that",
+          "meaning": "那個",
+          "emoji": "👉",
+          "language": "en-US"
+        },
+        {
+          "word": "ice",
+          "meaning": "冰",
+          "emoji": "🧊",
+          "language": "en-US"
+        },
+        {
+          "word": "cream",
+          "meaning": "奶油／冰淇淋",
+          "emoji": "🍦",
+          "language": "en-US"
+        },
+        {
+          "word": "truck",
+          "meaning": "卡車",
+          "emoji": "🚚",
+          "language": "en-US"
+        }
+      ],
+      "member": null
+    },
+    {
+      "number": 5,
+      "english": "Uh, 찌릿찌릿 끼리끼리 놀아볼까",
+      "chinese": "嗯，刺激刺激，同一群人一起玩玩看吧。",
+      "romanization": "Uh, jjirich-jjirich kkiri-kkiri nol-a-bolkka",
+      "cards": [
+        {
+          "word": "Uh,",
+          "meaning": "嗯（語氣詞）",
+          "emoji": "🎵",
+          "language": "en-US"
+        },
+        {
+          "word": "찌릿찌릿",
+          "meaning": "酥麻、刺激的感覺",
+          "emoji": "⚡",
+          "language": "ko-KR"
+        },
+        {
+          "word": "끼리끼리",
+          "meaning": "同一群人一起",
+          "emoji": "👭",
+          "language": "ko-KR"
+        },
+        {
+          "word": "놀아볼까",
+          "meaning": "要不要一起玩玩看？",
+          "emoji": "🎮",
+          "language": "ko-KR"
+        }
+      ],
+      "member": null
+    },
+    {
+      "number": 6,
+      "english": "Kitty, kitty, yeah, we gonna run this town",
+      "chinese": "小貓咪、小貓咪，對，我們要掌控這座城市。",
+      "romanization": "",
+      "cards": [
+        {
+          "word": "Kitty,",
+          "meaning": "小貓咪",
+          "emoji": "🐱",
+          "language": "en-US"
+        },
+        {
+          "word": "kitty,",
+          "meaning": "小貓咪",
+          "emoji": "🐱",
+          "language": "en-US"
+        },
+        {
+          "word": "yeah,",
+          "meaning": "是的／耶",
+          "emoji": "👍",
+          "language": "en-US"
+        },
+        {
+          "word": "we",
+          "meaning": "我們",
+          "emoji": "👭",
+          "language": "en-US"
+        },
+        {
+          "word": "gonna",
+          "meaning": "將要",
+          "emoji": "➡️",
+          "language": "en-US"
+        },
+        {
+          "word": "run",
+          "meaning": "經營／掌控",
+          "emoji": "🏙️",
+          "language": "en-US"
+        },
+        {
+          "word": "this",
+          "meaning": "這個",
+          "emoji": "👇",
+          "language": "en-US"
+        },
+        {
+          "word": "town",
+          "meaning": "城鎮",
+          "emoji": "🏙️",
+          "language": "en-US"
+        }
+      ],
+      "member": null
+    },
+    {
+      "number": 7,
+      "english": "Hittin’ me up ’cause I got what they like",
+      "chinese": "他們來找我，因為我有他們喜歡的東西。",
+      "romanization": "",
+      "cards": [
+        {
+          "word": "Hittin’",
+          "meaning": "來找／聯絡",
+          "emoji": "📞",
+          "language": "en-US"
+        },
+        {
+          "word": "me",
+          "meaning": "我",
+          "emoji": "🙋",
+          "language": "en-US"
+        },
+        {
+          "word": "up",
+          "meaning": "向上／（片語用）",
+          "emoji": "⬆️",
+          "language": "en-US"
+        },
+        {
+          "word": "’cause",
+          "meaning": "因為",
+          "emoji": "💡",
+          "language": "en-US"
+        },
+        {
+          "word": "I",
+          "meaning": "我",
+          "emoji": "🙋",
+          "language": "en-US"
+        },
+        {
+          "word": "got",
+          "meaning": "擁有／得到",
+          "emoji": "🎁",
+          "language": "en-US"
+        },
+        {
+          "word": "what",
+          "meaning": "什麼／……的東西",
+          "emoji": "❓",
+          "language": "en-US"
+        },
+        {
+          "word": "they",
+          "meaning": "他們",
+          "emoji": "👥",
+          "language": "en-US"
+        },
+        {
+          "word": "like",
+          "meaning": "喜歡",
+          "emoji": "❤️",
+          "language": "en-US"
+        }
+      ],
+      "member": null
+    },
+    {
+      "number": 8,
+      "english": "Baby, got no chance, better hit that dance",
+      "chinese": "寶貝，沒有機會了，最好開始跳舞。",
+      "romanization": "",
+      "cards": [
+        {
+          "word": "Baby,",
+          "meaning": "寶貝",
+          "emoji": "💗",
+          "language": "en-US"
+        },
+        {
+          "word": "got",
+          "meaning": "擁有／得到",
+          "emoji": "🎁",
+          "language": "en-US"
+        },
+        {
+          "word": "no",
+          "meaning": "沒有",
+          "emoji": "🚫",
+          "language": "en-US"
+        },
+        {
+          "word": "chance,",
+          "meaning": "機會",
+          "emoji": "🍀",
+          "language": "en-US"
+        },
+        {
+          "word": "better",
+          "meaning": "最好",
+          "emoji": "⭐",
+          "language": "en-US"
+        },
+        {
+          "word": "hit",
+          "meaning": "開始／做出",
+          "emoji": "💃",
+          "language": "en-US"
+        },
+        {
+          "word": "that",
+          "meaning": "那個",
+          "emoji": "👉",
+          "language": "en-US"
+        },
+        {
+          "word": "dance",
+          "meaning": "跳舞",
+          "emoji": "💃",
+          "language": "en-US"
+        }
+      ],
+      "member": null
+    },
+    {
+      "number": 9,
+      "english": "Mmm, na-na-na, I’ll be there, 고민하지 마",
+      "chinese": "嗯，啦啦啦，我會在那裡，別擔心。",
+      "romanization": "Mmm, na-na-na, I’ll be there, go-min-ha-ji ma",
+      "cards": [
+        {
+          "word": "Mmm,",
+          "meaning": "嗯（哼唱）",
+          "emoji": "🎶",
+          "language": "en-US"
+        },
+        {
+          "word": "na-na-na,",
+          "meaning": "啦啦啦（哼唱）",
+          "emoji": "🎶",
+          "language": "en-US"
+        },
+        {
+          "word": "I’ll",
+          "meaning": "我會",
+          "emoji": "🙋",
+          "language": "en-US"
+        },
+        {
+          "word": "be",
+          "meaning": "是／成為",
+          "emoji": "🪄",
+          "language": "en-US"
+        },
+        {
+          "word": "there,",
+          "meaning": "那裡",
+          "emoji": "📍",
+          "language": "en-US"
+        },
+        {
+          "word": "고민하지",
+          "meaning": "不要煩惱（與 마 連用）",
+          "emoji": "💭",
+          "language": "ko-KR"
+        },
+        {
+          "word": "마",
+          "meaning": "不要（否定命令）",
+          "emoji": "🚫",
+          "language": "ko-KR"
+        }
+      ],
+      "member": null
+    },
+    {
+      "number": 10,
+      "english": "Uh, na-na-na, I’ll be there, 망설이지 마",
+      "chinese": "嗯，啦啦啦，我會在那裡，別猶豫。",
+      "romanization": "Uh, na-na-na, I’ll be there, mang-seol-i-ji ma",
+      "cards": [
+        {
+          "word": "Uh,",
+          "meaning": "嗯（語氣詞）",
+          "emoji": "🎵",
+          "language": "en-US"
+        },
+        {
+          "word": "na-na-na,",
+          "meaning": "啦啦啦（哼唱）",
+          "emoji": "🎶",
+          "language": "en-US"
+        },
+        {
+          "word": "I’ll",
+          "meaning": "我會",
+          "emoji": "🙋",
+          "language": "en-US"
+        },
+        {
+          "word": "be",
+          "meaning": "是／成為",
+          "emoji": "🪄",
+          "language": "en-US"
+        },
+        {
+          "word": "there,",
+          "meaning": "那裡",
+          "emoji": "📍",
+          "language": "en-US"
+        },
+        {
+          "word": "망설이지",
+          "meaning": "不要猶豫（與 마 連用）",
+          "emoji": "🤔",
+          "language": "ko-KR"
+        },
+        {
+          "word": "마",
+          "meaning": "不要（否定命令）",
+          "emoji": "🚫",
+          "language": "ko-KR"
+        }
+      ],
+      "member": null
+    },
+    {
+      "number": 11,
+      "english": "But you don’t know ’bout me",
+      "chinese": "但你不了解我。",
+      "romanization": "",
+      "cards": [
+        {
+          "word": "But",
+          "meaning": "但是",
+          "emoji": "↪️",
+          "language": "en-US"
+        },
+        {
+          "word": "you",
+          "meaning": "你",
+          "emoji": "🫵",
+          "language": "en-US"
+        },
+        {
+          "word": "don’t",
+          "meaning": "不",
+          "emoji": "🚫",
+          "language": "en-US"
+        },
+        {
+          "word": "know",
+          "meaning": "知道／了解",
+          "emoji": "🧠",
+          "language": "en-US"
+        },
+        {
+          "word": "’bout",
+          "meaning": "關於",
+          "emoji": "📖",
+          "language": "en-US"
+        },
+        {
+          "word": "me",
+          "meaning": "我",
+          "emoji": "🙋",
+          "language": "en-US"
+        }
+      ],
+      "member": null
+    },
+    {
+      "number": 12,
+      "english": "Yeah, yeah, you gon’ know ’bout me, boy",
+      "chinese": "對，對，男孩，你會了解我。",
+      "romanization": "",
+      "cards": [
+        {
+          "word": "Yeah,",
+          "meaning": "是的／耶",
+          "emoji": "👍",
+          "language": "en-US"
+        },
+        {
+          "word": "yeah,",
+          "meaning": "是的／耶",
+          "emoji": "👍",
+          "language": "en-US"
+        },
+        {
+          "word": "you",
+          "meaning": "你",
+          "emoji": "🫵",
+          "language": "en-US"
+        },
+        {
+          "word": "gon’",
+          "meaning": "將要",
+          "emoji": "➡️",
+          "language": "en-US"
+        },
+        {
+          "word": "know",
+          "meaning": "知道／了解",
+          "emoji": "🧠",
+          "language": "en-US"
+        },
+        {
+          "word": "’bout",
+          "meaning": "關於",
+          "emoji": "📖",
+          "language": "en-US"
+        },
+        {
+          "word": "me,",
+          "meaning": "我",
+          "emoji": "🙋",
+          "language": "en-US"
+        },
+        {
+          "word": "boy",
+          "meaning": "男孩",
+          "emoji": "👦",
+          "language": "en-US"
+        }
+      ],
+      "member": null
+    },
+    {
+      "number": 13,
+      "english": "아름다운 별들이 빛나는 밤이야",
+      "chinese": "這是美麗星星閃耀的夜晚。",
+      "romanization": "a-reum-da-un byeol-deu-ri bi-chi-na-neun bam-i-ya",
+      "cards": [
+        {
+          "word": "아름다운",
+          "meaning": "美麗的",
+          "emoji": "🌸",
+          "language": "ko-KR"
+        },
+        {
+          "word": "별들이",
+          "meaning": "星星們",
+          "emoji": "⭐",
+          "language": "ko-KR"
+        },
+        {
+          "word": "빛나는",
+          "meaning": "閃耀的",
+          "emoji": "✨",
+          "language": "ko-KR"
+        },
+        {
+          "word": "밤이야",
+          "meaning": "是夜晚",
+          "emoji": "🌙",
+          "language": "ko-KR"
+        }
+      ],
+      "member": null
+    },
+    {
+      "number": 14,
+      "english": "Mmm, what you say? (What you say?)",
+      "chinese": "嗯，你說什麼？（你說什麼？）",
+      "romanization": "",
+      "cards": [
+        {
+          "word": "Mmm,",
+          "meaning": "嗯（哼唱）",
+          "emoji": "🎶",
+          "language": "en-US"
+        },
+        {
+          "word": "what",
+          "meaning": "什麼／……的東西",
+          "emoji": "❓",
+          "language": "en-US"
+        },
+        {
+          "word": "you",
+          "meaning": "你",
+          "emoji": "🫵",
+          "language": "en-US"
+        },
+        {
+          "word": "say?",
+          "meaning": "說",
+          "emoji": "💬",
+          "language": "en-US"
+        },
+        {
+          "word": "(What",
+          "meaning": "什麼／……的東西",
+          "emoji": "❓",
+          "language": "en-US"
+        },
+        {
+          "word": "you",
+          "meaning": "你",
+          "emoji": "🫵",
+          "language": "en-US"
+        },
+        {
+          "word": "say?)",
+          "meaning": "說",
+          "emoji": "💬",
+          "language": "en-US"
+        }
+      ],
+      "member": null
+    },
+    {
+      "number": 15,
+      "english": "끝없는 가치, you know it’s all me",
+      "chinese": "無盡的價值，你知道這全是我。",
+      "romanization": "kkeut-eom-neun ga-chi, you know it’s all me",
+      "cards": [
+        {
+          "word": "끝없는",
+          "meaning": "無止境的",
+          "emoji": "♾️",
+          "language": "ko-KR"
+        },
+        {
+          "word": "가치,",
+          "meaning": "價值",
+          "emoji": "💎",
+          "language": "ko-KR"
+        },
+        {
+          "word": "you",
+          "meaning": "你",
+          "emoji": "🫵",
+          "language": "en-US"
+        },
+        {
+          "word": "know",
+          "meaning": "知道／了解",
+          "emoji": "🧠",
+          "language": "en-US"
+        },
+        {
+          "word": "it’s",
+          "meaning": "它是／這是",
+          "emoji": "✨",
+          "language": "en-US"
+        },
+        {
+          "word": "all",
+          "meaning": "全部",
+          "emoji": "🌈",
+          "language": "en-US"
+        },
+        {
+          "word": "me",
+          "meaning": "我",
+          "emoji": "🙋",
+          "language": "en-US"
+        }
+      ],
+      "member": null
+    },
+    {
+      "number": 16,
+      "english": "Got that, ooh, what you say? (What you say?)",
+      "chinese": "懂了，喔，你說什麼？（你說什麼？）",
+      "romanization": "",
+      "cards": [
+        {
+          "word": "Got",
+          "meaning": "擁有／得到",
+          "emoji": "🎁",
+          "language": "en-US"
+        },
+        {
+          "word": "that,",
+          "meaning": "那個",
+          "emoji": "👉",
+          "language": "en-US"
+        },
+        {
+          "word": "ooh,",
+          "meaning": "喔（語氣詞）",
+          "emoji": "🎤",
+          "language": "en-US"
+        },
+        {
+          "word": "what",
+          "meaning": "什麼／……的東西",
+          "emoji": "❓",
+          "language": "en-US"
+        },
+        {
+          "word": "you",
+          "meaning": "你",
+          "emoji": "🫵",
+          "language": "en-US"
+        },
+        {
+          "word": "say?",
+          "meaning": "說",
+          "emoji": "💬",
+          "language": "en-US"
+        },
+        {
+          "word": "(What",
+          "meaning": "什麼／……的東西",
+          "emoji": "❓",
+          "language": "en-US"
+        },
+        {
+          "word": "you",
+          "meaning": "你",
+          "emoji": "🫵",
+          "language": "en-US"
+        },
+        {
+          "word": "say?)",
+          "meaning": "說",
+          "emoji": "💬",
+          "language": "en-US"
+        }
+      ],
+      "member": null
+    },
+    {
+      "number": 17,
+      "english": "Are you ready? Set, turn on the lights",
+      "chinese": "準備好了嗎？就位，打開燈光。",
+      "romanization": "",
+      "cards": [
+        {
+          "word": "Are",
+          "meaning": "是",
+          "emoji": "🟰",
+          "language": "en-US"
+        },
+        {
+          "word": "you",
+          "meaning": "你",
+          "emoji": "🫵",
+          "language": "en-US"
+        },
+        {
+          "word": "ready?",
+          "meaning": "準備好",
+          "emoji": "✅",
+          "language": "en-US"
+        },
+        {
+          "word": "Set,",
+          "meaning": "設定",
+          "emoji": "🎯",
+          "language": "en-US"
+        },
+        {
+          "word": "turn",
+          "meaning": "轉動／轉換",
+          "emoji": "↪️",
+          "language": "en-US"
+        },
+        {
+          "word": "on",
+          "meaning": "打開（片語用）",
+          "emoji": "💡",
+          "language": "en-US"
+        },
+        {
+          "word": "the",
+          "meaning": "這個／那個（特定的）",
+          "emoji": "🔎",
+          "language": "en-US"
+        },
+        {
+          "word": "lights",
+          "meaning": "燈光",
+          "emoji": "💡",
+          "language": "en-US"
+        }
+      ],
+      "member": null
+    },
+    {
+      "number": 18,
+      "english": "Baby, got passion, ambition, 난 보란 듯이",
+      "chinese": "寶貝，我有熱情、有抱負，我要讓大家看見。",
+      "romanization": "Baby, got passion, ambition, nan bo-ran deu-i",
+      "cards": [
+        {
+          "word": "Baby,",
+          "meaning": "寶貝",
+          "emoji": "💗",
+          "language": "en-US"
+        },
+        {
+          "word": "got",
+          "meaning": "擁有／得到",
+          "emoji": "🎁",
+          "language": "en-US"
+        },
+        {
+          "word": "passion,",
+          "meaning": "熱情",
+          "emoji": "🔥",
+          "language": "en-US"
+        },
+        {
+          "word": "ambition,",
+          "meaning": "抱負／企圖心",
+          "emoji": "🚀",
+          "language": "en-US"
+        },
+        {
+          "word": "난",
+          "meaning": "我（나는 的縮寫）",
+          "emoji": "🙋",
+          "language": "ko-KR"
+        },
+        {
+          "word": "보란",
+          "meaning": "給人看／讓人瞧",
+          "emoji": "👀",
+          "language": "ko-KR"
+        },
+        {
+          "word": "듯이",
+          "meaning": "彷彿……一樣",
+          "emoji": "🌟",
+          "language": "ko-KR"
+        }
+      ],
+      "member": null
+    },
+    {
+      "number": 19,
+      "english": "Look at that, 온몸으로 느끼는 내 몸짓",
+      "chinese": "看那個，用全身感受我的動作。",
+      "romanization": "Look at that, on-mo-meo-ro neukki-neun nae mom-jit",
+      "cards": [
+        {
+          "word": "Look",
+          "meaning": "看",
+          "emoji": "👀",
+          "language": "en-US"
+        },
+        {
+          "word": "at",
+          "meaning": "在／朝向",
+          "emoji": "👉",
+          "language": "en-US"
+        },
+        {
+          "word": "that,",
+          "meaning": "那個",
+          "emoji": "👉",
+          "language": "en-US"
+        },
+        {
+          "word": "온몸으로",
+          "meaning": "用全身",
+          "emoji": "🕺",
+          "language": "ko-KR"
+        },
+        {
+          "word": "느끼는",
+          "meaning": "感受到的",
+          "emoji": "💗",
+          "language": "ko-KR"
+        },
+        {
+          "word": "내",
+          "meaning": "我的",
+          "emoji": "🙋",
+          "language": "ko-KR"
+        },
+        {
+          "word": "몸짓",
+          "meaning": "肢體動作",
+          "emoji": "💃",
+          "language": "ko-KR"
+        }
+      ],
+      "member": null
+    },
+    {
+      "number": 20,
+      "english": "Baby, got drip (Drip), drip (Drip), drip (Drip), drip",
+      "chinese": "寶貝，我很有型，有型、有型、有型。",
+      "romanization": "",
+      "cards": [
+        {
+          "word": "Baby,",
+          "meaning": "寶貝",
+          "emoji": "💗",
+          "language": "en-US"
+        },
+        {
+          "word": "got",
+          "meaning": "擁有／得到",
+          "emoji": "🎁",
+          "language": "en-US"
+        },
+        {
+          "word": "drip",
+          "meaning": "時髦的風格",
+          "emoji": "✨",
+          "language": "en-US"
+        },
+        {
+          "word": "(Drip),",
+          "meaning": "時髦的風格",
+          "emoji": "✨",
+          "language": "en-US"
+        },
+        {
+          "word": "drip",
+          "meaning": "時髦的風格",
+          "emoji": "✨",
+          "language": "en-US"
+        },
+        {
+          "word": "(Drip),",
+          "meaning": "時髦的風格",
+          "emoji": "✨",
+          "language": "en-US"
+        },
+        {
+          "word": "drip",
+          "meaning": "時髦的風格",
+          "emoji": "✨",
+          "language": "en-US"
+        },
+        {
+          "word": "(Drip),",
+          "meaning": "時髦的風格",
+          "emoji": "✨",
+          "language": "en-US"
+        },
+        {
+          "word": "drip",
+          "meaning": "時髦的風格",
+          "emoji": "✨",
+          "language": "en-US"
+        }
+      ],
+      "member": null
+    },
+    {
+      "number": 21,
+      "english": "Baby, got drip (Drip), drip (Drip), drip (Drip), drip",
+      "chinese": "寶貝，我很有型，有型、有型、有型。",
+      "romanization": "",
+      "cards": [
+        {
+          "word": "Baby,",
+          "meaning": "寶貝",
+          "emoji": "💗",
+          "language": "en-US"
+        },
+        {
+          "word": "got",
+          "meaning": "擁有／得到",
+          "emoji": "🎁",
+          "language": "en-US"
+        },
+        {
+          "word": "drip",
+          "meaning": "時髦的風格",
+          "emoji": "✨",
+          "language": "en-US"
+        },
+        {
+          "word": "(Drip),",
+          "meaning": "時髦的風格",
+          "emoji": "✨",
+          "language": "en-US"
+        },
+        {
+          "word": "drip",
+          "meaning": "時髦的風格",
+          "emoji": "✨",
+          "language": "en-US"
+        },
+        {
+          "word": "(Drip),",
+          "meaning": "時髦的風格",
+          "emoji": "✨",
+          "language": "en-US"
+        },
+        {
+          "word": "drip",
+          "meaning": "時髦的風格",
+          "emoji": "✨",
+          "language": "en-US"
+        },
+        {
+          "word": "(Drip),",
+          "meaning": "時髦的風格",
+          "emoji": "✨",
+          "language": "en-US"
+        },
+        {
+          "word": "drip",
+          "meaning": "時髦的風格",
+          "emoji": "✨",
+          "language": "en-US"
+        }
+      ],
+      "member": null
+    },
+    {
+      "number": 22,
+      "english": "Brrah, ASA, ayy",
+      "chinese": "（節奏呼喊）ASA，耶。",
+      "romanization": "",
+      "cards": [
+        {
+          "word": "Brrah,",
+          "meaning": "節奏喊聲",
+          "emoji": "🎵",
+          "language": "en-US"
+        },
+        {
+          "word": "ASA,",
+          "meaning": "ASA（成員名）",
+          "emoji": "🎤",
+          "language": "en-US"
+        },
+        {
+          "word": "ayy",
+          "meaning": "耶（語氣詞）",
+          "emoji": "🎶",
+          "language": "en-US"
+        }
+      ],
+      "member": null
+    },
+    {
+      "number": 23,
+      "english": "Let ’em out, monster, monster, monster came to conquer",
+      "chinese": "讓他們出來，怪獸、怪獸，怪獸來征服。",
+      "romanization": "",
+      "cards": [
+        {
+          "word": "Let",
+          "meaning": "讓",
+          "emoji": "👐",
+          "language": "en-US"
+        },
+        {
+          "word": "’em",
+          "meaning": "他們",
+          "emoji": "👥",
+          "language": "en-US"
+        },
+        {
+          "word": "out,",
+          "meaning": "出去",
+          "emoji": "🚪",
+          "language": "en-US"
+        },
+        {
+          "word": "monster,",
+          "meaning": "怪獸",
+          "emoji": "👾",
+          "language": "en-US"
+        },
+        {
+          "word": "monster,",
+          "meaning": "怪獸",
+          "emoji": "👾",
+          "language": "en-US"
+        },
+        {
+          "word": "monster",
+          "meaning": "怪獸",
+          "emoji": "👾",
+          "language": "en-US"
+        },
+        {
+          "word": "came",
+          "meaning": "來了",
+          "emoji": "🚶",
+          "language": "en-US"
+        },
+        {
+          "word": "to",
+          "meaning": "朝向／去",
+          "emoji": "➡️",
+          "language": "en-US"
+        },
+        {
+          "word": "conquer",
+          "meaning": "征服",
+          "emoji": "🏁",
+          "language": "en-US"
+        }
+      ],
+      "member": null
+    },
+    {
+      "number": 24,
+      "english": "Baby, holla, what’s up? (What’s up?)",
+      "chinese": "寶貝，喊一聲，怎麼了？（怎麼了？）",
+      "romanization": "",
+      "cards": [
+        {
+          "word": "Baby,",
+          "meaning": "寶貝",
+          "emoji": "💗",
+          "language": "en-US"
+        },
+        {
+          "word": "holla,",
+          "meaning": "呼喊／打招呼",
+          "emoji": "📣",
+          "language": "en-US"
+        },
+        {
+          "word": "what’s",
+          "meaning": "什麼是／怎麼樣",
+          "emoji": "❓",
+          "language": "en-US"
+        },
+        {
+          "word": "up?",
+          "meaning": "向上／（片語用）",
+          "emoji": "⬆️",
+          "language": "en-US"
+        },
+        {
+          "word": "(What’s",
+          "meaning": "什麼是／怎麼樣",
+          "emoji": "❓",
+          "language": "en-US"
+        },
+        {
+          "word": "up?)",
+          "meaning": "向上／（片語用）",
+          "emoji": "⬆️",
+          "language": "en-US"
+        }
+      ],
+      "member": null
+    },
+    {
+      "number": 25,
+      "english": "We the best, the rest confess, we blessed",
+      "chinese": "我們最棒，其他人也承認，我們很幸運。",
+      "romanization": "",
+      "cards": [
+        {
+          "word": "We",
+          "meaning": "我們",
+          "emoji": "👭",
+          "language": "en-US"
+        },
+        {
+          "word": "the",
+          "meaning": "這個／那個（特定的）",
+          "emoji": "🔎",
+          "language": "en-US"
+        },
+        {
+          "word": "best,",
+          "meaning": "最棒",
+          "emoji": "🏆",
+          "language": "en-US"
+        },
+        {
+          "word": "the",
+          "meaning": "這個／那個（特定的）",
+          "emoji": "🔎",
+          "language": "en-US"
+        },
+        {
+          "word": "rest",
+          "meaning": "其餘的人",
+          "emoji": "👥",
+          "language": "en-US"
+        },
+        {
+          "word": "confess,",
+          "meaning": "承認",
+          "emoji": "🗣️",
+          "language": "en-US"
+        },
+        {
+          "word": "we",
+          "meaning": "我們",
+          "emoji": "👭",
+          "language": "en-US"
+        },
+        {
+          "word": "blessed",
+          "meaning": "受到祝福／幸運",
+          "emoji": "🍀",
+          "language": "en-US"
+        }
+      ],
+      "member": null
+    },
+    {
+      "number": 26,
+      "english": "판을 백팔십도 바꿔 (바꿔)",
+      "chinese": "把局面轉變一百八十度（改變）。",
+      "romanization": "pan-eul baek-palship-do bakkwo (bakkwo)",
+      "cards": [
+        {
+          "word": "판을",
+          "meaning": "局面／盤面",
+          "emoji": "🎲",
+          "language": "ko-KR"
+        },
+        {
+          "word": "백팔십도",
+          "meaning": "一百八十度",
+          "emoji": "🔄",
+          "language": "ko-KR"
+        },
+        {
+          "word": "바꿔",
+          "meaning": "改變",
+          "emoji": "🔁",
+          "language": "ko-KR"
+        },
+        {
+          "word": "(바꿔)",
+          "meaning": "改變",
+          "emoji": "🔁",
+          "language": "ko-KR"
+        }
+      ],
+      "member": null
+    },
+    {
+      "number": 27,
+      "english": "Y to the G, no copy, no knock off",
+      "chinese": "Y 到 G，不複製，也不仿冒。",
+      "romanization": "",
+      "cards": [
+        {
+          "word": "Y",
+          "meaning": "字母 Y",
+          "emoji": "🔠",
+          "language": "en-US"
+        },
+        {
+          "word": "to",
+          "meaning": "朝向／去",
+          "emoji": "➡️",
+          "language": "en-US"
+        },
+        {
+          "word": "the",
+          "meaning": "這個／那個（特定的）",
+          "emoji": "🔎",
+          "language": "en-US"
+        },
+        {
+          "word": "G,",
+          "meaning": "字母 G",
+          "emoji": "🔠",
+          "language": "en-US"
+        },
+        {
+          "word": "no",
+          "meaning": "沒有",
+          "emoji": "🚫",
+          "language": "en-US"
+        },
+        {
+          "word": "copy,",
+          "meaning": "複製／模仿",
+          "emoji": "📋",
+          "language": "en-US"
+        },
+        {
+          "word": "no",
+          "meaning": "沒有",
+          "emoji": "🚫",
+          "language": "en-US"
+        },
+        {
+          "word": "knock",
+          "meaning": "敲／（仿冒片語）",
+          "emoji": "✊",
+          "language": "en-US"
+        },
+        {
+          "word": "off",
+          "meaning": "離開／（仿冒片語）",
+          "emoji": "↗️",
+          "language": "en-US"
+        }
+      ],
+      "member": null
+    },
+    {
+      "number": 28,
+      "english": "Bet on my life, this pitch I’m gon’ walk-off",
+      "chinese": "賭上我的人生，這一球我要打出再見勝利。",
+      "romanization": "",
+      "cards": [
+        {
+          "word": "Bet",
+          "meaning": "打賭／押上",
+          "emoji": "🎲",
+          "language": "en-US"
+        },
+        {
+          "word": "on",
+          "meaning": "打開（片語用）",
+          "emoji": "💡",
+          "language": "en-US"
+        },
+        {
+          "word": "my",
+          "meaning": "我的",
+          "emoji": "🙋",
+          "language": "en-US"
+        },
+        {
+          "word": "life,",
+          "meaning": "人生／生命",
+          "emoji": "🌱",
+          "language": "en-US"
+        },
+        {
+          "word": "this",
+          "meaning": "這個",
+          "emoji": "👇",
+          "language": "en-US"
+        },
+        {
+          "word": "pitch",
+          "meaning": "投球／球場",
+          "emoji": "⚾",
+          "language": "en-US"
+        },
+        {
+          "word": "I’m",
+          "meaning": "我是／我要",
+          "emoji": "🙋",
+          "language": "en-US"
+        },
+        {
+          "word": "gon’",
+          "meaning": "將要",
+          "emoji": "➡️",
+          "language": "en-US"
+        },
+        {
+          "word": "walk-off",
+          "meaning": "再見勝利（棒球）",
+          "emoji": "⚾",
+          "language": "en-US"
+        }
+      ],
+      "member": null
+    },
+    {
+      "number": 29,
+      "english": "MONSTIEZ, 꽉 잡아, hold tight",
+      "chinese": "MONSTIEZ，緊緊抓住，別放手。",
+      "romanization": "MONSTIEZ, kkwak jab-a, hold tight",
+      "cards": [
+        {
+          "word": "MONSTIEZ,",
+          "meaning": "粉絲名稱 MONSTIEZ",
+          "emoji": "💗",
+          "language": "en-US"
+        },
+        {
+          "word": "꽉",
+          "meaning": "牢牢地",
+          "emoji": "✊",
+          "language": "ko-KR"
+        },
+        {
+          "word": "잡아,",
+          "meaning": "抓住",
+          "emoji": "🤝",
+          "language": "ko-KR"
+        },
+        {
+          "word": "hold",
+          "meaning": "抓緊",
+          "emoji": "✊",
+          "language": "en-US"
+        },
+        {
+          "word": "tight",
+          "meaning": "緊緊地",
+          "emoji": "🤝",
+          "language": "en-US"
+        }
+      ],
+      "member": null
+    },
+    {
+      "number": 30,
+      "english": "끝까지 밟아, you know we gon’ ride",
+      "chinese": "一路踩到底，你知道我們會繼續前進。",
+      "romanization": "kkeut-kkaji bal-a, you know we gon’ ride",
+      "cards": [
+        {
+          "word": "끝까지",
+          "meaning": "直到最後",
+          "emoji": "🏁",
+          "language": "ko-KR"
+        },
+        {
+          "word": "밟아,",
+          "meaning": "踩下去",
+          "emoji": "👣",
+          "language": "ko-KR"
+        },
+        {
+          "word": "you",
+          "meaning": "你",
+          "emoji": "🫵",
+          "language": "en-US"
+        },
+        {
+          "word": "know",
+          "meaning": "知道／了解",
+          "emoji": "🧠",
+          "language": "en-US"
+        },
+        {
+          "word": "we",
+          "meaning": "我們",
+          "emoji": "👭",
+          "language": "en-US"
+        },
+        {
+          "word": "gon’",
+          "meaning": "將要",
+          "emoji": "➡️",
+          "language": "en-US"
+        },
+        {
+          "word": "ride",
+          "meaning": "乘坐／一路前進",
+          "emoji": "🚗",
+          "language": "en-US"
+        }
+      ],
+      "member": null
+    },
+    {
+      "number": 31,
+      "english": "Mmm, na-na-na, I’ll be there, 고민하지 마",
+      "chinese": "嗯，啦啦啦，我會在那裡，別擔心。",
+      "romanization": "Mmm, na-na-na, I’ll be there, go-min-ha-ji ma",
+      "cards": [
+        {
+          "word": "Mmm,",
+          "meaning": "嗯（哼唱）",
+          "emoji": "🎶",
+          "language": "en-US"
+        },
+        {
+          "word": "na-na-na,",
+          "meaning": "啦啦啦（哼唱）",
+          "emoji": "🎶",
+          "language": "en-US"
+        },
+        {
+          "word": "I’ll",
+          "meaning": "我會",
+          "emoji": "🙋",
+          "language": "en-US"
+        },
+        {
+          "word": "be",
+          "meaning": "是／成為",
+          "emoji": "🪄",
+          "language": "en-US"
+        },
+        {
+          "word": "there,",
+          "meaning": "那裡",
+          "emoji": "📍",
+          "language": "en-US"
+        },
+        {
+          "word": "고민하지",
+          "meaning": "不要煩惱（與 마 連用）",
+          "emoji": "💭",
+          "language": "ko-KR"
+        },
+        {
+          "word": "마",
+          "meaning": "不要（否定命令）",
+          "emoji": "🚫",
+          "language": "ko-KR"
+        }
+      ],
+      "member": null
+    },
+    {
+      "number": 32,
+      "english": "Uh, na-na-na, I’ll be there, 망설이지 마",
+      "chinese": "嗯，啦啦啦，我會在那裡，別猶豫。",
+      "romanization": "Uh, na-na-na, I’ll be there, mang-seol-i-ji ma",
+      "cards": [
+        {
+          "word": "Uh,",
+          "meaning": "嗯（語氣詞）",
+          "emoji": "🎵",
+          "language": "en-US"
+        },
+        {
+          "word": "na-na-na,",
+          "meaning": "啦啦啦（哼唱）",
+          "emoji": "🎶",
+          "language": "en-US"
+        },
+        {
+          "word": "I’ll",
+          "meaning": "我會",
+          "emoji": "🙋",
+          "language": "en-US"
+        },
+        {
+          "word": "be",
+          "meaning": "是／成為",
+          "emoji": "🪄",
+          "language": "en-US"
+        },
+        {
+          "word": "there,",
+          "meaning": "那裡",
+          "emoji": "📍",
+          "language": "en-US"
+        },
+        {
+          "word": "망설이지",
+          "meaning": "不要猶豫（與 마 連用）",
+          "emoji": "🤔",
+          "language": "ko-KR"
+        },
+        {
+          "word": "마",
+          "meaning": "不要（否定命令）",
+          "emoji": "🚫",
+          "language": "ko-KR"
+        }
+      ],
+      "member": null
+    },
+    {
+      "number": 33,
+      "english": "But you don’t know ’bout me",
+      "chinese": "但你不了解我。",
+      "romanization": "",
+      "cards": [
+        {
+          "word": "But",
+          "meaning": "但是",
+          "emoji": "↪️",
+          "language": "en-US"
+        },
+        {
+          "word": "you",
+          "meaning": "你",
+          "emoji": "🫵",
+          "language": "en-US"
+        },
+        {
+          "word": "don’t",
+          "meaning": "不",
+          "emoji": "🚫",
+          "language": "en-US"
+        },
+        {
+          "word": "know",
+          "meaning": "知道／了解",
+          "emoji": "🧠",
+          "language": "en-US"
+        },
+        {
+          "word": "’bout",
+          "meaning": "關於",
+          "emoji": "📖",
+          "language": "en-US"
+        },
+        {
+          "word": "me",
+          "meaning": "我",
+          "emoji": "🙋",
+          "language": "en-US"
+        }
+      ],
+      "member": null
+    },
+    {
+      "number": 34,
+      "english": "Yeah, yeah, you gon’ know ’bout me, boy",
+      "chinese": "對，對，男孩，你會了解我。",
+      "romanization": "",
+      "cards": [
+        {
+          "word": "Yeah,",
+          "meaning": "是的／耶",
+          "emoji": "👍",
+          "language": "en-US"
+        },
+        {
+          "word": "yeah,",
+          "meaning": "是的／耶",
+          "emoji": "👍",
+          "language": "en-US"
+        },
+        {
+          "word": "you",
+          "meaning": "你",
+          "emoji": "🫵",
+          "language": "en-US"
+        },
+        {
+          "word": "gon’",
+          "meaning": "將要",
+          "emoji": "➡️",
+          "language": "en-US"
+        },
+        {
+          "word": "know",
+          "meaning": "知道／了解",
+          "emoji": "🧠",
+          "language": "en-US"
+        },
+        {
+          "word": "’bout",
+          "meaning": "關於",
+          "emoji": "📖",
+          "language": "en-US"
+        },
+        {
+          "word": "me,",
+          "meaning": "我",
+          "emoji": "🙋",
+          "language": "en-US"
+        },
+        {
+          "word": "boy",
+          "meaning": "男孩",
+          "emoji": "👦",
+          "language": "en-US"
+        }
+      ],
+      "member": null
+    },
+    {
+      "number": 35,
+      "english": "아름다운 별들이 빛나는 밤이야",
+      "chinese": "這是美麗星星閃耀的夜晚。",
+      "romanization": "a-reum-da-un byeol-deu-ri bi-chi-na-neun bam-i-ya",
+      "cards": [
+        {
+          "word": "아름다운",
+          "meaning": "美麗的",
+          "emoji": "🌸",
+          "language": "ko-KR"
+        },
+        {
+          "word": "별들이",
+          "meaning": "星星們",
+          "emoji": "⭐",
+          "language": "ko-KR"
+        },
+        {
+          "word": "빛나는",
+          "meaning": "閃耀的",
+          "emoji": "✨",
+          "language": "ko-KR"
+        },
+        {
+          "word": "밤이야",
+          "meaning": "是夜晚",
+          "emoji": "🌙",
+          "language": "ko-KR"
+        }
+      ],
+      "member": null
+    },
+    {
+      "number": 36,
+      "english": "Mmm, what you say? (What you say?)",
+      "chinese": "嗯，你說什麼？（你說什麼？）",
+      "romanization": "",
+      "cards": [
+        {
+          "word": "Mmm,",
+          "meaning": "嗯（哼唱）",
+          "emoji": "🎶",
+          "language": "en-US"
+        },
+        {
+          "word": "what",
+          "meaning": "什麼／……的東西",
+          "emoji": "❓",
+          "language": "en-US"
+        },
+        {
+          "word": "you",
+          "meaning": "你",
+          "emoji": "🫵",
+          "language": "en-US"
+        },
+        {
+          "word": "say?",
+          "meaning": "說",
+          "emoji": "💬",
+          "language": "en-US"
+        },
+        {
+          "word": "(What",
+          "meaning": "什麼／……的東西",
+          "emoji": "❓",
+          "language": "en-US"
+        },
+        {
+          "word": "you",
+          "meaning": "你",
+          "emoji": "🫵",
+          "language": "en-US"
+        },
+        {
+          "word": "say?)",
+          "meaning": "說",
+          "emoji": "💬",
+          "language": "en-US"
+        }
+      ],
+      "member": null
+    },
+    {
+      "number": 37,
+      "english": "끝없는 가치, you know it’s all me",
+      "chinese": "無盡的價值，你知道這全是我。",
+      "romanization": "kkeut-eom-neun ga-chi, you know it’s all me",
+      "cards": [
+        {
+          "word": "끝없는",
+          "meaning": "無止境的",
+          "emoji": "♾️",
+          "language": "ko-KR"
+        },
+        {
+          "word": "가치,",
+          "meaning": "價值",
+          "emoji": "💎",
+          "language": "ko-KR"
+        },
+        {
+          "word": "you",
+          "meaning": "你",
+          "emoji": "🫵",
+          "language": "en-US"
+        },
+        {
+          "word": "know",
+          "meaning": "知道／了解",
+          "emoji": "🧠",
+          "language": "en-US"
+        },
+        {
+          "word": "it’s",
+          "meaning": "它是／這是",
+          "emoji": "✨",
+          "language": "en-US"
+        },
+        {
+          "word": "all",
+          "meaning": "全部",
+          "emoji": "🌈",
+          "language": "en-US"
+        },
+        {
+          "word": "me",
+          "meaning": "我",
+          "emoji": "🙋",
+          "language": "en-US"
+        }
+      ],
+      "member": null
+    },
+    {
+      "number": 38,
+      "english": "Got that, ooh, what you say? (What you say?)",
+      "chinese": "懂了，喔，你說什麼？（你說什麼？）",
+      "romanization": "",
+      "cards": [
+        {
+          "word": "Got",
+          "meaning": "擁有／得到",
+          "emoji": "🎁",
+          "language": "en-US"
+        },
+        {
+          "word": "that,",
+          "meaning": "那個",
+          "emoji": "👉",
+          "language": "en-US"
+        },
+        {
+          "word": "ooh,",
+          "meaning": "喔（語氣詞）",
+          "emoji": "🎤",
+          "language": "en-US"
+        },
+        {
+          "word": "what",
+          "meaning": "什麼／……的東西",
+          "emoji": "❓",
+          "language": "en-US"
+        },
+        {
+          "word": "you",
+          "meaning": "你",
+          "emoji": "🫵",
+          "language": "en-US"
+        },
+        {
+          "word": "say?",
+          "meaning": "說",
+          "emoji": "💬",
+          "language": "en-US"
+        },
+        {
+          "word": "(What",
+          "meaning": "什麼／……的東西",
+          "emoji": "❓",
+          "language": "en-US"
+        },
+        {
+          "word": "you",
+          "meaning": "你",
+          "emoji": "🫵",
+          "language": "en-US"
+        },
+        {
+          "word": "say?)",
+          "meaning": "說",
+          "emoji": "💬",
+          "language": "en-US"
+        }
+      ],
+      "member": null
+    },
+    {
+      "number": 39,
+      "english": "Are you ready? Set, turn on the lights",
+      "chinese": "準備好了嗎？就位，打開燈光。",
+      "romanization": "",
+      "cards": [
+        {
+          "word": "Are",
+          "meaning": "是",
+          "emoji": "🟰",
+          "language": "en-US"
+        },
+        {
+          "word": "you",
+          "meaning": "你",
+          "emoji": "🫵",
+          "language": "en-US"
+        },
+        {
+          "word": "ready?",
+          "meaning": "準備好",
+          "emoji": "✅",
+          "language": "en-US"
+        },
+        {
+          "word": "Set,",
+          "meaning": "設定",
+          "emoji": "🎯",
+          "language": "en-US"
+        },
+        {
+          "word": "turn",
+          "meaning": "轉動／轉換",
+          "emoji": "↪️",
+          "language": "en-US"
+        },
+        {
+          "word": "on",
+          "meaning": "打開（片語用）",
+          "emoji": "💡",
+          "language": "en-US"
+        },
+        {
+          "word": "the",
+          "meaning": "這個／那個（特定的）",
+          "emoji": "🔎",
+          "language": "en-US"
+        },
+        {
+          "word": "lights",
+          "meaning": "燈光",
+          "emoji": "💡",
+          "language": "en-US"
+        }
+      ],
+      "member": null
+    },
+    {
+      "number": 40,
+      "english": "Baby, got passion, ambition, 난 보란 듯이",
+      "chinese": "寶貝，我有熱情、有抱負，我要讓大家看見。",
+      "romanization": "Baby, got passion, ambition, nan bo-ran deu-i",
+      "cards": [
+        {
+          "word": "Baby,",
+          "meaning": "寶貝",
+          "emoji": "💗",
+          "language": "en-US"
+        },
+        {
+          "word": "got",
+          "meaning": "擁有／得到",
+          "emoji": "🎁",
+          "language": "en-US"
+        },
+        {
+          "word": "passion,",
+          "meaning": "熱情",
+          "emoji": "🔥",
+          "language": "en-US"
+        },
+        {
+          "word": "ambition,",
+          "meaning": "抱負／企圖心",
+          "emoji": "🚀",
+          "language": "en-US"
+        },
+        {
+          "word": "난",
+          "meaning": "我（나는 的縮寫）",
+          "emoji": "🙋",
+          "language": "ko-KR"
+        },
+        {
+          "word": "보란",
+          "meaning": "給人看／讓人瞧",
+          "emoji": "👀",
+          "language": "ko-KR"
+        },
+        {
+          "word": "듯이",
+          "meaning": "彷彿……一樣",
+          "emoji": "🌟",
+          "language": "ko-KR"
+        }
+      ],
+      "member": null
+    },
+    {
+      "number": 41,
+      "english": "Look at that, 온몸으로 느끼는 내 몸짓",
+      "chinese": "看那個，用全身感受我的動作。",
+      "romanization": "Look at that, on-mo-meo-ro neukki-neun nae mom-jit",
+      "cards": [
+        {
+          "word": "Look",
+          "meaning": "看",
+          "emoji": "👀",
+          "language": "en-US"
+        },
+        {
+          "word": "at",
+          "meaning": "在／朝向",
+          "emoji": "👉",
+          "language": "en-US"
+        },
+        {
+          "word": "that,",
+          "meaning": "那個",
+          "emoji": "👉",
+          "language": "en-US"
+        },
+        {
+          "word": "온몸으로",
+          "meaning": "用全身",
+          "emoji": "🕺",
+          "language": "ko-KR"
+        },
+        {
+          "word": "느끼는",
+          "meaning": "感受到的",
+          "emoji": "💗",
+          "language": "ko-KR"
+        },
+        {
+          "word": "내",
+          "meaning": "我的",
+          "emoji": "🙋",
+          "language": "ko-KR"
+        },
+        {
+          "word": "몸짓",
+          "meaning": "肢體動作",
+          "emoji": "💃",
+          "language": "ko-KR"
+        }
+      ],
+      "member": null
+    },
+    {
+      "number": 42,
+      "english": "Baby, got drip (Drip), drip (Drip), drip (Drip), drip",
+      "chinese": "寶貝，我很有型，有型、有型、有型。",
+      "romanization": "",
+      "cards": [
+        {
+          "word": "Baby,",
+          "meaning": "寶貝",
+          "emoji": "💗",
+          "language": "en-US"
+        },
+        {
+          "word": "got",
+          "meaning": "擁有／得到",
+          "emoji": "🎁",
+          "language": "en-US"
+        },
+        {
+          "word": "drip",
+          "meaning": "時髦的風格",
+          "emoji": "✨",
+          "language": "en-US"
+        },
+        {
+          "word": "(Drip),",
+          "meaning": "時髦的風格",
+          "emoji": "✨",
+          "language": "en-US"
+        },
+        {
+          "word": "drip",
+          "meaning": "時髦的風格",
+          "emoji": "✨",
+          "language": "en-US"
+        },
+        {
+          "word": "(Drip),",
+          "meaning": "時髦的風格",
+          "emoji": "✨",
+          "language": "en-US"
+        },
+        {
+          "word": "drip",
+          "meaning": "時髦的風格",
+          "emoji": "✨",
+          "language": "en-US"
+        },
+        {
+          "word": "(Drip),",
+          "meaning": "時髦的風格",
+          "emoji": "✨",
+          "language": "en-US"
+        },
+        {
+          "word": "drip",
+          "meaning": "時髦的風格",
+          "emoji": "✨",
+          "language": "en-US"
+        }
+      ],
+      "member": null
+    },
+    {
+      "number": 43,
+      "english": "Baby, got drip (Drip), drip (Drip), drip (Drip), drip",
+      "chinese": "寶貝，我很有型，有型、有型、有型。",
+      "romanization": "",
+      "cards": [
+        {
+          "word": "Baby,",
+          "meaning": "寶貝",
+          "emoji": "💗",
+          "language": "en-US"
+        },
+        {
+          "word": "got",
+          "meaning": "擁有／得到",
+          "emoji": "🎁",
+          "language": "en-US"
+        },
+        {
+          "word": "drip",
+          "meaning": "時髦的風格",
+          "emoji": "✨",
+          "language": "en-US"
+        },
+        {
+          "word": "(Drip),",
+          "meaning": "時髦的風格",
+          "emoji": "✨",
+          "language": "en-US"
+        },
+        {
+          "word": "drip",
+          "meaning": "時髦的風格",
+          "emoji": "✨",
+          "language": "en-US"
+        },
+        {
+          "word": "(Drip),",
+          "meaning": "時髦的風格",
+          "emoji": "✨",
+          "language": "en-US"
+        },
+        {
+          "word": "drip",
+          "meaning": "時髦的風格",
+          "emoji": "✨",
+          "language": "en-US"
+        },
+        {
+          "word": "(Drip),",
+          "meaning": "時髦的風格",
+          "emoji": "✨",
+          "language": "en-US"
+        },
+        {
+          "word": "drip",
+          "meaning": "時髦的風格",
+          "emoji": "✨",
+          "language": "en-US"
+        }
+      ],
+      "member": null
+    },
+    {
+      "number": 44,
+      "english": "Uh, 가끔 쓰러진대도",
+      "chinese": "嗯，即使偶爾跌倒。",
+      "romanization": "Uh, ga-kkeum sseu-reo-jin-dae-do",
+      "cards": [
+        {
+          "word": "Uh,",
+          "meaning": "嗯（語氣詞）",
+          "emoji": "🎵",
+          "language": "en-US"
+        },
+        {
+          "word": "가끔",
+          "meaning": "偶爾",
+          "emoji": "📅",
+          "language": "ko-KR"
+        },
+        {
+          "word": "쓰러진대도",
+          "meaning": "即使跌倒",
+          "emoji": "🧎",
+          "language": "ko-KR"
+        }
+      ],
+      "member": null
+    },
+    {
+      "number": 45,
+      "english": "I’ma shine as bright as diamonds, say my name",
+      "chinese": "我要像鑽石一樣明亮閃耀，說出我的名字。",
+      "romanization": "",
+      "cards": [
+        {
+          "word": "I’ma",
+          "meaning": "我要／我將",
+          "emoji": "🙋",
+          "language": "en-US"
+        },
+        {
+          "word": "shine",
+          "meaning": "閃耀",
+          "emoji": "✨",
+          "language": "en-US"
+        },
+        {
+          "word": "as",
+          "meaning": "像……一樣",
+          "emoji": "🔁",
+          "language": "en-US"
+        },
+        {
+          "word": "bright",
+          "meaning": "明亮的",
+          "emoji": "🌟",
+          "language": "en-US"
+        },
+        {
+          "word": "as",
+          "meaning": "像……一樣",
+          "emoji": "🔁",
+          "language": "en-US"
+        },
+        {
+          "word": "diamonds,",
+          "meaning": "鑽石",
+          "emoji": "💎",
+          "language": "en-US"
+        },
+        {
+          "word": "say",
+          "meaning": "說",
+          "emoji": "💬",
+          "language": "en-US"
+        },
+        {
+          "word": "my",
+          "meaning": "我的",
+          "emoji": "🙋",
+          "language": "en-US"
+        },
+        {
+          "word": "name",
+          "meaning": "名字",
+          "emoji": "🪪",
+          "language": "en-US"
+        }
+      ],
+      "member": null
+    },
+    {
+      "number": 46,
+      "english": "다시 일어나",
+      "chinese": "再次站起來。",
+      "romanization": "da-si il-eo-na",
+      "cards": [
+        {
+          "word": "다시",
+          "meaning": "再次",
+          "emoji": "🔁",
+          "language": "ko-KR"
+        },
+        {
+          "word": "일어나",
+          "meaning": "站起來",
+          "emoji": "🧍",
+          "language": "ko-KR"
+        }
+      ],
+      "member": null
+    },
+    {
+      "number": 47,
+      "english": "Now watch me do it all again",
+      "chinese": "現在看著我再做一次。",
+      "romanization": "",
+      "cards": [
+        {
+          "word": "Now",
+          "meaning": "現在",
+          "emoji": "⏱️",
+          "language": "en-US"
+        },
+        {
+          "word": "watch",
+          "meaning": "觀看",
+          "emoji": "👀",
+          "language": "en-US"
+        },
+        {
+          "word": "me",
+          "meaning": "我",
+          "emoji": "🙋",
+          "language": "en-US"
+        },
+        {
+          "word": "do",
+          "meaning": "做",
+          "emoji": "🛠️",
+          "language": "en-US"
+        },
+        {
+          "word": "it",
+          "meaning": "它／這件事",
+          "emoji": "👉",
+          "language": "en-US"
+        },
+        {
+          "word": "all",
+          "meaning": "全部",
+          "emoji": "🌈",
+          "language": "en-US"
+        },
+        {
+          "word": "again",
+          "meaning": "再次",
+          "emoji": "🔁",
+          "language": "en-US"
+        }
+      ],
+      "member": null
+    },
+    {
+      "number": 48,
+      "english": "Baby, got drip, drip, drip (Drip, drip, drip)",
+      "chinese": "寶貝，很有型，有型，有型（有型、有型、有型）。",
+      "romanization": "",
+      "cards": [
+        {
+          "word": "Baby,",
+          "meaning": "寶貝",
+          "emoji": "💗",
+          "language": "en-US"
+        },
+        {
+          "word": "got",
+          "meaning": "擁有／得到",
+          "emoji": "🎁",
+          "language": "en-US"
+        },
+        {
+          "word": "drip,",
+          "meaning": "時髦的風格",
+          "emoji": "✨",
+          "language": "en-US"
+        },
+        {
+          "word": "drip,",
+          "meaning": "時髦的風格",
+          "emoji": "✨",
+          "language": "en-US"
+        },
+        {
+          "word": "drip",
+          "meaning": "時髦的風格",
+          "emoji": "✨",
+          "language": "en-US"
+        },
+        {
+          "word": "(Drip,",
+          "meaning": "時髦的風格",
+          "emoji": "✨",
+          "language": "en-US"
+        },
+        {
+          "word": "drip,",
+          "meaning": "時髦的風格",
+          "emoji": "✨",
+          "language": "en-US"
+        },
+        {
+          "word": "drip)",
+          "meaning": "時髦的風格",
+          "emoji": "✨",
+          "language": "en-US"
+        }
+      ],
+      "member": null
+    },
+    {
+      "number": 49,
+      "english": "Baby, got, baby, got, baby, got",
+      "chinese": "寶貝，擁有；寶貝，擁有；寶貝，擁有。",
+      "romanization": "",
+      "cards": [
+        {
+          "word": "Baby,",
+          "meaning": "寶貝",
+          "emoji": "💗",
+          "language": "en-US"
+        },
+        {
+          "word": "got,",
+          "meaning": "擁有／得到",
+          "emoji": "🎁",
+          "language": "en-US"
+        },
+        {
+          "word": "baby,",
+          "meaning": "寶貝",
+          "emoji": "💗",
+          "language": "en-US"
+        },
+        {
+          "word": "got,",
+          "meaning": "擁有／得到",
+          "emoji": "🎁",
+          "language": "en-US"
+        },
+        {
+          "word": "baby,",
+          "meaning": "寶貝",
+          "emoji": "💗",
+          "language": "en-US"
+        },
+        {
+          "word": "got",
+          "meaning": "擁有／得到",
+          "emoji": "🎁",
+          "language": "en-US"
+        }
+      ],
+      "member": null
+    },
+    {
+      "number": 50,
+      "english": "Drip, drip, drip",
+      "chinese": "有型，有型，有型。",
+      "romanization": "",
+      "cards": [
+        {
+          "word": "Drip,",
+          "meaning": "時髦的風格",
+          "emoji": "✨",
+          "language": "en-US"
+        },
+        {
+          "word": "drip,",
+          "meaning": "時髦的風格",
+          "emoji": "✨",
+          "language": "en-US"
+        },
+        {
+          "word": "drip",
+          "meaning": "時髦的風格",
+          "emoji": "✨",
+          "language": "en-US"
+        }
+      ],
+      "member": null
+    },
+    {
+      "number": 51,
+      "english": "You know we got, got that drip",
+      "chinese": "你知道我們有，有那份風格。",
+      "romanization": "",
+      "cards": [
+        {
+          "word": "You",
+          "meaning": "你",
+          "emoji": "🫵",
+          "language": "en-US"
+        },
+        {
+          "word": "know",
+          "meaning": "知道／了解",
+          "emoji": "🧠",
+          "language": "en-US"
+        },
+        {
+          "word": "we",
+          "meaning": "我們",
+          "emoji": "👭",
+          "language": "en-US"
+        },
+        {
+          "word": "got,",
+          "meaning": "擁有／得到",
+          "emoji": "🎁",
+          "language": "en-US"
+        },
+        {
+          "word": "got",
+          "meaning": "擁有／得到",
+          "emoji": "🎁",
+          "language": "en-US"
+        },
+        {
+          "word": "that",
+          "meaning": "那個",
+          "emoji": "👉",
+          "language": "en-US"
+        },
+        {
+          "word": "drip",
+          "meaning": "時髦的風格",
+          "emoji": "✨",
+          "language": "en-US"
+        }
+      ],
+      "member": null
+    },
+    {
+      "number": 52,
+      "english": "Baby, got drip, drip, drip (Drip, drip, drip)",
+      "chinese": "寶貝，很有型，有型，有型（有型、有型、有型）。",
+      "romanization": "",
+      "cards": [
+        {
+          "word": "Baby,",
+          "meaning": "寶貝",
+          "emoji": "💗",
+          "language": "en-US"
+        },
+        {
+          "word": "got",
+          "meaning": "擁有／得到",
+          "emoji": "🎁",
+          "language": "en-US"
+        },
+        {
+          "word": "drip,",
+          "meaning": "時髦的風格",
+          "emoji": "✨",
+          "language": "en-US"
+        },
+        {
+          "word": "drip,",
+          "meaning": "時髦的風格",
+          "emoji": "✨",
+          "language": "en-US"
+        },
+        {
+          "word": "drip",
+          "meaning": "時髦的風格",
+          "emoji": "✨",
+          "language": "en-US"
+        },
+        {
+          "word": "(Drip,",
+          "meaning": "時髦的風格",
+          "emoji": "✨",
+          "language": "en-US"
+        },
+        {
+          "word": "drip,",
+          "meaning": "時髦的風格",
+          "emoji": "✨",
+          "language": "en-US"
+        },
+        {
+          "word": "drip)",
+          "meaning": "時髦的風格",
+          "emoji": "✨",
+          "language": "en-US"
+        }
+      ],
+      "member": null
+    },
+    {
+      "number": 53,
+      "english": "Baby, got, baby, got, baby, got",
+      "chinese": "寶貝，擁有；寶貝，擁有；寶貝，擁有。",
+      "romanization": "",
+      "cards": [
+        {
+          "word": "Baby,",
+          "meaning": "寶貝",
+          "emoji": "💗",
+          "language": "en-US"
+        },
+        {
+          "word": "got,",
+          "meaning": "擁有／得到",
+          "emoji": "🎁",
+          "language": "en-US"
+        },
+        {
+          "word": "baby,",
+          "meaning": "寶貝",
+          "emoji": "💗",
+          "language": "en-US"
+        },
+        {
+          "word": "got,",
+          "meaning": "擁有／得到",
+          "emoji": "🎁",
+          "language": "en-US"
+        },
+        {
+          "word": "baby,",
+          "meaning": "寶貝",
+          "emoji": "💗",
+          "language": "en-US"
+        },
+        {
+          "word": "got",
+          "meaning": "擁有／得到",
+          "emoji": "🎁",
+          "language": "en-US"
+        }
+      ],
+      "member": null
+    },
+    {
+      "number": 54,
+      "english": "Drip, drip, drip",
+      "chinese": "有型，有型，有型。",
+      "romanization": "",
+      "cards": [
+        {
+          "word": "Drip,",
+          "meaning": "時髦的風格",
+          "emoji": "✨",
+          "language": "en-US"
+        },
+        {
+          "word": "drip,",
+          "meaning": "時髦的風格",
+          "emoji": "✨",
+          "language": "en-US"
+        },
+        {
+          "word": "drip",
+          "meaning": "時髦的風格",
+          "emoji": "✨",
+          "language": "en-US"
+        }
+      ],
+      "member": null
+    },
+    {
+      "number": 55,
+      "english": "Got that drip, yeah",
+      "chinese": "擁有那份風格，耶。",
+      "romanization": "",
+      "cards": [
+        {
+          "word": "Got",
+          "meaning": "擁有／得到",
+          "emoji": "🎁",
+          "language": "en-US"
+        },
+        {
+          "word": "that",
+          "meaning": "那個",
+          "emoji": "👉",
+          "language": "en-US"
+        },
+        {
+          "word": "drip,",
+          "meaning": "時髦的風格",
+          "emoji": "✨",
+          "language": "en-US"
+        },
+        {
+          "word": "yeah",
+          "meaning": "是的／耶",
+          "emoji": "👍",
+          "language": "en-US"
+        }
+      ],
+      "member": null
+    }
+  ]
+}
