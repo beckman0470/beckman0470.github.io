@@ -16,8 +16,11 @@
 .segment-panel .segment-entry{padding:9px;border-radius:11px;background:white;border:1px solid #f1b9d7;display:flex;align-items:center;gap:8px;justify-content:space-between}
 .segment-panel button:disabled{opacity:.5;cursor:default}
 @media(max-width:700px){.segment-panel .editor{grid-template-columns:1fr}.segment-tools button{font-size:14px;padding:9px}.segment-panel h2{font-size:17px}}
-.pending-lyric{padding:8px;color:#ffd0ec;font-weight:900;font-size:clamp(17px,3vw,28px)}</style></head><body><main class="wrap"><section class="screen"><div class="top"><div class="branding"><strong>BABYMONSTER</strong><span>鼠姊姊・英韓小教室</span></div><div class="lyrics" id="lyrics" aria-label="歌詞"><button class="speak-line" id="speak-line" aria-label="朗讀整句英文" title="朗讀整句英文">🔊 EN</button></div></div><div class="song-meta"><span class="pill">DRIP　EP01</span><span>CHIQUITA｜小七</span></div><img class="stage" src="/assets/bm-approved/drip-stage.jpg" alt="七人固定站位，小七在前排，粉紅霓虹舞台，RORA、CHIQUITA、AHYEON、RAMI、PHARITA、ASA、RUKA"><div class="translation"><b>📖 整句意思</b><strong id="translation">我打扮的時候，不會想太多。</strong><button class="speak-translation" id="speak-translation" aria-label="朗讀整句中文" title="朗讀整句中文">🔊</button></div><div class="cards" id="cards"></div><div class="player"><a class="return" href="/rooms.html?room=games">⌂ 回遊戲間</a><button class="btn" id="play" aria-label="播放示範">▶</button><div class="status" id="status">▶ 單字教學　｜　🎵 聽官方原唱</div><button class="song-btn" id="dodo-toggle" type="button">🎤 鼠姊姊演唱</button><button class="song-btn" id="song-btn" type="button">🎵 播放原唱（官方 MV）</button></div><section class="segment-panel" id="segment-panel" aria-label="逐句唱與中文教學">
- <h2>🎤 逐句練習｜只標記一次開頭</h2>
+
+.stage-wrap{position:relative}.stage-cast{position:absolute;left:1.2%;right:1.2%;bottom:1%;display:flex;justify-content:space-between;align-items:flex-end;pointer-events:none}.member-chip{width:11.8%;max-width:132px;min-width:72px;display:flex;flex-direction:column;align-items:center;transform-origin:center bottom;transition:transform .25s ease,filter .25s ease,opacity .25s ease;opacity:.88}.member-chip .portrait{width:100%;aspect-ratio:1/1;border-radius:20px;overflow:hidden;border:3px solid #ffb5d8;box-shadow:0 6px 18px #390b35a6;background:linear-gradient(#fff,#f8edf4)}.member-chip img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}.member-chip .name{margin-top:6px;background:#ffd1e8;color:#58163c;border-radius:999px;padding:4px 10px;font-weight:900;font-size:12px;line-height:1;border:2px solid #ff7fbe;box-shadow:0 3px 0 #f4aacd}.member-chip.active{transform:translateY(-14px) scale(1.12);opacity:1;filter:drop-shadow(0 0 14px #ffe269)}.member-chip.active .portrait{border-color:#ffd85d;box-shadow:0 8px 22px #6c1348cc}.member-chip .mic{display:none;position:absolute;right:-6px;top:-8px;background:#ffde57;color:#7a1c53;border-radius:999px;border:2px solid #fff;padding:2px 7px;font-size:20px;box-shadow:0 2px 8px #5e2142a6}.member-chip.active .mic{display:block}.member-chip .wrapi{position:relative;width:100%}
+@media(max-width:790px){.stage-cast{bottom:.3%}.member-chip{min-width:46px;width:12.5%}.member-chip .portrait{border-radius:12px;border-width:2px}.member-chip .name{font-size:9px;padding:3px 5px;margin-top:3px}.member-chip.active{transform:translateY(-8px) scale(1.08)}.member-chip .mic{font-size:14px;padding:1px 4px;right:-4px;top:-5px}}
+.pending-lyric{padding:8px;color:#ffd0ec;font-weight:900;font-size:clamp(17px,3vw,28px)}</style></head><body><main class="wrap"><section class="screen"><div class="top"><div class="branding"><strong>BABYMONSTER</strong><span>鼠姊姊・英韓小教室</span></div><div class="lyrics" id="lyrics" aria-label="歌詞"><button class="speak-line" id="speak-line" aria-label="朗讀整句英文" title="朗讀整句英文">🔊 EN</button></div></div><div class="song-meta"><span class="pill">DRIP　EP01</span><span>CHIQUITA｜小七</span></div><div class="stage-wrap"><img class="stage" src="/assets/bm-approved/drip-stage.jpg" alt="七人固定站位，小七在前排，粉紅霓虹舞台，RORA、CHIQUITA、AHYEON、RAMI、PHARITA、ASA、RUKA"><div class="stage-cast" id="stage-cast" aria-label="七位成員固定站位"><div class="member-chip" data-member="RORA"><div class="wrapi"><div class="mic">🎤</div><div class="portrait"><img src="/assets/bm-cast/RORA.png" alt="RORA"></div></div><div class="name">RORA</div></div><div class="member-chip" data-member="CHIQUITA"><div class="wrapi"><div class="mic">🎤</div><div class="portrait"><img src="/assets/bm-cast/CHIQUITA.png" alt="CHIQUITA"></div></div><div class="name">CHIQUITA</div></div><div class="member-chip" data-member="AHYEON"><div class="wrapi"><div class="mic">🎤</div><div class="portrait"><img src="/assets/bm-cast/AHYEON.png" alt="AHYEON"></div></div><div class="name">AHYEON</div></div><div class="member-chip" data-member="RAMI"><div class="wrapi"><div class="mic">🎤</div><div class="portrait"><img src="/assets/bm-cast/RAMI.png" alt="RAMI"></div></div><div class="name">RAMI</div></div><div class="member-chip" data-member="PHARITA"><div class="wrapi"><div class="mic">🎤</div><div class="portrait"><img src="/assets/bm-cast/PHARITA.png" alt="PHARITA"></div></div><div class="name">PHARITA</div></div><div class="member-chip" data-member="ASA"><div class="wrapi"><div class="mic">🎤</div><div class="portrait"><img src="/assets/bm-cast/ASA.png" alt="ASA"></div></div><div class="name">ASA</div></div><div class="member-chip" data-member="RUKA"><div class="wrapi"><div class="mic">🎤</div><div class="portrait"><img src="/assets/bm-cast/RUKA.png" alt="RUKA"></div></div><div class="name">RUKA</div></div></div></div><div class="translation"><b>📖 整句意思</b><strong id="translation">我打扮的時候，不會想太多。</strong><button class="speak-translation" id="speak-translation" aria-label="朗讀整句中文" title="朗讀整句中文">🔊</button></div><div class="cards" id="cards"></div><div class="player"><a class="return" href="/rooms.html?room=games">⌂ 回遊戲間</a><button class="btn" id="play" aria-label="播放示範">▶</button><div class="status" id="status">▶ 單字教學　｜　🎵 聽官方原唱</div><button class="song-btn" id="dodo-toggle" type="button">🎤 鼠姊姊演唱</button><button class="song-btn" id="song-btn" type="button">🎵 播放原唱（官方 MV）</button></div><section class="segment-panel" id="segment-panel" aria-label="逐句唱與中文教學">
+ <h2>🎤 逐句練習｜只標記第一句開頭一次</h2>
  <div class="segment-tools">
  <button class="primary" id="sentence-play" type="button">▶ 播放這一句並教學</button>
  <button id="sentence-all" type="button">▶ 從第一句接著聽</button>
@@ -25,7 +28,7 @@
  <button id="sentence-prev" type="button">◀ 上一句</button><button id="sentence-next" type="button">下一句 ▶</button>
  <button id="sentence-stop" type="button">■ 停止</button>
  </div>
- <p class="help" id="sentence-info">播放錄音，在第一句開頭按「只標記第一句開頭」一次。之後可按上一句、下一句切換；後續區間暫以估計長度排列，尚非正式歌詞時間碼。</p>
+ <p class="help" id="sentence-info">播放錄音，在第一句開頭按「只標記第一句開頭」一次。之後可按上一句、下一句切換；第二句已補上歌詞與圖卡說明；只需標記第一句開頭一次，後面會依估計長度切換。</p>
  <div class="segment-tools"><label for="sentence-select">目前句子：</label><select id="sentence-select"></select><span class="segment-time" id="sentence-time">尚未校準</span></div>
  <details><summary>家長設定｜補上後續歌詞及中文意思</summary>
   <div class="editor"><label>英文歌詞<input id="sentence-english" type="text" placeholder="這一句英文歌詞"></label><label>中文意思<input id="sentence-chinese" type="text" placeholder="用孩子聽得懂的中文意思"></label></div>
@@ -38,13 +41,16 @@ const $=q=>document.querySelector(q);
 const audio=$('#dodo-player'), panel=$('#dodo-audio'), statusEl=$('#status'), info=$('#sentence-info');
 const STORE='bm-dodo-one-anchor-20261115-v2',OLD='bm-dodo-sentences-20261115-v1';
 const FULL_DURATION=170.730667, ESTIMATE=5.5;
-const known={english:'When I dress I don’t think so much',chinese:'我打扮的時候，不會想太多。'};
-const dictionary={when:['當……的時候','📅'],i:['我','🙋'],dress:['打扮、穿衣服','👗'],"don't":['不、沒有','🚫'],'don’t':['不、沒有','🚫'],think:['想、思考','💭'],so:['這麼、那麼','✨'],much:['多','📚']};
+const memberOrder=['RORA','CHIQUITA','AHYEON','RAMI','PHARITA','ASA','RUKA'];
+const baseLines=[
+ {member:'CHIQUITA',english:'When I dress I don’t think so much',chinese:'我穿衣服的時候，不會想太多。'},
+ {member:'CHIQUITA',english:'Could be GOAT, so icy',chinese:'我有機會成為最強，而且酷得像冰一樣。'}
+];
+const dictionary={when:['當……的時候','📅'],i:['我','🙋'],dress:['穿衣服、打扮','👗'],"don't":['不、沒有','🚫'],'don’t':['不、沒有','🚫'],think:['想、思考','💭'],so:['這麼、那麼','✨'],much:['很多','📚'],could:['可能、可以','🌟'],be:['成為、是','🪄'],goat:['最強、頂尖人物','👑'],icy:['像冰一樣酷、很冷很帥','🧊']};
 let saved=null,old=null;try{saved=JSON.parse(localStorage.getItem(STORE)||'null')}catch{}try{old=JSON.parse(localStorage.getItem(OLD)||'null')}catch{}
 let anchor=Number.isFinite(saved?.anchor)?saved.anchor:(Array.isArray(old)&&Number.isFinite(old[0]?.start)?old[0].start:null);
-let lines=Array.from({length:Math.ceil(FULL_DURATION/ESTIMATE)},(_,i)=>({english:i===0?known.english:'',chinese:i===0?known.chinese:''}));
-if(Array.isArray(old))old.forEach((r,i)=>{if(i<lines.length&&r?.english&&r?.chinese)lines[i]={english:r.english,chinese:r.chinese}});
-if(Array.isArray(saved?.lines))saved.lines.forEach((r,i)=>{if(i<lines.length&&r?.english)lines[i]={english:r.english,chinese:r.chinese||''}});
+let lines=baseLines.map(x=>({...x}));
+if(Array.isArray(saved?.lines))saved.lines.forEach((r,i)=>{if(i<lines.length&&r?.english)lines[i]={member:r.member||lines[i].member,english:r.english,chinese:r.chinese||''}});
 let selected=0, phase='idle', run=0, raf=0, words=[],lastHighlight=-10,auto=false,yt=null,ytReady=false;
 const save=()=>{try{localStorage.setItem(STORE,JSON.stringify({anchor,lines}))}catch{}};
 const state=txt=>{statusEl.textContent=txt;info.textContent=txt};
@@ -53,15 +59,16 @@ const tokens=t=>String(t||'').split(/\s+/).filter(Boolean);
 const valid=i=>!!(lines[i]&&lines[i].english&&lines[i].chinese);
 const times=i=>{if(anchor===null)return null;const s=anchor+i*ESTIMATE;return {start:s,end:Math.min(FULL_DURATION,s+ESTIMATE)}};
 function highlight(i){if(lastHighlight===i)return;lastHighlight=i;$('#lyrics').querySelectorAll('.lyric-word').forEach((e,j)=>e.classList.toggle('active',j===i));[...$('#cards').children].forEach((e,j)=>e.classList.toggle('selected',j===i));}
+function setActiveMember(){const active=lines[selected]?.member||'CHIQUITA';document.querySelectorAll('.member-chip').forEach(el=>el.classList.toggle('active',el.dataset.member===active));}
 function render(){let line=lines[selected];words=tokens(line.english);const lyric=$('#lyrics'),cards=$('#cards');lyric.querySelectorAll('.lyric-word').forEach(x=>x.remove());cards.replaceChildren();
  if(!words.length){let e=make('div','pending-lyric','第 '+(selected+1)+' 句｜尚待核對原歌詞');lyric.insertBefore(e,$('#speak-line'));}
  lyric.querySelectorAll('.pending-lyric').forEach((e,j)=>{if(words.length)e.remove()});
  words.forEach((w,i)=>{let b=make('button','lyric-word',w);b.onclick=()=>teachWord(i);lyric.insertBefore(b,$('#speak-line'));let d=dictionary[w.toLowerCase().replace(/[.,!?]/g,'')]||['詞義待補','🔤'];let c=make('button','card','');c.append(make('span','word',w),make('span','icon',d[1]),make('span','hint',d[0]));c.onclick=()=>teachWord(i);cards.append(c)});
  $('#translation').textContent=line.chinese||'這一句的中文翻譯尚待核對';
- const sel=$('#sentence-select');sel.replaceChildren(...lines.map((l,i)=>{const o=document.createElement('option');o.value=i;o.textContent=`第 ${i+1} 句${l.english?'：'+l.english.slice(0,28):'（待補歌詞）'}`;return o}));sel.value=selected;
- $('#sentence-english').value=line.english;$('#sentence-chinese').value=line.chinese;
+ const sel=$('#sentence-select');sel.replaceChildren(...lines.map((l,i)=>{const o=document.createElement('option');o.value=i;o.textContent=`第 ${i+1} 句｜${l.member}｜${l.english?' '+l.english.slice(0,28):'（待補歌詞）'}`;return o}));sel.value=selected;
+ $('#sentence-english').value=line.english;$('#sentence-chinese').value=line.chinese; setActiveMember();
  const t=times(selected);$('#sentence-time').textContent=t?`${t.start.toFixed(1)}–${t.end.toFixed(1)} 秒（估算）`:'尚未設定第一句起點';
- $('#segments-list').replaceChildren(...lines.slice(0,9).map((l,i)=>make('div','segment-entry',`${i+1}. ${l.english||'歌詞待補'} ｜ ${times(i)?'估計區間':'未對準'}`)));
+ $('#segments-list').replaceChildren(...lines.map((l,i)=>make('div','segment-entry',`${i+1}. ${l.member}｜${l.english||'歌詞待補'} ｜ ${times(i)?'估計區間':'未對準'}`)));
  $('#sentence-prev').disabled=selected===0;$('#sentence-next').disabled=selected===lines.length-1;lastHighlight=-10;highlight(-1);
 }
 function stop(){run++;phase='idle';cancelAnimationFrame(raf);audio.pause();if('speechSynthesis' in window)window.speechSynthesis.cancel();if(yt&&ytReady)yt.pauseVideo()}
@@ -82,11 +89,11 @@ function play(continuous){if(anchor===null){panel.classList.remove('hide');state
 $('#mark-start').onclick=()=>{stop();anchor=Number(audio.currentTime.toFixed(2));save();selected=0;render();state(`第一句開頭已設為 ${anchor.toFixed(2)} 秒。之後不需要再標記每句時間；其他句子的秒數目前僅估計。`)};
 $('#sentence-play').onclick=()=>play(false);$('#sentence-all').onclick=()=>{selected=0;render();play(true)};
 $('#sentence-prev').onclick=()=>{stop();selected=Math.max(0,selected-1);render();state('第 '+(selected+1)+' 句已顯示')};
-$('#sentence-next').onclick=()=>{stop();selected=Math.min(lines.length-1,selected+1);render();state('第 '+(selected+1)+' 句已顯示；若歌詞尚待核對，不會播放虛構的翻譯。')};
+$('#sentence-next').onclick=()=>{stop();selected=Math.min(lines.length-1,selected+1);render();state('第 '+(selected+1)+' 句已顯示，主唱會往前一步變大並拿麥克風。')};
 $('#sentence-stop').onclick=()=>{stop();state('已停止')};
 $('#sentence-select').onchange=e=>{stop();selected=+e.target.value;render()};
 $('#clear-timing').onclick=()=>{stop();anchor=null;save();render();state('已清除第一句起點，請重新標記一次')};
-$('#save-sentence').onclick=()=>{lines[selected]={english:$('#sentence-english').value.trim(),chinese:$('#sentence-chinese').value.trim()};save();render();state('已儲存第 '+(selected+1)+' 句的文字，時間仍為估計值')};
+$('#save-sentence').onclick=()=>{lines[selected]={member:lines[selected].member,english:$('#sentence-english').value.trim(),chinese:$('#sentence-chinese').value.trim()};save();render();state('已儲存第 '+(selected+1)+' 句的文字，時間仍為估計值')};
 $('#speak-line').onclick=()=>{stop();say(lines[selected].english,'en-US')};
 $('#speak-translation').onclick=()=>{stop();say(lines[selected].chinese,'zh-TW')};
 $('#play').onclick=()=>{if(phase==='idle')play(false);else{stop();state('已停止')}};
@@ -98,5 +105,5 @@ function initYT(){if(window.YT&&YT.Player){makeYT();return}if(document.querySele
 $('#song-btn').onclick=()=>{stop();video.classList.toggle('open');if(video.classList.contains('open')){initYT();$('#song-btn').textContent='🎵 收起原唱影片'}else $('#song-btn').textContent='🎵 播放原唱（官方 MV）'};
 $('#sync-now').onclick=()=>{if(!ytReady)return;ytAnchor=yt.getCurrentTime();sstatus.textContent='已記錄此刻；官方版歌詞時間仍需核對'};
 $('#sync-reset').onclick=()=>{ytAnchor=null;sstatus.textContent='已清除校準'};
-render();state(anchor===null?'請先標記第一句開頭一次；其餘分段會以估算秒數顯示。':'已保留第一句起點。可直接按上一句、下一句切換；後續時間尚未精準校正。');
+render();state(anchor===null?'請先標記第一句開頭一次；第二句歌詞與圖卡已補上。':'已保留第一句起點。可直接按上一句、下一句切換；目前第二句已可顯示與教學。');
 })();</script></body></html>
