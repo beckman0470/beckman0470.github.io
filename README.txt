@@ -1,3 +1,1 @@
-BABYMONSTER EP01 APPROVED VISUAL LAYOUT
-
-Upload babymonster-ep01.html to repository root and assets/bm-approved/drip-stage.jpg to assets/bm-approved/. Overwrite previous babymonster-ep01.html. This corrects the approved pink-neon layout and removes overlaid duplicate characters by using the exact approved stage artwork. It has demonstration karaoke timing ONLY, without BABYMONSTER music or finished cartoon voices. The lyric shown is a short instructional excerpt; do not consider it synchronized to original singing.
+BABYMONSTER 第01集：鼠姊姊演唱錄音接入版。直接解壓到 GitHub Pages 專案根目錄（含 babymonster-ep01.html、assets/bm-approved/drip-stage.jpg、assets/dodo/dodo-song.m4a）。原曲官方 MV 的嵌入入口仍保留。此版僅完成錄音播放及可手動對準單句的亮字連動，尚未逐字精準校準整首歌曲。注意：公開 GitHub Pages 會讓錄音可被公眾存取；若不願公開孩子的歌聲，請勿上傳 assets/dodo/dodo-song.m4a。
