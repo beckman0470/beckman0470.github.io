@@ -13,10 +13,6 @@ if(key==='study'){
  const reset=document.createElement('a');reset.className='study-show-all';reset.href='/articles.html#cards-grid';reset.dataset.journalFilter='all';reset.textContent='看全部文章 →';document.querySelector('.cdj-welcome').after(reset);
  const caption=document.querySelector('.greeting-caption');if(caption)caption.textContent='點相片、小惡魔或健康小物，挑一類文章。';
 }
-if(key==='living'){
- const s=block('客廳的小角落','點神桌認識家人的信仰與故事。'),stage=document.querySelector('.cdj-greeting[data-room=living]');if(!stage)return;
- const shrine=document.createElement('section');shrine.id='family-shrine';shrine.className='shrine-menu';shrine.innerHTML='<h3>神桌小角落</h3><div><a href="/articles.html?room=zschen#cards-grid">珍山陳祖先・列祖列宗｜讀經典語錄</a>'+['清水祖師','觀世音菩薩','關聖帝君'].map((n,i)=>'<a href="/ama-games.html?game=puzzle&person='+['qingshui','guanyin','guansheng'][i]+'">'+n+'｜玩兔阿嬤神明拼圖</a>').join('')+'</div>';s.append(shrine);
-}
 if(key==='bathroom')choicesGame('浴室生活小遊戲','陪鼠姊姊和龍弟弟練習，安全又乾淨。',[
  ['要上廁所了，先做什麼？',['拉好衣物，坐穩馬桶','站在馬桶蓋上','在浴室跑來跑去'],0,'拉好衣物並坐穩，需要時請大人幫忙。'],
  ['上完廁所，要記得？',['馬上跑出去','擦拭、整理衣物，再沖水','把玩具丟進馬桶'],1,'做好清潔、整理衣物，再沖水。'],
