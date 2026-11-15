@@ -1,11 +1,9 @@
 {
-  "format": "bm-line-timecodes-v2",
+  "format": "bm-sentence-timing-v2",
   "unit": "seconds",
   "origin": 0,
-  "audio": "dodo-song.m4a",
-  "offsetFromMVSeconds": -5,
-  "quality": "LRC line-aligned; split verses estimated; individual words NOT verified",
-  "source": "https://www.lyricdown.com/lrc/babymonster-drip-15872191",
+  "method": "external LRC - 5 seconds offset; some split estimates, not voice-aligned",
+  "wordAlignment": "pending",
   "lines": [
     {
       "line": 1,
