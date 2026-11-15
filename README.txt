@@ -1,1 +1,1 @@
-BABYMONSTER 第01集：鼠姊姊演唱錄音接入版。直接解壓到 GitHub Pages 專案根目錄（含 babymonster-ep01.html、assets/bm-approved/drip-stage.jpg、assets/dodo/dodo-song.m4a）。原曲官方 MV 的嵌入入口仍保留。此版僅完成錄音播放及可手動對準單句的亮字連動，尚未逐字精準校準整首歌曲。注意：公開 GitHub Pages 會讓錄音可被公眾存取；若不願公開孩子的歌聲，請勿上傳 assets/dodo/dodo-song.m4a。
+雞窩 v8：僅更新 articles.html、css/room-activities.css、js/house-rooms.js。取消雞窩滿版/位移覆蓋，讓標題列與場景上下排列且置中。五個物件改用原生連結切換分類，避免 JS 攔截失效。沿用已上傳的 room-study.webp。請上傳同名相對路徑檔案。未直接部署 GitHub。

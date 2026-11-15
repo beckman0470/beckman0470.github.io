@@ -25,14 +25,6 @@ html body[data-welcome-page] .cdj-room-entrance .cdj-welcome-summary{font-size:c
 .room-item.altar-item{width:2.3%;min-width:20px;height:14%;border:2px solid transparent;border-radius:12px;box-sizing:border-box}.altar-item .room-item-label{opacity:0;width:max-content;position:absolute;top:100%;left:50%;translate:-50%;max-width:140px;white-space:normal;text-align:center}.altar-item:hover,.altar-item:focus-visible{background:#ffef9b44;border-color:#ffdd75;box-shadow:0 0 24px #ffdf6999}
 .room-item.shrine-mobile{display:none}.shrine-menu{margin-top:24px}.shrine-menu>div{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.shrine-menu a{display:flex;align-items:center;min-height:44px;padding:10px;border:1px solid #cfb991;border-radius:12px;background:#faf1df;color:#5d4d31;text-decoration:none}
 .room-activity:focus{outline:2px solid #c7ac65;outline-offset:5px}
-.study-objects{position:absolute;inset:5% 5% auto 46%;height:38%;z-index:5;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px 20px;align-items:center}
-.study-object{position:relative;display:flex;align-items:center;justify-content:center;height:100%;min-height:86px;text-decoration:none;filter:drop-shadow(0 4px 4px #533b2633);transition:filter .2s,transform .2s}
-.study-object:hover,.study-object:focus-visible,.study-object.active{filter:drop-shadow(0 0 12px #ffe889);transform:translateY(-4px);outline:2px solid #b68a39;outline-offset:6px;border-radius:12px}
-.study-object>img{display:block;width:100%;height:100%;max-height:128px;object-fit:cover;border:7px ridge #a67947;border-radius:3px;box-sizing:border-box;background:#f9edcc}
-.object-label{position:absolute;bottom:-14px;left:50%;translate:-50%;white-space:nowrap;font:600 clamp(12px,1.1vw,17px)/1.5 system-ui;color:#3b533e;background:#fff8dfed;border-radius:6px;padding:3px 9px}
-.object-devil{display:block;width:130px;height:130px;background:url('/assets/greetings/v1/devil.webp') 0 0/300% 200% no-repeat}
-.object-ancestor{display:block;width:110px;height:110px;background:#f7e8c6 url('/assets/greetings/v1/zschen.webp') 0 0/300% 200% no-repeat;border:7px ridge #a67947;border-radius:4px}
-.health-tools svg{width:115px;height:100px;filter:drop-shadow(0 2px 3px #fff8)}
 .study-show-all{display:inline-block;padding:12px 20px;margin:0 0 20px;color:#40634d;border:1px solid #bcccb3;border-radius:24px;background:#fffdf7;text-decoration:none}
 .room-activity{margin:24px 0 36px;padding:24px;border:1px solid #d6dfca;border-radius:22px;background:#fffdf6;color:#354f3b;scroll-margin-top:20px}
 .room-activity h2{margin:0 0 12px;font-size:26px}.room-activity h3{line-height:1.7;font-size:21px}.room-activity p{line-height:1.8;color:#64715f}
@@ -50,8 +42,6 @@ html body[data-welcome-page] .cdj-room-entrance .cdj-welcome-summary{font-size:c
 .cdj-welcome [data-room=living] .greeting-character:nth-of-type(3){left:90%}
 .cdj-welcome [data-room=living] .greeting-character:nth-of-type(4){--frame:92px;left:48%;bottom:32px}
 .cdj-welcome [data-room=living] .greeting-character:nth-of-type(5){--frame:90px;left:70%;bottom:30px}
-.study-objects{inset:10px 14px auto;height:155px;gap:12px 20px}.study-object{min-height:55px}.study-object>img{max-height:65px;border-width:4px}.object-devil{width:66px;height:66px}.object-ancestor{width:56px;height:56px;border-width:4px}.health-tools svg{width:66px;height:60px}.object-label{font-size:11px;bottom:-10px;padding:1px 5px}
-.cdj-welcome .cdj-greeting[data-room=study]{height:355px!important}
 .room-activity{padding:18px;margin:20px 0 28px}.room-activity h2{font-size:23px}.room-activity h3{font-size:18px}.kitchen-menu{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.kitchen-dish strong{font-size:19px}
 .cdj-greeting .room-paper{width:36px;height:36px;font-size:28px;line-height:36px}.room-paper span{margin:3px}
 .room-item{min-width:44px;min-height:44px}.room-item-art{font-size:31px}.room-item-label{font-size:10px;padding:2px 4px;max-width:105px;white-space:normal;text-align:center}
@@ -121,71 +111,97 @@ html body[data-welcome-page] .cdj-room-entrance .cdj-welcome-label{font-size:11p
 }
 @media(max-width:760px){html body[data-welcome-page] main>.cdj-room-entrance h1{font-size:25px!important;line-height:1.5!important;margin-bottom:0!important}}
 
-/* 2026-11-15 雞窩：書房背景上的物件即為分類入口（不再疊加人物肖像或裝飾卡片） */
-.cdj-welcome .cdj-greeting[data-room="study"]{width:min(100%,960px)!important;height:auto!important;aspect-ratio:3/2;max-width:960px;overflow:visible;isolation:isolate;background:#e9dfc9;border-radius:18px}
-.cdj-greeting[data-room="study"] .greeting-scene{inset:0!important;background-position:center center!important;background-size:cover!important;background-repeat:no-repeat!important;border-radius:18px}
-.cdj-greeting[data-room="study"] .study-objects{position:absolute!important;inset:0!important;height:100%!important;width:100%!important;z-index:8;display:block!important;pointer-events:none}
-.cdj-greeting[data-room="study"] .study-object{position:absolute!important;display:block!important;height:auto!important;min-height:0!important;opacity:1;background:transparent!important;border-radius:12px;box-sizing:border-box;outline:0;pointer-events:auto;cursor:pointer;transform:none!important;filter:none!important;transition:box-shadow .16s ease,background-color .16s ease!important}
-.cdj-greeting[data-room="study"] .study-object.genealogy{left:4.8%;top:28.5%;width:18%;height:13%}
-.cdj-greeting[data-room="study"] .study-object.devil-doll{left:7.8%;top:45.5%;width:12.5%;height:16%}
-.cdj-greeting[data-room="study"] .study-object.family-photo{left:54%;top:34%;width:11%;height:13%}
-.cdj-greeting[data-room="study"] .study-object.kids-books{left:85.5%;top:25%;width:13.5%;height:21%}
-.cdj-greeting[data-room="study"] .study-object.dumbbell{left:85.5%;top:50%;width:14.5%;height:16.5%}
-.cdj-greeting[data-room="study"] .study-object:hover,.cdj-greeting[data-room="study"] .study-object:focus-visible{background:#ffe6a72b!important;outline:2px solid #ffe0a9!important;outline-offset:1px;box-shadow:0 0 0 5px #ffffff22,0 0 16px #ffe8a788!important}
-.cdj-greeting[data-room="study"] .study-object .object-label{position:absolute;bottom:auto;top:100%;left:50%;translate:-50% 3px;opacity:0;pointer-events:none;white-space:nowrap;font:600 clamp(10px,1.35vw,15px)/1.5 "Microsoft JhengHei",sans-serif;background:#fff9edee;color:#315540;border:1px solid #d9d6b9;border-radius:8px;padding:3px 7px;box-shadow:0 3px 8px #0002;z-index:15}
-.cdj-greeting[data-room="study"] .study-object:hover .object-label,.cdj-greeting[data-room="study"] .study-object:focus-visible .object-label{opacity:1}
-.cdj-greeting[data-room="study"] .greeting-character:not(.greeting-cat){--frame:150px;left:49%!important;bottom:5%!important;z-index:4;scale:.72}
-.cdj-greeting[data-room="study"] .greeting-cat{z-index:6;bottom:5%!important;scale:.8}
-.cdj-greeting[data-room="study"] .greeting-cat:last-of-type{left:66%}
-.cdj-greeting[data-room="study"] .greeting-caption{bottom:4px;left:12px;right:94px;background:#fff9eddd;border-radius:8px;padding:2px 8px!important;max-width:max-content;font-size:11px!important;z-index:12}
-.cdj-greeting[data-room="study"] .greeting-pause{z-index:12}
-@media(max-width:760px){.cdj-welcome .cdj-greeting[data-room="study"]{height:auto!important;min-height:0!important}.cdj-greeting[data-room="study"] .greeting-character:not(.greeting-cat){--frame:110px}.cdj-greeting[data-room="study"] .greeting-cat{scale:.6}.cdj-greeting[data-room="study"] .greeting-caption{font-size:9px!important;right:62px}.cdj-greeting[data-room="study"] .study-object .object-label{font-size:10px}}
 
 
-
-/* Chicken coop v6: one horizontal centering rule, no compounded left offsets. */
-html body[data-welcome-page="articles"] main#journal-page > section.cdj-welcome,
-html body[data-welcome-page="articles"] main#journal-page > section.cdj-welcome.cdj-room-entrance {
-  position:relative!important;
-  display:block!important;
-  left:0!important;
-  right:auto!important;
-  transform:none!important;
-  width:100vw!important;
-  max-width:none!important;
-  min-width:0!important;
-  margin-left:calc((100% - 100vw) / 2)!important;
-  margin-right:0!important;
-  padding:0!important;
-  box-sizing:border-box!important;
+/* Chicken coop only — one canonical centered layout.
+   No viewport-wide offsets; consistent with the other site's rooms. */
+body[data-welcome-page="articles"] main#journal-page > .cdj-welcome.cdj-room-entrance {
+  display:flex!important; flex-direction:column!important; align-items:center!important;
+  position:relative!important; left:auto!important; right:auto!important;
+  transform:none!important; float:none!important; min-height:0!important;
+  width:min(100%, 1120px)!important; max-width:100%!important;
+  margin:0 auto 22px!important; padding:0!important; gap:8px!important;
+  box-sizing:border-box!important; container-type:normal!important;
 }
-html body[data-welcome-page="articles"] main#journal-page > section.cdj-welcome > .cdj-greeting[data-room="study"] {
-  position:relative!important;
-  display:block!important;
-  width:100%!important;
-  max-width:none!important;
-  min-width:0!important;
-  height:auto!important;
-  aspect-ratio:16 / 9!important;
-  margin:0!important;
-  padding:0!important;
-  border-radius:0!important;
-  overflow:hidden!important;
+body[data-welcome-page="articles"] main#journal-page > .cdj-welcome .cdj-welcome-copy {
+  display:flex!important; align-items:center!important; gap:14px!important;
+  position:relative!important; left:auto!important; right:auto!important; top:auto!important;
+  order:0!important; width:100%!important; max-width:none!important;
+  box-sizing:border-box!important; min-width:0!important;
+  padding:6px 12px!important; margin:0!important;
+  background:#fff9eb!important; border:1px solid #e9dfbe!important;
+  border-radius:12px!important; box-shadow:none!important; z-index:1!important;
 }
-html body[data-welcome-page="articles"] main#journal-page > section.cdj-welcome > .cdj-greeting[data-room="study"] > .greeting-scene {
-  position:absolute!important;
-  inset:0!important;
-  width:100%!important;
-  height:100%!important;
-  background-size:cover!important;
-  background-position:center!important;
-  background-repeat:no-repeat!important;
-  border-radius:0!important;
+body[data-welcome-page="articles"] main#journal-page .cdj-welcome-copy .cdj-welcome-label {
+  font-size:13px!important; margin:0!important; white-space:nowrap!important;
 }
-html body[data-welcome-page="articles"] main#journal-page > section.cdj-welcome > .cdj-welcome-copy {
-  position:absolute!important;
-  z-index:12!important;
+body[data-welcome-page="articles"] main#journal-page .cdj-welcome-copy h1 {
+  font-size:clamp(15px,2vw,23px)!important; margin:0!important; line-height:1.4!important;
 }
-@media(max-width:760px){
- html body[data-welcome-page="articles"] main#journal-page > section.cdj-welcome > .cdj-greeting[data-room="study"] {aspect-ratio:3 / 2!important;}
+body[data-welcome-page="articles"] main#journal-page > .cdj-welcome > .cdj-greeting[data-room="study"] {
+  order:1!important; display:block!important; position:relative!important;
+  width:100%!important; max-width:none!important; min-width:0!important;
+  height:auto!important; min-height:0!important; aspect-ratio:3 / 2!important;
+  margin:0 auto!important; padding:0!important; border-radius:18px!important;
+  overflow:hidden!important; background:#f7dfa9!important; isolation:isolate!important;
+}
+body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] > .greeting-scene {
+  position:absolute!important; inset:0!important; height:100%!important; width:100%!important;
+  background-size:contain!important; background-position:center!important; background-repeat:no-repeat!important;
+  border-radius:18px!important; pointer-events:none!important; z-index:0!important;
+}
+body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] > .study-objects {
+  position:absolute!important; inset:0!important; width:100%!important; height:100%!important;
+  display:block!important; margin:0!important; padding:0!important;
+  z-index:30!important; pointer-events:none!important;
+}
+body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .study-object {
+  position:absolute!important; display:block!important; padding:0!important;
+  height:auto!important; min-height:0!important; min-width:0!important;
+  cursor:pointer!important; pointer-events:auto!important; touch-action:manipulation!important;
+  z-index:31!important; border:1px solid transparent!important;
+  border-radius:9px!important; background:transparent!important; opacity:1!important;
+  transform:none!important; filter:none!important; box-sizing:border-box!important;
+}
+body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .study-object.genealogy {left:4%;top:25%;width:18%;height:16%}
+body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .study-object.devil-doll {left:6%;top:42%;width:16%;height:20%}
+body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .study-object.family-photo {left:50%;top:27%;width:14%;height:18%}
+body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .study-object.kids-books {left:82%;top:24%;width:17%;height:22%}
+body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .study-object.dumbbell {left:81%;top:47%;width:18%;height:21%}
+body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .study-object:is(:hover,:focus-visible) {
+  outline:3px solid #ffce60!important; outline-offset:0!important;
+  background:#ffef8c44!important; box-shadow:0 0 0 3px #fff7d8!important;
+}
+body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .study-object .object-label {
+  display:block!important; position:absolute!important; top:100%!important;
+  bottom:auto!important; left:50%!important; translate:-50% 3px!important;
+  opacity:0!important; pointer-events:none!important; white-space:nowrap!important;
+  padding:3px 7px!important; border-radius:7px!important;
+  font:600 12px/1.4 "Microsoft JhengHei",sans-serif!important;
+  background:#fff8dd!important; color:#39503a!important;
+}
+body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .study-object:is(:hover,:focus-visible) .object-label {opacity:1!important}
+body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .greeting-character:not(.greeting-cat) {
+  --frame:clamp(100px,12vw,165px)!important; left:47%!important;
+  bottom:4%!important; scale:.7!important; z-index:5!important;
+}
+body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .greeting-cat {
+  bottom:4%!important; scale:.7!important; z-index:6!important;
+}
+body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .greeting-cat:last-of-type {left:71%!important}
+body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .greeting-caption {
+  position:absolute!important; left:10px!important; bottom:5px!important; right:90px!important;
+  width:max-content!important; max-width:calc(100% - 104px)!important;
+  padding:3px 7px!important; background:#fff9edec!important;
+  border-radius:7px!important; font-size:11px!important; z-index:10!important;
+}
+body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .greeting-pause {z-index:10!important}
+@media(max-width:760px) {
+ body[data-welcome-page="articles"] main#journal-page > .cdj-welcome.cdj-room-entrance {width:100%!important;gap:6px!important}
+ body[data-welcome-page="articles"] main#journal-page > .cdj-welcome .cdj-welcome-copy {padding:5px 8px!important}
+ body[data-welcome-page="articles"] main#journal-page .cdj-welcome-copy h1 {font-size:14px!important}
+ body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .greeting-character:not(.greeting-cat) {--frame:90px!important}
+ body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .greeting-cat {scale:.5!important}
+ body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .greeting-caption {font-size:9px!important}
+ body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .study-object .object-label {font-size:10px!important}
 }

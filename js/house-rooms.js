@@ -60,7 +60,18 @@ if(welcome)hero.querySelector('h1').textContent=welcome;
 const summary=hero.querySelector('.cdj-welcome-summary');if(summary)summary.hidden=true;
 });
 function viewportSize(){document.documentElement.style.setProperty('--cdj-scrollbar',(innerWidth-document.documentElement.clientWidth)+'px');document.documentElement.style.setProperty('--cdj-header-height',(document.querySelector('header')?.getBoundingClientRect().height||104)+'px');}viewportSize();window.addEventListener('resize',viewportSize);if('ResizeObserver'in window&&document.querySelector('header'))new ResizeObserver(viewportSize).observe(document.querySelector('header'));
-document.addEventListener('click',e=>{const a=e.target.closest('[data-journal-filter]');if(a&&window.cdjSelectJournal){e.preventDefault();window.cdjSelectJournal(a.dataset.journalFilter);}});
+document.addEventListener('click',e=>{
+const a=e.target.closest('[data-journal-filter]');
+if(!a)return;
+if(a.classList.contains('study-object')) return; // Native href navigates to the room filter + article list.
+if(!window.cdjSelectJournal)return;
+e.preventDefault();
+window.cdjSelectJournal(a.dataset.journalFilter);
+if(a.classList.contains('study-object')){
+  const grid=document.getElementById('cdj-filter-status')||document.getElementById('cards-grid');
+  if(grid)requestAnimationFrame(()=>grid.scrollIntoView({behavior:'smooth',block:'start'}));
+}
+});
 bind();
 // Gentle, staggered room life. Speech starts only after a visitor taps a person.
 document.querySelectorAll('.cdj-greeting').forEach(room=>{
