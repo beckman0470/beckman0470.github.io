@@ -1,13 +1,15 @@
-BABYMONSTER〈DRIP〉Q版七人成員／台灣國語活潑配音版
+BABYMONSTER DRIP — 29 段音軌／點選歌詞學單字版
 
-這版人物由左至右：RUKA、PHARITA、ASA、AHYEON、RAMI、RORA、CHIQUITA。
-舞台七位人物會隨正在演唱的成員亮起、微微放大，並顯示麥克風；CHIQUITA 已縮回與其他角色相近的比例。
-中文教學 TTS 優先選用 zh-TW 語音；語速及音調提高，接近活潑幼兒園老師語氣。實際音色仍取決於電腦已安裝的台灣國語語音。
+更新 GitHub 專案 beckman0470/beckman0470.github.io：
+1. 將 babymonster-ep01.html 放在儲存庫根目錄，覆蓋同名檔案。
+2. 上傳 assets/bm-audio/drip-reference.m4a 至相同相對路徑。
+3. 上傳 assets/bm-members/ 內的七張角色圖片，保留資料夾結構。
+4. 開啟 https://beckman0470.github.io/babymonster-ep01.html?v=audio29
 
-上傳 GitHub 儲存庫 beckman0470/beckman0470.github.io：
-1. 覆蓋根目錄 babymonster-ep01.html
-2. 新增或更新 assets/bm-members/ 內的七張 PNG（務必保持目錄結構）
-3. 保留原本網站其他 assets 資料夾內容不動
-4. 更新後可開啟 https://beckman0470.github.io/babymonster-ep01.html?v=videoorder-voice
+教學：每段演唱結束只朗讀該段的整句繁體中文；點擊歌詞才顯示單字圖卡。
+29 段切換時間依照提供的 videoplayback.mp4 既有色彩判讀結果。
+中文語音採用瀏覽器可用的台灣國語 zh-TW 語音。
 
-本包已包含前版的 29 段歌詞換色教學控制和 55 句教學資料。
+注意：drip-reference.m4a 是從使用者提供的影片擷取的音訊。
+歌曲音訊可能受著作權保護，公開放置在 GitHub Pages 前請先確認公開傳播權利。
+若無公開授權，適合改用合法授權音檔或在網站嵌入可見的 YouTube 播放器。

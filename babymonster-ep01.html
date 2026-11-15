@@ -36,14 +36,30 @@
 .member-spot.active[data-singer="CHIQUITA"] img.avatar{transform:scale(1.09)}
 @media(max-width:980px){.members-stage{grid-template-columns:repeat(4,minmax(0,1fr))}.member-spot{min-height:220px}.member-spot img.avatar{max-height:152px}.member-spot[data-singer="CHIQUITA"] img.avatar{max-height:146px}}
 @media(max-width:640px){.members-stage{grid-template-columns:repeat(3,minmax(0,1fr))}.member-spot{min-height:204px}.member-spot .nameplate{padding:6px 10px;font-size:12px}}
-</style></head><body><main class="wrap"><section class="screen"><div class="top"><div class="brand"><b>BABYMONSTER</b><span>鼠姊姊・英韓小教室</span></div><div class="lyrics" id="lyrics" aria-label="當前歌詞"></div></div><div class="meta"><span class="pill">DRIP · <span id="counter">1 / 55</span></span><span id="member">粉紅霓虹舞台</span></div><section class="stage-board" aria-label="BABYMONSTER Q版舞台人物"><div class="stage-topline member-legend" id="member-legend"><span data-singer="RUKA" style="color:#8786ff">RUKA</span><span data-singer="PHARITA" style="color:#ed9c48">PHARITA</span><span data-singer="ASA" style="color:#ff4ca5">ASA</span><span data-singer="AHYEON" style="color:#ed5362">AHYEON</span><span data-singer="RAMI" style="color:#39bfe7">RAMI</span><span data-singer="RORA" style="color:#efc746">RORA</span><span data-singer="CHIQUITA" style="color:#59b849">CHIQUITA</span></div><div class="members-stage" id="members-stage"><div class="member-spot" data-singer="RUKA" style="color:#8786ff"><div class="avatar-wrap"><img class="avatar" src="/assets/bm-members/RUKA.png" alt="RUKA Q版人物"><span class="mic">🎤</span></div><div class="nameplate">RUKA</div><div class="tag">正在唱歌</div></div><div class="member-spot" data-singer="PHARITA" style="color:#ed9c48"><div class="avatar-wrap"><img class="avatar" src="/assets/bm-members/PHARITA.png" alt="PHARITA Q版人物"><span class="mic">🎤</span></div><div class="nameplate">PHARITA</div><div class="tag">正在唱歌</div></div><div class="member-spot" data-singer="ASA" style="color:#ff4ca5"><div class="avatar-wrap"><img class="avatar" src="/assets/bm-members/ASA.png" alt="ASA Q版人物"><span class="mic">🎤</span></div><div class="nameplate">ASA</div><div class="tag">正在唱歌</div></div><div class="member-spot" data-singer="AHYEON" style="color:#ed5362"><div class="avatar-wrap"><img class="avatar" src="/assets/bm-members/AHYEON.png" alt="AHYEON Q版人物"><span class="mic">🎤</span></div><div class="nameplate">AHYEON</div><div class="tag">正在唱歌</div></div><div class="member-spot" data-singer="RAMI" style="color:#39bfe7"><div class="avatar-wrap"><img class="avatar" src="/assets/bm-members/RAMI.png" alt="RAMI Q版人物"><span class="mic">🎤</span></div><div class="nameplate">RAMI</div><div class="tag">正在唱歌</div></div><div class="member-spot" data-singer="RORA" style="color:#efc746"><div class="avatar-wrap"><img class="avatar" src="/assets/bm-members/RORA.png" alt="RORA Q版人物"><span class="mic">🎤</span></div><div class="nameplate">RORA</div><div class="tag">正在唱歌</div></div><div class="member-spot" data-singer="CHIQUITA" style="color:#59b849"><div class="avatar-wrap"><img class="avatar" src="/assets/bm-members/CHIQUITA.png" alt="CHIQUITA Q版人物"><span class="mic">🎤</span></div><div class="nameplate">CHIQUITA</div><div class="tag">正在唱歌</div></div></div></section><div class="translation"><label>整句直譯</label><strong id="translation"></strong><button class="speech" id="zh-read" type="button" title="朗讀中文">🔊 中文</button></div><div class="cards" id="cards"></div><div class="toolbar"><a class="back" href="/rooms.html?room=games">⌂ 回遊戲間</a><button id="previous" type="button">◀ 上一句</button><select id="selector" aria-label="選擇歌詞句子"></select><button id="next" type="button">下一句 ▶</button><button class="primary" id="teach" type="button">🔊 中文逐詞教學</button></div><div class="status" id="status">已套用使用者提供的分色歌詞影片，依成員換色時間段教學。</div><section class="cue-bar" aria-label="演唱者換色自動暫停教學">
-<button class="main" type="button" id="cue-start">▶ 從頭開始，換人就教學</button>
+</style><style id="audio-lesson-style">
+#cards{display:none}#cards.show-cards{display:grid}
+#lyrics{display:flex;flex-direction:column;gap:9px;align-items:stretch;min-height:100px}
+#lyrics button.cue-lyric{display:block;width:100%;padding:10px 12px;border:2px solid #ffffff44;border-radius:14px;background:#ffffff0b;color:var(--cue-color,#fff);font-size:clamp(17px,2.45vw,30px);font-weight:900;text-align:center;line-height:1.35;cursor:pointer;transition:background .15s ease,transform .15s ease}
+#lyrics button.cue-lyric:hover,#lyrics button.cue-lyric:focus-visible{background:#ffffff20;transform:scale(1.008)}
+#lyrics button.cue-lyric.open{background:#fff5fe;color:#742050;border-color:#ffcaeb}
+#lyrics .cue-tap-hint{font-size:13px;color:#ffe9fb;text-align:center;font-weight:750}
+#translation{white-space:pre-line;line-height:1.65}
+#translation[data-teaching="false"]{color:#724c64;font-size:clamp(16px,2vw,21px)}
+#lesson-toggle-hint{margin:0 16px 12px;padding:9px 13px;border-radius:15px;background:#fff8fb;color:#8f3371;font-weight:800;text-align:center}
+#official-area{padding:13px 17px;text-align:center}
+#official-area .lesson-audio{width:min(100%,720px);display:block;margin:10px auto}
+#official-area .audio-help{font-size:14px;color:#fbe8f6}
+#dodo-mode,#dodo-area,#mv,.sync-panel,.note{display:none!important}
+.source-choose{justify-content:center}
+@media(max-width:600px){#lyrics button.cue-lyric{font-size:18px;padding:9px 6px}}
+</style></head><body><main class="wrap"><section class="screen"><div class="top"><div class="brand"><b>BABYMONSTER</b><span>鼠姊姊・英韓小教室</span></div><div class="lyrics" id="lyrics" aria-label="當前歌詞"></div></div><div class="meta"><span class="pill">DRIP · <span id="counter">段落 1 / 29</span></span><span id="member">粉紅霓虹舞台</span></div><section class="stage-board" aria-label="BABYMONSTER Q版舞台人物"><div class="stage-topline member-legend" id="member-legend"><span data-singer="RUKA" style="color:#8786ff">RUKA</span><span data-singer="PHARITA" style="color:#ed9c48">PHARITA</span><span data-singer="ASA" style="color:#ff4ca5">ASA</span><span data-singer="AHYEON" style="color:#ed5362">AHYEON</span><span data-singer="RAMI" style="color:#39bfe7">RAMI</span><span data-singer="RORA" style="color:#efc746">RORA</span><span data-singer="CHIQUITA" style="color:#59b849">CHIQUITA</span></div><div class="members-stage" id="members-stage"><div class="member-spot" data-singer="RUKA" style="color:#8786ff"><div class="avatar-wrap"><img class="avatar" src="/assets/bm-members/RUKA.png" alt="RUKA Q版人物"><span class="mic">🎤</span></div><div class="nameplate">RUKA</div><div class="tag">正在唱歌</div></div><div class="member-spot" data-singer="PHARITA" style="color:#ed9c48"><div class="avatar-wrap"><img class="avatar" src="/assets/bm-members/PHARITA.png" alt="PHARITA Q版人物"><span class="mic">🎤</span></div><div class="nameplate">PHARITA</div><div class="tag">正在唱歌</div></div><div class="member-spot" data-singer="ASA" style="color:#ff4ca5"><div class="avatar-wrap"><img class="avatar" src="/assets/bm-members/ASA.png" alt="ASA Q版人物"><span class="mic">🎤</span></div><div class="nameplate">ASA</div><div class="tag">正在唱歌</div></div><div class="member-spot" data-singer="AHYEON" style="color:#ed5362"><div class="avatar-wrap"><img class="avatar" src="/assets/bm-members/AHYEON.png" alt="AHYEON Q版人物"><span class="mic">🎤</span></div><div class="nameplate">AHYEON</div><div class="tag">正在唱歌</div></div><div class="member-spot" data-singer="RAMI" style="color:#39bfe7"><div class="avatar-wrap"><img class="avatar" src="/assets/bm-members/RAMI.png" alt="RAMI Q版人物"><span class="mic">🎤</span></div><div class="nameplate">RAMI</div><div class="tag">正在唱歌</div></div><div class="member-spot" data-singer="RORA" style="color:#efc746"><div class="avatar-wrap"><img class="avatar" src="/assets/bm-members/RORA.png" alt="RORA Q版人物"><span class="mic">🎤</span></div><div class="nameplate">RORA</div><div class="tag">正在唱歌</div></div><div class="member-spot" data-singer="CHIQUITA" style="color:#59b849"><div class="avatar-wrap"><img class="avatar" src="/assets/bm-members/CHIQUITA.png" alt="CHIQUITA Q版人物"><span class="mic">🎤</span></div><div class="nameplate">CHIQUITA</div><div class="tag">正在唱歌</div></div></div></section><div class="translation"><label>整句直譯</label><strong id="translation"></strong><button class="speech" id="zh-read" type="button" title="朗讀中文">🔊 中文</button></div><div id="lesson-toggle-hint">點選上方任一句歌詞，即可展開該句的單字圖卡與中文解釋。</div><div class="cards" id="cards"></div><div class="toolbar"><a class="back" href="/rooms.html?room=games">⌂ 回遊戲間</a><button id="previous" type="button">◀ 上一句</button><select id="selector" aria-label="選擇歌詞句子"></select><button id="next" type="button">下一句 ▶</button><button class="primary" id="teach" type="button">🔊 點選歌詞後學單字</button></div><div class="status" id="status">已套用使用者提供的分色歌詞影片，依成員換色時間段教學。</div><section class="cue-bar" aria-label="演唱者換色自動暫停教學">
+<button class="main" type="button" id="cue-start">▶ 從頭開始・唱一段教一段</button>
 <button type="button" id="cue-stop">■ 暫停教學</button>
 <button type="button" id="cue-repeat">↻ 重聽本段</button>
 <button type="button" id="cue-next">▶ 下一段</button>
 <span id="cue-count" class="cue-progress">29 個成員演唱段落</span>
-<div id="cue-message" class="cue-state" aria-live="polite">載入 YouTube 播放器後，點「從頭開始」即可逐段唱歌、逐段解說。</div>
-</section><div class="source-choose" aria-label="選擇播放音源"><button type="button" id="official-mode" class="active">🎵 指定分色歌詞影片</button><button type="button" id="dodo-mode">🎤 鼠姊姊演唱</button><a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=cXvi0qdC6FU">↗ 在 YouTube 看分色歌詞影片</a></div><p class="source-description" id="source-description">依照你提供的影片辨識演唱者換色時間。播放每段後自動暫停，進行一次中文教學。</p><section class="dodo-area hidden" id="dodo-area"><strong>鼠姊姊演唱（可在此頁直接播放）</strong><audio id="dodo-player" controls preload="metadata"><source src="/assets/dodo/dodo-song.m4a" type="audio/mp4">此瀏覽器無法播放錄音。</audio><small>這是備用錄音；主要教學採用指定分色影片。</small></section><section class="video" id="official-area" aria-label="BABYMONSTER 官方 MV"><div class="video-layout"><div class="yt"><iframe id="mv" src="https://www.youtube.com/embed/cXvi0qdC6FU?enablejsapi=1&playsinline=1&rel=0" title="BABYMONSTER DRIP 分色歌詞影片" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="eager"></iframe></div><div class="player-actions"><p><strong>🎵 成員換色暫停教學</strong><br>從上方按「從頭開始」。影片按角色換色切換點暫停，逐句朗讀中文與單字意思，教完自動接續。七位 Q 版人物保留在粉紅舞台，名字與歌詞顏色對應。</p><button type="button" id="reset" >↺ 回到第 1 句</button><a href="https://www.youtube.com/watch?v=cXvi0qdC6FU" target="_blank" rel="noopener noreferrer" style="color:#fff">開啟原始 YouTube 影片</a></div></div></section><section class="sync-panel" aria-label="逐字同步與逐句教學"><div class="sync-row">
+<div id="cue-message" class="cue-state" aria-live="polite">按「從頭開始」，每段唱完朗讀整段中文。點歌詞可展開單字。</div>
+</section><div class="source-choose" aria-label="音樂來源"><button type="button" id="official-mode" class="active">🎵 分色歌詞音軌</button><button type="button" id="dodo-mode">🎤 鼠姊姊演唱</button><a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=cXvi0qdC6FU">↗ 查看原始分色影片</a></div><p class="source-description" id="source-description">音訊擷取自你提供的影片檔；我們的英韓字幕與七位 Q 版人物跟著換色時間軸同步。</p><section class="dodo-area hidden" id="dodo-area"><strong>鼠姊姊演唱（備用錄音）</strong><audio id="dodo-player" controls preload="metadata"><source src="/assets/dodo/dodo-song.m4a" type="audio/mp4">目前瀏覽器未提供音訊播放。</audio></section><section class="video" id="official-area" aria-label="BABYMONSTER DRIP 分色歌詞音軌"><strong>🎵 DRIP · 音樂教室</strong><audio class="lesson-audio" id="lesson-audio" controls preload="metadata"><source src="/assets/bm-audio/drip-reference.m4a" type="audio/mp4">目前瀏覽器未提供音訊播放。</audio><p class="audio-help">播放與暫停由上方教學按鈕控制；歌詞由我們的頁面顯示。</p><div class="player-actions"><button type="button" id="reset">↺ 回到第 1 段</button></div></section><section class="sync-panel" aria-label="逐字同步與逐句教學"><div class="sync-row">
 <strong>🎼 逐句暫停教學</strong><span id="sync-badge" class="sync-badge">尚無對齊時間碼</span>
 <button id="sync-start" disabled>▶ 從第 1 句自動學</button><button id="sync-halt" disabled>■ 停止</button>
 <label class="sync-import" for="sync-upload">匯入 LyricTimestamps JSON</label><input id="sync-upload" type="file" accept=".json,application/json" />
@@ -123,133 +139,120 @@ async function teachWord(i){const line=lines[selected],w=(line.english||'').spli
 function change(i){run++;window.speechSynthesis?.cancel();selected=Math.max(0,Math.min(lines.length-1,i));render()}
 $('#selector').replaceChildren(...lines.map((l,i)=>{const o=document.createElement('option');o.value=i;o.textContent=`${i+1}. ${l.english?.slice(0,45)||'待補'}`;return o}));$('#previous').onclick=()=>change(selected-1);$('#next').onclick=()=>change(selected+1);$('#selector').onchange=e=>change(Number(e.target.value));$('#reset').onclick=()=>change(0);$('#zh-read').onclick=()=>{run++;window.speechSynthesis?.cancel();speak(lines[selected].chinese,'zh-TW')};$('#teach').onclick=async()=>{const n=++run;window.speechSynthesis?.cancel();const line=lines[selected],words=(line.english||'').split(/\s+/).filter(Boolean);$('#status').textContent='整句中文：'+line.chinese;await speak(line.chinese,'zh-TW');for(let i=0;i<words.length;i++){if(n!==run)return;const c=tokenInfo(i,words[i]);$('#status').textContent=`${words[i]}：${c.meaning}`;await speak(words[i],c.language||'en-US');if(n!==run)return;await speak(c.meaning,'zh-TW')}if(n===run)$('#status').textContent='第 '+(selected+1)+' 句教學完成。'};$('#official-mode').onclick=()=>{document.querySelector('#dodo-player').pause();$('#official-area').classList.remove('hidden');$('#dodo-area').classList.add('hidden');$('#official-mode').classList.add('active');$('#dodo-mode').classList.remove('active');$('#source-description').textContent='分色歌詞影片由 YouTube 提供；系統以換色時間表進行暫停與教學。'};
 $('#dodo-mode').onclick=()=>{const frame=$('#mv');frame.src=frame.src;$('#official-area').classList.add('hidden');$('#dodo-area').classList.remove('hidden');$('#official-mode').classList.remove('active');$('#dodo-mode').classList.add('active');$('#source-description').textContent='已切換到鼠姊姊演唱，按下方音訊播放鍵即可聽歌。'};
-render()})();</script><script id="exact-sync-engine">(()=>{'use strict';
-const $=s=>document.querySelector(s),data=JSON.parse($('#lessons-data').textContent),lines=data.lines,audio=$('#dodo-player');
-let timeline=null,active=false,run=0,raf=0,selected=0,mode='dodo';
-const storageKey='babymonster-drip-real-word-times-v1';
-const tokens=s=>String(s||'').split(/\s+/).filter(Boolean);
-const msg=s=>{$('#sync-message').textContent=s};
-function setWords(lineIndex,time){const timeLine=timeline?.[lineIndex];const spans=[...$('#lyrics').querySelectorAll('button.lyric')];const cards=[...$('#cards').querySelectorAll('button.card')];let idx=-1;
- for(let i=0;i<(timeLine?.words||[]).length;i++){const w=timeLine.words[i];if(time>=w.start&&time<w.end){idx=i;break}}
- spans.forEach((el,i)=>el.classList.toggle('sync-current',i===idx));cards.forEach((el,i)=>el.classList.toggle('sync-current',i===idx));}
-async function say(text,lang){
- if(!('speechSynthesis' in window)||!text)return;
- const language=lang||'zh-TW',voice=await pickSpeechVoice(language);
- if(language.toLowerCase().startsWith('zh')&&!voice)return;
- return new Promise(resolve=>{
-  let done=false;const end=()=>{if(!done){done=true;resolve()}};
-  const u=makeUtterance(text,language,voice,.78,1.08);u.onend=end;u.onerror=end;
-  window.speechSynthesis.speak(u);
- });
-}
-function stop(){run++;active=false;cancelAnimationFrame(raf);audio.pause();window.speechSynthesis?.cancel();$('#sync-halt').disabled=true}
-function setLine(i){selected=i;$('#selector').value=String(i);$('#selector').dispatchEvent(new Event('change'));}
-function validate(x){const rows=Array.isArray(x)?x:x?.lines;if(!Array.isArray(rows)||rows.length!==lines.length)throw Error('需要依序包含 55 句；目前收到 '+(rows?.length??0)+' 句');let last=0;
- return rows.map((l,i)=>{const start=Number(l.start??l.startTime),end=Number(l.end??l.endTime);if(!Number.isFinite(start)||!Number.isFinite(end)||start<last-0.01||end<=start)throw Error('第 '+(i+1)+' 句的起訖秒數無效或重疊');last=end;
- const words=l.words??l.tokens;if(!Array.isArray(words)||words.length!==tokens(lines[i].english).length)throw Error('第 '+(i+1)+' 句單字數不符：應有 '+tokens(lines[i].english).length+' 個');
- const ww=words.map((w,j)=>{const s=Number(w.start??w.startTime),e=Number(w.end??w.endTime);if(!Number.isFinite(s)||!Number.isFinite(e)||s<start-.25||e>end+.25||e<=s)throw Error('第 '+(i+1)+' 句第 '+(j+1)+' 字時間無效');return {start:s,end:e}});return {start,end,words:ww}})}
-function apply(raw){timeline=validate(raw);$('#sync-badge').textContent='55 句／逐字時間碼已匯入';$('#sync-start').disabled=false;$('#sync-halt').disabled=false;msg('已驗證 55 句、共 '+timeline.reduce((n,l)=>n+l.words.length,0)+' 個字的起訖秒數。可按「從第 1 句自動學」。');}
-$('#sync-upload').addEventListener('change',async e=>{const file=e.target.files?.[0];if(!file)return;try{const raw=JSON.parse(await file.text());apply(raw);try{localStorage.setItem(storageKey,JSON.stringify(raw))}catch{}}catch(ex){timeline=null;$('#sync-start').disabled=true;$('#sync-badge').textContent='匯入失敗';msg('無法啟用同步：'+ex.message)}});
-try{const saved=localStorage.getItem(storageKey);if(saved)apply(JSON.parse(saved))}catch{}
-async function teach(n){const row=lines[n],my=run,words=tokens(row.english);msg('第 '+(n+1)+' 句已暫停：中文整句翻譯');await say(row.chinese,'zh-TW');if(run!==my)return;
- for(let i=0;i<words.length;i++){if(run!==my)return;const c=row.cards?.[i]||{};setWords(n,timeline[n].words[i].start+.01);msg(words[i]+'：'+(c.meaning||'詞義待核對'));await say(words[i],c.language||(/[가-힣]/.test(words[i])?'ko-KR':'en-US'));if(run!==my)return;await say(c.meaning||'','zh-TW')}
- if(run!==my)return;setWords(n,-1);await say(row.chinese,'zh-TW');if(run!==my)return;
- if(n+1<timeline.length){selected=n+1;playLine(n+1)}else{active=false;$('#sync-halt').disabled=true;msg('55 句教學完成。')}}
-async function playLine(n){if(!active||!timeline)return;selected=n;setLine(n);const clip=timeline[n],my=run;audio.currentTime=clip.start;setWords(n,-1);msg('第 '+(n+1)+' 句：播放歌聲');try{await audio.play()}catch(ex){stop();msg('無法播放音檔：請先切換「鼠姊姊演唱」並確認瀏覽器允許播放');return}
- function tick(){if(!active||run!==my)return;setWords(n,audio.currentTime);if(audio.currentTime>=clip.end-.035||audio.ended){audio.pause();audio.currentTime=Math.min(clip.end,audio.duration||clip.end);teach(n);return}raf=requestAnimationFrame(tick)}raf=requestAnimationFrame(tick)}
-$('#sync-start').addEventListener('click',()=>{if(!timeline)return;stop();active=true;run++;$('#sync-halt').disabled=false;$('#dodo-mode').click();mode='dodo';playLine(0)});
-$('#sync-halt').addEventListener('click',()=>{stop();msg('已停止逐句教學')});
-$('#official-mode').addEventListener('click',()=>{if(active){stop();msg('已切換官方 MV。匯入的鼠姊姊錄音時間碼不能直接用於 MV；需經時間軸轉換與核對。')}});
-})();</script><script id="video-color-cue-engine">
+render()})();</script><script id="audio-color-cue-engine">
 (()=>{'use strict';
 const cues=[{"start":6.56,"end":15.48,"member":"CHIQUITA","color":"#59b849","from":0,"to":3},{"start":15.48,"end":24.32,"member":"AHYEON","color":"#ed5362","from":4,"to":7},{"start":24.32,"end":32.16,"member":"RUKA","color":"#8786ff","from":8,"to":8},{"start":32.16,"end":40.2,"member":"RORA","color":"#efc746","from":9,"to":12},{"start":40.2,"end":47.76,"member":"PHARITA","color":"#ed9c48","from":13,"to":14},{"start":47.76,"end":54.8,"member":"RAMI","color":"#39bfe7","from":15,"to":16},{"start":55.6,"end":59.76,"member":"AHYEON","color":"#ed5362","from":17,"to":17},{"start":59.76,"end":63.72,"member":"CHIQUITA","color":"#59b849","from":18,"to":18},{"start":63.72,"end":67.68,"member":"RUKA","color":"#8786ff","from":19,"to":19},{"start":67.68,"end":71.72,"member":"AHYEON","color":"#ed5362","from":20,"to":20},{"start":71.72,"end":81.76,"member":"ASA","color":"#ff4ca5","from":21,"to":24},{"start":81.76,"end":90.16,"member":"RUKA","color":"#8786ff","from":25,"to":29},{"start":90.16,"end":98.0,"member":"CHIQUITA","color":"#59b849","from":30,"to":30},{"start":98.0,"end":102.16,"member":"PHARITA","color":"#ed9c48","from":31,"to":33},{"start":102.16,"end":106.04,"member":"RAMI","color":"#39bfe7","from":34,"to":34},{"start":106.04,"end":113.6,"member":"RORA","color":"#efc746","from":35,"to":36},{"start":113.6,"end":120.68,"member":"AHYEON","color":"#ed5362","from":37,"to":38},{"start":121.44,"end":125.6,"member":"PHARITA","color":"#ed9c48","from":39,"to":39},{"start":125.6,"end":129.56,"member":"RAMI","color":"#39bfe7","from":40,"to":40},{"start":129.56,"end":133.56,"member":"ASA","color":"#ff4ca5","from":41,"to":41},{"start":133.56,"end":137.56,"member":"CHIQUITA","color":"#59b849","from":42,"to":42},{"start":137.56,"end":149.24,"member":"RAMI","color":"#39bfe7","from":43,"to":45},{"start":149.24,"end":159.52,"member":"AHYEON","color":"#ed5362","from":46,"to":46},{"start":159.52,"end":162.84,"member":"ASA","color":"#ff4ca5","from":47,"to":47},{"start":162.84,"end":166.6,"member":"RORA","color":"#efc746","from":48,"to":49},{"start":166.6,"end":167.72,"member":"ASA","color":"#ff4ca5","from":50,"to":50},{"start":167.72,"end":170.44,"member":"AHYEON","color":"#ed5362","from":51,"to":51},{"start":170.44,"end":174.48,"member":"PHARITA","color":"#ed9c48","from":52,"to":53},{"start":174.48,"end":176.88,"member":"AHYEON","color":"#ed5362","from":54,"to":54}];
 const lines=JSON.parse(document.getElementById('lessons-data').textContent).lines;
 const $=id=>document.getElementById(id);
-const names=['RORA','CHIQUITA','AHYEON','RAMI','PHARITA','ASA','RUKA'];
-let yt=null,ready=false,phase='idle',segment=0,generation=0,poll=0;
-const sayMsg=s=>{$('cue-message').textContent=s;$('status').textContent=s};
-function highlight(cue){
- document.querySelectorAll('#member-legend [data-singer]').forEach(el=>el.classList.toggle('current',!!cue&&el.dataset.singer===cue.member));
- document.querySelectorAll('.member-spot[data-singer]').forEach(el=>{
-   const active=!!cue&&el.dataset.singer===cue.member;
-   el.classList.toggle('active',active);
-   el.classList.toggle('dimmed',!!cue&&!active);
- });
- if(cue){$('member').textContent='主唱：'+cue.member+' · 跟著一起學';$('member').style.color=cue.color;$('cue-count').textContent='段落 '+(cues.indexOf(cue)+1)+' / '+cues.length+' · '+cue.member}
- else {$('member').textContent='粉紅霓虹舞台'}
+const audio=$('lesson-audio');
+let segment=0,cycle=0,playing=false,teaching=false,selectedLine=null;
+const message=text=>{$('cue-message').textContent=text;$('status').textContent=text};
+const cueText=k=>cues[k]&&lines.slice(cues[k].from,cues[k].to+1).map(l=>l.chinese||'').filter(Boolean).join('\n');
+function applySinger(cue){
+  document.querySelectorAll('#member-legend [data-singer]').forEach(e=>e.classList.toggle('current',e.dataset.singer===cue.member));
+  document.querySelectorAll('.member-spot[data-singer]').forEach(e=>{
+   const on=e.dataset.singer===cue.member;
+   e.classList.toggle('active',on);e.classList.toggle('dimmed',!on);
+  });
+  $('member').textContent='主唱：'+cue.member;
+  $('member').style.color=cue.color;
+  $('cue-count').textContent='第 '+(segment+1)+' / '+cues.length+' 段 · '+cue.member;
+  $('counter').textContent='段落 '+(segment+1)+' / '+cues.length;
 }
 function chooseLine(i){
- $('selector').value=String(i);$('selector').dispatchEvent(new Event('change'));
+ const selector=$('selector'); selector.value=String(i);selector.dispatchEvent(new Event('change'));
 }
-function cancel(){generation++;window.speechSynthesis?.cancel();clearInterval(poll);poll=0;phase='idle';}
-async function speech(text,language,gen){
- if(!text||gen!==generation||!('speechSynthesis' in window))return;
- const voice=await pickSpeechVoice(language);
- if(gen!==generation)return;
- if(language.toLowerCase().startsWith('zh')&&!voice)return;
+function updateWords(){
+  const show=selectedLine!==null;
+  $('cards').classList.toggle('show-cards',show);
+  $('lesson-toggle-hint').textContent=show?'第 '+(selectedLine+1)+' 句的單字圖卡：點選圖卡可聽發音與中文詞義。':'點選上方任一句歌詞，即可展開該句的單字圖卡與中文解釋。';
+}
+function renderCue(){
+ const cue=cues[segment];applySinger(cue);
+ const box=$('lyrics');box.replaceChildren();
+ for(let i=cue.from;i<=cue.to;i++){
+   const btn=document.createElement('button');btn.type='button';btn.className='cue-lyric';
+   btn.style.setProperty('--cue-color',cue.color);
+   btn.textContent=lines[i]?.english||'';
+   btn.title='點擊這一句，展開單字圖卡與中文意思';
+   if(i===selectedLine)btn.classList.add('open');
+   btn.onclick=()=>{
+      selectedLine=(selectedLine===i?null:i);
+      if(selectedLine!==null)chooseLine(selectedLine);
+      renderCue();
+   };
+   box.append(btn);
+ }
+ const hint=document.createElement('small');hint.className='cue-tap-hint';hint.textContent='點一句歌詞，就能學那一句的單字';box.append(hint);
+ $('translation').textContent=teaching?cueText(segment):'這段唱完後，老師會唸出整段中文意思。';
+ $('translation').dataset.teaching=String(teaching);
+ updateWords();
+}
+function stopVoice(){window.speechSynthesis?.cancel()}
+function cancel(){cycle++;playing=false;teaching=false;audio.pause();stopVoice()}
+async function sayTaiwan(text,token){
+ if(!text||token!==cycle||!('speechSynthesis' in window))return;
+ const voice=await pickSpeechVoice('zh-TW');
+ if(token!==cycle)return;
+ if(!voice){message('請在裝置加入「中文（台灣）」語音，接著即可聽老師講解。');return}
  return new Promise(resolve=>{
-  let done=false;let timeout;
-  const finish=()=>{if(done)return;done=true;clearTimeout(timeout);resolve()};
-  const u=makeUtterance(text,language,voice,.98,1.18);
+  let done=false;const finish=()=>{if(done)return;done=true;resolve()};
+  const u=makeUtterance(text,'zh-TW',voice,1.18,1.30);
   u.onend=finish;u.onerror=finish;
-  timeout=setTimeout(finish,Math.max(9000,Math.min(27000,1000*String(text).length/2)));
   window.speechSynthesis.speak(u);
  });
 }
-async function explain(k){
- if(k>=cues.length){phase='ended';sayMsg('全部 '+cues.length+' 段演唱教學完成！');return}
- phase='teaching';const cue=cues[k],gen=generation;
- highlight(cue);
- for(let i=cue.from;i<=cue.to;i++){
-  if(gen!==generation)return;
-  chooseLine(i);
-  const row=lines[i];sayMsg('♫ '+cue.member+' 唱完囉！現在一起聽中文意思。');
-  await speech(row.chinese,'zh-TW',gen);
-  for(const card of (row.cards||[])){
-   if(gen!==generation)return;
-   sayMsg('♫ '+cue.member+' · 一起學單字：'+card.word+'，意思是 '+card.meaning);
-   await speech(card.word,card.language||(/[가-힣]/.test(card.word)?'ko-KR':'en-US'),gen);
-   if(gen!==generation)return;
-   await speech(card.meaning,'zh-TW',gen);
-  }
- }
- if(gen!==generation)return;
- if(k+1<cues.length){segment=k+1;playSegment(segment)}else {phase='ended';sayMsg('全部 '+cues.length+' 段演唱教學完成！')}
+async function explain(k,token){
+ if(token!==cycle)return;
+ playing=false;teaching=true;audio.pause();selectedLine=null;renderCue();
+ const cue=cues[k];const text=cueText(k);
+ message('♫ '+cue.member+' 唱完啦！一起聽整段中文意思。');
+ await sayTaiwan(text,token);
+ if(token!==cycle)return;
+ teaching=false;
+ if(k<cues.length-1){segment=k+1;await playSegment(segment,token)}
+ else {renderCue();message('29 個演唱段落都學完了！好棒！')}
 }
-function playSegment(k){
- if(!ready){sayMsg('影片播放器載入中，稍後再按開始');return}
- if(k>=cues.length){phase='ended';sayMsg('所有段落已完成');return}
- const cue=cues[k];phase='playing';segment=k;highlight(cue);chooseLine(cue.from);
- sayMsg('播放第 '+(k+1)+' / '+cues.length+' 段 · '+cue.member+' · '+cue.start.toFixed(2)+'～'+cue.end.toFixed(2)+' 秒');
- yt.seekTo(cue.start,true);yt.playVideo();clearInterval(poll);
- poll=setInterval(()=>{
-  if(phase!=='playing'||!ready)return;
-  const t=yt.getCurrentTime();
-  if(t>=cue.end-.07){clearInterval(poll);poll=0;phase='pausing';yt.pauseVideo();
-   // This state is entered once per detected singer-color transition.
-   explain(k);
-  }
- },90);
+async function playSegment(k,token){
+ if(token!==cycle)return;
+ if(k>=cues.length){message('歌曲全部學完啦！');return}
+ segment=k;selectedLine=null;teaching=false;playing=true;
+ renderCue();
+ const cue=cues[k];audio.currentTime=cue.start;
+ message('♫ 第 '+(k+1)+' / '+cues.length+' 段，'+cue.member+' 正在唱歌！');
+ try{await audio.play()}catch(e){playing=false;message('請按一下音樂播放器的播放鍵，再點「從頭開始」開啟教學。')}
 }
-$('cue-start').onclick=()=>{if(!ready){sayMsg('YouTube 播放器尚在載入，請再按一次');return}cancel();segment=0;playSegment(0)};
-$('cue-stop').onclick=()=>{cancel();try{yt?.pauseVideo()}catch{}sayMsg('已暫停，可按「重聽本段」繼續')};
-$('cue-repeat').onclick=()=>{if(!ready)return;cancel();playSegment(segment)};
-$('cue-next').onclick=()=>{if(!ready)return;cancel();segment=Math.min(segment+1,cues.length-1);playSegment(segment)};
-// Manual switching the single-line selector interrupts the cue narration cleanly.
-$('selector').addEventListener('change',()=>{if(phase==='teaching'&&window.__userCueChange){cancel()}});
-$('official-mode').onclick=()=>{if(ready){cancel();yt.pauseVideo()}};
-function initPlayer(){
- if(!window.YT?.Player)return;
- yt=new YT.Player('mv',{videoId:'cXvi0qdC6FU',playerVars:{playsinline:1,rel:0,controls:1,start:0,origin:location.origin},events:{
-  onReady:()=>{ready=true;sayMsg('分色歌詞影片準備好了！按「從頭開始」，唱一段就學一段。')},
-  onError:e=>{ready=false;sayMsg('YouTube 內嵌播放發生錯誤（代碼 '+e.data+'）。可使用下方 YouTube 原影片連結播放。')}
- }});
+audio.addEventListener('timeupdate',()=>{
+ if(!playing||teaching)return;
+ const cue=cues[segment];
+ if(audio.currentTime>=cue.end-0.035){playing=false;audio.pause();audio.currentTime=cue.end;explain(segment,cycle)}
+});
+audio.addEventListener('ended',()=>{if(playing){playing=false;explain(segment,cycle)}});
+$('cue-start').onclick=()=>{cancel();playSegment(0,cycle)};
+$('cue-stop').onclick=()=>{cancel();message('教學已暫停，按「重聽本段」可繼續。')};
+$('cue-repeat').onclick=()=>{cancel();playSegment(segment,cycle)};
+$('cue-next').onclick=()=>{cancel();playSegment(Math.min(segment+1,cues.length-1),cycle)};
+$('reset').onclick=()=>{cancel();segment=0;selectedLine=null;renderCue();audio.currentTime=cues[0].start};
+$('official-mode').onclick=()=>{audio.pause();$('official-area').classList.remove('hidden');$('dodo-area').classList.add('hidden')};
+$('teach').onclick=()=>{
+ if(selectedLine===null){message('先點選上方想學的歌詞，就能看到單字圖卡。');return}
+ $('cards').classList.toggle('show-cards',true);
+};
+// Keep the existing manually selected lyric controls usable while resetting the 29-segment display.
+$('previous').onclick=()=>manualLine(-1);
+$('next').onclick=()=>manualLine(1);
+function manualLine(direction){
+ const current=selectedLine??cues[segment].from;
+ const next=Math.max(0,Math.min(lines.length-1,current+direction));
+ let k=cues.findIndex(c=>next>=c.from&&next<=c.to);if(k<0)k=segment;
+ cancel();segment=k;selectedLine=next;chooseLine(next);renderCue();message('第 '+(next+1)+' 句：點選單字圖卡可練習發音。');
 }
-if(window.YT&&window.YT.Player)initPlayer();else{
- const prior=window.onYouTubeIframeAPIReady;
- window.onYouTubeIframeAPIReady=()=>{prior?.();initPlayer()};
- const el=document.createElement('script');el.src='https://www.youtube.com/iframe_api';document.head.appendChild(el);
-}
-highlight(cues[0]);
+$('selector').addEventListener('change',()=>{
+ const i=Number($('selector').value);if(!Number.isInteger(i))return;
+ const k=cues.findIndex(c=>i>=c.from&&i<=c.to);if(k<0)return;
+ cancel();segment=k;selectedLine=i;renderCue();
+});
+// Initial render after all legacy scripts complete.
+segment=0;renderCue();message('準備好了！音軌依照影片的 29 個成員換色時間點暫停；點歌詞可展開單字圖卡。');
 })();
 </script></body></html>
