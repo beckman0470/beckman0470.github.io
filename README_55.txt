@@ -1,0 +1,1 @@
+已修正：原 HTML 實際仍內建 32 段舊資料，現已真正載入 55 句逐句歌詞／翻譯／詞卡。從 0:00 開始。因 LyricTimestamps JSON 尚未提供，逐字／逐句時間仍未校準。覆蓋根目錄 babymonster-ep01.html 及 assets 資料夾。
