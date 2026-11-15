@@ -142,68 +142,50 @@ html body[data-welcome-page] .cdj-room-entrance .cdj-welcome-label{font-size:11p
 @media(max-width:760px){.cdj-welcome .cdj-greeting[data-room="study"]{height:auto!important;min-height:0!important}.cdj-greeting[data-room="study"] .greeting-character:not(.greeting-cat){--frame:110px}.cdj-greeting[data-room="study"] .greeting-cat{scale:.6}.cdj-greeting[data-room="study"] .greeting-caption{font-size:9px!important;right:62px}.cdj-greeting[data-room="study"] .study-object .object-label{font-size:10px}}
 
 
-/* Study room: full viewport width, matching the rabbit room. */
+
+/* Chicken coop v6: one horizontal centering rule, no compounded left offsets. */
+html body[data-welcome-page="articles"] main#journal-page > section.cdj-welcome,
 html body[data-welcome-page="articles"] main#journal-page > section.cdj-welcome.cdj-room-entrance {
+  position:relative!important;
   display:block!important;
-  width:calc(100vw - var(--cdj-scrollbar, 0px))!important;
+  left:0!important;
+  right:auto!important;
+  transform:none!important;
+  width:100vw!important;
   max-width:none!important;
-  margin-left:calc(50% - (100vw - var(--cdj-scrollbar, 0px))/2)!important;
+  min-width:0!important;
+  margin-left:calc((100% - 100vw) / 2)!important;
   margin-right:0!important;
   padding:0!important;
-  gap:0!important;
   box-sizing:border-box!important;
 }
-html body[data-welcome-page="articles"] main#journal-page > section.cdj-welcome.cdj-room-entrance > .cdj-greeting[data-room="study"] {
-  display:block!important;
+html body[data-welcome-page="articles"] main#journal-page > section.cdj-welcome > .cdj-greeting[data-room="study"] {
   position:relative!important;
+  display:block!important;
   width:100%!important;
   max-width:none!important;
   min-width:0!important;
   height:auto!important;
-  aspect-ratio:16/9!important;
+  aspect-ratio:16 / 9!important;
   margin:0!important;
   padding:0!important;
   border-radius:0!important;
   overflow:hidden!important;
 }
-html body[data-welcome-page="articles"] .cdj-room-entrance > .cdj-greeting[data-room="study"] > .greeting-scene {
+html body[data-welcome-page="articles"] main#journal-page > section.cdj-welcome > .cdj-greeting[data-room="study"] > .greeting-scene {
+  position:absolute!important;
   inset:0!important;
   width:100%!important;
   height:100%!important;
-  background-position:center center!important;
   background-size:cover!important;
+  background-position:center!important;
   background-repeat:no-repeat!important;
   border-radius:0!important;
 }
-html body[data-welcome-page="articles"] .cdj-room-entrance > .cdj-welcome-copy { z-index:12!important; }
-@media (max-width:760px) {
-  html body[data-welcome-page="articles"] main#journal-page > section.cdj-welcome.cdj-room-entrance > .cdj-greeting[data-room="study"] { aspect-ratio:3/2!important; }
-}
-
-/* Chicken coop full-width correction v5: no dependency on JS-added entrance class. */
-body[data-welcome-page="articles"] {overflow-x:clip!important;}
-body[data-welcome-page="articles"] main#journal-page {overflow:visible!important;}
-body[data-welcome-page="articles"] main#journal-page > section.cdj-welcome {
- display:block!important; position:relative!important;
- width:100vw!important; max-width:none!important; min-width:0!important;
- left:50%!important; margin-left:-50vw!important; margin-right:0!important;
- padding:0!important; box-sizing:border-box!important;
-}
-body[data-welcome-page="articles"] main#journal-page > section.cdj-welcome > .cdj-greeting[data-room="study"] {
- position:relative!important; display:block!important;
- width:100%!important; max-width:none!important; min-width:0!important;
- height:auto!important; aspect-ratio:16/9!important;
- margin:0!important; padding:0!important;
- border-radius:0!important; overflow:hidden!important;
-}
-body[data-welcome-page="articles"] main#journal-page > section.cdj-welcome > .cdj-greeting[data-room="study"] > .greeting-scene {
- position:absolute!important; inset:0!important; width:100%!important; height:100%!important;
- background-size:cover!important; background-position:center!important;
- background-repeat:no-repeat!important; border-radius:0!important;
-}
-body[data-welcome-page="articles"] main#journal-page > section.cdj-welcome > .cdj-welcome-copy {
- position:absolute!important; z-index:12!important;
+html body[data-welcome-page="articles"] main#journal-page > section.cdj-welcome > .cdj-welcome-copy {
+  position:absolute!important;
+  z-index:12!important;
 }
 @media(max-width:760px){
- body[data-welcome-page="articles"] main#journal-page > section.cdj-welcome > .cdj-greeting[data-room="study"] {aspect-ratio:3/2!important;}
+ html body[data-welcome-page="articles"] main#journal-page > section.cdj-welcome > .cdj-greeting[data-room="study"] {aspect-ratio:3 / 2!important;}
 }
