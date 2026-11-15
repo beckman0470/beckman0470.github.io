@@ -16,13 +16,33 @@
 .cue-bar .cue-progress{font-size:14px;color:#804574}
 #member{font-weight:950;background:#461847;border-radius:15px;padding:6px 11px}
 .video-layout .player-actions p{line-height:1.7}
-</style></head><body><main class="wrap"><section class="screen"><div class="top"><div class="brand"><b>BABYMONSTER</b><span>鼠姊姊・英韓小教室</span></div><div class="lyrics" id="lyrics" aria-label="當前歌詞"></div></div><div class="meta"><span class="pill">DRIP · <span id="counter">1 / 55</span></span><span id="member">粉紅霓虹舞台</span></div><img class="stage" src="/assets/bm-approved/drip-stage.jpg" alt="七位 BABYMONSTER Q 版成員的定案粉紅霓虹舞台"><div class="member-legend" id="member-legend" aria-label="七位成員名字與歌詞顏色"><span data-singer="RUKA" style="color:#8786ff">RUKA</span><span data-singer="PHARITA" style="color:#ed9c48">PHARITA</span><span data-singer="ASA" style="color:#ff4ca5">ASA</span><span data-singer="AHYEON" style="color:#ed5362">AHYEON</span><span data-singer="RAMI" style="color:#39bfe7">RAMI</span><span data-singer="RORA" style="color:#efc746">RORA</span><span data-singer="CHIQUITA" style="color:#59b849">CHIQUITA</span></div><div class="translation"><label>整句直譯</label><strong id="translation"></strong><button class="speech" id="zh-read" type="button" title="朗讀中文">🔊 中文</button></div><div class="cards" id="cards"></div><div class="toolbar"><a class="back" href="/rooms.html?room=games">⌂ 回遊戲間</a><button id="previous" type="button">◀ 上一句</button><select id="selector" aria-label="選擇歌詞句子"></select><button id="next" type="button">下一句 ▶</button><button class="primary" id="teach" type="button">🔊 中文逐詞教學</button></div><div class="status" id="status">已套用使用者提供的分色歌詞影片，依成員換色時間段教學。</div><section class="cue-bar" aria-label="演唱者換色自動暫停教學">
+.stage-board{margin:10px 16px 2px;padding:16px 14px 12px;border-radius:28px;background:radial-gradient(circle at 50% 10%,#ffdeef 0,#f5a9d5 22%,#7f2a78 55%,#45164c 100%);border:4px solid #f58bc2;box-shadow:inset 0 0 28px #ffffff38,0 10px 24px #95286a35;overflow:hidden}
+.stage-board .stage-topline{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+.stage-board .stage-topline span{font-size:clamp(12px,1.6vw,18px);font-weight:900;padding:6px 11px;border:2px solid currentColor;border-radius:999px;background:#ffffff12;opacity:.7;transition:all .18s ease}
+.stage-board .stage-topline span.current{opacity:1;transform:translateY(-2px) scale(1.06);background:#fff8;box-shadow:0 0 14px currentColor}
+.members-stage{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));align-items:end;gap:8px;min-height:270px}
+.member-spot{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:end;min-height:248px;transition:transform .22s ease, filter .22s ease, opacity .22s ease;opacity:.92}
+.member-spot .avatar-wrap{position:relative;width:100%;display:flex;justify-content:center;align-items:end}
+.member-spot img.avatar{width:min(100%,150px);max-height:185px;object-fit:contain;filter:drop-shadow(0 8px 14px #14061f88);transition:transform .22s ease, filter .22s ease}
+.member-spot .mic{position:absolute;right:12%;bottom:16%;font-size:28px;transform:rotate(-10deg) scale(.2);opacity:0;transition:all .22s ease;filter:drop-shadow(0 3px 7px #00000055)}
+.member-spot .nameplate{margin-top:6px;padding:7px 12px;border-radius:999px;border:3px solid currentColor;background:#34133e;color:#fff;font-size:clamp(12px,1.6vw,19px);font-weight:950;letter-spacing:.3px;text-shadow:0 1px 0 #00000055;box-shadow:0 4px 12px #22092d40}
+.member-spot .tag{margin-top:6px;min-height:22px;font-size:13px;color:#fff4fb;font-weight:900;opacity:0;transition:opacity .18s ease}
+.member-spot.active{transform:translateY(-8px);opacity:1;z-index:2}
+.member-spot.active img.avatar{transform:scale(1.12);filter:drop-shadow(0 12px 18px currentColor)}
+.member-spot.active .mic{opacity:1;transform:rotate(-8deg) scale(1)}
+.member-spot.active .tag{opacity:1}
+.member-spot.dimmed{opacity:.62}
+.member-spot[data-singer="CHIQUITA"] img.avatar{width:min(100%,132px);max-height:174px}
+.member-spot.active[data-singer="CHIQUITA"] img.avatar{transform:scale(1.09)}
+@media(max-width:980px){.members-stage{grid-template-columns:repeat(4,minmax(0,1fr))}.member-spot{min-height:220px}.member-spot img.avatar{max-height:152px}.member-spot[data-singer="CHIQUITA"] img.avatar{max-height:146px}}
+@media(max-width:640px){.members-stage{grid-template-columns:repeat(3,minmax(0,1fr))}.member-spot{min-height:204px}.member-spot .nameplate{padding:6px 10px;font-size:12px}}
+</style></head><body><main class="wrap"><section class="screen"><div class="top"><div class="brand"><b>BABYMONSTER</b><span>鼠姊姊・英韓小教室</span></div><div class="lyrics" id="lyrics" aria-label="當前歌詞"></div></div><div class="meta"><span class="pill">DRIP · <span id="counter">1 / 55</span></span><span id="member">粉紅霓虹舞台</span></div><section class="stage-board" aria-label="BABYMONSTER Q版舞台人物"><div class="stage-topline member-legend" id="member-legend"><span data-singer="RUKA" style="color:#8786ff">RUKA</span><span data-singer="PHARITA" style="color:#ed9c48">PHARITA</span><span data-singer="ASA" style="color:#ff4ca5">ASA</span><span data-singer="AHYEON" style="color:#ed5362">AHYEON</span><span data-singer="RAMI" style="color:#39bfe7">RAMI</span><span data-singer="RORA" style="color:#efc746">RORA</span><span data-singer="CHIQUITA" style="color:#59b849">CHIQUITA</span></div><div class="members-stage" id="members-stage"><div class="member-spot" data-singer="RUKA" style="color:#8786ff"><div class="avatar-wrap"><img class="avatar" src="/assets/bm-members/RUKA.png" alt="RUKA Q版人物"><span class="mic">🎤</span></div><div class="nameplate">RUKA</div><div class="tag">正在唱歌</div></div><div class="member-spot" data-singer="PHARITA" style="color:#ed9c48"><div class="avatar-wrap"><img class="avatar" src="/assets/bm-members/PHARITA.png" alt="PHARITA Q版人物"><span class="mic">🎤</span></div><div class="nameplate">PHARITA</div><div class="tag">正在唱歌</div></div><div class="member-spot" data-singer="ASA" style="color:#ff4ca5"><div class="avatar-wrap"><img class="avatar" src="/assets/bm-members/ASA.png" alt="ASA Q版人物"><span class="mic">🎤</span></div><div class="nameplate">ASA</div><div class="tag">正在唱歌</div></div><div class="member-spot" data-singer="AHYEON" style="color:#ed5362"><div class="avatar-wrap"><img class="avatar" src="/assets/bm-members/AHYEON.png" alt="AHYEON Q版人物"><span class="mic">🎤</span></div><div class="nameplate">AHYEON</div><div class="tag">正在唱歌</div></div><div class="member-spot" data-singer="RAMI" style="color:#39bfe7"><div class="avatar-wrap"><img class="avatar" src="/assets/bm-members/RAMI.png" alt="RAMI Q版人物"><span class="mic">🎤</span></div><div class="nameplate">RAMI</div><div class="tag">正在唱歌</div></div><div class="member-spot" data-singer="RORA" style="color:#efc746"><div class="avatar-wrap"><img class="avatar" src="/assets/bm-members/RORA.png" alt="RORA Q版人物"><span class="mic">🎤</span></div><div class="nameplate">RORA</div><div class="tag">正在唱歌</div></div><div class="member-spot" data-singer="CHIQUITA" style="color:#59b849"><div class="avatar-wrap"><img class="avatar" src="/assets/bm-members/CHIQUITA.png" alt="CHIQUITA Q版人物"><span class="mic">🎤</span></div><div class="nameplate">CHIQUITA</div><div class="tag">正在唱歌</div></div></div></section><div class="translation"><label>整句直譯</label><strong id="translation"></strong><button class="speech" id="zh-read" type="button" title="朗讀中文">🔊 中文</button></div><div class="cards" id="cards"></div><div class="toolbar"><a class="back" href="/rooms.html?room=games">⌂ 回遊戲間</a><button id="previous" type="button">◀ 上一句</button><select id="selector" aria-label="選擇歌詞句子"></select><button id="next" type="button">下一句 ▶</button><button class="primary" id="teach" type="button">🔊 中文逐詞教學</button></div><div class="status" id="status">已套用使用者提供的分色歌詞影片，依成員換色時間段教學。</div><section class="cue-bar" aria-label="演唱者換色自動暫停教學">
 <button class="main" type="button" id="cue-start">▶ 從頭開始，換人就教學</button>
 <button type="button" id="cue-stop">■ 暫停教學</button>
 <button type="button" id="cue-repeat">↻ 重聽本段</button>
 <button type="button" id="cue-next">▶ 下一段</button>
 <span id="cue-count" class="cue-progress">29 個成員演唱段落</span>
-<div id="cue-message" class="cue-state" aria-live="polite">載入 YouTube 播放器後，點「從頭開始」即可逐段學習。</div>
+<div id="cue-message" class="cue-state" aria-live="polite">載入 YouTube 播放器後，點「從頭開始」即可逐段唱歌、逐段解說。</div>
 </section><div class="source-choose" aria-label="選擇播放音源"><button type="button" id="official-mode" class="active">🎵 指定分色歌詞影片</button><button type="button" id="dodo-mode">🎤 鼠姊姊演唱</button><a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=cXvi0qdC6FU">↗ 在 YouTube 看分色歌詞影片</a></div><p class="source-description" id="source-description">依照你提供的影片辨識演唱者換色時間。播放每段後自動暫停，進行一次中文教學。</p><section class="dodo-area hidden" id="dodo-area"><strong>鼠姊姊演唱（可在此頁直接播放）</strong><audio id="dodo-player" controls preload="metadata"><source src="/assets/dodo/dodo-song.m4a" type="audio/mp4">此瀏覽器無法播放錄音。</audio><small>這是備用錄音；主要教學採用指定分色影片。</small></section><section class="video" id="official-area" aria-label="BABYMONSTER 官方 MV"><div class="video-layout"><div class="yt"><iframe id="mv" src="https://www.youtube.com/embed/cXvi0qdC6FU?enablejsapi=1&playsinline=1&rel=0" title="BABYMONSTER DRIP 分色歌詞影片" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="eager"></iframe></div><div class="player-actions"><p><strong>🎵 成員換色暫停教學</strong><br>從上方按「從頭開始」。影片按角色換色切換點暫停，逐句朗讀中文與單字意思，教完自動接續。七位 Q 版人物保留在粉紅舞台，名字與歌詞顏色對應。</p><button type="button" id="reset" >↺ 回到第 1 句</button><a href="https://www.youtube.com/watch?v=cXvi0qdC6FU" target="_blank" rel="noopener noreferrer" style="color:#fff">開啟原始 YouTube 影片</a></div></div></section><section class="sync-panel" aria-label="逐字同步與逐句教學"><div class="sync-row">
 <strong>🎼 逐句暫停教學</strong><span id="sync-badge" class="sync-badge">尚無對齊時間碼</span>
 <button id="sync-start" disabled>▶ 從第 1 句自動學</button><button id="sync-halt" disabled>■ 停止</button>
@@ -66,8 +86,24 @@ async function pickSpeechVoice(locale){
   const candidates=exact.length?exact:voices.filter(v=>String(v.lang).toLowerCase().split(/[-_]/)[0]===base);
   return candidates.find(v=>VOICE_FEMALE_HINT.test(v.name))||candidates[0]||null;
 }
+// Children's classroom delivery: upbeat Taiwanese Mandarin, a little faster with a brighter tone.
+// Keep English/Korean articulation settings independent of Mandarin narration.
+let twSpeechTurn=0;
 function makeUtterance(text,locale,voice,rate,pitch){
-  const u=new SpeechSynthesisUtterance(text);u.lang=locale;u.voice=voice;u.rate=rate;u.pitch=pitch;return u;
+  const u=new SpeechSynthesisUtterance(text);
+  u.lang=locale;
+  u.voice=voice;
+  if(/^zh(?:-hant)?-tw$/i.test(String(locale).replaceAll('_','-'))){
+    twSpeechTurn++;
+    const isShort=String(text).replace(/\s/g,'').length<=12;
+    u.rate=isShort?1.22:1.28;
+    u.pitch=(isShort?1.38:1.28)+(twSpeechTurn%2===0?0.05:0);
+    u.volume=1;
+  }else{
+    u.rate=rate;
+    u.pitch=pitch;
+  }
+  return u;
 }
 </script>
 <script>(()=>{'use strict';const $=s=>document.querySelector(s);const dataset=JSON.parse($('#lessons-data').textContent);const lines=dataset.lines;let selected=0;const normalize=w=>String(w||'').replace(/[.,!?()‘’'"…]/g,'').toLowerCase();let run=0;
@@ -76,7 +112,7 @@ async function speak(t,locale){
  const lang=locale||'zh-TW',voice=await pickSpeechVoice(lang);
  if(lang.toLowerCase().startsWith('zh')&&!voice)return;
  return new Promise(resolve=>{
-  const u=makeUtterance(t,lang,voice,.83,1.06);let ended=false;
+  const u=makeUtterance(t,lang,voice,.92,1.14);let ended=false;
   const done=()=>{if(!ended){ended=true;resolve()}};u.onend=done;u.onerror=done;
   window.speechSynthesis.speak(u);
  });
@@ -134,7 +170,13 @@ let yt=null,ready=false,phase='idle',segment=0,generation=0,poll=0;
 const sayMsg=s=>{$('cue-message').textContent=s;$('status').textContent=s};
 function highlight(cue){
  document.querySelectorAll('#member-legend [data-singer]').forEach(el=>el.classList.toggle('current',!!cue&&el.dataset.singer===cue.member));
- if(cue){$('member').textContent='主唱：'+cue.member;$('member').style.color=cue.color;$('cue-count').textContent='段落 '+(cues.indexOf(cue)+1)+' / '+cues.length+' · '+cue.member}
+ document.querySelectorAll('.member-spot[data-singer]').forEach(el=>{
+   const active=!!cue&&el.dataset.singer===cue.member;
+   el.classList.toggle('active',active);
+   el.classList.toggle('dimmed',!!cue&&!active);
+ });
+ if(cue){$('member').textContent='主唱：'+cue.member+' · 跟著一起學';$('member').style.color=cue.color;$('cue-count').textContent='段落 '+(cues.indexOf(cue)+1)+' / '+cues.length+' · '+cue.member}
+ else {$('member').textContent='粉紅霓虹舞台'}
 }
 function chooseLine(i){
  $('selector').value=String(i);$('selector').dispatchEvent(new Event('change'));
@@ -148,7 +190,7 @@ async function speech(text,language,gen){
  return new Promise(resolve=>{
   let done=false;let timeout;
   const finish=()=>{if(done)return;done=true;clearTimeout(timeout);resolve()};
-  const u=makeUtterance(text,language,voice,.80,1.12);
+  const u=makeUtterance(text,language,voice,.98,1.18);
   u.onend=finish;u.onerror=finish;
   timeout=setTimeout(finish,Math.max(9000,Math.min(27000,1000*String(text).length/2)));
   window.speechSynthesis.speak(u);
@@ -161,11 +203,11 @@ async function explain(k){
  for(let i=cue.from;i<=cue.to;i++){
   if(gen!==generation)return;
   chooseLine(i);
-  const row=lines[i];sayMsg('♫ '+cue.member+'：第 '+(i+1)+' 句 · 中文整句意思');
+  const row=lines[i];sayMsg('♫ '+cue.member+' 唱完囉！現在一起聽中文意思。');
   await speech(row.chinese,'zh-TW',gen);
   for(const card of (row.cards||[])){
    if(gen!==generation)return;
-   sayMsg('♫ '+cue.member+' · '+card.word+'：'+card.meaning);
+   sayMsg('♫ '+cue.member+' · 一起學單字：'+card.word+'，意思是 '+card.meaning);
    await speech(card.word,card.language||(/[가-힣]/.test(card.word)?'ko-KR':'en-US'),gen);
    if(gen!==generation)return;
    await speech(card.meaning,'zh-TW',gen);
@@ -199,7 +241,7 @@ $('official-mode').onclick=()=>{if(ready){cancel();yt.pauseVideo()}};
 function initPlayer(){
  if(!window.YT?.Player)return;
  yt=new YT.Player('mv',{videoId:'cXvi0qdC6FU',playerVars:{playsinline:1,rel:0,controls:1,start:0,origin:location.origin},events:{
-  onReady:()=>{ready=true;sayMsg('分色歌詞影片已就緒：按「從頭開始」依換人時機自動暫停教學。')},
+  onReady:()=>{ready=true;sayMsg('分色歌詞影片準備好了！按「從頭開始」，唱一段就學一段。')},
   onError:e=>{ready=false;sayMsg('YouTube 內嵌播放發生錯誤（代碼 '+e.data+'）。可使用下方 YouTube 原影片連結播放。')}
  }});
 }
