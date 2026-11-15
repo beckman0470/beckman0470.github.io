@@ -140,3 +140,42 @@ html body[data-welcome-page] .cdj-room-entrance .cdj-welcome-label{font-size:11p
 .cdj-greeting[data-room="study"] .greeting-caption{bottom:4px;left:12px;right:94px;background:#fff9eddd;border-radius:8px;padding:2px 8px!important;max-width:max-content;font-size:11px!important;z-index:12}
 .cdj-greeting[data-room="study"] .greeting-pause{z-index:12}
 @media(max-width:760px){.cdj-welcome .cdj-greeting[data-room="study"]{height:auto!important;min-height:0!important}.cdj-greeting[data-room="study"] .greeting-character:not(.greeting-cat){--frame:110px}.cdj-greeting[data-room="study"] .greeting-cat{scale:.6}.cdj-greeting[data-room="study"] .greeting-caption{font-size:9px!important;right:62px}.cdj-greeting[data-room="study"] .study-object .object-label{font-size:10px}}
+
+
+/* Study room: full viewport width, matching the rabbit room. */
+html body[data-welcome-page="articles"] main#journal-page > section.cdj-welcome.cdj-room-entrance {
+  display:block!important;
+  width:calc(100vw - var(--cdj-scrollbar, 0px))!important;
+  max-width:none!important;
+  margin-left:calc(50% - (100vw - var(--cdj-scrollbar, 0px))/2)!important;
+  margin-right:0!important;
+  padding:0!important;
+  gap:0!important;
+  box-sizing:border-box!important;
+}
+html body[data-welcome-page="articles"] main#journal-page > section.cdj-welcome.cdj-room-entrance > .cdj-greeting[data-room="study"] {
+  display:block!important;
+  position:relative!important;
+  width:100%!important;
+  max-width:none!important;
+  min-width:0!important;
+  height:auto!important;
+  aspect-ratio:16/9!important;
+  margin:0!important;
+  padding:0!important;
+  border-radius:0!important;
+  overflow:hidden!important;
+}
+html body[data-welcome-page="articles"] .cdj-room-entrance > .cdj-greeting[data-room="study"] > .greeting-scene {
+  inset:0!important;
+  width:100%!important;
+  height:100%!important;
+  background-position:center center!important;
+  background-size:cover!important;
+  background-repeat:no-repeat!important;
+  border-radius:0!important;
+}
+html body[data-welcome-page="articles"] .cdj-room-entrance > .cdj-welcome-copy { z-index:12!important; }
+@media (max-width:760px) {
+  html body[data-welcome-page="articles"] main#journal-page > section.cdj-welcome.cdj-room-entrance > .cdj-greeting[data-room="study"] { aspect-ratio:3/2!important; }
+}
