@@ -120,3 +120,23 @@ html body[data-welcome-page] main>.cdj-welcome.cdj-room-entrance h1{font-size:cl
 html body[data-welcome-page] .cdj-room-entrance .cdj-welcome-label{font-size:11px!important;margin-bottom:4px!important}
 }
 @media(max-width:760px){html body[data-welcome-page] main>.cdj-room-entrance h1{font-size:25px!important;line-height:1.5!important;margin-bottom:0!important}}
+
+/* 2026-11-15 雞窩：書房背景上的物件即為分類入口（不再疊加人物肖像或裝飾卡片） */
+.cdj-welcome .cdj-greeting[data-room="study"]{width:min(100%,960px)!important;height:auto!important;aspect-ratio:3/2;max-width:960px;overflow:visible;isolation:isolate;background:#e9dfc9;border-radius:18px}
+.cdj-greeting[data-room="study"] .greeting-scene{inset:0!important;background-position:center!important;background-size:100% 100%!important;border-radius:18px}
+.cdj-greeting[data-room="study"] .study-objects{position:absolute!important;inset:0!important;height:100%!important;width:100%!important;z-index:8;display:block!important;pointer-events:none}
+.cdj-greeting[data-room="study"] .study-object{position:absolute!important;display:block!important;height:auto!important;min-height:0!important;opacity:1;background:transparent!important;border-radius:12px;box-sizing:border-box;outline:0;pointer-events:auto;cursor:pointer;transform:none!important;filter:none!important;transition:box-shadow .16s ease,background-color .16s ease!important}
+.cdj-greeting[data-room="study"] .study-object.genealogy{left:5.4%;top:29%;width:17%;height:12%}
+.cdj-greeting[data-room="study"] .study-object.devil-doll{left:8.5%;top:42%;width:11.5%;height:15%}
+.cdj-greeting[data-room="study"] .study-object.family-photo{left:51%;top:34.5%;width:10%;height:12%}
+.cdj-greeting[data-room="study"] .study-object.kids-books{left:87%;top:27%;width:12%;height:19%}
+.cdj-greeting[data-room="study"] .study-object.dumbbell{left:86%;top:48%;width:14%;height:17%}
+.cdj-greeting[data-room="study"] .study-object:hover,.cdj-greeting[data-room="study"] .study-object:focus-visible{background:#ffe6a72b!important;outline:2px solid #ffe0a9!important;outline-offset:1px;box-shadow:0 0 0 5px #ffffff22,0 0 16px #ffe8a788!important}
+.cdj-greeting[data-room="study"] .study-object .object-label{position:absolute;bottom:auto;top:100%;left:50%;translate:-50% 3px;opacity:0;pointer-events:none;white-space:nowrap;font:600 clamp(10px,1.35vw,15px)/1.5 "Microsoft JhengHei",sans-serif;background:#fff9edee;color:#315540;border:1px solid #d9d6b9;border-radius:8px;padding:3px 7px;box-shadow:0 3px 8px #0002;z-index:15}
+.cdj-greeting[data-room="study"] .study-object:hover .object-label,.cdj-greeting[data-room="study"] .study-object:focus-visible .object-label{opacity:1}
+.cdj-greeting[data-room="study"] .greeting-character:not(.greeting-cat){--frame:150px;left:49%!important;bottom:5%!important;z-index:4;scale:.72}
+.cdj-greeting[data-room="study"] .greeting-cat{z-index:6;bottom:5%!important;scale:.8}
+.cdj-greeting[data-room="study"] .greeting-cat:last-of-type{left:66%}
+.cdj-greeting[data-room="study"] .greeting-caption{bottom:4px;left:12px;right:94px;background:#fff9eddd;border-radius:8px;padding:2px 8px!important;max-width:max-content;font-size:11px!important;z-index:12}
+.cdj-greeting[data-room="study"] .greeting-pause{z-index:12}
+@media(max-width:760px){.cdj-welcome .cdj-greeting[data-room="study"]{height:auto!important;min-height:0!important}.cdj-greeting[data-room="study"] .greeting-character:not(.greeting-cat){--frame:110px}.cdj-greeting[data-room="study"] .greeting-cat{scale:.6}.cdj-greeting[data-room="study"] .greeting-caption{font-size:9px!important;right:62px}.cdj-greeting[data-room="study"] .study-object .object-label{font-size:10px}}

@@ -2,17 +2,17 @@
 const D=window.CDJHouseData,A=D.actors;
 const $=s=>document.querySelector(s);
 function actor(key,msg){return '<button type="button" class="greeting-character" aria-label="和'+A[key]+'打招呼" data-greeting="'+msg+'"><span class="greeting-sprite" aria-hidden="true" style="background-image:url(/assets/greetings/v1/'+key+'.webp)"></span></button>';}
-function stage(key,room,people,msg){let content='<div class="greeting-scene" aria-hidden="true"'+(room?' style="background-image:url(/assets/greetings/v1/room-'+room+'.webp?v=20261108-welcome9)"':'')+'></div>';
-if(key==='study')content+='<nav class="study-objects" aria-label="點房間物件選文章">'+[
-['family','一家日常','family-photo','<img src="/assets/style-refresh/family-album.webp" alt="雞爸爸一家的相片">'],
-['devil','內心小惡魔','devil-doll','<span class="object-devil" aria-hidden="true"></span>'],
-['zschen','珍山陳語錄','ancestor-photo','<span class="object-ancestor" aria-hidden="true"></span>'],
-['cdpj','親子期刊','kids-photo','<img src="/assets/home-collage/kids.webp" alt="鼠姊姊和龍弟弟的相片">'],
-['cdhj','健康期刊','health-tools','<svg viewBox="0 0 120 100" aria-hidden="true"><path d="M28 10v25a23 23 0 0046 0V10M51 58v14a20 20 0 0040 0V55" fill="none" stroke="#496d64" stroke-width="7" stroke-linecap="round"/><circle cx="91" cy="49" r="12" fill="#e8d9af" stroke="#496d64" stroke-width="5"/><path d="M12 85h50M18 75v20M27 75v20M48 75v20M57 75v20" fill="none" stroke="#647183" stroke-width="8" stroke-linecap="round"/></svg>']
-].map(([k,n,c,v])=>'<a href="/articles.html?room='+k+'#cards-grid" data-journal-filter="'+k+'" class="study-object '+c+'" aria-label="'+n+'">'+v+'<span class="object-label">'+n+'</span></a>').join('')+'</nav>';
+function stage(key,room,people,msg){let content='<div class="greeting-scene" aria-hidden="true"'+(room?' style="background-image:url(/assets/greetings/v1/room-'+room+'.webp?v=20261115-study2)"':'')+'></div>';
+if(key==='study')content+='<nav class="study-objects" aria-label="書房裡的五個文章入口">'+[
+['zschen','珍山陳經典語錄・族譜','genealogy'],
+['devil','雞爸爸內心小惡魔・擺飾','devil-doll'],
+['family','雞爸爸一家生活紀錄・家庭相框','family-photo'],
+['cdpj','雞爸爸親子期刊・童書','kids-books'],
+['cdhj','雞爸爸健康期刊・啞鈴','dumbbell']
+].map(([k,n,c])=>'<a href="/articles.html?room='+k+'#cards-grid" data-journal-filter="'+k+'" class="study-object '+c+'" title="'+n+'" aria-label="'+n+'"><span class="object-label">'+n.split('・')[0]+'</span></a>').join('')+'</nav>';
 content+=people.map(k=>actor(k,msg)).join('');
 if(key==='study')content+=['yahoo','youyou'].map((k,i)=>'<button type="button" class="greeting-character greeting-cat" aria-label="和'+(i?'右右':'雅虎')+'打招呼" data-greeting="喵～歡迎來看故事！"><img src="/cat-'+k+'-'+(i?'sleep':'peek')+'.png" alt="" width="90" height="90"></button>').join('');
-return '<div class="cdj-greeting'+(people.length>1?' cdj-greeting-group':'')+(key==='home'?' cdj-greeting-home':'')+'"'+(room?' data-room="'+room+'"':'')+' aria-label="家人迎賓互動區">'+content+'<p class="greeting-caption" aria-live="polite">'+(key==='study'?'點房間裡的物件，挑一類文章':'點一下角色，打個招呼')+'</p><button type="button" class="greeting-pause" aria-pressed="false">暫停動作</button></div>';
+return '<div class="cdj-greeting'+(people.length>1?' cdj-greeting-group':'')+(key==='home'?' cdj-greeting-home':'')+'"'+(room?' data-room="'+room+'"':'')+' aria-label="家人迎賓互動區">'+content+'<p class="greeting-caption" aria-live="polite">'+(key==='study'?'點族譜、相框、童書、小惡魔或啞鈴閱讀文章':'點一下角色，打個招呼')+'</p><button type="button" class="greeting-pause" aria-pressed="false">暫停動作</button></div>';
 }
 function bind(){const reduce=matchMedia('(prefers-reduced-motion: reduce)');
 document.querySelectorAll('.cdj-greeting').forEach(el=>{const p=el.querySelector('.greeting-pause');
@@ -50,7 +50,7 @@ const a=document.createElement('a');a.className='house-all';a.href='/articles.ht
 }else if(path==='/'||path==='/index.html'){$('.life-hero-copy')?.insertAdjacentHTML('beforeend',stage('home',null,['mom-home'],'歡迎回家，今天過得好嗎？'));}
 else{
 const key=path==='/articles.html'?'study':path==='/videos.html'?'living':path.startsWith('/play/')?'play':path==='/relax.html'?'relax':path==='/stickers.html'?'stickers':path==='/family.html'?'family':null;
-const cfg={study:['study',['dad-reader','devil','zschen'],'歡迎來雞窩！'],living:['living',D.family,'歡迎來我們這一家！'],play:[null,['dodo-abc'],'一起玩，一起發現新東西！'],relax:[null,['ama-tea'],'坐一下，陪阿嬤喝杯茶。'],stickers:[null,['mom-chat'],'讓家人的小表情，陪你聊天。'],family:[null,['dad-greeter'],'歡迎來我們家！']}[key];
+const cfg={study:['study',['dad-reader'],'歡迎來雞窩！'],living:['living',D.family,'歡迎來我們這一家！'],play:[null,['dodo-abc'],'一起玩，一起發現新東西！'],relax:[null,['ama-tea'],'坐一下，陪阿嬤喝杯茶。'],stickers:[null,['mom-chat'],'讓家人的小表情，陪你聊天。'],family:[null,['dad-greeter'],'歡迎來我們家！']}[key];
 if(cfg){$('.cdj-welcome-picture')?.insertAdjacentHTML('afterend',stage(key,...cfg));if(['stickers','family'].includes(key)){const hero=$('.cdj-welcome');hero.classList.add('cdj-portrait-entrance');const card=hero.querySelector('.cdj-welcome-picture');if(card){const caption=document.createElement('figcaption');caption.textContent=key==='family'?'門一開，歡迎來到我們家。':'讓家人的小表情，陪你聊聊天。';card.append(caption);}const css=document.createElement('link');css.rel='stylesheet';css.href='/css/room-content.css?v=20261109-room13';document.head.append(css);}else $('.cdj-welcome-picture')?.remove();if(key==='study'){$('.journal-categories')?.remove();$('.cdj-welcome-label').textContent='雞窩';$('#cdj-welcome-title').innerHTML='歡迎來書房，<br>坐下來讀一段。';$('.cdj-welcome-summary').textContent='雞爸爸的文章都在這裡，小惡魔、珍山陳阿祖和兩隻貓陪你挑故事。';window.cdjSelectJournal?.(new URLSearchParams(location.search).get('room')||'all',false);}if(key==='living'){$('.cdj-welcome-label').textContent='客廳';$('#cdj-welcome-title').innerHTML='歡迎來，<br>我們這一家。';$('.cdj-welcome-summary').textContent='雞爸爸拍的一家日常、雅虎右右與創作短片，點封面就能看。';}}
 }
 document.querySelectorAll('.cdj-welcome .cdj-greeting[data-room]').forEach(el=>{
