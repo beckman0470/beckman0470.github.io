@@ -16,84 +16,87 @@
 .segment-panel .segment-entry{padding:9px;border-radius:11px;background:white;border:1px solid #f1b9d7;display:flex;align-items:center;gap:8px;justify-content:space-between}
 .segment-panel button:disabled{opacity:.5;cursor:default}
 @media(max-width:700px){.segment-panel .editor{grid-template-columns:1fr}.segment-tools button{font-size:14px;padding:9px}.segment-panel h2{font-size:17px}}
-</style></head><body><main class="wrap"><section class="screen"><div class="top"><div class="branding"><strong>BABYMONSTER</strong><span>鼠姊姊・英韓小教室</span></div><div class="lyrics" id="lyrics" aria-label="歌詞"><button class="speak-line" id="speak-line" aria-label="朗讀整句英文" title="朗讀整句英文">🔊 EN</button></div></div><div class="song-meta"><span class="pill">DRIP　EP01</span><span>CHIQUITA｜小七</span></div><img class="stage" src="/assets/bm-approved/drip-stage.jpg" alt="七人固定站位，小七在前排，粉紅霓虹舞台，RORA、CHIQUITA、AHYEON、RAMI、PHARITA、ASA、RUKA"><div class="translation"><b>📖 整句意思</b><strong id="translation">我打扮的時候，不會想太多。</strong><button class="speak-translation" id="speak-translation" aria-label="朗讀整句中文" title="朗讀整句中文">🔊</button></div><div class="cards" id="cards"></div><div class="player"><a class="return" href="/rooms.html?room=games">⌂ 回遊戲間</a><button class="btn" id="play" aria-label="播放示範">▶</button><div class="status" id="status">▶ 單字教學　｜　🎵 聽官方原唱</div><button class="song-btn" id="dodo-toggle" type="button">🎤 鼠姊姊演唱</button><button class="song-btn" id="song-btn" type="button">🎵 播放原唱（官方 MV）</button></div><section class="segment-panel" id="segment-panel" aria-label="逐句唱與中文教學">
- <h2>🎤 一句一句聽｜唱完自動暫停、中文講解</h2>
+.pending-lyric{padding:8px;color:#ffd0ec;font-weight:900;font-size:clamp(17px,3vw,28px)}</style></head><body><main class="wrap"><section class="screen"><div class="top"><div class="branding"><strong>BABYMONSTER</strong><span>鼠姊姊・英韓小教室</span></div><div class="lyrics" id="lyrics" aria-label="歌詞"><button class="speak-line" id="speak-line" aria-label="朗讀整句英文" title="朗讀整句英文">🔊 EN</button></div></div><div class="song-meta"><span class="pill">DRIP　EP01</span><span>CHIQUITA｜小七</span></div><img class="stage" src="/assets/bm-approved/drip-stage.jpg" alt="七人固定站位，小七在前排，粉紅霓虹舞台，RORA、CHIQUITA、AHYEON、RAMI、PHARITA、ASA、RUKA"><div class="translation"><b>📖 整句意思</b><strong id="translation">我打扮的時候，不會想太多。</strong><button class="speak-translation" id="speak-translation" aria-label="朗讀整句中文" title="朗讀整句中文">🔊</button></div><div class="cards" id="cards"></div><div class="player"><a class="return" href="/rooms.html?room=games">⌂ 回遊戲間</a><button class="btn" id="play" aria-label="播放示範">▶</button><div class="status" id="status">▶ 單字教學　｜　🎵 聽官方原唱</div><button class="song-btn" id="dodo-toggle" type="button">🎤 鼠姊姊演唱</button><button class="song-btn" id="song-btn" type="button">🎵 播放原唱（官方 MV）</button></div><section class="segment-panel" id="segment-panel" aria-label="逐句唱與中文教學">
+ <h2>🎤 逐句練習｜只標記一次開頭</h2>
  <div class="segment-tools">
  <button class="primary" id="sentence-play" type="button">▶ 播放這一句並教學</button>
- <button id="sentence-all" type="button">▶ 已校準句子連續教學</button>
- <button id="mark-start" type="button">① 標記這句開始</button>
- <button id="mark-end" type="button">② 標記這句結束</button>
+ <button id="sentence-all" type="button">▶ 從第一句接著聽</button>
+ <button id="mark-start" type="button">① 只標記第一句開頭</button>
+ <button id="sentence-prev" type="button">◀ 上一句</button><button id="sentence-next" type="button">下一句 ▶</button>
  <button id="sentence-stop" type="button">■ 停止</button>
  </div>
- <p class="help" id="sentence-info">先播放下方錄音，聽到一句開始按「①」，唱完按「②」。之後按「播放這一句」就會在句尾自動停下，朗讀整句中文，再逐字教英文＋中文。可用下方設定新增其他句子。</p>
+ <p class="help" id="sentence-info">播放錄音，在第一句開頭按「只標記第一句開頭」一次。之後可按上一句、下一句切換；後續區間暫以估計長度排列，尚非正式歌詞時間碼。</p>
  <div class="segment-tools"><label for="sentence-select">目前句子：</label><select id="sentence-select"></select><span class="segment-time" id="sentence-time">尚未校準</span></div>
- <details><summary>家長設定｜新增句子及修正歌詞（只需設定一次）</summary>
+ <details><summary>家長設定｜補上後續歌詞及中文意思</summary>
   <div class="editor"><label>英文歌詞<input id="sentence-english" type="text" placeholder="這一句英文歌詞"></label><label>中文意思<input id="sentence-chinese" type="text" placeholder="用孩子聽得懂的中文意思"></label></div>
-  <div class="row"><button id="save-sentence" type="button">儲存這一句文字</button><button id="add-sentence" type="button">＋ 新增下一句</button><button id="remove-sentence" type="button">刪除這一句</button><button id="clear-timing" type="button">清除這句時間</button></div>
-  <div id="segments-list"></div><p class="help">句首與句尾會儲存在這個瀏覽器。新增其他歌詞需自行輸入及校對；未輸入的句子不會捏造歌詞或翻譯。上傳新版 HTML 不影響錄音。</p>
+  <div class="row"><button id="save-sentence" type="button">儲存這一句文字</button><button id="clear-timing" type="button">重新校準第一句開頭</button></div>
+  <div id="segments-list"></div><p class="help">只需標記第一句開頭。其他句子會出現在下拉選單，但其時間是估算切段，不是已驗證的歌聲分句；尚無正確歌詞的句子不會編造中文解說。</p>
  </details>
  </section><section class="dodo-audio hide" id="dodo-audio" aria-label="鼠姊姊演唱錄音"><div class="dodo-controls"><strong>🎤 鼠姊姊演唱錄音</strong><button id="dodo-sync" type="button">🎯 這句從此刻開始</button><button id="dodo-reset" type="button">↺ 清除校準</button><output id="dodo-status">目前歌詞尚未和錄音校準</output></div><audio id="dodo-player" controls preload="metadata"><source src="/assets/dodo/dodo-song.m4a" type="audio/mp4">你的瀏覽器無法播放此音檔。</audio><p class="dodo-tip">這是你提供的錄音。按播放就能聽見鼠姊姊唱歌；聽到畫面上那句歌詞的第一個字時，按「這句從此刻開始」，逐字高亮才會跟錄音時間連動。每個字的間隔尚未依錄音逐字校正。</p></section><div class="video-area" id="video-area"><div class="video-layout"><div class="yt-box"><div id="yt-player"></div></div><div class="sync-tools"><button id="sync-now" type="button">🎯 對準這句的起點</button><button id="sync-reset" type="button">↺ 重新校準</button><a href="https://www.youtube.com/watch?v=Zp-Jhuhq0bQ" target="_blank" rel="noopener noreferrer">無法播放？到 YouTube 開啟官方 MV</a><div class="sync-status" id="sync-status">播放官方 MV，當聽到「When I dress...」第一個字時，按「對準這句的起點」。亮字會依影片時間推進；逐字秒數為估計值。</div></div></div></div><p class="note">🔊 英文／中文語音鍵採用裝置內建語音，須在瀏覽器允許語音播放。🎵 官方原唱由 YouTube 嵌入播放，可能受網路或影片播放限制。點「對準這句的起點」後，高亮會跟著影片時鐘播放，但逐字時間仍為估計，尚非正式逐字校時版本；此頁不下載或重新散布原唱音檔。</p></section></main>
 <script>(()=>{'use strict';
 const $=q=>document.querySelector(q);
-const initial={english:'When I dress I don’t think so much',chinese:'我打扮的時候，不會想太多。',start:null,end:null};
-const dictionary={when:['當……的時候','📅'],i:['我','🙋'],dress:['打扮、穿衣服','👗'],"don’t":['不、沒有','🚫'],"don't":['不、沒有','🚫'],think:['想、思考','💭'],so:['這麼、那麼','✨'],much:['多','📚']};
-const STORAGE='bm-dodo-sentences-20261115-v1';
-let segments;try{const a=JSON.parse(localStorage.getItem(STORAGE)||'null');segments=Array.isArray(a)&&a.length?a:[initial]}catch{segments=[initial]}
-let selected=0,words=[],phase='idle',speechRun=0,lastHighlight=-1,raf=0,yt=null,ytReady=false,ytAnchor=null,ytRaf=0;
-const audio=$('#dodo-player'),panel=$('#dodo-audio'),songStatus=$('#status'),timeStatus=$('#sentence-time'),select=$('#sentence-select');
-const make=(tag,cls,txt)=>{const e=document.createElement(tag);e.className=cls;e.textContent=txt;return e};
-function save(){try{localStorage.setItem(STORAGE,JSON.stringify(segments))}catch{}}
-function current(){return segments[selected]}
-function getTokens(s){return String(s||'').trim().split(/\s+/).filter(Boolean)}
-function render(){const line=current();words=getTokens(line.english);const lyric=$('#lyrics'),cards=$('#cards');lyric.querySelectorAll('.lyric-word').forEach(x=>x.remove());cards.replaceChildren();
- words.forEach((word,i)=>{let b=make('button','lyric-word',word);b.onclick=()=>teachWord(i);lyric.insertBefore(b,$('#speak-line'));let info=dictionary[word.toLowerCase().replace(/[.,!?]/g,'')]||['點擊聽發音','🔤'];let c=make('button','card','');c.append(make('span','word',word),make('span','icon',info[1]),make('span','hint',info[0]));c.onclick=()=>teachWord(i);cards.append(c)});
- $('#translation').textContent=line.chinese||'請由家長填入中文翻譯';select.replaceChildren(...segments.map((s,i)=>{let o=document.createElement('option');o.value=i;o.textContent='第 '+(i+1)+' 句'+(s.english?'：'+s.english.slice(0,22):'（待輸入）');return o}));select.value=selected;
- $('#sentence-english').value=line.english;$('#sentence-chinese').value=line.chinese;timeStatus.textContent=line.start!==null&&line.end!==null?`${line.start.toFixed(2)} – ${line.end.toFixed(2)} 秒`:'尚未校準句首與句尾';
- $('#segments-list').replaceChildren(...segments.map((s,i)=>{let d=make('div','segment-entry',`${i+1}. ${s.english||'待填歌詞'} ｜ ${s.start!==null&&s.end!==null?'已校準':'未校準'}`);return d}));highlight(-1)
+const audio=$('#dodo-player'), panel=$('#dodo-audio'), statusEl=$('#status'), info=$('#sentence-info');
+const STORE='bm-dodo-one-anchor-20261115-v2',OLD='bm-dodo-sentences-20261115-v1';
+const FULL_DURATION=170.730667, ESTIMATE=5.5;
+const known={english:'When I dress I don’t think so much',chinese:'我打扮的時候，不會想太多。'};
+const dictionary={when:['當……的時候','📅'],i:['我','🙋'],dress:['打扮、穿衣服','👗'],"don't":['不、沒有','🚫'],'don’t':['不、沒有','🚫'],think:['想、思考','💭'],so:['這麼、那麼','✨'],much:['多','📚']};
+let saved=null,old=null;try{saved=JSON.parse(localStorage.getItem(STORE)||'null')}catch{}try{old=JSON.parse(localStorage.getItem(OLD)||'null')}catch{}
+let anchor=Number.isFinite(saved?.anchor)?saved.anchor:(Array.isArray(old)&&Number.isFinite(old[0]?.start)?old[0].start:null);
+let lines=Array.from({length:Math.ceil(FULL_DURATION/ESTIMATE)},(_,i)=>({english:i===0?known.english:'',chinese:i===0?known.chinese:''}));
+if(Array.isArray(old))old.forEach((r,i)=>{if(i<lines.length&&r?.english&&r?.chinese)lines[i]={english:r.english,chinese:r.chinese}});
+if(Array.isArray(saved?.lines))saved.lines.forEach((r,i)=>{if(i<lines.length&&r?.english)lines[i]={english:r.english,chinese:r.chinese||''}});
+let selected=0, phase='idle', run=0, raf=0, words=[],lastHighlight=-10,auto=false,yt=null,ytReady=false;
+const save=()=>{try{localStorage.setItem(STORE,JSON.stringify({anchor,lines}))}catch{}};
+const state=txt=>{statusEl.textContent=txt;info.textContent=txt};
+const make=(tag,cls,t)=>{const e=document.createElement(tag);e.className=cls;e.textContent=t;return e};
+const tokens=t=>String(t||'').split(/\s+/).filter(Boolean);
+const valid=i=>!!(lines[i]&&lines[i].english&&lines[i].chinese);
+const times=i=>{if(anchor===null)return null;const s=anchor+i*ESTIMATE;return {start:s,end:Math.min(FULL_DURATION,s+ESTIMATE)}};
+function highlight(i){if(lastHighlight===i)return;lastHighlight=i;$('#lyrics').querySelectorAll('.lyric-word').forEach((e,j)=>e.classList.toggle('active',j===i));[...$('#cards').children].forEach((e,j)=>e.classList.toggle('selected',j===i));}
+function render(){let line=lines[selected];words=tokens(line.english);const lyric=$('#lyrics'),cards=$('#cards');lyric.querySelectorAll('.lyric-word').forEach(x=>x.remove());cards.replaceChildren();
+ if(!words.length){let e=make('div','pending-lyric','第 '+(selected+1)+' 句｜尚待核對原歌詞');lyric.insertBefore(e,$('#speak-line'));}
+ lyric.querySelectorAll('.pending-lyric').forEach((e,j)=>{if(words.length)e.remove()});
+ words.forEach((w,i)=>{let b=make('button','lyric-word',w);b.onclick=()=>teachWord(i);lyric.insertBefore(b,$('#speak-line'));let d=dictionary[w.toLowerCase().replace(/[.,!?]/g,'')]||['詞義待補','🔤'];let c=make('button','card','');c.append(make('span','word',w),make('span','icon',d[1]),make('span','hint',d[0]));c.onclick=()=>teachWord(i);cards.append(c)});
+ $('#translation').textContent=line.chinese||'這一句的中文翻譯尚待核對';
+ const sel=$('#sentence-select');sel.replaceChildren(...lines.map((l,i)=>{const o=document.createElement('option');o.value=i;o.textContent=`第 ${i+1} 句${l.english?'：'+l.english.slice(0,28):'（待補歌詞）'}`;return o}));sel.value=selected;
+ $('#sentence-english').value=line.english;$('#sentence-chinese').value=line.chinese;
+ const t=times(selected);$('#sentence-time').textContent=t?`${t.start.toFixed(1)}–${t.end.toFixed(1)} 秒（估算）`:'尚未設定第一句起點';
+ $('#segments-list').replaceChildren(...lines.slice(0,9).map((l,i)=>make('div','segment-entry',`${i+1}. ${l.english||'歌詞待補'} ｜ ${times(i)?'估計區間':'未對準'}`)));
+ $('#sentence-prev').disabled=selected===0;$('#sentence-next').disabled=selected===lines.length-1;lastHighlight=-10;highlight(-1);
 }
-function highlight(i){if(i===lastHighlight)return;lastHighlight=i;$('#lyrics').querySelectorAll('.lyric-word').forEach((x,j)=>x.classList.toggle('active',j===i));[...$('#cards').children].forEach((x,j)=>x.classList.toggle('selected',j===i))}
-function status(msg){songStatus.textContent=msg;$('#sentence-info').textContent=msg}
-function cancelVoice(){speechRun++;if('speechSynthesis' in window)window.speechSynthesis.cancel()}
-function say(text,language){const ticket=speechRun;return new Promise(resolve=>{if(!('speechSynthesis' in window)||!text||!String(text).trim()){resolve();return}const synth=window.speechSynthesis;const u=new SpeechSynthesisUtterance(text);u.lang=language;u.rate=language==='zh-TW'?.83:.83;u.pitch=1.13;const voices=synth.getVoices();const v=voices.find(v=>v.lang.toLowerCase()===language.toLowerCase())||voices.find(v=>v.lang.toLowerCase().startsWith(language.slice(0,2).toLowerCase()));if(v)u.voice=v;let done=false;const finish=()=>{if(!done){done=true;resolve()}};u.onend=finish;u.onerror=finish;synth.speak(u);/* iOS 語音取消後也要允許工作流中止 */});}
-async function teachWord(i){stopAll();highlight(i);let w=words[i]||'';let info=dictionary[w.toLowerCase().replace(/[.,!?]/g,'')];let n=speechRun;status('英文：'+w);await say(w,'en-US');if(n!==speechRun)return;status(info?'中文：'+info[0]:'這個單字尚未加入中文解釋');if(info)await say(info[0],'zh-TW')}
-async function teachSentence(autoNext){const n=speechRun;phase='teaching';const s=current();highlight(-1);status('唱完這一句，先聽整句中文解釋');await say(s.chinese,'zh-TW');if(n!==speechRun)return;
- for(let i=0;i<words.length;i++){if(n!==speechRun)return;highlight(i);const token=words[i];status('單字 '+(i+1)+'／'+words.length+'：'+token);await say(token,'en-US');if(n!==speechRun)return;const info=dictionary[token.toLowerCase().replace(/[.,!?]/g,'')];if(info){status(token+' 的意思是：'+info[0]);await say(info[0],'zh-TW');if(n!==speechRun)return}}
- highlight(-1);status('這句意思：'+s.chinese);await say(s.chinese,'zh-TW');if(n!==speechRun)return;
- if(autoNext){let next=selected+1;while(next<segments.length&&!(isReady(segments[next])&&segments[next].english&&segments[next].chinese))next++;if(next<segments.length){selected=next;render();playSentence(true);return}}
- phase='idle';status('本句教學完成！可以重聽或選下一句。')
-}
-function isReady(s){return Number.isFinite(s.start)&&Number.isFinite(s.end)&&s.end>s.start}
-function stopAll(){phase='idle';cancelAnimationFrame(raf);cancelVoice();audio.pause();if(ytReady&&yt)yt.pauseVideo()}
-function playSentence(continueNext=false){const s=current();if(!isReady(s)){status('還沒有設定這句開始與結束的時間：請先播放錄音並標記 ① 句首和 ② 句尾');panel.classList.remove('hide');return}
- if(!s.english||!s.chinese){status('請先在家長設定填好這一句的歌詞和中文意思');return}
- stopAll();panel.classList.remove('hide');$('#video-area').classList.remove('open');phase=continueNext?'sing-all':'sing-one';const start=s.start,end=s.end;audio.currentTime=start;lastHighlight=-2;highlight(-1);
- status('正在聽第 '+(selected+1)+' 句演唱，到句尾會自動暫停');const n=speechRun;
- function tick(){if(n!==speechRun||!(phase==='sing-one'||phase==='sing-all'))return;
- const elapsed=audio.currentTime-start;const fraction=Math.max(0,Math.min(.999,elapsed/(end-start)));highlight(Math.min(words.length-1,Math.floor(fraction*Math.max(1,words.length))));
- if(audio.currentTime+0.035>=end||audio.ended){audio.pause();audio.currentTime=Math.min(end,audio.duration||end);const all=phase==='sing-all';phase='teaching';cancelAnimationFrame(raf);highlight(-1);status('這句唱完了！歌曲已暫停，開始中文教學');teachSentence(all);return}raf=requestAnimationFrame(tick)}
- audio.play().then(()=>{raf=requestAnimationFrame(tick)}).catch(()=>{phase='idle';status('請按錄音播放器的播放鍵，瀏覽器可能限制自動播放')})
-}
-$('#sentence-play').onclick=()=>playSentence(false);$('#sentence-all').onclick=()=>{selected=segments.findIndex(s=>isReady(s)&&s.english&&s.chinese);if(selected<0){selected=0;status('請先標記至少一句的開始和結束時間');return}render();playSentence(true)};
-$('#sentence-stop').onclick=()=>{stopAll();status('已停止逐句教學')};
-$('#mark-start').onclick=()=>{let s=current();s.start=Number(audio.currentTime.toFixed(2));if(s.end!==null&&s.end<=s.start)s.end=null;save();render();status('已記錄第 '+(selected+1)+' 句起點 '+s.start+' 秒，請繼續聽到這句結束後按 ②')};
-$('#mark-end').onclick=()=>{let s=current();const t=Number(audio.currentTime.toFixed(2));if(s.start===null||t<=s.start){status('請先在這句開頭按 ①，再到句尾按 ②');return}s.end=t;audio.pause();save();render();status('第 '+(selected+1)+' 句已校準！按「播放這一句並教學」試聽')};
-$('#clear-timing').onclick=()=>{current().start=null;current().end=null;save();render()};
-select.onchange=()=>{stopAll();selected=Number(select.value);render()};
-$('#save-sentence').onclick=()=>{current().english=$('#sentence-english').value.trim();current().chinese=$('#sentence-chinese').value.trim();save();render();status('這句的英文及中文已儲存')};
-$('#add-sentence').onclick=()=>{stopAll();segments.push({english:'',chinese:'',start:null,end:null});selected=segments.length-1;save();render();$('#sentence-english').focus()};
-$('#remove-sentence').onclick=()=>{stopAll();if(segments.length===1){status('至少保留一句');return}segments.splice(selected,1);selected=Math.min(selected,segments.length-1);save();render()};
-$('#speak-line').onclick=()=>{stopAll();say(current().english,'en-US')};$('#speak-translation').onclick=()=>{stopAll();say(current().chinese,'zh-TW')};
-$('#play').onclick=()=>{if(phase!=='idle'){stopAll();status('已停止');return}playSentence(false)};
-$('#dodo-toggle').onclick=()=>{panel.classList.toggle('hide');if(!panel.classList.contains('hide')){$('#video-area').classList.remove('open');if(ytReady)yt.pauseVideo();status('錄音已開啟，可播放後按 ① ② 標記每句')}else{stopAll()}};
-/* Keep the official embed an independent legal playback option. */
-const video=$('#video-area'),sstatus=$('#sync-status');
-function initYT(){if(window.YT&&YT.Player){makeYT();return}if(document.querySelector('#youtube-api'))return;window.onYouTubeIframeAPIReady=makeYT;const e=document.createElement('script');e.id='youtube-api';e.src='https://www.youtube.com/iframe_api';document.head.appendChild(e)}
-function makeYT(){if(yt)return;yt=new YT.Player('yt-player',{videoId:'Zp-Jhuhq0bQ',playerVars:{playsinline:1,rel:0,origin:location.origin},events:{onReady:()=>{ytReady=true;sstatus.textContent='官方影片已準備。可使用校準亮字；逐句自動暫停目前使用鼠姊姊錄音。'},onStateChange:e=>{if(e.data===YT.PlayerState.PLAYING)ytTick()},onError:()=>{sstatus.textContent='此影片目前無法在網站內嵌播放'}}})}
-$('#song-btn').onclick=()=>{stopAll();video.classList.toggle('open');if(video.classList.contains('open')){initYT();$('#song-btn').textContent='🎵 收起原唱影片'}else{$('#song-btn').textContent='🎵 播放原唱（官方 MV）'}};
-const offsets=[0,.35,.65,1.08,1.48,1.85,2.25];
-function ytTick(){cancelAnimationFrame(ytRaf);const go=()=>{if(ytReady&&ytAnchor!==null&&yt.getPlayerState()===YT.PlayerState.PLAYING){let dt=yt.getCurrentTime()-ytAnchor;let i=offsets.reduce((a,t,j)=>dt>=t?j:a,-1);if(i>=0&&dt<3.15)highlight(i)}if(video.classList.contains('open'))ytRaf=requestAnimationFrame(go)};go()}
-$('#sync-now').onclick=()=>{if(!ytReady){sstatus.textContent='請先載入官方影片';return}ytAnchor=yt.getCurrentTime();sstatus.textContent='亮字起點已標記，逐字秒數仍為估算';ytTick()};$('#sync-reset').onclick=()=>{ytAnchor=null;sstatus.textContent='已清除校準'};
-/* Older controls remain functional for mark-on-play workflow. */
+function stop(){run++;phase='idle';cancelAnimationFrame(raf);audio.pause();if('speechSynthesis' in window)window.speechSynthesis.cancel();if(yt&&ytReady)yt.pauseVideo()}
+function say(t,lang){const num=run;return new Promise(resolve=>{if(!t||!('speechSynthesis' in window)){resolve();return;}const u=new SpeechSynthesisUtterance(t);u.lang=lang;u.rate=.83;u.pitch=1.1;let resolved=false;const done=()=>{if(!resolved){resolved=true;resolve()}};u.onend=done;u.onerror=done;window.speechSynthesis.speak(u)});}
+async function teachWord(i){stop();highlight(i);let tok=words[i]||'';const n=run,d=dictionary[tok.toLowerCase().replace(/[.,!?]/g,'')];state('英文：'+tok);await say(tok,'en-US');if(n!==run)return;if(d){state('中文：'+d[0]);await say(d[0],'zh-TW')}else state('這個詞的中文意思還待核對')}
+async function lesson(continuous){const n=run;phase='teaching';highlight(-1);state('這句唱完，先聽中文解釋');await say(lines[selected].chinese,'zh-TW');if(n!==run)return;
+ for(let i=0;i<words.length;i++){if(n!==run)return;highlight(i);const word=words[i],d=dictionary[word.toLowerCase().replace(/[.,!?]/g,'')];state('英文：'+word);await say(word,'en-US');if(n!==run)return;if(d){state('中文：'+d[0]);await say(d[0],'zh-TW');if(n!==run)return}}
+ highlight(-1);state('整句中文：'+lines[selected].chinese);await say(lines[selected].chinese,'zh-TW');if(n!==run)return;
+ if(continuous&&selected<lines.length-1){selected++;render();if(valid(selected))return play(true);state('已切到第 '+(selected+1)+' 句。但目前沒有核對過的歌詞與中文意思，不能亂教。可在家長設定補入文字。');return}
+ phase='idle';state('第 '+(selected+1)+' 句教學完成，按「下一句」可看到後面的句子。');}
+function play(continuous){if(anchor===null){panel.classList.remove('hide');state('請先播放鼠姊姊錄音，聽到第一句開始時，按一次「只標記第一句開頭」。');return}
+ const t=times(selected);if(!t||t.start>=FULL_DURATION){state('這個段落已超出錄音長度');return}
+ if(!valid(selected)){state('第 '+(selected+1)+' 句尚無正確歌詞與中文意思，暫不進入教學。請先在家長設定補上。');return}
+ stop();panel.classList.remove('hide');$('#video-area').classList.remove('open');phase='singing';const n=run;audio.currentTime=t.start;highlight(-1);state('正在播放第 '+(selected+1)+' 句，估計句尾會暫停');
+ function tick(){if(n!==run||phase!=='singing')return;const fraction=Math.max(0,Math.min(.999,(audio.currentTime-t.start)/(t.end-t.start)));highlight(Math.min(words.length-1,Math.floor(fraction*words.length)));
+ if(audio.currentTime>=t.end-.04||audio.ended){audio.pause();audio.currentTime=Math.min(t.end,audio.duration||t.end);phase='teaching';highlight(-1);state('估計段落結束，暫停音樂開始教學');lesson(continuous);return}raf=requestAnimationFrame(tick)}
+ audio.play().then(()=>raf=requestAnimationFrame(tick)).catch(()=>state('瀏覽器阻止播放，請再按一次播放鍵'));}
+$('#mark-start').onclick=()=>{stop();anchor=Number(audio.currentTime.toFixed(2));save();selected=0;render();state(`第一句開頭已設為 ${anchor.toFixed(2)} 秒。之後不需要再標記每句時間；其他句子的秒數目前僅估計。`)};
+$('#sentence-play').onclick=()=>play(false);$('#sentence-all').onclick=()=>{selected=0;render();play(true)};
+$('#sentence-prev').onclick=()=>{stop();selected=Math.max(0,selected-1);render();state('第 '+(selected+1)+' 句已顯示')};
+$('#sentence-next').onclick=()=>{stop();selected=Math.min(lines.length-1,selected+1);render();state('第 '+(selected+1)+' 句已顯示；若歌詞尚待核對，不會播放虛構的翻譯。')};
+$('#sentence-stop').onclick=()=>{stop();state('已停止')};
+$('#sentence-select').onchange=e=>{stop();selected=+e.target.value;render()};
+$('#clear-timing').onclick=()=>{stop();anchor=null;save();render();state('已清除第一句起點，請重新標記一次')};
+$('#save-sentence').onclick=()=>{lines[selected]={english:$('#sentence-english').value.trim(),chinese:$('#sentence-chinese').value.trim()};save();render();state('已儲存第 '+(selected+1)+' 句的文字，時間仍為估計值')};
+$('#speak-line').onclick=()=>{stop();say(lines[selected].english,'en-US')};
+$('#speak-translation').onclick=()=>{stop();say(lines[selected].chinese,'zh-TW')};
+$('#play').onclick=()=>{if(phase==='idle')play(false);else{stop();state('已停止')}};
+$('#dodo-toggle').onclick=()=>{panel.classList.toggle('hide');if(!panel.classList.contains('hide')){state('播放錄音，聽到第一句開頭只標記一次。')}else stop()};
 $('#dodo-sync').onclick=()=>$('#mark-start').click();$('#dodo-reset').onclick=()=>$('#clear-timing').click();
-render();status('逐句模式已就緒。先標記一句的開始與結束，歌曲就能在句尾自動暫停並唸中文。');
+const video=$('#video-area'),sstatus=$('#sync-status');let ytAnchor=null,ytRaf=0;
+function makeYT(){if(yt)return;yt=new YT.Player('yt-player',{videoId:'Zp-Jhuhq0bQ',playerVars:{playsinline:1,rel:0,origin:location.origin},events:{onReady:()=>{ytReady=true;sstatus.textContent='官方播放器已連線。其時間點尚未校準。'},onError:()=>{sstatus.textContent='官方影片無法內嵌播放'}}})}
+function initYT(){if(window.YT&&YT.Player){makeYT();return}if(document.querySelector('#youtube-api'))return;window.onYouTubeIframeAPIReady=makeYT;const tag=document.createElement('script');tag.id='youtube-api';tag.src='https://www.youtube.com/iframe_api';document.head.appendChild(tag)}
+$('#song-btn').onclick=()=>{stop();video.classList.toggle('open');if(video.classList.contains('open')){initYT();$('#song-btn').textContent='🎵 收起原唱影片'}else $('#song-btn').textContent='🎵 播放原唱（官方 MV）'};
+$('#sync-now').onclick=()=>{if(!ytReady)return;ytAnchor=yt.getCurrentTime();sstatus.textContent='已記錄此刻；官方版歌詞時間仍需核對'};
+$('#sync-reset').onclick=()=>{ytAnchor=null;sstatus.textContent='已清除校準'};
+render();state(anchor===null?'請先標記第一句開頭一次；其餘分段會以估算秒數顯示。':'已保留第一句起點。可直接按上一句、下一句切換；後續時間尚未精準校正。');
 })();</script></body></html>
