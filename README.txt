@@ -1,6 +1,3 @@
-BABYMONSTER game room link fix
-Upload only: js/babymonster-room-entry.js
-To repo root: beckman0470.github.io/js/babymonster-room-entry.js
-Overwrite the existing file. This points the game room entry to /babymonster-ep01.html.
-No other files need to change; EP01 was already verified on the repository.
-If cached, press Ctrl+Shift+R, or open /babymonster-ep01.html directly.
+BABYMONSTER EP01 APPROVED VISUAL LAYOUT
+
+Upload babymonster-ep01.html to repository root and assets/bm-approved/drip-stage.jpg to assets/bm-approved/. Overwrite previous babymonster-ep01.html. This corrects the approved pink-neon layout and removes overlaid duplicate characters by using the exact approved stage artwork. It has demonstration karaoke timing ONLY, without BABYMONSTER music or finished cartoon voices. The lyric shown is a short instructional excerpt; do not consider it synchronized to original singing.
