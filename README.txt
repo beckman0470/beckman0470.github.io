@@ -1,5 +1,9 @@
-BABYMONSTER GameRoom v10
+BABYMONSTER v11 voice cleanup
 
-Upload babymonster-classroom.html to the GitHub repository root, replacing the old one. Existing assets/babymonster images are reused and must stay on the site.
+Upload babymonster-classroom.html to the GitHub repository root, replacing the existing file.
 
-Four songs; song-specific member sections with Chinese meanings grounded in real lyric text, not invented language practice sentences. This package DOES NOT distribute copyrighted full lyrics or music files. Parents may paste authorized lyrics in the on-device editor. The audio player embeds YouTube. DRIP, FOREVER, BATTER UP legacy approximate timestamps are NOT calibrated to official MV. SHEESH is disabled until timings are set. Browser TTS is expressive but cannot clone singers.
+Changes: removes the 「嘿嘿」 preface and filler, applies seven distinct character pitch/rate profiles, and prefers separate installed Chinese voices where available.
+
+Limitation: the Web Speech API cannot guarantee seven different child/cartoon voices. If the operating system exposes one Chinese voice, all profiles still share its basic timbre. For seven genuine pre-recorded cartoon performances, licensed recordings or a suitable connected TTS service are required.
+
+All other lyric and song-timing limitations from v10 remain.
