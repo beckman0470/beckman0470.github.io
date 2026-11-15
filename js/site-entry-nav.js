@@ -43,6 +43,33 @@ inner.append(brand,nav);host.replaceChildren(inner);host.dataset.unifiedHeader=v
  }
  const lead=title.nextElementSibling?.matches('p')?title.nextElementSibling:title.parentElement.nextElementSibling;if(lead?.matches('p'))lead.dataset.cdjLead='true';
 })();
+/* 雞爸爸生活研究室：彩色雅虎回頂端（可貼在 js/site-entry-nav.js 最後） */
+(()=>{'use strict';
+  const install=()=>{
+    if(document.getElementById('cdj-yahoo-backtop')||!document.body)return;
+    const style=document.createElement('style');
+    style.textContent=`
+      #cdj-yahoo-backtop{position:fixed;right:clamp(10px,2.4vw,24px);bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:9990;width:54px;height:62px;padding:3px 3px 2px;border:1px solid rgba(80,103,85,.24);border-radius:18px;background:rgba(255,248,240,.96);box-shadow:0 3px 12px rgba(36,49,40,.15);display:flex;flex-direction:column;justify-content:center;align-items:center;gap:0;cursor:pointer;opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .2s,transform .2s,visibility .2s;-webkit-tap-highlight-color:transparent}
+      #cdj-yahoo-backtop.is-visible{opacity:1;visibility:visible;transform:translateY(0)}
+      #cdj-yahoo-backtop img{width:37px;height:43px;object-fit:contain;display:block}
+      #cdj-yahoo-backtop span{font:700 10px/1.2 system-ui,'Microsoft JhengHei',sans-serif;color:#355a44;white-space:nowrap}
+      #cdj-yahoo-backtop:hover{box-shadow:0 4px 16px rgba(36,49,40,.23)}
+      #cdj-yahoo-backtop:focus-visible{outline:3px solid #d88037;outline-offset:3px}
+      @media(max-width:600px){#cdj-yahoo-backtop{right:10px;bottom:calc(12px + env(safe-area-inset-bottom,0px));width:48px;height:56px;border-radius:15px}#cdj-yahoo-backtop img{width:33px;height:38px}#cdj-yahoo-backtop span{font-size:9px}}
+      @media(prefers-reduced-motion:reduce){#cdj-yahoo-backtop{transition:none}}
+    `;
+    document.head.append(style);
+    const button=document.createElement('button');button.type='button';button.id='cdj-yahoo-backtop';
+    button.setAttribute('aria-label','雅虎帶你回到頁面頂端');button.title='回頂端';
+    const pic=document.createElement('img');pic.src='/cat-yahoo-peek.png?v=20261115-backtop-color';pic.alt='';pic.loading='lazy';pic.decoding='async';
+    const label=document.createElement('span');label.textContent='回頂端';
+    button.append(pic,label);document.body.append(button);
+    const update=()=>button.classList.toggle('is-visible',window.scrollY>280);
+    button.addEventListener('click',()=>window.scrollTo({top:0,behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'}));
+    window.addEventListener('scroll',update,{passive:true});window.addEventListener('pageshow',update);update();
+  };
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',install,{once:true});else install();
+})();
 
 
 
