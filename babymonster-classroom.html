@@ -10,7 +10,7 @@
 <header class="hero"><a class="back" href="/rooms.html?room=games">← 回遊戲間</a><div class="eyebrow">雞爸爸生活研究室 · 鼠姊姊的音樂學習</div><h1>BABYMONSTER 英韓小教室</h1><p>跟著歌曲一句一句學！唱到哪位成員，就由那位 Q 版小老師帶你練習。</p></header>
 <section class="section"><h2>① 七位小老師（點人物可看她的句子）</h2><div id="members" class="members" role="group" aria-label="選擇成員"></div></section>
 <section class="section"><h2>② 選一首歌</h2><div id="songs" class="songs" role="group" aria-label="選擇歌曲"></div></section>
-<section class="section stage" aria-label="英韓教學"><div class="teacher"><img id="avatar" src="/assets/babymonster/asa.gif" alt="ASA Q 版小老師"><p id="teacher-name" class="name">ASA 小老師</p></div><div><span class="lesson-label">③ 一句一句學</span><div class="bubble" id="dialogue">先選歌曲，再從第一句開始吧！</div><div id="vocab" class="vocab" lang="en">Sheesh!</div><div id="pron" class="pron"></div><div id="meaning" class="translation">選句子開始練習</div><p id="word-focus" class="pron"></p><p id="progress" class="pron" aria-live="polite"></p><div class="controls"><button class="action" id="listen" type="button">▶ 聽發音</button><button class="action secondary" id="next" type="button">學學學下一句 →</button><button class="action secondary" id="repeat" type="button">中文解說</button></div><p class="tip">先聽這一句，再看中文意思、練習發音、回答問題。切換下一句時小老師也會跟著換。瀏覽器語音不是原唱。</p></div></section>
+<section class="section stage" aria-label="英韓教學"><div class="teacher"><img id="avatar" src="/assets/babymonster/asa.gif" alt="ASA Q 版小老師"><p id="teacher-name" class="name">ASA 小老師</p></div><div><span class="lesson-label">③ 一句一句學</span><div class="bubble" id="dialogue">先選歌曲，再從第一句開始吧！</div><div id="vocab" class="vocab" lang="en">Sheesh!</div><div id="pron" class="pron"></div><div id="meaning" class="translation">選句子開始練習</div><p id="word-focus" class="pron"></p><p id="progress" class="pron" aria-live="polite"></p><div class="controls"><button class="action" id="listen" type="button">▶ 聽發音</button><button class="action secondary" id="next" type="button">學學學下一句 →</button><button class="action secondary" id="repeat" type="button">中文解說</button></div><p id="voice-status" class="tip" role="status" aria-live="polite">點「聽發音」或「中文解說」後，這裡會顯示實際播放狀態。</p><p class="tip">先聽這一句，再看中文意思、練習發音、回答問題。切換下一句時小老師也會跟著換。瀏覽器語音不是原唱。</p></div></section>
 <section class="clip-panel" aria-labelledby="clip-title"><h2 id="clip-title">④ 聽原唱這一句（官方 MV）</h2>
 <p class="clip-hint">先聽原唱的短片段，再按上面的「聽發音」和「中文解說」。需要先為每一句校準 MV 的起訖時間；設定會記在這台裝置的瀏覽器中。</p>
 <div class="controls"><button id="clip-play" class="clip-button" type="button">▶ 聽原唱這一句</button><button id="clip-preview" class="clip-button alt" type="button">▶ 找這一句的位置（預覽 MV）</button><button id="clip-stop" class="clip-button alt" type="button">■ 停止</button></div>
@@ -46,18 +46,50 @@ const videoId=()=>new URL(tracks[song].url).searchParams.get('v');
 const readClip=()=>{try{const a=JSON.parse(localStorage.getItem(clipKey())||'null');return a&&Number.isFinite(a.start)&&Number.isFinite(a.end)?a:null}catch(_){return null}};
 function stopClip(){document.querySelector('#clip-slot').replaceChildren()}
 function updateClip(){stopClip();const a=readClip();$('#clip-start').value=a?a.start:'';$('#clip-end').value=a?a.end:'';$('#clip-play').disabled=!a;$('#clip-state').textContent=a?`已設定本句原唱片段：${a.start}～${a.end} 秒。按「聽原唱這一句」開始。`:'尚未校準本句的 MV 時間。請先預覽影片，再填起訖秒數。'}
-function playClip(preview){stopClip();window.speechSynthesis?.cancel();const clip=readClip();if(!preview&&!clip){$('#clip-state').textContent='尚未設定本句時間。請先校準。';return;}const iframe=document.createElement('iframe');iframe.className='clip-frame';iframe.title=preview?'BABYMONSTER 官方 MV 時間校準':'BABYMONSTER 原唱短片段';iframe.allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share';iframe.allowFullscreen=true;const params=new URLSearchParams({autoplay:'1',playsinline:'1',rel:'0'});if(!preview){params.set('start',String(Math.floor(clip.start)));params.set('end',String(Math.ceil(clip.end)));}iframe.src=`https://www.youtube-nocookie.com/embed/${videoId()}?${params.toString()}`;$('#clip-slot').append(iframe);$('#clip-state').textContent=preview?'這是官方 MV。找到句子後，將播放器顯示的時間換算成秒數填入下方。':'正在播放已設定的原唱片段；可按停止或重播。';}
+function playClip(preview){stopClip();stopVoice();const clip=readClip();if(!preview&&!clip){$('#clip-state').textContent='尚未設定本句時間。請先校準。';return;}const iframe=document.createElement('iframe');iframe.className='clip-frame';iframe.title=preview?'BABYMONSTER 官方 MV 時間校準':'BABYMONSTER 原唱短片段';iframe.allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share';iframe.allowFullscreen=true;const params=new URLSearchParams({autoplay:'1',playsinline:'1',rel:'0'});if(!preview){params.set('start',String(Math.floor(clip.start)));params.set('end',String(Math.ceil(clip.end)));}iframe.src=`https://www.youtube-nocookie.com/embed/${videoId()}?${params.toString()}`;$('#clip-slot').append(iframe);$('#clip-state').textContent=preview?'這是官方 MV。找到句子後，將播放器顯示的時間換算成秒數填入下方。':'正在播放已設定的原唱片段；可按停止或重播。';}
 
 const $=s=>document.querySelector(s),make=(tag,cls,txt)=>{const e=document.createElement(tag);if(cls)e.className=cls;if(txt!==undefined)e.textContent=txt;return e};
-const talk=(value,lang='zh-TW')=>{if(!('speechSynthesis' in window)){$('#feedback').textContent='此瀏覽器不支援語音播放';return;}speechSynthesis.cancel();const utter=new SpeechSynthesisUtterance(value);utter.lang=lang;utter.rate=lang==='ko-KR'?.74:.82;const voices=speechSynthesis.getVoices();const choice=voices.find(x=>x.lang.toLowerCase()===lang.toLowerCase())||voices.find(x=>x.lang.toLowerCase().startsWith(lang.slice(0,2).toLowerCase()));if(choice)utter.voice=choice;speechSynthesis.speak(utter);};
+const voiceStatus=message=>{$('#voice-status').textContent=message;};
+let speechToken=0;
+const voiceList=()=>{try{return window.speechSynthesis?.getVoices()||[]}catch(_){return []}};
+if('speechSynthesis' in window){window.speechSynthesis.addEventListener?.('voiceschanged',()=>{
+  if(!voiceList().length)voiceStatus('目前未偵測到可用的系統語音；請確認裝置已安裝中文、英文或韓文語音。');
+});}
+function stopVoice(){speechToken++;try{window.speechSynthesis?.cancel()}catch(_){}}
+function talk(value,lang='zh-TW'){
+ const token=++speechToken;
+ if(!('speechSynthesis' in window)||!('SpeechSynthesisUtterance' in window)){
+  voiceStatus('這個瀏覽器不支援文字語音；建議改用最新版 Chrome 或 Edge，並確認聲音已開啟。');return;
+ }
+ try{
+  const engine=window.speechSynthesis;
+  engine.cancel();
+  const options=voiceList();
+  const prefer=lang.toLowerCase(),base=prefer.slice(0,2);
+  const voice=options.find(v=>v.lang.toLowerCase()===prefer)||options.find(v=>v.lang.toLowerCase().startsWith(base));
+  const utter=new SpeechSynthesisUtterance(value);
+  utter.lang=lang;utter.rate=lang==='ko-KR'?.75:.85;utter.pitch=1.05;utter.volume=1;
+  if(voice)utter.voice=voice;
+  voiceStatus('正在啟動'+({'zh-TW':'中文','ko-KR':'韓文','en-US':'英文'}[lang]||'')+'語音…');
+  utter.onstart=()=>{if(token===speechToken)voiceStatus('正在播放語音'+(voice?'（'+voice.name+'）':'')+'…');};
+  utter.onend=()=>{if(token===speechToken)voiceStatus('語音播放完成。可以再按一次練習。');};
+  utter.onerror=e=>{if(token===speechToken)voiceStatus('語音播放失敗（'+(e.error||'未知原因')+'）。請檢查音量、系統語音及瀏覽器設定；韓語可能需要安裝韓文語音。');};
+  engine.speak(utter);
+  // Some mobile browsers silently stall without loading a matching voice.
+  window.setTimeout(()=>{if(token!==speechToken)return;if(!engine.speaking&&engine.pending){
+    voiceStatus('系統語音仍在等待。請再次點擊，或確認瀏覽器已安裝'+(lang==='ko-KR'?'韓文':lang==='en-US'?'英文':'中文')+'語音。');
+  }},1800);
+ }catch(e){voiceStatus('語音無法啟動：'+(e.message||String(e)));}
+}
+
 function renderMembers(){const box=$('#members');box.replaceChildren();members.forEach(([key,name])=>{const b=make('button','member');b.type='button';b.dataset.person=key;b.setAttribute('aria-label','找 '+name+' 教的句子');const img=make('img');img.src='/assets/babymonster/'+key+'.png?v=20261115-fix2';img.alt=name+' Q版小老師';img.loading='lazy';b.append(img,make('span','',name));b.onclick=()=>{const n=tracks[song].phrases.findIndex(p=>p.who===key);if(n===-1){$('#feedback').textContent=name+' 在這首歌的精選短句還沒收錄，先選其他成員吧！';return;}index=n;renderLesson();renderQuiz();};box.append(b);});}
 function renderTracks(){const box=$('#songs');box.replaceChildren();Object.keys(tracks).forEach(key=>{let b=make('button','',key);b.type='button';b.dataset.song=key;b.onclick=()=>{song=key;index=0;renderLesson();renderQuiz();};box.append(b);});}
-function renderLesson(){const lines=tracks[song].phrases,p=lines[index];const name=members.find(x=>x[0]===p.who)[1];$('#avatar').src='/assets/babymonster/'+p.who+'.gif?v=20261115-fix2';$('#avatar').alt=name+' Q版小老師';$('#teacher-name').textContent=name+' 小老師';$('#dialogue').textContent='現在輪到 '+name+' 演唱的這一句！先聽原文，再學中文意思。';$('#vocab').textContent=p.text;$('#vocab').lang=p.lang;$('#pron').textContent='發音提示：'+p.pron;$('#meaning').textContent=p.meaning;$('#word-focus').textContent='詞語拆解：'+p.focus;$('#progress').textContent=song+'｜第 '+(index+1)+' / '+lines.length+' 句';document.querySelectorAll('.member').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.person===p.who)));document.querySelectorAll('#songs button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.song===song)));$('#feedback').textContent='';updateClip();}
+function renderLesson(){stopVoice();voiceStatus('按「聽發音」練習本句；按「中文解說」聽中文。');const lines=tracks[song].phrases,p=lines[index];const name=members.find(x=>x[0]===p.who)[1];$('#avatar').src='/assets/babymonster/'+p.who+'.gif?v=20261115-fix2';$('#avatar').alt=name+' Q版小老師';$('#teacher-name').textContent=name+' 小老師';$('#dialogue').textContent='現在輪到 '+name+' 演唱的這一句！先聽原文，再學中文意思。';$('#vocab').textContent=p.text;$('#vocab').lang=p.lang;$('#pron').textContent='發音提示：'+p.pron;$('#meaning').textContent=p.meaning;$('#word-focus').textContent='詞語拆解：'+p.focus;$('#progress').textContent=song+'｜第 '+(index+1)+' / '+lines.length+' 句';document.querySelectorAll('.member').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.person===p.who)));document.querySelectorAll('#songs button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.song===song)));$('#feedback').textContent='';updateClip();}
 function renderQuiz(){const p=tracks[song].phrases[index];$('#question').textContent='「'+p.text+'」這一句是什麼意思？';const box=$('#answers');box.replaceChildren();p.options.forEach((label,i)=>{const b=make('button','',label);b.type='button';b.onclick=()=>{box.querySelectorAll('button').forEach(x=>x.disabled=true);const ok=i===p.correct;$('#feedback').textContent=ok?'答對了！★':'再記住一次：'+p.meaning;$('#avatar').classList.remove('celebrate');void $('#avatar').offsetWidth;$('#avatar').classList.add('celebrate');talk(ok?'答對了！真棒！':'沒關係，我們再練習一次！');};box.append(b);});}
 function next(){index=(index+1)%tracks[song].phrases.length;renderLesson();renderQuiz();}
 $('#clip-play').onclick=()=>playClip(false);$('#clip-preview').onclick=()=>playClip(true);$('#clip-stop').onclick=()=>{stopClip();$('#clip-state').textContent='已停止播放。';};$('#clip-save').onclick=()=>{const start=Number($('#clip-start').value),end=Number($('#clip-end').value);if(!$('#clip-start').value||!$('#clip-end').value||!Number.isFinite(start)||!Number.isFinite(end)||start<0||end<=start||end-start>30){$('#clip-state').textContent='請輸入有效起訖秒數，片段應為 0～30 秒且結束時間大於開始時間。';return;}try{localStorage.setItem(clipKey(),JSON.stringify({start,end}));updateClip();$('#clip-state').textContent='已儲存這一句的 MV 時間，可以播放原唱片段了！';}catch(_){$('#clip-state').textContent='無法儲存設定，請確認瀏覽器未停用本機儲存。';}};
-$('#listen').onclick=()=>{const p=tracks[song].phrases[index];talk(p.text,p.lang);};$('#repeat').onclick=()=>talk('這一句的中文意思是：'+tracks[song].phrases[index].meaning+'。'+tracks[song].phrases[index].focus);$('#next').onclick=next;$('#retry').onclick=next;
+$('#listen').onclick=()=>{stopClip();const p=tracks[song].phrases[index];talk(p.text,p.lang);};$('#repeat').onclick=()=>{stopClip();talk('這一句的中文意思是：'+tracks[song].phrases[index].meaning+'。'+tracks[song].phrases[index].focus);};$('#next').onclick=next;$('#retry').onclick=next;
 Object.entries(tracks).forEach(([name,value])=>{const a=make('a','',name+' 官方 MV ↗');a.href=value.url;a.target='_blank';a.rel='noopener noreferrer';$('#official').append(a);});
-renderMembers();renderTracks();renderLesson();renderQuiz();window.addEventListener('pagehide',()=>{stopClip();window.speechSynthesis?.cancel();});
+renderMembers();renderTracks();renderLesson();renderQuiz();window.addEventListener('pagehide',()=>{stopClip();stopVoice();});
 })();
 </script></body></html>
