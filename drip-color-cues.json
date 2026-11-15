@@ -1,0 +1,249 @@
+{
+  "video": "https://www.youtube.com/watch?v=cXvi0qdC6FU",
+  "source": "user-supplied videoplayback.mp4",
+  "video_duration_seconds": 177.84,
+  "method": "25fps video color highlight analysis; short flash cuts excluded",
+  "member_index_order_in_video": [
+    "RUKA",
+    "PHARITA",
+    "ASA",
+    "AHYEON",
+    "RAMI",
+    "RORA",
+    "CHIQUITA"
+  ],
+  "cues": [
+    {
+      "start": 6.56,
+      "end": 15.48,
+      "member": "CHIQUITA",
+      "color": "#59b849",
+      "from": 0,
+      "to": 3
+    },
+    {
+      "start": 15.48,
+      "end": 24.32,
+      "member": "AHYEON",
+      "color": "#ed5362",
+      "from": 4,
+      "to": 7
+    },
+    {
+      "start": 24.32,
+      "end": 32.16,
+      "member": "RUKA",
+      "color": "#8786ff",
+      "from": 8,
+      "to": 8
+    },
+    {
+      "start": 32.16,
+      "end": 40.2,
+      "member": "RORA",
+      "color": "#efc746",
+      "from": 9,
+      "to": 12
+    },
+    {
+      "start": 40.2,
+      "end": 47.76,
+      "member": "PHARITA",
+      "color": "#ed9c48",
+      "from": 13,
+      "to": 14
+    },
+    {
+      "start": 47.76,
+      "end": 54.8,
+      "member": "RAMI",
+      "color": "#39bfe7",
+      "from": 15,
+      "to": 16
+    },
+    {
+      "start": 55.6,
+      "end": 59.76,
+      "member": "AHYEON",
+      "color": "#ed5362",
+      "from": 17,
+      "to": 17
+    },
+    {
+      "start": 59.76,
+      "end": 63.72,
+      "member": "CHIQUITA",
+      "color": "#59b849",
+      "from": 18,
+      "to": 18
+    },
+    {
+      "start": 63.72,
+      "end": 67.68,
+      "member": "RUKA",
+      "color": "#8786ff",
+      "from": 19,
+      "to": 19
+    },
+    {
+      "start": 67.68,
+      "end": 71.72,
+      "member": "AHYEON",
+      "color": "#ed5362",
+      "from": 20,
+      "to": 20
+    },
+    {
+      "start": 71.72,
+      "end": 81.76,
+      "member": "ASA",
+      "color": "#ff4ca5",
+      "from": 21,
+      "to": 24
+    },
+    {
+      "start": 81.76,
+      "end": 90.16,
+      "member": "RUKA",
+      "color": "#8786ff",
+      "from": 25,
+      "to": 29
+    },
+    {
+      "start": 90.16,
+      "end": 98.0,
+      "member": "CHIQUITA",
+      "color": "#59b849",
+      "from": 30,
+      "to": 30
+    },
+    {
+      "start": 98.0,
+      "end": 102.16,
+      "member": "PHARITA",
+      "color": "#ed9c48",
+      "from": 31,
+      "to": 33
+    },
+    {
+      "start": 102.16,
+      "end": 106.04,
+      "member": "RAMI",
+      "color": "#39bfe7",
+      "from": 34,
+      "to": 34
+    },
+    {
+      "start": 106.04,
+      "end": 113.6,
+      "member": "RORA",
+      "color": "#efc746",
+      "from": 35,
+      "to": 36
+    },
+    {
+      "start": 113.6,
+      "end": 120.68,
+      "member": "AHYEON",
+      "color": "#ed5362",
+      "from": 37,
+      "to": 38
+    },
+    {
+      "start": 121.44,
+      "end": 125.6,
+      "member": "PHARITA",
+      "color": "#ed9c48",
+      "from": 39,
+      "to": 39
+    },
+    {
+      "start": 125.6,
+      "end": 129.56,
+      "member": "RAMI",
+      "color": "#39bfe7",
+      "from": 40,
+      "to": 40
+    },
+    {
+      "start": 129.56,
+      "end": 133.56,
+      "member": "ASA",
+      "color": "#ff4ca5",
+      "from": 41,
+      "to": 41
+    },
+    {
+      "start": 133.56,
+      "end": 137.56,
+      "member": "CHIQUITA",
+      "color": "#59b849",
+      "from": 42,
+      "to": 42
+    },
+    {
+      "start": 137.56,
+      "end": 149.24,
+      "member": "RAMI",
+      "color": "#39bfe7",
+      "from": 43,
+      "to": 45
+    },
+    {
+      "start": 149.24,
+      "end": 159.52,
+      "member": "AHYEON",
+      "color": "#ed5362",
+      "from": 46,
+      "to": 46
+    },
+    {
+      "start": 159.52,
+      "end": 162.84,
+      "member": "ASA",
+      "color": "#ff4ca5",
+      "from": 47,
+      "to": 47
+    },
+    {
+      "start": 162.84,
+      "end": 166.6,
+      "member": "RORA",
+      "color": "#efc746",
+      "from": 48,
+      "to": 49
+    },
+    {
+      "start": 166.6,
+      "end": 167.72,
+      "member": "ASA",
+      "color": "#ff4ca5",
+      "from": 50,
+      "to": 50
+    },
+    {
+      "start": 167.72,
+      "end": 170.44,
+      "member": "AHYEON",
+      "color": "#ed5362",
+      "from": 51,
+      "to": 51
+    },
+    {
+      "start": 170.44,
+      "end": 174.48,
+      "member": "PHARITA",
+      "color": "#ed9c48",
+      "from": 52,
+      "to": 53
+    },
+    {
+      "start": 174.48,
+      "end": 176.88,
+      "member": "AHYEON",
+      "color": "#ed5362",
+      "from": 54,
+      "to": 54
+    }
+  ]
+}
