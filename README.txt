@@ -1,7 +1,5 @@
-BABYMONSTER GameRoom v9
+BABYMONSTER GameRoom v10
 
-Upload babymonster-classroom.html to the ROOT of your GitHub Pages repository, replacing the old file.
-Keep existing /assets/babymonster/ images and GIFs.
+Upload babymonster-classroom.html to the GitHub repository root, replacing the old one. Existing assets/babymonster images are reused and must stay on the site.
 
-Updated: slower one-sentence language practice, cheerful Chinese voice, bilingual on-screen example + Traditional Chinese explanation, existing song segment timestamps retained.
-Note: foreign-language practice sentences are original examples, not actual copyrighted BABYMONSTER lyrics. MV timestamps are inherited from v8 and still may need fine tuning. Browser TTS voices differ between devices.
+Four songs; song-specific member sections with Chinese meanings grounded in real lyric text, not invented language practice sentences. This package DOES NOT distribute copyrighted full lyrics or music files. Parents may paste authorized lyrics in the on-device editor. The audio player embeds YouTube. DRIP, FOREVER, BATTER UP legacy approximate timestamps are NOT calibrated to official MV. SHEESH is disabled until timings are set. Browser TTS is expressive but cannot clone singers.
