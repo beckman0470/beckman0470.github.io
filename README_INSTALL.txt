@@ -1,7 +1,7 @@
-BABYMONSTER Game Room v4 - Voice Diagnostics Fix
+BABYMONSTER Game Room v5
 
-Upload babymonster-classroom.html to the root of beckman0470.github.io and replace the existing file.
-This fixes browser speech status/errors and stops video before spoken explanations.
-Original singer music clips STILL require verified timestamps; not included.
-Browser voice depends on installed voices and device audio.
-No other files need to be overwritten.
+Unzip this archive. Upload babymonster-classroom.html directly into the ROOT of your GitHub Pages repository and replace the existing file.
+
+This patch uses existing /assets/babymonster/*.gif from v1/v2 and the existing game-room entry. It does not overwrite rooms.html.
+
+The lesson clips are animated speech lessons. They do NOT yet include precisely synchronized BABYMONSTER master recordings. Official MV links are provided.
