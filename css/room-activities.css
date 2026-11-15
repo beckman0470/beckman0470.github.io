@@ -205,3 +205,58 @@ body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .greeting-pa
  body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .greeting-caption {font-size:9px!important}
  body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .study-object .object-label {font-size:10px!important}
 }
+
+/* 雞窩：標題回到背景圖左上角 */
+body[data-welcome-page="articles"]
+main#journal-page > .cdj-welcome.cdj-room-entrance {
+  position: relative !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+
+body[data-welcome-page="articles"]
+main#journal-page > .cdj-welcome .cdj-welcome-copy {
+  position: absolute !important;
+  top: 3% !important;
+  left: 3% !important;
+  right: auto !important;
+  width: max-content !important;
+  max-width: 42% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  gap: 2px !important;
+  padding: 9px 13px !important;
+  background: #fffdf2d9 !important;
+  border: 1px solid #ffffffa8 !important;
+  border-radius: 13px !important;
+  z-index: 50 !important;
+}
+
+/* 浴室：隱藏額外 ICON，保留點擊 */
+.cdj-greeting[data-room="bathroom"]
+.room-item-art {
+  display: none !important;
+}
+
+.cdj-greeting[data-room="bathroom"]
+.room-item-label {
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+.cdj-greeting[data-room="bathroom"]
+.room-item:hover .room-item-label,
+.cdj-greeting[data-room="bathroom"]
+.room-item:focus-visible .room-item-label {
+  opacity: 1 !important;
+}
+
+/* 保留透明互動區域 */
+.cdj-greeting[data-room="bathroom"]
+.room-item {
+  pointer-events: auto !important;
+  background: transparent !important;
+  filter: none !important;
+}
