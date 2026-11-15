@@ -123,14 +123,14 @@ html body[data-welcome-page] .cdj-room-entrance .cdj-welcome-label{font-size:11p
 
 /* 2026-11-15 雞窩：書房背景上的物件即為分類入口（不再疊加人物肖像或裝飾卡片） */
 .cdj-welcome .cdj-greeting[data-room="study"]{width:min(100%,960px)!important;height:auto!important;aspect-ratio:3/2;max-width:960px;overflow:visible;isolation:isolate;background:#e9dfc9;border-radius:18px}
-.cdj-greeting[data-room="study"] .greeting-scene{inset:0!important;background-position:center!important;background-size:100% 100%!important;border-radius:18px}
+.cdj-greeting[data-room="study"] .greeting-scene{inset:0!important;background-position:center center!important;background-size:cover!important;background-repeat:no-repeat!important;border-radius:18px}
 .cdj-greeting[data-room="study"] .study-objects{position:absolute!important;inset:0!important;height:100%!important;width:100%!important;z-index:8;display:block!important;pointer-events:none}
 .cdj-greeting[data-room="study"] .study-object{position:absolute!important;display:block!important;height:auto!important;min-height:0!important;opacity:1;background:transparent!important;border-radius:12px;box-sizing:border-box;outline:0;pointer-events:auto;cursor:pointer;transform:none!important;filter:none!important;transition:box-shadow .16s ease,background-color .16s ease!important}
-.cdj-greeting[data-room="study"] .study-object.genealogy{left:5.4%;top:29%;width:17%;height:12%}
-.cdj-greeting[data-room="study"] .study-object.devil-doll{left:8.5%;top:42%;width:11.5%;height:15%}
-.cdj-greeting[data-room="study"] .study-object.family-photo{left:51%;top:34.5%;width:10%;height:12%}
-.cdj-greeting[data-room="study"] .study-object.kids-books{left:87%;top:27%;width:12%;height:19%}
-.cdj-greeting[data-room="study"] .study-object.dumbbell{left:86%;top:48%;width:14%;height:17%}
+.cdj-greeting[data-room="study"] .study-object.genealogy{left:4.8%;top:28.5%;width:18%;height:13%}
+.cdj-greeting[data-room="study"] .study-object.devil-doll{left:7.8%;top:45.5%;width:12.5%;height:16%}
+.cdj-greeting[data-room="study"] .study-object.family-photo{left:54%;top:34%;width:11%;height:13%}
+.cdj-greeting[data-room="study"] .study-object.kids-books{left:85.5%;top:25%;width:13.5%;height:21%}
+.cdj-greeting[data-room="study"] .study-object.dumbbell{left:85.5%;top:50%;width:14.5%;height:16.5%}
 .cdj-greeting[data-room="study"] .study-object:hover,.cdj-greeting[data-room="study"] .study-object:focus-visible{background:#ffe6a72b!important;outline:2px solid #ffe0a9!important;outline-offset:1px;box-shadow:0 0 0 5px #ffffff22,0 0 16px #ffe8a788!important}
 .cdj-greeting[data-room="study"] .study-object .object-label{position:absolute;bottom:auto;top:100%;left:50%;translate:-50% 3px;opacity:0;pointer-events:none;white-space:nowrap;font:600 clamp(10px,1.35vw,15px)/1.5 "Microsoft JhengHei",sans-serif;background:#fff9edee;color:#315540;border:1px solid #d9d6b9;border-radius:8px;padding:3px 7px;box-shadow:0 3px 8px #0002;z-index:15}
 .cdj-greeting[data-room="study"] .study-object:hover .object-label,.cdj-greeting[data-room="study"] .study-object:focus-visible .object-label{opacity:1}
