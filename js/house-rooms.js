@@ -44,7 +44,8 @@ if(key==='mom'){heading('要聽故事睡覺了嗎？');const g=grid();card(g,'�
 ['雞爸爸遊戲場','三國、棒球、投籃、節奏與街機。','/relax-family.html?host=dad','/assets/adult-hosts/dad.webp'],
 ['鼠窩','英文、麻將與打磚塊。','/rooms.html?room=mom','/assets/adult-hosts/mom.webp'],
 ['兔窩','接龍、數獨、方塊，輕鬆玩一會。','/rooms.html?room=ama','/assets/adult-hosts/ama.webp'],
-['一家大富翁','選喜歡的角色，和家人走一圈。','/dad-arcade.html?game=board','/assets/adult-games/board.webp']].forEach(x=>card(g,...x));
+['一家大富翁','選喜歡的角色，和家人走一圈。','/dad-arcade.html?game=board','/assets/adult-games/board.webp'],
+['鼠姊姊的魔法美髮屋','洗髮、剪染、吹整和髮飾，自由做個新造型！','/play/salon/','/play/salon/cover.svg']].forEach(x=>card(g,...x));
 }else{if(key==='bathroom'){heading('把日常練習變成小習慣');const g=grid();card(g,'鼠姊姊的生活專區','起床、回家和睡前的日常小步驟。','/rooms.html?room=mom#mom-life','/assets/play-covers/v1/dishwash.webp');}
 const a=document.createElement('a');a.className='house-all';a.href='/articles.html'+(key==='bathroom'?'?room=cdhj':'?room=family');a.textContent='到雞窩挑一篇'+(key==='bathroom'?'健康文章':'生活故事')+' →';host.append(a);}
 }else if(path==='/'||path==='/index.html'){$('.life-hero-copy')?.insertAdjacentHTML('beforeend',stage('home',null,['mom-home'],'歡迎回家，今天過得好嗎？'));}
