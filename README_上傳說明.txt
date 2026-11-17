@@ -1,21 +1,22 @@
-雞爸爸生活研究室｜線上祭拜 v6
+雞爸爸生活研究室｜線上祭拜 v7｜入口＋互動修改包
 
-本版改動：
-① 更換寫實金爐（金屬、爐門、火灰），不再用 CSS 漸層拼成假爐子。
-② 焚燒時動態火光、煙霧及火星；燒完約 4.5 秒才計數並提示焚化完成。
-③ 完成畫面的「敬　禮」改成「祭拜圓滿」，未進行實際祭拜時顯示「尚未完成祭拜」。
-④ 保留 v5 靜態祭壇背景、香爐下方祈福文字、折金紙、擲筊、祖先／神明金紙限制。
-⑤ 客廳入口沿用原本 js/worship-entry.js。
+本版修改
+1. 持香三拜人物改為同一名雞爸爸的側後方寫實人物，雙手持香、站立／前傾／低頭／回正，四幅姿勢循序播放。雞爸爸只有下巴山羊鬍，沒有上唇鬍鬚。
+2. 修飾祭拜背景左下角雞爸爸上唇的鬍鬚，保留山羊鬍；不變動其他人像、神像、文字和祭壇背景。
+3. 擲筊兩片左右鏡向，尖角合攏，點擊後短暫出現雙手合筊的圖片，接著兩片分別按照重力、反彈係數、旋轉衰減動畫落地，停止後才出聖筊／笑筊／陰筊。
+4. 客廳原本神桌的祖先、神明熱區連到 /worship/；新增兩幅畫作和兩副對聯的四個透明熱區（滑鼠移過才顯示外框），不遮蔽或重畫原有客廳背景。
+5. 修正 videos.html 的入口 script 不該放在 <!DOCTYPE html> 後面；應移到 </body> 前。
+6. 保留 v6 的金爐、火焰、三種金紙、完成畫面「祭拜圓滿」。
 
-若網站已有 v5：
-只需把 ZIP 中整個 worship/ 資料夾覆蓋到 GitHub 儲存庫根目錄下的 worship/。
-其中 worship/index.html 和新增的 worship/assets/furnace-idle.webp、furnace-fire.webp 都必須一起上傳。
+上傳方式（如網站已有 v6）
+- 將 ZIP 內 worship/ 整個資料夾（含 index.html、background.png、assets/）覆蓋 GitHub 對應檔案。
+- 將 js/worship-entry.js 覆蓋 GitHub 的 js/worship-entry.js。
+- 在你的網站根目錄 videos.html 將錯誤放在 <!DOCTYPE html> 後的舊入口刪除，於 </body> 前加入：
+  <script defer src="/js/worship-entry.js?v=20261117-v7"></script>
+- 也可以用隨附的「客廳入口_一鍵產生videos.html」在瀏覽器讀取最新版 videos.html，下載修正版本再上傳；不要將安裝器檔案直接覆蓋 videos.html。
 
-若是首次安裝：
-請將 ZIP 內 worship/ 與 js/worship-entry.js 放到網站同路徑。
-另外確認網站根目錄 videos.html 的 </body> 前已放入：
-<script defer src="/js/worship-entry.js?v=20261117-v6"></script>
-切勿將該 script 放到 <!DOCTYPE html> 和 <html> 之間。
+測試網址：
+  https://beckman0470.github.io/videos.html
+  https://beckman0470.github.io/worship/
 
-開啟： https://beckman0470.github.io/worship/
-請注意：本 ZIP 尚未替你直接更新正式網站，需上傳 GitHub 才會生效。
+注意：此包不會自動修改 GitHub 遠端倉庫，上傳後才會出現在正式網站。

@@ -223,10 +223,44 @@ button:disabled{cursor:not-allowed;opacity:.52}
 @media(max-width:740px){.furnace{height:183px;width:min(100%,158px)}.furnace-zone button{padding:2px;gap:5px}.burn-work{padding:6px}}
 @media(prefers-reduced-motion:reduce){.furnace.burning .furnace-fire{animation:none;opacity:1}.furnace.burning .furnace-embers,.furnace.burning .furnace-smoke{opacity:0}.furnace.burning .furnace-light{animation:none;opacity:.65}}
 
+
+/* v7: physical rear-three-quarter incense worshipper, feet stay planted; never rotate entire body as one block */
+.bow-side{flex-basis:194px;min-width:174px;padding:8px 6px;background:radial-gradient(ellipse at 50% 50%,#74493466,#2b1b176b)}
+.bow-character{position:relative;width:180px;height:244px;max-width:100%;overflow:visible;filter:drop-shadow(0 8px 5px #0c090788)}
+.bow-character::before{content:"";position:absolute;bottom:0;left:14%;width:77%;height:9px;border-radius:50%;background:#140c0866;filter:blur(4px)}
+.bow-character .bow-pose{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:0;transition:opacity .19s ease-in-out;pointer-events:none}
+.bow-character[data-pose="0"] .pose-0,.bow-character[data-pose="1"] .pose-1,.bow-character[data-pose="2"] .pose-2,.bow-character[data-pose="3"] .pose-3{opacity:1}
+.bow-character.bowing{animation:none}
+.bow-hint{max-width:190px}
+@media(max-width:620px){.bow-side{min-width:0}.bow-character{width:103px;height:145px;flex:0 0 103px}.bow-hint{max-width:124px}}
+/* v7: joined cups are actually mirrored (curves face each other); land by independent gravity and spring damping */
+.cup-boxes{position:relative;min-height:255px;gap:14px;align-items:center;perspective:700px;isolation:isolate}
+.cup{min-height:222px;overflow:hidden;position:relative}
+#cupStage .cup::before{display:none!important;content:none!important}
+.cup .cup-visual{height:154px;width:min(100%,195px);display:grid;place-items:center;position:relative;
+ transform:translate3d(var(--cx,0px),var(--cy,0px),0) rotate(var(--angle,0deg)) scaleX(var(--mirror,1));
+ will-change:transform;filter:drop-shadow(0 calc(6px - var(--shadow-lift,0px)) 5px #1008068c)}
+.cup .cup-visual img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:contain;pointer-events:none;user-select:none}
+.cup .cup-flat-img{display:none!important}
+.cup[data-face="negative"] .cup-convex-img{display:none!important}
+.cup[data-face="negative"] .cup-flat-img{display:block!important}
+.cup.mirrored{--mirror:-1}
+.cup .face{margin:2px 0 6px}
+.cup[data-face="unset"] .face::before{content:"兩片合攏後擲出"}
+.cup-hands{position:absolute;z-index:5;width:min(58%,225px);left:50%;top:-3%;transform:translateX(-50%) scale(.95);display:flex;flex-direction:column;align-items:center;pointer-events:none;opacity:0;transition:opacity .15s ease-out,transform .25s ease-out}
+.cup-hands img{max-width:100%;border-radius:35% 35% 28% 28%;mask-image:radial-gradient(ellipse at 50% 56%,#000 42%,transparent 77%);-webkit-mask-image:radial-gradient(ellipse at 50% 56%,#000 42%,transparent 77%);filter:drop-shadow(0 4px 12px #140707)}
+.cup-hands span{background:#422619bb;border:1px solid #d5a35b;border-radius:999px;padding:1px 10px;font-size:12px;color:#ffe8bf}
+.cup-hands.holding{opacity:1;transform:translateX(-50%) translateY(-3px) scale(1)}
+.cup-hands.releasing{opacity:0;transform:translateX(-50%) translateY(-34px) scale(.86)}
+.cup-boxes.handholding .cup-visual{opacity:0}
+.cup.casting .face{opacity:.4}
+@media(max-width:620px){.cup-boxes{min-height:190px}.cup{min-height:172px}.cup .cup-visual{height:110px}.cup-hands{width:min(67%,170px)}}
+@media(prefers-reduced-motion:reduce){.bow-character .bow-pose{transition:none}.cup-hands{transition:none}}
+
 </style>
 </head>
 <body>
-<header><h1>雞爸爸生活研究室・線上祭拜</h1><p>v6｜寫實金爐、動態爐火、焚化完成提示與祭拜圓滿</p></header>
+<header><h1>雞爸爸生活研究室・線上祭拜</h1><p>v7｜側後方持香三拜・雙手合筊擲出・擲筊彈跳・神桌入口</p></header>
 <main>
  <nav class="return-living" aria-label="返回客廳" style="text-align:right;margin-top:7px"><a href="/videos.html" style="color:#f5d18c;text-decoration:underline;text-underline-offset:4px">返回雞爸爸客廳</a></nav>
  <div class="scene" aria-label="以雞爸爸指定圖片為固定背景的線上祭拜操作畫面">
@@ -309,36 +343,9 @@ button:disabled{cursor:not-allowed;opacity:.52}
   </div>
     </div>
     <div class="bow-side" aria-label="祭拜者鞠躬動作展示">
-      <svg class="bow-figure" viewBox="0 0 180 260" aria-hidden="true" focusable="false">
-       <defs>
-        <linearGradient id="bowFace" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fbd6af"/><stop offset="1" stop-color="#ca8457"/></linearGradient>
-        <linearGradient id="bowCloth" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#b88f6e"/><stop offset="1" stop-color="#70513d"/></linearGradient>
-        <linearGradient id="bowPants" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#263b4b"/><stop offset="1" stop-color="#141e28"/></linearGradient>
-        <clipPath id="bowShirtClip"><path d="M77 88 Q89 80 104 87 Q123 91 124 115 L112 174 L72 174 Q66 131 64 107 Q65 95 77 88Z"/></clipPath>
-       </defs>
-       <ellipse cx="92" cy="251" rx="50" ry="6" fill="#1a0b07" opacity=".4"/>
-       <path d="M75 166 L111 167 L112 234 L91 240 L83 201 L75 241 L58 237Z" fill="url(#bowPants)" stroke="#151d20" stroke-width="3"/>
-       <path d="M59 232 Q70 235 79 232 L78 246 Q64 251 46 247 Q43 243 51 238Z M93 233 Q106 238 115 232 L127 245 Q115 252 93 247Z" fill="#251b18" stroke="#111" stroke-width="2"/>
-       <g id="bowPerson" class="bow-person">
-        <path d="M77 88 Q89 80 104 87 Q123 91 124 115 L112 174 L72 174 Q66 131 64 107 Q65 95 77 88Z" fill="url(#bowCloth)" stroke="#3d2b27" stroke-width="3"/>
-        <g clip-path="url(#bowShirtClip)" stroke="#65472e" stroke-width="11" opacity=".96"><path d="M60 101 L135 103 M60 122 L130 124 M65 143 L125 145 M66 163 L125 165"/></g>
-        <path d="M92 83 L96 97 L105 91" fill="#f5cb9d" stroke="#9f5f40" stroke-width="2"/>
-        <path d="M115 106 Q128 113 131 130 L111 149 Q106 153 99 150 L88 143 Q84 139 88 133 Q92 128 99 133 L109 139 L115 127 L107 114" fill="url(#bowFace)" stroke="#97583d" stroke-width="2.4"/>
-        <path d="M74 108 Q62 113 65 132 L80 151 Q84 155 92 149 L101 140 Q104 135 99 132 Q95 128 90 132 L83 139 L76 124" fill="url(#bowFace)" stroke="#97583d" stroke-width="2.4"/>
-        <path d="M97 135 Q103 128 108 135 Q114 144 105 151 Q98 155 92 149 Q89 144 97 135Z" fill="#efc29a" stroke="#9e634c" stroke-width="2"/>
-        <path d="M70 35 Q78 22 98 26 Q119 28 124 50 L123 70 Q116 86 99 88 Q77 87 68 66Z" fill="url(#bowFace)" stroke="#905e40" stroke-width="2.6"/>
-        <path d="M66 54 Q60 40 69 32 Q65 22 82 18 Q88 7 108 17 Q121 14 126 32 Q136 35 128 47 Q113 39 109 28 Q97 43 79 40 Q73 51 66 54Z" fill="#241b18" stroke="#130e10" stroke-width="2"/>
-        <path d="M72 52 Q80 47 89 51 M98 51 Q107 47 116 52" fill="none" stroke="#30231f" stroke-width="3"/>
-        <rect x="71" y="52" width="23" height="17" rx="6" stroke="#27201e" stroke-width="3" fill="#f8f3da" fill-opacity=".12"/>
-        <rect x="99" y="52" width="22" height="17" rx="6" stroke="#27201e" stroke-width="3" fill="#f8f3da" fill-opacity=".12"/>
-        <path d="M94 59 H99" stroke="#27201e" stroke-width="3"/>
-        <path d="M83 61 Q87 63 90 61 M106 61 Q110 63 113 61" fill="none" stroke="#432d27" stroke-width="1.8"/>
-        <path d="M94 73 Q99 77 105 73" fill="none" stroke="#804b3d" stroke-width="1.9"/>
-        <path d="M95 82 Q100 95 107 81 L104 78 L97 78Z" fill="#2d1e1b"/>
-       </g>
-      </svg>
+      <div id="bowPerson" class="bow-character" data-pose="0" role="img" aria-label="雞爸爸側後方雙手持香，面向神桌自然鞠躬三拜；只有下巴山羊鬍，沒有上唇鬍鬚"><img src="./assets/bows-0.webp" alt="" class="bow-pose pose-0" draggable="false" loading="eager"><img src="./assets/bows-1.webp" alt="" class="bow-pose pose-1" draggable="false" loading="eager"><img src="./assets/bows-2.webp" alt="" class="bow-pose pose-2" draggable="false" loading="eager"><img src="./assets/bows-3.webp" alt="" class="bow-pose pose-3" draggable="false" loading="eager"></div>
       <strong id="bowCount" class="bow-counter" aria-live="polite">鞠躬 0 / 3</strong>
-      <small class="bow-hint">點擊鞠躬後，人物會前傾、停頓、再起身</small>
+      <small class="bow-hint">雙手持香、從側後方鞠躬，再自然起身</small>
     </div>
    </div>
  </div>
@@ -346,56 +353,11 @@ button:disabled{cursor:not-allowed;opacity:.52}
   <div class="actionrow"><button id="incenseAction" class="primary" type="button">點香</button><button id="incenseReset" class="secondary" type="button">重新祭拜</button></div>
  </section>
  <section id="cups" class="panel" aria-label="擲筊請示" hidden>
-  <p class="explain">向<strong id="cupsWho">祖先</strong>默念問題，按「擲筊」。兩片木製筊杯會隨機落在平面或凸面。</p>
-  <div class="cup-boxes" aria-label="兩片筊杯">
-   <div id="cupA" class="cup" data-face="unset"><svg viewBox="0 0 220 165" class="jiaobei-svg" aria-hidden="true">
- <defs>
-  <linearGradient id="jiaobei-red" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#601a13"/><stop offset=".22" stop-color="#b33625"/><stop offset=".53" stop-color="#ec7652"/><stop offset=".8" stop-color="#ad3628"/><stop offset="1" stop-color="#4c1a13"/></linearGradient>
-  <linearGradient id="jiaobei-rim" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#e7a06d"/><stop offset=".25" stop-color="#81321e"/><stop offset=".72" stop-color="#5c2018"/><stop offset="1" stop-color="#371610"/></linearGradient>
-  <linearGradient id="jiaobei-wood" x1="0" y1="0" x2="1" y2=".3"><stop stop-color="#aa663e"/><stop offset=".22" stop-color="#e2b487"/><stop offset=".49" stop-color="#bf7d50"/><stop offset=".78" stop-color="#e4bb89"/><stop offset="1" stop-color="#8b492c"/></linearGradient>
-  <radialGradient id="jiaobei-lustre" cx="45%" cy="12%"><stop stop-color="#ffb993" stop-opacity=".9"/><stop offset="1" stop-color="#f18a55" stop-opacity="0"/></radialGradient>
- </defs>
- <ellipse cx="114" cy="146" rx="84" ry="10" fill="#100907" opacity=".62"/>
- <g class="jiaobei-art jiaobei-convex">
-  <path d="M29 116 Q69 16 185 30 Q191 67 171 96 Q119 147 29 116Z" fill="url(#jiaobei-rim)" stroke="#3f1c13" stroke-width="5"/>
-  <path d="M34 108 Q80 24 180 34 Q179 64 161 86 Q116 127 34 108Z" fill="url(#jiaobei-red)" stroke="#c1794e" stroke-width="2.6"/>
-  <path d="M39 104 Q78 28 178 35 Q177 62 161 78 Q121 116 39 104" fill="url(#jiaobei-lustre)"/>
-  <path d="M52 103 Q89 43 165 40" fill="none" stroke="#ffb88f" stroke-width="3.4" stroke-linecap="round" opacity=".68"/>
-  <path d="M76 116 Q118 127 160 95" fill="none" stroke="#651f1a" stroke-width="4" opacity=".5"/>
-  <path d="M33 115 Q85 137 138 119" stroke="#452018" stroke-width="5" fill="none"/>
- </g>
- <g class="jiaobei-art jiaobei-flat">
-  <path d="M26 115 Q67 20 187 30 Q199 42 184 59 Q158 103 29 123Z" fill="url(#jiaobei-rim)" stroke="#401a12" stroke-width="5"/>
-  <path d="M29 110 Q82 32 182 37 Q169 78 32 116Z" fill="url(#jiaobei-wood)" stroke="#e9be8c" stroke-width="3"/>
-  <path d="M42 105 Q92 47 169 43 M54 108 Q105 64 166 49 M70 112 Q125 82 162 64 M92 109 Q129 99 150 84" fill="none" stroke="#8f573d" stroke-width="2.4" opacity=".46"/>
-  <path d="M52 113 Q114 112 174 58" fill="none" stroke="#ffe1ad" stroke-width="2.8" opacity=".7"/>
-  <path d="M34 115 Q101 140 183 60" fill="none" stroke="#76281e" stroke-width="6" opacity=".87"/>
- </g>
-</svg><span class="face"></span></div>
-   <div id="cupB" class="cup" data-face="unset"><svg viewBox="0 0 220 165" class="jiaobei-svg" aria-hidden="true">
- <defs>
-  <linearGradient id="jiaobei-red" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#601a13"/><stop offset=".22" stop-color="#b33625"/><stop offset=".53" stop-color="#ec7652"/><stop offset=".8" stop-color="#ad3628"/><stop offset="1" stop-color="#4c1a13"/></linearGradient>
-  <linearGradient id="jiaobei-rim" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#e7a06d"/><stop offset=".25" stop-color="#81321e"/><stop offset=".72" stop-color="#5c2018"/><stop offset="1" stop-color="#371610"/></linearGradient>
-  <linearGradient id="jiaobei-wood" x1="0" y1="0" x2="1" y2=".3"><stop stop-color="#aa663e"/><stop offset=".22" stop-color="#e2b487"/><stop offset=".49" stop-color="#bf7d50"/><stop offset=".78" stop-color="#e4bb89"/><stop offset="1" stop-color="#8b492c"/></linearGradient>
-  <radialGradient id="jiaobei-lustre" cx="45%" cy="12%"><stop stop-color="#ffb993" stop-opacity=".9"/><stop offset="1" stop-color="#f18a55" stop-opacity="0"/></radialGradient>
- </defs>
- <ellipse cx="114" cy="146" rx="84" ry="10" fill="#100907" opacity=".62"/>
- <g class="jiaobei-art jiaobei-convex">
-  <path d="M29 116 Q69 16 185 30 Q191 67 171 96 Q119 147 29 116Z" fill="url(#jiaobei-rim)" stroke="#3f1c13" stroke-width="5"/>
-  <path d="M34 108 Q80 24 180 34 Q179 64 161 86 Q116 127 34 108Z" fill="url(#jiaobei-red)" stroke="#c1794e" stroke-width="2.6"/>
-  <path d="M39 104 Q78 28 178 35 Q177 62 161 78 Q121 116 39 104" fill="url(#jiaobei-lustre)"/>
-  <path d="M52 103 Q89 43 165 40" fill="none" stroke="#ffb88f" stroke-width="3.4" stroke-linecap="round" opacity=".68"/>
-  <path d="M76 116 Q118 127 160 95" fill="none" stroke="#651f1a" stroke-width="4" opacity=".5"/>
-  <path d="M33 115 Q85 137 138 119" stroke="#452018" stroke-width="5" fill="none"/>
- </g>
- <g class="jiaobei-art jiaobei-flat">
-  <path d="M26 115 Q67 20 187 30 Q199 42 184 59 Q158 103 29 123Z" fill="url(#jiaobei-rim)" stroke="#401a12" stroke-width="5"/>
-  <path d="M29 110 Q82 32 182 37 Q169 78 32 116Z" fill="url(#jiaobei-wood)" stroke="#e9be8c" stroke-width="3"/>
-  <path d="M42 105 Q92 47 169 43 M54 108 Q105 64 166 49 M70 112 Q125 82 162 64 M92 109 Q129 99 150 84" fill="none" stroke="#8f573d" stroke-width="2.4" opacity=".46"/>
-  <path d="M52 113 Q114 112 174 58" fill="none" stroke="#ffe1ad" stroke-width="2.8" opacity=".7"/>
-  <path d="M34 115 Q101 140 183 60" fill="none" stroke="#76281e" stroke-width="6" opacity=".87"/>
- </g>
-</svg><span class="face"></span></div>
+  <p class="explain">向<strong id="cupsWho">祖先</strong>默念問題，按「擲筊」。先看見雙手合攏兩片筊杯，接著拋出、落地彈跳並逐漸停穩，最後顯示結果。</p>
+  <div class="cup-boxes" id="cupStage" aria-label="兩片形狀互補的木製筊杯：先由雙手合攏，拋出後落地彈跳、晃動、停止">
+   <div id="cupA" class="cup" data-face="unset"><div class="cup-visual"><img class="cup-convex-img" src="./assets/cup-convex.webp" alt=""><img class="cup-flat-img" src="./assets/cup-flat.webp" alt=""></div><span class="face"></span></div>
+   <div id="cupB" class="cup mirrored" data-face="unset"><div class="cup-visual"><img class="cup-convex-img" src="./assets/cup-convex.webp" alt=""><img class="cup-flat-img" src="./assets/cup-flat.webp" alt=""></div><span class="face"></span></div>
+   <div class="cup-hands" id="cupHands" aria-hidden="true"><img src="./assets/cups-in-hands.webp" alt="" draggable="false"><span>合起筊杯 · 擲出</span></div>
   </div>
   <p class="result-big" id="cupsResult" aria-live="polite">尚未擲筊</p>
   <div class="status" id="cupsStatus" role="status">聖筊：一平一凸；笑筊：兩平面；陰筊：兩凸面。</div>
@@ -445,7 +407,7 @@ const initialPapers=()=>({ancestor:{selected:'刈金',remaining:{'刈金':12},fo
 let papers=initialPapers();
 const total=object=>Object.values(object).reduce((a,b)=>a+b,0);
 const totalBurned=()=>Object.values(papers).reduce((n,record)=>n+total(record.burned),0);
-function resetIncense(){clearTimeout(bowTimer);incense.step=0;incense.bows=0;incense.bowing=false;incense.count=Number(document.querySelector('input[name="incenseCount"]:checked').value);$('incenseAction').textContent='點香';$('incenseAction').disabled=false;$('bowPerson').classList.remove('bowing');$('bowCount').textContent='鞠躬 0 / 3';$('incenseStatus').textContent='請選擇香的數量，按「點香」。';document.querySelectorAll('.incense-stick-visual').forEach(s=>s.classList.remove('on'));$('incenseBundle').classList.remove('lit','inserted');}
+function resetIncense(){clearTimeout(bowTimer);incense.step=0;incense.bows=0;incense.bowing=false;incense.count=Number(document.querySelector('input[name="incenseCount"]:checked').value);$('incenseAction').textContent='點香';$('incenseAction').disabled=false;$('bowPerson').classList.remove('bowing');$('bowPerson').dataset.pose='0';$('bowCount').textContent='鞠躬 0 / 3';$('incenseStatus').textContent='請選擇香的數量，按「點香」。';document.querySelectorAll('.incense-stick-visual').forEach(s=>s.classList.remove('on'));$('incenseBundle').classList.remove('lit','inserted');}
 function updatePaperOptions(){const record=papers[mode],sel=$('paperType');sel.replaceChildren(...legalTypes[mode].map(type=>{const item=document.createElement('option');item.value=type;item.textContent=type;return item}));sel.value=record.selected;$('paperRule').textContent=mode==='ancestor'?'敬拜祖先：只使用刈金':'祈福神明：可用刈金、壽金或福金';updateBurn();}
 function switchMode(m){if(!legalTypes[m]||burning)return;mode=m;$('modeDisplay').textContent='目前祭拜：'+(m==='ancestor'?'祖先':'神明');$('chooseAncestor').classList.toggle('selected',m==='ancestor');$('chooseDeity').classList.toggle('selected',m==='deity');$('who').textContent=modeLabels[mode];$('cupsWho').textContent=modeLabels[mode];$('urnLabel').textContent=m==='ancestor'?'祖先爐':'神明爐';resetIncense();updatePaperOptions();}
 function showPanel(p){if(!['incense','cups','burn','done'].includes(p))return;panel=p;['incense','cups','burn','done'].forEach(name=>$(name).hidden=name!==p);document.querySelectorAll('[data-tab]').forEach(b=>b.classList.toggle('active',b.dataset.tab===p));$('dialogTitle').textContent={incense:'點香祈福',cups:'擲筊請示',burn:'燒金紙',done:'完成祭拜'}[p];if(p==='done'){const finished=!burning&&(totalBurned()>0||incenseCompletedCount>0);$('doneHeading').textContent=finished?'祭拜圓滿':'尚未完成祭拜';$('doneMessage').textContent=finished?'心意已獻上，願家人平安。':'請先完成持香三拜、插香或焚化金紙。';$('doneBurn').textContent=totalBurned();$('doneCast').textContent=castCount;const detail=Object.values(papers).flatMap(v=>Object.entries(v.burned)).filter(([k,v])=>v>0).map(([k,v])=>k+' '+v+' 張');$('donePaperDetail').textContent=detail.length?detail.join('、'):'尚未燒金紙';}if(!dialog.open)dialog.showModal();dialog.scrollTop=0;}
@@ -462,7 +424,8 @@ $('incenseAction').addEventListener('click',()=>{
   const btn=$('incenseAction'),person=$('bowPerson');
   btn.disabled=true;
   $('incenseStatus').textContent='正在向'+modeLabels[mode]+'鞠躬第 '+next+' 次……';
-  person.classList.remove('bowing');void person.getBoundingClientRect();person.classList.add('bowing');
+  person.classList.add('bowing');person.dataset.pose='0';
+   [190,440,770,1050,1290].forEach((ms,i)=>setTimeout(()=>{if(incense.step===1&&incense.bowing)person.dataset.pose=['1','2','2','1','0'][i]},ms));
   bowTimer=setTimeout(()=>{
    if(incense.step!==1)return;
    incense.bows=next;incense.bowing=false;person.classList.remove('bowing');btn.disabled=false;
@@ -475,9 +438,48 @@ $('incenseAction').addEventListener('click',()=>{
  if(incense.step===2){$('incenseBundle').classList.add('inserted');incense.step=3;incenseCompletedCount++;$('incenseStatus').textContent='插香完成。可繼續擲筊或燒金紙。';$('incenseAction').textContent='前往擲筊';return;}if(incense.step===3)showPanel('cups');
 });
 function randomBit(){if(window.crypto&&crypto.getRandomValues){const a=new Uint32Array(1);crypto.getRandomValues(a);return Boolean(a[0]&1)}return Math.random()<0.5;}
-function cast(){const faces=[randomBit(),randomBit()];castCount++;['cupA','cupB'].forEach((id,i)=>{const el=$(id);el.classList.remove('cast');void el.offsetWidth;el.dataset.face=faces[i]?'negative':'positive';el.classList.add('cast')});let title,meaning;if(faces[0]!==faces[1]){title='聖筊';meaning='一平一凸，傳統上通常代表肯定。';}else if(faces[0]){title='笑筊';meaning='兩個平面朝上，通常表示尚未得到明確答覆。';}else{title='陰筊';meaning='兩個凸面朝上，通常表示否定。';}$('cupsResult').textContent=title;$('cupsStatus').textContent=meaning+'（累計 '+castCount+' 次）';}
+let casting=false,castTimer=0,castFrames=[];
+function cancelCastMotion(){clearTimeout(castTimer);castFrames.forEach(id=>cancelAnimationFrame(id));castFrames=[];casting=false;['cupA','cupB'].forEach(id=>{const e=$(id);e.classList.remove('casting');const v=e.querySelector('.cup-visual');v.style.removeProperty('--cx');v.style.removeProperty('--cy');v.style.removeProperty('--angle');v.style.removeProperty('--shadow-lift');});$('cupHands').classList.remove('holding','releasing');$('cupStage').classList.remove('handholding');$('castCups').disabled=false;}
+function animateCup(id,sign,finish){
+ const el=$(id),v=el.querySelector('.cup-visual');
+ let last=0,vy=-420,y=-104,x=-sign*16,rot=sign*36,velRot=-sign*570,bounces=0,hasLanded=false;
+ const start=performance.now();
+ function tick(now){
+   let dt=Math.min(.032,(now-(last||now))/1000);last=now;
+   vy+=1510*dt;y+=vy*dt;
+   x+=sign*25*dt;
+   rot+=velRot*dt;
+   if(y>=0){y=0;hasLanded=true;bounces++;vy=-Math.abs(vy)*Math.max(.12,.53*Math.pow(.70,bounces-1));velRot=-velRot*.45;rot*=.52;if(Math.abs(vy)<46){vy=0;}}
+   if(hasLanded){rot*=Math.exp(-1.9*dt); x*=Math.exp(-.7*dt);}
+   v.style.setProperty('--cx',x.toFixed(1)+'px');v.style.setProperty('--cy',y.toFixed(1)+'px');v.style.setProperty('--angle',rot.toFixed(1)+'deg');v.style.setProperty('--shadow-lift',String(Math.max(0,-y/55))+'px');
+   if(now-start<1950){castFrames.push(requestAnimationFrame(tick));}else{v.style.setProperty('--cy','0px');v.style.setProperty('--angle','0deg');v.style.setProperty('--cx',(sign*9)+'px');finish();}
+ }
+ castFrames.push(requestAnimationFrame(tick));
+}
+function cast(){
+ if(casting)return;
+ casting=true;
+ const faces=[randomBit(),randomBit()];const button=$('castCups');button.disabled=true;
+ $('cupsResult').textContent='雙手合筊，準備擲出……';$('cupsStatus').textContent='筊杯先合攏，再拋向地面，經過彈跳、旋轉與搖晃後停止。';
+ const hands=$('cupHands');$('cupStage').classList.add('handholding');hands.classList.remove('releasing');hands.classList.add('holding');
+ ['cupA','cupB'].forEach(id=>{$(id).classList.add('casting');$(id).dataset.face='unset';});
+ castTimer=setTimeout(()=>{
+  hands.classList.remove('holding');hands.classList.add('releasing');$('cupStage').classList.remove('handholding');
+  let completed=0;
+  ['cupA','cupB'].forEach((id,i)=>animateCup(id,i===0?-1:1,()=>{
+   $(id).dataset.face=faces[i]?'negative':'positive';$(id).classList.remove('casting');completed++;
+   if(completed!==2)return;
+   castCount++;
+   let title,meaning;
+   if(faces[0]!==faces[1]){title='聖筊';meaning='一平一凸，傳統上通常代表肯定。';}
+   else if(faces[0]){title='笑筊';meaning='兩個平面朝上，通常表示尚未得到明確答覆。';}
+   else{title='陰筊';meaning='兩個凸面朝上，通常表示否定。';}
+   $('cupsResult').textContent=title;$('cupsStatus').textContent=meaning+'（累計 '+castCount+' 次）';button.disabled=false;casting=false;castFrames=[];
+  }));
+ },450);
+}
 $('castCups').addEventListener('click',cast);
-$('resetCups').addEventListener('click',()=>{castCount=0;$('cupsResult').textContent='尚未擲筊';$('cupsStatus').textContent='聖筊：一平一凸；笑筊：兩平面；陰筊：兩凸面。';['cupA','cupB'].forEach(id=>{$(id).dataset.face='unset';$(id).classList.remove('cast')});});
+$('resetCups').addEventListener('click',()=>{cancelCastMotion();castCount=0;$('cupsResult').textContent='尚未擲筊';$('cupsStatus').textContent='聖筊：一平一凸；笑筊：兩平面；陰筊：兩凸面。';['cupA','cupB'].forEach(id=>{$(id).dataset.face='unset';$(id).classList.remove('cast')});});
 function updateBurn(){const record=papers[mode],type=record.selected,pending=total(record.folded),remaining=record.remaining[type],burned=totalBurned();$('remaining').textContent=remaining;$('pending').textContent=pending;$('burned').textContent=burned;$('stageBurned').textContent=burned;$('selectedPaperType').textContent=type+'：';$('paperStack').dataset.symbol=glyph[type];$('paperStack').classList.toggle('empty',remaining===0);$('foldPile').classList.toggle('empty',pending===0);$('foldSymbol').textContent=glyph[type];
 const folder=$('foldPile');folder.querySelectorAll('.folded-sheet').forEach(e=>e.remove());
 const sheets=Object.entries(record.folded).flatMap(([kind,n])=>Array.from({length:n},()=>kind));
@@ -512,7 +514,7 @@ $('paperType').addEventListener('change',()=>{const type=$('paperType').value;if
 $('pickPaper').addEventListener('click',pick);$('throwPaper').addEventListener('click',throwPaper);
 $('newStack').addEventListener('click',()=>{if(burning)return;const record=papers[mode];record.remaining[record.selected]=12;$('burnStatus').textContent='已補一疊 '+record.selected+'（12 張）。先前折好的 '+total(record.folded)+' 張仍保留。';updateBurn();});
 $('worshipAgain').addEventListener('click',()=>{clearTimeout(finishTimer);clearTimeout(phaseTimer);burning=false;incenseCompletedCount=0;papers=initialPapers();$('burnBatch').hidden=true;$('furnace').classList.remove('burning','finishing');$('foldAnimations').replaceChildren();resetIncense();castCount=0;['cupA','cupB'].forEach(id=>{$(id).dataset.face='unset';$(id).classList.remove('cast')});$('cupsResult').textContent='尚未擲筊';$('cupsStatus').textContent='聖筊：一平一凸；笑筊：兩平面；陰筊：兩凸面。';$('burnStatus').textContent='先點左邊金紙堆，可連續折多張。';$('wish').value='';switchMode('ancestor');showPanel('incense');});
-window.addEventListener('pagehide',()=>{clearTimeout(finishTimer);clearTimeout(phaseTimer);clearTimeout(bowTimer)});switchMode('ancestor');
+window.addEventListener('pagehide',()=>{clearTimeout(finishTimer);clearTimeout(phaseTimer);clearTimeout(bowTimer);cancelCastMotion()});switchMode('ancestor');
 })();
 </script>
 </body>
