@@ -1,0 +1,12 @@
+/* Align the unused stove burner with the existing background's cover crop. */
+(()=>{'use strict';
+const room=document.querySelector('.cdj-greeting[data-room="kitchen"]'),scene=room?.querySelector('.greeting-scene');if(!scene)return;
+const ns='http://www.w3.org/2000/svg',map=document.createElementNS(ns,'svg'),a=document.createElementNS(ns,'a'),poly=document.createElementNS(ns,'polygon'),title=document.createElementNS(ns,'title');
+map.setAttribute('aria-label','廚房瓦斯爐遊戲入口');map.style.cssText='position:absolute;pointer-events:none;z-index:6;overflow:hidden';
+a.setAttribute('href','/play/yakiniku/');a.setAttribute('aria-label','右側爐口：雞爸爸家的滋滋燒肉');a.style.cssText='pointer-events:auto;cursor:pointer';poly.setAttribute('points','553,262 616,262 629,289 551,290');poly.style.cssText='fill:#e8b85a22;stroke:#fff1a8;stroke-width:2';title.textContent='點右側爐口，一起烤燒肉';a.append(title,poly);map.append(a);room.append(map);
+const css=document.createElement('style');css.textContent='.kitchen-grill-label{position:absolute;padding:8px 14px;border-radius:20px;background:#fffdf3;color:#42664d;font-size:14px;font-weight:bold;border:1px solid #d4b982;z-index:7;transform:translate(-50%,-100%);white-space:nowrap;min-height:44px;display:flex;align-items:center;text-decoration:none}.kitchen-grill-label:focus-visible{outline:3px solid #c77e25;outline-offset:3px}';document.head.append(css);
+const label=document.createElement('a');label.className='kitchen-grill-label';label.href='/play/yakiniku/';label.textContent='滋滋燒肉 →';label.setAttribute('aria-label','開始雞爸爸家的滋滋燒肉');room.append(label);
+const align=()=>{const s=scene.getBoundingClientRect(),r=room.getBoundingClientRect(),z=Math.max(s.width/960,s.height/640);if(!z)return;const pos=getComputedStyle(scene).backgroundPosition.split(' '),px=parseFloat(pos[0])/100,py=parseFloat(pos[1]||pos[0])/100,x=(960-s.width/z)*px,y=(640-s.height/z)*py;map.style.left=s.left-r.left+'px';map.style.top=s.top-r.top+'px';map.style.width=s.width+'px';map.style.height=s.height+'px';map.setAttribute('viewBox',[x,y,s.width/z,s.height/z].join(' '));label.style.left=Math.max(80,Math.min(r.width-80,s.left-r.left+(590-x)*z))+'px';label.style.top=Math.max(48,s.top-r.top+(259-y)*z)+'px';};
+if('ResizeObserver'in window)new ResizeObserver(align).observe(scene);else window.addEventListener('resize',align);align();
+const caption=room.querySelector('.greeting-caption');if(caption)caption.textContent='點右側爐口玩燒肉、咖啡杯來手沖、湯鍋來點菜。';
+})();

@@ -42,3 +42,8 @@
 - Updated homepage brand language.
 - Added `css/brand-homepage.css`.
 - Added homepage `living-notes` identity section.
+
+
+## 2026-11-17｜廚房滋滋燒肉（使用者已核准發布）
+
+新增三食材、雙面熟度、翻面與夾取裝盤、點菜計分、練習與挑戰模式。沿用既有房間遊戲框架，新增廚房空爐口及遊戲間入口，保留咖啡、點菜與其他遊戲。

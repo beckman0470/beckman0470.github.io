@@ -39,10 +39,10 @@ if(room==='living'){
  D.filters.forEach(([key,label])=>section('article',label,'#cards-grid',{journal:key}));
 }else if(room==='games'){
  section('video','鼠姊姊的影片','/play/?area=dodo&roomview=video',{inline:true});section('video','龍弟弟的影片','/play/?area=dragon&roomview=video',{inline:true});
- game('鼠姊姊學習樂園','/play/?area=dodo');game('龍弟弟快樂天地','/play/?area=dragon');fromGames('dad');
+ game('雞爸爸家的滋滋燒肉','/play/yakiniku/');game('鼠姊姊學習樂園','/play/?area=dodo');game('龍弟弟快樂天地','/play/?area=dragon');fromGames('dad');
  section('other','到鼠窩','/rooms.html?room=mom');section('other','到兔窩','/rooms.html?room=ama');
 }else if(room==='kitchen'){
- section('article','一家日常','/articles.html?room=family#cards-grid');section('game','手沖咖啡','#kitchen-coffee');section('other','廚房點菜','#room-activity-kitchen');
+ section('article','一家日常','/articles.html?room=family#cards-grid');game('雞爸爸家的滋滋燒肉','/play/yakiniku/');section('game','手沖咖啡','#kitchen-coffee');section('other','廚房點菜','#room-activity-kitchen');
 }else if(room==='bathroom'){
  section('article','健康期刊','/articles.html?room=cdhj#cards-grid');section('game','浴室生活小遊戲','#room-activity-bathroom');
  game('洗澡步驟小達人','/play/?area=dragon&game=bath');section('other','鼠姊姊的一天','/rooms.html?room=mom#mom-life');

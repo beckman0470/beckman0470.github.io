@@ -26,3 +26,6 @@
 - Family Timeline
 - Vocus Sync
 - Multi-channel publishing
+
+
+2026-11-17：燒肉遊戲與廚房／遊戲間整合已實作，已獲使用者核准發布；後續依實際遊玩回饋調整節奏。
