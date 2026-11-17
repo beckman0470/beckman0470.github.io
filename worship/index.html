@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#4c2418">
+<title>雞爸爸生活研究室｜線上祭拜</title>
+<style>
+:root{color-scheme:dark;--ink:#fff2d1;--gold:#f3c36c;--red:#852b1d;--wood:#572c1e;--line:#b78345}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;color:var(--ink);font-family:system-ui,-apple-system,"Noto Sans TC","Microsoft JhengHei",sans-serif;background:radial-gradient(circle at 50% -10%,#814a2c 0,#341d18 55%,#221713 100%)}
+button,textarea,select{font:inherit}
+button{cursor:pointer}
+button:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #ffdb70;outline-offset:3px}
+header{text-align:center;padding:18px 12px 6px}
+header h1{font-size:clamp(22px,3vw,34px);margin:0 0 5px;color:#ffe1a3}
+header p{margin:0;color:#e8cfae;font-size:14px}
+main{width:min(100%,1600px);padding:0 12px 40px;margin:auto}
+.scene{position:relative;aspect-ratio:3/2;margin:18px auto 0;border:3px solid #ba8544;box-shadow:0 15px 50px #0009;border-radius:12px;overflow:hidden;background:#3b1910}
+.scene img{display:block;width:100%;height:100%;object-fit:cover;user-select:none;pointer-events:none}
+.hit{position:absolute;border:0;background:transparent;color:transparent;border-radius:6px;overflow:hidden;font-size:1px}
+.hit:hover,.hit:focus-visible{outline:3px solid #ffe09c;outline-offset:-3px;background:#ffd87b26}
+.hit-ancestor{left:2%;top:19.5%;width:18%;height:8%}
+.hit-god{left:2%;top:27.5%;width:18%;height:8%}
+.hit-incense{left:27%;top:56.1%;width:23%;height:7.9%}
+.hit-cups{left:50%;top:56.1%;width:23%;height:7.9%}
+.hit-burn{left:72.2%;top:55.7%;width:22%;height:8%}
+.hit-stack{left:23%;top:70%;width:19%;height:21%}
+.hit-furnace{left:65%;top:67.5%;width:18%;height:23%}
+.stage-counter{position:absolute;left:85%;top:70.8%;width:12.2%;height:12%;display:flex;flex-direction:column;align-items:center;justify-content:center;border:2px solid #ce9a57;border-radius:9px;background:linear-gradient(130deg,#4d281b,#291714);color:#ffe2ab;box-shadow:0 2px 10px #1508029a;font-weight:900;pointer-events:none}.stage-counter small{font-size:clamp(9px,1.1vw,16px)}.stage-counter strong{font-size:clamp(16px,3.3vw,43px);line-height:1.1;color:#ffd666}.stage-counter em{font-size:clamp(8px,1vw,15px);font-style:normal}.actionbar{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px;padding:14px 0}
+.actionbar button,.modal-tabs button,.primary,.secondary{color:#ffe7bc;border:1px solid #c79151;border-radius:13px;background:linear-gradient(#95432b,#622b1d);padding:11px 17px;font-weight:700;box-shadow:inset 0 1px #ffffff21}
+.actionbar button:hover,.modal-tabs button:hover,.primary:hover{background:linear-gradient(#b35a2e,#7c3320)}
+.actionbar button.selected,.modal-tabs button.active{background:linear-gradient(#f8b841,#a35d13);color:#291a0d;border-color:#ffdf89}
+.actionbar .mode{font-weight:400;display:inline-flex;align-items:center;font-size:14px;color:#f8deb1;padding:10px}
+.note{text-align:center;color:#dcc29c;font-size:13px;line-height:1.7;margin:0 12px 20px}
+dialog{background:linear-gradient(155deg,#6d3927,#351d18);color:#fff0cd;border:2px solid #d4a35e;border-radius:20px;width:min(92vw,900px);max-height:min(90dvh,920px);padding:0;box-shadow:0 30px 85px #000c;overflow:auto}
+dialog::backdrop{background:#160e0bdc;backdrop-filter:blur(3px)}
+.dialog-head{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid #c78d4b66;background:linear-gradient(90deg,#67331e,#3c2118)}
+.dialog-head h2{margin:0;font-size:clamp(20px,3vw,27px);color:#ffdfa2}
+.icon-close{height:40px;width:40px;border-radius:50%;border:1px solid #dfad68;background:#71351f;color:#fff1d1;font-size:25px}
+.modal-tabs{display:flex;gap:7px;flex-wrap:wrap;padding:12px 20px;border-bottom:1px solid #9c683f66}
+.modal-tabs button{padding:9px 12px;font-size:14px}
+.panel{padding:14px 22px 26px}
+.panel[hidden]{display:none!important}
+.explain{margin:4px 0 14px;color:#ecd2a7;font-size:15px;line-height:1.65}
+.status{background:#392219;border:1px solid #8d603e;color:#ffe4a5;border-radius:12px;line-height:1.7;padding:11px 14px;margin:12px 0;min-height:44px}
+.choice{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin:10px 0}
+.choice label{padding:8px 12px;border:1px solid #c9914b;border-radius:10px;background:#512b1f;cursor:pointer}
+textarea{width:100%;min-height:72px;padding:10px 12px;border-radius:10px;background:#281814;color:#fff2da;border:1px solid #9f6e43;resize:vertical}
+.actionrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:13px}
+.primary{font-size:16px;background:linear-gradient(#e6ab53,#986020);color:#291508;border-color:#ffd991;min-height:46px}
+.secondary{min-height:46px;background:#503024}
+button:disabled{cursor:not-allowed;opacity:.52}
+.art-frame{background:radial-gradient(ellipse,#754226,#331c18);border:1px solid #ae7540;border-radius:17px;min-height:170px;display:flex;align-items:center;justify-content:center;padding:18px;position:relative;overflow:hidden}
+/* Detailed urn: reed graphics stop inside the mouth; front bowl masks every lower portion. */
+.incense-art-frame{padding:8px;min-height:265px;background:radial-gradient(ellipse at 50% 42%,#77432b,#251613 82%)}
+.incense-render{display:block;width:min(100%,460px);max-height:280px;overflow:hidden;border-radius:10px}
+.incense-bundle{opacity:0;transform:translateY(-24px);transform-origin:220px 186px;transition:transform .5s ease-out,opacity .25s ease}
+.incense-bundle.lit{opacity:1;transform:translateY(-9px)}
+.incense-bundle.inserted{transform:translateY(0)}
+.incense-stick-visual{opacity:0;transition:opacity .18s ease}
+.incense-stick-visual.on{opacity:1}
+.incense-smoke{fill:none;stroke:#eee6d4;stroke-width:3;stroke-linecap:round;opacity:.42;animation:smoke-rise 3.2s ease-in-out infinite}
+.incense-stick-visual:nth-child(2) .incense-smoke{animation-delay:-.8s}
+.incense-stick-visual:nth-child(3) .incense-smoke{animation-delay:-1.7s}
+.ember{animation:ember-breathe 2.1s ease-in-out infinite alternate}
+@keyframes smoke-rise{0%{opacity:0;transform:translate(0,10px)}35%{opacity:.58}100%{opacity:0;transform:translate(7px,-16px)}}
+@keyframes ember-breathe{from{opacity:.57}to{opacity:1}}
+/* Taiwan-style wooden jiaobei, with modeled convex lacquer and light wooden flat side. */
+.cup-boxes{display:flex;justify-content:center;gap:14px;margin:9px 0}
+.cup{min-height:210px;background:radial-gradient(ellipse at 42% 35%,#73503a,#261914 85%);border:1px solid #916444;border-radius:14px;display:flex;flex-direction:column;align-items:center;justify-content:center;flex:1;max-width:255px;box-shadow:inset 0 6px 14px #14080775}
+.cup svg{width:min(100%,220px);height:auto;overflow:visible;filter:drop-shadow(0 7px 4px #1107029f)}
+.cup .face{margin:3px 0 12px;font-weight:750;color:#f2d09b;font-size:15px;line-height:1.4}
+.cup .face::before{content:"木製筊杯"}
+.cup[data-face="positive"] .face::before{content:"凸面（圓面）"}
+.cup[data-face="negative"] .face::before{content:"平面（木紋面）"}
+.jiaobei-flat{display:none}
+.cup[data-face="negative"] .jiaobei-flat{display:inline}
+.cup[data-face="negative"] .jiaobei-convex{display:none}
+.cup.cast svg{animation:cup-toss .85s cubic-bezier(.18,.62,.25,1)}
+@keyframes cup-toss{0%{transform:translateY(-54px) rotate(-53deg) scale(.85)}35%{transform:translateY(1px) rotate(47deg) scale(1.03)}65%{transform:translateY(-11px) rotate(-18deg)}100%{transform:translateY(0) rotate(0deg)}}
+.result-big{text-align:center;color:#fcd480;font-size:26px;font-weight:900;margin:12px 0 0}
+.burn-work{display:grid;grid-template-columns:minmax(0,1fr) minmax(105px,.9fr) minmax(0,1.15fr);align-items:center;gap:10px;background:radial-gradient(ellipse,#7f4a2a,#362019 77%);border:1px solid #b37a47;border-radius:17px;min-height:310px;padding:10px;position:relative;overflow:hidden}
+.paper-zone,.furnace-zone{min-height:260px;display:flex;flex-direction:column;align-items:center;justify-content:end;gap:8px;position:relative}
+.paper-zone button,.furnace-zone button{border:none;background:none;color:#fff0d3;padding:8px;width:100%;min-height:220px;display:flex;align-items:center;flex-direction:column;justify-content:end;gap:12px}
+.paper-zone button:hover .paper-stack,.paper-zone button:focus-visible .paper-stack{filter:drop-shadow(0 0 12px #fff0a688)}
+.paper-stack{height:108px;width:min(90%,172px);position:relative;background:repeating-linear-gradient(to bottom,#e8b243 0px,#e8b243 5px,#ad651a 6px,#fbd47e 9px);border:3px solid #f4cd75;border-radius:4px;box-shadow:0 10px 0 #5f3019,5px 18px 12px #170c0a88}
+.paper-stack:before{content:attr(data-symbol);font-size:44px;font-family:serif;color:#ba3220;position:absolute;inset:-7px 0 auto;top:-15px;display:grid;place-items:center;height:66px;background:#ffd66c;border:4px solid #b93e24;transform:rotate(-3deg)}
+.paper-stack.empty{filter:grayscale(1);opacity:.25}
+.paper-label{display:block;text-align:center;font-weight:700}
+.move-icon{font-size:clamp(26px,5vw,43px);font-weight:900;color:#f7b960}
+.furnace{width:min(100%,205px);height:203px;position:relative;display:flex;align-items:center;justify-content:center;flex-direction:column;filter:drop-shadow(4px 9px 7px #0009)}
+.furnace .cap{position:absolute;top:1px;width:94%;height:50px;background:linear-gradient(#d4a36a,#61351f);border-radius:50% 50% 12px 12px;border:4px solid #9e5d2c;z-index:2}
+.furnace .body{position:absolute;top:34px;bottom:0;width:83%;border-radius:13% 13% 22% 22%;background:linear-gradient(90deg,#814b2b 0,#cd8c4c 27%,#60321c 60%,#aa6233 100%);border:4px solid #b27a46}
+.furnace .mouth{width:72%;height:113px;position:relative;background:radial-gradient(ellipse at bottom,#9b3b18,#22100b 80%);border:5px solid #c99257;border-radius:22px 22px 36px 36px;margin-top:49px;z-index:3;overflow:hidden}
+.flames{position:absolute;bottom:-21px;left:17%;width:65%;height:104px;border-radius:45% 55% 35% 45%;background:radial-gradient(ellipse at bottom,#ffe09a,#ff9b1f 47%,#e53d14 67%,transparent 73%);transform:rotate(-7deg);animation:flame 1.2s ease-in-out infinite alternate;opacity:.85}
+.furnace.burning .flames{opacity:1;filter:brightness(1.3)}
+@keyframes flame{from{transform:scale(.9) rotate(-8deg)}to{transform:scale(1.12) rotate(9deg)}}
+/* The paper is folded exactly in half, not corner-folded. Repeated taps may animate concurrently. */
+.fold-zone{min-height:255px;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:end;gap:11px;padding:8px 0 19px}
+.fold-pile{position:relative;width:76px;height:93px;border:3px solid #dc9b3a;border-radius:3px 7px 7px 3px;background:linear-gradient(90deg,#e5ab3f 0%,#ffdf83 47%,#e5a53e 52%,#f6c561 100%);box-shadow:0 6px 0 #aa6225,4px 12px 10px #120b08aa;transform:rotate(-8deg);display:grid;place-items:center;color:#b8401c;font:bold 36px serif}
+.fold-pile:before{content:"";position:absolute;top:0;left:48%;bottom:0;border-left:2px dashed #b36f248a}
+.fold-pile:after{content:"";position:absolute;top:4px;bottom:4px;left:5px;right:5px;border:2px solid #b6362088;border-radius:2px}
+.fold-pile.empty{opacity:.28;filter:grayscale(.5);box-shadow:none}
+.fold-pile span{position:relative;z-index:1}
+.fold-count{background:#8d3d1b;color:#ffe6a5;border:1px solid #e5b064;border-radius:25px;padding:6px 11px;font-weight:800;font-size:14px;text-align:center;white-space:nowrap}
+.fold-describe{font-size:12px;min-height:2.5em;text-align:center;line-height:1.4;color:#edcf9a;max-width:165px}
+.fold-animations{position:absolute;inset:3px 0 47px;pointer-events:none;overflow:visible}
+.fold-anim{position:absolute;left:calc(50% - 45px);top:16%;height:86px;width:90px;transform-style:preserve-3d;perspective:500px;animation:fold-settle .78s ease-out forwards;filter:drop-shadow(2px 5px 3px #160b08a8)}
+.fold-anim .half{position:absolute;top:0;width:45px;height:86px;background:#ffd475;border:3px solid #b94724;display:grid;place-items:center;color:#b33321;font:bold 26px serif}
+.fold-anim .left{left:0;border-right:1px dashed #a86228}
+.fold-anim .right{left:45px;transform-origin:left center;animation:fold-in-half .57s ease-in-out forwards}
+@keyframes fold-in-half{0%,12%{transform:rotateY(0)}88%,100%{transform:rotateY(-180deg)}}
+@keyframes fold-settle{0%{opacity:1;transform:translateY(-19px) rotate(-6deg) scale(1)}70%{opacity:1;transform:translateY(8px) rotate(5deg) scale(.8)}100%{opacity:0;transform:translateY(28px) rotate(-8deg) scale(.68)}}
+.burn-batch{position:absolute;z-index:6;left:46%;top:49%;width:60px;height:79px;background:linear-gradient(90deg,#d6a345,#ffde79 55%,#c18d39);border:3px solid #bb4123;border-radius:3px;color:#bb3c20;display:grid;place-items:center;font:bold 33px serif;box-shadow:1px 5px 11px #1b0c08;pointer-events:none;animation:batchflight .85s cubic-bezier(.25,.7,.3,1) forwards}
+.burn-batch[hidden]{display:none}
+@keyframes batchflight{0%{opacity:1;transform:translate(0,0) rotate(-11deg)}62%{opacity:1;transform:translate(160%,-50%) rotate(200deg) scale(.75)}100%{opacity:0;transform:translate(270%,42%) rotate(360deg) scale(.15)}}
+.paper-choice{display:flex;align-items:center;flex-wrap:wrap;gap:10px;padding:8px 0 12px}
+.paper-choice select{min-height:42px;min-width:125px;padding:6px 12px;border-radius:10px;border:1px solid #d3a05a;color:#ffebc7;background:#48261c}
+.paper-rule{font-size:13px;color:#f0d6a7}
+.mini-count{text-align:center;color:#f7d39c;padding:10px 0;font-weight:700}
+.die-caption{font-size:12px;color:#d3bb99;margin:8px 0 0}
+@media(max-width:740px){main{padding:0 8px 24px}.scene{margin-top:10px;border-radius:7px}.hit,.stage-counter{display:none}.actionbar{gap:6px;padding:10px 0}.actionbar button{padding:9px 10px;font-size:14px}.actionbar .mode{padding:5px}.dialog-head{padding:12px 14px}.modal-tabs{padding:9px 12px}.panel{padding:12px}.burn-work{grid-template-columns:minmax(0,1fr) minmax(84px,.8fr) minmax(0,1fr);min-height:260px;gap:2px}.paper-zone,.furnace-zone{min-height:220px}.paper-zone button,.furnace-zone button{min-height:198px}.paper-stack{width:95px;height:85px}.furnace{height:180px}.furnace .mouth{height:85px}.fold-zone{min-height:216px;gap:7px;padding-bottom:8px}.fold-pile{width:48px;height:65px;font-size:23px}.fold-count{font-size:11px;padding:4px 6px}.fold-describe{font-size:10px}.fold-anim{left:calc(50% - 32px);width:64px;height:64px}.fold-anim .half{height:64px;width:32px}.fold-anim .right{left:32px}.paper-label{font-size:12px}.note{font-size:12px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
+
+/* v4 — photo-based Taiwanese joss paper / moon blocks, without changing the background scene */
+.paper-stack{width:min(95%,174px);height:165px;background:url('./assets/paper-stack.webp') center bottom / contain no-repeat;border:0;border-radius:0;box-shadow:none;filter:drop-shadow(3px 9px 6px #0e0808a8);transition:transform .16s ease}
+.paper-stack:before{display:none!important}
+.paper-zone button:hover .paper-stack,.paper-zone button:focus-visible .paper-stack{transform:translateY(-5px);filter:drop-shadow(0 0 12px #ffdc9277)}
+.paper-stack.empty{opacity:.24;filter:grayscale(1)}
+/* Every physical paper is a separate DOM image. One click = one visible folded sheet. */
+.fold-pile{position:relative;width:100%;max-width:185px;height:160px;background:none;border:0;box-shadow:none;transform:none;overflow:visible;display:block}
+.fold-pile:before,.fold-pile:after{display:none}
+.fold-pile.empty{opacity:.4;filter:grayscale(.5)}
+.fold-pile span#foldSymbol{display:none}
+.folded-sheet{position:absolute;left:50%;top:50%;height:auto;width:clamp(95px,12vw,153px);max-width:none;transform:translate(calc(-50% + var(--offset-x,0px)),calc(-50% + var(--offset-y,0px))) rotate(var(--tilt,0deg));transform-origin:center;filter:drop-shadow(0 3px 2px #140804b7);pointer-events:none;user-select:none}
+.folded-sheet:last-child{filter:drop-shadow(0 6px 6px #110a06b8)}
+.fold-animations{inset:0 0 30px;z-index:5;overflow:visible}
+.fold-anim{left:calc(50% - 54px);top:1%;height:105px;width:108px;filter:drop-shadow(2px 4px 2px #120903a4);animation:fold-settle-v4 .67s ease-in forwards;transform-style:preserve-3d;perspective:600px}
+.fold-anim .half{height:100px;width:55px;display:block;border:0;background:url('./assets/paper-folded.webp') center / contain no-repeat;color:transparent;box-shadow:none}
+.fold-anim .left{left:0;background-position:center;background-size:165px auto;clip-path:inset(0 0 0 0)}
+.fold-anim .right{left:54px;transform-origin:left center;background-position:right;background-size:165px auto;animation:fold-in-half .46s cubic-bezier(.18,.7,.32,1) forwards}
+@keyframes fold-settle-v4{0%{opacity:1;transform:translateY(-30px) rotate(-6deg) scale(1.1)}65%{opacity:1;transform:translateY(5px) rotate(-2deg) scale(.85)}100%{opacity:0;transform:translateY(30px) rotate(1deg) scale(.65)}}
+/* Replace diagram-like SVG cups with actual textured cup assets (each face different). */
+.cup .jiaobei-svg{display:none}
+.cup::before{content:"";display:block;background:url('./assets/cup-convex.webp') center / contain no-repeat;width:min(100%,210px);height:155px;filter:drop-shadow(0 8px 5px #10060399)}
+.cup[data-face="negative"]::before{background-image:url('./assets/cup-flat.webp')}
+.cup.cast::before{animation:cup-toss .85s cubic-bezier(.18,.62,.25,1)}
+.cup[data-face="unset"]::before{opacity:.84}
+/* A folded batch actually flies into the furnace as a visual piece. */
+.burn-batch{width:110px;height:85px;background:url('./assets/paper-folded.webp') center / contain no-repeat;border:0;box-shadow:none;font-size:0;filter:drop-shadow(1px 6px 5px #150802aa)}
+@media(max-width:740px){
+.paper-stack{width:100%;height:100px}
+.fold-pile{height:110px;min-width:75px}
+.folded-sheet{width:clamp(76px,21vw,110px)}
+.fold-anim{left:calc(50% - 40px);width:80px;height:84px}
+.fold-anim .half{width:40px;height:81px;background-size:124px auto}
+.fold-anim .right{left:40px;background-size:124px auto}
+.cup::before{height:116px}
+.cup{min-height:177px}
+.burn-batch{height:62px;width:75px}
+}
+</style>
+</head>
+<body>
+<header><h1>雞爸爸生活研究室・線上祭拜</h1><p>v4｜固定清晰背景・一張張對折堆疊・寫實筊杯・點香祭拜</p></header>
+<main>
+ <nav class="return-living" aria-label="返回客廳" style="text-align:right;margin-top:7px"><a href="/videos.html" style="color:#f5d18c;text-decoration:underline;text-underline-offset:4px">返回雞爸爸客廳</a></nav>
+ <div class="scene" aria-label="以雞爸爸指定圖片為固定背景的線上祭拜操作畫面">
+  <img src="./background.png" width="1536" height="1024" alt="雞爸爸提供的線上祭拜版面：左側祭拜選單，祖先與神明分列、兩個香爐，下方燒金紙操作區。">
+  <div class="stage-counter" aria-live="polite"><small>已燒</small><strong id="stageBurned">0</strong><em>張</em></div>
+  <button class="hit hit-ancestor" type="button" data-go="incense" data-mode="ancestor" aria-label="敬拜祖先，開始點香">敬拜祖先</button>
+  <button class="hit hit-god" type="button" data-go="incense" data-mode="deity" aria-label="祈福神明，開始點香">祈福神明</button>
+  <button class="hit hit-incense" type="button" data-go="incense" aria-label="點香祈福">點香祈福</button>
+  <button class="hit hit-cups" type="button" data-go="cups" aria-label="擲筊請示">擲筊請示</button>
+  <button class="hit hit-burn" type="button" data-go="burn" aria-label="燒金紙">燒金紙</button>
+  <button class="hit hit-stack" type="button" data-go="burn" aria-label="點左下角金紙堆，開始折金紙">折金紙</button>
+  <button class="hit hit-furnace" type="button" data-go="burn" aria-label="點右下角金爐，打開批次燒金紙操作">金爐</button>
+ </div>
+ <div class="actionbar" aria-label="互動功能">
+   <span class="mode" id="modeDisplay">目前祭拜：祖先</span>
+   <button id="chooseAncestor" type="button" class="selected" data-go="incense" data-mode="ancestor">敬拜祖先</button>
+   <button id="chooseDeity" type="button" data-go="incense" data-mode="deity">祈福神明</button>
+   <button type="button" data-go="incense">點香與鞠躬</button>
+   <button type="button" data-go="cups">擲筊請示</button>
+   <button type="button" data-go="burn">燒金紙</button>
+   <button type="button" data-go="done">祭拜完成</button>
+ </div>
+ <p class="note">桌機可直接點背景畫面上的祭拜入口、金紙堆或金爐；手機請使用圖片下方的大按鈕。所有互動僅在瀏覽器執行，祈福文字不會上傳。</p>
+</main>
+<dialog id="worshipDialog" aria-labelledby="dialogTitle">
+ <div class="dialog-head"><h2 id="dialogTitle">線上祭拜</h2><button class="icon-close" type="button" id="closeDialog" aria-label="關閉祭拜視窗">×</button></div>
+ <nav class="modal-tabs" aria-label="祭拜步驟">
+  <button type="button" data-tab="incense">點香祈福</button><button type="button" data-tab="cups">擲筊請示</button><button type="button" data-tab="burn">燒金紙</button><button type="button" data-tab="done">完成祭拜</button>
+ </nav>
+ <section id="incense" class="panel" aria-label="點香與鞠躬" hidden>
+  <p class="explain">為 <strong id="who">珍山陳歷代祖先</strong> 點香。可先默念心願，再依序點香、鞠躬三次、插香。</p>
+  <div class="choice" role="group" aria-label="選擇香的數量"><span>點香數量：</span><label><input type="radio" name="incenseCount" value="1"> 一炷香</label><label><input type="radio" name="incenseCount" value="3" checked> 三炷香</label></div>
+  <label for="wish">想說的話（選填、不會儲存或上傳）</label><textarea id="wish" maxlength="240" placeholder="心中默念即可，也可以不填……"></textarea>
+  <div class="art-frame incense-art-frame">
+  <svg class="incense-render" viewBox="0 0 440 286" role="img" aria-label="仿真台灣傳統銅製香爐。香在香爐內，香腳不穿過爐底；香頭燃起後有細煙。">
+   <defs>
+    <radialGradient id="altarHalo" cx="50%" cy="44%"><stop stop-color="#b88442" stop-opacity=".65"/><stop offset="1" stop-color="#25140f" stop-opacity="0"/></radialGradient>
+    <linearGradient id="copperL" x1="0" x2="1"><stop stop-color="#462a16"/><stop offset=".13" stop-color="#aa6528"/><stop offset=".30" stop-color="#ebc47b"/><stop offset=".48" stop-color="#9a5425"/><stop offset=".63" stop-color="#dba45c"/><stop offset=".86" stop-color="#673418"/><stop offset="1" stop-color="#321b10"/></linearGradient>
+    <linearGradient id="copperR" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#ffdc94"/><stop offset=".35" stop-color="#bc7c39"/><stop offset=".72" stop-color="#73411d"/><stop offset="1" stop-color="#3c2313"/></linearGradient>
+    <linearGradient id="redStick" x1="0" x2="1"><stop stop-color="#621d1a"/><stop offset=".40" stop-color="#d84735"/><stop offset=".72" stop-color="#ae2924"/><stop offset="1" stop-color="#541b16"/></linearGradient>
+    <linearGradient id="ashStick" x1="0" x2="1"><stop stop-color="#55514a"/><stop offset=".45" stop-color="#b1a79a"/><stop offset="1" stop-color="#69605a"/></linearGradient>
+    <radialGradient id="emberGlow"><stop stop-color="#fff4be"/><stop offset=".27" stop-color="#ffb04e"/><stop offset=".56" stop-color="#ef5c2b" stop-opacity=".65"/><stop offset="1" stop-color="#f36a28" stop-opacity="0"/></radialGradient>
+    <filter id="urnShade" x="-30%" y="-30%" width="170%" height="190%"><feDropShadow dx="1" dy="7" stdDeviation="5" flood-color="#120802" flood-opacity=".75"/></filter>
+   </defs>
+   <rect width="440" height="286" fill="#2b1712"/>
+   <rect x="2" y="5" width="436" height="277" rx="6" fill="url(#altarHalo)"/>
+   <g opacity=".26" stroke="#d49b58" stroke-width="2" fill="none"><path d="M15 230 Q74 198 91 148 Q100 81 36 36"/><path d="M425 230 Q366 198 349 148 Q340 81 404 36"/></g>
+   <ellipse cx="220" cy="267" rx="129" ry="10" fill="#0b0706" opacity=".65"/>
+   <g filter="url(#urnShade)">
+    <path d="M123 182 C97 174 96 202 108 216 C118 227 134 217 146 213" fill="none" stroke="#8a521d" stroke-width="15"/>
+    <path d="M317 182 C343 174 344 202 332 216 C322 227 306 217 294 213" fill="none" stroke="#8a521d" stroke-width="15"/>
+    <path d="M137 223 L145 259 Q155 269 165 257 L171 234 Z M269 234 L275 259 Q286 269 295 257 L303 222 Z" fill="url(#copperL)" stroke="#48250f" stroke-width="3"/>
+    <path d="M133 180 Q220 156 307 180 L298 223 Q280 257 220 261 Q160 257 142 223Z" fill="url(#copperL)" stroke="#58290f" stroke-width="4"/>
+    <ellipse cx="220" cy="184" rx="94" ry="24" fill="#d7a55d" stroke="#6c3a15" stroke-width="5"/>
+    <ellipse cx="220" cy="184" rx="82" ry="14" fill="#2c2119" stroke="#f4d38b" stroke-width="3"/>
+    <ellipse cx="220" cy="184" rx="73" ry="10" fill="#62513a" opacity=".9"/>
+   </g>
+   <g class="incense-bundle" id="incenseBundle">
+    <g id="stick1" class="incense-stick-visual"><path d="M199 210 Q197 148 196 77" stroke="url(#redStick)" stroke-width="5" stroke-linecap="round" fill="none"/><path d="M196 132 L196 78" stroke="url(#ashStick)" stroke-width="4.2" stroke-linecap="round"/><ellipse cx="196" cy="76" rx="12" ry="14" fill="url(#emberGlow)" class="ember"/><circle cx="196" cy="77" r="2.8" fill="#ffb959"/><path class="incense-smoke" d="M196 74 C185 61 208 51 198 37 S192 18 201 3"/></g>
+    <g id="stick2" class="incense-stick-visual"><path d="M220 210 Q220 144 221 56" stroke="url(#redStick)" stroke-width="5.5" stroke-linecap="round" fill="none"/><path d="M220.7 127 L221 57" stroke="url(#ashStick)" stroke-width="4.4" stroke-linecap="round"/><ellipse cx="221" cy="55" rx="13" ry="14" fill="url(#emberGlow)" class="ember"/><circle cx="221" cy="55" r="3" fill="#ffd07a"/><path class="incense-smoke" d="M221 52 C231 36 211 29 221 16 S231 3 222 -8"/></g>
+    <g id="stick3" class="incense-stick-visual"><path d="M243 211 Q244 148 245 78" stroke="url(#redStick)" stroke-width="5" stroke-linecap="round" fill="none"/><path d="M245 131 L245 78" stroke="url(#ashStick)" stroke-width="4.2" stroke-linecap="round"/><ellipse cx="245" cy="77" rx="12" ry="14" fill="url(#emberGlow)" class="ember"/><circle cx="245" cy="77" r="2.8" fill="#ffba67"/><path class="incense-smoke" d="M245 73 C256 60 235 51 246 37 S257 17 248 5"/></g>
+   </g>
+   <g class="urn-foreground" filter="url(#urnShade)">
+    <path d="M129 191 Q146 229 162 248 Q220 274 277 248 Q294 229 311 191 Q269 206 220 204 Q171 205 129 191 Z" fill="url(#copperL)" stroke="#44250d" stroke-width="4"/>
+    <path d="M135 196 Q219 225 305 196" fill="none" stroke="#f7d890" stroke-width="5" opacity=".8"/>
+    <path d="M156 232 Q170 209 183 230 Q196 249 213 218 Q222 207 235 218 Q252 245 272 224 Q286 213 291 222" fill="none" stroke="#5f3b1b" stroke-width="7" opacity=".7"/>
+    <path d="M156 232 Q170 209 183 230 Q196 249 213 218 Q222 207 235 218 Q252 245 272 224 Q286 213 291 222" fill="none" stroke="#f1cf84" stroke-width="2.3" opacity=".7"/>
+    <ellipse cx="220" cy="193" rx="93" ry="12" fill="none" stroke="url(#copperR)" stroke-width="9"/>
+    <ellipse cx="220" cy="193" rx="89" ry="9" fill="none" stroke="#ffe2a3" stroke-width="2"/>
+    <path d="M195 231 Q220 222 245 231 L240 247 Q219 255 200 247Z" fill="#372015" stroke="#e0a55a" stroke-width="2"/>
+    <text id="urnLabel" x="220" y="244" fill="#ffe5a3" font-size="15" font-weight="700" text-anchor="middle">祖先爐</text>
+   </g>
+   <text x="220" y="25" text-anchor="middle" fill="#edcb8c" font-size="12" opacity=".84">虛擬傳統銅香爐</text>
+  </svg>
+ </div>
+  <div id="incenseStatus" class="status" role="status" aria-live="polite">請選擇香的數量，按「點香」。</div>
+  <div class="actionrow"><button id="incenseAction" class="primary" type="button">點香</button><button id="incenseReset" class="secondary" type="button">重新祭拜</button></div>
+ </section>
+ <section id="cups" class="panel" aria-label="擲筊請示" hidden>
+  <p class="explain">向<strong id="cupsWho">祖先</strong>默念問題，按「擲筊」。兩片木製筊杯會隨機落在平面或凸面。</p>
+  <div class="cup-boxes" aria-label="兩片筊杯">
+   <div id="cupA" class="cup" data-face="unset"><svg viewBox="0 0 220 165" class="jiaobei-svg" aria-hidden="true">
+ <defs>
+  <linearGradient id="jiaobei-red" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#601a13"/><stop offset=".22" stop-color="#b33625"/><stop offset=".53" stop-color="#ec7652"/><stop offset=".8" stop-color="#ad3628"/><stop offset="1" stop-color="#4c1a13"/></linearGradient>
+  <linearGradient id="jiaobei-rim" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#e7a06d"/><stop offset=".25" stop-color="#81321e"/><stop offset=".72" stop-color="#5c2018"/><stop offset="1" stop-color="#371610"/></linearGradient>
+  <linearGradient id="jiaobei-wood" x1="0" y1="0" x2="1" y2=".3"><stop stop-color="#aa663e"/><stop offset=".22" stop-color="#e2b487"/><stop offset=".49" stop-color="#bf7d50"/><stop offset=".78" stop-color="#e4bb89"/><stop offset="1" stop-color="#8b492c"/></linearGradient>
+  <radialGradient id="jiaobei-lustre" cx="45%" cy="12%"><stop stop-color="#ffb993" stop-opacity=".9"/><stop offset="1" stop-color="#f18a55" stop-opacity="0"/></radialGradient>
+ </defs>
+ <ellipse cx="114" cy="146" rx="84" ry="10" fill="#100907" opacity=".62"/>
+ <g class="jiaobei-art jiaobei-convex">
+  <path d="M29 116 Q69 16 185 30 Q191 67 171 96 Q119 147 29 116Z" fill="url(#jiaobei-rim)" stroke="#3f1c13" stroke-width="5"/>
+  <path d="M34 108 Q80 24 180 34 Q179 64 161 86 Q116 127 34 108Z" fill="url(#jiaobei-red)" stroke="#c1794e" stroke-width="2.6"/>
+  <path d="M39 104 Q78 28 178 35 Q177 62 161 78 Q121 116 39 104" fill="url(#jiaobei-lustre)"/>
+  <path d="M52 103 Q89 43 165 40" fill="none" stroke="#ffb88f" stroke-width="3.4" stroke-linecap="round" opacity=".68"/>
+  <path d="M76 116 Q118 127 160 95" fill="none" stroke="#651f1a" stroke-width="4" opacity=".5"/>
+  <path d="M33 115 Q85 137 138 119" stroke="#452018" stroke-width="5" fill="none"/>
+ </g>
+ <g class="jiaobei-art jiaobei-flat">
+  <path d="M26 115 Q67 20 187 30 Q199 42 184 59 Q158 103 29 123Z" fill="url(#jiaobei-rim)" stroke="#401a12" stroke-width="5"/>
+  <path d="M29 110 Q82 32 182 37 Q169 78 32 116Z" fill="url(#jiaobei-wood)" stroke="#e9be8c" stroke-width="3"/>
+  <path d="M42 105 Q92 47 169 43 M54 108 Q105 64 166 49 M70 112 Q125 82 162 64 M92 109 Q129 99 150 84" fill="none" stroke="#8f573d" stroke-width="2.4" opacity=".46"/>
+  <path d="M52 113 Q114 112 174 58" fill="none" stroke="#ffe1ad" stroke-width="2.8" opacity=".7"/>
+  <path d="M34 115 Q101 140 183 60" fill="none" stroke="#76281e" stroke-width="6" opacity=".87"/>
+ </g>
+</svg><span class="face"></span></div>
+   <div id="cupB" class="cup" data-face="unset"><svg viewBox="0 0 220 165" class="jiaobei-svg" aria-hidden="true">
+ <defs>
+  <linearGradient id="jiaobei-red" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#601a13"/><stop offset=".22" stop-color="#b33625"/><stop offset=".53" stop-color="#ec7652"/><stop offset=".8" stop-color="#ad3628"/><stop offset="1" stop-color="#4c1a13"/></linearGradient>
+  <linearGradient id="jiaobei-rim" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#e7a06d"/><stop offset=".25" stop-color="#81321e"/><stop offset=".72" stop-color="#5c2018"/><stop offset="1" stop-color="#371610"/></linearGradient>
+  <linearGradient id="jiaobei-wood" x1="0" y1="0" x2="1" y2=".3"><stop stop-color="#aa663e"/><stop offset=".22" stop-color="#e2b487"/><stop offset=".49" stop-color="#bf7d50"/><stop offset=".78" stop-color="#e4bb89"/><stop offset="1" stop-color="#8b492c"/></linearGradient>
+  <radialGradient id="jiaobei-lustre" cx="45%" cy="12%"><stop stop-color="#ffb993" stop-opacity=".9"/><stop offset="1" stop-color="#f18a55" stop-opacity="0"/></radialGradient>
+ </defs>
+ <ellipse cx="114" cy="146" rx="84" ry="10" fill="#100907" opacity=".62"/>
+ <g class="jiaobei-art jiaobei-convex">
+  <path d="M29 116 Q69 16 185 30 Q191 67 171 96 Q119 147 29 116Z" fill="url(#jiaobei-rim)" stroke="#3f1c13" stroke-width="5"/>
+  <path d="M34 108 Q80 24 180 34 Q179 64 161 86 Q116 127 34 108Z" fill="url(#jiaobei-red)" stroke="#c1794e" stroke-width="2.6"/>
+  <path d="M39 104 Q78 28 178 35 Q177 62 161 78 Q121 116 39 104" fill="url(#jiaobei-lustre)"/>
+  <path d="M52 103 Q89 43 165 40" fill="none" stroke="#ffb88f" stroke-width="3.4" stroke-linecap="round" opacity=".68"/>
+  <path d="M76 116 Q118 127 160 95" fill="none" stroke="#651f1a" stroke-width="4" opacity=".5"/>
+  <path d="M33 115 Q85 137 138 119" stroke="#452018" stroke-width="5" fill="none"/>
+ </g>
+ <g class="jiaobei-art jiaobei-flat">
+  <path d="M26 115 Q67 20 187 30 Q199 42 184 59 Q158 103 29 123Z" fill="url(#jiaobei-rim)" stroke="#401a12" stroke-width="5"/>
+  <path d="M29 110 Q82 32 182 37 Q169 78 32 116Z" fill="url(#jiaobei-wood)" stroke="#e9be8c" stroke-width="3"/>
+  <path d="M42 105 Q92 47 169 43 M54 108 Q105 64 166 49 M70 112 Q125 82 162 64 M92 109 Q129 99 150 84" fill="none" stroke="#8f573d" stroke-width="2.4" opacity=".46"/>
+  <path d="M52 113 Q114 112 174 58" fill="none" stroke="#ffe1ad" stroke-width="2.8" opacity=".7"/>
+  <path d="M34 115 Q101 140 183 60" fill="none" stroke="#76281e" stroke-width="6" opacity=".87"/>
+ </g>
+</svg><span class="face"></span></div>
+  </div>
+  <p class="result-big" id="cupsResult" aria-live="polite">尚未擲筊</p>
+  <div class="status" id="cupsStatus" role="status">聖筊：一平一凸；笑筊：兩平面；陰筊：兩凸面。</div>
+  <div class="actionrow"><button class="primary" type="button" id="castCups">擲筊</button><button class="secondary" type="button" id="resetCups">重新開始</button></div>
+  <p class="die-caption">這是機率模擬，不是真實宗教指示，也不會自動替您決定事情。</p>
+ </section>
+ <section id="burn" class="panel" aria-label="燒金紙" hidden>
+  <p class="explain">依家裡的習慣：<strong>拜祖先只用刈金；拜神明可用刈金、壽金或福金。</strong> 點左邊金紙堆，每次真的對折一張並疊在中間；可連續折很多張，再點右邊的爐子，把已折好的紙一次燒掉。</p>
+  <div class="paper-choice">
+    <label for="paperType">選擇金紙：</label><select id="paperType" aria-label="依祭拜對象選擇金紙種類"></select>
+    <span class="paper-rule" id="paperRule">敬拜祖先：只使用刈金</span>
+  </div>
+  <div class="burn-work">
+   <div class="paper-zone"><button id="pickPaper" type="button" aria-label="點金紙堆，每次對折一張，可以連續點選"><span class="paper-stack" id="paperStack" data-symbol="刈" aria-hidden="true"></span><span class="paper-label" id="paperLabel">點金紙堆對折一張</span></button></div>
+   <div class="fold-zone" role="group" aria-label="已對折的金紙暫存區"><div class="fold-animations" id="foldAnimations" aria-hidden="true"></div><div class="fold-pile empty" id="foldPile" aria-hidden="true"><span id="foldSymbol">刈</span></div><span class="fold-count" id="foldCount">已折 0 張</span><span class="fold-describe" id="foldDescribe">每點一次都會多一張，逐張疊放在這裡</span></div>
+   <div class="furnace-zone"><button id="throwPaper" type="button" disabled aria-label="點爐子，將所有已折好的金紙一起燒掉"><span class="furnace" id="furnace"><span class="cap"></span><span class="body"></span><span class="mouth"><span class="flames"></span></span></span><span class="paper-label" id="furnaceLabel">點爐子燒掉整批金紙</span></button></div>
+   <div class="burn-batch" id="burnBatch" hidden aria-hidden="true">刈</div>
+  </div>
+  <div class="mini-count"><span id="selectedPaperType">刈金</span>本疊剩餘 <span id="remaining">12</span> 張｜已折 <span id="pending">0</span> 張｜累計已燒 <span id="burned">0</span> 張</div>
+  <div id="burnStatus" class="status" role="status" aria-live="polite">點左邊金紙堆，連續對折多張後，再點爐子一次燒掉。</div>
+  <div class="actionrow"><button type="button" class="secondary" id="newStack">換一疊（12 張）</button><button type="button" class="secondary" data-tab="done">祭拜完成</button></div>
+ </section>
+ <section id="done" class="panel" aria-label="完成祭拜" hidden>
+  <div class="art-frame" style="min-height:130px"><span style="font-size:55px;color:#ffdd96" aria-hidden="true">敬　禮</span></div>
+  <p style="text-align:center;color:#ffdfa0;font-size:23px;font-weight:800">心意已獻上，願家人平安。</p>
+  <p class="explain" style="text-align:center">本次已燒 <span id="doneBurn">0</span> 張虛擬金紙（<span id="donePaperDetail">尚未燒金紙</span>），擲筊 <span id="doneCast">0</span> 次。</p>
+  <div class="actionrow" style="justify-content:center"><button type="button" class="primary" id="worshipAgain">重新祭拜</button><button type="button" class="secondary" id="finishClose">返回客廳</button></div>
+ </section>
+</dialog>
+<script>
+(()=>{'use strict';
+const $=id=>document.getElementById(id);
+const dialog=$('worshipDialog');
+let mode='ancestor', panel='incense', castCount=0, finishTimer=0, burning=false;
+const incense={step:0,bows:0,count:3};
+const modeLabels={ancestor:'珍山陳歷代祖先',deity:'神明'};
+const legalTypes={ancestor:['刈金'],deity:['刈金','壽金','福金']};
+const glyph={'刈金':'刈','壽金':'壽','福金':'福'};
+const initialPapers=()=>({ancestor:{selected:'刈金',remaining:{'刈金':12},folded:{'刈金':0},burned:{'刈金':0}},deity:{selected:'刈金',remaining:{'刈金':12,'壽金':12,'福金':12},folded:{'刈金':0,'壽金':0,'福金':0},burned:{'刈金':0,'壽金':0,'福金':0}}});
+let papers=initialPapers();
+const total=object=>Object.values(object).reduce((a,b)=>a+b,0);
+const totalBurned=()=>Object.values(papers).reduce((n,record)=>n+total(record.burned),0);
+function resetIncense(){incense.step=0;incense.bows=0;incense.count=Number(document.querySelector('input[name="incenseCount"]:checked').value);$('incenseAction').textContent='點香';$('incenseStatus').textContent='請選擇香的數量，按「點香」。';document.querySelectorAll('.incense-stick-visual').forEach(s=>s.classList.remove('on'));$('incenseBundle').classList.remove('lit','inserted');}
+function updatePaperOptions(){const record=papers[mode],sel=$('paperType');sel.replaceChildren(...legalTypes[mode].map(type=>{const item=document.createElement('option');item.value=type;item.textContent=type;return item}));sel.value=record.selected;$('paperRule').textContent=mode==='ancestor'?'敬拜祖先：只使用刈金':'祈福神明：可用刈金、壽金或福金';updateBurn();}
+function switchMode(m){if(!legalTypes[m]||burning)return;mode=m;$('modeDisplay').textContent='目前祭拜：'+(m==='ancestor'?'祖先':'神明');$('chooseAncestor').classList.toggle('selected',m==='ancestor');$('chooseDeity').classList.toggle('selected',m==='deity');$('who').textContent=modeLabels[mode];$('cupsWho').textContent=modeLabels[mode];$('urnLabel').textContent=m==='ancestor'?'祖先爐':'神明爐';resetIncense();updatePaperOptions();}
+function showPanel(p){if(!['incense','cups','burn','done'].includes(p))return;panel=p;['incense','cups','burn','done'].forEach(name=>$(name).hidden=name!==p);document.querySelectorAll('[data-tab]').forEach(b=>b.classList.toggle('active',b.dataset.tab===p));$('dialogTitle').textContent={incense:'點香祈福',cups:'擲筊請示',burn:'燒金紙',done:'完成祭拜'}[p];if(p==='done'){$('doneBurn').textContent=totalBurned();$('doneCast').textContent=castCount;const detail=Object.values(papers).flatMap(v=>Object.entries(v.burned)).filter(([k,v])=>v>0).map(([k,v])=>k+' '+v+' 張');$('donePaperDetail').textContent=detail.length?detail.join('、'):'尚未燒金紙';}if(!dialog.open)dialog.showModal();dialog.scrollTop=0;}
+document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',()=>{if(b.dataset.mode)switchMode(b.dataset.mode);showPanel(b.dataset.go)}));
+document.querySelectorAll('[data-tab]').forEach(b=>b.addEventListener('click',()=>showPanel(b.dataset.tab)));
+$('closeDialog').addEventListener('click',()=>dialog.close());$('finishClose').addEventListener('click',()=>dialog.close());dialog.addEventListener('click',e=>{if(e.target===dialog)dialog.close();});
+document.querySelectorAll('input[name="incenseCount"]').forEach(r=>r.addEventListener('change',()=>{if(incense.step===0)incense.count=Number(r.value)}));$('incenseReset').addEventListener('click',resetIncense);
+$('incenseAction').addEventListener('click',()=>{
+ if(incense.step===0){incense.count=Number(document.querySelector('input[name="incenseCount"]:checked').value);for(let i=0;i<3;i++)$('stick'+(i+1)).classList.toggle('on',incense.count===3||i===1);$('incenseBundle').classList.add('lit');incense.step=1;$('incenseStatus').textContent='已點'+incense.count+'炷香。請依序鞠躬三次。';$('incenseAction').textContent='鞠躬第 1 次';return;}
+ if(incense.step===1){incense.bows++;if(incense.bows<3){$('incenseStatus').textContent='已鞠躬 '+incense.bows+' 次，繼續鞠躬。';$('incenseAction').textContent='鞠躬第 '+(incense.bows+1)+' 次';}else{incense.step=2;$('incenseStatus').textContent='三次鞠躬已完成。請將香插入'+(mode==='ancestor'?'祖先爐。':'神明爐。');$('incenseAction').textContent='插香完成';}return;}
+ if(incense.step===2){$('incenseBundle').classList.add('inserted');incense.step=3;$('incenseStatus').textContent='插香完成。可繼續擲筊或燒金紙。';$('incenseAction').textContent='前往擲筊';return;}if(incense.step===3)showPanel('cups');
+});
+function randomBit(){if(window.crypto&&crypto.getRandomValues){const a=new Uint32Array(1);crypto.getRandomValues(a);return Boolean(a[0]&1)}return Math.random()<0.5;}
+function cast(){const faces=[randomBit(),randomBit()];castCount++;['cupA','cupB'].forEach((id,i)=>{const el=$(id);el.classList.remove('cast');void el.offsetWidth;el.dataset.face=faces[i]?'negative':'positive';el.classList.add('cast')});let title,meaning;if(faces[0]!==faces[1]){title='聖筊';meaning='一平一凸，傳統上通常代表肯定。';}else if(faces[0]){title='笑筊';meaning='兩個平面朝上，通常表示尚未得到明確答覆。';}else{title='陰筊';meaning='兩個凸面朝上，通常表示否定。';}$('cupsResult').textContent=title;$('cupsStatus').textContent=meaning+'（累計 '+castCount+' 次）';}
+$('castCups').addEventListener('click',cast);
+$('resetCups').addEventListener('click',()=>{castCount=0;$('cupsResult').textContent='尚未擲筊';$('cupsStatus').textContent='聖筊：一平一凸；笑筊：兩平面；陰筊：兩凸面。';['cupA','cupB'].forEach(id=>{$(id).dataset.face='unset';$(id).classList.remove('cast')});});
+function updateBurn(){const record=papers[mode],type=record.selected,pending=total(record.folded),remaining=record.remaining[type],burned=totalBurned();$('remaining').textContent=remaining;$('pending').textContent=pending;$('burned').textContent=burned;$('stageBurned').textContent=burned;$('selectedPaperType').textContent=type+'：';$('paperStack').dataset.symbol=glyph[type];$('paperStack').classList.toggle('empty',remaining===0);$('foldPile').classList.toggle('empty',pending===0);$('foldSymbol').textContent=glyph[type];
+const folder=$('foldPile');folder.querySelectorAll('.folded-sheet').forEach(e=>e.remove());
+const sheets=Object.entries(record.folded).flatMap(([kind,n])=>Array.from({length:n},()=>kind));
+sheets.forEach((kind,i)=>{const img=document.createElement('img');img.className='folded-sheet';img.src='./assets/paper-folded.webp';img.alt='';img.dataset.paperKind=kind;img.style.zIndex=String(i+1);img.style.setProperty('--offset-x',((i%4-1.5)*2)+'px');img.style.setProperty('--offset-y',(-Math.min(i,8)*6.3)+'px');img.style.setProperty('--tilt',((i%5)-2)*.7+'deg');folder.appendChild(img);});$('foldCount').textContent='已折 '+pending+' 張';$('foldDescribe').textContent=pending?Object.entries(record.folded).filter(([k,v])=>v>0).map(([k,v])=>k+' '+v+' 張').join('、'):'每點一次對折一張，折好的紙會疊在這裡';$('pickPaper').disabled=remaining===0||burning;$('throwPaper').disabled=pending===0||burning;$('paperType').disabled=burning;$('newStack').disabled=burning;$('paperLabel').textContent=remaining===0?type+'已取完，可換一疊':'點一下對折一張'+type;$('furnaceLabel').textContent=burning?'正在焚化……':pending?'點爐子，一次燒掉 '+pending+' 張':'先折金紙，再點爐子燒';}
+function animateFold(symbol){const node=document.createElement('div');node.className='fold-anim';node.setAttribute('aria-hidden','true');node.innerHTML='<span class="half left"></span><span class="half right"></span>';node.querySelector('.left').textContent=symbol;$('foldAnimations').append(node);setTimeout(()=>node.remove(),820);}
+function pick(){const record=papers[mode],type=record.selected;if(burning||record.remaining[type]===0)return;record.remaining[type]--;record.folded[type]++;animateFold(glyph[type]);const pending=total(record.folded);$('burnStatus').textContent='已對折 '+pending+' 張金紙。可繼續點左邊金紙堆；折好後點右邊爐子，整批一起燒。';updateBurn();}
+function throwPaper(){const record=papers[mode],count=total(record.folded);if(burning||!count)return;burning=true;const batch={...record.folded};$('burnBatch').hidden=false;$('burnBatch').textContent=glyph[record.selected];$('burnBatch').style.animation='none';void $('burnBatch').offsetWidth;$('burnBatch').style.animation='';$('furnace').classList.add('burning');$('burnStatus').textContent='將已對折的 '+count+' 張金紙投入爐中，正在焚化……';updateBurn();clearTimeout(finishTimer);finishTimer=setTimeout(()=>{Object.entries(batch).forEach(([type,n])=>{record.burned[type]+=n;record.folded[type]-=n;});burning=false;$('burnBatch').hidden=true;$('furnace').classList.remove('burning');$('burnStatus').textContent='已燒完這批 '+count+' 張金紙。可繼續折紙、改選其他允許的金紙，或完成祭拜。';updateBurn();},900);}
+$('paperType').addEventListener('change',()=>{const type=$('paperType').value;if(!legalTypes[mode].includes(type)||burning)return;papers[mode].selected=type;$('burnStatus').textContent='已選擇 '+type+'。點左邊金紙堆，一次對折一張，可連續折多張。';updateBurn();});
+$('pickPaper').addEventListener('click',pick);$('throwPaper').addEventListener('click',throwPaper);
+$('newStack').addEventListener('click',()=>{if(burning)return;const record=papers[mode];record.remaining[record.selected]=12;$('burnStatus').textContent='已補一疊 '+record.selected+'（12 張）。先前折好的 '+total(record.folded)+' 張仍保留。';updateBurn();});
+$('worshipAgain').addEventListener('click',()=>{clearTimeout(finishTimer);burning=false;papers=initialPapers();$('burnBatch').hidden=true;$('furnace').classList.remove('burning');$('foldAnimations').replaceChildren();resetIncense();castCount=0;['cupA','cupB'].forEach(id=>{$(id).dataset.face='unset';$(id).classList.remove('cast')});$('cupsResult').textContent='尚未擲筊';$('cupsStatus').textContent='聖筊：一平一凸；笑筊：兩平面；陰筊：兩凸面。';$('burnStatus').textContent='先點左邊金紙堆，可連續折多張。';$('wish').value='';switchMode('ancestor');showPanel('incense');});
+window.addEventListener('pagehide',()=>clearTimeout(finishTimer));switchMode('ancestor');
+})();
+</script>
+</body>
+</html>
