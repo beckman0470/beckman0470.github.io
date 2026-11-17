@@ -186,10 +186,47 @@ button:disabled{cursor:not-allowed;opacity:.52}
  .bow-hint{max-width:120px;text-align:left}
 }
 @media(prefers-reduced-motion:reduce){.bow-person.bowing{animation:none}}
+
+/* v6: photoreal joss-paper furnace; visual dynamics are contained in the OPEN FIREBOX.
+   Unlike the old CSS gradient, the furnace shell is a fixed detailed illustration. */
+.furnace {width:min(100%,208px);height:244px;position:relative;display:block;overflow:visible;isolation:isolate;filter:drop-shadow(3px 10px 8px #120903b5)}
+.furnace .furnace-idle,.furnace .furnace-fire {position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block;pointer-events:none}
+.furnace .furnace-idle{z-index:1}
+.furnace .furnace-fire{z-index:2;opacity:0;transform-origin:50% 62%;transition:opacity 1.1s ease-out;will-change:opacity,filter}
+.furnace .furnace-light{position:absolute;z-index:3;left:30%;top:45%;width:40%;height:27%;border-radius:40%;background:radial-gradient(ellipse,#ffe5a169 0,#ff8b2251 34%,#f45b1000 74%);filter:blur(10px);opacity:0;pointer-events:none}
+.furnace .furnace-smoke{position:absolute;z-index:4;left:45%;top:29%;width:18%;height:26%;border-radius:50%;pointer-events:none;background:radial-gradient(ellipse at bottom,#ddd0b33a 0,#a7aaa526 30%,transparent 66%);filter:blur(8px);opacity:0}
+.furnace .smoke-b{left:53%;top:25%;height:29%;animation-delay:-1.25s}
+.furnace .furnace-embers{position:absolute;z-index:4;left:30%;top:38%;width:40%;height:36%;opacity:0;overflow:visible;pointer-events:none}
+.furnace-embers i {position:absolute;bottom:0;left:50%;width:2px;height:3px;border-radius:50%;background:#ffe6a4;box-shadow:0 0 4px 2px #f98e36,0 0 9px 2px #cf431c;opacity:0;animation:ember-drift 1.6s ease-out infinite;}
+.furnace-embers i:nth-child(1){left:16%;animation-delay:-.6s;--dx:-12px;--dy:-85px;animation-duration:1.5s}
+.furnace-embers i:nth-child(2){left:52%;animation-delay:-1.3s;--dx:20px;--dy:-96px;animation-duration:1.7s}
+.furnace-embers i:nth-child(3){left:78%;animation-delay:-.2s;--dx:9px;--dy:-75px;animation-duration:1.2s}
+.furnace-embers i:nth-child(4){left:33%;animation-delay:-.9s;--dx:-10px;--dy:-65px;animation-duration:1.4s}
+.furnace-embers i:nth-child(5){left:67%;animation-delay:-.8s;--dx:7px;--dy:-100px;animation-duration:1.8s}
+.furnace-embers i:nth-child(6){left:22%;animation-delay:-1.5s;--dx:12px;--dy:-89px;animation-duration:2s}
+.furnace-embers i:nth-child(7){left:80%;animation-delay:-1.7s;--dx:-5px;--dy:-90px;animation-duration:1.9s}
+.furnace-embers i:nth-child(8){left:44%;animation-delay:-.1s;--dx:15px;--dy:-78px;animation-duration:1.35s}
+.furnace.burning .furnace-fire{opacity:1;animation:fire-breathe .36s ease-in-out infinite alternate;}
+.furnace.burning .furnace-light{opacity:.88;animation:fire-glow .52s ease-in-out infinite alternate}
+.furnace.burning .furnace-smoke{animation:smoke-rise 2.9s ease-out infinite;opacity:.55}
+.furnace.burning .furnace-embers{opacity:1}
+.furnace.finishing .furnace-fire{opacity:.2;animation:fire-finish 1.5s ease-out forwards}
+.furnace.finishing .furnace-light{animation:fire-finish 1.5s ease-out forwards}
+.furnace.finishing .furnace-embers{opacity:0;transition:opacity 1.2s}
+.furnace.finishing .furnace-smoke{opacity:.15;transition:opacity 1.5s}
+@keyframes fire-breathe{0%{filter:brightness(.87) saturate(.94)}50%{filter:brightness(1.06) saturate(1.2)}100%{filter:brightness(1.3) saturate(1.28)}}
+@keyframes fire-glow{0%{opacity:.38;transform:scale(.97)}100%{opacity:.96;transform:scale(1.06)}}
+@keyframes smoke-rise{0%{opacity:0;transform:translate(0,9px) scale(.75)}38%{opacity:.40}100%{opacity:0;transform:translate(18px,-46px) scale(1.45)}}
+@keyframes ember-drift{0%{opacity:0;transform:translate(0,0) scale(.4)}12%{opacity:.95}65%{opacity:.55}100%{opacity:0;transform:translate(var(--dx),var(--dy)) scale(.2)}}
+@keyframes fire-finish{from{opacity:.9;filter:brightness(1.1)}to{opacity:0;filter:brightness(.3)}}
+.done-heading{font-size:clamp(33px,6vw,57px);font-weight:900;color:#ffdd96;letter-spacing:.14em}
+@media(max-width:740px){.furnace{height:183px;width:min(100%,158px)}.furnace-zone button{padding:2px;gap:5px}.burn-work{padding:6px}}
+@media(prefers-reduced-motion:reduce){.furnace.burning .furnace-fire{animation:none;opacity:1}.furnace.burning .furnace-embers,.furnace.burning .furnace-smoke{opacity:0}.furnace.burning .furnace-light{animation:none;opacity:.65}}
+
 </style>
 </head>
 <body>
-<header><h1>雞爸爸生活研究室・線上祭拜</h1><p>v5｜祈福文字移至香爐下方・鞠躬有動作・寫實金紙與擲筊</p></header>
+<header><h1>雞爸爸生活研究室・線上祭拜</h1><p>v6｜寫實金爐、動態爐火、焚化完成提示與祭拜圓滿</p></header>
 <main>
  <nav class="return-living" aria-label="返回客廳" style="text-align:right;margin-top:7px"><a href="/videos.html" style="color:#f5d18c;text-decoration:underline;text-underline-offset:4px">返回雞爸爸客廳</a></nav>
  <div class="scene" aria-label="以雞爸爸指定圖片為固定背景的線上祭拜操作畫面">
@@ -374,7 +411,13 @@ button:disabled{cursor:not-allowed;opacity:.52}
   <div class="burn-work">
    <div class="paper-zone"><button id="pickPaper" type="button" aria-label="點金紙堆，每次對折一張，可以連續點選"><span class="paper-stack" id="paperStack" data-symbol="刈" aria-hidden="true"></span><span class="paper-label" id="paperLabel">點金紙堆對折一張</span></button></div>
    <div class="fold-zone" role="group" aria-label="已對折的金紙暫存區"><div class="fold-animations" id="foldAnimations" aria-hidden="true"></div><div class="fold-pile empty" id="foldPile" aria-hidden="true"><span id="foldSymbol">刈</span></div><span class="fold-count" id="foldCount">已折 0 張</span><span class="fold-describe" id="foldDescribe">每點一次都會多一張，逐張疊放在這裡</span></div>
-   <div class="furnace-zone"><button id="throwPaper" type="button" disabled aria-label="點爐子，將所有已折好的金紙一起燒掉"><span class="furnace" id="furnace"><span class="cap"></span><span class="body"></span><span class="mouth"><span class="flames"></span></span></span><span class="paper-label" id="furnaceLabel">點爐子燒掉整批金紙</span></button></div>
+   <div class="furnace-zone"><button id="throwPaper" type="button" disabled aria-label="點爐子，將所有已折好的金紙一起燒掉"><span class="furnace" id="furnace" role="img" aria-label="金屬質感金爐；投入金紙後可見爐內火光及煙霧">
+  <img class="furnace-idle" src="./assets/furnace-idle.webp" alt="" draggable="false">
+  <img class="furnace-fire" src="./assets/furnace-fire.webp" alt="" draggable="false">
+  <span class="furnace-light" aria-hidden="true"></span>
+  <span class="furnace-smoke smoke-a" aria-hidden="true"></span><span class="furnace-smoke smoke-b" aria-hidden="true"></span>
+  <span class="furnace-embers" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+ </span><span class="paper-label" id="furnaceLabel">點爐子燒掉整批金紙</span></button></div>
    <div class="burn-batch" id="burnBatch" hidden aria-hidden="true">刈</div>
   </div>
   <div class="mini-count"><span id="selectedPaperType">刈金</span>本疊剩餘 <span id="remaining">12</span> 張｜已折 <span id="pending">0</span> 張｜累計已燒 <span id="burned">0</span> 張</div>
@@ -382,8 +425,8 @@ button:disabled{cursor:not-allowed;opacity:.52}
   <div class="actionrow"><button type="button" class="secondary" id="newStack">換一疊（12 張）</button><button type="button" class="secondary" data-tab="done">祭拜完成</button></div>
  </section>
  <section id="done" class="panel" aria-label="完成祭拜" hidden>
-  <div class="art-frame" style="min-height:130px"><span style="font-size:55px;color:#ffdd96" aria-hidden="true">敬　禮</span></div>
-  <p style="text-align:center;color:#ffdfa0;font-size:23px;font-weight:800">心意已獻上，願家人平安。</p>
+  <div class="art-frame" style="min-height:130px"><span id="doneHeading" class="done-heading" aria-live="polite">祭拜圓滿</span></div>
+  <p id="doneMessage" style="text-align:center;color:#ffdfa0;font-size:23px;font-weight:800">心意已獻上，願家人平安。</p>
   <p class="explain" style="text-align:center">本次已燒 <span id="doneBurn">0</span> 張虛擬金紙（<span id="donePaperDetail">尚未燒金紙</span>），擲筊 <span id="doneCast">0</span> 次。</p>
   <div class="actionrow" style="justify-content:center"><button type="button" class="primary" id="worshipAgain">重新祭拜</button><button type="button" class="secondary" id="finishClose">返回客廳</button></div>
  </section>
@@ -392,7 +435,7 @@ button:disabled{cursor:not-allowed;opacity:.52}
 (()=>{'use strict';
 const $=id=>document.getElementById(id);
 const dialog=$('worshipDialog');
-let mode='ancestor', panel='incense', castCount=0, finishTimer=0, burning=false;
+let mode='ancestor', panel='incense', castCount=0, finishTimer=0, phaseTimer=0, burning=false, incenseCompletedCount=0;
 const incense={step:0,bows:0,count:3,bowing:false};
 let bowTimer=0;
 const modeLabels={ancestor:'珍山陳歷代祖先',deity:'神明'};
@@ -405,7 +448,7 @@ const totalBurned=()=>Object.values(papers).reduce((n,record)=>n+total(record.bu
 function resetIncense(){clearTimeout(bowTimer);incense.step=0;incense.bows=0;incense.bowing=false;incense.count=Number(document.querySelector('input[name="incenseCount"]:checked').value);$('incenseAction').textContent='點香';$('incenseAction').disabled=false;$('bowPerson').classList.remove('bowing');$('bowCount').textContent='鞠躬 0 / 3';$('incenseStatus').textContent='請選擇香的數量，按「點香」。';document.querySelectorAll('.incense-stick-visual').forEach(s=>s.classList.remove('on'));$('incenseBundle').classList.remove('lit','inserted');}
 function updatePaperOptions(){const record=papers[mode],sel=$('paperType');sel.replaceChildren(...legalTypes[mode].map(type=>{const item=document.createElement('option');item.value=type;item.textContent=type;return item}));sel.value=record.selected;$('paperRule').textContent=mode==='ancestor'?'敬拜祖先：只使用刈金':'祈福神明：可用刈金、壽金或福金';updateBurn();}
 function switchMode(m){if(!legalTypes[m]||burning)return;mode=m;$('modeDisplay').textContent='目前祭拜：'+(m==='ancestor'?'祖先':'神明');$('chooseAncestor').classList.toggle('selected',m==='ancestor');$('chooseDeity').classList.toggle('selected',m==='deity');$('who').textContent=modeLabels[mode];$('cupsWho').textContent=modeLabels[mode];$('urnLabel').textContent=m==='ancestor'?'祖先爐':'神明爐';resetIncense();updatePaperOptions();}
-function showPanel(p){if(!['incense','cups','burn','done'].includes(p))return;panel=p;['incense','cups','burn','done'].forEach(name=>$(name).hidden=name!==p);document.querySelectorAll('[data-tab]').forEach(b=>b.classList.toggle('active',b.dataset.tab===p));$('dialogTitle').textContent={incense:'點香祈福',cups:'擲筊請示',burn:'燒金紙',done:'完成祭拜'}[p];if(p==='done'){$('doneBurn').textContent=totalBurned();$('doneCast').textContent=castCount;const detail=Object.values(papers).flatMap(v=>Object.entries(v.burned)).filter(([k,v])=>v>0).map(([k,v])=>k+' '+v+' 張');$('donePaperDetail').textContent=detail.length?detail.join('、'):'尚未燒金紙';}if(!dialog.open)dialog.showModal();dialog.scrollTop=0;}
+function showPanel(p){if(!['incense','cups','burn','done'].includes(p))return;panel=p;['incense','cups','burn','done'].forEach(name=>$(name).hidden=name!==p);document.querySelectorAll('[data-tab]').forEach(b=>b.classList.toggle('active',b.dataset.tab===p));$('dialogTitle').textContent={incense:'點香祈福',cups:'擲筊請示',burn:'燒金紙',done:'完成祭拜'}[p];if(p==='done'){const finished=!burning&&(totalBurned()>0||incenseCompletedCount>0);$('doneHeading').textContent=finished?'祭拜圓滿':'尚未完成祭拜';$('doneMessage').textContent=finished?'心意已獻上，願家人平安。':'請先完成持香三拜、插香或焚化金紙。';$('doneBurn').textContent=totalBurned();$('doneCast').textContent=castCount;const detail=Object.values(papers).flatMap(v=>Object.entries(v.burned)).filter(([k,v])=>v>0).map(([k,v])=>k+' '+v+' 張');$('donePaperDetail').textContent=detail.length?detail.join('、'):'尚未燒金紙';}if(!dialog.open)dialog.showModal();dialog.scrollTop=0;}
 document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',()=>{if(b.dataset.mode)switchMode(b.dataset.mode);showPanel(b.dataset.go)}));
 document.querySelectorAll('[data-tab]').forEach(b=>b.addEventListener('click',()=>showPanel(b.dataset.tab)));
 $('closeDialog').addEventListener('click',()=>dialog.close());$('finishClose').addEventListener('click',()=>dialog.close());dialog.addEventListener('click',e=>{if(e.target===dialog)dialog.close();});
@@ -429,7 +472,7 @@ $('incenseAction').addEventListener('click',()=>{
   },window.matchMedia('(prefers-reduced-motion: reduce)').matches?100:1450);
   return;
  }
- if(incense.step===2){$('incenseBundle').classList.add('inserted');incense.step=3;$('incenseStatus').textContent='插香完成。可繼續擲筊或燒金紙。';$('incenseAction').textContent='前往擲筊';return;}if(incense.step===3)showPanel('cups');
+ if(incense.step===2){$('incenseBundle').classList.add('inserted');incense.step=3;incenseCompletedCount++;$('incenseStatus').textContent='插香完成。可繼續擲筊或燒金紙。';$('incenseAction').textContent='前往擲筊';return;}if(incense.step===3)showPanel('cups');
 });
 function randomBit(){if(window.crypto&&crypto.getRandomValues){const a=new Uint32Array(1);crypto.getRandomValues(a);return Boolean(a[0]&1)}return Math.random()<0.5;}
 function cast(){const faces=[randomBit(),randomBit()];castCount++;['cupA','cupB'].forEach((id,i)=>{const el=$(id);el.classList.remove('cast');void el.offsetWidth;el.dataset.face=faces[i]?'negative':'positive';el.classList.add('cast')});let title,meaning;if(faces[0]!==faces[1]){title='聖筊';meaning='一平一凸，傳統上通常代表肯定。';}else if(faces[0]){title='笑筊';meaning='兩個平面朝上，通常表示尚未得到明確答覆。';}else{title='陰筊';meaning='兩個凸面朝上，通常表示否定。';}$('cupsResult').textContent=title;$('cupsStatus').textContent=meaning+'（累計 '+castCount+' 次）';}
@@ -441,12 +484,35 @@ const sheets=Object.entries(record.folded).flatMap(([kind,n])=>Array.from({lengt
 sheets.forEach((kind,i)=>{const img=document.createElement('img');img.className='folded-sheet';img.src='./assets/paper-folded.webp';img.alt='';img.dataset.paperKind=kind;img.style.zIndex=String(i+1);img.style.setProperty('--offset-x',((i%4-1.5)*2)+'px');img.style.setProperty('--offset-y',(-Math.min(i,8)*6.3)+'px');img.style.setProperty('--tilt',((i%5)-2)*.7+'deg');folder.appendChild(img);});$('foldCount').textContent='已折 '+pending+' 張';$('foldDescribe').textContent=pending?Object.entries(record.folded).filter(([k,v])=>v>0).map(([k,v])=>k+' '+v+' 張').join('、'):'每點一次對折一張，折好的紙會疊在這裡';$('pickPaper').disabled=remaining===0||burning;$('throwPaper').disabled=pending===0||burning;$('paperType').disabled=burning;$('newStack').disabled=burning;$('paperLabel').textContent=remaining===0?type+'已取完，可換一疊':'點一下對折一張'+type;$('furnaceLabel').textContent=burning?'正在焚化……':pending?'點爐子，一次燒掉 '+pending+' 張':'先折金紙，再點爐子燒';}
 function animateFold(symbol){const node=document.createElement('div');node.className='fold-anim';node.setAttribute('aria-hidden','true');node.innerHTML='<span class="half left"></span><span class="half right"></span>';node.querySelector('.left').textContent=symbol;$('foldAnimations').append(node);setTimeout(()=>node.remove(),820);}
 function pick(){const record=papers[mode],type=record.selected;if(burning||record.remaining[type]===0)return;record.remaining[type]--;record.folded[type]++;animateFold(glyph[type]);const pending=total(record.folded);$('burnStatus').textContent='已對折 '+pending+' 張金紙。可繼續點左邊金紙堆；折好後點右邊爐子，整批一起燒。';updateBurn();}
-function throwPaper(){const record=papers[mode],count=total(record.folded);if(burning||!count)return;burning=true;const batch={...record.folded};$('burnBatch').hidden=false;$('burnBatch').textContent=glyph[record.selected];$('burnBatch').style.animation='none';void $('burnBatch').offsetWidth;$('burnBatch').style.animation='';$('furnace').classList.add('burning');$('burnStatus').textContent='將已對折的 '+count+' 張金紙投入爐中，正在焚化……';updateBurn();clearTimeout(finishTimer);finishTimer=setTimeout(()=>{Object.entries(batch).forEach(([type,n])=>{record.burned[type]+=n;record.folded[type]-=n;});burning=false;$('burnBatch').hidden=true;$('furnace').classList.remove('burning');$('burnStatus').textContent='已燒完這批 '+count+' 張金紙。可繼續折紙、改選其他允許的金紙，或完成祭拜。';updateBurn();},900);}
+function throwPaper(){
+ const record=papers[mode],count=total(record.folded);
+ if(burning||!count)return;
+ burning=true;
+ const batch={...record.folded};
+ const furnace=$('furnace');
+ furnace.classList.remove('finishing');
+ $('burnBatch').hidden=false;$('burnBatch').textContent=glyph[record.selected];
+ $('burnBatch').style.animation='none';void $('burnBatch').offsetWidth;$('burnBatch').style.animation='';
+ furnace.classList.add('burning');
+ $('burnStatus').textContent='將已折好的 '+count+' 張金紙投入金爐；爐內火勢漸旺，正在焚化……';
+ updateBurn();clearTimeout(finishTimer);clearTimeout(phaseTimer);
+ phaseTimer=setTimeout(()=>{
+   $('burnStatus').textContent='金紙在爐內燃燒，火光與餘燼漸漸變弱……';
+   furnace.classList.remove('burning');furnace.classList.add('finishing');
+ },2900);
+ finishTimer=setTimeout(()=>{
+   Object.entries(batch).forEach(([type,n])=>{record.burned[type]+=n;record.folded[type]-=n;});
+   burning=false;$('burnBatch').hidden=true;
+   furnace.classList.remove('burning','finishing');
+   $('burnStatus').textContent='本批 '+count+' 張金紙已焚化完成。可繼續折紙，或選擇「祭拜完成」。';
+   updateBurn();
+ },4500);
+}
 $('paperType').addEventListener('change',()=>{const type=$('paperType').value;if(!legalTypes[mode].includes(type)||burning)return;papers[mode].selected=type;$('burnStatus').textContent='已選擇 '+type+'。點左邊金紙堆，一次對折一張，可連續折多張。';updateBurn();});
 $('pickPaper').addEventListener('click',pick);$('throwPaper').addEventListener('click',throwPaper);
 $('newStack').addEventListener('click',()=>{if(burning)return;const record=papers[mode];record.remaining[record.selected]=12;$('burnStatus').textContent='已補一疊 '+record.selected+'（12 張）。先前折好的 '+total(record.folded)+' 張仍保留。';updateBurn();});
-$('worshipAgain').addEventListener('click',()=>{clearTimeout(finishTimer);burning=false;papers=initialPapers();$('burnBatch').hidden=true;$('furnace').classList.remove('burning');$('foldAnimations').replaceChildren();resetIncense();castCount=0;['cupA','cupB'].forEach(id=>{$(id).dataset.face='unset';$(id).classList.remove('cast')});$('cupsResult').textContent='尚未擲筊';$('cupsStatus').textContent='聖筊：一平一凸；笑筊：兩平面；陰筊：兩凸面。';$('burnStatus').textContent='先點左邊金紙堆，可連續折多張。';$('wish').value='';switchMode('ancestor');showPanel('incense');});
-window.addEventListener('pagehide',()=>{clearTimeout(finishTimer);clearTimeout(bowTimer)});switchMode('ancestor');
+$('worshipAgain').addEventListener('click',()=>{clearTimeout(finishTimer);clearTimeout(phaseTimer);burning=false;incenseCompletedCount=0;papers=initialPapers();$('burnBatch').hidden=true;$('furnace').classList.remove('burning','finishing');$('foldAnimations').replaceChildren();resetIncense();castCount=0;['cupA','cupB'].forEach(id=>{$(id).dataset.face='unset';$(id).classList.remove('cast')});$('cupsResult').textContent='尚未擲筊';$('cupsStatus').textContent='聖筊：一平一凸；笑筊：兩平面；陰筊：兩凸面。';$('burnStatus').textContent='先點左邊金紙堆，可連續折多張。';$('wish').value='';switchMode('ancestor');showPanel('incense');});
+window.addEventListener('pagehide',()=>{clearTimeout(finishTimer);clearTimeout(phaseTimer);clearTimeout(bowTimer)});switchMode('ancestor');
 })();
 </script>
 </body>
