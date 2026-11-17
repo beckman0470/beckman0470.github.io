@@ -26,7 +26,7 @@ if(room==='living'){
  game('神明拼圖','/ama-games.html?game=puzzle');game('掃貓毛','/play/?area=dragon&game=sweep');
  section('game','阿嬤養蘭花','#orchid-care',{tab:'orchid-tab'});section('game','姊姊腳踏車','#bicycle-race',{tab:'bike-tab'});
 }else if(room==='dining'){
- game('雅虎喝水','/play/?area=dragon&game=chores');game('右右吃飯','/play/?area=dragon&game=feed');game('今天吃什麼水果','/dining-fruit.html');game('弟弟找零食','/dining-stairs.html');
+ game('小森速食店','/play/fast-food/');game('雅虎喝水','/play/?area=dragon&game=chores');game('右右吃飯','/play/?area=dragon&game=feed');game('今天吃什麼水果','/dining-fruit.html');game('弟弟找零食','/dining-stairs.html');
  section('game','餐桌禮儀','#room-activity-dining');section('other','雞爸爸一家的菜單','#dining-mom-menu');
 }else if(room==='mom'){
  section('article','一家故事','/articles.html?room=family#cards-grid');
