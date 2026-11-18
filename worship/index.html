@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#4c2418">
-<title>雞爸爸生活研究室｜線上祭拜</title>
+<title>雞爸爸生活研究室｜線上祭拜（v9 試玩）</title>
 <style>
 :root{color-scheme:dark;--ink:#fff2d1;--gold:#f3c36c;--red:#852b1d;--wood:#572c1e;--line:#b78345}
 *{box-sizing:border-box}
@@ -257,6 +257,49 @@ button:disabled{cursor:not-allowed;opacity:.52}
 @media(max-width:620px){.cup-boxes{min-height:190px}.cup{min-height:172px}.cup .cup-visual{height:110px}.cup-hands{width:min(67%,170px)}}
 @media(prefers-reduced-motion:reduce){.bow-character .bow-pose{transition:none}.cup-hands{transition:none}}
 
+/* v9: real product images, and independent SINGLE-fold sheets in the right-hand area. */
+.gold-types{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px;margin:0 0 14px}
+.gold-type{min-width:0;color:#ffe9bf;background:#3e241c;border:1px solid #98704a;border-radius:12px;padding:7px;display:flex;align-items:center;gap:10px;text-align:left;font-weight:700;box-shadow:inset 0 1px #ffffff12}
+.gold-type img{width:85px;height:82px;object-fit:contain;border-radius:6px;background:#90807911;flex-shrink:0}
+.gold-type span{font-size:15px}
+.gold-type.active{outline:2px solid #ffcc59;outline-offset:-3px;background:#713923;box-shadow:0 0 9px #f4b14e66}
+.paper-choice select{min-width:155px}
+.paper-stack{height:165px!important;width:min(95%,195px)!important;background-position:center!important;background-size:contain!important;background-repeat:no-repeat!important;background-color:transparent!important;filter:drop-shadow(2px 7px 4px #1a0908b5)}
+.fold-zone{justify-content:end!important;position:relative}
+.fold-zone:before{content:'右手累積';position:absolute;top:7px;left:50%;transform:translateX(-50%);font-size:12px;color:#e1c89d;white-space:nowrap}
+.fold-pile{width:min(100%,190px)!important;max-width:none!important;height:168px!important;overflow:visible!important}
+.fold-pile.empty{opacity:.45}
+.folded-sheet-v9{position:absolute;left:50%;top:49%;width:min(96%,170px);height:84px;border-radius:2px 3px 5px 2px;background:linear-gradient(#f7d54d,#f1bf24);border:1px solid #e1a620;box-shadow:0 1px 0 #fff4a555,1px 2px 4px #1306047c;transform:translate(calc(-50% + var(--stack-x,0px)),calc(-50% + var(--stack-y,0px))) rotate(var(--tilt,0deg));pointer-events:none}
+.folded-sheet-v9:before{content:'';position:absolute;inset:9% 25% 15%;background:url('./assets/foil-reference.webp') center / cover no-repeat;border:2px solid #bf5030;box-shadow:0 0 1px #ffe89e}
+.folded-sheet-v9:after{content:'';position:absolute;left:0;top:0;bottom:0;width:5px;border-radius:7px 0 0 7px;background:linear-gradient(90deg,#c18a1e,#f8d752 60%,transparent)}
+.folded-sheet-v9 i{position:absolute;inset:0;display:block;border-top:1px solid #fff8bb70}
+.folded-sheet-v9[data-kind="壽金"]:before,.folded-sheet-v9[data-kind="大百壽金"]:before{background:linear-gradient(35deg,#f3c129,#e87e1e);border:4px double #a73522}
+.folded-sheet-v9[data-kind="福金"]:before{background:#e5bd29;border:3px solid #c47a29}
+.folded-sheet-v9:last-child{box-shadow:0 4px 8px #190806aa}
+.fold-animations{z-index:3}
+.fold-motion-v9{width:154px;height:154px;left:calc(50% - 77px);top:-14px;position:absolute;perspective:500px;pointer-events:none;animation:fold-move-v9 .72s ease-out both}
+.fold-upper,.fold-lower{position:absolute;left:0;width:154px;height:77px;background:#ffd039;border:1px solid #ce9a22}
+.fold-upper{top:0;box-shadow:inset 16px 8px 25px #f8da6b}
+.fold-upper:after{content:'';position:absolute;inset:8px 28px 6px;background:url('./assets/foil-reference.webp') center/cover no-repeat;border:1px solid #a93b25}
+.fold-lower{top:77px;transform-origin:top center;animation:close-one-fold-v9 .49s ease-in-out both}
+.fold-lower:after{content:'';position:absolute;inset:7px 28px;background:url('./assets/foil-reference.webp') center/cover no-repeat;border:1px solid #a93b25}
+@keyframes close-one-fold-v9{0%{transform:rotateX(0deg)}92%,100%{transform:rotateX(180deg)}}
+@keyframes fold-move-v9{0%{opacity:.9;transform:translate(-45px,3px) scale(.87)}50%{opacity:1;transform:translate(0,0) scale(.95)}100%{opacity:0;transform:translate(0,22px) scale(.7)}}
+.burn-work.is-burning #foldPile{visibility:hidden}
+.burn-batch{left:45%;top:47%;width:145px;height:74px;background:linear-gradient(#efc634,#e6b025)!important;border:1px solid #bd7126!important;border-radius:3px!important;box-shadow:0 4px 9px #1408067d!important;animation:batchflight-v9 .9s ease-in forwards!important}
+.burn-batch:before{content:'';position:absolute;inset:12px 33px;background:url('./assets/foil-reference.webp') center/cover no-repeat;border:1px solid #a94322}
+@keyframes batchflight-v9{0%{opacity:1;transform:translate(0,0) rotate(-5deg) scale(1)}85%{opacity:1;transform:translate(230px,14px) rotate(2deg) scale(.6)}100%{opacity:0;transform:translate(250px,36px) scale(.45)}}
+.furnace-paper-ghost{position:absolute;z-index:3;top:52%;left:32%;width:38%;height:20%;border-radius:3px;opacity:0;pointer-events:none;transform:rotate(9deg);background:repeating-linear-gradient(to bottom,#f4cd42 0 5px,#ad6631 5px 6px,#ffc82b 6px 10px);box-shadow:2px 2px 3px #1b0b0855;filter:brightness(.83)}
+.furnace-paper-ghost:before{content:'';position:absolute;inset:12% 23%;border:1px solid #bd4529;background:linear-gradient(35deg,#e8bd4a,#d59329)}
+.furnace.has-paper .furnace-paper-ghost{opacity:.85;animation:paper-consume-v9 4.5s linear both}
+@keyframes paper-consume-v9{0%{opacity:0;transform:rotate(9deg) translateY(-5px) scale(1)}17%{opacity:.92}48%{opacity:.75;transform:rotate(13deg) translateY(9px) scale(.77)}74%{opacity:.45;transform:rotate(16deg) translateY(15px) scale(.45)}100%{opacity:0;transform:rotate(15deg) translateY(21px) scale(.09)}}
+@media(max-width:690px){.gold-types{grid-template-columns:repeat(2,minmax(0,1fr))}.gold-type{flex-direction:column;gap:3px}.gold-type img{height:74px;width:85px}.gold-type span{font-size:13px}.burn-work{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:4px}.paper-zone,.fold-zone{min-height:205px!important}.paper-zone button{min-height:195px}.paper-stack{width:min(95%,155px)!important;height:127px!important}.fold-pile{height:135px!important}.folded-sheet-v9{width:min(95%,145px);height:72px}.fold-motion-v9{left:calc(50% - 65px);width:130px;height:130px}.fold-upper,.fold-lower{width:130px;height:65px}.fold-lower{top:65px}.furnace-zone{grid-column:1/-1;min-height:205px}.furnace-zone button{min-height:205px}.furnace{width:172px;height:195px}.burn-batch{top:62%;left:42%;width:125px;height:63px}@keyframes batchflight-v9{0%{opacity:1;transform:translate(0,0) rotate(-5deg) scale(1)}85%{opacity:1;transform:translate(54px,50px) rotate(1deg) scale(.65)}100%{opacity:0;transform:translate(58px,52px) scale(.5)}}}
+@media(prefers-reduced-motion:reduce){.fold-motion-v9{animation:none;display:none}.furnace.has-paper .furnace-paper-ghost{animation:none;opacity:.65}}
+
+
+/* Bundles are tied first; the initial tap removes the tie before individual folds begin. */
+.paper-stack{transition:background-image .15s ease,transform .2s ease}
+.paper-zone button:focus-visible{outline:2px solid #f9d077;outline-offset:2px}
 </style>
 </head>
 <body>
@@ -365,26 +408,28 @@ button:disabled{cursor:not-allowed;opacity:.52}
   <p class="die-caption">這是機率模擬，不是真實宗教指示，也不會自動替您決定事情。</p>
  </section>
  <section id="burn" class="panel" aria-label="燒金紙" hidden>
-  <p class="explain">依家裡的習慣：<strong>拜祖先只用刈金；拜神明可用刈金、壽金或福金。</strong> 點左邊金紙堆，每次真的對折一張並疊在中間；可連續折很多張，再點右邊的爐子，把已折好的紙一次燒掉。</p>
+  <p class="explain"><strong>依家裡的習慣：</strong>祭祖使用刈金；祭拜神明可選四色金：大百壽金、壽金、福金、刈金。每按一次折好一張，折好的紙留在手中；點金爐才將整把投入燒化。</p>
   <div class="paper-choice">
     <label for="paperType">選擇金紙：</label><select id="paperType" aria-label="依祭拜對象選擇金紙種類"></select>
     <span class="paper-rule" id="paperRule">敬拜祖先：只使用刈金</span>
   </div>
-  <div class="burn-work">
+  <div class="gold-types" id="goldTypes" role="group" aria-label="選擇實物金紙種類"></div>
+  <div class="burn-work" id="burnWork">
    <div class="paper-zone"><button id="pickPaper" type="button" aria-label="點金紙堆，每次對折一張，可以連續點選"><span class="paper-stack" id="paperStack" data-symbol="刈" aria-hidden="true"></span><span class="paper-label" id="paperLabel">點金紙堆對折一張</span></button></div>
-   <div class="fold-zone" role="group" aria-label="已對折的金紙暫存區"><div class="fold-animations" id="foldAnimations" aria-hidden="true"></div><div class="fold-pile empty" id="foldPile" aria-hidden="true"><span id="foldSymbol">刈</span></div><span class="fold-count" id="foldCount">已折 0 張</span><span class="fold-describe" id="foldDescribe">每點一次都會多一張，逐張疊放在這裡</span></div>
+   <div class="fold-zone" role="group" aria-label="右手拿著已對折的金紙"><div class="fold-animations" id="foldAnimations" aria-hidden="true"></div><div class="fold-pile empty" id="foldPile" aria-hidden="true"><span id="foldSymbol">刈</span></div><span class="fold-count" id="foldCount">已折 0 張</span><span class="fold-describe" id="foldDescribe">每張只沿中線對折一次，折好的紙留在手上</span></div>
    <div class="furnace-zone"><button id="throwPaper" type="button" disabled aria-label="點爐子，將所有已折好的金紙一起燒掉"><span class="furnace" id="furnace" role="img" aria-label="金屬質感金爐；投入金紙後可見爐內火光及煙霧">
   <img class="furnace-idle" src="./assets/furnace-idle.webp" alt="" draggable="false">
   <img class="furnace-fire" src="./assets/furnace-fire.webp" alt="" draggable="false">
+  <span class="furnace-paper-ghost" id="furnacePaperGhost" aria-hidden="true"></span>
   <span class="furnace-light" aria-hidden="true"></span>
   <span class="furnace-smoke smoke-a" aria-hidden="true"></span><span class="furnace-smoke smoke-b" aria-hidden="true"></span>
   <span class="furnace-embers" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
  </span><span class="paper-label" id="furnaceLabel">點爐子燒掉整批金紙</span></button></div>
    <div class="burn-batch" id="burnBatch" hidden aria-hidden="true">刈</div>
   </div>
-  <div class="mini-count"><span id="selectedPaperType">刈金</span>本疊剩餘 <span id="remaining">12</span> 張｜已折 <span id="pending">0</span> 張｜累計已燒 <span id="burned">0</span> 張</div>
+  <div class="mini-count"><span id="selectedPaperType">刈金</span>本支剩餘 <span id="remaining">100</span> 張｜已折 <span id="pending">0</span> 張｜累計已燒 <span id="burned">0</span> 張</div>
   <div id="burnStatus" class="status" role="status" aria-live="polite">點左邊金紙堆，連續對折多張後，再點爐子一次燒掉。</div>
-  <div class="actionrow"><button type="button" class="secondary" id="newStack">換一疊（12 張）</button><button type="button" class="secondary" data-tab="done">祭拜完成</button></div>
+  <div class="actionrow"><button type="button" class="secondary" id="newStack">換一支（100 張）</button><button type="button" class="secondary" data-tab="done">祭拜完成</button></div>
  </section>
  <section id="done" class="panel" aria-label="完成祭拜" hidden>
   <div class="art-frame" style="min-height:130px"><span id="doneHeading" class="done-heading" aria-live="polite">祭拜圓滿</span></div>
@@ -401,14 +446,27 @@ let mode='ancestor', panel='incense', castCount=0, finishTimer=0, phaseTimer=0, 
 const incense={step:0,bows:0,count:3,bowing:false};
 let bowTimer=0;
 const modeLabels={ancestor:'珍山陳歷代祖先',deity:'神明'};
-const legalTypes={ancestor:['刈金'],deity:['刈金','壽金','福金']};
-const glyph={'刈金':'刈','壽金':'壽','福金':'福'};
-const initialPapers=()=>({ancestor:{selected:'刈金',remaining:{'刈金':12},folded:{'刈金':0},burned:{'刈金':0}},deity:{selected:'刈金',remaining:{'刈金':12,'壽金':12,'福金':12},folded:{'刈金':0,'壽金':0,'福金':0},burned:{'刈金':0,'壽金':0,'福金':0}}});
+const legalTypes={ancestor:['刈金'],deity:['大百壽金','壽金','福金','刈金']};
+const glyph={'刈金':'刈','壽金':'壽','福金':'福','大百壽金':'壽'};
+const initialPapers=()=>({ancestor:{selected:'刈金',remaining:{'刈金':100},folded:{'刈金':0},burned:{'刈金':0}},deity:{selected:'刈金',remaining:{'刈金':100,'壽金':100,'福金':100,'大百壽金':100},folded:{'刈金':0,'壽金':0,'福金':0,'大百壽金':0},burned:{'刈金':0,'壽金':0,'福金':0,'大百壽金':0}}});
 let papers=initialPapers();
+let unpacked={ancestor:{'刈金':false},deity:{'刈金':false,'壽金':false,'福金':false,'大百壽金':false}};
 const total=object=>Object.values(object).reduce((a,b)=>a+b,0);
 const totalBurned=()=>Object.values(papers).reduce((n,record)=>n+total(record.burned),0);
 function resetIncense(){clearTimeout(bowTimer);incense.step=0;incense.bows=0;incense.bowing=false;incense.count=Number(document.querySelector('input[name="incenseCount"]:checked').value);$('incenseAction').textContent='點香';$('incenseAction').disabled=false;$('bowPerson').classList.remove('bowing');$('bowPerson').dataset.pose='0';$('bowCount').textContent='鞠躬 0 / 3';$('incenseStatus').textContent='請選擇香的數量，按「點香」。';document.querySelectorAll('.incense-stick-visual').forEach(s=>s.classList.remove('on'));$('incenseBundle').classList.remove('lit','inserted');}
-function updatePaperOptions(){const record=papers[mode],sel=$('paperType');sel.replaceChildren(...legalTypes[mode].map(type=>{const item=document.createElement('option');item.value=type;item.textContent=type;return item}));sel.value=record.selected;$('paperRule').textContent=mode==='ancestor'?'敬拜祖先：只使用刈金':'祈福神明：可用刈金、壽金或福金';updateBurn();}
+function renderGoldTypes(){
+ const container=$('goldTypes');container.replaceChildren();
+ legalTypes[mode].forEach(type=>{
+  const btn=document.createElement('button');btn.type='button';btn.className='gold-type';btn.dataset.type=type;
+  btn.setAttribute('aria-pressed',String(papers[mode].selected===type));
+  const img=document.createElement('img');img.src=(window.__paperTypes?.[type]||'./assets/paper-type-'+type+'.webp');img.alt='';img.loading='lazy';
+  const title=document.createElement('span');title.textContent=type;
+  btn.append(img,title);btn.classList.toggle('active',papers[mode].selected===type);
+  btn.addEventListener('click',()=>{if(burning)return;papers[mode].selected=type;$('paperType').value=type;updateBurn();});
+  container.append(btn);
+ });
+}
+function updatePaperOptions(){const record=papers[mode],sel=$('paperType');sel.replaceChildren(...legalTypes[mode].map(type=>{const item=document.createElement('option');item.value=type;item.textContent=type;return item}));sel.value=record.selected;$('paperRule').textContent=mode==='ancestor'?'敬拜祖先：依家裡習慣只使用刈金':'祈福神明：可選四色金（大百壽金、壽金、福金、刈金）';renderGoldTypes();updateBurn();}
 function switchMode(m){if(!legalTypes[m]||burning)return;mode=m;$('modeDisplay').textContent='目前祭拜：'+(m==='ancestor'?'祖先':'神明');$('chooseAncestor').classList.toggle('selected',m==='ancestor');$('chooseDeity').classList.toggle('selected',m==='deity');$('who').textContent=modeLabels[mode];$('cupsWho').textContent=modeLabels[mode];$('urnLabel').textContent=m==='ancestor'?'祖先爐':'神明爐';resetIncense();updatePaperOptions();}
 function showPanel(p){if(!['incense','cups','burn','done'].includes(p))return;panel=p;['incense','cups','burn','done'].forEach(name=>$(name).hidden=name!==p);document.querySelectorAll('[data-tab]').forEach(b=>b.classList.toggle('active',b.dataset.tab===p));$('dialogTitle').textContent={incense:'點香祈福',cups:'擲筊請示',burn:'燒金紙',done:'完成祭拜'}[p];if(p==='done'){const finished=!burning&&(totalBurned()>0||incenseCompletedCount>0);$('doneHeading').textContent=finished?'祭拜圓滿':'尚未完成祭拜';$('doneMessage').textContent=finished?'心意已獻上，願家人平安。':'請先完成持香三拜、插香或焚化金紙。';$('doneBurn').textContent=totalBurned();$('doneCast').textContent=castCount;const detail=Object.values(papers).flatMap(v=>Object.entries(v.burned)).filter(([k,v])=>v>0).map(([k,v])=>k+' '+v+' 張');$('donePaperDetail').textContent=detail.length?detail.join('、'):'尚未燒金紙';}if(!dialog.open)dialog.showModal();dialog.scrollTop=0;}
 document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',()=>{if(b.dataset.mode)switchMode(b.dataset.mode);showPanel(b.dataset.go)}));
@@ -480,40 +538,64 @@ function cast(){
 }
 $('castCups').addEventListener('click',cast);
 $('resetCups').addEventListener('click',()=>{cancelCastMotion();castCount=0;$('cupsResult').textContent='尚未擲筊';$('cupsStatus').textContent='聖筊：一平一凸；笑筊：兩平面；陰筊：兩凸面。';['cupA','cupB'].forEach(id=>{$(id).dataset.face='unset';$(id).classList.remove('cast')});});
-function updateBurn(){const record=papers[mode],type=record.selected,pending=total(record.folded),remaining=record.remaining[type],burned=totalBurned();$('remaining').textContent=remaining;$('pending').textContent=pending;$('burned').textContent=burned;$('stageBurned').textContent=burned;$('selectedPaperType').textContent=type+'：';$('paperStack').dataset.symbol=glyph[type];$('paperStack').classList.toggle('empty',remaining===0);$('foldPile').classList.toggle('empty',pending===0);$('foldSymbol').textContent=glyph[type];
-const folder=$('foldPile');folder.querySelectorAll('.folded-sheet').forEach(e=>e.remove());
-const sheets=Object.entries(record.folded).flatMap(([kind,n])=>Array.from({length:n},()=>kind));
-sheets.forEach((kind,i)=>{const img=document.createElement('img');img.className='folded-sheet';img.src='./assets/paper-folded.webp';img.alt='';img.dataset.paperKind=kind;img.style.zIndex=String(i+1);img.style.setProperty('--offset-x',((i%4-1.5)*2)+'px');img.style.setProperty('--offset-y',(-Math.min(i,8)*6.3)+'px');img.style.setProperty('--tilt',((i%5)-2)*.7+'deg');folder.appendChild(img);});$('foldCount').textContent='已折 '+pending+' 張';$('foldDescribe').textContent=pending?Object.entries(record.folded).filter(([k,v])=>v>0).map(([k,v])=>k+' '+v+' 張').join('、'):'每點一次對折一張，折好的紙會疊在這裡';$('pickPaper').disabled=remaining===0||burning;$('throwPaper').disabled=pending===0||burning;$('paperType').disabled=burning;$('newStack').disabled=burning;$('paperLabel').textContent=remaining===0?type+'已取完，可換一疊':'點一下對折一張'+type;$('furnaceLabel').textContent=burning?'正在焚化……':pending?'點爐子，一次燒掉 '+pending+' 張':'先折金紙，再點爐子燒';}
-function animateFold(symbol){const node=document.createElement('div');node.className='fold-anim';node.setAttribute('aria-hidden','true');node.innerHTML='<span class="half left"></span><span class="half right"></span>';node.querySelector('.left').textContent=symbol;$('foldAnimations').append(node);setTimeout(()=>node.remove(),820);}
-function pick(){const record=papers[mode],type=record.selected;if(burning||record.remaining[type]===0)return;record.remaining[type]--;record.folded[type]++;animateFold(glyph[type]);const pending=total(record.folded);$('burnStatus').textContent='已對折 '+pending+' 張金紙。可繼續點左邊金紙堆；折好後點右邊爐子，整批一起燒。';updateBurn();}
+function updateBurn(){
+ const record=papers[mode],type=record.selected,pending=total(record.folded),remaining=record.remaining[type],burned=totalBurned();
+ $('remaining').textContent=remaining;$('pending').textContent=pending;$('burned').textContent=burned;$('stageBurned').textContent=burned;
+ $('selectedPaperType').textContent=type+'：';$('paperStack').dataset.symbol=glyph[type];
+ $('paperStack').style.backgroundImage='url("'+(unpacked[mode][type]&&type==='刈金'?'./assets/paper-unwrapped-reference.webp':(window.__paperTypes?.[type]||'./assets/paper-type-'+type+'.webp'))+'")';
+ $('paperStack').classList.toggle('empty',remaining===0);$('foldPile').classList.toggle('empty',pending===0);$('foldSymbol').textContent=glyph[type];
+ const folder=$('foldPile');folder.querySelectorAll('.folded-sheet,.folded-sheet-v9').forEach(e=>e.remove());
+ // Each piece is a separate thin rectangle: the original square was folded exactly once. Never bind edges together.
+ const sheets=Object.entries(record.folded).flatMap(([kind,n])=>Array.from({length:n},()=>kind));
+ const visible=sheets.slice(-18);
+ visible.forEach((kind,i)=>{const piece=document.createElement('div');piece.className='folded-sheet-v9';piece.dataset.kind=kind;piece.style.zIndex=String(i+1);
+  piece.style.setProperty('--stack-x',(((i*5)%9)-4)+'px');piece.style.setProperty('--stack-y',(-i*3.2)+'px');piece.style.setProperty('--tilt',((i%7)-3)*.7+'deg');
+  piece.appendChild(document.createElement('i'));folder.append(piece);});
+ $('foldCount').textContent='已折 '+pending+' 張';
+ $('foldDescribe').textContent=pending?'右手已夾住 '+pending+' 張；每張都是單獨對折的長方形':'每按一次，右手就多一張對折的金紙';
+ $('pickPaper').disabled=remaining===0||burning;$('throwPaper').disabled=pending===0||burning;
+ $('paperType').disabled=burning;$('newStack').disabled=burning;
+ $('goldTypes').querySelectorAll('button').forEach(b=>{b.disabled=burning;b.classList.toggle('active',b.dataset.type===type);b.setAttribute('aria-pressed',String(b.dataset.type===type))});
+ $('paperLabel').textContent=remaining===0?type+'已取完，可換一支':(!unpacked[mode][type]?'點一下拆開紅色綁帶':'左手拿紙：再點一次對折一張'+type);
+ $('furnaceLabel').textContent=burning?'金紙焚化中……':pending?'把右手 '+pending+' 張折好的金紙投入金爐':'折好金紙，再點金爐';
+}
+function animateFold(){
+ // One single midline fold: 2:1 final rectangle, no tri-fold, rolls, or connected sheets.
+ const node=document.createElement('div');node.className='fold-motion-v9';node.setAttribute('aria-hidden','true');
+ node.innerHTML='<span class="fold-upper"></span><span class="fold-lower"></span>';
+ $('foldAnimations').append(node);setTimeout(()=>node.remove(),720);
+}
+function pick(){
+ const record=papers[mode],type=record.selected;if(burning||record.remaining[type]===0)return;
+ if(!unpacked[mode][type]){unpacked[mode][type]=true;$('burnStatus').textContent='紅色束帶已拆開。左手拿一支薄金紙，現在每點一次就從最上面對折一張。';updateBurn();return;}
+ record.remaining[type]--;record.folded[type]++;animateFold();const pending=total(record.folded);
+ $('burnStatus').textContent='右手已拿 '+pending+' 張獨立對折的金紙。可再折，或點右邊金爐整批投入。';updateBurn();
+}
 function throwPaper(){
- const record=papers[mode],count=total(record.folded);
- if(burning||!count)return;
- burning=true;
- const batch={...record.folded};
- const furnace=$('furnace');
- furnace.classList.remove('finishing');
- $('burnBatch').hidden=false;$('burnBatch').textContent=glyph[record.selected];
+ const record=papers[mode],count=total(record.folded);if(burning||!count)return;
+ burning=true;const batch={...record.folded};const furnace=$('furnace');
+ furnace.classList.remove('finishing');$('burnWork').classList.add('is-burning');
+ $('burnBatch').hidden=false;$('burnBatch').textContent='';
  $('burnBatch').style.animation='none';void $('burnBatch').offsetWidth;$('burnBatch').style.animation='';
- furnace.classList.add('burning');
- $('burnStatus').textContent='將已折好的 '+count+' 張金紙投入金爐；爐內火勢漸旺，正在焚化……';
+ furnace.classList.add('burning','has-paper');
+ $('burnStatus').textContent='已將右手 '+count+' 張金紙一次投入金爐；紙張留在爐內燃燒。';
  updateBurn();clearTimeout(finishTimer);clearTimeout(phaseTimer);
  phaseTimer=setTimeout(()=>{
-   $('burnStatus').textContent='金紙在爐內燃燒，火光與餘燼漸漸變弱……';
-   furnace.classList.remove('burning');furnace.classList.add('finishing');
+  $('burnStatus').textContent='爐內紙張逐漸燒小、火光漸弱……';
+  furnace.classList.remove('burning');furnace.classList.add('finishing');
  },2900);
  finishTimer=setTimeout(()=>{
-   Object.entries(batch).forEach(([type,n])=>{record.burned[type]+=n;record.folded[type]-=n;});
-   burning=false;$('burnBatch').hidden=true;
-   furnace.classList.remove('burning','finishing');
-   $('burnStatus').textContent='本批 '+count+' 張金紙已焚化完成。可繼續折紙，或選擇「祭拜完成」。';
-   updateBurn();
+  Object.entries(batch).forEach(([type,n])=>{record.burned[type]+=n;record.folded[type]-=n;});
+  burning=false;$('burnBatch').hidden=true;$('burnWork').classList.remove('is-burning');
+  furnace.classList.remove('burning','finishing','has-paper');
+  $('burnStatus').textContent='本批 '+count+' 張金紙已焚化完成。可繼續折紙，或選擇「祭拜完成」。';
+  updateBurn();
  },4500);
 }
-$('paperType').addEventListener('change',()=>{const type=$('paperType').value;if(!legalTypes[mode].includes(type)||burning)return;papers[mode].selected=type;$('burnStatus').textContent='已選擇 '+type+'。點左邊金紙堆，一次對折一張，可連續折多張。';updateBurn();});
+$('paperType').addEventListener('change',()=>{const type=$('paperType').value;if(!legalTypes[mode].includes(type)||burning)return;papers[mode].selected=type;$('burnStatus').textContent='已選擇 '+type+'。每按一次，對折一張。';updateBurn();});
 $('pickPaper').addEventListener('click',pick);$('throwPaper').addEventListener('click',throwPaper);
-$('newStack').addEventListener('click',()=>{if(burning)return;const record=papers[mode];record.remaining[record.selected]=12;$('burnStatus').textContent='已補一疊 '+record.selected+'（12 張）。先前折好的 '+total(record.folded)+' 張仍保留。';updateBurn();});
-$('worshipAgain').addEventListener('click',()=>{clearTimeout(finishTimer);clearTimeout(phaseTimer);burning=false;incenseCompletedCount=0;papers=initialPapers();$('burnBatch').hidden=true;$('furnace').classList.remove('burning','finishing');$('foldAnimations').replaceChildren();resetIncense();castCount=0;['cupA','cupB'].forEach(id=>{$(id).dataset.face='unset';$(id).classList.remove('cast')});$('cupsResult').textContent='尚未擲筊';$('cupsStatus').textContent='聖筊：一平一凸；笑筊：兩平面；陰筊：兩凸面。';$('burnStatus').textContent='先點左邊金紙堆，可連續折多張。';$('wish').value='';switchMode('ancestor');showPanel('incense');});
+$('newStack').addEventListener('click',()=>{if(burning)return;const record=papers[mode];record.remaining[record.selected]=100;unpacked[mode][record.selected]=false;$('burnStatus').textContent='已補一支 '+record.selected+'（100 張）。右手先前折好的 '+total(record.folded)+' 張仍保留。';updateBurn();});
+$('worshipAgain').addEventListener('click',()=>{clearTimeout(finishTimer);clearTimeout(phaseTimer);burning=false;incenseCompletedCount=0;papers=initialPapers();unpacked={ancestor:{'刈金':false},deity:{'刈金':false,'壽金':false,'福金':false,'大百壽金':false}};$('burnBatch').hidden=true;$('furnace').classList.remove('burning','finishing','has-paper');$('burnWork').classList.remove('is-burning');$('foldAnimations').replaceChildren();resetIncense();castCount=0;['cupA','cupB'].forEach(id=>{$(id).dataset.face='unset';$(id).classList.remove('cast')});$('cupsResult').textContent='尚未擲筊';$('cupsStatus').textContent='聖筊：一平一凸；笑筊：兩平面；陰筊：兩凸面。';$('burnStatus').textContent='先點左邊金紙堆，可連續折多張。';$('wish').value='';switchMode('ancestor');showPanel('incense');});
 window.addEventListener('pagehide',()=>{clearTimeout(finishTimer);clearTimeout(phaseTimer);clearTimeout(bowTimer);cancelCastMotion()});switchMode('ancestor');
 })();
 </script>
