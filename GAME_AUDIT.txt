@@ -1,0 +1,18 @@
+全站遊戲統一：實際接入的 24 個 HTML
+----------------------------------
+房間遊戲容器：rooms.html
+親子樂園入口：play/index.html、play/play/index.html
+浴室標準：play/bath-family/index.html、rooms.html 中的浴室安全小學堂
+餐廳：play/yahoo-water/index.html、dining-fruit.html、dining-stairs.html
+廚房／料理：play/dish-family/index.html、play/fast-food/index.html、play/yakiniku/index.html
+遊戲間：play/salon/index.html、dad-arcade.html、seven-kingdoms.html
+兔窩：ama-games.html、ama-solitaire.html、ama-sudoku.html、ama-exercise.html
+鼠窩：mom-breakout.html、mom-words.html
+休閒／主題：relax.html、relax-family.html、relax-classics.html
+互動小教室：babymonster-classroom.html、babymonster-ep01.html
+
+已統一：CSS 色彩、圓角、外框、焦點提示、遊戲入口辨識、獨立頁返回房間連結、房間內嵌遊戲標題與操作列。
+
+保留差異：各遊戲內容區布局、圖片比例、畫布尺寸、進度計分規則、操作手勢、獨特遊戲 UI。
+
+尚待人工測試：每款遊戲的開始、暫停、重新開始、計分、音效、手機橫直向、iframe 高度和觸控操作。

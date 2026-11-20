@@ -1,0 +1,32 @@
+/* CDJ unified game system, v1 — scoped: no changes to room backgrounds or gameplay geometry. */
+:root{--cdjg-ink:#23555c;--cdjg-teal:#258e95;--cdjg-pink:#e85c9a;--cdjg-mint:#b5e9da;--cdjg-gold:#f9bd57;--cdjg-border:#d5ebeb;--cdjg-paper:#fffefb}
+body.cdjg-enabled{--cdjg-round:25px}
+/* The shared masthead identifies games without modifying their native DOM or event handlers. */
+.cdjg-masthead{box-sizing:border-box;max-width:1120px;margin:12px auto 14px;padding:0 16px;color:var(--cdjg-ink);font-family:system-ui,'Microsoft JhengHei','PingFang TC',sans-serif}
+.cdjg-masthead-inner{display:flex;gap:12px;align-items:center;justify-content:space-between;padding:14px 20px;background:linear-gradient(112deg,#65c9cf,#b5e9da 55%,#f3bdd8);border:3px solid #e4ffff;border-radius:22px;box-shadow:0 9px 24px #368b8e20}
+.cdjg-masthead-text{min-width:0}.cdjg-eyebrow{margin:0 0 3px;font-size:12px;font-weight:850;letter-spacing:.13em;color:#245e65}.cdjg-masthead h2{margin:0;font-size:clamp(19px,2.6vw,27px);line-height:1.3;font-weight:850;color:#fff;text-shadow:0 2px 3px #37899985}.cdjg-tip{font-size:12px;font-weight:700;color:#265c63;margin:5px 0 0}.cdjg-return{border:1px solid #f7e4c0;border-radius:999px;padding:9px 12px;background:#fffaf1;color:#855d25;text-decoration:none;white-space:nowrap;font-size:13px;font-weight:800;min-height:42px;display:inline-flex;align-items:center;box-sizing:border-box}
+.cdjg-return:hover,.cdjg-return:focus-visible{background:#fff0d6;outline:2px solid #d99143;outline-offset:2px}
+/* Keep game canvas, SVG surfaces, maps and internal assets native-sized. Only unify surrounding UI. */
+body.cdjg-enabled :is(main, [role=main]){scroll-margin-top:16px}
+body.cdjg-enabled :is(main button:not(.tap-surface):not(.scene):not(.cdjg-native),main select,main input[type=submit],main input[type=button]){font-family:system-ui,'Microsoft JhengHei','PingFang TC',sans-serif;touch-action:manipulation}
+body.cdjg-enabled main button:not(.tap-surface):not(.scene):not([class*=tile]):not([class*=cell]):not([class*=card]):not([class*=pick]):not([class*=grid]):not([class*=pad]):not([class*=key]):not([class*=lane]):not([class*=joystick]):not([class*=piece]){min-height:40px}
+body.cdjg-enabled :is(main button,main a,main input,main select,main [tabindex]):focus-visible{outline:3px solid #f8bf4c;outline-offset:3px}
+/* Shared visual shell, for existing wrappers only. Do not change native game dimensions or positioning. */
+body.cdjg-enabled :is(.game, .game-shell, .game-container, .game-wrap, .quiz-shell, .app-shell):not(.cdjg-skip-shell){border-radius:var(--cdjg-round);border-color:var(--cdjg-border);box-shadow:0 14px 44px #388f9120}
+body.cdjg-enabled :is(.result,.feedback,[role=status]){overflow-wrap:anywhere}
+/* The platform's game frame uses the same bathroom-inspired mint-and-pink styling. */
+body[data-welcome-page=house] .room-inline-stage.cdj-unified-game,
+body[data-welcome-page=house] .room-inline-stage{border:4px solid #e4ffff!important;border-radius:28px!important;background:#fffefc!important;box-shadow:0 16px 48px #4c969d1e!important;padding:0!important;overflow:hidden}
+body[data-welcome-page=house] .room-inline-stage>h2{background:linear-gradient(110deg,#65c9cf,#b5e9da 54%,#f3bdd8);color:#fff!important;text-shadow:0 2px 3px #287f9980;padding:19px 23px!important;margin:0!important;font-size:clamp(21px,3vw,32px)!important}
+body[data-welcome-page=house] .room-inline-stage>.room-inline-controls{padding:12px 16px!important;top:0!important;margin:0!important;background:#f6fffd!important;border-bottom:1px solid #cce9e4!important}
+body[data-welcome-page=house] .room-inline-stage>.room-inline-status{margin:0;padding:8px 16px;background:#fffaf1;color:#926328}
+body[data-welcome-page=house] .room-inline-stage>.room-game-surface{padding:10px 12px 16px!important;background:#fff!important}
+body[data-welcome-page=house] .room-inline-stage .room-game-frame{border-radius:16px;max-width:100%}
+body[data-welcome-page=house] .room-inline-controls button{border-radius:999px!important;background:#2b9ca1!important;color:#fff!important;border:1px solid #227f85!important;font-weight:750;min-height:44px}
+body[data-welcome-page=house] .room-inline-controls button:disabled{opacity:.5}
+body[data-welcome-page=house] .room-inline-controls select{background:#fff!important;color:#23555c!important;min-height:44px}
+/* Consistent tile/color identity in game portal, without distorting its games. */
+body.cdjg-portal :is(.game-card,.play-card,.topic-card,.portal-card,.house-card){border-radius:20px;transition:box-shadow .18s ease,transform .18s ease}
+body.cdjg-portal :is(.game-card,.play-card,.topic-card,.portal-card,.house-card):hover{box-shadow:0 12px 24px #33878a24;transform:translateY(-2px)}
+@media(max-width:640px){.cdjg-masthead{margin:8px auto 10px;padding:0 9px}.cdjg-masthead-inner{padding:12px;gap:8px;border-radius:18px}.cdjg-masthead h2{font-size:19px}.cdjg-return{font-size:12px;padding:8px 10px}.cdjg-tip{font-size:11px}body[data-welcome-page=house] .room-inline-stage>h2{padding:14px!important}body[data-welcome-page=house] .room-inline-stage>.room-game-surface{padding:6px!important}}
+@media(prefers-reduced-motion:reduce){body.cdjg-portal :is(.game-card,.play-card,.topic-card,.portal-card,.house-card){transition:none!important;transform:none!important}}
