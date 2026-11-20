@@ -1,0 +1,166 @@
+{
+  "大百壽金": {
+    "bundle": {
+      "path": "./assets/locked-大百壽金-bundle.png",
+      "size": [
+        131,
+        270
+      ],
+      "source_rect": [
+        355,
+        96,
+        505,
+        396
+      ]
+    },
+    "loose": {
+      "path": "./assets/locked-大百壽金-loose.png",
+      "size": [
+        416,
+        217
+      ],
+      "source_rect": [
+        227,
+        439,
+        643,
+        662
+      ]
+    },
+    "folded": {
+      "path": "./assets/locked-大百壽金-folded.png",
+      "size": [
+        407,
+        108
+      ],
+      "source_rect": [
+        231,
+        703,
+        643,
+        822
+      ]
+    }
+  },
+  "壽金": {
+    "bundle": {
+      "path": "./assets/locked-壽金-bundle.png",
+      "size": [
+        262,
+        218
+      ],
+      "source_rect": [
+        710,
+        154,
+        994,
+        382
+      ]
+    },
+    "loose": {
+      "path": "./assets/locked-壽金-loose.png",
+      "size": [
+        262,
+        180
+      ],
+      "source_rect": [
+        710,
+        460,
+        995,
+        656
+      ]
+    },
+    "folded": {
+      "path": "./assets/locked-壽金-folded.png",
+      "size": [
+        82,
+        104
+      ],
+      "source_rect": [
+        789,
+        697,
+        895,
+        817
+      ]
+    }
+  },
+  "福金": {
+    "bundle": {
+      "path": "./assets/locked-福金-bundle.png",
+      "size": [
+        164,
+        169
+      ],
+      "source_rect": [
+        1093,
+        185,
+        1289,
+        364
+      ]
+    },
+    "loose": {
+      "path": "./assets/locked-福金-loose.png",
+      "size": [
+        165,
+        136
+      ],
+      "source_rect": [
+        1092,
+        486,
+        1290,
+        639
+      ]
+    },
+    "folded": {
+      "path": "./assets/locked-福金-folded.png",
+      "size": [
+        74,
+        103
+      ],
+      "source_rect": [
+        1113,
+        693,
+        1228,
+        816
+      ]
+    }
+  },
+  "刈金": {
+    "bundle": {
+      "path": "./assets/locked-刈金-bundle.png",
+      "size": [
+        251,
+        217
+      ],
+      "source_rect": [
+        1388,
+        154,
+        1678,
+        381
+      ]
+    },
+    "loose": {
+      "path": "./assets/locked-刈金-loose.png",
+      "size": [
+        247,
+        173
+      ],
+      "source_rect": [
+        1387,
+        456,
+        1675,
+        647
+      ]
+    },
+    "folded": {
+      "path": "./assets/locked-刈金-folded.png",
+      "size": [
+        64,
+        105
+      ],
+      "source_rect": [
+        1455,
+        692,
+        1562,
+        818
+      ]
+    }
+  }
+}
