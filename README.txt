@@ -1,25 +1,20 @@
-雞爸爸生活研究室｜影片 / 文章 / 遊戲三種視覺識別（2026-11-20）
+雞爸爸生活研究室｜主導覽列十項重新排序（2026-11-20）
 
-這次改動：
-影片：藍色，▶ 播放符號，影片卡片藍色識別。
-文章：暖米色，書頁符號，文章卡片暖色識別。
-遊戲：薄荷綠＋粉色，與浴室兩款遊戲相同的圓角、漸層標題、統一操作列和遊戲容器。
+指定順序（遊戲間第 8 位）：
+1 客廳
+2 餐廳
+3 雞窩
+4 鼠窩
+5 兔窩
+6 廚房
+7 浴室
+8 遊戲間
+9 貼圖小舖
+10 認識我們
 
-安裝（GitHub）：
-1. 覆蓋 rooms.html
-2. 新增 css/content-identity.css
-3. 新增 js/content-identity.js
+更新步驟：
+1. 上傳並覆蓋 js/site-entry-nav.js。這會更新大部分內頁的共用主導覽列；其他舊功能保持不變。
+2. 首頁 index.html 的主導覽是獨立 HTML。找到從 <nav class="nav" aria-label="主要導覽"> 到 </nav> 的完整區塊，替換成 index-nav-snippet.html 的內容。
+3. 儲存 GitHub 變更並重新整理（Ctrl+Shift+R）。若共用導覽仍顯示舊版，需在頁面中更換 /js/site-entry-nav.js 的快取版號。
 
-不修改原有遊戲、影片播放程式或文章資料。
-浴室的兩款遊戲內部維持原樣，其他房間的「內嵌遊戲框」採同樣的視覺語言。
-
-如果要讓文章主頁（articles.html）和客廳影片主頁（videos.html）的卡片也套用相同識別，
-在兩個 HTML 的 </head> 前加入：
-<link rel="stylesheet" href="/css/content-identity.css?v=20261120-types1">
-在 </body> 前加入：
-<script defer src="/js/content-identity.js?v=20261120-types1"></script>
-
-這個 ZIP 的 rooms.html 以 2026-11-20 目前讀到的 GitHub 版本為基礎。
-上傳前若 rooms.html 同時有其他人更新，應先比對避免蓋掉新功能。
-
-註：本包已完成 CSS/JS/ZIP 檔案結構檢查，正式站與手機畫面仍待驗收。
+注意：遊戲間導覽網址為 /rooms.html?room=games；本次只調整頂部主選單的順序，不刪遊戲或其他內容。
