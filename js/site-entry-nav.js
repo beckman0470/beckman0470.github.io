@@ -74,26 +74,57 @@ inner.append(brand,nav);host.replaceChildren(inner);host.dataset.unifiedHeader=v
 
 
 
-/* ChickenDad consistency bootstrap: preserves the existing room/game scripts. */
+
+/* Study 16:9 width repair 20261120. Same height-fit width as shared room scenes.
+   Scoped only to the Chicken Coop; preserve people, pets and interactive hotspots. */
 (()=>{'use strict';
-  const path=location.pathname;
-  const page=(path==='/rooms.html'||path==='/articles.html'||path==='/videos.html');
-  const addStyle=(file)=>{if(document.querySelector('link[href*="'+file+'"]'))return;const x=document.createElement('link');x.rel='stylesheet';x.href=file+'?v=20261120-integrated2';document.head.append(x)};
-  const addScript=(file)=>{if(document.querySelector('script[src*="'+file+'"]'))return;const x=document.createElement('script');x.defer=true;x.src=file+'?v=20261120-integrated2';document.head.append(x)};
-  if(page){
-    // Bust stale stylesheet cache after existing coop/house fixes.
-    document.querySelectorAll('link[rel="stylesheet"][href*="/css/room-activities.css"]').forEach(link=>{
-      const url=new URL(link.href,location.href);
-      if(url.searchParams.get('v')!=='20261120-integrated2'){
-        url.searchParams.set('v','20261120-integrated2');link.href=url.href;
+  if(location.pathname!=='/articles.html')return;
+  if(document.getElementById('cdj-study-16x9-width-fix'))return;
+  const style=document.createElement('style');
+  style.id='cdj-study-16x9-width-fix';
+  style.textContent=`
+    html body[data-welcome-page="articles"] main#journal-page > section.cdj-welcome.cdj-room-entrance {
+      --study-width:min(calc(100vw - var(--cdj-scrollbar, 0px)),calc((100svh - var(--cdj-header-height, 104px) - 12px) * 16 / 9))!important;
+      box-sizing:border-box!important;
+      display:block!important;
+      width:var(--study-width)!important;
+      max-width:var(--study-width)!important;
+      min-width:0!important;
+      margin:0 auto 16px!important;
+      padding:0!important;
+      transform:none!important;
+      float:none!important;
+    }
+    html body[data-welcome-page="articles"] main#journal-page > section.cdj-welcome.cdj-room-entrance > .cdj-greeting[data-room="study"] {
+      display:block!important;
+      box-sizing:border-box!important;
+      width:100%!important;
+      max-width:100%!important;
+      min-width:0!important;
+      height:auto!important;
+      aspect-ratio:16 / 9!important;
+      margin:0!important;
+      border-radius:0!important;
+      overflow:hidden!important;
+    }
+    html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] > .greeting-scene {
+      position:absolute!important;
+      inset:0!important;
+      width:100%!important;
+      height:100%!important;
+      background-image:url('/assets/greetings/v1/room-study-16x9.webp')!important;
+      background-size:cover!important;
+      background-position:center center!important;
+      background-repeat:no-repeat!important;
+      border-radius:0!important;
+    }
+    @media(max-width:760px){
+      html body[data-welcome-page="articles"] main#journal-page > section.cdj-welcome.cdj-room-entrance {
+        --study-width:calc(100vw - 24px)!important;
+        width:var(--study-width)!important;
+        max-width:var(--study-width)!important;
       }
-    });
-    addStyle('/css/content-identity.css');addScript('/js/content-identity.js');
-    addStyle('/css/layout-slim.css');addScript('/js/layout-slim.js');
-    addStyle('/css/unified-game-ui.css');addScript('/js/unified-game-ui.js');
-  }
-  // When the shared site header is loaded on standalone games, match the game presentation too.
-  else if(path.startsWith('/play/')||/^(?:\/ama-|\/mom-|\/dad-|\/dining-|\/relax)/.test(path)){
-    addStyle('/css/unified-game-ui.css');addScript('/js/unified-game-ui.js');
-  }
+    }
+  `;
+  document.head.append(style);
 })();
