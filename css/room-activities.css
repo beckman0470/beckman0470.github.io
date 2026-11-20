@@ -367,3 +367,194 @@ html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .greeti
   html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .greeting-cat {left:32%!important;bottom:1.8%!important;scale:.66!important}
   html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .greeting-cat:last-of-type {left:68%!important;bottom:1.8%!important;scale:.66!important}
 }
+
+
+/* =============================================================
+   2026-11-20 — Study-specific living pets and reader proportions.
+   Reuse existing dining-family pet art, plus the site's own walking
+   and sleeping poses. This affects the study room ONLY.
+   ============================================================= */
+
+/* Earlier 175/210px frame and .7/.86 scale kept Dad tiny. Use
+   the actual six-frame sprite size; do not scale the whole button. */
+html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"]
+.greeting-character:not(.greeting-cat) {
+  --frame:clamp(300px,29vw,380px)!important;
+  left:49%!important;
+  bottom:2%!important;
+  scale:1!important;
+  transform:none!important;
+  z-index:9!important;
+}
+
+/* The pet buttons are independent absolute-positioned scene layers;
+   avoid inheriting the human character size and cat overlap. */
+html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"]
+.greeting-cat {
+  --frame:unset!important;
+  display:block!important;
+  position:absolute!important;
+  width:clamp(68px,8.5vw,125px)!important;
+  height:clamp(58px,7.4vw,105px)!important;
+  min-width:0!important;
+  min-height:0!important;
+  padding:0!important;
+  margin:0!important;
+  left:12%!important;
+  bottom:2%!important;
+  translate:none!important;
+  scale:1!important;
+  transform-origin:50% 100%!important;
+  border:0!important;
+  background:none!important;
+  box-shadow:none!important;
+  z-index:12!important;
+  cursor:pointer!important;
+  animation:study-yahoo-route 14s linear infinite!important;
+}
+html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"]
+.greeting-cat:nth-of-type(3) {
+  left:73%!important;
+  bottom:2%!important;
+  animation:study-youyou-route 28s ease-in-out infinite!important;
+}
+/* Each cat has dedicated walk and rest poses, independently animated. */
+html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"]
+.greeting-cat::before,
+html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"]
+.greeting-cat::after {
+  content:"";
+  display:block;
+  position:absolute;
+  inset:0;
+  width:100%;height:100%;
+  background-size:contain;
+  background-position:center bottom;
+  background-repeat:no-repeat;
+  pointer-events:none;
+}
+/* Yahoo: quick walking, then crouch at the dining water bowl. */
+html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"]
+.greeting-cat:nth-of-type(2)::before {
+  background-image:url('/cat-yahoo-walk.png');
+  animation:study-yahoo-walk-visibility 14s steps(1,end) infinite!important;
+}
+html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"]
+.greeting-cat:nth-of-type(2)::after {
+  background-image:url('/assets/greetings/v1/dining-yahoo-water.webp');
+  background-size:200% 200%;
+  background-position:0 0;
+  animation:study-yahoo-rest-visibility 14s steps(1,end) infinite!important;
+}
+/* Youyou: slow stroll to Dad's trouser leg, nuzzle, then sleep. */
+html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"]
+.greeting-cat:nth-of-type(3)::before {
+  background-image:url('/cat-youyou-walk.png');
+  animation:study-youyou-walk-visibility 28s steps(1,end) infinite!important;
+}
+html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"]
+.greeting-cat:nth-of-type(3)::after {
+  background-image:url('/assets/greetings/v1/dining-youyou-food.webp');
+  background-size:200% 200%;
+  background-position:0 0;
+  animation:study-youyou-rest-visibility 28s steps(1,end) infinite!important;
+}
+html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"]
+.greeting-cat > img {
+  display:block!important;
+  position:absolute!important;
+  inset:0!important;
+  width:100%!important;
+  height:100%!important;
+  object-fit:contain!important;
+  object-position:center bottom!important;
+  opacity:0;
+  pointer-events:none!important;
+}
+/* Existing Youyou sleep art becomes the long sleeping state. */
+html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"]
+.greeting-cat:nth-of-type(3) > img {
+  content:url('/cat-youyou-sleep.png');
+  animation:study-youyou-sleep-visibility 28s steps(1,end) infinite!important;
+}
+/* Prevent Yahoo's old peek image showing through walking poses. */
+html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"]
+.greeting-cat:nth-of-type(2) > img {opacity:0!important;animation:none!important}
+
+@keyframes study-yahoo-route {
+  0%   {transform:translateX(0) scaleX(1)}
+  16%  {transform:translateX(140%) scaleX(1)}
+  28%  {transform:translateX(260%) scaleX(1)}
+  42%  {transform:translateX(260%) scaleX(1)}
+  45%  {transform:translateX(260%) scaleX(-1)}
+  63%  {transform:translateX(115%) scaleX(-1)}
+  78%  {transform:translateX(0) scaleX(-1)}
+  90%  {transform:translateX(0) scaleX(-1)}
+  100% {transform:translateX(0) scaleX(1)}
+}
+@keyframes study-yahoo-walk-visibility {
+  0%,27%,44%,78%,89%,100% {opacity:1}
+  28%,43%,79%,88% {opacity:0}
+}
+@keyframes study-yahoo-rest-visibility {
+  0%,27%,44%,78%,89%,100% {opacity:0}
+  28%,43%,79%,88% {opacity:1}
+}
+@keyframes study-youyou-route {
+  0%,12% {transform:translateX(0) rotate(0)}
+  27% {transform:translateX(-175%) rotate(0)}
+  35% {transform:translateX(-175%) rotate(-7deg)}
+  43% {transform:translateX(-175%) rotate(5deg)}
+  50% {transform:translateX(-175%) rotate(0)}
+  55%,82% {transform:translateX(-160%) rotate(0)}
+  94%,100% {transform:translateX(0) rotate(0)}
+}
+@keyframes study-youyou-walk-visibility {
+  0%,11%,27%,49%,54%,83%,94%,100% {opacity:0}
+  12%,26%,50%,53%,84%,93% {opacity:1}
+}
+@keyframes study-youyou-rest-visibility {
+  0%,11%,27%,49%,54%,83%,94%,100% {opacity:1}
+  12%,26%,28%,48%,50%,53%,55%,82%,84%,93% {opacity:0}
+}
+@keyframes study-youyou-sleep-visibility {
+  0%,54%,83%,100% {opacity:0}
+  55%,82% {opacity:1}
+}
+/* Preserve the room's existing pause control, and accessibility. */
+html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"].is-paused .greeting-cat,
+html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"].is-paused .greeting-cat::before,
+html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"].is-paused .greeting-cat::after,
+html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"].is-paused .greeting-cat > img,
+html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"].is-offscreen .greeting-cat,
+html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"].is-offscreen .greeting-cat::before,
+html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"].is-offscreen .greeting-cat::after,
+html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"].is-offscreen .greeting-cat > img {
+  animation-play-state:paused!important;
+}
+@media(max-width:760px){
+  html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"]
+  .greeting-character:not(.greeting-cat) {
+    --frame:clamp(185px,42vw,290px)!important;
+    left:49%!important; bottom:1.5%!important;scale:1!important;
+  }
+  html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .greeting-cat {
+    width:clamp(42px,10vw,70px)!important;
+    height:clamp(37px,9vw,65px)!important;
+    left:9%!important;
+    bottom:1.5%!important;
+    scale:1!important;
+  }
+  html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .greeting-cat:nth-of-type(3) {left:82%!important}
+}
+@media(prefers-reduced-motion:reduce){
+  html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .greeting-cat,
+  html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .greeting-cat::before,
+  html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .greeting-cat::after,
+  html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .greeting-cat>img {
+    animation:none!important;
+  }
+  html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .greeting-cat::before {opacity:1!important}
+  html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .greeting-cat::after,
+  html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .greeting-cat>img {opacity:0!important}
+}
