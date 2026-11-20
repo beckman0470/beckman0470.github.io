@@ -1,23 +1,7 @@
-雞爸爸生活研究室｜客廳與雞窩文章歸位、版面精簡（2026-11-20）
+雞爸爸線上祭拜｜定案金紙素材風格版 v11
 
-這是一個「非破壞性」的小更新包，沒有覆蓋既有的網站或房間 CSS/JS，以免洗掉今天的其他修改。
-
-上傳 GitHub 新增：
-  js/layout-slim.js
-  css/layout-slim.css
-
-在 videos.html 的 </head> 前加入：
-  <link rel="stylesheet" href="/css/layout-slim.css?v=20261120-slim1">
-
-在 videos.html 的 </body> 前加入：
-  <script defer src="/js/layout-slim.js?v=20261120-slim1"></script>
-
-如需將同樣規範套用到 rooms.html，也可在 rooms.html 加入相同兩行；目前先以客廳為主，避免誤刪其他房間正在使用的遊戲入口。
-
-結果：
-- 客廳不再另外顯示「珍山陳經典語錄」五張文章卡。
-- 客廳分類列不再重複顯示這個文章入口。
-- 客廳原祖先物件的點擊可直接進入雞窩的珍山陳分類。
-- 雞窩所有文章、分類、五個物件連結都保留。
-
-檢查：打開 /videos.html，再點客廳祖先物件，應進入 /articles.html?room=zschen#cards-grid。
+1. 本包含 worship/ 頁面和 assets/ 12 張原圖精確裁切之金紙素材。
+2. 僅替換燒金紙區的素材與顯示，其他祭拜功能維持 v10。
+3. `preview.html` 可查看 12 格金紙的祭拜網站深紅金色版。
+4. 將 worship/ 整個資料夾覆蓋 GitHub Pages 倉庫 worship/ 即可更新網頁；尚未上傳正式網站。
+5. 金紙圖沒有重新畫或縮放圖案，來源為「大百壽金摺疊對照圖.png」逐格裁切，維持原先定案樣式。

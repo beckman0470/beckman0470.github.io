@@ -1,0 +1,22 @@
+{
+  "大百壽金": {
+    "bundle": "./assets/approved-大百壽金-bundle.webp",
+    "loose": "./assets/approved-大百壽金-loose.webp",
+    "folded": "./assets/approved-大百壽金-folded.webp"
+  },
+  "壽金": {
+    "bundle": "./assets/approved-壽金-bundle.webp",
+    "loose": "./assets/approved-壽金-loose.webp",
+    "folded": "./assets/approved-壽金-folded.webp"
+  },
+  "福金": {
+    "bundle": "./assets/approved-福金-bundle.webp",
+    "loose": "./assets/approved-福金-loose.webp",
+    "folded": "./assets/approved-福金-folded.webp"
+  },
+  "刈金": {
+    "bundle": "./assets/approved-刈金-bundle.webp",
+    "loose": "./assets/approved-刈金-loose.webp",
+    "folded": "./assets/approved-刈金-folded.webp"
+  }
+}
