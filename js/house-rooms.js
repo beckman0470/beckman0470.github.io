@@ -48,7 +48,7 @@ if(key==='mom'){heading('要聽故事睡覺了嗎？');const g=grid();card(g,'�
 ['雞爸爸家的滋滋燒肉','放食材、翻面、掌握兩面熟度，幫家人烤出一盤好心情。','/play/yakiniku/','/play/yakiniku/cover.svg'],
 ['鼠姊姊的魔法美髮屋','洗髮、剪染、吹整和髮飾，自由做個新造型！','/play/salon/','/play/salon/cover.svg']].forEach(x=>card(g,...x));
 }else{/* Bathroom: show only relevant bathroom games and the health article link. */
-const a=document.createElement('a');a.className='house-all';a.href='/articles.html'+(key==='bathroom'?'?room=cdhj':'?room=family');a.textContent='到雞窩挑一篇'+(key==='bathroom'?'健康文章':'生活故事')+' →';host.append(a);}
+if(key!=='bathroom'){const a=document.createElement('a');a.className='house-all';a.href='/articles.html?room=family';a.textContent='到雞窩挑一篇生活故事 →';host.append(a);}}
 }else if(path==='/'||path==='/index.html'){$('.life-hero-copy')?.insertAdjacentHTML('beforeend',stage('home',null,['mom-home'],'歡迎回家，今天過得好嗎？'));}
 else{
 const key=path==='/articles.html'?'study':path==='/videos.html'?'living':path.startsWith('/play/')?'play':path==='/relax.html'?'relax':path==='/stickers.html'?'stickers':path==='/family.html'?'family':null;
