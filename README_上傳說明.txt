@@ -1,9 +1,11 @@
-BABYMONSTER DRIP｜AHYEON 長髮修正包
+雞爸爸生活研究室｜兔阿嬤蘭花小陽台新版
 
-本包以七位定案動態舞台版本為底，只更新 AHYEON 透明人物圖與網頁中的 AHYEON 圖片版本參數；其他六位人物與 29 段教學保持一致。
+將壓縮包以下檔案按相同目錄結構上傳 GitHub 儲存庫根目錄：
+• videos.html（更新遊戲程式快取版本）
+• js/living-family.js（移除重複表頭、五階段養蘭花遊戲）
+• assets/orchid/orchid-0.jpg ～ orchid-4.jpg（五張不同開花階段的圖片）
 
-上傳 GitHub：解壓縮後，把 babymonster-ep01.html 與 assets 資料夾內的檔案放到儲存庫根目錄（相同路徑覆蓋）。
+驗收位置：https://beckman0470.github.io/videos.html#orchid-care
 
-快速只修兩檔：babymonster-ep01.html，以及 assets/bm-approved-final/AHYEON.png。
-
-這個修復讓 AHYEON 左右的長髮與手臂完整呈現，保留原舞台造型。
+五個遊戲日是教學設計的簡化時間；實際蝴蝶蘭長花苞、開花需要更長時間。
+原有姊姊腳踏車遊戲與其他客廳功能仍保留。
