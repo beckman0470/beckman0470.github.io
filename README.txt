@@ -1,16 +1,22 @@
-Chicken Coop — clean centered layout (2026-11-20)
+雞爸爸生活研究室｜雞窩與其他房間全寬一致性修正（2026-11-20）
 
-Update only css/room-activities.css in GitHub repository root.
-No HTML, JS, images, bathroom or kitchen behavior were changed.
+根因：上一版即使移除 960px，仍透過 max-width:100% 及 100svh 計算，
+把雞窩限制在 main#journal-page 的 1180px 主欄中。
+其他房間的桌機場景採 viewport-wide breakout，所以兩者寬度不同。
 
-Fixes:
-- Removes generations of competing study-room positioning rules.
-- Centers a responsive 16:9 desktop study scene within the page layout; no 960px cap or 100vw offset.
-- Places title in a translucent panel on the background top-left.
-- Preserves five clickable object links and aligns hotspots to 16:9 cropped image.
-- Uses 3:2 contain on mobile for full image visibility.
-- Retains existing kitchen/bathroom icon-hiding CSS intact.
+本版只修改 css/room-activities.css：
+- 桌機雞窩改用與其他房間相同的 viewport-wide breakout。
+- 桌機維持 16:9；手機仍為文章欄內的 3:2 圖片。
+- 保留背景左上角標題、五個透明互動連結與原本的人物、貓咪。
+- 廚房、浴室的既有 CSS 保留未變。
 
-After upload: commit changes, hard refresh Ctrl+Shift+R, inspect desktop/mobile and click all five objects.
+安裝：
+1. 上傳 css/room-activities.css，覆蓋 GitHub 同路徑檔案並 Commit。
+2. 強烈建議在 articles.html 將
+   /css/room-activities.css?v=20261108-welcome9
+   改成
+   /css/room-activities.css?v=20261120-fullviewport
+   以清掉瀏覽器及 CDN 的舊 CSS 快取。只換 query，不動其他 HTML。
+3. 更新後重開 https://beckman0470.github.io/articles.html
 
-Validation performed: CSS rule checks, balanced braces, ZIP CRC. No live-browser visual acceptance test.
+驗證：此包已完成 CSS 語法與 ZIP 完整性檢查；正式站的實際瀏覽器畫面尚未驗證。

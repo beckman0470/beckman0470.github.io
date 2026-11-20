@@ -156,16 +156,18 @@ body[data-welcome-page="house"] .cdj-greeting[data-room="kitchen"] .room-item-ho
 
 /* ===============================================================
    Chicken Coop 2026-11-20 — single canonical study layout.
-   No viewport-left offsets. All coordinates refer to one scene.
+   Desktop matches the full-width room layout; mobile stays in its column.
+   All coordinates refer to one scene.
    =============================================================== */
 html body[data-welcome-page="articles"] main#journal-page > section.cdj-welcome.cdj-room-entrance {
   display:block!important;
   position:relative!important;
   box-sizing:border-box!important;
-  width:min(100%, calc((100svh - var(--cdj-header-height,104px) - 20px)*16/9))!important;
-  max-width:100%!important;
+  /* Match the other rooms: breakout of the 1180px article column to the viewport. */
+  width:calc(100vw - var(--cdj-scrollbar,0px))!important;
+  max-width:none!important;
   min-height:0!important;
-  margin:0 auto 24px!important;
+  margin:0 0 24px calc(50% - (100vw - var(--cdj-scrollbar,0px))/2)!important;
   padding:0!important;
   left:auto!important;
   right:auto!important;
@@ -309,7 +311,7 @@ html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .greeti
 }
 html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .greeting-pause {z-index:10!important}
 @media(max-width:760px){
-  html body[data-welcome-page="articles"] main#journal-page > section.cdj-welcome.cdj-room-entrance {width:100%!important}
+  html body[data-welcome-page="articles"] main#journal-page > section.cdj-welcome.cdj-room-entrance {width:100%!important;max-width:100%!important;margin:0 auto 24px!important}
   html body[data-welcome-page="articles"] main#journal-page > section.cdj-welcome.cdj-room-entrance > .cdj-greeting[data-room="study"] {aspect-ratio:3 / 2!important}
   html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] > .greeting-scene {background-size:contain!important}
   html body[data-welcome-page="articles"] main#journal-page > section.cdj-welcome.cdj-room-entrance > .cdj-welcome-copy {max-width:50%!important;padding:5px 8px!important}
