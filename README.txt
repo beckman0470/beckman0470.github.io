@@ -1,29 +1,29 @@
-雞爸爸生活研究室｜全站遊戲統一更新包 2026-11-20
+雞爸爸生活研究室｜雞窩 16:9 背景＋全站分類導航統一
+2026-11-20
 
-目的：將房間內嵌遊戲和獨立遊戲頁的「遊戲身分識別、標題與操作框架、圓角邊框、主題色、手機顯示」統一成浴室兩款遊戲的設計語言。
+已查 GitHub：assets/greetings/v1/room-study-16x9.webp 存在。
+問題根源：css/room-activities.css 的雞窩仍有 *3/2 和 aspect-ratio:3/2 舊規則；
+js/house-rooms.js 仍指定 room-study.webp。覆蓋 CSS 可以在不改角色與現有 JS 的情況下，
+直接啟用新的16:9背景，並修正容器寬度。
 
-【重要】因網站當天持續更新，本包絕不使用舊版遊戲 HTML 覆蓋網站，而是從「你目前最新的 GitHub 專案」產生精準更新檔，原始遊戲程式和素材不修改。
+如何套用：
+1. 下載 GitHub 最新專案 ZIP 並解壓縮，不能拿舊版網站當來源。
+2. 將本包 tools/apply.py 放到任何方便的位置（保留本包 css 目錄）。
+3. 在有 Python 3 的電腦執行：
+   python tools/apply.py "你的網站專案資料夾"
+   (上述路徑需依實際位置調整，建議在本包解壓目錄執行)
+4. 將修改後的 articles.html、videos.html、rooms.html 及 css/room-width-nav-fix.css
+   上傳 GitHub 相同路徑；其餘檔案不要覆蓋。
+5. 在瀏覽器使用 Ctrl+Shift+R 更新快取。
 
-包含：
-- css/unified-game-ui.css：共用遊戲外觀
-- js/unified-game-ui.js：遊戲頁識別及返回房間入口
-- tools/apply_game_ui.py：從最新網站資料夾產生可直接上傳的 ZIP
-- GAME_AUDIT.txt：套用範圍及驗收清單
+也可以手動安裝：上傳 css/room-width-nav-fix.css，然後在上述三個 HTML 的
+</head> 前各加一行：
+<link rel="stylesheet" href="/css/room-width-nav-fix.css?v=20261120-wide-nav2">
 
-【套用方法】
-1. 到 https://github.com/beckman0470/beckman0470.github.io ，選 Code → Download ZIP，取得最新程式。
-2. 解壓縮 ZIP 到電腦，例如「beckman0470.github.io-main」資料夾。
-3. 在 Windows PowerShell 先 cd 到本包的資料夾，執行：
-   py tools/apply_game_ui.py "C:\\你的路徑\\beckman0470.github.io-main"
-   或 python tools/apply_game_ui.py "C:\\你的路徑\\beckman0470.github.io-main"
-4. 會產生 ChickenDad_GameUI_ReadyToUpload.zip。解壓後將檔案以相同路徑覆蓋到 GitHub 專案（或用 Git 直接提交）。
-5. GitHub Pages 部署後清除快取驗收。原專案不會被本工具修改。
+修正範圍：
+- 雞窩背景：依 16:9 計算，並強制讀取已上傳的 room-study-16x9.webp。
+- 客廳、雞窩、其他房間的分類導覽：共同寬度、邊框、間距與手機排版。
+- 根據新圖重設雞窩五個物件熱區的位置（需上線後點擊驗收）。
+- 不更動貓咪動畫、角色圖、遊戲邏輯、文章資料。
 
-請勿直接把本 ZIP 當成可以無步驟覆蓋的成品，因為 HTML 必須從最新網站產生，才不會覆蓋今天其他新增功能。
-
-【本包保護措施】
-- 遊戲 JS、動畫、音效、題目、得分邏輯沒有改動。
-- 不改房間背景、角色位置、文章與影片卡片。
-- 同一頁只插入一次新的 CSS / JS。
-- 已檢查打包腳本及共用程式語法；未完成所有遊戲的正式站互動實測。
-- GitHub 連接器寫入曾回應 403，故沒有直接修改正式站。
+提醒：這包已進行靜態檢查，並未實際部署或驗收不同螢幕尺寸。
