@@ -3,7 +3,7 @@ const stage=document.querySelector('.cdj-greeting[data-room=dining]');if(!stage)
 const style=document.createElement('link');style.rel='stylesheet';style.href='/css/dining-family.css?v=20261108-dining11';document.head.append(style);
 stage.querySelector('.greeting-table')?.remove();stage.querySelector('.room-item-hotspots')?.remove();
 const base='/assets/greetings/v1/';const entries=[
- ['yahoo-water','雅虎喝水','幫雅虎的水碗添新鮮的水。','/play/?area=dragon&game=chores'],
+ ['yahoo-water','雅虎喝水','幫雅虎的水碗添新鮮的水。','/play/yahoo-water/'],
  ['youyou-food','右右吃飯','挑一份食物，餵飽愛吃的右右。','/play/?area=dragon&game=feed'],
  ['dodo-fruit','今天吃什麼水果？','看水果猜英文，也可以切換排字遊戲。','/dining-fruit.html'],
  ['dragon-snack','弟弟找零食','看準方向與時機，跳上階梯找零食。','/dining-stairs.html']
@@ -39,12 +39,14 @@ people[1].setAttribute('aria-label','鼠媽媽端菜：看雞爸爸一家的菜�
 const mealLink=document.createElement('a');mealLink.href='#dining-mom-menu';mealLink.textContent='雞爸爸一家的菜單';mealLink.onclick=e=>{e.preventDefault();openMenu();};quick.prepend(mealLink);const yogurtLink=document.createElement('a');yogurtLink.href=yogurtArticle;yogurtLink.textContent='阿格優格（文章）';
 people[0].setAttribute('aria-label','雞爸爸用餐：玩餐桌禮儀小遊戲');people[0].onclick=()=>{const game=document.getElementById('room-activity-dining');game.tabIndex=-1;game.focus({preventScroll:true});game.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});};
 
+
 const yogurt=document.createElement('details');yogurt.id='dining-ama-yogurt';yogurt.className='dining-recipe';
 const ys=document.createElement('summary'),yp=document.createElement('span'),yt=document.createElement('strong'),yb=document.createElement('small');
 yp.className='dining-card-picture';yp.style.backgroundImage='url('+base+'dining-ama-yogurt.webp)';yp.setAttribute('aria-hidden','true');yt.textContent='兔阿嬤的優格';yb.textContent='兔阿嬤與龍弟弟推薦';ys.append(yp,yt,yb);
 const intro=document.createElement('div');intro.className='dining-recipe-body';const desc=document.createElement('p');desc.textContent='「阿格！阿格！」這是龍弟弟和兔阿嬤一起分享的優格小時光。來看看他們的優格故事。';
 const story=document.createElement('a');story.href=yogurtArticle;story.textContent='讀故事：阿格！阿格！兔阿嬤不會拉肚子的優格 →';intro.append(desc,story);yogurt.append(ys,intro);grid.append(yogurt);
 function openYogurt(){menu.open=true;yogurt.open=true;yogurt.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});ys.focus({preventScroll:true});}
+
 
 if(location.hash==='#dining-ama-yogurt')openYogurt();
 })();
