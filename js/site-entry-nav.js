@@ -73,3 +73,27 @@ inner.append(brand,nav);host.replaceChildren(inner);host.dataset.unifiedHeader=v
 
 
 
+
+/* ChickenDad consistency bootstrap: preserves the existing room/game scripts. */
+(()=>{'use strict';
+  const path=location.pathname;
+  const page=(path==='/rooms.html'||path==='/articles.html'||path==='/videos.html');
+  const addStyle=(file)=>{if(document.querySelector('link[href*="'+file+'"]'))return;const x=document.createElement('link');x.rel='stylesheet';x.href=file+'?v=20261120-integrated2';document.head.append(x)};
+  const addScript=(file)=>{if(document.querySelector('script[src*="'+file+'"]'))return;const x=document.createElement('script');x.defer=true;x.src=file+'?v=20261120-integrated2';document.head.append(x)};
+  if(page){
+    // Bust stale stylesheet cache after existing coop/house fixes.
+    document.querySelectorAll('link[rel="stylesheet"][href*="/css/room-activities.css"]').forEach(link=>{
+      const url=new URL(link.href,location.href);
+      if(url.searchParams.get('v')!=='20261120-integrated2'){
+        url.searchParams.set('v','20261120-integrated2');link.href=url.href;
+      }
+    });
+    addStyle('/css/content-identity.css');addScript('/js/content-identity.js');
+    addStyle('/css/layout-slim.css');addScript('/js/layout-slim.js');
+    addStyle('/css/unified-game-ui.css');addScript('/js/unified-game-ui.js');
+  }
+  // When the shared site header is loaded on standalone games, match the game presentation too.
+  else if(path.startsWith('/play/')||/^(?:\/ama-|\/mom-|\/dad-|\/dining-|\/relax)/.test(path)){
+    addStyle('/css/unified-game-ui.css');addScript('/js/unified-game-ui.js');
+  }
+})();
