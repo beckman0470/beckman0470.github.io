@@ -1,19 +1,24 @@
-雞爸爸生活研究室｜鼠姊姊幫龍弟弟洗澡 1.0
+鼠媽媽幫龍弟弟洗澡｜雙擊選圖修正版（2026-11-20）
 
-一、ZIP 請解壓縮，將以下檔案按原路徑上傳 GitHub 儲存庫根目錄：
-  rooms.html
-  play/index.html
-  play/bath-family/index.html
-  js/bath-family-entry.js
-  assets/bath-family/step-1.webp ～ step-6.webp
+這次是精準修復包，只需覆蓋兩類檔案：
+1. play/bath-family/index.html
+2. assets/bath-family/step-1.webp ～ step-6.webp
 
-二、上傳後可直接瀏覽：
-https://beckman0470.github.io/play/bath-family/
+GitHub 上傳方式：ZIP 解壓縮後，按上述相同路徑覆蓋原檔。
+保留其他網頁、遊戲、房間及 GitHub 版本即可，不必重新上傳前一版 ZIP 的 rooms.html 或 play/index.html。
 
-三、原有「浴室」與「龍弟弟快樂天地」的洗澡步驟入口會導向新版。
-其餘遊戲與網頁資料保留。
+驗收網址：
+https://beckman0470.github.io/play/bath-family/?v=mom-doubletap-20261120
 
-四、玩法：聽題目、看三張情境圖片選下一步，答對後在主畫面點三下完成互動，再進下一關，共六關。
-圖片以鼠姊姊與龍弟弟為主角，選項主要依圖片判斷，文字僅供家長參考；語音依瀏覽器現有 zh-TW 台灣國語語音提供。
+設計：左側題目答案區初始留白；右側三圖選項，連點同一張兩次才確認。
+答對會把圖片放大顯示到左側，接著點左側畫面三次完成洗澡動作。
+每一題都明確對應一張獨立六格圖：
+1. 媽媽測試水溫（step-1）
+2. 媽媽替弟弟沖濕（step-2）
+3. 媽媽協助搓泡泡（step-3）
+4. 媽媽將泡泡沖乾淨（step-4）
+5. 媽媽用藍色毛巾擦乾（step-5）
+6. 龍弟弟穿上衣服（step-6）
 
-五、注意：實際洗澡全程由成人陪同。此為遊戲互動，並非建議六歲幼兒單獨照顧幼兒洗澡。
+語音採瀏覽器 zh-TW 台灣國語，裝置須安裝 zh-TW 聲音。
+重要：真實洗澡仍由成人全程照顧、確認水溫、防滑及保持陪同。
