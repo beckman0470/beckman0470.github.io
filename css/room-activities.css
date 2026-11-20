@@ -323,3 +323,47 @@ html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .greeti
   html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .study-object.kids-books {top:24%!important}
   html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .study-object.dumbbell {top:47%!important}
 }
+
+
+/* ===============================================================
+   Chicken Coop 2026-11-20b — visual harmony fix.
+   Keep the full 3:2 artwork, but remove the unique rounded corners
+   and align character scale/placement with the other rooms.
+   =============================================================== */
+html body[data-welcome-page="articles"] main#journal-page > section.cdj-welcome.cdj-room-entrance {
+  --study-width:min(calc(100vw - var(--cdj-scrollbar,0px)),calc((100svh - var(--cdj-header-height,104px) + 24px)*3/2))!important;
+}
+html body[data-welcome-page="articles"] main#journal-page > section.cdj-welcome.cdj-room-entrance > .cdj-greeting[data-room="study"],
+html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] > .greeting-scene {
+  border-radius:0!important;
+}
+html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .greeting-character:not(.greeting-cat) {
+  --frame:clamp(132px,14vw,210px)!important;
+  left:48.5%!important;
+  bottom:2.2%!important;
+  scale:.86!important;
+  z-index:8!important;
+}
+html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .greeting-cat {
+  --frame:clamp(76px,7vw,116px)!important;
+  left:34.5%!important;
+  bottom:2.1%!important;
+  scale:.68!important;
+  z-index:7!important;
+}
+html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .greeting-cat:last-of-type {
+  left:68.5%!important;
+  bottom:2.1%!important;
+  scale:.68!important;
+}
+@media(max-width:760px){
+  html body[data-welcome-page="articles"] main#journal-page > section.cdj-welcome.cdj-room-entrance {
+    --study-width:100%!important;
+  }
+  html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .greeting-character:not(.greeting-cat) {
+    --frame:clamp(112px,24vw,170px)!important;
+    left:48%!important;bottom:2.2%!important;scale:.84!important;
+  }
+  html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .greeting-cat {left:32%!important;bottom:1.8%!important;scale:.66!important}
+  html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .greeting-cat:last-of-type {left:68%!important;bottom:1.8%!important;scale:.66!important}
+}
