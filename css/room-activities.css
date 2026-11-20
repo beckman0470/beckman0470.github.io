@@ -672,96 +672,53 @@ html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .greeti
 }
 
 
-/* ================================================================
-   2026-11-20: 16:9 study artwork, no stretch/crop; viewport-fit.
-   Scoped to articles/study only; original five filter URLs preserved.
-   ================================================================ */
-html body[data-welcome-page="articles"] main#journal-page > section.cdj-welcome.cdj-room-entrance {
-  --study-width:min(calc(100vw - var(--cdj-scrollbar,0px)),calc((100svh - 76px) * 16 / 9))!important;
-  width:var(--study-width)!important;
-  max-width:var(--study-width)!important;
-  margin:0 0 24px calc(50% - var(--study-width)/2)!important;
-  padding:0!important;
-  position:relative!important;
-  transform:none!important;
-  left:auto!important;
-  right:auto!important;
-}
-html body[data-welcome-page="articles"] main#journal-page > section.cdj-welcome.cdj-room-entrance > .cdj-greeting[data-room="study"] {
-  width:100%!important;
-  max-width:none!important;
-  aspect-ratio:16 / 9!important;
-  height:auto!important;
-  min-height:0!important;
-  overflow:hidden!important;
-  border-radius:0!important;
-}
-html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] > .greeting-scene {
-  inset:0!important;
-  width:100%!important;
-  height:100%!important;
-  background-image:url('/assets/greetings/v1/room-study-16x9.webp?v=20261120-wide1')!important;
-  background-size:100% 100%!important;
-  background-position:center center!important;
-  background-repeat:no-repeat!important;
-  border-radius:0!important;
-}
-/* The five invisible hit regions match the NEW 16:9 composition. */
-html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .study-object.genealogy {
-  left:12.5%!important; top:34%!important; width:14%!important; height:13%!important;
-}
-html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .study-object.devil-doll {
-  left:15.7%!important; top:45%!important; width:11%!important; height:16%!important;
-}
-html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .study-object.family-photo {
-  left:51.5%!important; top:39%!important; width:9.5%!important; height:13%!important;
-}
-html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .study-object.kids-books {
-  left:83%!important; top:36%!important; width:12%!important; height:17%!important;
-}
-html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .study-object.dumbbell {
-  left:82.5%!important; top:54%!important; width:13.5%!important; height:14%!important;
-}
-/* A slightly narrower scene height leaves an unobstructed floor for cats. */
-html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .greeting-character:not(.greeting-cat) {
-  --frame:clamp(335px,29vw,435px)!important;
-  left:49%!important;
-  bottom:3.2%!important;
-  scale:1!important;
-  z-index:15!important;
-}
+/* ===============================================================
+   Chicken Coop 2026-11-20d — bigger cats + safer routes
+   Fixes: cats too small, backward-looking motion, and disappearing
+   during the feeding/sleep loop.
+   =============================================================== */
 html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .greeting-cat {
-  width:clamp(82px,8vw,125px)!important;
-  height:clamp(72px,7vw,112px)!important;
-  bottom:5%!important;
-  z-index:16!important;
+  width:clamp(118px,12vw,188px)!important;
+  height:clamp(92px,9.8vw,148px)!important;
+  bottom:4.9%!important;
+  z-index:18!important;
+  transform-origin:50% 100%!important;
 }
 html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .greeting-cat:nth-of-type(2) {
   left:11%!important;
+  animation:study-yahoo-route-v2 10.5s ease-in-out infinite!important;
 }
 html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .greeting-cat:nth-of-type(3) {
-  left:79%!important;
+  left:73%!important;
+  animation:study-youyou-route-v2 19s ease-in-out infinite!important;
 }
-@media (max-width:760px){
-  html body[data-welcome-page="articles"] main#journal-page > section.cdj-welcome.cdj-room-entrance {
-    --study-width:100%!important;
-    width:100%!important;
-    max-width:100%!important;
-    margin:0 auto 24px!important;
-  }
-  html body[data-welcome-page="articles"] main#journal-page > section.cdj-welcome.cdj-room-entrance > .cdj-greeting[data-room="study"] {
-    aspect-ratio:16 / 9!important;
-  }
-  html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .greeting-character:not(.greeting-cat) {
-    --frame:clamp(165px,36vw,265px)!important;
-    left:49%!important;
-    bottom:3%!important;
-  }
+@keyframes study-yahoo-route-v2 {
+  0%,8%   {transform:translateX(0) scaleX(1)}
+  26%     {transform:translateX(55%) scaleX(1)}
+  38%     {transform:translateX(105%) scaleX(1)}
+  44%     {transform:translateX(105%) scaleX(-1)}
+  63%     {transform:translateX(46%) scaleX(-1)}
+  78%     {transform:translateX(0) scaleX(-1)}
+  86%     {transform:translateX(0) scaleX(1)}
+  100%    {transform:translateX(0) scaleX(1)}
+}
+@keyframes study-youyou-route-v2 {
+  0%,12%  {transform:translateX(0) scaleX(-1) rotate(0)}
+  24%     {transform:translateX(-22%) scaleX(-1) rotate(0)}
+  34%     {transform:translateX(-34%) scaleX(-1) rotate(0)}
+  46%,58% {transform:translateX(-34%) scaleX(-1) rotate(0)}
+  62%     {transform:translateX(-34%) scaleX(-1) rotate(4deg)}
+  68%     {transform:translateX(-34%) scaleX(-1) rotate(-4deg)}
+  74%     {transform:translateX(-34%) scaleX(-1) rotate(0)}
+  88%     {transform:translateX(-14%) scaleX(-1) rotate(0)}
+  100%    {transform:translateX(0) scaleX(-1) rotate(0)}
+}
+@media(max-width:760px){
   html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .greeting-cat {
-    width:clamp(45px,9vw,75px)!important;
-    height:clamp(39px,8vw,65px)!important;
-    bottom:4%!important;
+    width:clamp(86px,18vw,132px)!important;
+    height:clamp(68px,14vw,106px)!important;
+    bottom:4.3%!important;
   }
-  html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .greeting-cat:nth-of-type(2) {left:8%!important}
-  html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .greeting-cat:nth-of-type(3) {left:82%!important}
+  html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .greeting-cat:nth-of-type(2) {left:9%!important}
+  html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .greeting-cat:nth-of-type(3) {left:71%!important}
 }
