@@ -29,3 +29,33 @@
 #room-activity-bathroom .bath-finale p{font-size:20px;line-height:1.7}
 @media(max-width:640px){#room-activity-bathroom .bath-choices{grid-template-columns:1fr;gap:12px}#room-activity-bathroom .bath-card{aspect-ratio:1.6/1;max-height:260px}#room-activity-bathroom .bath-card img{object-position:center 40%}#room-activity-bathroom .bath-ask{justify-content:center}#room-activity-bathroom .bath-ask h3{flex-basis:100%;text-align:center}#room-activity-bathroom .bath-speak{width:100%}}
 @media(prefers-reduced-motion:reduce){#room-activity-bathroom .bath-card{transition:none}}
+
+/* 20261120 統一浴室雙遊戲的視覺系統：以鼠媽媽洗澡遊戲為主 */
+#room-activity-bathroom.bath-visual{padding:0;overflow:hidden;background:#ffffffec;border:5px solid #e4ffff;border-radius:30px;box-shadow:0 18px 60px #4c969d23;color:#23555c}
+#room-activity-bathroom .bath-hero{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:20px 24px;background:linear-gradient(110deg,#61c7cd,#a7eadb 54%,#f2aed2)}
+#room-activity-bathroom .bath-hero h2{color:#fff;font-size:clamp(24px,3.5vw,38px);text-shadow:0 3px 3px #287f997a;margin:0}
+#room-activity-bathroom .bath-hero .bath-intro{font-size:14px;color:#185e65;font-weight:800;margin:5px 0 0}
+#room-activity-bathroom .bath-total{display:block;background:#fffaf1;color:#cc7a14;padding:12px 16px;border-radius:24px;font-size:19px;font-weight:900;white-space:nowrap;box-shadow:0 4px 0 #ecc5ac}
+#room-activity-bathroom #bathroom-quiz-app{padding:0 18px 22px}
+#room-activity-bathroom .bath-bars{display:flex;gap:8px;justify-content:center;margin:17px 0 10px}
+#room-activity-bathroom .bath-bar{flex:1;max-width:160px;height:12px;border-radius:99px;background:#e0e9eb}
+#room-activity-bathroom .bath-bar.done{background:#64cbbb}
+#room-activity-bathroom .bath-bar.now{background:#ffbd5f;box-shadow:0 0 0 2px #ffe8aa}
+#room-activity-bathroom .bath-progress{margin:10px 0;font-size:14px;color:#57868b}
+#room-activity-bathroom .bath-progress .bath-stars{display:none}
+#room-activity-bathroom .bath-question{background:#f1faf7;border:2px solid #d0eeea;box-shadow:none;margin:10px 0 12px}
+#room-activity-bathroom .bath-speak{background:#e85c9a;color:#fff;border-radius:999px;box-shadow:0 5px 0 #bf3c79}
+#room-activity-bathroom .bath-choices{gap:12px;margin:14px 0}
+#room-activity-bathroom .bath-card{border:4px solid #fff;outline:2px solid #cfe8e8;border-radius:22px;box-shadow:0 8px 16px #468e8e18}
+#room-activity-bathroom .bath-card.is-correct{outline:5px solid #45c78a}
+#room-activity-bathroom .bath-result{border:0;background:#fff7e6;color:#945a1c;border-radius:18px}
+#room-activity-bathroom .bath-next,#room-activity-bathroom .bath-restart{background:#2b9ca1;box-shadow:0 5px 0 #1c6e78}
+@media(max-width:640px){
+ #room-activity-bathroom .bath-hero{padding:15px}
+ #room-activity-bathroom .bath-total{padding:8px 10px;font-size:15px}
+ #room-activity-bathroom #bathroom-quiz-app{padding:0 10px 14px}
+ #room-activity-bathroom .bath-choices{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+ #room-activity-bathroom .bath-card{aspect-ratio:3/4;max-height:none;border-radius:14px}
+ #room-activity-bathroom .bath-card img{height:100%}
+ #room-activity-bathroom .bath-question{padding:12px}
+}
