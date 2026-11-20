@@ -1,14 +1,9 @@
-BABYMONSTER〈DRIP〉七人定案動態舞台版｜GitHub 根目錄更新包
+BABYMONSTER DRIP｜AHYEON 長髮修正包
 
-1. 解壓縮 ZIP。
-2. 在 GitHub 專案 beckman0470/beckman0470.github.io 根目錄覆蓋 babymonster-ep01.html。
-3. 將 assets/bm-approved-final/ 內七張獨立透明 Q 版人物圖片連同資料夾上傳。請維持檔名大小寫。
-4. 新增 assets/bm-audio/drip-reference.m4a（此音軌取自使用者提供的參考影片；公開發布前請確認音樂公開使用權）。
-5. GitHub Pages 部署完成後開啟 /babymonster-ep01.html?v=final-cast-20261120 重新整理。
+本包以七位定案動態舞台版本為底，只更新 AHYEON 透明人物圖與網頁中的 AHYEON 圖片版本參數；其他六位人物與 29 段教學保持一致。
 
-人物順序：RUKA、PHARITA、ASA、AHYEON、RAMI、RORA、CHIQUITA。
-人物造型：從使用者於 2026-11-20 定案的完整舞台圖逐一擷取（RUKA 金直髮戴黑帽；PHARITA 皇冠；ASA 短髮；RAMI 小眼睛；RORA 黑直髮高冷；CHIQUITA 紅髮）。
-人物為七張獨立透明圖層，以 CSS 律動、輕跳、位移、主唱聚焦；身體動作是整體角色圖層動畫，並非骨骼逐關節動作。
-保留既有 29 段成員換色時間與 55 句歌詞，唱完一段朗讀台灣中文；點選歌詞再開單字教學。
+上傳 GitHub：解壓縮後，把 babymonster-ep01.html 與 assets 資料夾內的檔案放到儲存庫根目錄（相同路徑覆蓋）。
 
-注意：若公開站尚未顯示新版，請先檢查 GitHub 檔案部署和新增圖片檔案的 200 狀態。
+快速只修兩檔：babymonster-ep01.html，以及 assets/bm-approved-final/AHYEON.png。
+
+這個修復讓 AHYEON 左右的長髮與手臂完整呈現，保留原舞台造型。
