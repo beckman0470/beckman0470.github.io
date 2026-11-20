@@ -1,0 +1,5 @@
+/* Room content consolidation — only the duplicated living-room article grid */
+#living-zschen {display:none!important}
+.room-link-bar a[href="#living-zschen"]{display:none!important}
+/* Keep room entrances readable without another decorative heading row. */
+.cdj-layout-slim .room-link-group:empty {display:none!important}
