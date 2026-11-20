@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#4c2418">
-<title>雞爸爸生活研究室｜線上祭拜（v9 試玩）</title>
+<title>雞爸爸生活研究室｜線上祭拜（v13 金紙定案）</title>
 <style>
 :root{color-scheme:dark;--ink:#fff2d1;--gold:#f3c36c;--red:#852b1d;--wood:#572c1e;--line:#b78345}
 *{box-sizing:border-box}
@@ -323,10 +323,19 @@ button:disabled{cursor:not-allowed;opacity:.52}
 .folded-sheet-v9 i{display:none!important;}
 .burn-batch{background-repeat:no-repeat!important;background-size:contain!important;background-position:center!important;border:0!important;box-shadow:none!important;}
 .burn-batch::before{display:none!important;}
+
+/* v13 FINAL: paper artwork taken only from approved 12-cell chart. No image cropping. */
+#paperStack{background-size:contain!important;background-position:center!important;background-repeat:no-repeat!important;border:0!important;border-radius:0!important;box-shadow:none!important;width:min(96%,185px)!important;height:175px!important;min-width:0!important;display:block!important}
+#paperStack::before,#paperStack::after{display:none!important}
+.gold-type img{object-fit:contain!important;background:transparent!important;border:0!important;padding:2px!important}
+.folded-sheet-v9{background-repeat:no-repeat!important;background-size:contain!important;background-position:center!important;border:0!important;border-radius:0!important;box-shadow:none!important;max-width:100%!important;overflow:visible!important}
+.folded-sheet-v9:before,.folded-sheet-v9:after{display:none!important}
+.burn-batch{background-size:contain!important;background-position:center!important}
+@media(max-width:740px){#paperStack{width:min(99%,150px)!important;height:140px!important}}
 </style>
 </head>
 <body>
-<header><h1>雞爸爸生活研究室・線上祭拜</h1><p>v11｜金紙定案原圖・網站風格更新</p></header>
+<header><h1>雞爸爸生活研究室・線上祭拜</h1><p>v13｜四色金定案圖片</p></header>
 <main>
  <nav class="return-living" aria-label="返回客廳" style="text-align:right;margin-top:7px"><a href="/videos.html" style="color:#f5d18c;text-decoration:underline;text-underline-offset:4px">返回雞爸爸客廳</a></nav>
  <div class="scene" aria-label="以雞爸爸指定圖片為固定背景的線上祭拜操作畫面">
@@ -580,10 +589,10 @@ function updateBurn(){
  const visible=sheets.slice(-18);
  visible.forEach((kind,i)=>{const piece=document.createElement('div');piece.className='folded-sheet-v9';piece.dataset.kind=kind;piece.style.zIndex=String(i+1);
    piece.style.backgroundImage='url("'+approvedPaperSprites[kind].folded+'")';
-   const widths={'大百壽金':['188px','100px'],'壽金':['116px','126px'],'福金':['95px','112px'],'刈金':['116px','126px']};
-   piece.style.width=widths[kind][0];piece.style.height=widths[kind][1];
+   const widths={'大百壽金':['175px','95px'],'壽金':['115px','115px'],'福金':['77px','78px'],'刈金':['115px','115px']};
+    piece.style.width=widths[kind][0];piece.style.height=widths[kind][1];
 
-  piece.style.setProperty('--stack-x',((i%7)*8-22)+'px');piece.style.setProperty('--stack-y',(-i*10)+'px');piece.style.setProperty('--tilt',(((i%5)-2)*1.4)+'deg');
+  piece.style.setProperty('--stack-x',((i%7)*8-22)+'px');piece.style.setProperty('--stack-y',(-i*10)+'px');piece.style.setProperty('--tilt','0deg');
   piece.appendChild(document.createElement('i'));folder.append(piece);});
  $('foldCount').textContent='已折 '+pending+' 張';
  $('foldDescribe').textContent=pending?'右手已夾住 '+pending+' 張；每張都是單獨對折的長方形':'每按一次就多一張獨立的長方形';
