@@ -156,18 +156,19 @@ body[data-welcome-page="house"] .cdj-greeting[data-room="kitchen"] .room-item-ho
 
 /* ===============================================================
    Chicken Coop 2026-11-20 — single canonical study layout.
-   Desktop matches the full-width room layout; mobile stays in its column.
+   Match the height-limited room layout without cropping the original 3:2 artwork.
    All coordinates refer to one scene.
    =============================================================== */
 html body[data-welcome-page="articles"] main#journal-page > section.cdj-welcome.cdj-room-entrance {
   display:block!important;
   position:relative!important;
   box-sizing:border-box!important;
-  /* Match the other rooms: breakout of the 1180px article column to the viewport. */
-  width:calc(100vw - var(--cdj-scrollbar,0px))!important;
+  /* Same height-fitting principle as other rooms; original artwork is 3:2, not 16:9. */
+  --study-width:min(calc(100vw - var(--cdj-scrollbar,0px)),calc((100svh - var(--cdj-header-height,104px))*3/2));
+  width:var(--study-width)!important;
   max-width:none!important;
   min-height:0!important;
-  margin:0 0 24px calc(50% - (100vw - var(--cdj-scrollbar,0px))/2)!important;
+  margin:0 0 24px calc(50% - var(--study-width)/2)!important;
   padding:0!important;
   left:auto!important;
   right:auto!important;
@@ -185,7 +186,7 @@ html body[data-welcome-page="articles"] main#journal-page > section.cdj-welcome.
   min-width:0!important;
   height:auto!important;
   min-height:0!important;
-  aspect-ratio:16 / 9!important;
+  aspect-ratio:3 / 2!important;
   margin:0!important;
   padding:0!important;
   overflow:hidden!important;
@@ -199,7 +200,7 @@ html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] > .gree
   width:100%!important;
   height:100%!important;
   border-radius:16px!important;
-  background-size:cover!important;
+  background-size:100% 100%!important;
   background-position:center center!important;
   background-repeat:no-repeat!important;
   pointer-events:none!important;
@@ -270,11 +271,11 @@ html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .study-
   z-index:31!important;
 }
 /* For 3:2 artwork center-cropped to 16:9: remap hotspots to visible image. */
-html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .study-object.genealogy {left:4%!important;top:20%!important;width:18%!important;height:18%!important}
-html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .study-object.devil-doll {left:6%!important;top:40%!important;width:16%!important;height:21%!important}
-html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .study-object.family-photo {left:50%!important;top:23%!important;width:14%!important;height:18%!important}
-html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .study-object.kids-books {left:82%!important;top:19%!important;width:17%!important;height:23%!important}
-html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .study-object.dumbbell {left:81%!important;top:46%!important;width:18%!important;height:23%!important}
+html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .study-object.genealogy {left:4%!important;top:25%!important;width:18%!important;height:18%!important}
+html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .study-object.devil-doll {left:6%!important;top:42%!important;width:16%!important;height:21%!important}
+html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .study-object.family-photo {left:50%!important;top:27%!important;width:14%!important;height:18%!important}
+html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .study-object.kids-books {left:82%!important;top:24%!important;width:17%!important;height:23%!important}
+html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .study-object.dumbbell {left:81%!important;top:47%!important;width:18%!important;height:23%!important}
 html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .study-object:is(:hover,:focus-visible) {
   outline:2px solid #ffe2a6!important;
   outline-offset:0!important;

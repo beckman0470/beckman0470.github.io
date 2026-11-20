@@ -1,22 +1,22 @@
-雞爸爸生活研究室｜雞窩與其他房間全寬一致性修正（2026-11-20）
+雞窩修正｜2026-11-20｜依照遊戲間與雞窩截圖修正
 
-根因：上一版即使移除 960px，仍透過 max-width:100% 及 100svh 計算，
-把雞窩限制在 main#journal-page 的 1180px 主欄中。
-其他房間的桌機場景採 viewport-wide breakout，所以兩者寬度不同。
+【本次原因】
+雞窩的原始場景圖為 3:2，前一版卻設為 16:9 並使用 cover，放大後裁掉上下；而且強制全螢幕寬，與遊戲間按視窗高度縮放的方式不同。
 
-本版只修改 css/room-activities.css：
-- 桌機雞窩改用與其他房間相同的 viewport-wide breakout。
-- 桌機維持 16:9；手機仍為文章欄內的 3:2 圖片。
-- 保留背景左上角標題、五個透明互動連結與原本的人物、貓咪。
-- 廚房、浴室的既有 CSS 保留未變。
+【修復】
+1. 雞窩以視窗剩餘高度計算寬度，水平置中，避免強制滿版。
+2. 保留原始 3:2 比例，整張背景顯示，不再裁掉雞爸爸和底部。
+3. 五個熱區回到原圖座標，保留文章跳轉及左上角標題。
+4. 不修改浴室、廚房、遊戲間、其他頁面的檔案。
 
-安裝：
-1. 上傳 css/room-activities.css，覆蓋 GitHub 同路徑檔案並 Commit。
-2. 強烈建議在 articles.html 將
-   /css/room-activities.css?v=20261108-welcome9
-   改成
-   /css/room-activities.css?v=20261120-fullviewport
-   以清掉瀏覽器及 CDN 的舊 CSS 快取。只換 query，不動其他 HTML。
-3. 更新後重開 https://beckman0470.github.io/articles.html
+【安裝】
+1. 把 ZIP 中 css/room-activities.css 覆蓋 GitHub 上相同路徑。
+2. 在 GitHub 的 articles.html 找到：
+   /css/room-activities.css?v=20261115-clean8
+   修改成：
+   /css/room-activities.css?v=20261120-nocrop
+   （若目前版本參數不同，只改問號後面的 v 值即可。）
+3. Commit，開無痕視窗檢查 /articles.html。
 
-驗證：此包已完成 CSS 語法與 ZIP 完整性檢查；正式站的實際瀏覽器畫面尚未驗證。
+【重要】
+這是從 GitHub 現行 CSS 的確切 SHA 版本修正的單一檔案。並未部署到 GitHub；點擊與實際跨裝置畫面仍需線上驗收。
