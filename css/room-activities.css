@@ -558,3 +558,89 @@ html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"].is-offs
   html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .greeting-cat::after,
   html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .greeting-cat>img {opacity:0!important}
 }
+
+
+/* ===============================================================
+   Chicken Coop 2026-11-20c — centered layout + larger dad/cats
+   Use after the cats-motion patch. This block is intentionally last
+   so it overrides earlier study-room sizing and character scaling.
+   =============================================================== */
+html body[data-welcome-page="articles"] main#journal-page > section.cdj-welcome.cdj-room-entrance {
+  --study-width:min(calc(100vw - var(--cdj-scrollbar,0px)),calc((100svh - var(--cdj-header-height,104px) + 56px) * 3 / 2))!important;
+  width:var(--study-width)!important;
+  max-width:var(--study-width)!important;
+  margin:0 auto 24px!important;
+}
+html body[data-welcome-page="articles"] main#journal-page > section.cdj-welcome.cdj-room-entrance > .cdj-greeting[data-room="study"],
+html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] > .greeting-scene {
+  width:100%!important;
+  border-radius:0!important;
+}
+html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] > .greeting-scene {
+  background-size:contain!important;
+  background-position:center center!important;
+  overflow:visible!important;
+}
+html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .greeting-character:not(.greeting-cat) {
+  --frame:clamp(360px,31vw,460px)!important;
+  left:49%!important;
+  bottom:1.2%!important;
+  scale:1.06!important;
+  transform:none!important;
+  transform-origin:50% 100%!important;
+  z-index:15!important;
+}
+html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .greeting-cat {
+  width:clamp(90px,10vw,150px)!important;
+  height:clamp(74px,8.6vw,126px)!important;
+  bottom:1.1%!important;
+  z-index:16!important;
+}
+html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .greeting-cat:nth-of-type(2) {
+  left:8%!important;
+  animation:study-yahoo-route 12s linear infinite!important;
+}
+html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .greeting-cat:nth-of-type(3) {
+  left:79%!important;
+  animation:study-youyou-route 26s ease-in-out infinite!important;
+}
+@keyframes study-yahoo-route {
+  0%   {transform:translateX(0) scaleX(1)}
+  18%  {transform:translateX(150%) scaleX(1)}
+  32%  {transform:translateX(260%) scaleX(1)}
+  44%  {transform:translateX(260%) scaleX(1)}
+  48%  {transform:translateX(260%) scaleX(-1)}
+  66%  {transform:translateX(120%) scaleX(-1)}
+  82%  {transform:translateX(0) scaleX(-1)}
+  92%  {transform:translateX(0) scaleX(-1)}
+  100% {transform:translateX(0) scaleX(1)}
+}
+@keyframes study-youyou-route {
+  0%,12%  {transform:translateX(0) rotate(0)}
+  28%     {transform:translateX(-205%) rotate(0)}
+  36%     {transform:translateX(-205%) rotate(-8deg)}
+  44%     {transform:translateX(-205%) rotate(6deg)}
+  52%     {transform:translateX(-205%) rotate(0)}
+  58%,82% {transform:translateX(-188%) rotate(0)}
+  94%,100%{transform:translateX(0) rotate(0)}
+}
+@media(max-width:760px){
+  html body[data-welcome-page="articles"] main#journal-page > section.cdj-welcome.cdj-room-entrance {
+    --study-width:100%!important;
+    width:100%!important;
+    max-width:100%!important;
+  }
+  html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .greeting-character:not(.greeting-cat) {
+    --frame:clamp(260px,52vw,340px)!important;
+    left:49%!important;
+    bottom:1%!important;
+    scale:1.02!important;
+  }
+  html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .greeting-cat {
+    width:clamp(70px,16vw,112px)!important;
+    height:clamp(58px,13vw,94px)!important;
+    bottom:1%!important;
+  }
+  html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .greeting-cat:nth-of-type(2) {left:6%!important}
+  html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] .greeting-cat:nth-of-type(3) {left:78%!important}
+}
