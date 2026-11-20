@@ -45,7 +45,7 @@ if(room==='living'){
  section('article','一家日常','/articles.html?room=family#cards-grid');game('雞爸爸家的滋滋燒肉','/play/yakiniku/');section('game','手沖咖啡','#kitchen-coffee');section('other','廚房點菜','#room-activity-kitchen');
 }else if(room==='bathroom'){
  section('article','健康期刊','/articles.html?room=cdhj#cards-grid');section('game','浴室生活小遊戲','#room-activity-bathroom');
- game('洗澡步驟小達人','/play/?area=dragon&game=bath');section('other','鼠姊姊的一天','/rooms.html?room=mom#mom-life');
+ game('鼠媽媽幫龍弟弟洗澡','/play/bath-family/');section('other','鼠姊姊的一天','/rooms.html?room=mom#mom-life');
 }
 const all=Object.values(groups).flat(),inline=all.filter(x=>x.inline),bar=make('nav','room-link-bar');bar.setAttribute('aria-label',(D.rooms[room]?.label||'房間')+'所有內容');
 let current=null,frame=null,observer=null,stage=null,select=null,feedback=null,launchButton=null,driver=null,loadTimer=null,loadSerial=0,startProxy=null,pauseProxy=null;
