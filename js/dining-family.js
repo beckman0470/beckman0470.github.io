@@ -4,7 +4,7 @@ const style=document.createElement('link');style.rel='stylesheet';style.href='/c
 stage.querySelector('.greeting-table')?.remove();stage.querySelector('.room-item-hotspots')?.remove();
 const base='/assets/greetings/v1/';const entries=[
  ['yahoo-water','雅虎喝水','幫雅虎的水碗添新鮮的水。','/play/yahoo-water/'],
- ['youyou-food','右右吃飯','挑一份食物，餵飽愛吃的右右。','/play/?area=dragon&game=feed'],
+ ['youyou-food','右右吃飯','挑一份食物，餵飽愛吃的右右。','/play/youyou-food/'],
  ['dodo-fruit','今天吃什麼水果？','看水果猜英文，也可以切換排字遊戲。','/dining-fruit.html'],
  ['dragon-snack','弟弟找零食','看準方向與時機，跳上階梯找零食。','/dining-stairs.html']
 ];
