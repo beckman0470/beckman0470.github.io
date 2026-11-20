@@ -1,0 +1,31 @@
+/* Chicken Dad Journal — Picture-first bathroom quiz, 20 Nov 2026 */
+#room-activity-bathroom.bath-visual {padding:clamp(15px,3vw,30px);border-radius:28px;background:linear-gradient(160deg,#eefbf7 0%,#fffaf0 70%,#ffe9f1 100%);border:2px solid #a7d3cf;box-shadow:0 12px 32px #315e6140;color:#294b52}
+#room-activity-bathroom.bath-visual h2{margin:0 0 6px;color:#26536a;font-size:clamp(22px,4vw,34px)}
+#room-activity-bathroom .bath-intro{margin:4px 0 15px;color:#4b6370;font-size:clamp(15px,2vw,19px)}
+#room-activity-bathroom .bath-progress{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:12px 0}
+#room-activity-bathroom .bath-progress strong{font-size:17px}
+#room-activity-bathroom .bath-stars{letter-spacing:.15em;font-size:24px;color:#e3a636}
+#room-activity-bathroom .bath-question{background:#fff;border:3px solid #bfdbe6;border-radius:22px;padding:14px 18px;box-shadow:0 4px 16px #183f4b13}
+#room-activity-bathroom .bath-ask{display:flex;align-items:center;gap:14px;flex-wrap:wrap;justify-content:space-between}
+#room-activity-bathroom .bath-ask h3{font-size:clamp(20px,3vw,28px);margin:0;line-height:1.45;color:#31435d;flex:1}
+#room-activity-bathroom .bath-speak{border:0;border-radius:18px;padding:13px 18px;background:linear-gradient(135deg,#ffbf4b,#f08d44);color:#4b2800;font-size:clamp(18px,2.5vw,22px);font-weight:850;min-height:58px;box-shadow:0 5px 0 #d77529;cursor:pointer}
+#room-activity-bathroom .bath-speak:active{transform:translateY(3px);box-shadow:0 2px 0 #d77529}
+#room-activity-bathroom .bath-hint{margin:9px 0 2px;color:#597680;font-size:16px}
+#room-activity-bathroom .bath-choices{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:16px 0}
+#room-activity-bathroom .bath-card{position:relative;border:5px solid #e5ecf0;border-radius:23px;background:white;padding:0;overflow:hidden;cursor:pointer;min-width:0;box-shadow:0 9px 15px #34526827;transition:transform .15s,border-color .15s,box-shadow .15s;aspect-ratio:1/1}
+#room-activity-bathroom .bath-card:hover{transform:translateY(-4px);box-shadow:0 12px 20px #34526842}
+#room-activity-bathroom .bath-card:focus-visible{outline:5px solid #ffb600;outline-offset:4px}
+#room-activity-bathroom .bath-card img{width:100%;height:100%;display:block;object-fit:cover;object-position:center}
+#room-activity-bathroom .bath-card .bath-number{position:absolute;left:10px;top:10px;background:#ffffffdc;color:#31515f;border-radius:100px;font-size:19px;font-weight:900;padding:5px 12px;box-shadow:0 1px 4px #0002}
+#room-activity-bathroom .bath-card.is-correct{border-color:#35b57d;box-shadow:0 0 0 4px #99ecc7,0 14px 22px #3a986650}
+#room-activity-bathroom .bath-card.is-wrong{border-color:#e5b1a3;opacity:.69}
+#room-activity-bathroom .bath-card.is-correct::after{content:'✓';position:absolute;right:11px;bottom:10px;width:50px;height:50px;border-radius:50%;background:#29a96b;color:#fff;display:grid;place-items:center;font-size:34px;font-weight:900;box-shadow:0 3px 9px #0003}
+#room-activity-bathroom .bath-card:disabled{cursor:default}
+#room-activity-bathroom .bath-result{background:#fff;border:2px dashed #9ac3b9;border-radius:19px;padding:14px 18px;min-height:58px;font-size:18px;font-weight:750;line-height:1.65;color:#31505c}
+#room-activity-bathroom .bath-next,#room-activity-bathroom .bath-restart{display:inline-block;border:0;border-radius:18px;background:#4b8cab;color:white;min-height:57px;padding:13px 24px;font-size:19px;font-weight:800;margin-top:12px;cursor:pointer}
+#room-activity-bathroom .bath-next[hidden]{display:none}
+#room-activity-bathroom .bath-finale{text-align:center;padding:25px 10px}
+#room-activity-bathroom .bath-finale strong{font-size:clamp(25px,4vw,38px);color:#377559}
+#room-activity-bathroom .bath-finale p{font-size:20px;line-height:1.7}
+@media(max-width:640px){#room-activity-bathroom .bath-choices{grid-template-columns:1fr;gap:12px}#room-activity-bathroom .bath-card{aspect-ratio:1.6/1;max-height:260px}#room-activity-bathroom .bath-card img{object-position:center 40%}#room-activity-bathroom .bath-ask{justify-content:center}#room-activity-bathroom .bath-ask h3{flex-basis:100%;text-align:center}#room-activity-bathroom .bath-speak{width:100%}}
+@media(prefers-reduced-motion:reduce){#room-activity-bathroom .bath-card{transition:none}}
