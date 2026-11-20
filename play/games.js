@@ -2,6 +2,7 @@
 (()=>{
 'use strict';
 
+
 // Use the current homepage artwork rather than the previous portraits or emoji.
 const menuArtwork={"dad":"/assets/home-life/dad-v2.png","mom":"/assets/home-life/mom-ama-v2.png","ama":"/assets/home-life/mom-ama-v2.png","dodo":"/assets/home-life/dodo-detective.png","dragon":"/assets/home-life/dragon-dishes.png","devil":"/assets/rooms/devil.png"};
 function artworkFor(id){
@@ -16,8 +17,9 @@ function artworkFor(id){
  return menuArtwork.dodo;
 }
 
+
 const cards=[
-["dishwash","🧽","洗碗泡泡小幫手","海綿起泡、洗掉髒污、沖乾淨再收好。","生活任務 · 洗 3 個碗盤"],
+["dishwash","🧽","洗碗泡泡小幫手","拿海綿刷污漬、沖泡泡、把亮晶晶的碗盤收好。","圖像互動 · 洗 3 個餐具"],
 ["trashsort","♻️","垃圾分類小隊長","幫常見垃圾找到正確的桶子。","生活任務 · 分類 6 樣"],
 ["sweep","🧹","掃地小幫手","拿掃把掃紙屑，再用畚箕收好。","生活任務 · 整理 3 間房"],
 ["mop","🪣","拖地亮晶晶","洗拖把、擰乾、拖掉腳印，最後收好。","生活任務 · 拖乾淨 6 格"],
@@ -201,6 +203,7 @@ shuffle([target,...shuffle(letters.filter(x=>x!==target)).slice(0,2)]).forEach(v
 render();
 }
 
+
 /* Second collection: six more family adventures. */
 const css2=document.createElement('style');css2.textContent=`
 .mg-door-scene{max-width:560px;margin:18px auto;display:flex;gap:24px;justify-content:center;align-items:flex-end}.mg-door{position:relative;width:150px;height:220px;background:#b98452;border:10px solid #8c6038;border-radius:45px 45px 6px 6px;color:#fff3c9;display:flex;align-items:center;justify-content:center;font-size:38px;box-shadow:inset 0 0 0 4px #d6a473}.mg-door:after{content:'●';position:absolute;right:8px;top:110px;color:#f5d38d;font-size:22px}.mg-door.open{transform:perspective(400px) rotateY(-25deg);background:#e9f1db;transition:transform .4s}.mg-door-scene img{width:140px;height:140px;object-fit:contain}.mg-puzzle-layout{display:flex;gap:22px;justify-content:center;align-items:flex-start;flex-wrap:wrap}.mg-puzzle-preview{width:130px;height:130px;object-fit:contain;border:1px dashed #bac9a7;border-radius:18px;background:#fffaf0;padding:8px}.mg-puzzle-board{display:grid;width:min(100%,420px);gap:4px;background:#f1e8d4;border:5px solid #d7c6a1;border-radius:14px;padding:5px}.mg-puzzle-piece{aspect-ratio:1;min-width:0;position:relative;border:2px solid transparent;border-radius:5px;background-color:#fffaf0;background-repeat:no-repeat;cursor:pointer;padding:0}.mg-puzzle-piece.selected{border-color:#b77a2d;box-shadow:0 0 0 2px #e8c36f}.mg-puzzle-piece.right{border-color:#a6bf91}.mg-puzzle-piece span{position:absolute;top:2px;left:3px;font-size:12px;border-radius:50%;padding:2px 5px;background:#ffffffdf;color:#556149}.mg-clue{position:relative;width:170px;height:118px;overflow:hidden;border:3px solid #c5ceb4;border-radius:24px;background:#fff6e5;margin:20px auto}.mg-clue img{position:absolute;width:260px;height:220px;max-width:none;object-fit:fill}.mg-detective-choice{width:150px;min-width:0}.mg-detective-choice img{width:95px;height:95px;display:block;object-fit:contain;margin:auto}.mg-beats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;max-width:480px;margin:24px auto}.mg-beat{border:3px solid transparent;border-radius:24px;min-height:120px;font-size:26px;font-weight:750;color:#3c4937;background:#dbe7ca;box-shadow:0 5px 0 #c4d0b4;transition:filter .1s,transform .1s}.mg-beat:nth-child(2){background:#f3d4a4}.mg-beat:nth-child(3){background:#d5d4ec}.mg-beat:nth-child(4){background:#efd0c9}.mg-beat.lit{filter:brightness(1.12);border-color:#6b8156;transform:translateY(-4px) scale(1.02)}.mg-coop-turn{background:#edf0df;padding:12px 18px;border-radius:18px;font-size:19px;color:#48603c;margin:14px auto;max-width:520px}.mg-coop-lane{display:flex;align-items:center;justify-content:center;gap:24px;min-height:130px}.mg-coop-food{font-size:58px;min-width:70px}.mg-coop-food.delivered{animation:mg-deliver .5s ease-out}.mg-water-meter{width:220px;height:95px;border:4px solid #9bb7bd;border-top:0;border-radius:0 0 45px 45px;background:white;position:relative;overflow:hidden;margin:22px auto}.mg-water-fill{position:absolute;bottom:0;width:100%;background:#9dcfdf;transition:height .3s}.mg-toy-chosen{border-color:#b18d3e!important;background:#fff3d4!important}.mg-task-check{font-size:17px;color:#4e7142;line-height:1.8;margin:15px}.mg-basket{font-size:23px;min-width:130px}@keyframes mg-deliver{from{transform:translateY(-30px);opacity:.3}to{transform:translateY(0);opacity:1}}@media(max-width:600px){.mg-door{width:120px;height:180px}.mg-door-scene{gap:12px}.mg-door-scene img{width:110px;height:110px}.mg-detective-choice{width:120px}.mg-puzzle-preview{width:95px;height:95px}.mg-puzzle-board{width:min(100%,340px)}.mg-coop-lane{gap:12px}.mg-beat{min-height:100px}.mg-basket{min-width:100px;font-size:18px}}@media(prefers-reduced-motion:reduce){.mg-door,.mg-beat,.mg-water-fill,.mg-coop-food{animation:none!important;transition:none!important}}
@@ -266,6 +269,7 @@ else if(task==='toys'){body.append(el('p','question','先點玩具，再點它�
 else{body.append(el('p','question','龍弟弟記得：車車躲在「星星毯子」下面。'));const row=el('div','mg-choices');[['☁️','雲朵毯子'],['⭐','星星毯子'],['🌙','月亮毯子']].forEach(([icon,name])=>{const b=btn(icon+' '+name,'mg-choice',()=>{if(done.car)return;if(icon!=='⭐'){feedback.textContent='這裡沒有，找找星星毯子。';return;}b.textContent='🚗 找到車車了！';finish();});row.append(b);});body.append(row);}}
 const again=btn('再幫忙一回 ↻','primary',chores);again.hidden=true;stage.append(again);show();
 }
+
 
 /* Six-plus adventures: untimed puzzles, hints and retries. */
 const plusStyle=el('style');plusStyle.textContent=`
@@ -385,6 +389,8 @@ const newButtons=freshIds.map(id=>areas.dodo.grid.querySelector('[data-game-id="
 newButtons.forEach(b=>b.classList.add('sp-new'));areas.dodo.grid.prepend(...newButtons);
 const newNote=el('p','sp-new-note','✨ 六歲＋新挑戰在最前面！探索迷宮、當小店長、解密碼、排故事，每款都有多關和提示，不用趕時間。');
 areas.dodo.menu.querySelector('.mg-menu-heading').after(newNote);
+
+
 
 
 /* Family hosts: eight new untimed games for ages six and up. */
@@ -517,6 +523,8 @@ b.setAttribute('aria-pressed',String(key==='all'));roleFilters.append(b);
 areas.dodo.menu.querySelector('.mg-menu-heading').after(roleFilters);
 
 
+
+
 /* Hands-on home routines. All actions are pretend play, without timers. */
 const homeRoutineHosts={dishwash:'mom',trashsort:'dad',sweep:'ama',mop:'mom',bath:'dad'};
 function homeRoutineStage(id){
@@ -527,16 +535,14 @@ const hcStyle=el('style');hcStyle.textContent=`
 @media(max-width:760px){.hc-board{padding:12px}.hc-tile{min-height:64px}.hc-plate{padding:20px;border-width:9px}.hc-note{font-size:17px}}
 `;document.head.append(hcStyle);
 function dishwash(){
-const stage=homeRoutineStage('dishwash');let round=0,phase='soap',cleaned=new Set();const body=el('div');stage.append(body);const feedback=status(stage);
-function draw(){body.replaceChildren();if(round>=3){body.append(el('h3','','三個碗盤都乾淨了！謝謝小幫手 🫧 ⭐'),btn('再洗一回 ↻','primary',dishwash));return;}
-body.append(el('p','sp-progress','第 '+(round+1)+' / 3 個碗盤'),el('p','question',{soap:'先讓海綿沾水、加一點清潔泡泡。',scrub:'用海綿點一點，把三個髒污洗掉。',rinse:'髒污都洗掉了，接著把泡泡沖乾淨。',dry:'碗盤沖乾淨了，擦乾後收好。'}[phase]));
-const plate=el('div','hc-plate');for(let i=0;i<3;i++){const b=btn(cleaned.has(i)?'✨':'●','hc-stain',()=>{if(phase!=='scrub'||cleaned.has(i))return;cleaned.add(i);if(cleaned.size===3)phase='rinse';feedback.textContent=cleaned.size===3?'三個髒污都洗掉了！':'洗掉一個髒污了。';draw();});b.disabled=phase!=='scrub'||cleaned.has(i);b.setAttribute('aria-label','洗第 '+(i+1)+' 個髒污');plate.append(b);}body.append(plate);
-if(phase==='soap')body.append(btn('🧽 海綿加泡泡','primary',()=>{phase='scrub';feedback.textContent='海綿準備好了！';draw();}));
-if(phase==='rinse')body.append(btn('🚰 沖掉泡泡','primary',()=>{phase='dry';feedback.textContent='泡泡沖乾淨了。';draw();}));
-if(phase==='dry')body.append(btn('🧻 擦乾，放回碗架','primary',()=>{sound();round++;phase='soap';cleaned=new Set();feedback.textContent=round<3?'收好了，換下一個碗盤。':'';draw();}));
-}draw();
+ const stage=shell('dishwash');
+ stage.style.maxWidth='1100px';stage.style.margin='0 auto';
+ const frame=el('iframe');frame.title='洗碗泡泡小幫手：圖像互動洗碗遊戲';
+ frame.src='/play/dish-family/?roomembed=1';frame.loading='eager';
+ frame.setAttribute('allow','autoplay');
+ frame.style.cssText='display:block;width:100%;height:min(1000px,calc(100vh + 400px));min-height:750px;border:0;border-radius:22px;background:#f2f9ed';
+ stage.append(frame);
 }
-const trashItems=[{icon:'🧴',name:'乾淨的空塑膠瓶',bin:'資源回收'},{icon:'📦',name:'乾淨的紙箱',bin:'資源回收'},{icon:'📰',name:'舊報紙',bin:'資源回收'},{icon:'🍌',name:'香蕉皮',bin:'廚餘'},{icon:'🥬',name:'摘下來的菜葉',bin:'廚餘'},{icon:'🧻',name:'用過的衛生紙',bin:'一般垃圾'},{icon:'🍬',name:'糖果包裝紙',bin:'一般垃圾'}];
 function trashsort(){
 const stage=homeRoutineStage('trashsort'),deck=shuffle(trashItems).slice(0,6);let round=0;const body=el('div');stage.append(body);const feedback=status(stage),next=btn('下一樣 →','primary',()=>{round++;draw();});stage.append(next,el('p','hc-note','遊戲練習常見分類，實際丟垃圾時請跟著家人和當地回收規定。'));
 function draw(){body.replaceChildren();feedback.textContent='';next.hidden=true;if(round>=6){body.append(el('h3','','六樣都分好了！垃圾也找到自己的家 ♻️ ⭐'),btn('再分類一次 ↻','primary',trashsort));return;}
@@ -577,11 +583,14 @@ draw();
 const homeIds=Object.keys(homeRoutineHosts),homeCards=homeIds.map(id=>areas.dragon.grid.querySelector('[data-game-id="'+id+'"]'));
 homeCards.forEach(card=>card.classList.add('sp-new'));areas.dragon.grid.prepend(...homeCards);
 
+
 // The living room fur links directly to the existing broom-and-grid activity.
 const linkedGame=new URLSearchParams(location.search).get('game');
 if(cards.some(card=>card[0]===linkedGame)&&linkedGame!=='dayplan'){
  document.addEventListener('DOMContentLoaded',()=>open(linkedGame),{once:true});
 }
+
+
 
 
 })();
