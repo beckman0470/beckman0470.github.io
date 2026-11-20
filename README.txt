@@ -1,8 +1,16 @@
-雞窩尺寸與廚房互動熱區更新｜2026-11-15
+Chicken Coop — clean centered layout (2026-11-20)
 
-更新：僅覆蓋 GitHub 根目錄 css/room-activities.css。
-雞窩：960px 最大寬度，16:9 桌機比例，置中，標題仍在左上角。
-廚房：保留現有兩個 HTML 連結，只隱藏額外 emoji 圖示，點咖啡杯與料理鍋的位置依然能跳到既有功能。
-浴室：保留既有設定、不再調整。
+Update only css/room-activities.css in GitHub repository root.
+No HTML, JS, images, bathroom or kitchen behavior were changed.
 
-上傳 GitHub 後使用 Ctrl+Shift+R 強制重新整理。這是程式碼檢查後的修補包，尚未經線上瀏覽器視覺／點擊測試。
+Fixes:
+- Removes generations of competing study-room positioning rules.
+- Centers a responsive 16:9 desktop study scene within the page layout; no 960px cap or 100vw offset.
+- Places title in a translucent panel on the background top-left.
+- Preserves five clickable object links and aligns hotspots to 16:9 cropped image.
+- Uses 3:2 contain on mobile for full image visibility.
+- Retains existing kitchen/bathroom icon-hiding CSS intact.
+
+After upload: commit changes, hard refresh Ctrl+Shift+R, inspect desktop/mobile and click all five objects.
+
+Validation performed: CSS rule checks, balanced braces, ZIP CRC. No live-browser visual acceptance test.
