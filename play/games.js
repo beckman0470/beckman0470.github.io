@@ -581,7 +581,10 @@ homeCards.forEach(card=>card.classList.add('sp-new'));areas.dragon.grid.prepend(
 
 // Keep existing direct game links usable.
 const linkedGame=new URLSearchParams(location.search).get('game');
-if(cards.some(card=>card[0]===linkedGame)&&linkedGame!=='dayplan'){
+const classicLink=Object.keys(originals).find(area=>originals[area].some(([id])=>'classic-'+id===linkedGame));
+if(classicLink){
+ document.addEventListener('DOMContentLoaded',()=>openClassic(classicLink,linkedGame.slice(8)),{once:true});
+}else if(cards.some(card=>card[0]===linkedGame)&&linkedGame!=='dayplan'){
  document.addEventListener('DOMContentLoaded',()=>open(linkedGame),{once:true});
 }
 

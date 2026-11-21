@@ -98,3 +98,5 @@ footer { display: flex; justify-content: space-between; align-items: center; fle
   .home-content-counts { gap: 6px; }
   .home-content-counts a { padding-inline: 7px; }
 }
+.room-card .home-game-categories { margin-bottom: 10px; }
+.room-card .home-game-categories a { background: #dcebdd; font-weight: 700; }

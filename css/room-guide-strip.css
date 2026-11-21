@@ -39,3 +39,23 @@
   .cdj-welcome + .room-link-bar .room-link-group > strong { flex: 0 0 100%; }
   .cdj-welcome + .room-link-bar .room-link-group + .room-link-group { padding-top: 7px; border-top: 1px solid #e2e9df; }
 }
+#game-categories {
+  margin: 12px 0 30px;
+  color: #294e3a;
+}
+#game-categories h2 { margin: 0 0 12px; }
+#game-categories h2 small { margin-inline-start: .4em; font-size: .64em; color: #426551; }
+#game-categories details {
+  padding: 3px 14px;
+  margin: 7px 0;
+  border: 1px solid #d9e4d5;
+  border-radius: 12px;
+  background: #fffdf7;
+  scroll-margin-top: 16px;
+}
+#game-categories summary { min-height: 46px; align-content: center; cursor: pointer; }
+#game-categories summary span { margin-inline-start: 12px; font-size: .88em; color: #426551; }
+#game-categories p { margin: 0 0 8px; }
+#game-categories ul { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 7px; margin: 0 0 12px; }
+#game-categories li a { display: inline-flex; align-items: center; min-height: 44px; padding: 5px 10px; border-radius: 9px; background: #edf3e9; color: #2e523d; }
+#game-categories a:focus-visible, #game-categories summary:focus-visible { outline: 2px solid #a85928; outline-offset: 3px; }

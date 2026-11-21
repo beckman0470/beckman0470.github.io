@@ -4,7 +4,7 @@ const scene=document.querySelector('.cdj-greeting[data-room]'),hero=scene?.close
 const room=scene.dataset.room,D=window.CDJHouseData;if(!D)return;
 const make=(tag,cls,text)=>{const e=document.createElement(tag);if(cls)e.className=cls;if(text!==undefined)e.textContent=text;return e;};
 const linkStyle=make('link');linkStyle.rel='stylesheet';linkStyle.href='/css/room-content.css?v=20261109-room14';document.head.append(linkStyle);
-const guideStyle=make('link');guideStyle.rel='stylesheet';guideStyle.href='/css/room-guide-strip.css?v=20261121-1';document.head.append(guideStyle);
+const guideStyle=make('link');guideStyle.rel='stylesheet';guideStyle.href='/css/room-guide-strip.css?v=20261121-2';document.head.append(guideStyle);
 const welcome={living:'來坐，一起看我們家的影片。',dining:'一起來用餐吧',mom:'親子生活教養',ama:'安靜穩定力量',study:'生活點滴記錄',games:'一起放鬆一下',kitchen:'自己來做料理',bathroom:'浴廁安全守則'};
 if(welcome[room])hero.querySelector('h1').textContent=welcome[room];
 // Size the remaining rooms in image coordinates. Toddlers and schoolchildren
@@ -55,6 +55,18 @@ const all=Object.values(groups).flat(),inline=all.filter(x=>x.inline),bar=make('
 let current=null,frame=null,observer=null,stage=null,select=null,feedback=null,launchButton=null,driver=null,loadTimer=null,loadSerial=0,startProxy=null,pauseProxy=null;
 const targetHost=document.querySelector('#house-content')||document.querySelector('main');
 if(room==='games'){
+ const guide=document.getElementById('game-categories-guide');
+ if(guide){
+  targetHost.prepend(guide.content.cloneNode(true));
+  const selectCategory=()=>{
+   const category=document.getElementById(location.hash.slice(1));
+   if(!category?.matches('#game-categories > details'))return;
+   category.open=true;
+   category.scrollIntoView({block:'start'});
+  };
+  requestAnimationFrame(selectCategory);
+  window.addEventListener('hashchange',selectCategory);
+ }
  const collections=[...targetHost.children].find(e=>e.classList.contains('house-cards'));
  const section=make('section','house-section');
  section.append(make('h2','','單款遊戲'));
