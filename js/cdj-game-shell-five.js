@@ -4,7 +4,7 @@
 (()=>{'use strict';
   if(new URLSearchParams(location.search).has('roomembed'))return;
   const routes={
-    '/play/fast-food/':['餐廳','/rooms.html?room=dining'],
+    '/play/fast-food/':['餐廳','/rooms.html?room=dining#dining-games'],
     '/play/yahoo-water/':['餐廳','/rooms.html?room=dining'],
     '/play/youyou-food/':['餐廳','/rooms.html?room=dining'],
     '/play/dish-family/':['廚房','/rooms.html?room=kitchen'],
@@ -51,4 +51,23 @@
     }
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',install,{once:true});else install();
+})();
+/* Return to the game selection that opened this page. */
+(()=>{
+ const addReturn=()=>{
+  try{
+   const state=JSON.parse(sessionStorage.getItem('cdj-game-finder-return')||'null');
+   if(!state||state.target!==location.pathname+location.search||document.getElementById('cdj-return-to-results'))return;
+   const url=new URL(state.source,location.origin);
+   if(url.origin!==location.origin||url.pathname!=='/rooms.html'||url.searchParams.get('room')!=='games')return;
+   const nav=document.querySelector('.cdjg-shell-actions, .entry-subnav, .cdj-game-shell-actions, header nav, header');
+   if(!nav)return;
+   const a=document.createElement('a');
+   a.id='cdj-return-to-results';
+   a.href=url.pathname+url.search+url.hash;
+   a.textContent='回到找遊戲';
+   nav.append(a);
+  }catch(_){}
+ };
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',addReturn,{once:true});else addReturn();
 })();

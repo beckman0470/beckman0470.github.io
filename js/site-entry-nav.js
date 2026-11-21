@@ -179,3 +179,22 @@ inner.append(brand,nav);host.replaceChildren(inner);host.dataset.unifiedHeader=v
   };
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',apply,{once:true});else apply();
 })();
+/* Return to the game selection that opened this page. */
+(()=>{
+ const addReturn=()=>{
+  try{
+   const state=JSON.parse(sessionStorage.getItem('cdj-game-finder-return')||'null');
+   if(!state||state.target!==location.pathname+location.search||document.getElementById('cdj-return-to-results'))return;
+   const url=new URL(state.source,location.origin);
+   if(url.origin!==location.origin||url.pathname!=='/rooms.html'||url.searchParams.get('room')!=='games')return;
+   const nav=document.querySelector('.cdjg-shell-actions, .entry-subnav, .cdj-game-shell-actions, header nav, header');
+   if(!nav)return;
+   const a=document.createElement('a');
+   a.id='cdj-return-to-results';
+   a.href=url.pathname+url.search+url.hash;
+   a.textContent='回到找遊戲';
+   nav.append(a);
+  }catch(_){}
+ };
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',addReturn,{once:true});else addReturn();
+})();

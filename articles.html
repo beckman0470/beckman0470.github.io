@@ -10,7 +10,7 @@
 <meta content="雞爸爸一家生活紀錄、雞爸爸內心小惡魔、珍山陳經典語錄、雞爸爸親子期刊、雞爸爸健康期刊。" name="description"/>
 <link href="css/articles-v59.css" rel="stylesheet"/>
 <script defer="" src="/js/analytics-consent.js"></script>
-<link data-entry-nav-style="order2" href="/css/site-entry-nav.css?v=20261107-compact2" rel="stylesheet"/><script defer="" src="/js/site-entry-nav.js?v=20261121-home-link"></script>
+<link data-entry-nav-style="order2" href="/css/site-entry-nav.css?v=20261107-compact2" rel="stylesheet"/><script defer="" src="/js/site-entry-nav.js?v=20261121-ux-finder"></script>
 <style>
 .journal-categories{display:flex;flex-wrap:wrap;gap:12px;margin:26px 0 16px;justify-content:flex-start}
 .journal-categories a{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:10px 20px;background:#fffdf8;border:1px solid #bbcbb0;border-radius:99px;color:#42664d;font:20px/1.6 "Huninn","Microsoft JhengHei",sans-serif;text-decoration:none}
@@ -38,7 +38,7 @@
 .card-media{display:flex!important;align-items:center!important;justify-content:center!important;aspect-ratio:3/2!important;height:auto!important;min-height:0!important;overflow:hidden;background:#f7f4ec!important}
 .card-media img{display:block!important;width:100%!important;height:100%!important;max-height:100%!important;object-fit:contain!important;object-position:center!important}
 .card-tags{display:none!important}
-</style><script defer="" src="/js/article-community.js?v=20261108-1"></script><link href="/css/welcome-headers.css?v=20261108-1" rel="stylesheet"/><link href="/css/house-rooms.css?v=20261108-room6" rel="stylesheet"/><link rel="stylesheet" href="/css/room-immersive.css?v=20261108-room6"><link rel="stylesheet" href="/css/room-activities.css?v=20261108-welcome9"></head>
+</style><script defer="" src="/js/article-community.js?v=20261108-1"></script><link href="/css/welcome-headers.css?v=20261108-1" rel="stylesheet"/><link href="/css/house-rooms.css?v=20261108-room6" rel="stylesheet"/><link rel="stylesheet" href="/css/room-immersive.css?v=20261108-room6"><link rel="stylesheet" href="/css/room-activities.css?v=20261108-welcome9"><link rel="stylesheet" href="/css/ux-finder.css?v=1"></head>
 <body data-welcome-page="articles">
 <header class="site-header cdj-unified-header" data-unified-header="order2"><div class="cdj-unified-inner"><a aria-label="雞爸爸生活研究室首頁" class="cdj-unified-brand" href="/"><img alt="" height="52" src="/assets/img/logo-avatar.png" width="52"/><span><strong>雞爸爸生活研究室</strong><small>CHICKEN DAD JOURNAL</small></span></a><nav aria-label="主要導覽" class="entry-subnav"><a href="/videos.html">客廳</a><a href="/articles.html" aria-current="page">雞窩</a><a href="/rooms.html?room=dining">餐廳</a><a href="/rooms.html?room=mom">鼠窩</a><a href="/rooms.html?room=ama">兔窩</a><a href="/rooms.html?room=kitchen">廚房</a><a href="/rooms.html?room=bathroom">浴室</a><a href="/rooms.html?room=games">遊戲間</a><a href="/stickers.html">貼圖小舖</a><a href="/family.html">認識我們</a></nav></div></header>
 <main class="journal-page cdj-welcome-main" id="journal-page"><section aria-labelledby="cdj-welcome-title" class="cdj-welcome"><div class="cdj-welcome-copy"><p class="cdj-welcome-label">生活文章</p><h1 id="cdj-welcome-title">日子慢慢過，<br/>故事慢慢讀。</h1><p class="cdj-welcome-summary">一家人的日常、生活裡的領悟，還有親子與健康研究。</p></div><figure class="cdj-welcome-picture"><img alt="雞爸爸一家在桌邊一起讀書" fetchpriority="high" height="800" src="/assets/welcome/articles.webp?v=20261108-1" width="1200"/></figure></section>
@@ -52,7 +52,7 @@
 </div>
 <section aria-labelledby="cards-heading" class="cards-panel">
 <h2 class="sr-only" id="cards-heading">文章列表</h2>
-<p class="cdj-filter-status" id="cdj-filter-status" role="status"></p><div class="cards-grid" id="cards-grid"></div>
+<div class="journal-find"><label>搜尋文章標題 <input id="journal-search" type="search"></label><label>排序 <select id="journal-sort"><option value="new">最新</option><option value="old">最早</option></select></label></div><p class="cdj-filter-status" id="cdj-filter-status" role="status"></p><div class="cards-grid" id="cards-grid"></div><button id="journal-load" type="button" hidden>看更多文章</button>
 <div class="cards-actions">
 <a class="btn btn-primary" href="#cards-grid" id="journal-more">瀏覽更多文章</a>
 </div>
@@ -130,14 +130,37 @@
     }
 
     const grid = document.getElementById('cards-grid');
+    const search = document.getElementById('journal-search');
+    const sorting = document.getElementById('journal-sort');
+    const load = document.getElementById('journal-load');
+    const initial = new URLSearchParams(location.search);
+    search.value = initial.get('q') || '';
+    sorting.value = initial.get('sort') === 'old' ? 'old' : 'new';
+    let limit = 18;
+    let lastJournal = key;
+    function refreshArticles(reset) {
+      if(reset)limit=18;
+      window.cdjSelectJournal(lastJournal,true);
+    }
+    search.addEventListener('input',()=>refreshArticles(true));
+    sorting.addEventListener('change',()=>refreshArticles(true));
+    load.addEventListener('click',()=>{
+      const firstNew=grid.children.length;
+      limit+=18;
+      refreshArticles(false);
+      grid.children[firstNew]?.focus({preventScroll:true});
+    });
     window.cdjSelectJournal=function(selectedKey,update=true){
 if(!Object.prototype.hasOwnProperty.call(journals,selectedKey))selectedKey='all';
-document.body.dataset.journal=selectedKey;grid.replaceChildren();
+if(lastJournal!==selectedKey)limit=18;lastJournal=selectedKey;document.body.dataset.journal=selectedKey;grid.replaceChildren();
 document.querySelectorAll('[data-journal-filter]').forEach(a=>{const active=a.dataset.journalFilter===selectedKey;a.classList.toggle('active',active);if(active)a.setAttribute('aria-current','true');else a.removeAttribute('aria-current');});
-if(update){const u=new URL(location.href);u.searchParams.set('room',selectedKey);history.replaceState(null,'',u.pathname+u.search);}
-const filtered=selectedKey==='all'?stories:stories.filter(x=>x.journal===selectedKey);
+if(update){const u=new URL(location.href);u.searchParams.set('room',selectedKey);for(const [name,value] of [['q',search.value.trim()],['sort',sorting.value==='old'?'old':'']]){if(value)u.searchParams.set(name,value);else u.searchParams.delete(name);}history.replaceState(history.state,'',u.pathname+u.search+u.hash);}
+const term=search.value.trim().normalize('NFKC').toLowerCase();
+const filtered=stories.filter(item=>(selectedKey==='all'||item.journal===selectedKey)&&item.title.normalize('NFKC').toLowerCase().includes(term));
+filtered.sort((a,b)=>(sorting.value==='old'?1:-1)*String(a.date).localeCompare(String(b.date)));
+load.hidden=filtered.length<=limit;
 document.getElementById('cdj-filter-status').textContent=journals[selectedKey].label+' · '+filtered.length+' 篇文章';
-    filtered.forEach(item => {
+    filtered.slice(0,limit).forEach(item => {
       const a = document.createElement('a');
       a.className = 'story-card';
       a.href = item.href || '#';

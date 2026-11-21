@@ -100,3 +100,14 @@ footer { display: flex; justify-content: space-between; align-items: center; fle
 }
 .room-card .home-game-categories { margin-bottom: 10px; }
 .room-card .home-game-categories a { background: #dcebdd; font-weight: 700; }
+.site-layout { display: block; }
+.site-main { display: grid; grid-template-columns: 206px minmax(0,1fr); gap: 0 clamp(20px,3vw,44px); }
+.site-main > :not(.room-rail) { grid-column: 2; }
+.site-main > .room-rail { grid-area: 1 / 1 / span 5; }
+.site-main > section[aria-labelledby="more-rooms"], .site-main > section[aria-labelledby="family-title"] { margin-top: 33px; }
+.header-inner nav a[aria-current="page"] { font-weight: 750; }
+@media(max-width:1050px) { .site-main { grid-template-columns: 164px minmax(0,1fr); gap: 0 16px; } }
+@media(max-width:730px) {
+ .site-main { display: block; }
+ .site-main > .room-rail { margin: 0 0 16px; }
+}
