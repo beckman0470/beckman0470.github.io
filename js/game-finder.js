@@ -3,11 +3,13 @@
   if (!guide) return;
   const input = guide.querySelector('#game-search');
   const picker = guide.querySelector('#game-category');
+  const picture = guide.querySelector('#game-picture-only');
   const result = guide.querySelector('#game-find-results');
   const groups = [...guide.querySelectorAll('details')];
   const key = 'cdj-game-finder-return';
   const params = new URLSearchParams(location.search);
   input.value = params.get('gameq') || '';
+  picture.checked = params.get('picture') === '1';
   const fromHash = () => /^#game-cat-(life|puzzle|sport|strategy|other)$/.exec(location.hash)?.[1] || '';
   picker.value = params.get('gamecat') || fromHash();
   const normalize = text => text.normalize('NFKC').toLowerCase().trim();
@@ -20,18 +22,18 @@
       let matches = 0;
       const allowed = !category || group.id === 'game-cat-' + category;
       for (const item of group.querySelectorAll('li')) {
-        item.hidden = !normalize(item.textContent).includes(term);
+        item.hidden = !normalize(item.querySelector('a').textContent).includes(term) || (picture.checked && !item.dataset.gameHint?.startsWith('看圖可玩'));
         if (!item.hidden) matches++;
       }
       group.hidden = !allowed || !matches;
-      if (update || term || category) group.open = !group.hidden && (Boolean(term) || Boolean(category));
+      if (update || term || category || picture.checked) group.open = !group.hidden && (Boolean(term) || Boolean(category) || picture.checked);
       if (allowed) count += matches;
     }
     result.hidden = false;
     result.textContent = count ? '找到 ' + count + ' 款遊戲' : '找不到符合的遊戲，換個名稱試試。';
     if (update) {
       const url = new URL(location.href);
-      for (const [name, value] of [['gameq', input.value.trim()], ['gamecat', category]]) {
+      for (const [name, value] of [['gameq', input.value.trim()], ['gamecat', category], ['picture', picture.checked ? '1' : '']]) {
         if (value) url.searchParams.set(name, value);
         else url.searchParams.delete(name);
       }
@@ -41,6 +43,7 @@
   }
   input.addEventListener('input', () => apply(true));
   picker.addEventListener('change', () => apply(true));
+  picture.addEventListener('change', () => apply(true));
   window.addEventListener('hashchange', () => {
     if (!fromHash()) return;
     picker.value = fromHash();

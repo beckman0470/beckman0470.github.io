@@ -111,3 +111,17 @@ footer { display: flex; justify-content: space-between; align-items: center; fle
  .site-main { display: block; }
  .site-main > .room-rail { margin: 0 0 16px; }
 }
+.recent-updates { margin-top: 28px; }
+.recent-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; }
+.recent-grid a { display:block; background:#fffdf7; border:1px solid #dce4d5; border-radius:13px; overflow:hidden; text-decoration:none; }
+.recent-grid a:hover strong { text-decoration:underline; }
+.recent-grid img { display:block; width:100%; height:auto; aspect-ratio:16/9; object-fit:cover; }
+.recent-grid a > div { display:grid; gap:4px; padding:9px 11px; }
+.recent-grid span { color:var(--quiet); font-size:13px; }
+.recent-grid strong { line-height:1.35; }
+@media(max-width:600px){
+ .recent-grid {grid-template-columns:1fr;}
+ .recent-grid a {display:grid;grid-template-columns:minmax(92px,30%) minmax(0,1fr);align-items:center;}
+}
+
+.site-main > .room-rail { grid-row: 1 / span 6; }

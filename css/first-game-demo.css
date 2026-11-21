@@ -1,0 +1,33 @@
+.cash-first-demo .cash-demo-tap {
+ position:absolute; right:0; bottom:0; width:22px; height:22px; border:3px solid #694324;
+ border-radius:50%; background:#fff9e8; box-shadow:0 0 0 4px #ffffff99; pointer-events:none;
+ animation:demo-tap .82s ease-out 4 both;
+}
+@keyframes demo-tap {
+ 0% {transform:translate(8px,10px) scale(1.08);opacity:.5}
+ 40% {transform:translate(-13px,-8px) scale(.75);opacity:1}
+ 100% {transform:translate(8px,10px) scale(1);opacity:0}
+}
+.bike-first-demo {
+ display:flex; align-items:center; justify-content:center; flex-wrap:wrap; gap:8px; margin:6px auto;
+ font-size:14px; color:#335543;
+}
+.bike-first-demo[hidden] { display:none!important; }
+.bike-demo-track {
+ position:relative; width:108px;height:39px; display:grid; grid-template-columns:repeat(3,1fr);
+ background:#efe0be; border-radius:8px; overflow:hidden;
+}
+.bike-demo-track i { border-right:1px dashed #927449; }
+.bike-demo-track img {
+ position:absolute; left:calc(50% - 10px); top:2px; width:20px;height:35px; object-fit:contain;
+ animation: demo-lanes 2.3s ease-in-out 3 both;
+}
+@keyframes demo-lanes {
+ 0%,50%,100% {transform:translateX(0)}
+ 25% {transform:translateX(-34px)}
+ 75% {transform:translateX(34px)}
+}
+#featured-yahoo-video { scroll-margin-top:18px; }
+@media(prefers-reduced-motion:reduce){
+ .cash-first-demo .cash-demo-tap,.bike-demo-track img {animation:none}
+}

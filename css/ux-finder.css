@@ -7,3 +7,7 @@
 .game-find input:focus-visible,.game-find select:focus-visible,.journal-find input:focus-visible,.journal-find select:focus-visible,#journal-load:focus-visible {outline:3px solid #a85928;outline-offset:2px}
 #journal-load { margin:18px auto 0; display:block; cursor:pointer; }
 #game-categories [hidden], #journal-load[hidden] { display:none!important; }
+.game-find .picture-filter { align-self:end; display:flex; flex:0 1 auto; align-items:center; min-height:44px; gap:8px; }
+.game-find .picture-filter input { width:20px; height:20px; min-height:0; accent-color:#41684e; }
+#game-categories li[data-game-hint] { display:grid; gap:3px; align-content:start; }
+.game-access-hint { padding-inline:8px; color:#4f6656; font-size:.8rem; }
