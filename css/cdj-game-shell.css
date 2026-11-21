@@ -1,0 +1,9 @@
+/* Only an outer site navigation strip and the native footer on standalone game pages. */
+#cdjg-shell-bar{box-sizing:border-box;position:relative;z-index:100;display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:52px;padding:8px clamp(12px,3vw,30px);border-bottom:1px solid #e3e7dd;background:#fffdf8;color:#385c49;font:600 15px/1.45 system-ui,'Microsoft JhengHei',sans-serif}
+#cdjg-shell-bar a{text-decoration:none;color:inherit}
+#cdjg-shell-bar .cdjg-shell-brand{font-size:clamp(14px,2vw,17px);font-weight:750}
+#cdjg-shell-bar .cdjg-shell-return{min-height:38px;display:inline-flex;align-items:center;justify-content:center;padding:7px 14px;border:1px solid #c1d0c1;background:white;border-radius:999px;white-space:nowrap}
+#cdjg-shell-bar a:focus-visible,.cdjg-shell-footer a:focus-visible{outline:3px solid #e5a64a;outline-offset:3px}
+body>footer.cdjg-shell-footer{box-sizing:border-box;max-width:1120px;margin:20px auto 0;padding:18px clamp(12px,3vw,28px)!important;border-top:1px solid #dbe4d6;color:#53695c;font:500 14px/1.65 system-ui,'Microsoft JhengHei',sans-serif;text-align:center!important}
+body>footer.cdjg-shell-footer a{color:#315f48;font-weight:750}
+@media(max-width:520px){#cdjg-shell-bar{min-height:48px;padding:7px 12px;font-size:13px}#cdjg-shell-bar .cdjg-shell-return{min-height:40px}body>footer.cdjg-shell-footer{font-size:13px}}
