@@ -31,7 +31,7 @@ const init=()=>{
  @media(max-width:680px){#cdj-family-menu-game .fm-layout{grid-template-columns:1fr}#cdj-family-menu-game .fm-ingredients{grid-template-columns:repeat(3,minmax(0,1fr))}#cdj-family-menu-game .fm-ing{min-height:74px;font-size:13px}}
  `;document.head.append(s);
  const item=document.createElement('a');item.className='house-card cdj-menu-cover';item.href='#cdj-family-menu-game';item.innerHTML='<span class="dining-card-picture" aria-hidden="true"></span><div><h3>雞爸爸一家的菜單</h3><p>接下家人的訂單，挑三樣食材，完成料理送上桌！</p><span>開始玩 →</span></div>';
- item.querySelector('.dining-card-picture').style.backgroundImage="url('/assets/play-covers/v1/family-menu.webp?v=20261121')";
+ item.querySelector('.dining-card-picture').style.backgroundImage="url('/assets/play-covers/v1/family-menu.webp?v=20261121-character-fix')";
  games.prepend(item);
  const recipes=[
  {name:'番茄蛋花湯',who:'鼠姊姊',emoji:'🥣',need:['番茄','雞蛋','蔥花']},
@@ -47,7 +47,12 @@ const init=()=>{
  <div class="fm-layout"><div class="fm-order"><span class="fm-person" id="fm-person"></span><strong class="fm-order-name" id="fm-order-name"></strong><div>訂單需要：</div><div class="fm-target" id="fm-target"></div><div class="fm-score" id="fm-score">完成 0 / 5 道　⭐ 0</div></div>
  <div><strong>食材架｜點選 3 樣</strong><div class="fm-ingredients" id="fm-ingredients"></div><div class="fm-actions"><button type="button" id="fm-serve">🍽️ 完成出餐</button><button type="button" id="fm-clear" class="fm-secondary">重新挑選</button><button type="button" id="fm-restart" class="fm-secondary">重玩</button></div><div class="fm-status" id="fm-status" role="status" aria-live="polite"></div></div></div>
  <p class="fm-recipe-toggle">想學真正的作法？下面原本的食譜卡片仍然可以逐張點開閱讀。</p>`;
- menu.querySelector('.dining-dish-grid')?.before(box);
+ const dishGrid = menu.querySelector('.dining-dish-grid');
+ if (dishGrid) {
+   dishGrid.before(box);
+ } else {
+   menu.append(box);
+ }
  const $=id=>box.querySelector('#'+id);let round=0,stars=0,picks=new Set();
  function render(){const r=recipes[round];$('fm-person').textContent=r?'來自 '+r.who+' 的訂單':'今日任務完成';$('fm-order-name').textContent=r?r.emoji+' '+r.name:'🎉 全部完成！';$('fm-target').replaceChildren();
  if(r){r.need.forEach((n)=>{const v=document.createElement('span');v.textContent='✓ '+n;$('fm-target').append(v);});}else {$('fm-target').textContent='你已經幫全家人準備好五道料理！';}
