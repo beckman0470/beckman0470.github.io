@@ -126,3 +126,12 @@ footer { display: flex; justify-content: space-between; align-items: center; fle
 
 .site-main > .room-rail { grid-row: 1 / span 6; }
 .room-card .home-audience a { border-color:#97b39a; background:#cce3ce; font-size:14px; }
+.home-intro { margin-bottom: 14px; }
+.home-content-counts a { min-height: 57px; gap: 1px; }
+.room-card-body h3 + ul { margin-top: 8px; }
+.room-card-body { padding-block: 11px 13px; }
+.room-card .home-game-categories { margin-bottom: 5px; }
+.room-card .home-game-categories li a { min-height: 36px; padding-inline: 7px; }
+@media(max-width:730px) {
+ .room-card .home-game-categories li a { min-height: 44px; }
+}
