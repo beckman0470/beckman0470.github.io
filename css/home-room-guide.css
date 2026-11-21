@@ -74,3 +74,27 @@ footer { display: flex; justify-content: space-between; align-items: center; fle
   .room-card li a { min-height: 44px; }
   .family-photos { grid-template-columns: 1fr; }
 }
+.home-content-counts {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: 10px;
+  margin: 0 0 16px;
+}
+.home-content-counts a {
+  display: grid;
+  gap: 3px;
+  align-content: center;
+  min-height: 66px;
+  padding: 8px clamp(8px,1.4vw,16px);
+  border: 1px solid #c9d8c8;
+  border-radius: 14px;
+  background: #eaf1e6;
+  text-decoration: none;
+}
+.home-content-counts a:hover { background: #dbe9db; }
+.home-content-counts strong { font-size: clamp(14px,1.8vw,20px); line-height: 1.3; }
+.home-content-counts span { color: var(--quiet); font-size: clamp(11px,1.35vw,14px); line-height: 1.35; }
+@media(max-width: 425px) {
+  .home-content-counts { gap: 6px; }
+  .home-content-counts a { padding-inline: 7px; }
+}
