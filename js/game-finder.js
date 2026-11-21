@@ -2,63 +2,75 @@
   const guide = document.getElementById('game-categories');
   if (!guide) return;
   const input = guide.querySelector('#game-search');
-  const picker = guide.querySelector('#game-category');
+  const category = guide.querySelector('#game-category');
+  const audience = guide.querySelector('#game-audience-select');
   const picture = guide.querySelector('#game-picture-only');
   const result = guide.querySelector('#game-find-results');
-  const groups = [...guide.querySelectorAll('details')];
+  const more = guide.querySelector('#game-show-more');
+  const cards = [...guide.querySelectorAll('.filtered-game-grid > li')];
   const key = 'cdj-game-finder-return';
   const params = new URLSearchParams(location.search);
+  const step = 12;
+  let limit = Math.min(cards.length, Math.max(step, Number(params.get('shown')) || step));
+  const normalize = text => text.normalize('NFKC').toLowerCase().trim();
+
+  function syncHash() {
+    const cat = /^#game-cat-(life|puzzle|sport|strategy|other)$/.exec(location.hash);
+    if (cat) category.value = cat[1];
+    if (location.hash === '#kids-games' || location.hash === '#dragon-games') audience.value = 'kids';
+    if (location.hash === '#adult-games') audience.value = 'adult';
+  }
   input.value = params.get('gameq') || '';
   picture.checked = params.get('picture') === '1';
-  const fromHash = () => /^#game-cat-(life|puzzle|sport|strategy|other)$/.exec(location.hash)?.[1] || '';
-  picker.value = params.get('gamecat') || fromHash();
-  const normalize = text => text.normalize('NFKC').toLowerCase().trim();
+  syncHash();
+  if (params.has('gamecat')) category.value = params.get('gamecat');
+  if (params.has('audience')) audience.value = params.get('audience');
 
   function apply(update) {
     const term = normalize(input.value);
-    const category = picker.value;
     let count = 0;
-    for (const group of groups) {
-      let matches = 0;
-      const allowed = !category || group.id === 'game-cat-' + category;
-      for (const item of group.querySelectorAll('li')) {
-        item.hidden = !normalize(item.querySelector('a').textContent).includes(term) || (picture.checked && !item.dataset.gameHint?.startsWith('看圖可玩'));
-        if (!item.hidden) matches++;
-      }
-      group.hidden = !allowed || !matches;
-      if (update || term || category || picture.checked) group.open = !group.hidden && (Boolean(term) || Boolean(category) || picture.checked);
-      if (allowed) count += matches;
+    for (const card of cards) {
+      const match = (!category.value || card.dataset.category === category.value)
+        && (!audience.value || card.dataset.audience.split(' ').includes(audience.value))
+        && (!picture.checked || card.dataset.gameHint?.startsWith('看圖可玩'))
+        && normalize(card.querySelector('strong').textContent).includes(term);
+      card.hidden = !match || ++count > limit;
     }
-    result.hidden = false;
-    result.textContent = count ? '找到 ' + count + ' 款遊戲' : '找不到符合的遊戲，換個名稱試試。';
-    if (update) {
-      const url = new URL(location.href);
-      for (const [name, value] of [['gameq', input.value.trim()], ['gamecat', category], ['picture', picture.checked ? '1' : '']]) {
-        if (value) url.searchParams.set(name, value);
-        else url.searchParams.delete(name);
-      }
-      if (fromHash()) url.hash = category ? 'game-cat-' + category : 'game-categories';
-      history.replaceState(history.state, '', url);
-    }
-  }
-  input.addEventListener('input', () => apply(true));
-  picker.addEventListener('change', () => apply(true));
-  picture.addEventListener('change', () => apply(true));
-  window.addEventListener('hashchange', () => {
-    if (!fromHash()) return;
-    picker.value = fromHash();
-    apply(true);
-  });
-  guide.addEventListener('click', event => {
-    const link = event.target.closest('a[href]');
-    if (!link || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+    result.textContent = count ? '找到 ' + count + ' 款遊戲' : '找不到符合的遊戲，試試其他條件。';
+    more.hidden = count <= limit;
+    if (!update) return;
     const url = new URL(location.href);
-    const group = link.closest('details');
-    if (group && !input.value.trim()) url.hash = group.id;
-    if (url.href !== location.href) history.replaceState(history.state, '', url);
+    for (const [name, value] of [
+      ['gameq', input.value.trim()], ['gamecat', category.value],
+      ['audience', audience.value], ['picture', picture.checked ? '1' : ''],
+      ['shown', limit > step ? String(limit) : '']
+    ]) {
+      if (value) url.searchParams.set(name, value);
+      else url.searchParams.delete(name);
+    }
+    if (/^#(?:game-cat-|kids-games$|adult-games$|dragon-games$)/.test(url.hash)) url.hash = 'game-categories';
+    history.replaceState(history.state, '', url);
+  }
+
+  const filter = () => { limit = step; apply(true); };
+  input.addEventListener('input', filter);
+  for (const field of [category, audience, picture]) field.addEventListener('change', filter);
+  more.addEventListener('click', () => {
+    const firstNewIndex = limit;
+    limit += step;
+    apply(true);
+    cards.filter(card => !card.hidden)[firstNewIndex]?.querySelector('a')?.focus();
+  });
+  window.addEventListener('hashchange', () => { syncHash(); filter(); });
+  if (/^#(?:game-cat-|kids-games$|adult-games$)/.test(location.hash)) {
+    requestAnimationFrame(() => guide.scrollIntoView({block:'start'}));
+  }
+  guide.addEventListener('click', event => {
+    const link = event.target.closest('.filtered-game-card');
+    if (!link || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
     try {
       sessionStorage.setItem(key, JSON.stringify({
-        source: url.pathname + url.search + url.hash,
+        source: location.pathname + location.search + location.hash,
         target: link.pathname + link.search,
         y: window.scrollY
       }));

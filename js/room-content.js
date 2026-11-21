@@ -60,7 +60,7 @@ if(room==='games'){
   targetHost.prepend(guide.content.cloneNode(true));
   const selectCategory=()=>{
    const category=document.getElementById(location.hash.slice(1));
-   if(!category?.matches('#game-categories > details, #kids-games, #adult-games, #game-categories, #dragon-games'))return;
+   if(!category?.matches('#game-categories, #dragon-games'))return;
    if(category.tagName==='DETAILS')category.open=true;
    category.scrollIntoView({block:'start'});
   };
@@ -68,31 +68,26 @@ if(room==='games'){
   window.addEventListener('hashchange',selectCategory);
  }
  const collections=[...targetHost.children].find(e=>e.classList.contains('house-cards'));
- const section=make('section','house-section');
- section.append(make('h2','','單款遊戲'));
- const cards=make('div','house-cards');
  if(collections){
   const title=collections.previousElementSibling;
-  if(title?.tagName==='H2')title.textContent='遊戲合集';
+  const other=make('details','game-room-extras');
+  other.append(make('summary','','遊戲合集與影片'));
+  if(title?.tagName==='H2')title.remove();
+  collections.before(other);
   for(const card of collections.querySelectorAll('a.house-card')){
-   const path=new URL(card.href,location.href).pathname;
-   if(['/dad-arcade.html','/play/yakiniku/','/play/salon/','/play/cat-cleanup/'].includes(path))cards.append(card);
+   const url=new URL(card.href,location.href);
+   if(['/play/yakiniku/','/play/salon/','/play/cat-cleanup/','/dad-arcade.html'].includes(url.pathname))card.remove();
   }
+  other.append(collections);
+  const extras=make('p');
+  for(const item of groups.video){
+   const link=make('a','',item.label);
+   link.href=item.url;
+   extras.append(link,' ');
+  }
+  other.append(extras);
  }
- const card=make('a','house-card');
- card.href='/play/cat-cleanup/';
- const cover=make('img');
- cover.src='/play/cat-cleanup/cover.webp';
- cover.alt='';
- cover.width=720;
- cover.height=720;
- cover.loading='lazy';
- const copy=make('div');
- copy.append(make('h3','','貓毛吸乾淨'));
- card.append(cover,copy);
- if(!cards.querySelector('a[href="/play/cat-cleanup/"]'))cards.prepend(card);
- section.append(cards);
- targetHost.append(section);
+
 }
 const canonical=raw=>window.CDJRoomFrame.canonical(raw,location.href);
 function scrollTo(e){if(!e)return;e.tabIndex=-1;e.focus({preventScroll:true});e.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth',block:'start'});}
@@ -115,7 +110,7 @@ if(inline.length){
  if(room==='living')document.querySelector('#living-playground')?.after(stage);else if(room==='dining')document.querySelector('#dining-games')?.after(stage);else targetHost.append(stage);
  if(!stage.isConnected)targetHost.append(stage);
  // Do not load every game at once; the first one appears when its section reaches the viewport.
- if(room!=='mom'&&'IntersectionObserver'in window){observer=new IntersectionObserver(entries=>{if(entries.some(e=>e.isIntersecting)&&!current){observer?.disconnect();loadFrame(inline[0]);}},{rootMargin:'120px'});observer.observe(stage);}else if(room!=='mom')loadFrame(inline[0]);
+ if(room!=='mom'&&room!=='games'&&'IntersectionObserver'in window){observer=new IntersectionObserver(entries=>{if(entries.some(e=>e.isIntersecting)&&!current){observer?.disconnect();loadFrame(inline[0]);}},{rootMargin:'120px'});observer.observe(stage);}else if(room!=='mom'&&room!=='games')loadFrame(inline[0]);
 }
 function activate(item){
  if(item.inline)return open(item.url,item.label);
@@ -127,7 +122,7 @@ function activate(item){
  if(item.url.startsWith('#')){const e=document.getElementById(item.url.slice(1));if(e?.tagName==='DETAILS')e.open=true;const parent=e?.closest('details');if(parent)parent.open=true;scrollTo(e);return true;}return false;
 }
 bar.append(make('h2','room-guide-title',(D.rooms[room]?.label||'這個房間')+'有什麼？'));
-Object.entries(groups).forEach(([key,items])=>{if(room==='mom')items=items.filter(item=>!item.inline);if(!items.length)return;const group=make('span','room-link-group');group.append(make('strong','',{video:'影片',article:'文章',collection:'遊戲合集',game:room==='games'?'單款遊戲':'小遊戲',other:'其他'}[key]+'：'));items.forEach(item=>{const a=make('a','',item.label);a.href=item.inline?'#room-inline-stage':item.url;a.onclick=e=>{if(activate(item)){e.preventDefault();bar.querySelectorAll('[aria-current]').forEach(x=>x.removeAttribute('aria-current'));a.setAttribute('aria-current','true');}};group.append(a);});bar.append(group);});hero.after(bar);
+Object.entries(groups).forEach(([key,items])=>{if(room==='mom')items=items.filter(item=>!item.inline);if(!items.length)return;const group=make('span','room-link-group');group.append(make('strong','',{video:'影片',article:'文章',collection:'遊戲合集',game:room==='games'?'單款遊戲':'小遊戲',other:'其他'}[key]+'：'));items.forEach(item=>{const a=make('a','',item.label);a.href=item.inline?'#room-inline-stage':item.url;a.onclick=e=>{if(activate(item)){e.preventDefault();bar.querySelectorAll('[aria-current]').forEach(x=>x.removeAttribute('aria-current'));a.setAttribute('aria-current','true');}};group.append(a);});bar.append(group);});if(room!=='games')hero.after(bar);
 if(location.hash==='#cdj-family-menu-game'&&room==='dining'){const item=groups.game.find(entry=>entry.url===location.hash);if(item)activate(item);}
 // Existing cards and painted-object links use the same in-page game stage.
 document.addEventListener('click',e=>{const a=e.target.closest('a[href]');if(!a||a.closest('.room-link-bar')||e.ctrlKey||e.metaKey||e.shiftKey||e.altKey)return;const href=a.getAttribute('href');if(href&&inline.some(x=>canonical(x.url)===canonical(href))){e.preventDefault();e.stopImmediatePropagation();open(href);}else if(href?.startsWith('/ama-games.html')&&room==='living'){e.preventDefault();e.stopImmediatePropagation();open(href);}},true);
