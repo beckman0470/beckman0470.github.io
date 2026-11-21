@@ -75,43 +75,42 @@ inner.append(brand,nav);host.replaceChildren(inner);host.dataset.unifiedHeader=v
 
 
 
-/* 2026-11-21: Chicken Coop only. Match the SAME full-viewport 16:9 room width
-   used by rooms.html, rather than applying a viewport-HEIGHT cap. The existing
-   reader sprite stays unchanged; only its rendered size is reduced slightly.
-   Preserve all five study-object links, both pets, and their animations. */
+/* 2026-11-21 | Study ONLY: viewport-height fit, not full browser width.
+   Header height + complete uncropped 16:9 study image <= one viewport height.
+   Preserve the reader sprite, pets, five interactive hotspots, navigation, and all welcome copy. */
 (()=>{'use strict';
   if(location.pathname!=='/articles.html')return;
   const apply=()=>{
-    if(!document.body||document.getElementById('cdj-study-room-equal-width-v3'))return;
+    if(!document.body||document.getElementById('cdj-study-one-screen-height-v4'))return;
     const style=document.createElement('style');
-    style.id='cdj-study-room-equal-width-v3';
+    style.id='cdj-study-one-screen-height-v4';
     style.textContent=`
-      /* Match css/room-immersive.css's full-width room entrance. */
-      @media(min-width:761px){
-        html body[data-welcome-page="articles"] main#journal-page > section.cdj-welcome.cdj-room-entrance {
-          --study-width:calc(100vw - var(--cdj-scrollbar,0px))!important;
-          display:block!important;
-          box-sizing:border-box!important;
-          width:var(--study-width)!important;
-          min-width:0!important;
-          max-width:none!important;
-          margin:0 0 36px calc(50% - var(--study-width)/2)!important;
-          padding:0!important;
-          left:auto!important;
-          right:auto!important;
-          transform:none!important;
-          float:none!important;
-        }
+      html body[data-welcome-page="articles"] main#journal-page > section.cdj-welcome.cdj-room-entrance {
+        --study-width:min(calc(100vw - var(--cdj-scrollbar,0px)), calc((100dvh - var(--cdj-header-height,104px) - 12px) * 16 / 9))!important;
+        box-sizing:border-box!important;
+        display:block!important;
+        position:relative!important;
+        width:var(--study-width)!important;
+        min-width:0!important;
+        max-width:var(--study-width)!important;
+        margin:0 0 16px calc(50% - var(--study-width) / 2)!important;
+        padding:0!important;
+        left:auto!important;
+        right:auto!important;
+        transform:none!important;
+        float:none!important;
       }
       html body[data-welcome-page="articles"] main#journal-page > section.cdj-welcome.cdj-room-entrance > .cdj-greeting[data-room="study"] {
+        display:block!important;
         box-sizing:border-box!important;
         width:100%!important;
         min-width:0!important;
         max-width:none!important;
         height:auto!important;
         min-height:0!important;
-        aspect-ratio:16/9!important;
+        aspect-ratio:16 / 9!important;
         margin:0!important;
+        padding:0!important;
         overflow:hidden!important;
         border-radius:0!important;
       }
@@ -120,38 +119,33 @@ inner.append(brand,nav);host.replaceChildren(inner);host.dataset.unifiedHeader=v
         inset:0!important;
         width:100%!important;
         height:100%!important;
-        background-image:url('/assets/greetings/v1/room-study-16x9.webp?v=20261121-equal3')!important;
+        background-image:url('/assets/greetings/v1/room-study-16x9.webp?v=20261121-one-screen4')!important;
         background-size:100% 100%!important;
         background-position:center center!important;
         background-repeat:no-repeat!important;
         border-radius:0!important;
       }
-      /* Reader uses the site's original dad-reader.webp sprite, never a substitute. */
-      @media(min-width:761px){
-        html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] > .greeting-character:not(.greeting-cat) {
-          --frame:clamp(290px,25vw,380px)!important;
-          left:49%!important;
-          bottom:1.5%!important;
-          scale:0.97!important;
-          transform:none!important;
-          transform-origin:50% 100%!important;
-        }
+      /* Preserve previously approved smaller reader; only study scene sizing changes. */
+      html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] > .greeting-character:not(.greeting-cat) {
+        --frame:clamp(200px,25vw,380px)!important;
+        left:49%!important;
+        bottom:1.5%!important;
+        scale:0.97!important;
+        transform:none!important;
+        transform-origin:50% 100%!important;
       }
       @media(max-width:760px){
         html body[data-welcome-page="articles"] main#journal-page > section.cdj-welcome.cdj-room-entrance {
-          --study-width:calc(100vw - 24px)!important;
-          box-sizing:border-box!important;
+          --study-width:min(calc(100vw - 24px), calc((100dvh - var(--cdj-header-height,104px) - 12px) * 16 / 9))!important;
           width:var(--study-width)!important;
           max-width:var(--study-width)!important;
-          margin:0 auto 18px!important;
-          padding:0!important;
+          margin:0 0 16px calc(50% - var(--study-width) / 2)!important;
         }
         html body[data-welcome-page="articles"] .cdj-greeting[data-room="study"] > .greeting-character:not(.greeting-cat) {
-          --frame:clamp(200px,42vw,290px)!important;
+          --frame:clamp(180px,42vw,290px)!important;
           left:49%!important;
           bottom:1.2%!important;
           scale:0.96!important;
-          transform:none!important;
         }
       }
     `;
