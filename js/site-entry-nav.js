@@ -7,7 +7,7 @@ if(host.dataset.unifiedHeader===version)return;
 const inner=document.createElement('div');inner.className='cdj-unified-inner';const brand=document.createElement('a');brand.className='cdj-unified-brand';brand.href='/';brand.setAttribute('aria-label','雞爸爸生活研究室首頁');
 const avatar=document.createElement('img');avatar.src='/assets/img/logo-avatar.png';avatar.alt='';avatar.width=52;avatar.height=52;const text=document.createElement('span'),name=document.createElement('strong'),english=document.createElement('small');name.textContent='雞爸爸生活研究室';english.textContent='CHICKEN DAD JOURNAL';text.append(name,english);brand.append(avatar,text);
 const nav=document.createElement('nav');nav.className='entry-subnav';nav.setAttribute('aria-label','主要導覽');const path=location.pathname;
-[["/videos.html","客廳"],["/rooms.html?room=dining","餐廳"],["/articles.html","雞窩"],["/rooms.html?room=mom","鼠窩"],["/rooms.html?room=ama","兔窩"],["/rooms.html?room=kitchen","廚房"],["/rooms.html?room=bathroom","浴室"],["/rooms.html?room=games","遊戲間"],["/stickers.html","貼圖小舖"],["/family.html","認識我們"]].forEach(([url,label])=>{const a=document.createElement('a');a.href=url;a.textContent=label;const active=url.startsWith('/rooms.html?')?((path==='/rooms.html'&&new URLSearchParams(location.search).get('room')===new URL(url,location.origin).searchParams.get('room'))||(url==='/rooms.html?room=dining'&&path.startsWith('/dining-'))||(url==='/rooms.html?room=ama'&&path.startsWith('/ama-'))||(url==='/rooms.html?room=games'&&(path.startsWith('/play/')||path.startsWith('/relax')||path==='/dad-arcade.html'))):url==='/'?(path==='/'||path==='/index.html'):url==='/articles.html'?(path==='/articles.html'||path.startsWith('/articles/')):url==='/family.html'?(path==='/family.html'||path==='/about.html'):url==='/play/'?path.startsWith('/play/'):url==='/relax.html'?(path==='/relax.html'||path==='/relax-family.html'||path==='/play/family-lab.html'):path===url;if(active)a.setAttribute('aria-current','page');nav.append(a);});
+[["/videos.html","客廳"],["/articles.html","雞窩"],["/rooms.html?room=dining","餐廳"],["/rooms.html?room=mom","鼠窩"],["/rooms.html?room=ama","兔窩"],["/rooms.html?room=kitchen","廚房"],["/rooms.html?room=bathroom","浴室"],["/rooms.html?room=games","遊戲間"],["/stickers.html","貼圖小舖"],["/family.html","認識我們"]].forEach(([url,label])=>{const a=document.createElement('a');a.href=url;a.textContent=label;const active=url.startsWith('/rooms.html?')?((path==='/rooms.html'&&new URLSearchParams(location.search).get('room')===new URL(url,location.origin).searchParams.get('room'))||(url==='/rooms.html?room=dining'&&path.startsWith('/dining-'))||(url==='/rooms.html?room=ama'&&path.startsWith('/ama-'))||(url==='/rooms.html?room=games'&&(path.startsWith('/play/')||path.startsWith('/relax')||path==='/dad-arcade.html'))):url==='/'?(path==='/'||path==='/index.html'):url==='/articles.html'?(path==='/articles.html'||path.startsWith('/articles/')):url==='/family.html'?(path==='/family.html'||path==='/about.html'):url==='/play/'?path.startsWith('/play/'):url==='/relax.html'?(path==='/relax.html'||path==='/relax-family.html'||path==='/play/family-lab.html'):path===url;if(active)a.setAttribute('aria-current','page');nav.append(a);});
 inner.append(brand,nav);host.replaceChildren(inner);host.dataset.unifiedHeader=version;
 })();
 
@@ -156,6 +156,32 @@ inner.append(brand,nav);host.replaceChildren(inner);host.dataset.unifiedHeader=v
       }
     `;
     document.head.append(style);
+  };
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',apply,{once:true});else apply();
+})();
+
+
+/* 2026-11-21 | Only three explicitly requested welcome headlines.
+   Other rooms retain their existing welcome text and descriptions.
+   Run after house-rooms.js finishes building the interactive scenes.
+   Do not change sprite assets, pet animation, background sizing or hotspots. */
+(()=>{'use strict';
+  const copy={
+    living:['我們家的影片','一家人的成長、貓咪日常與生活短片，都在客廳慢慢欣賞。'],
+    study:['我們家的文章','一家日常、內心小惡魔、珍山陳語錄，以及親子與健康期刊。'],
+    dining:['一起來用餐吧','從雅虎喝水、右右吃飯，到一家人圍桌分享每天的故事。'],
+  };
+  const apply=()=>{
+    const scene=document.querySelector('.cdj-welcome .cdj-greeting[data-room]');
+    const route=location.pathname;
+    const key=scene?.dataset.room || (route==='/articles.html'?'study':route==='/videos.html'?'living':null);
+    const selected=copy[key];if(!selected)return;
+    const hero=scene?.closest('.cdj-welcome') || document.querySelector('main .cdj-welcome');
+    if(!hero)return;
+    const title=hero.querySelector('#cdj-welcome-title')||hero.querySelector('h1');
+    if(title){title.textContent=selected[0];}
+    const desc=hero.querySelector('.cdj-welcome-summary');
+    if(desc)desc.textContent=selected[1];
   };
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',apply,{once:true});else apply();
 })();
