@@ -60,8 +60,8 @@ if(room==='games'){
   targetHost.prepend(guide.content.cloneNode(true));
   const selectCategory=()=>{
    const category=document.getElementById(location.hash.slice(1));
-   if(!category?.matches('#game-categories > details'))return;
-   category.open=true;
+   if(!category?.matches('#game-categories > details, #kids-games, #adult-games, #game-categories'))return;
+   if(category.tagName==='DETAILS')category.open=true;
    category.scrollIntoView({block:'start'});
   };
   requestAnimationFrame(selectCategory);

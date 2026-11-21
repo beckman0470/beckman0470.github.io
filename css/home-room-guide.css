@@ -125,3 +125,4 @@ footer { display: flex; justify-content: space-between; align-items: center; fle
 }
 
 .site-main > .room-rail { grid-row: 1 / span 6; }
+.room-card .home-audience a { border-color:#97b39a; background:#cce3ce; font-size:14px; }

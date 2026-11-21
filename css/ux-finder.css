@@ -11,3 +11,21 @@
 .game-find .picture-filter input { width:20px; height:20px; min-height:0; accent-color:#41684e; }
 #game-categories li[data-game-hint] { display:grid; gap:3px; align-content:start; }
 .game-access-hint { padding-inline:8px; color:#4f6656; font-size:.8rem; }
+.game-audience { color:#294e3a; margin:12px 0 26px; }
+.game-audience h2 { margin:0 0 9px; }
+.game-audience > section, #game-categories { scroll-margin-top:16px; }
+.game-audience > section { margin:19px 0; }
+.audience-choices,.audience-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; }
+.audience-choices a { display:grid; align-content:center; gap:4px; min-height:65px; padding:10px 12px; border-radius:12px; background:#eaf1e6; border:1px solid #d2dfd0; color:#294e3a; text-decoration:none; }
+.audience-choices a:hover { background:#dcebd9; }
+.audience-choices span { font-size:14px; }
+.audience-grid > div { min-width:0; padding:12px; border:1px solid #d9e4d5; background:#fffdf7; border-radius:12px; }
+.audience-grid > div p { margin:8px 0 0; font-size:14px; color:#476353; }
+.audience-picks h3 { margin:0 0 5px; font-size:17px; }
+.audience-picks ul { display:flex; flex-wrap:wrap; gap:5px; padding:0; margin:0; list-style:none; }
+.audience-picks a { display:inline-flex; align-items:center; min-height:44px; padding:4px 8px; border-radius:8px; background:#edf3e9; color:#2e523d; text-decoration:underline; text-underline-offset:3px; }
+.adult-picks { grid-template-columns:repeat(2,minmax(0,1fr)); }
+@media(max-width:650px) {
+ .audience-choices,.audience-grid,.adult-picks { grid-template-columns:1fr; gap:7px; }
+ .audience-choices a { min-height:50px; }
+}
