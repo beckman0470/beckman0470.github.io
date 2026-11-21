@@ -7,7 +7,8 @@
 const menuArtwork={"dad":"/assets/home-life/dad-v2.png","mom":"/assets/home-life/mom-ama-v2.png","ama":"/assets/home-life/mom-ama-v2.png","dodo":"/assets/home-life/dodo-detective.png","dragon":"/assets/home-life/dragon-dishes.png","devil":"/assets/rooms/devil.png"};
 function artworkFor(id){
  if(['truthdetective','opposite'].includes(id))return menuArtwork.devil;
- if(['grocery','clock','sweep'].includes(id))return menuArtwork.ama;
+ if(id==='sweep')return '/play/cat-cleanup/cover.webp';
+ if(['grocery','clock'].includes(id))return menuArtwork.ama;
  if(['tidy','dayplan','mop'].includes(id))return menuArtwork.mom;
  if(['numberhunt','spot','trashsort','chores'].includes(id))return menuArtwork.dad;
  if(id==='dishwash'||id==='bath')return menuArtwork.dragon;
@@ -21,7 +22,7 @@ function artworkFor(id){
 const cards=[
 ["dishwash","🧽","洗碗泡泡小幫手","拿海綿刷污漬、沖泡泡、把亮晶晶的碗盤收好。","圖像互動 · 洗 3 個餐具"],
 ["trashsort","♻️","垃圾分類小隊長","幫常見垃圾找到正確的桶子。","生活任務 · 分類 6 樣"],
-["sweep","🧹","掃地小幫手","拿掃把掃紙屑，再用畚箕收好。","生活任務 · 整理 3 間房"],
+["sweep","","貓毛吸乾淨","滑過毛團，把地板和地毯吸乾淨。","生活任務 · 2 關"],
 ["mop","🪣","拖地亮晶晶","洗拖把、擰乾、拖掉腳印，最後收好。","生活任務 · 拖乾淨 6 格"],
 ["bath","🛁","洗澡步驟小達人","準備溫水、洗泡泡、沖乾淨、擦乾換衣服。","生活任務 · 練習 6 步驟"],
 ["truthdetective","👿","小惡魔真假偵探","聽小惡魔的說法，判斷哪裡對、哪裡不對。","小惡魔 · 新遊戲 · 5 題"],
@@ -550,13 +551,7 @@ const item=deck[round];let done=false;body.append(el('p','sp-progress','第 '+(r
 }draw();
 }
 function sweep(){
-const stage=homeRoutineStage('sweep');let room=0,tool=false,swept=new Set(),dirt=[];const body=el('div');stage.append(body);const feedback=status(stage);
-function fresh(){tool=false;swept=new Set();dirt=shuffle([0,1,2,3,4,5,6,7,8]).slice(0,6);feedback.textContent='';draw();}
-function draw(){body.replaceChildren();if(room>=3){body.append(el('h3','','三間房都掃乾淨了！兔阿嬤給你拍拍手 🧹 ⭐'),btn('再掃一回 ↻','primary',sweep));return;}
-body.append(el('p','sp-progress','第 '+(room+1)+' / 3 間房 · 已掃 '+swept.size+' / 6 處'),el('p','question',!tool?'先拿起掃把，再點地上的紙屑。':swept.size<6?'把六處紙屑掃成一堆，最後再用畚箕收起來。':'紙屑掃成一堆了，拿畚箕收進垃圾桶。'));if(!tool)body.append(btn('🧹 拿起掃把','primary',()=>{tool=true;draw();}));
-const board=el('div','hc-board'),grid=el('div','hc-floor');for(let i=0;i<9;i++){const dirty=dirt.includes(i)&&!swept.has(i),b=btn(dirty?'🧻':'✨','hc-tile',()=>{if(!tool||!dirty)return;swept.add(i);feedback.textContent='掃好這一格了。';draw();});b.disabled=!tool||!dirty;b.setAttribute('aria-label',dirty?'掃第 '+(i+1)+' 格的紙屑':'第 '+(i+1)+' 格已乾淨');grid.append(b);}board.append(grid);body.append(board);
-if(swept.size===6)body.append(btn('🧹 用畚箕收好紙屑','primary',()=>{room++;sound();fresh();}));
-}fresh();
+  location.assign('/play/cat-cleanup/');
 }
 function mop(){
 const stage=homeRoutineStage('mop');let water='dry',charge=0,cleaned=new Set();const dirty=[0,1,3,5,7,8],body=el('div');stage.append(body);const feedback=status(stage);
@@ -584,7 +579,7 @@ const homeIds=Object.keys(homeRoutineHosts),homeCards=homeIds.map(id=>areas.drag
 homeCards.forEach(card=>card.classList.add('sp-new'));areas.dragon.grid.prepend(...homeCards);
 
 
-// The living room fur links directly to the existing broom-and-grid activity.
+// Keep existing direct game links usable.
 const linkedGame=new URLSearchParams(location.search).get('game');
 if(cards.some(card=>card[0]===linkedGame)&&linkedGame!=='dayplan'){
  document.addEventListener('DOMContentLoaded',()=>open(linkedGame),{once:true});

@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="zh-Hant">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>貓毛吸乾淨｜雞爸爸生活研究室</title>
+<link rel="stylesheet" href="style.css">
+<header><a href="/rooms.html?room=games">← 遊戲間</a><a href="/">雞爸爸生活研究室</a></header>
+<main>
+<h1>貓毛吸乾淨</h1>
+<div class="meter"><img src="fur.webp" alt=""><progress id="progress" value="0" max="6" aria-label="清理進度"></progress><span id="count"></span></div>
+<p id="instructions">用手指滑過毛團，也可以一團一團點。</p>
+<div id="board" aria-label="清理區" aria-describedby="instructions">
+  <img id="vacuum" src="vacuum.webp" alt="" draggable="false">
+  <div id="demo" aria-hidden="true"><img src="vacuum.webp" alt=""></div>
+</div>
+<div id="finished" hidden>
+  <img src="cover.webp" alt="">
+  <p id="result" role="status"></p>
+  <button id="next" type="button"><img id="next-picture" alt=""><span id="next-label"></span></button>
+</div>
+</main>
+<footer><a href="/rooms.html?room=games">回遊戲間</a></footer>
+<script src="game.js" defer></script>
+</html>

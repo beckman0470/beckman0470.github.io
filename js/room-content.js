@@ -22,8 +22,7 @@ const topic=(host,id)=>'/relax-family.html?host='+host+'&game='+id;
 const fromGames=host=>D.games[host].filter(([id])=>!['coffee','ama-video','ama-exercise'].includes(id)).forEach(([id,label,,url])=>game(label,url==='topic'?topic(host,id):url));
 if(room==='living'){
  section('video','YouTube 影片','#media-library-title',{filter:'platform:youtube'});section('video','Instagram 短片','#media-library-title',{filter:'platform:instagram'});
- section('article','珍山陳經典語錄','#living-zschen');
- game('神明拼圖','/ama-games.html?game=puzzle');game('掃貓毛','/play/?area=dragon&game=sweep');
+ game('神明拼圖','/ama-games.html?game=puzzle');
  section('game','阿嬤養蘭花','#orchid-care',{tab:'orchid-tab'});section('game','姊姊腳踏車','#bicycle-race',{tab:'bike-tab'});
 }else if(room==='dining'){
  game('雅虎喝水','/play/yahoo-water/');game('右右吃飯','/play/youyou-food/');game('今天吃什麼水果','/dining-fruit.html');game('弟弟找零食','/dining-stairs.html');
@@ -50,6 +49,24 @@ if(room==='living'){
 const all=Object.values(groups).flat(),inline=all.filter(x=>x.inline),bar=make('nav','room-link-bar');bar.setAttribute('aria-label',(D.rooms[room]?.label||'房間')+'所有內容');
 let current=null,frame=null,observer=null,stage=null,select=null,feedback=null,launchButton=null,driver=null,loadTimer=null,loadSerial=0,startProxy=null,pauseProxy=null;
 const targetHost=document.querySelector('#house-content')||document.querySelector('main');
+if(room==='games'){
+ const section=make('section','house-section');
+ const cards=make('div','house-cards');
+ const card=make('a','house-card');
+ card.href='/play/cat-cleanup/';
+ const cover=make('img');
+ cover.src='/play/cat-cleanup/cover.webp';
+ cover.alt='';
+ cover.width=720;
+ cover.height=720;
+ cover.loading='lazy';
+ const copy=make('div');
+ copy.append(make('h3','','貓毛吸乾淨'));
+ card.append(cover,copy);
+ cards.append(card);
+ section.append(cards);
+ targetHost.append(section);
+}
 const canonical=raw=>window.CDJRoomFrame.canonical(raw,location.href);
 function scrollTo(e){if(!e)return;e.tabIndex=-1;e.focus({preventScroll:true});e.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth',block:'start'});}
 function closeGame(){loadSerial++;clearTimeout(loadTimer);observer?.disconnect();observer=null;driver?.dispose();driver=null;if(frame){try{frame.contentWindow.speechSynthesis?.cancel();frame.contentWindow.dispatchEvent(new Event('pagehide'));}catch(_){}frame.remove();frame=null;}current=null;}
@@ -66,7 +83,6 @@ function open(raw,label){if(!canonical(raw))return false;const item=inline.find(
  const actual=canonical(raw)===canonical(item.url)?item:{...item,url:canonical(raw),label:label||item.label};
  if(!current||canonical(current.url)!==canonical(actual.url))loadFrame(actual);scrollTo(stage);return true;}
 window.CDJRoom={open,entries:all.map(({group,label,url})=>({group,label,url}))};
-if(room==='living')document.querySelectorAll('.ancestor-shrine,#family-shrine a[href^="/articles.html"]').forEach(a=>{a.href='#living-zschen';});
 if(inline.length){
  stage=make('section','room-inline-stage');stage.id='room-inline-stage';stage.setAttribute('aria-label','在這個房間玩遊戲');stage.append(make('h2','',room==='living'?'神明拼圖':inline[0].label));const controls=make('div','room-inline-controls'),caption=make('label','','選擇內容 ');select=make('select');select.setAttribute('aria-label','選擇本頁遊戲或影片');inline.forEach((item,i)=>{const option=make('option','',item.label);option.value=String(i);select.append(option);});caption.append(select);select.onchange=()=>loadFrame(inline[+select.value]);launchButton=make('button','','開始載入');launchButton.type='button';launchButton.onclick=()=>loadFrame(current||inline[+select.value]);const stop=make('button','','結束遊戲');stop.type='button';stop.onclick=()=>{closeGame();feedback.textContent='已結束，隨時可以再開始。';launchButton.textContent='開始載入';};startProxy=make('button','','開始遊戲');startProxy.type='button';startProxy.hidden=true;startProxy.onclick=()=>driver?.start();pauseProxy=make('button','','暫停');pauseProxy.type='button';pauseProxy.hidden=true;pauseProxy.onclick=()=>driver?.togglePause();if(room==='living')controls.append(startProxy,pauseProxy,launchButton,stop);else controls.append(caption,startProxy,pauseProxy,launchButton,stop);feedback=make('p','room-inline-status');feedback.setAttribute('role','status');const surface=make('div','room-game-surface');stage.append(controls,feedback,surface);
  if(room==='living')document.querySelector('#living-playground')?.after(stage);else if(room==='dining')document.querySelector('#dining-games')?.after(stage);else targetHost.append(stage);

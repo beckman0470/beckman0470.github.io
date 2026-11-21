@@ -1,0 +1,29 @@
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body { margin: 0; background: #fbf5e9; color: #294c3a; font-family: system-ui, "Microsoft JhengHei", sans-serif; }
+header, footer { display: flex; justify-content: space-between; padding: .8rem max(1rem, calc((100vw - 800px) / 2)); background: #fffdf8; }
+a { color: #315b48; }
+main { max-width: 800px; margin: auto; padding: .65rem .8rem 1rem; text-align: center; }
+h1 { margin: 0; font-size: clamp(1.3rem,4vw,2rem); }
+.meter { display: flex; align-items: center; justify-content: center; gap: .55rem; margin-top: .3rem; font-variant-numeric: tabular-nums; }
+.meter img { width: 42px; height: 34px; object-fit: contain; }
+progress { width: min(55%,300px); height: 16px; accent-color: #387554; }
+#instructions { margin: .2rem 0 .55rem; }
+#board { position: relative; height: clamp(320px,56svh,560px); overflow: hidden; border: 4px solid #fff; border-radius: 24px; background: #d9b384 url("wood.webp") center / cover; touch-action: none; box-shadow: 0 4px 16px #52341440; }
+#board.rug { background-image: url("rug.webp"); background-color: #aabd9d; }
+.fur { position: absolute; translate: -50% -50%; width: clamp(45px,11vw,80px); aspect-ratio: 1; padding: 0; border: 0; border-radius: 50%; background: #fff8e57d; cursor: pointer; }
+.fur img { width: 100%; height: 100%; object-fit: contain; pointer-events: none; }
+.fur.cleaned { animation: lift .25s ease-in both; pointer-events: none; }
+#vacuum, #demo { position: absolute; pointer-events: none; z-index: 2; width: clamp(68px,18vw,130px); }
+#vacuum { display: none; translate: -75% -75%; }
+#board.dragging #vacuum { display: block; }
+#demo { left: 8%; top: 9%; animation: show-swipe 1.8s ease-in-out infinite; }
+#demo img { width: 100%; }
+#finished { margin-top: .7rem; }
+#finished img { width: 130px; height: 130px; object-fit: cover; border-radius: 20px; }
+#next { padding: .75rem 1.2rem; border: 0; border-radius: 14px; background: #32674d; color: white; font: inherit; font-weight: 700; cursor: pointer; }
+@keyframes lift { to { transform: scale(.22); opacity: 0; } }
+@keyframes show-swipe { 0%,100% { transform: translate(-12%,0); opacity: 0; } 30% { opacity: 1; } 75% { transform: translate(76%,20%); opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { #demo,.fur.cleaned { animation: none; } .fur.cleaned { visibility: hidden; } }
+#next { display: flex; align-items: center; gap: 10px; margin: auto; min-height: 65px; }
+#next img { width: 48px; height: 48px; border-radius: 8px; object-fit: contain; background: #fbf5e9; }

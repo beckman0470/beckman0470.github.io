@@ -40,7 +40,7 @@ if(key==='kitchen'){
 }
 // Match links to objects already painted in each room; never add replacement props.
 if(key!=='study'){
- const hint={living:'點神桌找拼圖與語錄，點電視看影片，也幫忙掃紙屑。',dining:'點餐盤，練習餐桌禮儀。',mom:'點書櫃玩小遊戲，點床鋪選睡前故事。',ama:'點佛像與經書看影片，點扶手椅玩小遊戲。',games:'點街機、積木、畫桌或桌遊櫃，挑一段遊戲時光。',kitchen:'點咖啡杯來手沖，點湯鍋來點菜。',bathroom:'點馬桶練習浴室生活，點肥皂找日常任務。'}[key];const caption=document.querySelector('.greeting-caption');if(hint&&caption)caption.textContent=hint;
+ const hint={living:'點神桌找拼圖與語錄，點電視看影片。',dining:'點餐盤，練習餐桌禮儀。',mom:'點書櫃玩小遊戲，點床鋪選睡前故事。',ama:'點佛像與經書看影片，點扶手椅玩小遊戲。',games:'點街機、積木、畫桌或桌遊櫃，挑一段遊戲時光。',kitchen:'點咖啡杯來手沖，點湯鍋來點菜。',bathroom:'點馬桶練習浴室生活，點肥皂找日常任務。'}[key];const caption=document.querySelector('.greeting-caption');if(hint&&caption)caption.textContent=hint;
  if(key==='ama'){const h=[...document.querySelectorAll('#house-content h2')].find(x=>x.textContent.includes('小遊戲'));if(h)h.id='ama-room-games';}
  if(key==='mom'){const hs=[...document.querySelectorAll('#house-content h2')];if(hs[0])hs[0].id='mom-games';if(hs[1])hs[1].id='mom-bedtime';}
  const entries={
