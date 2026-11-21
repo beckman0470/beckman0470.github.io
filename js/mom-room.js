@@ -4,44 +4,76 @@ const stage=document.querySelector('.cdj-greeting[data-room=mom]'),host=document
 const make=(tag,cls,text)=>{const e=document.createElement(tag);if(cls)e.className=cls;if(text!==undefined)e.textContent=text;return e;};
 const btn=(label,fn)=>{const b=make('button','mom-button',label);b.type='button';b.onclick=fn;return b;};
 const style=make('link');style.rel='stylesheet';style.href='/css/mom-room.css?v=20261108-mom12';document.head.append(style);
+const compact=make('style');compact.textContent='.mom-room-block > summary{cursor:pointer;font-size:clamp(18px,4vw,24px);font-weight:750;min-height:44px;align-content:center}.mom-room-block:not([open]){padding:10px 16px;margin:8px 0}.mom-button[hidden],.mom-timeline[hidden]{display:none!important}.mom-plan-cards button > span{display:block}';document.head.append(compact);
 const routineStyle=make('link');routineStyle.rel='stylesheet';routineStyle.href='/play/dodo-zones.css?v=20261108-mom12';document.head.append(routineStyle);
 const base='/assets/greetings/v1/';const scene=stage.querySelector('.greeting-scene');scene.style.backgroundImage='url('+base+'room-mom-12.webp)';
 stage.querySelectorAll('.room-rest-control,.room-item-hotspots,.room-background-map').forEach(e=>e.remove());
-function jump(id){const e=document.getElementById(id);if(!e)return;e.tabIndex=-1;e.focus({preventScroll:true});e.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth',block:'start'});}
+function jump(id){const e=document.getElementById(id);if(!e)return;if(e.tagName==='DETAILS')e.open=true;e.tabIndex=-1;e.focus({preventScroll:true});e.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth',block:'start'});}
 const entries=[['mom-plan','鼠媽媽排行程'],['mom-life','鼠姊姊的一天'],['mom-needs','弟弟怎麼了？']];
-const blocks=entries.map(([id,label])=>{const section=make('section','mom-room-block');section.id=id;section.setAttribute('aria-label',label);section.append(make('h2','',label));return section;});
+const blocks=entries.map(([id,label])=>{const section=make('details','mom-room-block');section.id=id;section.setAttribute('name','mom-activities');section.setAttribute('aria-label',label);section.append(make('summary','',label));return section;});
+const legacyHeading=[...host.children].find(e=>e.tagName==='H2'&&e.textContent==='要聽故事睡覺了嗎？');
+if(legacyHeading?.nextElementSibling?.classList.contains('house-cards')){
+ legacyHeading.nextElementSibling.remove();
+ legacyHeading.remove();
+}
 host.prepend(...blocks);const [plan,life,needs]=blocks;life.classList.add('dr-life');
 const routines=make('script');routines.src='/js/mom-routines.js?v=20261109-room14';document.body.append(routines);
 const people=[...stage.querySelectorAll('.greeting-character:not(.greeting-cat)')];
-['mom-vanity-12','dodo-wake-12','dragon-needs-12'].forEach((name,i)=>{const p=people[i];p.classList.add('mom-task-character');p.querySelector('.greeting-sprite').style.backgroundImage='url('+base+name+'.webp)';p.setAttribute('aria-label',entries[i][1]+'：前往小遊戲');p.onclick=()=>jump(entries[i][0]);});
-const quick=make('nav','mom-quick-links');quick.setAttribute('aria-label','鼠窩生活小遊戲');entries.forEach(([id,label])=>{const a=make('a','',label);a.href='#'+id;a.onclick=e=>{e.preventDefault();jump(id);};quick.append(a);});stage.append(quick);
+['mom-vanity-12','dodo-wake-12','dragon-needs-12'].forEach((name,i)=>{const p=people[i];if(!p)return;p.classList.add('mom-task-character');p.querySelector('.greeting-sprite').style.backgroundImage='url('+base+name+'.webp)';p.setAttribute('aria-label',entries[i][1]+'：前往小遊戲');p.onclick=()=>jump(entries[i][0]);});
 const calendar=btn('',()=>jump('mom-plan'));calendar.className='mom-calendar-hit';calendar.setAttribute('aria-label','梳妝台行事曆：幫鼠媽媽排行程');calendar.title='幫鼠媽媽排行程';stage.append(calendar);
-const dodoLabel=make('a','mom-dodo-label','鼠姊姊的一天');dodoLabel.href='#mom-life';dodoLabel.onclick=e=>{e.preventDefault();jump('mom-life');};stage.append(dodoLabel);
 stage.querySelector('.greeting-caption').textContent='';
 // Positions use the room image coordinates, including its crop on small screens.
 const anchors=[[165,565,285],[440,540,240],[770,265,145]];
 function align(){const r=scene.getBoundingClientRect(),p=stage.getBoundingClientRect(),z=Math.max(r.width/960,r.height/640),pos=getComputedStyle(scene).backgroundPosition.split(' '),dx=r.left-p.left+(r.width-960*z)*parseFloat(pos[0])/100,dy=r.top-p.top+(r.height-640*z)*parseFloat(pos[1]||pos[0])/100;
-anchors.forEach(([x,y,size],i)=>{people[i].style.setProperty('left',dx+x*z+'px','important');people[i].style.setProperty('bottom',p.height-dy-y*z+'px','important');people[i].style.setProperty('--frame',size*z+'px','important');});
-Object.assign(calendar.style,{left:dx+215*z+'px',top:dy+235*z+'px',width:65*z+'px',height:72*z+'px'});
-Object.assign(dodoLabel.style,{left:dx+440*z+'px',top:dy+551*z+'px'});}
+anchors.forEach(([x,y,size],i)=>{people[i]?.style.setProperty('left',dx+x*z+'px','important');people[i]?.style.setProperty('bottom',p.height-dy-y*z+'px','important');people[i]?.style.setProperty('--frame',size*z+'px','important');});
+Object.assign(calendar.style,{left:dx+215*z+'px',top:dy+235*z+'px',width:65*z+'px',height:72*z+'px'});}
 new ResizeObserver(align).observe(scene);style.onload=align;align();
-// The original five-day ordering game, now played directly in Mom's room.
-const plans=[
- [[8,'吃早餐'],[10,'帶孩子去公園'],[12,'準備午餐']],
- [[9,'整理家裡'],[11,'採買食材'],[14,'讀故事書']],
- [[7,'起床梳妝'],[8,'送姊姊到學校'],[16,'接姊姊回家']],
- [[14,'整理玩具'],[16,'準備點心'],[18,'一起吃晚餐']],
- [[15,'陪貓咪玩'],[18,'一起吃晚餐'],[20,'陪孩子準備睡覺']]
+// Choose what to do before each outing. Each activity uses part of the available time.
+const missions=[
+ {title:'校車快到了',minutes:25,goal:'校車出發前，要吃早餐、帶好書包。',tasks:[['吃早餐',10,true],['找玩具',10,false],['裝好書包',5,true],['看一集卡通',15,false]]},
+ {title:'突然下雨了',minutes:25,goal:'出門前要收陽台衣服，也要準備雨具。',tasks:[['找雨傘',5,true],['整理抽屜',15,false],['收陽台衣服',10,true],['和貓咪玩',10,false]]},
+ {title:'出發去野餐',minutes:30,goal:'離開家前，要裝好水壺和午餐。',tasks:[['找好看的貼紙',10,false],['把水壺裝滿',10,true],['準備午餐盒',15,true],['先看一本故事書',15,false]]},
+ {title:'睡前半小時',minutes:30,goal:'睡前一定要洗澡、刷牙。先留時間做完，再想要不要聽故事。',tasks:[['聽故事',10,false],['洗澡',15,true],['整理全部玩具',20,false],['刷牙',5,true]]}
 ];
-plan.append(make('p','','看行事曆上的時間，依序點選三件事，幫鼠媽媽從早到晚安排好。'));
-const planStatus=make('p','mom-status'),timeline=make('ol','mom-timeline'),cards=make('div','mom-plan-cards'),planFeedback=make('p','mom-feedback'),tools=make('div','mom-tools');planFeedback.setAttribute('role','status');
-let day=0,picked=[],order=[],checked=false;
+const planStatus=make('p','mom-status'),brief=make('p',''),timer=make('p','mom-clue'),timeline=make('ol','mom-timeline'),cards=make('div','mom-plan-cards'),planFeedback=make('p','mom-feedback'),tools=make('div','mom-tools');
+planFeedback.setAttribute('role','status');
+let day=0,picked=[],checked=false;
 const shuffle=a=>{const b=[...a];for(let i=b.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[b[i],b[j]]=[b[j],b[i]];}return b;};
-const undo=btn('退回一張',()=>{if(!checked){picked.pop();planFeedback.textContent='';drawPlan();}}),check=btn('排好了！',()=>{if(picked.length!==3||checked)return;if(!picked.every((v,i)=>v===i)){planFeedback.textContent='再看看時間，較早的事先做。可以退回一張，調整順序。';return;}checked=true;drawPlan();planFeedback.textContent=day===4?'五天都安排好了！你是鼠媽媽的時間小幫手。':'安排好了，鼠媽媽可以照計畫出發囉！';next.hidden=day===4;});
-const next=btn('下一天 →',()=>{day++;freshPlan();}),reset=btn('重新開始',()=>{day=0;freshPlan();});
-tools.append(undo,check,next,reset);plan.append(planStatus,timeline,cards,tools,planFeedback);
-function freshPlan(){picked=[];checked=false;order=shuffle([0,1,2]);if(order.every((v,i)=>v===i))order.reverse();planFeedback.textContent='';next.hidden=true;drawPlan();}
-function drawPlan(){planStatus.textContent='第 '+(day+1)+' / 5 天';timeline.replaceChildren();for(let i=0;i<3;i++){const item=picked[i]!==undefined?plans[day][picked[i]]:null;timeline.append(make('li','',item?String(item[0]).padStart(2,'0')+':00 '+item[1]:'第 '+(i+1)+' 件事'));}cards.replaceChildren();order.forEach(i=>{const [time,label]=plans[day][i],b=btn('',()=>{picked.push(i);planFeedback.textContent='';drawPlan();});b.append(make('time','',String(time).padStart(2,'0')+':00'),make('strong','',label));b.disabled=checked||picked.includes(i);cards.append(b);});undo.disabled=checked||!picked.length;check.disabled=checked||picked.length!==3;}
+const undo=btn('退回上一件',()=>{picked.pop();planFeedback.textContent='';drawPlan();});
+const check=btn('確認出發',()=>{
+ const mission=missions[day];
+ const missing=mission.tasks.filter((task,i)=>task[2]&&!picked.includes(i));
+ if(missing.length){planFeedback.textContent='還要做「'+missing.map(task=>task[0]).join('、')+'」。時間不夠時，可以退回上一件。';return;}
+ checked=true;
+ planFeedback.textContent=day===missions.length-1?'四個行程都安排好了！':'必要的事都做完了，還有 '+remaining()+' 分鐘。';
+ drawPlan();
+});
+const next=btn('下一個情境',()=>{day++;freshPlan();});
+const reset=btn('重排這一關',freshPlan);
+const replay=btn('再玩一輪',()=>{day=0;freshPlan();});
+tools.append(undo,check,next,reset,replay);
+plan.append(planStatus,brief,timer,timeline,cards,tools,planFeedback);
+function remaining(){const mission=missions[day];return mission.minutes-picked.reduce((sum,i)=>sum+mission.tasks[i][1],0);}
+function freshPlan(){picked=[];checked=false;planFeedback.textContent='';drawPlan();}
+function drawPlan(){
+ const mission=missions[day];
+ planStatus.textContent='第 '+(day+1)+' / '+missions.length+' 關 · '+mission.title;
+ brief.textContent=mission.goal;
+ timer.textContent='還剩 '+remaining()+' 分鐘';
+ timeline.replaceChildren(...picked.map(i=>make('li','',mission.tasks[i][0])));
+ timeline.hidden=!picked.length;
+ cards.replaceChildren();
+ mission.tasks.forEach(([label,time],i)=>{
+  const b=btn('',()=>{picked.push(i);planFeedback.textContent='';drawPlan();});
+  b.append(make('strong','',label),make('span','',time+' 分鐘'));
+  b.disabled=checked||picked.includes(i)||time>remaining();
+  cards.append(b);
+ });
+ undo.disabled=checked||!picked.length;
+ check.disabled=checked||!picked.length;
+ next.hidden=!checked||day===missions.length-1;
+ replay.hidden=!checked||day!==missions.length-1;
+}
 freshPlan();
 // Picture clues, with an original synthesized crying sound after explicit taps only.
 const cases=[

@@ -59,7 +59,7 @@ host.innerHTML=`
 <div class="orchid-actions"><button type="button" data-water><span>💧</span>少量澆水</button><button type="button" data-shade><span>🌤️</span>移到散光</button><button type="button" data-air><span>🌬️</span>打開通風</button></div>
 <div class="orchid-next-actions"><button class="orchid-next-primary" type="button" data-day-next>完成今天照顧 →</button><button type="button" data-orchid-reset>重新栽培</button></div><p class="living-game-status orchid-live-status" data-orchid-status role="status" aria-live="polite">觀察葉片和介質，開始陪蘭花長大吧！</p>
 <div class="orchid-journal"><div class="orchid-journal-title">五日開花紀錄</div><div data-orchid-days class="orchid-days" aria-label="照護日進度"></div></div></div></div><p class="orchid-botanical-note">照護提示參考一般蝴蝶蘭的需求：明亮散射光、良好通風、依介質乾濕澆水。五天開花是遊戲中的成長時間。</p><button type="button" class="orchid-switch" id="bike-tab" data-switch-bike>去玩鼠姊姊的腳踏車 →</button></section>
-<section id="bicycle-race" class="living-game-panel" role="tabpanel" aria-label="鼠姊姊的小腳踏車賽" hidden><h3>鼠姊姊的小腳踏車賽</h3><p>按左右鍵換車道，避開三角錐、收集小花，騎到 400 公尺終點。也可以用鍵盤方向鍵。</p><div class="bike-hud"><span data-bike-distance>0 / 400 公尺</span><span data-bike-hearts>愛心 ♥♥♥</span><span data-bike-flowers>小花 0</span></div><div class="living-game-actions"><button type="button" data-bike-start>開始騎車</button><button type="button" data-bike-pause disabled>暫停</button><button type="button" data-bike-reset>重新開始</button></div><canvas id="bike-canvas" class="living-game-canvas" width="640" height="360" tabindex="0" aria-label="腳踏車賽車畫面，使用左右方向鍵換車道"></canvas><div class="living-game-actions bike-controls"><button type="button" data-bike-left aria-label="腳踏車向左">← 向左</button><button type="button" data-bike-fast>加速一下</button><button type="button" data-bike-right aria-label="腳踏車向右">向右 →</button></div><p class="living-game-status" data-bike-status role="status" aria-live="polite">戴好安全帽，在遊戲裡出發！</p><button type="button" class="orchid-switch" id="orchid-tab" data-switch-orchid>← 回兔阿嬤蘭花</button></section>
+<section id="bicycle-race" class="living-game-panel" role="tabpanel" aria-label="鼠姊姊的小腳踏車賽" hidden><h3>鼠姊姊的小腳踏車賽</h3><p>按左右鍵換車道，避開三角錐、收集小花，騎到 400 公尺終點。也可以用鍵盤方向鍵。</p><div class="bike-hud"><span data-bike-distance>0 / 400 公尺</span><span data-bike-hearts>愛心 ♥♥♥</span><span data-bike-flowers>小花 0</span><span data-bike-speed>0 km/h</span></div><div class="living-game-actions"><button type="button" data-bike-start>開始騎車</button><button type="button" data-bike-pause disabled>暫停</button><button type="button" data-bike-reset>重新開始</button></div><canvas id="bike-canvas" class="living-game-canvas" width="640" height="360" tabindex="0" aria-label="腳踏車賽車畫面，使用左右方向鍵換車道"></canvas><div class="living-game-actions bike-controls"><button type="button" data-bike-left aria-label="腳踏車向左">← 向左</button><button type="button" data-bike-fast>加速一下</button><button type="button" data-bike-right aria-label="腳踏車向右">向右 →</button></div><p class="living-game-status" data-bike-status role="status" aria-live="polite">戴好安全帽，在遊戲裡出發！</p><button type="button" class="orchid-switch" id="orchid-tab" data-switch-orchid>← 回兔阿嬤蘭花</button></section>
 `;
 (document.querySelector('#media-library-title')?.closest('section') || document.querySelector('.cdj-welcome')).after(host);
 const $=s=>host.querySelector(s);
@@ -68,7 +68,7 @@ bikeStyles.textContent=`
 .living-activity-entries{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;padding:10px}
 .living-activity-entries a{display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:5px 16px;border:1px solid #cfdbc7;border-radius:16px;background:#fffaf0;color:#2e5945;font-weight:750;text-decoration:none}
 .living-activity-entries img{object-fit:contain;width:50px;height:50px}
-#bike-canvas{display:block;max-width:100%;height:auto;background:#e4efdb;border:0;border-radius:20px;box-shadow:0 7px 26px #26331823}
+#bike-canvas{display:block;width:100%;max-width:960px;max-height:none!important;height:auto!important;aspect-ratio:16/9;box-sizing:border-box;background:#e4efdb;border:0;border-radius:20px;box-shadow:0 7px 26px #26331823}
 #bicycle-race[hidden]{display:none}
 #bicycle-race .bike-controls button{min-height:46px}
 `;
@@ -143,9 +143,23 @@ for(const name of ['park','rider','cone','flower']){
   image.addEventListener('load',()=>bikeDraw());
   image.src='/assets/play/bike/'+name+'.webp';
 }
-let lane=1,distance=0,hearts=3,flowers=0,items=[],running=false,paused=false,finished=false,last=0,spawn=0,boost=0,cooldown=0,raf=0,elapsed=0;
+let lane=1,riderLane=1,roadTravel=0,flowerPop=0,distance=0,hearts=3,flowers=0,items=[],running=false,paused=false,finished=false,last=0,spawn=0,boost=0,cooldown=0,raf=0,elapsed=0;
 const laneX=(n,y)=>320+(n-1)*(25+152*Math.min(1,Math.max(0,(y-48)/270)));
-function bikeHud(){$('[data-bike-distance]').textContent=Math.floor(distance)+' / 400 公尺';$('[data-bike-hearts]').textContent='愛心 '+'♥'.repeat(hearts);$('[data-bike-flowers]').textContent='小花 '+flowers;}
+const reduceMotion=matchMedia('(prefers-reduced-motion: reduce)');
+function sizeBikeCanvas(){
+ const width=canvas.getBoundingClientRect().width;
+ if(!width)return;
+ const pixelWidth=Math.round(width*Math.min(devicePixelRatio||1,3));
+ const pixelHeight=Math.round(pixelWidth*9/16);
+ if(canvas.width!==pixelWidth||canvas.height!==pixelHeight){
+  canvas.width=pixelWidth;
+  canvas.height=pixelHeight;
+ }
+ bikeDraw();
+}
+new ResizeObserver(sizeBikeCanvas).observe(canvas);
+function bikeHud(){
+ $('[data-bike-speed]').textContent=Math.round(running?(boost>0?14:9)*3.6:0)+' km/h';$('[data-bike-distance]').textContent=Math.floor(distance)+' / 400 公尺';$('[data-bike-hearts]').textContent='愛心 '+'♥'.repeat(hearts);$('[data-bike-flowers]').textContent='小花 '+flowers;}
 function drawArt(image,x,y,w,h){
   if(!image.complete||!image.naturalWidth)return;
   const ratio=Math.min(w/image.naturalWidth,h/image.naturalHeight);
@@ -154,9 +168,28 @@ function drawArt(image,x,y,w,h){
 }
 function bikeDraw(){
   if(!ctx)return;
+  ctx.setTransform(canvas.width/640,0,0,canvas.height/360,0,0);
+  ctx.imageSmoothingQuality='high';
   ctx.fillStyle='#e4efdb';
   ctx.fillRect(0,0,640,360);
   if(art.park.complete&&art.park.naturalWidth)ctx.drawImage(art.park,0,0,640,360);
+  if(running&&!reduceMotion.matches){
+   // Roadside reflections travel toward the rider and grow in perspective.
+   ctx.strokeStyle=boost>0?'#fff7d7bd':'#fff7d75c';
+   ctx.lineCap='round';
+   for(let i=0;i<8;i++){
+    const depth=((i/8+roadTravel)%1)**2;
+    const y=73+depth*278;
+    const offset=13+depth*227;
+    ctx.lineWidth=1+depth*3;
+    for(const side of [-1,1]){
+     ctx.beginPath();
+     ctx.moveTo(320+side*offset,y);
+     ctx.lineTo(320+side*(offset+7*depth),y+2+12*depth);
+     ctx.stroke();
+    }
+   }
+  }
   for(const item of items){
     const y=66+item.y*.9;
     const size=19+Math.max(0,item.y)*.16;
@@ -164,7 +197,23 @@ function bikeDraw(){
   }
   ctx.save();
   if(cooldown>0)ctx.globalAlpha=.68;
-  drawArt(art.rider,laneX(lane,340)-52,204,104,136);
+  const riderX=laneX(riderLane,340);
+  const bob=running&&!reduceMotion.matches?Math.sin(roadTravel*19)*1.8:0;
+  drawArt(art.rider,riderX-62,180+bob,124,160);
+  if(flowerPop>0){
+   ctx.globalAlpha=Math.min(1,flowerPop*3);
+   const x=Math.max(78,Math.min(562,riderX));
+   const y=175-(1-flowerPop)*28;
+   ctx.fillStyle='#fff8ea';
+   ctx.beginPath();
+   ctx.roundRect(x-72,y-18,144,35,14);
+   ctx.fill();
+   drawArt(art.flower,x-62,y-14,28,28);
+   ctx.fillStyle='#7d355b';
+   ctx.font='bold 17px system-ui';
+   ctx.textAlign='center';
+   ctx.fillText('+1 朵小花',x+13,y+6);
+  }
   ctx.restore();
   if(!running){
     ctx.fillStyle='#fffaf1e8';
@@ -177,11 +226,11 @@ function bikeDraw(){
     ctx.fillText(finished?(hearts?'到終點了！':'再試一次吧！'):paused?'已暫停':'準備好就出發',320,143);
   }
 }
-function pauseBike(){if(!running)return;running=false;paused=true;cancelAnimationFrame(raf);$('[data-bike-start]').textContent='繼續騎車';$('[data-bike-pause]').disabled=true;bikeDraw();}
-function bikeReset(){cancelAnimationFrame(raf);lane=1;distance=0;hearts=3;flowers=0;items=[];running=false;paused=false;finished=false;spawn=0;boost=0;cooldown=0;elapsed=0;bikeHud();$('[data-bike-start]').textContent='開始騎車';$('[data-bike-start]').disabled=false;$('[data-bike-pause]').disabled=true;$('[data-bike-status]').textContent='戴好安全帽，在遊戲裡出發！';bikeDraw();}
-function tick(now){if(!running)return;const dt=Math.min(.04,(now-last)/1000);last=now;elapsed+=dt;const speed=boost>0?23:15;boost=Math.max(0,boost-dt);cooldown=Math.max(0,cooldown-dt);distance=Math.min(400,distance+speed*dt);spawn+=dt;if(spawn>1.2){spawn=0;items.push({lane:Math.floor(Math.random()*3),y:-20,flower:Math.random()<.45});}items.forEach(o=>o.y+=dt*(boost>0?165:120));items=items.filter(o=>{if(o.y>278&&o.y<326&&o.lane===lane){if(o.flower){flowers++;return false;}if(cooldown<=0){hearts--;cooldown=1.5;$('[data-bike-status]').textContent='碰到三角錐了，慢慢來！';return false;}}return o.y<390;});if(hearts<=0||distance>=400){running=false;finished=true;$('[data-bike-start]').disabled=true;$('[data-bike-pause]').disabled=true;$('[data-bike-status]').textContent=hearts?'到終點囉！收集了 '+flowers+' 朵小花。':'先休息一下，按重新開始再挑戰。';}bikeHud();bikeDraw();if(running)raf=requestAnimationFrame(tick);}
+function pauseBike(){if(!running)return;running=false;paused=true;bikeHud();cancelAnimationFrame(raf);$('[data-bike-start]').textContent='繼續騎車';$('[data-bike-pause]').disabled=true;bikeDraw();}
+function bikeReset(){cancelAnimationFrame(raf);lane=1;riderLane=1;roadTravel=0;flowerPop=0;distance=0;hearts=3;flowers=0;items=[];running=false;paused=false;finished=false;spawn=0;boost=0;cooldown=0;elapsed=0;bikeHud();$('[data-bike-start]').textContent='開始騎車';$('[data-bike-start]').disabled=false;$('[data-bike-pause]').disabled=true;$('[data-bike-status]').textContent='戴好安全帽，在遊戲裡出發！';bikeDraw();}
+function tick(now){if(!running)return;const dt=Math.min(.04,(now-last)/1000);last=now;elapsed+=dt;const speed=boost>0?14:9;roadTravel+=dt*(boost>0?1.35:.7);riderLane=reduceMotion.matches?lane:riderLane+(lane-riderLane)*Math.min(1,dt*14);flowerPop=Math.max(0,flowerPop-dt);boost=Math.max(0,boost-dt);cooldown=Math.max(0,cooldown-dt);distance=Math.min(400,distance+speed*dt);spawn+=dt;if(spawn>1.2){spawn=0;items.push({lane:Math.floor(Math.random()*3),y:-20,flower:Math.random()<.45});}items.forEach(o=>o.y+=dt*(boost>0?210:112));items=items.filter(o=>{if(o.y>278&&o.y<326&&o.lane===lane){if(o.flower){flowers++;flowerPop=1;$('[data-bike-status]').textContent='收集到小花！目前有 '+flowers+' 朵。';return false;}if(cooldown<=0){hearts--;cooldown=1.5;$('[data-bike-status]').textContent='碰到三角錐了，慢慢來！';return false;}}return o.y<390;});if(hearts<=0||distance>=400){running=false;finished=true;$('[data-bike-start]').disabled=true;$('[data-bike-pause]').disabled=true;$('[data-bike-status]').textContent=hearts?'到終點囉！收集了 '+flowers+' 朵小花。':'先休息一下，按重新開始再挑戰。';}bikeHud();bikeDraw();if(running)raf=requestAnimationFrame(tick);}
 $('[data-bike-start]').onclick=()=>{if(finished)return;running=true;paused=false;last=performance.now();$('[data-bike-start]').textContent='騎車中';$('[data-bike-pause]').disabled=false;$('[data-bike-status]').textContent='看前方，左右避開三角錐！';cancelAnimationFrame(raf);raf=requestAnimationFrame(tick);};$('[data-bike-pause]').onclick=pauseBike;$('[data-bike-reset]').onclick=bikeReset;
-function steer(v){lane=Math.max(0,Math.min(2,lane+v));bikeDraw();}$('[data-bike-left]').onclick=()=>steer(-1);$('[data-bike-right]').onclick=()=>steer(1);$('[data-bike-fast]').onclick=()=>{if(running)boost=2;};
+function steer(v){lane=Math.max(0,Math.min(2,lane+v));if(!running||reduceMotion.matches)riderLane=lane;bikeDraw();}$('[data-bike-left]').onclick=()=>steer(-1);$('[data-bike-right]').onclick=()=>steer(1);$('[data-bike-fast]').onclick=()=>{if(running)boost=2;};
 canvas.onkeydown=e=>{if(['ArrowLeft','ArrowRight','ArrowUp',' '].includes(e.key)){e.preventDefault();if(e.key==='ArrowLeft')steer(-1);else if(e.key==='ArrowRight')steer(1);else if(running)boost=2;}};document.addEventListener('visibilitychange',()=>{if(document.hidden)pauseBike();});bikeReset();
 // Positions use the same image crop as the background, including the compact phone view.
 const anchors=[[1540,900,400],[500,830,355],[1030,510,230],[1000,865,270],[1380,740,190]];
