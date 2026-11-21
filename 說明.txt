@@ -1,0 +1,3 @@
+只修改：客廳「我們家的影片」、雞窩「我們家的文章」、餐廳「一起來用餐吧」，及這三個房間的迎賓敘述。
+鼠窩、兔窩、廚房、浴室、遊戲間的迎賓文字不修改。
+解壓後按原資料夾結構覆蓋 GitHub：articles.html、videos.html、rooms.html、js/room-welcome-three.js。
