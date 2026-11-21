@@ -1,9 +1,11 @@
-雞爸爸｜雞窩背景寬度修正（2026/11/20）
+鼠姊姊速食店｜2026-11-21 更新包
 
-此 ZIP 只有 1 個需要覆蓋的檔案：js/site-entry-nav.js
-解壓縮後上傳到 GitHub 對應的 js/ 路徑，取代同名檔案。
-不需要執行程式，也不需要重畫或重上傳背景圖片。
+這次只修改餐廳速食店，不影響其他遊戲。
 
-修正雞窩背景容器的 3:2 舊寬度計算，改為跟客廳及餐廳一致的 16:9 高度適配寬度，並使用既有的 room-study-16x9.webp。
-不修改其他房間、不動人物、貓咪及既有遊戲。
-部署後按 Ctrl+Shift+R 重新整理雞窩。
+1. 將 rooms.html 上傳網站根目錄，覆蓋同名檔。
+2. 將 js/dining-fast-food-entry.js 上傳 js/。
+3. 將 play/fast-food/index.html 上傳 play/fast-food/。
+4. 將 play/fast-food/assets/dodo-cover.webp 與 dodo-cover-original.webp 上傳同路徑。
+
+更新內容：入口和頁面標題更名為「鼠姊姊速食店」，入口封面改為已核准的鼠姊姊插畫，與其他小遊戲統一 1:1 方形封面比例。
+既有速食店遊戲操作、食物素材與其他餐廳遊戲均保留。
