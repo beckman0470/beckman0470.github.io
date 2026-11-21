@@ -101,6 +101,14 @@ resetActivities();stopVideo();const area=areas[key];active='classic-'+kind;activ
 area.menu.hidden=true;area.classic.hidden=false;area.classic.dataset.activity=kind;if(area.video)area.video.hidden=true;
 const selector=key==='dodo'?'[data-learn="'+kind+'"]':'[data-toddler="'+kind+'"]';
 const control=area.classic.querySelector(selector);if(control){control.click();control.focus({preventScroll:true});}
+if(kind==='hide'&&!area.classic.querySelector('.hide-replay-controls')){
+ const actions=el('div','hide-replay-controls mg-choices');
+ actions.append(btn('再玩一次','secondary',()=>control?.click()),returnToDragon());
+ area.classic.append(actions);
+}
+const hideActions=area.classic.querySelector('.hide-replay-controls');
+if(hideActions)hideActions.hidden=kind!=='hide';
+
 area.classic.scrollIntoView({block:'start'});
 }
 ['dodo','dragon'].forEach(key=>{
@@ -163,6 +171,11 @@ if(mode==='size'){const big=Math.random()<.5;content.append(el('p','question','�
 }else{const max=mode==='five'?5:10,n=1+Math.floor(Math.random()*max);content.append(el('p','question','這裡一共有幾隻貓咪？'));const row=el('div','mg-cats-count');for(let i=0;i<n;i++)row.append(catImage(i%2?'youyou':'yahoo','peek',''));content.append(row);const choices=shuffle([n,...shuffle(Array.from({length:max+2},(_,i)=>i+1).filter(x=>x!==n)).slice(0,2)]),answers=el('div','mg-choices');choices.forEach(v=>{const b=btn(String(v),'mg-choice',()=>choose(v===n,b));answers.append(b);});content.append(answers);}}
 render();
 }
+function returnToDragon(){
+ const link=el('a','secondary','回龍弟弟遊戲區');
+ link.href='/rooms.html?room=games#dragon-games';
+ return link;
+}
 function jump(level='slow'){
 const stage=shell('jump');configs(stage,[['slow','慢速'],['normal','一般']],level,v=>jump(v));stage.append(el('p','question',level==='slow'?'看到「現在跳！」就按跳躍。跳過 5 個就過關，碰到也保留進度。':'看到紙箱靠近，按「跳一下」！跳過 5 個就過關。'));
 const track=el('div','mg-running'),label=el('div','mg-track-text','按開始後，雅虎就會出發。'),cat=catImage('yahoo','walk','mg-run-cat'),box=el('div','mg-box','✦');box.setAttribute('aria-hidden','true');track.append(label,cat,box);stage.append(track);
@@ -172,9 +185,10 @@ const motion=level==='slow'?{speed:118,launch:250,gravity:300}:{speed:165,launch
 let frame=0,last=0,y=0,velocity=0,x=0,score=0,running=false,paused=false,passed=false,ended=false;
 const action=btn('開始出發 ▶','primary',()=>{if(!running){if(ended){score=0;counter.textContent='已跳過 0 / 5 個紙箱';}start();return;}if(paused){feedback.textContent='先按繼續，再跳一下。';return;}if(y===0){velocity=motion.launch;if(level==='slow')feedback.textContent='';}});
 const pause=btn('暫停','secondary',()=>{if(!running)return;paused=!paused;cancelAnimationFrame(frame);pause.textContent=paused?'繼續':'暫停';last=0;feedback.textContent=paused?'先休息一下，準備好再繼續。':'';if(!paused)frame=requestAnimationFrame(tick);});pause.disabled=true;row.append(action,pause);
+const backToDragon=returnToDragon();backToDragon.hidden=true;row.append(backToDragon);
 function draw(){cat.style.transform='translateY('+(-y)+'px)';box.style.transform='translateX('+x+'px)';}
-function start(){cancelAnimationFrame(frame);running=true;paused=false;ended=false;last=0;y=0;velocity=0;score=score||0;x=Math.max(280,track.clientWidth)+30;passed=false;action.textContent='跳一下 ↑';pause.disabled=false;pause.textContent='暫停';label.textContent='雅虎出發囉！';feedback.textContent='';draw();frame=requestAnimationFrame(tick);}
-function stop(win){running=false;ended=true;cancelAnimationFrame(frame);pause.disabled=true;action.textContent=win?'再玩一回 ↻':'再試一次 ↻';feedback.textContent=win?'五個都跳過了！雅虎好厲害 ⭐':'碰到紙箱了，沒關係，再試一次！';}
+function start(){backToDragon.hidden=true;cancelAnimationFrame(frame);running=true;paused=false;ended=false;last=0;y=0;velocity=0;score=score||0;x=Math.max(280,track.clientWidth)+30;passed=false;action.textContent='跳一下 ↑';pause.disabled=false;pause.textContent='暫停';label.textContent='雅虎出發囉！';feedback.textContent='';draw();frame=requestAnimationFrame(tick);}
+function stop(win){running=false;ended=true;cancelAnimationFrame(frame);pause.disabled=true;backToDragon.hidden=false;action.textContent=win?'再玩一回 ↻':'再試一次 ↻';feedback.textContent=win?'五個都跳過了！雅虎好厲害 ⭐':'碰到紙箱了，沒關係，再試一次！';}
 function tick(t){if(!running||paused)return;const dt=last?Math.min((t-last)/1000,.04):0;last=t;if(velocity||y){y=Math.max(0,y+velocity*dt);velocity-=motion.gravity*dt;if(y===0)velocity=0;}x-=motion.speed*dt;
 if(level==='slow'){
  const cue=y>0?'雅虎跳躍中 ↑':x<=205&&x>=100?'現在跳！按「跳一下」↑':'紙箱過來囉，準備一下！';
