@@ -135,3 +135,17 @@ footer { display: flex; justify-content: space-between; align-items: center; fle
 @media(max-width:730px) {
  .room-card .home-game-categories li a { min-height: 44px; }
 }
+
+.site-main { display:block; }
+.room-featured .room-card h3 { font-size:clamp(22px,3vw,32px); }
+.room-tile { height:100%; background:var(--white); text-decoration:none; }
+.room-tile:hover h3 { text-decoration:underline; text-underline-offset:4px; }
+.room-tile:focus-visible { outline-offset:-4px; }
+.room-tile .room-card-body p { margin:4px 0 0; }
+@media(max-width:730px) {
+ .room-grid.room-featured { grid-template-columns:repeat(3,minmax(0,1fr)); }
+ .room-grid.room-featured .room-card:first-child { grid-column:auto; }
+ .room-grid.room-featured .room-cover img { aspect-ratio:4/3; }
+ .room-featured .room-card h3 { font-size:clamp(16px,4.4vw,22px); }
+ .room-featured .room-card-body p { font-size:12px; }
+}
