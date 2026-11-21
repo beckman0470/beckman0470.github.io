@@ -3,11 +3,6 @@
 if(location.pathname!=='/videos.html')return;
 const stage=document.querySelector('.cdj-greeting[data-room=living]');if(!stage)return;
 const style=document.createElement('link');style.rel='stylesheet';style.href='/css/living-family.css?v=20261108-living10';document.head.append(style);
-const activities=document.createElement('nav');
-activities.setAttribute('aria-label','客廳互動入口');
-activities.className='living-activity-entries';
-activities.innerHTML='<a href="#bicycle-race" data-living-bike><img src="/assets/play/bike/rider.webp" alt="" width="64" height="64">鼠姊姊騎腳踏車</a><a href="/worship/">點香祭拜</a>';
-stage.after(activities);
 const people=[...stage.querySelectorAll('.greeting-character:not(.greeting-cat)')];
 const scene=stage.querySelector('.greeting-scene');
 stage.querySelectorAll('.room-paper,.room-rest-control').forEach(e=>e.remove());
@@ -59,29 +54,21 @@ host.innerHTML=`
 <div class="orchid-actions"><button type="button" data-water><span>💧</span>少量澆水</button><button type="button" data-shade><span>🌤️</span>移到散光</button><button type="button" data-air><span>🌬️</span>打開通風</button></div>
 <div class="orchid-next-actions"><button class="orchid-next-primary" type="button" data-day-next>完成今天照顧 →</button><button type="button" data-orchid-reset>重新栽培</button></div><p class="living-game-status orchid-live-status" data-orchid-status role="status" aria-live="polite">觀察葉片和介質，開始陪蘭花長大吧！</p>
 <div class="orchid-journal"><div class="orchid-journal-title">五日開花紀錄</div><div data-orchid-days class="orchid-days" aria-label="照護日進度"></div></div></div></div><p class="orchid-botanical-note">照護提示參考一般蝴蝶蘭的需求：明亮散射光、良好通風、依介質乾濕澆水。五天開花是遊戲中的成長時間。</p><button type="button" class="orchid-switch" id="bike-tab" data-switch-bike>去玩鼠姊姊的腳踏車 →</button></section>
-<section id="bicycle-race" class="living-game-panel" role="tabpanel" aria-label="鼠姊姊的小腳踏車賽" hidden><h3>鼠姊姊的小腳踏車賽</h3><p>按左右鍵換車道，避開三角錐、收集小花，騎到 400 公尺終點。也可以用鍵盤方向鍵。</p><div class="bike-hud"><span data-bike-distance>0 / 400 公尺</span><span data-bike-hearts>愛心 ♥♥♥</span><span data-bike-flowers>小花 0</span><span data-bike-speed>0 km/h</span></div><div class="living-game-actions"><button type="button" data-bike-start>開始騎車</button><button type="button" data-bike-pause disabled>暫停</button><button type="button" data-bike-reset>重新開始</button></div><canvas id="bike-canvas" class="living-game-canvas" width="640" height="360" tabindex="0" aria-label="腳踏車賽車畫面，使用左右方向鍵換車道"></canvas><div class="living-game-actions bike-controls"><button type="button" data-bike-left aria-label="腳踏車向左">← 向左</button><button type="button" data-bike-fast>加速一下</button><button type="button" data-bike-right aria-label="腳踏車向右">向右 →</button></div><p class="living-game-status" data-bike-status role="status" aria-live="polite">戴好安全帽，在遊戲裡出發！</p><button type="button" class="orchid-switch" id="orchid-tab" data-switch-orchid>← 回兔阿嬤蘭花</button></section>
+<section id="bicycle-race" class="living-game-panel" role="tabpanel" aria-label="鼠姊姊的小腳踏車賽" hidden><h3>鼠姊姊的小腳踏車賽</h3><p>按左右鍵換車道，避開三角錐、收集小花，騎到 400 公尺終點。也可以用鍵盤方向鍵。</p><div class="bike-hud"><span data-bike-distance>0 / 400 公尺</span><span data-bike-hearts>愛心 ♥♥♥</span><span data-bike-flowers>小花 0</span><span data-bike-speed>0 km/h</span></div><div class="living-game-actions"><button type="button" data-bike-start>開始騎車</button><button type="button" data-bike-pause disabled>暫停</button><button type="button" data-bike-reset>重新開始</button></div><div class="living-game-actions bike-controls"><button type="button" data-bike-left aria-label="腳踏車向左">← 向左</button><button type="button" data-bike-fast>加速一下</button><button type="button" data-bike-right aria-label="腳踏車向右">向右 →</button></div><canvas id="bike-canvas" class="living-game-canvas" width="640" height="360" tabindex="0" aria-label="腳踏車賽車畫面，使用左右方向鍵換車道"></canvas><p class="living-game-status" data-bike-status role="status" aria-live="polite">戴好安全帽，在遊戲裡出發！</p><button type="button" class="orchid-switch" id="orchid-tab" data-switch-orchid>← 回兔阿嬤蘭花</button></section>
 `;
 (document.querySelector('#media-library-title')?.closest('section') || document.querySelector('.cdj-welcome')).after(host);
 const $=s=>host.querySelector(s);
 const bikeStyles=document.createElement('style');
 bikeStyles.textContent=`
-.living-activity-entries{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;padding:10px}
-.living-activity-entries a{display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:5px 16px;border:1px solid #cfdbc7;border-radius:16px;background:#fffaf0;color:#2e5945;font-weight:750;text-decoration:none}
-.living-activity-entries img{object-fit:contain;width:50px;height:50px}
-#bike-canvas{display:block;width:100%;max-width:960px;max-height:none!important;height:auto!important;aspect-ratio:16/9;box-sizing:border-box;background:#e4efdb;border:0;border-radius:20px;box-shadow:0 7px 26px #26331823}
+#bike-canvas{display:block;width:100%;max-width:min(960px, calc((100dvh - 246px) * 16 / 9));max-height:none!important;height:auto!important;aspect-ratio:16/9;box-sizing:border-box;background:#e4efdb;border:0;border-radius:20px;box-shadow:0 7px 26px #26331823}
 #bicycle-race[hidden]{display:none}
-#bicycle-race .bike-controls button{min-height:46px}
+#bicycle-race .bike-controls button{min-height:44px} @media(max-height:530px){#bike-canvas{max-width:min(100%, max(280px, calc((100dvh - 175px) * 16 / 9)))}}
 `;
 document.head.append(bikeStyles);
 const panels=[...host.querySelectorAll('.living-game-panel')],tabs=[...host.querySelectorAll('[role=tab]')];
 function choose(id,scroll=false){panels.forEach(p=>p.hidden=p.id!==id);tabs.forEach(t=>{const on=t.getAttribute('aria-controls')===id;t.setAttribute('aria-selected',String(on));t.tabIndex=on?0:-1;});if(id!=='bicycle-race')pauseBike();if(scroll){const p=document.getElementById(id);p.tabIndex=-1;p.focus({preventScroll:true});p.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});}}
 tabs.forEach((t,i)=>{t.onclick=()=>choose(t.getAttribute('aria-controls'));t.onkeydown=e=>{if(!['ArrowLeft','ArrowRight','Home','End'].includes(e.key))return;e.preventDefault();const next=e.key==='Home'?0:e.key==='End'?tabs.length-1:(i+(e.key==='ArrowRight'?1:tabs.length-1))%tabs.length;tabs[next].focus();choose(tabs[next].getAttribute('aria-controls'));};});
 function openBike(){choose('bicycle-race',true);}
-activities.querySelector('[data-living-bike]').addEventListener('click',event=>{
-  if(event.ctrlKey||event.metaKey||event.shiftKey||event.altKey)return;
-  event.preventDefault();
-  openBike();
-});
 host.querySelector('[data-switch-bike]').onclick=openBike;
 window.addEventListener('hashchange',()=>{if(location.hash==='#bicycle-race')openBike();});
 host.querySelector('[data-switch-orchid]').onclick=()=>choose('orchid-care',true);
@@ -239,5 +226,5 @@ const align=()=>{const r=scene.getBoundingClientRect(),p=stage.getBoundingClient
 anchors.forEach(([x,y,size],i)=>{const el=people[i];if(!el)return;el.style.setProperty('left',dx+x*z+'px','important');el.style.setProperty('bottom',p.height-dy-y*z+'px','important');el.style.setProperty('--frame',size*z+'px','important');});map.style.left=r.left-p.left+'px';map.style.top=r.top-p.top+'px';map.style.width=r.width+'px';map.style.height=r.height+'px';map.setAttribute('viewBox',[(1672-r.width/z)*px,(941-r.height/z)*py,r.width/z,r.height/z].join(' '));};new ResizeObserver(align).observe(scene);style.onload=align;align();
 if(people[3]){people[3].setAttribute('aria-label','鼠姊姊的小腳踏車：玩腳踏車賽車');people[3].addEventListener('click',openBike);}
 stage.querySelector('.greeting-caption').textContent='';
-const initial=location.hash.slice(1);if(panels.some(p=>p.id===initial))choose(initial);
+const initial=location.hash.slice(1);if(panels.some(p=>p.id===initial))choose(initial, true);
 })();

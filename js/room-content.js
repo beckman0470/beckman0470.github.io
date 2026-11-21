@@ -4,6 +4,7 @@ const scene=document.querySelector('.cdj-greeting[data-room]'),hero=scene?.close
 const room=scene.dataset.room,D=window.CDJHouseData;if(!D)return;
 const make=(tag,cls,text)=>{const e=document.createElement(tag);if(cls)e.className=cls;if(text!==undefined)e.textContent=text;return e;};
 const linkStyle=make('link');linkStyle.rel='stylesheet';linkStyle.href='/css/room-content.css?v=20261109-room14';document.head.append(linkStyle);
+const guideStyle=make('link');guideStyle.rel='stylesheet';guideStyle.href='/css/room-guide-strip.css?v=20261121-1';document.head.append(guideStyle);
 const welcome={living:'來坐，一起看我們家的影片。',dining:'一起來用餐吧',mom:'親子生活教養',ama:'安靜穩定力量',study:'生活點滴記錄',games:'一起放鬆一下',kitchen:'自己來做料理',bathroom:'浴廁安全守則'};
 if(welcome[room])hero.querySelector('h1').textContent=welcome[room];
 // Size the remaining rooms in image coordinates. Toddlers and schoolchildren
@@ -14,19 +15,20 @@ if(perspective){const background=scene.querySelector('.greeting-scene'),people=[
 scene.querySelectorAll('.greeting-character').forEach(p=>{if(p.dataset.greeting?.includes('歡迎'))p.dataset.greeting=welcome[room];});
 // Retire the older strips so there is only one complete navigation row.
 scene.querySelectorAll('.living-quick-links,.dining-quick-links,.mom-quick-links').forEach(e=>e.remove());
-const groups={video:[],article:[],game:[],other:[]};
+const groups={video:[],article:[],collection:[],game:[],other:[]};
 function add(group,label,url,options={}){const item={group,label,url,...options};groups[group].push(item);return item;}
-const game=(label,url)=>add('game',label,url,{inline:true});
+const game=(label,url)=>add('game',label,url,{inline:!['/mom-breakout.html',topic('dad','baseball')].includes(url)});
 const section=(group,label,url,options)=>add(group,label,url,options);
 const topic=(host,id)=>'/relax-family.html?host='+host+'&game='+id;
 const fromGames=host=>D.games[host].filter(([id])=>!['coffee','ama-video','ama-exercise'].includes(id)).forEach(([id,label,,url])=>game(label,url==='topic'?topic(host,id):url));
 if(room==='living'){
  section('video','YouTube 影片','#media-library-title',{filter:'platform:youtube'});section('video','Instagram 短片','#media-library-title',{filter:'platform:instagram'});
  game('神明拼圖','/ama-games.html?game=puzzle');
- section('game','阿嬤養蘭花','#orchid-care',{tab:'orchid-tab'});section('game','姊姊腳踏車','#bicycle-race',{tab:'bike-tab'});
+ section('game','阿嬤養蘭花','#orchid-care',{tab:'orchid-tab'});section('game','鼠姊姊騎腳踏車','#bicycle-race',{tab:'bike-tab'});
+ section('other','點香祭拜','/worship/');
 }else if(room==='dining'){
  game('雅虎喝水','/play/yahoo-water/');game('右右吃飯','/play/youyou-food/');game('今天吃什麼水果','/dining-fruit.html');game('弟弟找零食','/dining-stairs.html');
- section('game','餐桌禮儀','#room-activity-dining');section('other','雞爸爸一家的菜單','#dining-mom-menu');
+ section('game','點餐小廚師','#cdj-family-menu-game');section('game','鼠姊姊速食店','/play/fast-food/');section('game','餐桌禮儀','#room-activity-dining');section('other','雞爸爸一家的菜單','#dining-mom-menu');
 }else if(room==='mom'){
  section('article','一家故事','/articles.html?room=family#cards-grid');
  section('game','鼠媽媽排行程','#mom-plan');section('game','弟弟怎麼了','#mom-needs');fromGames('mom');
@@ -38,10 +40,13 @@ if(room==='living'){
  D.filters.forEach(([key,label])=>section('article',label,'#cards-grid',{journal:key}));
 }else if(room==='games'){
  section('video','鼠姊姊的影片','/play/?area=dodo&roomview=video',{inline:true});section('video','龍弟弟的影片','/play/?area=dragon&roomview=video',{inline:true});
- game('雞爸爸家的滋滋燒肉','/play/yakiniku/');game('鼠姊姊學習樂園','/play/?area=dodo');game('龍弟弟快樂天地','/play/?area=dragon');fromGames('dad');
+ section('collection','鼠姊姊學習樂園','/play/?area=dodo',{inline:true});
+ section('collection','龍弟弟快樂天地','/play/?area=dragon',{inline:true});
+ section('collection','雞爸爸遊戲場','/relax-family.html?host=dad');
+ section('game','貓毛吸乾淨','/play/cat-cleanup/');fromGames('dad');
  section('other','到鼠窩','/rooms.html?room=mom');section('other','到兔窩','/rooms.html?room=ama');
 }else if(room==='kitchen'){
- section('article','一家日常','/articles.html?room=family#cards-grid');game('雞爸爸家的滋滋燒肉','/play/yakiniku/');section('game','手沖咖啡','#kitchen-coffee');section('other','廚房點菜','#room-activity-kitchen');
+ section('article','一家日常','/articles.html?room=family#cards-grid');game('雞爸爸家的滋滋燒肉','/play/yakiniku/');section('game','手沖咖啡','#kitchen-coffee');section('game','洗碗泡泡小幫手','/play/dish-family/');section('other','廚房點菜','#room-activity-kitchen');
 }else if(room==='bathroom'){
  section('article','健康期刊','/articles.html?room=cdhj#cards-grid');section('game','浴室生活小遊戲','#room-activity-bathroom');
  game('鼠媽媽幫龍弟弟洗澡','/play/bath-family/');section('other','鼠姊姊的一天','/rooms.html?room=mom#mom-life');
@@ -50,8 +55,18 @@ const all=Object.values(groups).flat(),inline=all.filter(x=>x.inline),bar=make('
 let current=null,frame=null,observer=null,stage=null,select=null,feedback=null,launchButton=null,driver=null,loadTimer=null,loadSerial=0,startProxy=null,pauseProxy=null;
 const targetHost=document.querySelector('#house-content')||document.querySelector('main');
 if(room==='games'){
+ const collections=[...targetHost.children].find(e=>e.classList.contains('house-cards'));
  const section=make('section','house-section');
+ section.append(make('h2','','單款遊戲'));
  const cards=make('div','house-cards');
+ if(collections){
+  const title=collections.previousElementSibling;
+  if(title?.tagName==='H2')title.textContent='遊戲合集';
+  for(const card of collections.querySelectorAll('a.house-card')){
+   const path=new URL(card.href,location.href).pathname;
+   if(['/dad-arcade.html','/play/yakiniku/','/play/salon/','/play/cat-cleanup/'].includes(path))cards.append(card);
+  }
+ }
  const card=make('a','house-card');
  card.href='/play/cat-cleanup/';
  const cover=make('img');
@@ -63,7 +78,7 @@ if(room==='games'){
  const copy=make('div');
  copy.append(make('h3','','貓毛吸乾淨'));
  card.append(cover,copy);
- cards.append(card);
+ if(!cards.querySelector('a[href="/play/cat-cleanup/"]'))cards.prepend(card);
  section.append(cards);
  targetHost.append(section);
 }
@@ -97,12 +112,14 @@ function activate(item){
  if(item.journal!==undefined)window.cdjSelectJournal?.(item.journal,false);
  if(item.filter){const [kind,value]=item.filter.split(':');document.querySelector('[data-media-'+(kind==='platform'?'platform':'topic')+'-filter="'+value+'"]')?.click();}
  if(item.tab)document.getElementById(item.tab)?.click();
- if(item.url.startsWith('#')){const e=document.getElementById(item.url.slice(1));if(e?.tagName==='DETAILS')e.open=true;scrollTo(e);return true;}return false;
+ if(item.url.startsWith('#')){const e=document.getElementById(item.url.slice(1));if(e?.tagName==='DETAILS')e.open=true;const parent=e?.closest('details');if(parent)parent.open=true;scrollTo(e);return true;}return false;
 }
-Object.entries(groups).forEach(([key,items])=>{if(room==='mom')items=items.filter(item=>!item.inline);if(!items.length)return;const group=make('span','room-link-group');group.append(make('strong','',{video:'影片',article:'文章',game:'小遊戲',other:'其他'}[key]+'：'));items.forEach(item=>{const a=make('a','',item.label);a.href=item.inline?'#room-inline-stage':item.url;a.onclick=e=>{if(activate(item)){e.preventDefault();bar.querySelectorAll('[aria-current]').forEach(x=>x.removeAttribute('aria-current'));a.setAttribute('aria-current','true');}};group.append(a);});bar.append(group);});hero.after(bar);
+bar.append(make('h2','room-guide-title',(D.rooms[room]?.label||'這個房間')+'有什麼？'));
+Object.entries(groups).forEach(([key,items])=>{if(room==='mom')items=items.filter(item=>!item.inline);if(!items.length)return;const group=make('span','room-link-group');group.append(make('strong','',{video:'影片',article:'文章',collection:'遊戲合集',game:room==='games'?'單款遊戲':'小遊戲',other:'其他'}[key]+'：'));items.forEach(item=>{const a=make('a','',item.label);a.href=item.inline?'#room-inline-stage':item.url;a.onclick=e=>{if(activate(item)){e.preventDefault();bar.querySelectorAll('[aria-current]').forEach(x=>x.removeAttribute('aria-current'));a.setAttribute('aria-current','true');}};group.append(a);});bar.append(group);});hero.after(bar);
+if(location.hash==='#cdj-family-menu-game'&&room==='dining'){const item=groups.game.find(entry=>entry.url===location.hash);if(item)activate(item);}
 // Existing cards and painted-object links use the same in-page game stage.
 document.addEventListener('click',e=>{const a=e.target.closest('a[href]');if(!a||a.closest('.room-link-bar')||e.ctrlKey||e.metaKey||e.shiftKey||e.altKey)return;const href=a.getAttribute('href');if(href&&inline.some(x=>canonical(x.url)===canonical(href))){e.preventDefault();e.stopImmediatePropagation();open(href);}else if(href?.startsWith('/ama-games.html')&&room==='living'){e.preventDefault();e.stopImmediatePropagation();open(href);}},true);
-if(room==='games')document.addEventListener('click',e=>{const a=e.target.closest('a[href]'),href=a?.getAttribute('href'),url={'#games-dodo':'/play/?area=dodo','#games-dragon':'/play/?area=dragon','#games-dad':topic('dad','baseball')}[href];if(url){e.preventDefault();e.stopImmediatePropagation();open(url);}},true);
+if(room==='games')document.addEventListener('click',e=>{const a=e.target.closest('a[href]'),href=a?.getAttribute('href'),url={'#games-dodo':'/play/?area=dodo','#games-dragon':'/play/?area=dragon','#games-dad':topic('dad','baseball')}[href];if(url){e.preventDefault();e.stopImmediatePropagation();if(url===topic('dad','baseball'))location.assign(url);else open(url);}},true);
 window.addEventListener('pagehide',closeGame);
 window.addEventListener('resize',()=>driver?.updateViewport());
 document.addEventListener('visibilitychange',()=>{if(document.hidden)driver?.pause();});

@@ -1,0 +1,64 @@
+.fit-game-dialog {
+  position: fixed;
+  inset: 0;
+  width: min(100%, 960px);
+  max-width: 100%;
+  max-height: 100dvh;
+  box-sizing: border-box;
+  padding: 8px clamp(8px, 2vw, 20px);
+  border: 1px solid #bdcbb8;
+  border-radius: 16px;
+  background: #fffdf7;
+  color: #294b39;
+  overscroll-behavior: contain;
+}
+.fit-game-dialog::backdrop { background: #233c36c9; }
+.fit-game-dialog > button { min-height: 44px; margin: 0 0 4px; cursor: pointer; }
+.batting-play-area, .breakout-play-area { min-width: 0; }
+.batting-play-area .ag-screen { margin: 0 auto 5px !important; min-height: 0 !important; }
+.batting-play-area .ag-screen > svg,
+.breakout-play-area > .breakout-canvas {
+  display: block !important;
+  width: auto !important;
+  height: auto !important;
+  max-width: 100% !important;
+  max-height: min(62dvh, calc(100dvh - 148px), 650px) !important;
+  margin: 0 auto !important;
+  touch-action: none;
+}
+.batting-play-area .ag-screen > svg { aspect-ratio: 5 / 3; }
+.breakout-play-area > .breakout-canvas { aspect-ratio: 3 / 2; }
+.batting-play-area .ag-controls, .breakout-play-area > .ama-tools {
+  display: grid !important;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: 5px;
+  margin: 4px auto !important;
+  max-width: 680px;
+}
+.batting-play-area button, .breakout-play-area .ama-tools button { min-height: 44px; margin: 0 !important; padding-inline: 4px; }
+.breakout-play-area #breakout-score, .breakout-play-area #breakout-status { margin: 4px 0; line-height: 1.3; }
+.batting-settings > summary { cursor: pointer; min-height: 44px; align-content: center; }
+body:has(.fit-game-dialog[open]) { overflow: hidden !important; }
+body:has(.fit-game-dialog[open]) #cdj-mobile-game-tools { display: none !important; }
+@media (max-height: 450px) and (orientation: landscape) {
+  .fit-game-dialog { padding: 4px 8px; }
+  .batting-play-area .ag-screen > svg,
+  .breakout-play-area > .breakout-canvas { max-height: max(70px,calc(100dvh - 134px)) !important; }
+}
+.batting-play-area .ag-screen > svg {
+  width: min(100%, 920px, calc(max(80px,100dvh - 148px) * 5 / 3)) !important;
+}
+.breakout-play-area > .breakout-canvas {
+  width: min(100%, 900px, calc(max(80px,100dvh - 182px) * 3 / 2)) !important;
+  max-height: max(80px,calc(100dvh - 182px)) !important;
+}
+.batting-play-area .ag-score,
+.batting-play-area .ag-tip {
+  margin: 3px 0;
+  font-size: clamp(12px,2.5vw,15px);
+  line-height: 1.25;
+}
+.fit-game-dialog .batting-play-area .ag-screen > svg {
+  width: min(100%, 920px, calc(max(70px,100dvh - 185px) * 5 / 3)) !important;
+  max-height: max(70px,calc(100dvh - 185px)) !important;
+}

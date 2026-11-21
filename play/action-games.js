@@ -104,18 +104,47 @@ on(s,'pointermove',event=>{if(paused)return;if(touchStart&&touchStart.id===event
 on(s,'pointerup',event=>{if(touchStart?.id!==event.pointerId)return;event.preventDefault();const tapped=!touchMoved;touchStart=null;if(tapped&&!paused){point(event);swing();}});
 on(s,'pointercancel',()=>{touchStart=null;touchMoved=false;});
 on(s,'keydown',event=>{const d={ArrowLeft:[-12,0],ArrowRight:[12,0],ArrowUp:[0,-12],ArrowDown:[0,12]}[event.code];if(d){event.preventDefault();if(!paused)moveAim(ax+d[0],ay+d[1]);}if(event.code==='Space'){event.preventDefault();swing();}});
-const pitch=btn('投下一球',()=>{if(paused||flying||flight>0||shots>=5)return;shots++;progress=0;const profile=pitcherProfiles[pitcherId];pitchType=pitchChoice==='mix'?profile.types[Math.floor(Math.random()*profile.types.length)]:pitchChoice;landing={x:225+Math.random()*130,y:178+Math.random()*75};flying=true;ball.setAttribute('visibility','visible');hint.setAttribute('cx',landing.x);hint.setAttribute('cy',landing.y);hint.setAttribute('visibility',easy?'visible':'hidden');pitch.disabled=true;tip.textContent=profile.name+'投出'+pitchNames[pitchType]+'。'+(easy?'瞄準藍圈，接近時點球場打擊！':'看準來球，點球場打擊！');update();},'primary');
+const pitch=btn('投下一球',()=>{if(paused||flying||flight>0||shots>=5)return;focusCourt();shots++;progress=0;const profile=pitcherProfiles[pitcherId];pitchType=pitchChoice==='mix'?profile.types[Math.floor(Math.random()*profile.types.length)]:pitchChoice;landing={x:225+Math.random()*130,y:178+Math.random()*75};flying=true;ball.setAttribute('visibility','visible');hint.setAttribute('cx',landing.x);hint.setAttribute('cy',landing.y);hint.setAttribute('visibility',easy?'visible':'hidden');pitch.disabled=true;tip.textContent=profile.name+'投出'+pitchNames[pitchType]+'。'+(easy?'瞄準藍圈，接近時點球場打擊！':'看準來球，點球場打擊！');update();},'primary');
 function result(kind){window.CDJAudio?.play(kind==='全壘打'?'win':kind==='安打'?'hit':'miss');flying=false;hits+=['安打','全壘打'].includes(kind)?1:0;homers+=kind==='全壘打'?1:0;flight=['安打','全壘打'].includes(kind)?1.2:0;hint.setAttribute('visibility','hidden');let text=kind==='瞄準偏了'?'時機接近了！但框框偏離落點，再移準一點。':kind==='揮空'?'這次時機差一點，等球更靠近金框再打擊。':kind+'！瞄準與時機都抓到了！';if(shots===5)text+=' 五球完成：'+hits+' 支安打，其中 '+homers+' 支全壘打。';tell(text);pitch.disabled=shots>=5||flight>0;update();}
 function swing(){if(paused||!flying)return;window.CDJAudio?.play('shot');swingFlash=.3;result(aimResult(progress,ax,ay,landing.x,landing.y,easy));}
 const hit=btn('打擊！',swing,'primary ag-hit'),difficulty=btn('模式：輕鬆・落點提示',()=>{if(flying||flight>0)return;easy=!easy;difficulty.textContent=easy?'模式：輕鬆・落點提示':'模式：挑戰・自己瞄準';moveAim(ax,ay);});
-controls.append(pitch,hit,difficulty,pause,btn('再打五球',()=>{flying=false;flight=0;shots=hits=homers=0;pitch.disabled=false;ball.setAttribute('visibility','hidden');hint.setAttribute('visibility','hidden');update();tip.textContent='準備好了，移動金框，再投一球。';}));
+controls.append(pitch,hit,pause);
+const extra=node('div','ag-controls');extra.append(difficulty,btn('再打五球',()=>{flying=false;flight=0;shots=hits=homers=0;pitch.disabled=false;ball.setAttribute('visibility','hidden');hint.setAttribute('visibility','hidden');update();tip.textContent='準備好了，移動金框，再投一球。';}));
 function update(){score.textContent=batterProfiles[batterId].name+'（'+(batterProfiles[batterId].hand==='L'?'左打':'右打')+'） 對 '+pitcherProfiles[pitcherId].name+' · '+(pitcherProfiles[pitcherId].hand==='L'?'左投':'右投')+' · 第 '+shots+' / 5 球 · 安打 '+hits+' · 全壘打 '+homers;hit.disabled=!flying;if(typeof pitcherButtons!=='undefined')pitcherButtons.forEach(b=>b.disabled=flying||flight>0);}
 loop(dt=>{if(flying){progress+=dt/pitchDuration(pitchType,easy,pitcherProfiles[pitcherId].speed);const p=progress/.78,position=pitchPosition(progress,landing,pitchType,pitcherProfiles[pitcherId].hand);ball.setAttribute('cx',position.x);ball.setAttribute('cy',position.y);ball.setAttribute('r',5+clamp(p,0,1.3)*6);if(progress>1.08)result('揮空');}else if(flight>0){flight-=dt;const p=1-flight/1.2;ball.setAttribute('cx',landing.x-170*p);ball.setAttribute('cy',landing.y-205*Math.sin(p*1.5));if(flight<=0){ball.setAttribute('visibility','hidden');pitch.disabled=shots>=5;update();}}swingFlash=Math.max(0,swingFlash-dt);bat.setAttribute('transform',swingFlash?'rotate(-85 424 241)':'');});
 
 const picker=node('div','ag-pitcher-picker');picker.append(node('p','', '選投手（換人會重新開始五球）'));const pitcherButtons=[];Object.entries(pitcherProfiles).forEach(([id,profile])=>{const b=btn(profile.name+' · '+(profile.hand==='L'?'左投':'右投')+' '+profile.speed+' km/h',()=>{if(flying||flight>0)return;pitcherId=id;pitchChoice='mix';shots=hits=homers=0;ball.setAttribute('visibility','hidden');configurePitcher();update();});b.dataset.pitcher=id;pitcherButtons.push(b);picker.append(b);});
 const types=node('div','ag-pitch-types');const description=node('p','note');
 const stadium=btn('球場：卡通大巨蛋',()=>{const isIndoor=indoor.getAttribute('visibility')!=='hidden';indoor.setAttribute('visibility',isIndoor?'hidden':'visible');outdoor.setAttribute('visibility',isIndoor?'visible':'hidden');stadium.textContent=isIndoor?'球場：戶外練習場':'球場：卡通大巨蛋';});
-const batters=node('div','ag-batter-picker');batters.append(node('span','','選打者：'));Object.entries(batterProfiles).forEach(([id,profile])=>{const b=btn(profile.name+' · '+(profile.hand==='L'?'左打':'右打'),()=>{if(flying||flight>0)return;batterId=id;shots=hits=homers=0;ball.setAttribute('visibility','hidden');configurePitcher();update();});b.dataset.batter=id;batters.append(b);});picker.append(batters,types,description,stadium);root.prepend(picker);
+const batters=node('div','ag-batter-picker');batters.append(node('span','','選打者：'));Object.entries(batterProfiles).forEach(([id,profile])=>{const b=btn(profile.name+' · '+(profile.hand==='L'?'左打':'右打'),()=>{if(flying||flight>0)return;batterId=id;shots=hits=homers=0;ball.setAttribute('visibility','hidden');configurePitcher();update();});b.dataset.batter=id;batters.append(b);});picker.append(batters,types,description,stadium,extra);
+const settings=node('details','batting-settings');
+settings.append(node('summary','','投手、打者與難度'),picker);
+root.prepend(settings);
+const court=node('section','batting-play-area');
+const screenHome=node('span','play-screen-marker');
+screen.before(screenHome,court);
+court.append(score,screen,controls,tip);
+const dialog=node('dialog','fit-game-dialog');
+dialog.setAttribute('aria-label','棒球打擊場');
+const leave=btn('回到遊戲設定',()=>dialog.close());
+dialog.append(leave);root.append(dialog);
+function focusCourt(){
+ if(!dialog.open&&typeof dialog.showModal==='function'&&window.top===window.self){
+  dialog.append(court);
+  dialog.showModal();
+ }else if(!dialog.open){
+  court.scrollIntoView({block:'center',behavior:'instant'});
+ }
+ s.focus({preventScroll:true});
+}
+on(pause,'click',()=>{if(flying&&!paused&&!dialog.open)focusCourt();});
+on(dialog,'close',()=>{
+ screenHome.after(court);
+ if(flying&&!paused)pause.click();
+ pitch.focus({preventScroll:true});
+});
+cleanups.push(()=>{if(dialog.open)dialog.close();});
+
 function configurePitcher(){const profile=pitcherProfiles[pitcherId];pitcherArt.replaceChildren(baseballSprite(profile.sprite,254,58,92,100));batterArt.replaceChildren(baseballSprite(batterProfiles[batterId].sprite,382,164,150,178),bat);batterArt.setAttribute('transform',batterProfiles[batterId].hand==='L'?'translate(600 0) scale(-1 1)':'');Array.from(batters.children).filter(b=>b.dataset?.batter).forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.batter===batterId)));pitcherArt.setAttribute('transform',profile.hand==='L'?'translate(600 0) scale(-1 1)':'');pitcherLabel.textContent=profile.hand==='L'?'左投':'右投';pitcherButtons.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.pitcher===pitcherId)));types.replaceChildren();['mix',...new Set(profile.types)].forEach(type=>{const b=btn(type==='mix'?'混合配球':pitchNames[type],()=>{if(flying||flight>0)return;pitchChoice=type;configurePitcher();});b.setAttribute('aria-pressed',String(type===pitchChoice));types.append(b);});description.textContent=profile.name+'：'+profile.signature+'。這是家人角色的自訂遊戲球速；飛行時間已放慢，方便看球。';}
 configurePitcher();
 

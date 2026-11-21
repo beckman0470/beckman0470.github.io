@@ -1,0 +1,41 @@
+.cdj-welcome + .room-link-bar {
+  display: grid;
+  max-width: min(1280px, 100%);
+  gap: 8px;
+  margin: 6px auto 24px;
+  padding: 12px clamp(10px, 2vw, 22px);
+  border: 1px solid #d9e4d5;
+  border-radius: 16px;
+  background: #fffdf7;
+  color: #294e3a;
+  white-space: normal;
+  overflow: visible;
+}
+.cdj-welcome + .room-link-bar .room-guide-title {
+  margin: 0;
+  font: 750 clamp(17px, 2vw, 21px)/1.4 system-ui, sans-serif;
+}
+.cdj-welcome + .room-link-bar .room-link-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+.cdj-welcome + .room-link-bar .room-link-group > strong {
+  flex: 0 0 68px;
+  color: #375a47;
+}
+.cdj-welcome + .room-link-bar .room-link-group > a {
+  min-height: 44px;
+  border-radius: 10px;
+  background: #edf3e9;
+}
+.cdj-welcome + .room-link-bar .room-link-group > a:hover,
+.cdj-welcome + .room-link-bar .room-link-group > a[aria-current=true] {
+  background: #41684e;
+  color: #fff;
+}
+@media (max-width: 600px) {
+  .cdj-welcome + .room-link-bar .room-link-group > strong { flex: 0 0 100%; }
+  .cdj-welcome + .room-link-bar .room-link-group + .room-link-group { padding-top: 7px; border-top: 1px solid #e2e9df; }
+}

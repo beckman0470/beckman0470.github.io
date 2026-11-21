@@ -10,6 +10,24 @@ function tick(dt){clock+=dt;if(keys.ArrowLeft||keys.a)paddle.x-=560*dt;if(keys.A
 function draw(){const g=x.createLinearGradient(0,0,0,H);g.addColorStop(0,'#183849');g.addColorStop(1,'#315d63');x.fillStyle=g;x.fillRect(0,0,W,H);x.strokeStyle='#ffffff09';for(let i=0;i<W;i+=45){x.beginPath();x.moveTo(i,0);x.lineTo(i,H);x.stroke()}for(const b of bricks){if(!b.alive)continue;x.fillStyle=b.color;x.beginPath();x.roundRect(b.x,b.y,b.w,b.h,6);x.fill();if(b.power){x.fillStyle='#274c45';x.font='bold 17px sans-serif';x.textAlign='center';x.fillText(b.power==='long'?'L':'M',b.x+b.w/2,b.y+18)}}for(const p of particles){x.globalAlpha=Math.max(0,p.t*2);x.fillStyle=p.color;x.fillRect(p.x,p.y,5,5)}x.globalAlpha=1;for(const b of balls){x.fillStyle='#fff7cf';x.shadowColor='#fcf4bc';x.shadowBlur=12;x.beginPath();x.arc(b.x,b.y,b.r,0,7);x.fill()}x.shadowBlur=0;x.fillStyle=longUntil?'#ffd776':'#e9f2df';x.beginPath();x.roundRect(paddle.x,H-36,paddle.w,16,8);x.fill();for(const d of drops){x.fillStyle=d.type==='long'?'#efd066':'#b7def2';x.beginPath();x.roundRect(d.x-18,d.y-15,36,30,8);x.fill();x.fillStyle='#234a46';x.font='bold 20px sans-serif';x.textAlign='center';x.fillText(d.type==='long'?'L':'M',d.x,d.y+7)}if(ready||paused){x.fillStyle='#102a3488';x.fillRect(0,230,W,125);x.fillStyle='#fff5cf';x.font='30px sans-serif';x.textAlign='center';x.fillText(paused?'暫停中':over?'這局完成':'移動橫槓，按「發球」',W/2,300)}$('breakout-score').textContent='第 '+level+' 關 · '+score+' 分 · 生命 '+lives+' · 最高 '+best+(longUntil?' · 加長 '+Math.ceil(Math.max(0,longUntil-clock))+' 秒':'')}
 function frame(t){const dt=Math.min(.025,Math.max(0,(t-last)/1000));last=t;if(running&&!paused)tick(dt);draw();requestAnimationFrame(frame)}
 function pointer(e){const rect=canvas.getBoundingClientRect();paddle.x=(e.clientX-rect.left)/rect.width*W-paddle.w/2;clamp()}
-canvas.addEventListener('pointerdown',e=>{canvas.setPointerCapture(e.pointerId);pointer(e)});canvas.addEventListener('pointermove',e=>{if(e.pointerType==='mouse'||canvas.hasPointerCapture(e.pointerId))pointer(e)});canvas.style.touchAction='none';document.addEventListener('keydown',e=>{if(['ArrowLeft','ArrowRight',' ','a','d'].includes(e.key)){e.preventDefault();keys[e.key]=true;if(e.key===' '&&ready)begin()}});document.addEventListener('keyup',e=>keys[e.key]=false);window.addEventListener('blur',()=>{keys={};if(running){paused=true;$('pause-ball').textContent='繼續'}});document.addEventListener('visibilitychange',()=>{if(document.hidden&&running){paused=true;keys={};$('pause-ball').textContent='繼續'}});$('launch-ball').onclick=begin;$('pause-ball').onclick=()=>{if(!running)return;paused=!paused;$('pause-ball').textContent=paused?'繼續':'暫停'};$('new-ball').onclick=()=>{$('ball-confirm').hidden=false};$('keep-ball').onclick=()=>{$('ball-confirm').hidden=true};$('restart-ball').onclick=()=>{score=0;lives=3;level=1;makeLevel();$('launch-ball').disabled=false;$('ball-confirm').hidden=true};makeLevel();requestAnimationFrame(frame);
+canvas.addEventListener('pointerdown',e=>{canvas.setPointerCapture(e.pointerId);pointer(e)});canvas.addEventListener('pointermove',e=>{if(e.pointerType==='mouse'||canvas.hasPointerCapture(e.pointerId))pointer(e)});canvas.style.touchAction='none';document.addEventListener('keydown',e=>{if(['ArrowLeft','ArrowRight',' ','a','d'].includes(e.key)){e.preventDefault();keys[e.key]=true;if(e.key===' '&&ready)$('launch-ball').click()}});document.addEventListener('keyup',e=>keys[e.key]=false);window.addEventListener('blur',()=>{keys={};if(running){paused=true;$('pause-ball').textContent='繼續'}});document.addEventListener('visibilitychange',()=>{if(document.hidden&&running){paused=true;keys={};$('pause-ball').textContent='繼續'}});const playArea=$('breakout-play-area'),dialog=$('breakout-focus'),leave=$('leave-breakout');
+const home=document.createComment('breakout play area');
+playArea.before(home);
+function focusBreakout(){
+ if(!dialog.open&&typeof dialog.showModal==='function'&&window.top===window.self){
+  dialog.append(playArea);
+  dialog.showModal();
+ }else if(!dialog.open){
+  playArea.scrollIntoView({block:'center',behavior:'instant'});
+ }
+ canvas.focus({preventScroll:true});
+}
+$('launch-ball').onclick=()=>{focusBreakout();begin();};
+leave.onclick=()=>dialog.close();
+dialog.addEventListener('close',()=>{
+ home.after(playArea);
+ if(running&&!paused)$('pause-ball').click();
+ (running?$('pause-ball'):$('launch-ball')).focus({preventScroll:true});
+});$('pause-ball').onclick=()=>{if(!running)return;paused=!paused;$('pause-ball').textContent=paused?'繼續':'暫停';if(!paused)focusBreakout()};$('new-ball').onclick=()=>{$('ball-confirm').hidden=false};$('keep-ball').onclick=()=>{$('ball-confirm').hidden=true};$('restart-ball').onclick=()=>{score=0;lives=3;level=1;makeLevel();$('launch-ball').disabled=false;$('ball-confirm').hidden=true};makeLevel();requestAnimationFrame(frame);
 })();
 
