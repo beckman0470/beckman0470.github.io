@@ -8,15 +8,17 @@
   '/ama-sudoku.html':['兔窩','/rooms.html?room=ama'],
   '/mom-breakout.html':['鼠窩','/rooms.html?room=mom'],
   '/mom-words.html':['鼠窩','/rooms.html?room=mom'],
-  '/dad-arcade.html':['遊戲間','/rooms.html?room=games']
+  '/dad-arcade.html':['遊戲間','/rooms.html?room=games'],
+  '/play/salon/':['遊戲間','/rooms.html?room=games'],
+  '/play/yakiniku/':['廚房','/rooms.html?room=kitchen']
  };
- const entry=routes[location.pathname];if(!entry)return;
+ const key=location.pathname.replace(/index\.html$/,'');const entry=routes[key]||routes[location.pathname];if(!entry)return;
  const install=()=>{
   if(!document.body||document.getElementById('cdjg-shell-bar'))return;
   document.body.classList.add('cdjg-shell-enabled');
   // Page already owns a site header; avoid showing TWO site headers.
   // Preserve unscoped game-specific headers (e.g. arcade controls).
-  document.querySelectorAll('body > header.site-header,body > header.cdj-unified-header').forEach(header=>{
+  document.querySelectorAll('body > header.site-header,body > header.cdj-unified-header,body > header[data-cdj-shell-replace]').forEach(header=>{
    header.classList.add('cdjg-replaced-site-header');
    header.setAttribute('aria-hidden','true');
    header.querySelectorAll('a,button,input,select').forEach(n=>n.setAttribute('tabindex','-1'));
