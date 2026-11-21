@@ -60,9 +60,31 @@
  #video-main .living-preview .living-scene-jump { display:inline-block; padding:9px 0; }
  #video-main .living-preview:not([open]) + #living-room-scene { display:none!important; }
 }
+</style><style>
+@font-face {font-family:LivingSerif;src:url('/assets/fonts/living-serif.woff') format('woff');font-weight:700;font-display:swap}
+#video-main .living-label,#video-main .living-preview summary,#video-main #cdj-welcome-title {
+ font-family:LivingSerif,"Noto Serif TC","PingFang TC",serif;
+ font-weight:700;
+}
+#video-main .living-entry {grid-template-columns:max-content max-content;gap:24px;align-items:center;margin:12px 0 16px}
+#video-main .living-entry a {display:flex;gap:20px;min-height:52px;padding:9px 19px;border-radius:999px}
+#video-main .living-watch {background:#284f3d;box-shadow:none}
+#video-main .living-visit-desktop {background:transparent;border:0;border-radius:0;padding-inline:0;color:#395642}
+#video-main .living-visit-desktop:hover {background:transparent;text-decoration:underline;text-underline-offset:5px}
+#video-main .living-label {font-size:22px;letter-spacing:.06em}
+#video-main .living-watch span[aria-hidden] {color:#ffddb2}
+@media(max-width:730px) {
+ #video-main .living-entry {margin-bottom:12px}
+ #video-main .living-entry .living-visit-desktop {display:none}
+ #video-main .living-preview summary {
+  min-height:136px;border-radius:22px;padding:14px 17px;font-size:24px;letter-spacing:.06em;
+  background:linear-gradient(0deg,#152e24ea,transparent 78%),url('/assets/greetings/v1/room-living.webp') center 54% / cover;
+ }
+ #video-main .living-preview[open] summary {min-height:48px;font-size:19px;background:#f3ecdd;color:#29483a}
+}
 </style></head><body class="entry-site" data-welcome-page="videos"><a class="entry-skip" href="#video-main">跳到主要內容</a><header class="site-header cdj-unified-header" data-unified-header="order2"><div class="cdj-unified-inner"><a aria-label="雞爸爸生活研究室首頁" class="cdj-unified-brand" href="/"><img alt="" height="52" src="/assets/img/logo-avatar.png" width="52"/><span><strong>雞爸爸生活研究室</strong><small>CHICKEN DAD JOURNAL</small></span></a><nav aria-label="主要導覽" class="entry-subnav"><a href="/videos.html" aria-current="page">客廳</a><a href="/articles.html">雞窩</a><a href="/rooms.html?room=dining">餐廳</a><a href="/rooms.html?room=mom">鼠窩</a><a href="/rooms.html?room=ama">兔窩</a><a href="/rooms.html?room=kitchen">廚房</a><a href="/rooms.html?room=bathroom">浴室</a><a href="/rooms.html?room=games">遊戲間</a><a href="/stickers.html">貼圖小舖</a><a href="/family.html">認識我們</a></nav></div></header><main class="entry-wrap cdj-welcome-main" id="video-main"><nav class="living-entry" aria-label="客廳入口">
-<a class="living-watch" href="#media-library-title"><span class="living-icon" aria-hidden="true">▶</span><span class="living-label">看影片<small>家庭短片與日常紀錄</small></span><span aria-hidden="true">↓</span></a>
-<a class="living-visit-desktop" href="#living-room-scene"><span class="living-icon" aria-hidden="true">⌂</span><span class="living-label">逛客廳<small>點人物與物件</small></span><span aria-hidden="true">↓</span></a>
+<a class="living-watch" href="#media-library-title"><span class="living-label">看影片</span><span aria-hidden="true">↓</span></a>
+<a class="living-visit-desktop" href="#living-room-scene"><span class="living-label">逛客廳</span><span aria-hidden="true">↓</span></a>
 </nav>
 <details class="living-preview"><summary><span class="living-open">逛客廳</span><span class="living-close">收起客廳</span></summary>
 <a class="living-scene-jump" href="#living-room-scene">前往互動場景 ↓</a></details>
