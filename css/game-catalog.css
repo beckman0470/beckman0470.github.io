@@ -16,3 +16,14 @@
 #game-categories .filtered-game-card strong { grid-column:2; min-width:0; overflow-wrap:anywhere; line-height:1.45; }
 #game-categories .filtered-game-card .game-access-hint { grid-column:2; padding:2px 0 0; font-size:.875rem; line-height:1.6; overflow-wrap:anywhere; }
 #game-categories .game-label-guide { font-size:.875rem; line-height:1.7; color:#4f6656; }
+
+/* These source sheets hold 2×2 / 4×4 animation poses. Show one whole pose only. */
+#game-categories .filtered-game-card .game-cover-frame {
+ display:block; grid-area:1 / 1 / 4; align-self:center; position:relative;
+ width:80px; height:80px; overflow:hidden; border-radius:7px; background:#f1f5ed;
+}
+#game-categories .filtered-game-card .game-cover-frame > img {
+ position:absolute; top:0; left:0; display:block; object-fit:contain; border-radius:0;
+ width:160px; height:160px; min-width:0; max-width:none;
+}
+#game-categories .filtered-game-card .game-cover-sprite-4 > img { width:320px; height:320px; }
